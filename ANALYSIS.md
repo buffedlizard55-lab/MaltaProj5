@@ -1,7 +1,7 @@
 # ANALYSIS.md — findings from the verified San Francisco register
 
 Snapshot **2026-10-18**. Every figure below is computed from `data/events.json`
-(231 rows), `data/sources.json` (211 records), `data/review.json` (19 findings) and
+(231 rows), `data/sources.json` (212 records), `data/review.json` (19 findings) and
 `data/verify_report.json` (a saved machine-fetch snapshot with the coverage gaps documented below). The published version of this
 analysis is `analysis.html`.
 
@@ -19,11 +19,11 @@ analysis is `analysis.html`.
 | — community & outdoors | 61 |
 | — markets & food | 34 |
 | — museums & science | 23 |
-| Official source records | 211 |
-| Distinct source domains | 135 |
-| Rows verified field-level | 117 |
+| Official source records | 212 |
+| Distinct source domains | 136 |
+| Rows verified field-level | 118 |
 | Rows verified page-level | 78 |
-| Rows flagged for review | 36 |
+| Rows flagged for review | 35 |
 | Rows with at least one blank tracked field | 188 |
 | Review findings | 19 |
 | Current source URLs reported dead in the saved fetch snapshot | 0 (one failed URL was superseded; details below) |
@@ -81,7 +81,7 @@ over-represented because their organizers publish machine-readable pages.
 
 ### 4. Source concentration is high, and that is a risk
 
-211 source records sit on 135 domains, but a handful of publishers supply many rows: San Francisco
+212 source records sit on 136 domains, but a handful of publishers supply many rows: San Francisco
 Opera's season press page covers five productions, PIER 39's events page covers two rows, and 12
 rows cite San Francisco Travel (the city's destination-marketing body) because no organizer page
 for that edition could be found. One page changing can invalidate several rows at once. The review

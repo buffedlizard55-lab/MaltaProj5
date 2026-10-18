@@ -439,6 +439,14 @@ rows = base + converted
 # Applied after the merge. Every entry below was re-read by session c961fbe4 on
 # 2026-10-18 with fetch_page; the excerpt is transcribed from the live page.
 FIXES = {
+    "x-sf-sketchfest": {
+        "keep": ['name', 'schedule', 'venue', 'price'],
+        "url": "https://sfsketchfest2026.sched.com/",
+        "publisher": "SF Sketchfest 2026 — official festival schedule (Sched, linked from sfsketchfest.com)",
+        "excerpt": "SF Sketchfest 2026 schedule: first listed day Thursday, January 15, 2026 (7:00pm Sketch & Improv Showcase, Eclectic Box); 'Tickets on sale now!' The festival's 2026 run was announced as January 15–February 1, 2026.",
+        "schedule": "Annual (winter) — 2026: Jan 15 - Feb 1, 2026",
+        "flag": "Date correction (audit cebeabf0, 2026-10-18): the authored register carried 'Jan 16 - Feb 2' — those are the 2025 edition's dates. The official SF Sketchfest 2026 schedule (sfsketchfest2026.sched.com, linked from sfsketchfest.com) opens Thursday, January 15, 2026, and the 2026 run is January 15–February 1, 2026; the schedule field was corrected to match. sfsketchfest.com itself blocks automated clients (403).",
+    },
     "b-sf-symphony-season": {
         "keep": ['name', 'schedule', 'venue'],
         "drop": ["https://www.sfsymphony.org/"],
@@ -599,6 +607,8 @@ for rid, fix in FIXES.items():
                 row["flags"].append(note)
     if fix.get("rename"):
         row["name"] = fix["rename"]
+    if fix.get("schedule"):
+        row["schedule"] = fix["schedule"]
     row["check"] = {"level": "field-level", "by": "c961fbe4 manual re-read", "date": "2026-10-18"}
     if fix.get("flag") and fix["flag"] not in row["flags"]:
         row["flags"].append(fix["flag"])
@@ -731,7 +741,12 @@ for r in rows:
             kept.append(f)
     r["flags"] = kept
     for field in ("schedule", "time", "venue", "price"):
-        if not r[field] and not any(f.startswith(field + ": unverified") for f in r["unverified"]):
+        if r[field]:
+            # D2 (audit cebeabf0): a populated field must not keep a stale
+            # "unverified; left blank" flag carried over from a source register.
+            r["unverified"] = [f for f in r["unverified"]
+                               if not f.startswith(field + ": unverified")]
+        elif not any(f.startswith(field + ": unverified") for f in r["unverified"]):
             r["unverified"].append(f"{field}: unverified — not stated on the cited official page.")
 
 # prune source records no longer cited by any row

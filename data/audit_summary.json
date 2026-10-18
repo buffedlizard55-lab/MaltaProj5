@@ -6,7 +6,7 @@
  "listed": 212,
  "review_only": 83,
  "series": 16,
- "source_urls": 308,
+ "source_urls": 309,
  "domains": 163,
  "kinds": {
   "Weekly": 37,
@@ -34,10 +34,10 @@
   "schedule": 15,
   "time": 88,
   "venue": 0,
-  "price": 117
+  "price": 116
  },
  "listed_with_blanks": 178,
- "supported_field_values": 923,
+ "supported_field_values": 924,
  "limitation": "Bounded, non-exhaustive research snapshot; entries mix events and programme umbrellas, not a count of unique city events.",
  "new_research_entries": 36,
  "topics": {
@@ -47,9 +47,9 @@
   "AI & technology": 10
  },
  "cost": {
-  "Not stated": 117,
+  "Not stated": 116,
   "Paid": 20,
-  "Free": 75
+  "Free": 76
  },
  "upcoming_dated": 74,
  "free_first_entries": 8

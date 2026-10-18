@@ -18,6 +18,7 @@ from audited_register import FIELDS, compile_register, normal  # noqa: E402
 from register_3adf31d9 import extend as extend_register, topic_of, cost_of, next_date  # noqa: E402
 from register_21f3dd85 import extend as extend_register_21f3dd85  # noqa: E402
 from register_d57e2eeb import extend as extend_register_d57e2eeb  # noqa: E402
+from overlay_06949148 import extend as extend_register_06949148  # noqa: E402
 
 TOPIC_PAGES = {'gaming.html': 'Gaming', 'music.html': 'Music', 'ai.html': 'AI & technology'}
 
@@ -104,7 +105,8 @@ def main():
     expected = extend_register(*expected)
     expected = extend_register_21f3dd85(*expected)
     expected = extend_register_d57e2eeb(*expected)
-    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection plus the additive 3adf31d9, 21f3dd85 and d57e2eeb overlays. Rebuild; never run the old matcher applicator.'
+    expected = extend_register_06949148(*expected)
+    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection plus the additive research overlays and final 06949148 evidence reconciliation. Rebuild; never run the old matcher applicator.'
     assert {r['id'] for r in rows} >= set(load('audit_3adf31d9.json')['candidates']), 'New-research candidates were dropped'
     assert {r['id'] for r in rows} >= set(load('audit_21f3dd85.json')['candidates']), 'Free-first candidates were dropped'
     assert {r['id'] for r in rows} >= set(load('audit_d57e2eeb.json')['candidates']), 'Free-first gap candidates were dropped'

@@ -4,19 +4,14 @@
 
 ## Evidence model
 
-1. Preserved historical inputs are unverified candidates, not authoritative facts. Three additive,
-   fail-closed research overlays now sit on top of the mainline audit: session `59f56c24`'s five
-   official-calendar entries (merged into `data/audit_64f8b973.json`), session `3adf31d9`'s
-   fifteen topic-gap entries (`data/audit_3adf31d9.json`) and session `21f3dd85`'s eight
-   free-first entries (`data/audit_21f3dd85.json`). None can approve or edit a field
-   produced by the other or by the mainline overlay. The newer mainline `audit_f1fd3c36.json` and its tool are preserved unchanged and run only in an isolated candidate-history tree; their old labels never approve fields. Both upstream-added candidates and the 2026 Sketchfest reference remain available.
-2. `data/audit_64f8b973.json` stores finite official page/PDF text captures, request metadata, separately labeled selected retrieval-tool excerpts, structured event JSON-LD and explicit decisions.
+1. Preserved historical inputs are unverified candidates, not authoritative facts. The canonical projection has three additive, fail-closed entry overlays: session `3adf31d9`'s topic-gap entries (`data/audit_3adf31d9.json`), session `21f3dd85`'s free-first entries (`data/audit_21f3dd85.json`) and session `d57e2eeb`'s free-first gap entries (`data/audit_d57e2eeb.json`). Session `59f56c24`'s five official-calendar entries are already reconciled into the mainline audit. A final, scoped `06949148` evidence overlay applies one new exact admission quotation and adds review links for an unresolved hours conflict; it does not import an older register or approve Alemany's disputed time. The newer mainline `audit_f1fd3c36.json` and its tool are preserved unchanged and run only in an isolated candidate-history tree; their old labels never approve fields. Both upstream-added candidates and the 2026 Sketchfest reference remain available.
+2. `data/audit_64f8b973.json` stores mainline official page/PDF text captures, request metadata, separately labeled selected retrieval-tool excerpts, structured event JSON-LD and explicit decisions. `data/audit_06949148.json` stores separate source excerpts for the final reconciliation; numeric HTTP status is left null when the retrieval tool does not expose one.
 3. Every approved name, schedule, time, venue, admission condition, recurrence and normalized occurrence has supporting quotations. Geography records explain how the official event/venue is placed inside SF; unrelated footer/marketing city tokens are not acceptable.
 4. The build starts factual fields blank and copies only approved decisions. Unknown fields stay blank and flagged. Name + venue + confirmed SF geography are required for directory admission; other candidates remain on Flagged for Review.
 5. Exact substring checks establish quotation provenance, **not contextual applicability**. Editions, ticket eligibility, date conflicts and geography require recorded research judgment. JSON-LD is identified as structured evidence, not misrepresented as visible page text.
 6. Only approved full ISO dates drive snapshot-relative temporal labels. No date parser invents a year from a URL slug, weekday, copyright, season header or unrelated event. Recurrence never generates future occurrences.
 
-The public ledger contains **308 distinct cited URLs across 163 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
+The public ledger contains **309 distinct cited URLs across 163 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
 
 ## Topic-gap overlay (session `3adf31d9`)
 
@@ -96,10 +91,46 @@ Evidence judgments specific to this pass:
    venue ("Onsite in the Chess Room at Mechanics'…"), but overlays may not edit earlier rows; the
    new evidence is logged for a future integration session. Its free status remains members-only.
 
+## Free-first gap overlay (session `d57e2eeb`)
+
+The additional 21 candidates and their exact first-party citations are recorded in
+[`data/audit_d57e2eeb.json`](data/audit_d57e2eeb.json) and the linked
+[research log](data/research/audit-d57e2eeb.md). The pass covers free civic venues and Golden
+Gate Park garden hours, music, gaming and SF AI/technology communities, plus one explicitly paid
+Circus Bella event kept in the separate Paid section. Its six official-page inconsistencies and
+five search-tool excerpts are labeled and retained; no retrieved text is treated as a numeric HTTP
+200 when the tool did not expose one.
+
+## T32 stale-branch reconciliation (session `06949148`)
+
+The remote `arena/95ceac65-maltaproj5` branch had three commits, but its final snapshot was
+three commits ahead and 38 behind current `main`, with 246 candidates and an older 12-page
+site. Its generated outputs and replacement validator would regress the current 295-candidate,
+19-page site, so they were not copied. The branch's research log reports a risk-prioritized
+sample of roughly 60 live pages; this takeover did **not** re-audit that sample or the whole
+register. It independently re-read the two proposed changes using the official pages below.
+
+- **Oktoberfest on Front:** Downtown SF's official event page says **“FREE WITH RSVP”** at
+  https://downtownsf.org/things-to-do/oktoberfest-on-front. That exact wording now fills the
+  previously blank price field. The event's already-confirmed 18 September 2026 date is past at
+  this fixed snapshot, so it is not added to the free-upcoming dashboard.
+- **Alemany Farmers Market:** the current SF.gov page
+  (https://www.sf.gov/location--alemany-farmers-market) and Foodwise operator page
+  (https://foodwise.org/markets/alemany-farmers-market/) both state Saturday 7am–2pm; SF.gov
+  says Foodwise has operated the market since February 2026. The San Francisco Environment
+  Department page (https://www.sfenvironment.org/farmers-markets-in-sf), dated 21 March 2025,
+  states 6:00am–3:00pm and advises readers to confirm with the individual market website. The
+  field remains blank and all three official links are attached to the row and the review finding.
+  Admission remains blank: free parking is not evidence of free entrance.
+
+The supplement records exact excerpts, the retrieval method and `http: null` because the
+retrieval tool did not expose a numeric status. These are limited, source-specific decisions,
+not a claim that the full register was freshly semantically re-verified.
+
 ## Representative official pages and scope
 
 - Foodwise: https://foodwise.org/markets/ferry-plaza-farmers-market/ and https://foodwise.org/markets/mission-community-market/ — operator schedules/venues; not blanket proof of free admission.
-- SF government: https://www.sf.gov/location--alemany-farmers-market — updated operator/hours; conflict with the older City Environment listing is retained, with time blank.
+- SF government, market operator and Environment Department: https://www.sf.gov/location--alemany-farmers-market, https://foodwise.org/markets/alemany-farmers-market/ and https://www.sfenvironment.org/farmers-markets-in-sf — the current SF.gov/Foodwise pages say 7am–2pm, while the 21 March 2025 Environment Department page says 6am–3pm and directs visitors to confirm with the individual market. The time remains blank and all three are linked for review.
 - PCFMA: https://www.pcfma.org/market/castro-farmers-market and other direct market pages — operator-specific weekly schedules, not shared finder-page token matches.
 - Exploratorium: https://www.exploratorium.edu/visit/calendar/after-dark and https://www.exploratorium.edu/visit — Thursday series, themed 2026 dates, Pier 15 and the general After Dark price/age policy. Individual-theme surcharges are not inferred.
 - FAMSF: https://www.famsf.org/visit/free-reduced-admission — conditional free general admission. Permanent galleries, residency and Bouquets to Art exceptions remain attached; special exhibitions are not automatically free.

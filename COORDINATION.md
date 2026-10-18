@@ -98,6 +98,46 @@ network there is limited to github.com, npm and PyPI. It is wired into
 
 ---
 
+## Defect log
+
+### D1 — `tools/integrate.py` was not idempotent; shipped `review.html` showed 11 findings twice
+
+**Found:** 2026-10-18, re-running the pipeline against the already-merged `main` tree left
+`data/review.json` and `review.html` modified instead of unchanged.
+
+**Cause:** `tools/integrate.py` read its own outputs as inputs —
+
+```python
+their_sources = load("data/sources.json")   # line 415
+their_review  = load("data/review.json")    # line 416
+...
+review = their_review + my_review           # line 560
+```
+
+`my_review` (this session's 11 findings) was appended to whatever the previous run had written.
+Three runs during integration produced 9 + 11 + 11 = **31 findings on `main` with 11 of them
+duplicated**, and `review.html` rendered each duplicate twice. `data/sources.json` survived
+because it is a dict keyed by source id, so re-merging overwrote instead of accumulating.
+
+**Impact:** presentation only. `data/events.json` (86 rows), `data/sources.json` (75 records) and
+all event tables were unaffected, and `scripts/validate.py` passed because it does not check for
+duplicate findings.
+
+**Fix (this branch):**
+- The other session's ledger is now snapshotted to immutable inputs `data/sources_3a19e72d.json`
+  (26 records) and `data/review_3a19e72d.json` (9 findings), both taken from `main` at `bb74afd`.
+  `integrate.py` no longer reads any file it writes.
+- Two guards added after the merge step, so a regression fails the build instead of publishing:
+  duplicate finding titles → `SystemExit`; a row citing a source id missing from
+  `data/sources.json` → `SystemExit`.
+
+**Verified:** `python3 tools/integrate.py` run twice in a row leaves `data/events.json`,
+`data/sources.json` and `data/review.json` **byte-identical** (`cmp` clean). Register is now
+86 rows / 75 source records / **20 findings, 0 duplicates**. `scripts/build.py` and
+`scripts/validate.py` still pass.
+
+---
+
 ## Activity log — `3a19e72d`
 
 - 2026-10-18: Claimed work before implementation. Research will retain official source excerpts and links; publication and deployment results will be recorded here.
@@ -145,6 +185,19 @@ network there is limited to github.com, npm and PyPI. It is wired into
 | CI on `main` after merge (run `39086026866`) | `validate` job **success** on every step · `deploy` job **failure** at `actions/configure-pages@v5` |
 | Remote source check (`tools/remotecheck.py`) | **PASS** in CI on both PR #3 and `main`. All 75 official source URLs fetched over the network; the step exits non-zero on DNS failure or HTTP 404/410, so no dead source links. (403/5xx from bot-blocking are reported as warnings, not failures; none blocked the step.) |
 | GitHub Pages | **Not live — blocked, needs one owner action.** See below. |
+
+### PR #4 (session `4f47c142`) — assessed, NOT merged
+
+A third session opened PR #4 (`arena/4f47c142-maltaproj5`, head `f1ed893`) with a 167-event
+inventory. Assessed against the integrated `main` on 2026-10-18:
+
+| Aspect | Finding |
+|---|---|
+| Row count | 167 across `data/events-weekly.json`, `events-annual.json`, `events-special.json`; every row carries a `source_url` |
+| Source quality | 119 distinct domains, but the single most-cited is `www.sftravel.com` (12 rows) — a tourism aggregator, not an organizer or City page. Only 2 `.gov` domains. This conflicts with the project's official-sources-only rule |
+| Site | Reintroduces a second parallel site (`docs/`, 6 pages) plus its own `tools/build_site.py` / `tools/verify_site.py`, and rewrites `.github/workflows/pages.yml`, `README.md` and `COORDINATION.md` — i.e. it would revert the single integrated site and dataset now on `main` |
+| Decision | **Not merged.** Merging it as-is would restore two competing sites and admit aggregator-sourced rows. The branch is left open and untouched so its work is not discarded |
+| Follow-up | Any of its rows to be admitted must be re-verified row-by-row against the organizer or City page (aggregator URLs replaced), converted to the canonical schema, then routed through `tools/integrate.py` as a third immutable input snapshot |
 
 ### GitHub Pages publication blocker (confirmed 4 times)
 

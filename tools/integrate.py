@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Final-integration merge: combine the two authored registers into one dataset.
 
-Inputs (both preserved verbatim, neither session's work is discarded):
-  data/events_3a19e72d.json  29 rows authored by session 3a19e72d (their schema)
-  data/events_5a85baf2.json  61 rows authored by session 5a85baf2 (its own schema)
+Inputs (all immutable snapshots — none of them are this script's outputs, so the
+script is idempotent and can be re-run any number of times):
+  data/events_3a19e72d.json   29 rows authored by session 3a19e72d (their schema)
+  data/events_5a85baf2.json   61 rows authored by session 5a85baf2 (its own schema)
+  data/sources_3a19e72d.json  their 26 official-source records, from main at bb74afd
+  data/review_3a19e72d.json   their 9 review findings, from main at bb74afd
 
 Output:
   data/events.json    combined register in the canonical schema consumed by scripts/build.py
@@ -412,8 +415,12 @@ def convert(mine):
 # ---------------------------------------------------------------------------
 theirs = load("data/events_3a19e72d.json")
 mine = load("data/events_5a85baf2.json")
-their_sources = load("data/sources.json")
-their_review = load("data/review.json")
+# Immutable snapshots of the other session's ledger, taken from `main` at
+# bb74afd (PR #2). These must NOT be the script's own outputs: reading
+# data/sources.json / data/review.json here made a re-run accumulate its own
+# previous output, which duplicated review findings.
+their_sources = load("data/sources_3a19e72d.json")
+their_review = load("data/review_3a19e72d.json")
 
 my_rows, my_sources = convert(mine)
 
@@ -558,6 +565,19 @@ my_review = [
     },
 ]
 review = their_review + my_review
+
+# ---- guards: fail loudly rather than publish a corrupted register ---------
+titles = [f["title"] for f in review]
+dupe_titles = sorted({t for t in titles if titles.count(t) > 1})
+if dupe_titles:
+    raise SystemExit("duplicate review finding titles (idempotency regression): "
+                     + " | ".join(dupe_titles))
+
+cited = {k for r in events for k in r.get("sources", [])}
+missing_sources = sorted(cited - set(sources))
+if missing_sources:
+    raise SystemExit("rows cite source ids absent from data/sources.json: "
+                     + " | ".join(missing_sources))
 
 with open(os.path.join(ROOT, "data", "events.json"), "w") as f:
     json.dump(events, f, indent=2)

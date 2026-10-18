@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Publication blocked: GitHub Pages permission",
+    "detail": "Site build and pull-request validation passed, and PR #1 merged. Pages setup failed with Resource not accessible by integration in both repository API and workflow. Public Pages URL is not confirmed live. Repository GitHub connection needs Pages administration permission; after enabling Pages with GitHub Actions, rerun workflow.",
+    "urls": [
+      "https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573",
+      "https://github.com/buffedlizard55-lab/MaltaProj5/pull/1"
+    ]
+  },
+  {
+    "title": "Coverage is incomplete",
+    "detail": "This is a bounded official-source inventory, not a full list of every SF event. Library programs, sports, concerts, theatre, civic meetings, neighborhood and private events remain incompletely researched. No coverage percentage is known.",
+    "sources": [
+      "band",
+      "opera"
+    ]
+  },
+  {
+    "title": "Outside Lands and SF Marathon: retrieval failed",
+    "detail": "Official homepages could not be retrieved in this session. No event facts were admitted. Marathon route must also be checked against the city-only rule.",
+    "urls": [
+      "https://www.outsidelands.com/",
+      "https://www.thesanfranciscomarathon.com/"
+    ]
+  },
+  {
+    "title": "Golden Gate Bandshell: dynamic content unavailable",
+    "detail": "Retrieved city page showed only Loading; schedule, times and recurrence remain blank. Candidate excluded from inventory.",
+    "sources": [
+      "band"
+    ]
+  },
+  {
+    "title": "Fleet Fest / ship tours: past edition",
+    "detail": "Official page describes October 2026 dates already past at review. Retained as research finding, not promoted as upcoming. Next edition unverified.",
+    "sources": [
+      "fleet"
+    ]
+  },
+  {
+    "title": "Folsom Street Fair: edition mismatch",
+    "detail": "Homepage announces September 26, 2027, but linked fair detail page still describes September 27, 2026. Exact 2027 venue, time and annual recurrence were not confirmed. Up Your Alley homepage date is July 25, 2027, but venue not confirmed. Both excluded pending city/edition verification.",
+    "sources": [
+      "folsom",
+      "folsomdetail"
+    ]
+  },
+  {
+    "title": "Bay to Breakers: mixed-date copy",
+    "detail": "Homepage headline gives May 16, 2027 but other copy says before May 18 and includes older promotions. Route boundary, time and recurrence not verified; excluded from admitted inventory.",
+    "sources": [
+      "bay"
+    ]
+  },
+  {
+    "title": "SFMOMA Community Days: no date",
+    "detail": "Official upcoming date is TBD. No date inferred or event occurrence generated.",
+    "sources": [
+      "free"
+    ]
+  },
+  {
+    "title": "Opera productions: year not explicit in listing text",
+    "detail": "Official homepage lists Manon, Figaro, Strauss, Opera Ball and Adlers dates, but text omits year. Event detail/venue pages need further review before admission; no season-year inference made.",
+    "sources": [
+      "opera"
+    ]
+  }
+]

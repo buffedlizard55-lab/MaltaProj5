@@ -250,9 +250,9 @@
    "status": "corrected",
    "url": "https://sfsketchfest.com/",
    "quote": "24th SF Sketchfest: January 14–31, 2027",
-   "note": "Next edition added; the 2026 edition dates previously recorded are not shown on the current official page.",
+   "note": "Next edition added from sfsketchfest.com; the 2026 dates corrected by session cebeabf0 from the official Sched calendar are retained.",
    "set": {
-    "schedule": "Annual (January) — 24th SF Sketchfest: January 14–31, 2027"
+    "schedule": "Annual (January) — 2026: January 15 – February 1, 2026 (official 2026 schedule, per audit cebeabf0); 2027: 24th SF Sketchfest January 14–31, 2027 (sfsketchfest.com)"
    }
   },
   {

@@ -48,6 +48,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
 | `3adf31d9` | `arena/3adf31d9-maltaproj5` | 2026-10-18 09:45 UTC | New product requirements: date-ordered upcoming view, executive summary, cost labels, gaming/music/AI registers, mobile-first dashboard (T33–T36); final integration, PR → main, Pages |
+| `21f3dd85` | `arena/21f3dd85-maltaproj5` | 2026-10-18 11:00 UTC | Free-first release: free gaming/music/AI research overlay, free+upcoming executive summary and dashboard main section, separate Paid section, final integration, PR → main, Pages (T37–T40) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -128,6 +129,10 @@ Upcoming page and cost badges are regression-covered in CI.
 | T34 | Date-ordered **Upcoming** page + **executive summary** on the landing page (nearest confirmed dates first, relative to the fixed 2026-10-18 snapshot) | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `assets/app.js`, `*.html` |
 | T35 | **Cost labelling**: a Free / Paid / Not stated badge derived only from the verified admission text, always shown next to the exact official quotation | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `*.html` |
 | T36 | Category subpages **Gaming / Music / AI & technology / Free to attend** + mobile-first dashboard navigation; rebuild, validate, PR → `main`, merge, confirm Pages | **done** | `3adf31d9` | NEW: `tools/register_3adf31d9.py`; `tools/consolidate.py`, `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `tests/`, `*.html`, `README.md`, `COORDINATION.md` |
+| T37 | Free-first research: additional **free gaming / music / AI** (then other free) entries inside San Francisco from official organizer/venue/library/government pages only; exact quotations + archived captures; new fail-closed overlay chained after `3adf31d9` | **in progress** (claimed 2026-10-18 11:00 UTC) | `21f3dd85` | NEW: `data/audit_21f3dd85.json`, `data/research/audit-21f3dd85.md`, `tools/register_21f3dd85.py`; tail wiring in `tools/consolidate.py`; overlay-chain assertion in `scripts/validate.py` |
+| T38 | **Free-first dashboard**: executive summary focused on free + upcoming (soonest free dated entries near the 2026-10-18 snapshot); dashboard main section = **free upcoming events only**, date-ordered nearest first with next-14-days highlight; full directory remains on Focus / Upcoming | unclaimed → claimed by `21f3dd85` | `21f3dd85` | `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `*.html` |
+| T39 | **Paid events in a separate section**: new `paid.html` listing only Paid-badge entries with the exact quoted price wording; nav + dashboard card; page-count and CI file-list updates | unclaimed → claimed by `21f3dd85` | `21f3dd85` | NEW: `paid.html` (generated); `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `tests/browser_smoke.cjs`, `.github/workflows/verify.yml`, `*.html` |
+| T40 | Final integration: rebuild, re-verify combined data line by line (validate + unit tests + source-link checks), refresh README/SOURCES counts, PR → `main`, merge without waiting, confirm Pages deploy, record PR link + merge result here | unclaimed → claimed by `21f3dd85` | `21f3dd85` | `data/*` (generated), `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1496,3 +1501,39 @@ Publication was confirmed from the Pages API (`built` for the exact merge commit
 * The dashboard executive-summary heading says “Next 14 days.” while its paragraph explains that
   entries are counted through 1 November 2026. Both numbers are correct for what they describe;
   this is wording, not a data defect.
+
+---
+
+## Claim — session `21f3dd85` (2026-10-18 11:00 UTC) — FREE-FIRST RELEASE (T37–T40)
+
+**New requirements received 2026-10-18:** the main section must include **only free upcoming
+events**; the executive summary must focus on **free and upcoming**; paid events are collected
+but kept in a **separate section**; research focus is **free gaming, music and AI first, then
+everything else**; San Francisco city only; regularly occurring events kept distinct from
+special events; every value verified against an official source or left blank and flagged.
+
+**Baseline verified at claim time (2026-10-18 10:55–11:00 UTC):** `scripts/validate.py` PASS
+(266 candidates / 185 listed / 81 review-only, 18 pages); `python3 -m unittest discover -s tests`
+→ 43 tests OK. Cost split of the 185 listed rows: **56 Free / 18 Paid / 111 Not stated**; only
+**11** rows are both Free and carry a confirmed upcoming date (0 gaming, 3 music, 0 AI) — the
+gap T37 targets.
+
+**Scope discipline.** T37 adds a NEW overlay module (`tools/register_21f3dd85.py`) chained after
+`register_3adf31d9.apply_extension` in `tools/consolidate.py`; it never edits an existing row,
+an earlier audit file, or `tools/audited_register.py` / `tools/register_3adf31d9.py`. Candidates
+that cannot meet the directory gate (approved name + venue + confirmed SF geography) are
+published `review_only` on Flagged for Review with their official links. Exact dates are only
+approved when the quotation itself carries the year, month and day; a recurring pattern never
+generates a next date (unchanged rule).
+
+**Stale-claim note (`scripts/validate.py`).** T32 (`95ceac65`, claimed 2026-10-18 06:34 UTC) has
+made no commit for over 4 hours and its scope was already integrated by the T33–T36 final
+integration (validate.py today imports the 3adf31d9 overlay). Under board rule 9 this session
+takes over the validate.py edits required by T37–T39 (overlay chain + paid-page + free-first
+dashboard assertions), keeping them additive and logging them here. `data/audit_95ceac65.json`
+and `data/research/audit-95ceac65.md` are NOT touched.
+
+**Planned verification before merge:** `tools/consolidate.py` idempotent rebuild → `scripts/build.py`
+→ `scripts/validate.py` → unit tests → `tools/check_sources.py` reachability on cited URLs
+(reachability only, never fact approval) → PR to `main` → merge on green CI → Pages build
+confirmed via the Pages API for the merge commit.

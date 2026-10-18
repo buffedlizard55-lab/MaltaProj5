@@ -454,6 +454,21 @@ for r in my_rows:
 
 events = theirs + merged
 
+# ---- integrate session a1b7522f's expansion rows -------------------------
+a1b_path = os.path.join(ROOT, "data", "events_a1b7522f.json")
+a1b_sources_path = os.path.join(ROOT, "data", "sources_a1b7522f.json")
+a1b_review_path = os.path.join(ROOT, "data", "review_a1b7522f.json")
+a1b_added = 0
+a1b_events_list = []
+if os.path.exists(a1b_path):
+    with open(a1b_path) as f:
+        a1b_events_list = json.load(f)
+    existing_names = {norm(r["name"]) for r in events}
+    for r in a1b_events_list:
+        if norm(r["name"]) not in existing_names:
+            events.append(r)
+            a1b_added += 1
+
 # ---- combined source ledger ---------------------------------------------
 sources = OrderedDict(their_sources)
 for sid, rec in my_sources.items():
@@ -461,6 +476,13 @@ for sid, rec in my_sources.items():
         sources[sid] = rec
     elif sources[sid]["url"] != rec["url"]:
         sources[sid + "-2"] = rec
+# Add a1b7522f sources
+if os.path.exists(a1b_sources_path):
+    with open(a1b_sources_path) as f:
+        a1b_sources = json.load(f)
+    for sid, rec in a1b_sources.items():
+        if sid not in sources:
+            sources[sid] = rec
 
 # ---- combined review findings -------------------------------------------
 my_review = [
@@ -565,6 +587,11 @@ my_review = [
     },
 ]
 review = their_review + my_review
+# Add a1b7522f review findings
+if os.path.exists(a1b_review_path):
+    with open(a1b_review_path) as f:
+        a1b_review = json.load(f)
+    review = review + a1b_review
 
 # ---- guards: fail loudly rather than publish a corrupted register ---------
 titles = [f["title"] for f in review]
@@ -590,7 +617,7 @@ kinds = {}
 for r in events:
     kinds[r["kind"]] = kinds.get(r["kind"], 0) + 1
 print(f"combined register: {len(events)} rows "
-      f"({len(theirs)} from 3a19e72d + {len(merged)} new from 5a85baf2)")
+      f"({len(theirs)} from 3a19e72d + {len(merged)} new from 5a85baf2 + {a1b_added} from a1b7522f)")
 print(f"  by kind: {kinds}")
 print(f"  sources: {len(sources)} official-source records")
 print(f"  review findings: {len(review)}")

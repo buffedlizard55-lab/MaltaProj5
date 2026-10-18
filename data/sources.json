@@ -523,5 +523,110 @@
     "checked": "2026-10-18",
     "excerpt": "GET THE APP! The HSB app is the best way to stay on top of announcements and updates. ... MISS YOUR MERCH MOMENT? Our online merch store is open October 13 - 27. ... HSB AT 25: RELIVE YOUR FAVORITE MOMENTS ... 25 years of HSB. Scenes from HSB 2025.",
     "method": "Official page retrieved with fetch_page/search index on 2026-10-18; excerpt transcribed from that page, not a full-page archive."
+  },
+  "nba-warriors-sched": {
+    "url": "https://www.nba.com/warriors/news/warriors-announce-2026-27-regular-season-schedule-20260813",
+    "publisher": "NBA.com \u2014 Golden State Warriors",
+    "checked": "2026-10-18",
+    "excerpt": "The National Basketball Association announced that the Golden State Warriors' 2026-27 season, presented by Kaiser Permanente, will feature 28 national television appearances. Golden State will host the Memphis Grizzlies in its home opener, presented by Chase Freedom, on Friday, October 23, at Chase Center at 7 p.m. (PT).",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "wnba-valk-sched": {
+    "url": "https://www.wnba.com/team/1611661331/golden-state-valkyries",
+    "publisher": "Golden State Valkyries \u2014 WNBA",
+    "checked": "2026-10-18",
+    "excerpt": "The Golden State Valkyries have announced their 2026 schedule, presented by Kaiser Permanente, which features a road game to start the 2026 campaign on May 8 at Seattle, and the home opener on May 10 against the Phoenix Mercury at 5:30 p.m. at Chase Center. The 2026 Valkyries regular season, presented by Kaiser Permanente, boasts 44 total games including 22 home contests at Chase Center.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "act-season-2627": {
+    "url": "https://www.act-sf.org/whats-on/2026-27-season",
+    "publisher": "American Conservatory Theater (A.C.T.)",
+    "checked": "2026-10-18",
+    "excerpt": "This is A.C.T.'s 60th anniversary season. This 2026/27 season highlights America's favorite pastime, celebrates and questions icons along the way, and rewrites history a few times over. Alfred Hitchcock's North by Northwest SEP 22\u2013OCT 18, 2026. Oh, Mary! OCT 13\u2013NOV 1, 2026. John Proctor Is the Villain NOV 12\u2014DEC 6, 2026. The Bad News Bears: A Musical FEB 26\u2013APR 4, 2027.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "curran-home": {
+    "url": "https://sfcurran.com/",
+    "publisher": "The Curran San Francisco",
+    "checked": "2026-10-18",
+    "excerpt": "Oh, Mary! Through Sun, Nov 1, 2026. The Billy Joel Legacy Thu, Nov 5, 2026. Taylor Mac in Concert Fri, Nov 6, 2026. The Music of Queen Sat, Nov 7, 2026. An Evening with Darren Criss Sat, Nov 14, 2026. World Ballet Company: Swan Lake Fri, Nov 20, 2026. The Golden Girls Live Fri, Dec 4 - Sun, Dec 20, 2026.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "sfm-full": {
+    "url": "https://www.thesfmarathon.com/full-marathon/",
+    "publisher": "The San Francisco Marathon",
+    "checked": "2026-10-18",
+    "excerpt": "July 24-25, 2027. Start Time: 5:15 a.m. Start Line: Embarcadero at Market. Finish Line: Embarcadero at Howard. Distance: 26.2 miles with a 6-hour time limit. USATF-Certified Boston Marathon qualifier.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "sfzoo-sunset": {
+    "url": "https://www.sfzoo.org/calendar-of-events/",
+    "publisher": "San Francisco Zoo & Gardens",
+    "checked": "2026-10-18",
+    "excerpt": "Sunset Fridays, an after-hours event for the whole family, will run on consecutive Fridays through October 9 from 5 to 7 p.m. at the Playfield Lawn.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "sfzoo-zoolights": {
+    "url": "https://www.sfzoo.org/calendar-of-events/",
+    "publisher": "San Francisco Zoo & Gardens \u2014 ZooLights",
+    "checked": "2026-10-18",
+    "excerpt": "Our all-new ZooLights winter holiday program, lights up the Zoo from November 6, 2026 through January 3, 2027. With over one million lights across 14 unique zones. ZooLights will be open Wednesdays through Sunday evenings (closed Mondays & Tuesdays) from 5:30 to 9 p.m.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "sfzoo-boo": {
+    "url": "https://www.sfzoo.org/calendar-of-events/",
+    "publisher": "San Francisco Zoo & Gardens \u2014 Boo at the Zoo",
+    "checked": "2026-10-18",
+    "excerpt": "Boo at the Zoo: October 31, 2026, 10:00 AM \u2013 3:00 PM. Halloween costume parade and contest.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "sfzoo-freeday": {
+    "url": "https://www.sfzoo.org/plan-your-visit/",
+    "publisher": "San Francisco Zoo & Gardens \u2014 SF Resident Free Day",
+    "checked": "2026-10-18",
+    "excerpt": "SF Resident Free Day: Free admission for San Francisco residents with proof of residency (government-issued ID). One free admission per ID provided.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "sfzoo-calendar": {
+    "url": "https://www.sfzoo.org/calendar-of-events/",
+    "publisher": "San Francisco Zoo & Gardens \u2014 Calendar",
+    "checked": "2026-10-18",
+    "excerpt": "Member Mornings: Members get early entry to the Zoo from 9:00 a.m. - 10:00 a.m. Come enjoy the Zoo!",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "presidio-habitat": {
+    "url": "https://presidio.gov/explore/events",
+    "publisher": "Presidio Trust \u2014 Habitat Stewards",
+    "checked": "2026-10-18",
+    "excerpt": "Habitat Stewards restore the natural areas of Fort Funston, Lands End, and the Presidio. Weekly volunteer sessions available.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "presidio-summer26": {
+    "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+    "publisher": "Presidio Trust \u2014 2026 Summer Events",
+    "checked": "2026-10-18",
+    "excerpt": "The Presidio of San Francisco today announced its 2026 summer event season, a dynamic lineup of mostly free festivals, events, and gatherings that transform the park into a hub for culture and play. Now in its fourth season.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "presidio-waw": {
+    "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+    "publisher": "Presidio Trust \u2014 World Arts West Dance Festival",
+    "checked": "2026-10-18",
+    "excerpt": "World Arts West Dance Festival returns to the Presidio for a fifth year running. Come out to the park for an afternoon of engaging performances at Presidio Tunnel Tops.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "sfpl-summer": {
+    "url": "https://sfpl.org/events",
+    "publisher": "San Francisco Public Library \u2014 Summer Stride",
+    "checked": "2026-10-18",
+    "excerpt": "Starting June 1 through August 31, San Francisco Public Library (SFPL) invites all of San Francisco once more to take part in its annual Summer Stride challenge. In 2025, Summer Stride saw over 20,000 San Franciscans complete the challenge.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
+  },
+  "sfpl-noi": {
+    "url": "https://sfpl.org/events",
+    "publisher": "San Francisco Public Library \u2014 Night of Ideas",
+    "checked": "2026-10-18",
+    "excerpt": "Villa Albertine San Francisco, Asian Art Museum, San Francisco Public Library, KQED and Circuit Network announce the full program for San Francisco's 2026 Night of Ideas on April 11, 3 p.m.\u2013 12 a.m. Free to the public.",
+    "method": "Web page retrieved and transcribed on 2026-10-18"
   }
 }

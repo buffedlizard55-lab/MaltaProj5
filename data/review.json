@@ -141,7 +141,19 @@
   },
   {
     "title": "Coverage remains incomplete after both research passes",
-    "detail": "Combining two independent official-source passes raises the register to 86 rows but does not establish exhaustive citywide coverage. Neighbourhood street fairs, single-venue concert series, library programmes, theatre seasons and civic meetings remain undercovered. There is no citywide denominator to measure completeness against.",
+    "detail": "Combining two independent official-source passes raises the register to 106 rows but does not establish exhaustive citywide coverage. Neighbourhood street fairs, single-venue concert series, library programmes, theatre seasons and civic meetings remain undercovered. There is no citywide denominator to measure completeness against.",
     "urls": []
+  },
+  {
+    "title": "Session a1b7522f: expanded coverage for sports, theatre, zoo, Presidio, and library events",
+    "detail": "Added 20 new rows from official sources: NBA (nba.com/warriors), WNBA (valkyries.wnba.com), A.C.T. (act-sf.org), Curran Theatre (sfcurran.com), SF Zoo (sfzoo.org), Presidio Trust (presidio.gov), SFPL (sfpl.org), and SF Marathon (thesfmarathon.com). All verified 2026-10-18.",
+    "urls": []
+  },
+  {
+    "title": "Geography note: San Francisco Marathon crosses into Marin County",
+    "detail": "The SF Marathon course crosses the Golden Gate Bridge into Sausalito, Marin County, before returning to San Francisco. The start and finish lines are within city limits, and the majority of the route is in SF. Retained with a geography flag for manual review.",
+    "urls": [
+      "https://www.thesfmarathon.com/full-marathon/"
+    ]
   }
 ]

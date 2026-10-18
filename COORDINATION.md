@@ -52,6 +52,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `3adf31d9` | `arena/3adf31d9-maltaproj5` | 2026-10-18 09:45 UTC | New product requirements: date-ordered upcoming view, executive summary, cost labels, gaming/music/AI registers, mobile-first dashboard (T33–T36); final integration, PR → main, Pages |
 | `21f3dd85` | `arena/21f3dd85-maltaproj5` | 2026-10-18 11:00 UTC | Free-first release: free gaming/music/AI research overlay, free+upcoming executive summary and dashboard main section, separate Paid section, final integration, PR → main, Pages (their T37–T40) |
 | `d57e2eeb` | `arena/d57e2eeb-maltaproj5` | 2026-10-18 ~11:05 UTC | Free-first gap research (gaming/music/AI focus) from official sources, additive register extension, rebuild + regression updates, final integration, PR → main, Pages (own T37–T39, numbering collision with `21f3dd85`) |
+| `06949148` | `arena/06949148-maltaproj5` | 2026-10-18 16:55 UTC | Takeover/final integration of stale T32 semantic-audit branch `95ceac65`; independently review evidence, preserve its unmerged work, validate/build, PR → main and confirm Pages |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -88,6 +89,19 @@ waiting, and keeps its own scope strictly non-overlapping:
 **Request to `95ceac65` (or any later integration session):** please import and run
 `tests/test_upcoming_cost.py` from `scripts/validate.py` / the unittest discovery so the new
 Upcoming page and cost badges are regression-covered in CI.
+
+## Handoff notice — `06949148` takes over T32 (`95ceac65`), 2026-10-18 ~16:55 UTC
+
+The remote branch `arena/95ceac65-maltaproj5` has three commits; its latest is
+`b10f6453310c735183a8646d2f687bb16d8c62c0`, authored at **12:07:28 UTC**. The branch is more than
+4 hours idle at this checkout, exceeding rule 9's 60-minute threshold. GitHub reports it three
+commits ahead and 38 behind `main`, with no PR in the PR list. Session `06949148` takes over T32
+on the Arena-pinned branch `arena/06949148-maltaproj5`; it will review the existing branch's
+work before integrating anything. **No data/site change is approved by this claim alone.** All
+three stale-branch commits and evidence will be preserved or explicitly reconciled (never
+silently discarded); source facts will remain blank/flagged unless an official quotation supports
+them. The takeover owns the current T32 scope plus final integration only after the review and
+validation gates pass.
 
 ---
 
@@ -128,6 +142,7 @@ Upcoming page and cost badges are regression-covered in CI.
 | T29-cal | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
 | T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; PR Validate [39102137078](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102137078), main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169), and Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) succeeded | `bb551cdc` | `COORDINATION.md` |
+| T32 | Independent semantic re-verification audit and integration of the stale `95ceac65` branch: inspect its three unmerged commits, re-check its source evidence/corrections against current main, preserve justified work, rebuild and verify the combined site, PR → main, merge and confirm Pages | **in progress — takeover** (branch last committed 2026-10-18 12:07 UTC; >4h idle at takeover) | `06949148` | `COORDINATION.md`; stale-branch audit artifacts/code; generated `data/` and site only as final integration |
 | T33 | New-requirement research: official-source entries for **gaming, music and AI** gatherings inside San Francisco, free-first; exact quotations and archived captures only | **done** | `3adf31d9` | NEW: `data/audit_3adf31d9.json`, `data/research/audit-3adf31d9.md` (commit `7295aae`) |
 | T34 | Date-ordered **Upcoming** page + **executive summary** on the landing page (nearest confirmed dates first, relative to the fixed 2026-10-18 snapshot) | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `assets/app.js`, `*.html` |
 | T35 | **Cost labelling**: a Free / Paid / Not stated badge derived only from the verified admission text, always shown next to the exact official quotation | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `*.html` |

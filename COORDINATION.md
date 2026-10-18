@@ -2,7 +2,7 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current corrective audit (T19–T21):** 240 assessed candidates; 149 directory entries,
+**Current corrective audit (T26–T28):** 240 assessed candidates; 149 directory entries,
 91 review-only. The older publication logs below are historical and their inherited
 verification badges/counts are not current field verification. See the current audit
 record at the end of this board. No new deployment is claimed until an actual Pages
@@ -34,7 +34,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `4f47c142` | `arena/4f47c142-maltaproj5` | 2026-10-18 ~00:40 | Full-inventory research (167 events), docs/ site, verification pass, second integration (PR #4) |
 | `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7) |
 | `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
-| `64f8b973` | `arena/64f8b973-maltaproj5` | 2026-10-18 02:58 | Post-integration official-evidence audit, field-safety fixes, dashboard QA, final PR and Pages confirmation (T19–T21) |
+| `64f8b973` | `arena/64f8b973-maltaproj5` | 2026-10-18 02:58 | Post-integration official-evidence audit, field-safety fixes, dashboard QA, final PR and Pages confirmation (T26–T28) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -72,9 +72,9 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
-| T19 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
-| T20 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | in progress | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
-| T21 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | in progress | `64f8b973` | `COORDINATION.md` |
+| T26 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
+| T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | in progress | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
+| T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | in progress | `64f8b973` | `COORDINATION.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -569,7 +569,7 @@ Read the complete coordination board and checked `origin/main` and open PRs befo
 No PRs are open. The prior T18 publication record explicitly closes that task, so its stale
 main-board status was normalized to done; no live claim is being taken over. All historical
 research inputs and earlier logs will be preserved. This session claims only the new audit and
-post-publication integration T19–T21 scopes above and is the final integration owner for its
+post-publication integration T26–T28 scopes above and is the final integration owner for its
 own completed audit. No other session's unfinished research will be overwritten.
 
 Arena fixes this session to `arena/64f8b973-maltaproj5`; no other branch will be created or used.
@@ -582,7 +582,7 @@ ledger for review. A changing citywide inventory cannot honestly be certified ex
 
 Claim committed and pushed before implementation. Source/check/PR/deployment results to follow.
 
-### T19 progress — `64f8b973` — 2026-10-18
+### T26 progress — `64f8b973` — 2026-10-18
 
 * Actions evidence capture `39092033950` succeeded (job `117570642864`), with 217 URL
   snapshots. HTTP/text retrieval is **not** contextual verification.
@@ -594,10 +594,10 @@ Claim committed and pushed before implementation. Source/check/PR/deployment res
   Exact-substring assertions validate quotation provenance only, not applicability.
 * Fixed capture refresh so failures cannot erase prior evidence, and adjudicated
   captures remain immutable. Latest request status is kept separately, never relabeled 200.
-* T19/T20/T21 remain owned here/in progress. Existing baseline remains live until the
+* T26/T27/T28 remain owned here/in progress. Existing baseline remains live until the
   audit overlay, deterministic rebuild, regression tests and deployment checks pass.
 
-### T19 complete / T20 integrated checkpoint — `64f8b973` — 2026-10-18
+### T26 complete / T27 integrated checkpoint — `64f8b973` — 2026-10-18
 
 * Every inherited candidate has an explicit disposition: 231 retained; nine new
   official-calendar entries added. **149 listed / 91 review-only**, not 240 fully
@@ -625,8 +625,8 @@ Claim committed and pushed before implementation. Source/check/PR/deployment res
   the final command exited 0. Small-text contrast failures were fixed; axe-core
   **4.14.0** reports zero automated WCAG A/AA violations on the four core page types
   (not a complete accessibility certification).
-* Preview is served on 0.0.0.0:8080. T20 remains in progress until CI/URL/PR checks;
-  T21 publication is not yet complete. No broken site has been merged.
+* Preview is served on 0.0.0.0:8080. T27 remains in progress until CI/URL/PR checks;
+  T28 publication is not yet complete. No broken site has been merged.
 
 ### Rebase conflict — evidence bot `4054bb1` / audit integration — `64f8b973`
 
@@ -636,3 +636,24 @@ by retaining all 240 explicit decisions/selected excerpts, retaining every bot
 capture and newest `latest_attempt`, and preserving the original first-capture
 `captured_at` separately from `last_capture_attempt_at`. No source evidence or
 other session's dataset was discarded. Canonical projection and rebuild rechecked.
+
+### Mainline reconciliation claim / request — `64f8b973` — 2026-10-18
+
+Before PR creation, fetch found `main` advanced to `0d24148` through PRs #14–#19;
+PR #20 is a separate documentation follow-up. The stale-base PR attempt did not
+create a PR. Main's newly visible board independently uses T19–T25, so this
+session's original T19–T21 claims/log references are renumbered **T26–T28** here;
+main's owners and completed logs will be preserved unchanged during integration.
+
+**Request to `99662c40` (T25):** your Ferry Fest implementation is merged in #17,
+but the board still lists publication in progress. This session needs to retain
+`tools/apply_audit.py` and `data/audit_f1fd3c36.json` as upstream research inputs.
+Those claimed files will be imported from main **without editing them**; a new,
+nonoverlapping `tools/upstream_candidates.py` adapter will apply the legacy step
+inside an isolated temporary directory before this session's fail-closed overlay.
+The broken Ferry Fest URL will remain historical, never active evidence.
+
+T27 scope now includes that new adapter and explicit dispositions for the two
+upstream-added candidates. T28 remains this session's final integration/PR/Pages
+confirmation, not a takeover of another session's documentation task. No user
+review or input is required; all combined outputs will be rebuilt and tested.

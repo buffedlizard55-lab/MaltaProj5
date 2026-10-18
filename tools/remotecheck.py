@@ -43,10 +43,19 @@ for url in sorted(urls):
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA,
                                                   "Accept-Language": "en-US,en;q=0.9"})
-        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-            code = r.getcode()
-            ok.append((url, code, label))
-            print(f"  {code}  {url}")
+        try:
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                code = r.getcode()
+                ok.append((url, code, label))
+                print(f"  {code}  {url}")
+                time.sleep(0.2)
+                continue
+        except Exception:
+            time.sleep(2)
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                code = r.getcode()
+                ok.append((url, code, label))
+                print(f"  {code}  {url} (second attempt)")
     except urllib.error.HTTPError as e:
         if e.code in (403, 405, 406, 429) or e.code >= 500:
             blocked.append((url, e.code, label))

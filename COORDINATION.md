@@ -2,10 +2,11 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (T26–T28):** PRs #22 and #24 are merged and Pages is confirmed live, including the final Nihonmachi venue-context tightening.
-**T29–T31 (`bb551cdc`):** additional official-calendar research in progress on `arena/bb551cdc-maltaproj5`. Historical 242/162/80 counts remain the last live snapshot until this session publishes.
-Older counts/field-page badges below are historical, not the current
-publication gate. Actual CI, merge and Pages records are at the end of this board.
+**Current publication (2026-10-18):** PR #28's official-calendar additions and PR #29's publication record are merged; GitHub Pages is live from `main`.
+
+The bounded snapshot contains **246 candidates: 167 city-only directory entries / 79 review-only**, with 23 weekly / 7 monthly / 26 annual / 111 special entries and 242 cited official URLs across 140 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
+
+PR #27 independently audited and documented the prior 242-candidate snapshot. Earlier counts and task results below are historical, not the current publication gate. Actual CI, merge and Pages records are at the end of this board.
 
 **Rules**
 
@@ -84,10 +85,10 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T26 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
 | T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | done — final context correction merged in PR #24 | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
 | T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | done — PR #24 checks, Pages build and corrected live content confirmed | `64f8b973` | `COORDINATION.md` |
-| T29 | Independent final checkout audit of the shipped register/site: rerun canonical rebuild, tests and local-link checks; inspect official-source provenance and current Pages content; log confirmed defects/irregularities only | **done** — 30 offline tests, exact evidence projection and local links pass; live Pages and PR #26 checks/build confirmed | `0574b8f6` | `COORDINATION.md` only; no data/site changes |
+| T29 | Independent final checkout audit of the shipped register/site: rerun canonical rebuild, tests and local-link checks; inspect official-source provenance and current Pages content; log confirmed defects/irregularities only | **done** — 30 offline tests and exact evidence/link checks pass; PR #27 merged, Pages build and live snapshot confirmed | `0574b8f6` | `COORDINATION.md` only; no data/site changes |
 | T29-cal | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
-| T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169) success; Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) success | `bb551cdc` | `COORDINATION.md` |
+| T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; PR Validate [39102137078](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102137078), main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169), and Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) succeeded | `bb551cdc` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1105,7 +1106,7 @@ merged only after the full strict gate passes again.
   are already live. No other session's research/tool file was modified for the
   final correction. No manual review/approval was requested or required.
 
-## T29 independent final checkout audit — `0574b8f6`
+## T29 independent final checkout audit — `0574b8f6` (pre-PR #28 snapshot)
 
 ### Verification performed
 
@@ -1129,8 +1130,8 @@ merged only after the full strict gate passes again.
   [row-by-row sources and quotations](https://buffedlizard55-lab.github.io/MaltaProj5/sources.html),
   [analysis](https://buffedlizard55-lab.github.io/MaltaProj5/analysis.html), and
   [machine-readable audit summary](https://buffedlizard55-lab.github.io/MaltaProj5/data/audit_summary.json).
-  The live summary confirms **162 directory / 80 review-only / 242 assessed**,
-  20 weekly / 7 monthly / 25 annual / 110 special, 237 URLs / 140 domains. Each
+  At the T29 cutoff, the live summary confirmed **162 directory / 80 review-only / 242 assessed**,
+  20 weekly / 7 monthly / 25 annual / 110 special, 237 URLs / 140 domains. PR #28 later superseded this historical snapshot. Each
   table row links to its explicit evidence anchor and organizer/venue source; for
   example, [Foodwise's Ferry Plaza Farmers Market page](https://foodwise.org/markets/ferry-plaza-farmers-market/),
   [California Academy of Sciences NightLife](https://www.calacademy.org/nightlife),
@@ -1161,9 +1162,10 @@ No data, source, or site file owned by that session was modified.
   fields remain visible on Flagged for Review; no candidate or missing fact was
   promoted to the directory during T29.
 * **Release-note discrepancy — request to `t26-3164fba7`:** merged PR #26's body says
-  “Review-only events: 4,” but the merged data, live review page and audit summary
-  consistently show **80**. The published site/data are correct; please correct the
-  PR description if practical. Its broad “verified pages” wording should also retain
+  “Review-only events: 4,” while the data/review page at that merge showed **80**
+  (PR #28 later superseded the count; the current snapshot has 79). The published
+  site/data are correct; please correct the PR description if practical. Its broad
+  “verified pages” wording should also retain
   the site's distinction between archived fact evidence and URL reachability. T29
   did not edit another session's PR metadata or alter site content.
 * The task board contains two historical rows numbered T21 from an earlier
@@ -1182,6 +1184,17 @@ session row. Resolution retained both the `t26-3164fba7` mainline record and T29
 completed audit/results, then added this reconciliation note. No other files or
 session work were discarded.
 
+## Publication record — T29 audit — `0574b8f6`
+
+| Item | Result |
+|---|---|
+| PR | [#27](https://github.com/buffedlizard55-lab/MaltaProj5/pull/27), merged 2026-10-18 05:52:33 UTC |
+| Merge commit | `5930def0c87e70c441f74dc45eba4fa373a5217e` |
+| PR validation | [39102000536](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102000536) **success**; all 30 tests, browser/accessibility, evidence, local-link and source-reachability gates passed |
+| Main validation | [39102055629](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102055629) **success** |
+| Pages | [39102055366](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102055366) **success**; Pages build **1293671971** was `built` for `5930def` |
+| Snapshot at publication | 242 candidates / 162 listed / 80 review-only; PR #28 later superseded these counts |
+
 ## Publication record — T29-cal / T30 / T31 — `bb551cdc`
 
 | Item | Result |
@@ -1194,3 +1207,14 @@ session work were discarded.
 | Register | 246 candidates / 167 listed / 79 review-only |
 
 Sources: Rec Park EID 9528 and 9947, SF.gov Civic Center Soundtrack, Rec Park Illuminate LIVE news flash, comedyday.org + FAQ. Harvest Festival and Festival of Chariots not added (incomplete official pages). Comedy Day date blank.
+
+Reachability only: PR #28 run 39102137078 reported 47 restricted/challenge/server/transport responses; post-merge run 39102196169 reported 40. The 404/410 gate passed; unknowns are not semantic verification.
+
+### T31 publication-record follow-up — documentation-only PR #29
+
+[PR #29](https://github.com/buffedlizard55-lab/MaltaProj5/pull/29) merged at
+2026-10-18 05:56:47 UTC as `06b44bbf17af6cfe6579954688fb9d6fd83ed03d`.
+Main validation [39102291756](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102291756)
+and Pages workflow [39102291538](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102291538)
+succeeded; Pages API build **1293677966** is `built` for that commit. PR #29 changed
+coordination documentation only; the 246/167/79 event register is from PR #28.

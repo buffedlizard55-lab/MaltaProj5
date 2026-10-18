@@ -64,5 +64,21 @@
    "https://archive.org/about/contact",
    "https://gracecathedral.org/series/organ-recital-series/"
   ]
+ },
+ {
+  "title": "Free-first gap research pass (session d57e2eeb)",
+  "detail": "21 entries were added from official operator, venue, government and community pages read on 18 October 2026: the Cable Car Museum, Randall Museum, San Francisco Railway Museum, Fort Point NHS, Presidio Officers' Club free exhibitions and Musée Mécanique; the Golden Gate Park gardens' free hours (Japanese Tea Garden M/W/F hour, Conservatory of Flowers free first Tuesdays, Botanical Garden daily early entry and free second Tuesdays); free music beyond the big festivals (weekly Noontime Concerts at Old St. Mary's, Grace Cathedral free Choral Evensong, the annual People in Plazas series); gaming additions (Gamescape's weekly Board Game Night, plus Musée Mécanique); recurring SF AI/tech community channels (AI Tinkerers SF, The AI Collective SF chapter, Noisebridge's Circuit Hacking Mondays and monthly Five Minutes of Fame); the free SF Shakespeare Festival parks season, Circus Bella's free Union Square juggling lessons, and the 2026 Bay Area Science Festival at UCSF Mission Bay. One explicitly paid event — Circus Bella's BRAVURA Big Top — is published with a Paid badge, kept distinct from the free-first entries. Every value is quoted from the archived page text; blank cells stay blank and are labelled 'Not stated'. Six irregularities found on official pages themselves (conflicting season-closing and tour dates at circusbella.org, a stale next-event link and year mix-up on the Noisebridge wiki, a year-less upcoming listing on aicollective.com, two-digit years on gamescapesf.store, and Grace Cathedral's free service vs paid sightseeing) are quoted verbatim and flagged on the rows rather than silently reconciled. Five pages were read through the workspace search tool's verbatim result text rather than a direct fetch (museemecanique.com, streetcar.org/museum, gamescapesf.com, gracecathedral.org/calendar-events, ucsf.edu news); those captures record no HTTP status and are labelled as such.",
+  "urls": [
+   "https://www.cablecarmuseum.org/info.html",
+   "https://randallmuseum.org/directions-hours/",
+   "https://www.nps.gov/fopo/planyourvisit/fees.htm",
+   "https://noontimeconcerts.org/",
+   "https://gracecathedral.org/series/choral-evensong/",
+   "https://gggp.org/tickets/",
+   "https://www.gamescapesf.store/events",
+   "https://www.circusbella.org/bigtop",
+   "https://sfshakes.org/performance/free-shakes/",
+   "https://bayareasciencefestival.org/"
+  ]
  }
 ]

@@ -23474,5 +23474,2512 @@
    "reviewed_at": "2026-10-18",
    "method": "Explicit contextual field decisions; incomplete fields remain blank"
   }
+ },
+ {
+  "id": "h-cable-car-museum",
+  "name": "San Francisco Cable Car Museum",
+  "schedule": "Open Tuesday–Thursday 10 am–4 pm and Friday–Sunday 10 am–5 pm; closed Monday",
+  "time": "10 am–4 pm Tue–Thu; 10 am–5 pm Fri–Sun",
+  "venue": "1201 Mason Street, San Francisco, CA 94108",
+  "price": "Admission is Free.",
+  "candidate_name": "San Francisco Cable Car Museum",
+  "candidate_label": "New research identifier",
+  "category": "Museums & science",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.cablecarmuseum.org/info.html",
+     "text": "San Francisco, CA 94108"
+    }
+   ],
+   "basis": "The museum's own information page states its San Francisco street address."
+  },
+  "recurrence": {
+   "value": "Open every day except Monday (closed Mondays, and New Year's Day, Thanksgiving and Christmas)",
+   "quotes": [
+    {
+     "url": "https://www.cablecarmuseum.org/info.html",
+     "text": "Open every day except New Year's Day, Thanksgiving and Christmas."
+    },
+    {
+     "url": "https://www.cablecarmuseum.org/info.html",
+     "text": "CLOSED MONDAY"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "San Francisco Cable Car Museum",
+    "quotes": [
+     {
+      "url": "https://www.cablecarmuseum.org/",
+      "text": "San Francisco Cable Car Museum"
+     },
+     {
+      "url": "https://www.cablecarmuseum.org/info.html",
+      "text": "Cable Car Museum"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Open Tuesday–Thursday 10 am–4 pm and Friday–Sunday 10 am–5 pm; closed Monday",
+    "quotes": [
+     {
+      "url": "https://www.cablecarmuseum.org/info.html",
+      "text": "Tuesday to Thursday<br> OPEN 10AM TO 4PM<br> Friday to Sunday<br> OPEN 10AM TO 5PM<br> CLOSED MONDAY"
+     }
+    ]
+   },
+   "time": {
+    "value": "10 am–4 pm Tue–Thu; 10 am–5 pm Fri–Sun",
+    "quotes": [
+     {
+      "url": "https://www.cablecarmuseum.org/info.html",
+      "text": "OPEN 10AM TO 4PM"
+     },
+     {
+      "url": "https://www.cablecarmuseum.org/info.html",
+      "text": "OPEN 10AM TO 5PM"
+     }
+    ]
+   },
+   "venue": {
+    "value": "1201 Mason Street, San Francisco, CA 94108",
+    "quotes": [
+     {
+      "url": "https://www.cablecarmuseum.org/info.html",
+      "text": "1201 Mason Street"
+     },
+     {
+      "url": "https://www.cablecarmuseum.org/info.html",
+      "text": "San Francisco, CA 94108"
+     }
+    ]
+   },
+   "price": {
+    "value": "Admission is Free.",
+    "quotes": [
+     {
+      "url": "https://www.cablecarmuseum.org/info.html",
+      "text": "Admission is Free."
+     },
+     {
+      "url": "https://www.cablecarmuseum.org/",
+      "text": "**Admission Free**"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-c78b1314a832",
+   "n-f5e4d10ebd6b"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-randall-museum",
+  "name": "Randall Museum",
+  "schedule": "Tuesday through Saturday, 10 am–5 pm; closed Sunday and Monday",
+  "time": "10 am to 5 pm",
+  "venue": "199 Museum Way, San Francisco, CA 94114",
+  "price": "Admission is Free",
+  "candidate_name": "Randall Museum",
+  "candidate_label": "New research identifier",
+  "category": "Museums & science",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://randallmuseum.org/directions-hours/",
+     "text": "The Randall Museum is located at 199 Museum Way, San Francisco CA 94114"
+    }
+   ],
+   "basis": "The museum's official hours and directions page states its San Francisco address."
+  },
+  "recurrence": {
+   "value": "Open Tuesday through Saturday, closed Sunday and Monday (and listed legal holidays)",
+   "quotes": [
+    {
+     "url": "https://randallmuseum.org/directions-hours/",
+     "text": "Tuesday through Saturday"
+    },
+    {
+     "url": "https://randallmuseum.org/directions-hours/",
+     "text": "Closed Sunday and Monday"
+    },
+    {
+     "url": "https://randallmuseum.org/directions-hours/",
+     "text": "The Randall Museum is closed on the following legal holidays:"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Randall Museum",
+    "quotes": [
+     {
+      "url": "https://randallmuseum.org/directions-hours/",
+      "text": "Randall Museum"
+     },
+     {
+      "url": "https://randallmuseum.org/directions-hours/",
+      "text": "The Randall Museum is located at 199 Museum Way, San Francisco CA 94114"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Tuesday through Saturday, 10 am–5 pm; closed Sunday and Monday",
+    "quotes": [
+     {
+      "url": "https://randallmuseum.org/directions-hours/",
+      "text": "Tuesday through Saturday"
+     },
+     {
+      "url": "https://randallmuseum.org/directions-hours/",
+      "text": "Open 10 am to 5 pm"
+     },
+     {
+      "url": "https://randallmuseum.org/directions-hours/",
+      "text": "Closed Sunday and Monday"
+     }
+    ]
+   },
+   "time": {
+    "value": "10 am to 5 pm",
+    "quotes": [
+     {
+      "url": "https://randallmuseum.org/directions-hours/",
+      "text": "Open 10 am to 5 pm"
+     }
+    ]
+   },
+   "venue": {
+    "value": "199 Museum Way, San Francisco, CA 94114",
+    "quotes": [
+     {
+      "url": "https://randallmuseum.org/directions-hours/",
+      "text": "The Randall Museum is located at 199 Museum Way, San Francisco CA 94114"
+     }
+    ]
+   },
+   "price": {
+    "value": "Admission is Free",
+    "quotes": [
+     {
+      "url": "https://randallmuseum.org/directions-hours/",
+      "text": "Admission is Free"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-fe827991e24a"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-sf-railway-museum",
+  "name": "San Francisco Railway Museum",
+  "schedule": "Tuesday through Sunday, 12 noon–5 pm",
+  "time": "12 noon–5 pm",
+  "venue": "77 Steuart Street (across from the Ferry Building), San Francisco, CA 94105",
+  "price": "free (donations encouraged)",
+  "candidate_name": "San Francisco Railway Museum",
+  "candidate_label": "New research identifier",
+  "category": "Museums & science",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.streetcar.org/",
+     "text": "San Francisco, CA 94105"
+    }
+   ],
+   "basis": "The operator's official site lists the museum's San Francisco street address."
+  },
+  "recurrence": {
+   "value": "Open Tuesdays through Sundays (closed Thanksgiving, Christmas Day, and New Year's Day)",
+   "quotes": [
+    {
+     "url": "https://www.streetcar.org/museum/",
+     "text": "open Tuesdays through Sundays from 12 noon – 5 pm"
+    },
+    {
+     "url": "https://www.streetcar.org/museum/",
+     "text": "(Closed on Thanksgiving, Christmas Day, and New Year’s Day)"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "San Francisco Railway Museum",
+    "quotes": [
+     {
+      "url": "https://www.streetcar.org/",
+      "text": "San Francisco Railway Museum"
+     },
+     {
+      "url": "https://www.streetcar.org/museum/",
+      "text": "San Francisco Railway Museum & Gift Shop"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Tuesday through Sunday, 12 noon–5 pm",
+    "quotes": [
+     {
+      "url": "https://www.streetcar.org/",
+      "text": "12 Noon to 5 pm, Tuesday-Sunday"
+     },
+     {
+      "url": "https://www.streetcar.org/museum/",
+      "text": "open Tuesdays through Sundays from 12 noon – 5 pm"
+     }
+    ]
+   },
+   "time": {
+    "value": "12 noon–5 pm",
+    "quotes": [
+     {
+      "url": "https://www.streetcar.org/",
+      "text": "12 Noon to 5 pm, Tuesday-Sunday"
+     }
+    ]
+   },
+   "venue": {
+    "value": "77 Steuart Street (across from the Ferry Building), San Francisco, CA 94105",
+    "quotes": [
+     {
+      "url": "https://www.streetcar.org/",
+      "text": "77 Steuart St."
+     },
+     {
+      "url": "https://www.streetcar.org/",
+      "text": "San Francisco, CA 94105"
+     },
+     {
+      "url": "https://www.streetcar.org/museum/",
+      "text": "77 Steuart Street, between Market and Mission Streets, across from the Ferry Building"
+     }
+    ]
+   },
+   "price": {
+    "value": "free (donations encouraged)",
+    "quotes": [
+     {
+      "url": "https://www.streetcar.org/",
+      "text": "It’s free!"
+     },
+     {
+      "url": "https://www.streetcar.org/museum/",
+      "text": "The museum is free (donations encouraged)"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-d569ed601d5e",
+   "n-4022a4c65585"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-fort-point",
+  "name": "Fort Point National Historic Site",
+  "schedule": "Open Thursday through Monday, 10:00 am–5:00 pm (exterior grounds accessible 7 days a week)",
+  "time": "10:00 am–5:00 pm (roof access closes at 4:30 pm)",
+  "venue": "Long Ave & Marine Dr (south anchorage of the Golden Gate Bridge), San Francisco, CA 94129",
+  "price": "Free — no entrance pass required",
+  "candidate_name": "Fort Point National Historic Site",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+     "text": "Long Ave & Marine Dr, San Francisco, CA 94129"
+    }
+   ],
+   "basis": "The National Park Service's official page states the fort's San Francisco street address, on the Presidio of San Francisco."
+  },
+  "recurrence": {
+   "value": "Open Thursday through Monday; closed Thanksgiving, Christmas, and New Year's Day",
+   "quotes": [
+    {
+     "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+     "text": "Open Thursday through Monday, 10:00am-5:00pm."
+    },
+    {
+     "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+     "text": "Closed on Thanksgiving, Christmas, and New Year's Day."
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Fort Point National Historic Site",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+      "text": "Fort Point National Historic Site"
+     },
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/fees.htm",
+      "text": "Fees & Passes - Fort Point National Historic Site"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Open Thursday through Monday, 10:00 am–5:00 pm (exterior grounds accessible 7 days a week)",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+      "text": "Open Thursday through Monday, 10:00am-5:00pm."
+     },
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+      "text": "The exterior of the fort can be accessed 7 days a week."
+     }
+    ]
+   },
+   "time": {
+    "value": "10:00 am–5:00 pm (roof access closes at 4:30 pm)",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+      "text": "10:00am-5:00pm"
+     },
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+      "text": "Roof access closes at 4:30pm on days that Fort Point is open."
+     }
+    ]
+   },
+   "venue": {
+    "value": "Long Ave & Marine Dr (south anchorage of the Golden Gate Bridge), San Francisco, CA 94129",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+      "text": "Long Ave & Marine Dr, San Francisco, CA 94129"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free — no entrance pass required",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/fees.htm",
+      "text": "Free<br>No [entrance pass]"
+     },
+     {
+      "url": "https://www.nps.gov/fopo/planyourvisit/fees.htm",
+      "text": "An entrance pass is **not required** to access Fort Point National Historic Site."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-e96d425b2a8a",
+   "n-2a76f7af3b62"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-presidio-officers-club",
+  "name": "Presidio Officers' Club free history exhibitions",
+  "schedule": "Exhibits open Friday through Sunday, 11 a.m. to 4 p.m.",
+  "time": "11 a.m. to 4 p.m.",
+  "venue": "50 Moraga Avenue, San Francisco, CA 94129",
+  "price": "Free history exhibitions",
+  "candidate_name": "Presidio Officers' Club free history exhibitions",
+  "candidate_label": "New research identifier",
+  "category": "Museums & science",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+     "text": "50 Moraga Avenue, San Francisco, CA 94129"
+    }
+   ],
+   "basis": "The Presidio Trust's official page lists the venue at a San Francisco address; the Presidio is inside San Francisco."
+  },
+  "recurrence": {
+   "value": "Exhibits open Friday through Sunday",
+   "quotes": [
+    {
+     "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+     "text": "Exhibits are open Friday through Sunday, 11 a.m. to 4 p.m."
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Presidio Officers' Club free history exhibitions",
+    "quotes": [
+     {
+      "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+      "text": "Presidio Officers' Club"
+     },
+     {
+      "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+      "text": "The club offers food and free history exhibitions"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Exhibits open Friday through Sunday, 11 a.m. to 4 p.m.",
+    "quotes": [
+     {
+      "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+      "text": "Exhibits are open Friday through Sunday, 11 a.m. to 4 p.m."
+     }
+    ]
+   },
+   "time": {
+    "value": "11 a.m. to 4 p.m.",
+    "quotes": [
+     {
+      "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+      "text": "11 a.m. to 4 p.m."
+     }
+    ]
+   },
+   "venue": {
+    "value": "50 Moraga Avenue, San Francisco, CA 94129",
+    "quotes": [
+     {
+      "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+      "text": "50 Moraga Avenue, San Francisco, CA 94129"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free history exhibitions",
+    "quotes": [
+     {
+      "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+      "text": "The club offers food and free history exhibitions"
+     },
+     {
+      "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+      "text": "FREE HISTORY EXHIBTIONS"
+     },
+     {
+      "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+      "text": "No ticket required."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-017995d825c3"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "The official page's all-caps heading reads 'FREE HISTORY EXHIBTIONS' (sic); the row's wording uses standard spelling while the heading is quoted verbatim in the evidence. The page also states 'No ticket required.' for the exhibitions.",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-free-shakespeare-in-the-park",
+  "name": "Free Shakespeare in the Park",
+  "schedule": "Summer season, July through September (2026 production ran July 25 – Sept 27)",
+  "time": "",
+  "venue": "San Francisco's McLaren and Sue Bierman Parks (2026 SF sites; season also visits other Bay Area cities)",
+  "price": "free to attend",
+  "candidate_name": "Free Shakespeare in the Park",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://sfshakes.org/performance/free-shakes/",
+     "text": "and San Francisco’s McLaren and Sue Bierman Parks."
+    }
+   ],
+   "basis": "The festival's official page names its two San Francisco park venues for the 2026 season; the festival has presented in San Francisco since 1983."
+  },
+  "recurrence": {
+   "value": "annual summer season (presented continuously since 1983; 44 seasons; 2027 season announced via the organizer's notice list)",
+   "quotes": [
+    {
+     "url": "https://sfshakes.org/performance/free-shakes/",
+     "text": "Since then we’ve presented the annual Free Shakespeare program continuously for 44 seasons."
+    },
+    {
+     "url": "https://sfshakes.org/",
+     "text": "Get on the [notice list](https://sfshakes.org/about/#contact) for updates about Free Shakespeare in the Park’s 2027 season!"
+    }
+   ]
+  },
+  "occurrences": [
+   {
+    "start": "2026-07-25",
+    "end": "2026-09-27",
+    "quotes": [
+     {
+      "url": "https://sfshakes.org/performance/free-shakes/",
+      "text": "Antony and Cleopatra performed July 25 – Sept 27, 2026"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Past dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Free Shakespeare in the Park",
+    "quotes": [
+     {
+      "url": "https://sfshakes.org/performance/free-shakes/",
+      "text": "Free Shakespeare in the Park"
+     },
+     {
+      "url": "https://sfshakes.org/",
+      "text": "free shakespeare in the park"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Summer season, July through September (2026 production ran July 25 – Sept 27)",
+    "quotes": [
+     {
+      "url": "https://sfshakes.org/performance/free-shakes/",
+      "text": "Every summer we bring a new production to outdoor venues"
+     },
+     {
+      "url": "https://sfshakes.org/performance/free-shakes/",
+      "text": "Antony and Cleopatra performed July 25 – Sept 27, 2026"
+     }
+    ]
+   },
+   "venue": {
+    "value": "San Francisco's McLaren and Sue Bierman Parks (2026 SF sites; season also visits other Bay Area cities)",
+    "quotes": [
+     {
+      "url": "https://sfshakes.org/performance/free-shakes/",
+      "text": "and San Francisco’s McLaren and Sue Bierman Parks."
+     }
+    ]
+   },
+   "price": {
+    "value": "free to attend",
+    "quotes": [
+     {
+      "url": "https://sfshakes.org/performance/free-shakes/",
+      "text": "Although it is free to attend, it’s not free to produce!"
+     },
+     {
+      "url": "https://sfshakes.org/performance/free-shakes/",
+      "text": "no reservations, tickets, or prior Shakespeare experience required"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-bfc7d47494e9",
+   "n-7b0c0690f632"
+  ],
+  "unverified": [
+   "time: unverified"
+  ],
+  "flags": [],
+  "notes": "The 2026 in-person season has concluded and 2027 dates are not yet posted, so the next SF dates are unconfirmed; the organizer directs readers to a notice list for the 2027 season.",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-noontime-concerts",
+  "name": "Noontime Concerts",
+  "schedule": "Every Tuesday, 12:30 pm",
+  "time": "12:30 pm (45-minute concert)",
+  "venue": "Old St. Mary's Cathedral, 660 California Street, San Francisco, CA 94108",
+  "price": "Free Live Concert (pay-per-view applies to recordings)",
+  "candidate_name": "Noontime Concerts",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://noontimeconcerts.org/directions-and-location/",
+     "text": "San Francisco CA 94108"
+    }
+   ],
+   "basis": "The organizer's official directions page states the San Francisco street address of its concert venue."
+  },
+  "recurrence": {
+   "value": "Every Tuesday",
+   "quotes": [
+    {
+     "url": "https://noontimeconcerts.org/",
+     "text": "Free Live Concert"
+    },
+    {
+     "url": "https://noontimeconcerts.org/",
+     "text": "every Tuesday at 12:30 pm PST."
+    }
+   ]
+  },
+  "occurrences": [
+   {
+    "start": "2026-10-20",
+    "end": "2026-10-20",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "10/20/2026"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "NCCO Quartet"
+     }
+    ]
+   },
+   {
+    "start": "2026-10-27",
+    "end": "2026-10-27",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "10/27/2026"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Berkelium Quartet"
+     }
+    ]
+   },
+   {
+    "start": "2026-11-10",
+    "end": "2026-11-10",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "11/10/2026"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Angela Lee, Cello and Marc Teicholz, Guitar"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Future dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Noontime Concerts",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Noontime Concerts"
+     },
+     {
+      "url": "https://noontimeconcerts.org/directions-and-location/",
+      "text": "Visit Noontime Concerts"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Every Tuesday, 12:30 pm",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Free Live Concert"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Every Tuesday"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Live Stream Starts at 12:30PM"
+     }
+    ]
+   },
+   "time": {
+    "value": "12:30 pm (45-minute concert)",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "We live stream a 45-minute concert featuring amazing musicians every Tuesday at 12:30 pm PST."
+     }
+    ]
+   },
+   "venue": {
+    "value": "Old St. Mary's Cathedral, 660 California Street, San Francisco, CA 94108",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/directions-and-location/",
+      "text": "Old St. Mary’s Cathedral"
+     },
+     {
+      "url": "https://noontimeconcerts.org/directions-and-location/",
+      "text": "660 California Street"
+     },
+     {
+      "url": "https://noontimeconcerts.org/directions-and-location/",
+      "text": "San Francisco CA 94108"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free Live Concert (pay-per-view applies to recordings)",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Free Live Concert"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "1\\. Free Live Stream"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-154a97db611a",
+   "n-c51336c8be42"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "The official page heads its listing 'Free Live Concert  Every Tuesday' with in-person attendance at Old St. Mary's Cathedral; its own '3 Ways' section prices only recordings (pay-per-view and member on-demand access to the past-concert library), not the live concerts. Integration note: session 21f3dd85 independently published f-noontime-concerts for the same series from its own official captures (which additionally quote the about page's 'not ticketed but suggested donations' wording). Both rows are kept with their own sources, following the dual-row precedent recorded for GDC Festival of Gaming 2027 in the mainline integration log; this row adds the verified next-session dates (2026-10-20, 2026-10-27, 2026-11-10).",
+  "topic": "Music",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-choral-evensong",
+  "name": "Choral Evensong (Grace Cathedral)",
+  "schedule": "Every Thursday at 5:30 p.m. (listed calendar also shows Sunday Evensongs)",
+  "time": "5:30 p.m. (45 minutes)",
+  "venue": "Grace Cathedral, 1100 California Street, San Francisco, CA",
+  "price": "Evensong is free",
+  "candidate_name": "Choral Evensong (Grace Cathedral)",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://gracecathedral.org/calendar-events/",
+     "text": "San Francisco, CA"
+    }
+   ],
+   "basis": "The cathedral's official calendar names its San Francisco street address for the service."
+  },
+  "recurrence": {
+   "value": "Every Thursday at 5:30 p.m.",
+   "quotes": [
+    {
+     "url": "https://gracecathedral.org/series/choral-evensong/",
+     "text": "Evensong is free and is offered at Grace Cathedral every Thursday at 5:30 p.m."
+    }
+   ]
+  },
+  "occurrences": [
+   {
+    "start": "2026-10-18",
+    "end": "2026-10-18",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "## Oct 2026 - ### Sun 18 - ### Thu 22 - ### Sun 25 - ### Thu 29 - ## Nov 2026 - ### Sun 1"
+     }
+    ]
+   },
+   {
+    "start": "2026-10-22",
+    "end": "2026-10-22",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "## Oct 2026 - ### Sun 18 - ### Thu 22 - ### Sun 25 - ### Thu 29 - ## Nov 2026 - ### Sun 1"
+     }
+    ]
+   },
+   {
+    "start": "2026-10-25",
+    "end": "2026-10-25",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "## Oct 2026 - ### Sun 18 - ### Thu 22 - ### Sun 25 - ### Thu 29 - ## Nov 2026 - ### Sun 1"
+     }
+    ]
+   },
+   {
+    "start": "2026-10-29",
+    "end": "2026-10-29",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "## Oct 2026 - ### Sun 18 - ### Thu 22 - ### Sun 25 - ### Thu 29 - ## Nov 2026 - ### Sun 1"
+     }
+    ]
+   },
+   {
+    "start": "2026-11-01",
+    "end": "2026-11-01",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "## Oct 2026 - ### Sun 18 - ### Thu 22 - ### Sun 25 - ### Thu 29 - ## Nov 2026 - ### Sun 1"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "On snapshot date",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Choral Evensong (Grace Cathedral)",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "Choral Evensong"
+     },
+     {
+      "url": "https://gracecathedral.org/calendar-events/",
+      "text": "Choral Evensong (In-Person and Livestream)"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Every Thursday at 5:30 p.m. (listed calendar also shows Sunday Evensongs)",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "Evensong is free and is offered at Grace Cathedral every Thursday at 5:30 p.m."
+     }
+    ]
+   },
+   "time": {
+    "value": "5:30 p.m. (45 minutes)",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "every Thursday at 5:30 p.m."
+     },
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "(45 minutes)"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Grace Cathedral, 1100 California Street, San Francisco, CA",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "Grace Cathedral"
+     },
+     {
+      "url": "https://gracecathedral.org/calendar-events/",
+      "text": "1100 California Street"
+     },
+     {
+      "url": "https://gracecathedral.org/calendar-events/",
+      "text": "San Francisco, CA"
+     }
+    ]
+   },
+   "price": {
+    "value": "Evensong is free",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/choral-evensong/",
+      "text": "Evensong is free and is offered at Grace Cathedral every Thursday at 5:30 p.m."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-dbef95a1bba1",
+   "n-256fbc852bad"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "The official series text says Evensong is offered 'every Thursday at 5:30 p.m.', while the same page's calendar also lists Sunday Evensongs (Sun Oct 18, Sun Oct 25, Sun Nov 1) alongside the Thursdays; all listed dates are recorded as occurrences. Cathedral sightseeing admission is separately ticketed (per the official visit page, 'Sightseeing Admission Tickets Adults: $15 ...'), but the Evensong service itself is stated free on the series page.",
+  "topic": "Music",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-people-in-plazas",
+  "name": "People in Plazas",
+  "schedule": "Summer music season (more than 130 concerts each year)",
+  "time": "",
+  "venue": "15 venues on or near Market Street from the Embarcadero to Fourth Street, San Francisco",
+  "price": "free summer music festival",
+  "candidate_name": "People in Plazas",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://peopleinplazas.org/",
+     "text": "free summer music festival in San Francisco"
+    }
+   ],
+   "basis": "The organizer's official page describes the festival as taking place in San Francisco along Market Street."
+  },
+  "recurrence": {
+   "value": "Each year (annual free summer music festival)",
+   "quotes": [
+    {
+     "url": "https://peopleinplazas.org/",
+     "text": "Each year the “People in Plazas” (PiP) free summer music festival in San Francisco produces more than 130 concerts in 15 different venues on or near Market Street from the Embarcadero to Fourth Street."
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "People in Plazas",
+    "quotes": [
+     {
+      "url": "https://peopleinplazas.org/",
+      "text": "People in Plazas"
+     },
+     {
+      "url": "https://peopleinplazas.org/",
+      "text": "“People in Plazas” (PiP)"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Summer music season (more than 130 concerts each year)",
+    "quotes": [
+     {
+      "url": "https://peopleinplazas.org/",
+      "text": "Each year the “People in Plazas” (PiP) free summer music festival in San Francisco produces more than 130 concerts in 15 different venues on or near Market Street from the Embarcadero to Fourth Street."
+     }
+    ]
+   },
+   "venue": {
+    "value": "15 venues on or near Market Street from the Embarcadero to Fourth Street, San Francisco",
+    "quotes": [
+     {
+      "url": "https://peopleinplazas.org/",
+      "text": "15 different venues on or near Market Street from the Embarcadero to Fourth Street."
+     }
+    ]
+   },
+   "price": {
+    "value": "free summer music festival",
+    "quotes": [
+     {
+      "url": "https://peopleinplazas.org/",
+      "text": "free summer music festival"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-b233e212c8d7"
+  ],
+  "unverified": [
+   "time: unverified"
+  ],
+  "flags": [],
+  "notes": "The captured home page carries an 'Upcoming Summer Events' heading but no posted 2027 dates as of the snapshot, so the next season dates are unconfirmed.",
+  "topic": "Music",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-weekly-juggle",
+  "name": "Weekly Juggle (Circus Bella)",
+  "schedule": "Saturdays 11:30 am–1:30 pm; 2026 season listed as January 31 – 'Saturday October 19' (no class September 19 or October 10)",
+  "time": "11:30 am–1:30 pm",
+  "venue": "Union Square, San Francisco",
+  "price": "Free",
+  "candidate_name": "Weekly Juggle (Circus Bella)",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.circusbella.org/weekly-juggle",
+     "text": "Union Square, San Francisco"
+    }
+   ],
+   "basis": "The organizer's official page names the Union Square, San Francisco location for the lessons."
+  },
+  "recurrence": {
+   "value": "Weekly Saturday sessions within the announced 2026 season (January 31 – October 19, with two skipped dates)",
+   "quotes": [
+    {
+     "url": "https://www.circusbella.org/weekly-juggle",
+     "text": "WEEKLY JUGGLING LESSONS"
+    },
+    {
+     "url": "https://www.circusbella.org/weekly-juggle",
+     "text": "Saturday, January 31 - Saturday October 19"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Weekly Juggle (Circus Bella)",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/weekly-juggle",
+      "text": "WEEKLY JUGGLING LESSONS"
+     },
+     {
+      "url": "https://www.circusbella.org/",
+      "text": "Weekly Juggle"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Saturdays 11:30 am–1:30 pm; 2026 season listed as January 31 – 'Saturday October 19' (no class September 19 or October 10)",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/weekly-juggle",
+      "text": "11:30 am - 1:30 pm"
+     },
+     {
+      "url": "https://www.circusbella.org/weekly-juggle",
+      "text": "Saturday, January 31 - Saturday October 19"
+     },
+     {
+      "url": "https://www.circusbella.org/weekly-juggle",
+      "text": "no class September 19 or October 10"
+     }
+    ]
+   },
+   "time": {
+    "value": "11:30 am–1:30 pm",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/weekly-juggle",
+      "text": "11:30 am - 1:30 pm"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Union Square, San Francisco",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/weekly-juggle",
+      "text": "Union Square, San Francisco"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/weekly-juggle",
+      "text": "And best of all—it’s absolutely FREE!"
+     },
+     {
+      "url": "https://www.circusbella.org/",
+      "text": "Free Saturday Juggling Lessons in Union Square"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-3d69257f55cd",
+   "n-3676d1176548"
+  ],
+  "unverified": [],
+  "flags": [
+   "Date irregularity on the official page (left quoted, not corrected): the season end is printed as 'Saturday October 19' for 2026, but 19 October 2026 is a Monday; the actual last Saturday in that window was 17 October 2026. Because the page's own dates conflict, no next session date is asserted and the season boundary is quoted verbatim. The same page separately notes rainy-day rescheduling."
+  ],
+  "notes": "",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-five-minutes-of-fame",
+  "name": "Five Minutes of Fame (Noisebridge)",
+  "schedule": "Third Thursday of every month; social 7:30–8:00 pm, talks 8:00–9:00 pm",
+  "time": "social 7:30–8:00 pm, talks 8:00–9:00 pm",
+  "venue": "Noisebridge, 272 Capp St, San Francisco",
+  "price": "",
+  "candidate_name": "Five Minutes of Fame (Noisebridge)",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Monthly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+     "text": "Noisebridge, 272 Capp St, San Francisco."
+    }
+   ],
+   "basis": "The space's own wiki names its San Francisco street address."
+  },
+  "recurrence": {
+   "value": "Third Thursday of every month",
+   "quotes": [
+    {
+     "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+     "text": "Third Thursdays of every month"
+    },
+    {
+     "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+     "text": "every 3rd Thursday of the month at 8pm."
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Five Minutes of Fame (Noisebridge)",
+    "quotes": [
+     {
+      "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+      "text": "Five Minutes of Fame (5MoF) is ten five minute talks in an hour"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Third Thursday of every month; social 7:30–8:00 pm, talks 8:00–9:00 pm",
+    "quotes": [
+     {
+      "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+      "text": "Social 7:30pm-8:00pm, talks 8:00pm-9:00pm, Third Thursdays of every month"
+     }
+    ]
+   },
+   "time": {
+    "value": "social 7:30–8:00 pm, talks 8:00–9:00 pm",
+    "quotes": [
+     {
+      "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+      "text": "Social 7:30pm-8:00pm, talks 8:00pm-9:00pm"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Noisebridge, 272 Capp St, San Francisco",
+    "quotes": [
+     {
+      "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+      "text": "WHERE:** Noisebridge, 272 Capp St, San Francisco."
+     },
+     {
+      "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+      "text": "at Noisebridge, 272 Capp St, San Francisco"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-937fe667bf16"
+  ],
+  "unverified": [
+   "price: unverified"
+  ],
+  "flags": [
+   "The wiki page reviewed states no admission price or cover, so the cost cell is blank ('Not stated') rather than assumed free. Date irregularity on the official page (quoted, not corrected): its 'Next event' link points to a June 17, 2026 page that is already in the past at this snapshot, and its 'Prev event' link text shows mismatched years (2025/05 21 under a 2026 URL). The third-Thursday pattern would put the next talk on 19 November 2026, but the page does not state it, so no next date is asserted."
+  ],
+  "notes": "",
+  "topic": "AI & technology",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-circuit-hacking-mondays",
+  "name": "Circuit Hacking Mondays (Noisebridge)",
+  "schedule": "Most Mondays from 7:00 pm",
+  "time": "7:00 pm onwards",
+  "venue": "Noisebridge Hackitorium (downstairs), 272 Capp St, San Francisco",
+  "price": "",
+  "candidate_name": "Circuit Hacking Mondays (Noisebridge)",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+     "text": "Noisebridge, 272 Capp St, San Francisco."
+    }
+   ],
+   "basis": "The space's own wiki locates the evening at the Noisebridge Hackitorium, the same space whose San Francisco address is stated on its 5MoF page."
+  },
+  "recurrence": {
+   "value": "Weekly on Mondays (three rotating approximately-monthly sub-sections; 'There will always be circuit hacking on Mondays')",
+   "quotes": [
+    {
+     "url": "https://www.noisebridge.net/wiki/Circuit_Hacking_Monday",
+     "text": "Circuit Hacking Mondays is a weekly get-together"
+    },
+    {
+     "url": "https://www.noisebridge.net/wiki/Circuit_Hacking_Monday",
+     "text": "There will always be circuit hacking on Mondays"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Circuit Hacking Mondays (Noisebridge)",
+    "quotes": [
+     {
+      "url": "https://www.noisebridge.net/wiki/Circuit_Hacking_Monday",
+      "text": "Circuit Hacking Mondays is a weekly get-together to learn electronics and learn to solder cool stuff!"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Most Mondays from 7:00 pm",
+    "quotes": [
+     {
+      "url": "https://www.noisebridge.net/wiki/Circuit_Hacking_Monday",
+      "text": "**WHEN:** 7:00pm till whenever -- most Mondays"
+     }
+    ]
+   },
+   "time": {
+    "value": "7:00 pm onwards",
+    "quotes": [
+     {
+      "url": "https://www.noisebridge.net/wiki/Circuit_Hacking_Monday",
+      "text": "7:00pm till whenever -- most Mondays"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Noisebridge Hackitorium (downstairs), 272 Capp St, San Francisco",
+    "quotes": [
+     {
+      "url": "https://www.noisebridge.net/wiki/Circuit_Hacking_Monday",
+      "text": "Hackitorium"
+     },
+     {
+      "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+      "text": "Noisebridge, 272 Capp St, San Francisco."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-f5fdcd146ba6",
+   "n-937fe667bf16"
+  ],
+  "unverified": [
+   "price: unverified"
+  ],
+  "flags": [
+   "No admission price is stated for the general Monday session, so the cost cell is blank ('Not stated'). The same wiki page asks for suggested donations only for kit/material costs in two monthly sub-sections (Learn to Solder Monday: '$10-20 donation to cover kit costs'; Microcontroller Monday: '$15-40 donation to cover parts and materials') — quoted verbatim in the archived capture, not treated as an admission price."
+  ],
+  "notes": "",
+  "topic": "AI & technology",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-bay-area-science-festival",
+  "name": "Bay Area Science Festival",
+  "schedule": "Saturday, October 17, 2026, 11 am–4 pm (13th edition)",
+  "time": "11 am–4 pm",
+  "venue": "UCSF Mission Bay Campus (Koret Quad), San Francisco",
+  "price": "Free!",
+  "candidate_name": "Bay Area Science Festival",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://bayareasciencefestival.org/exhibit/",
+     "text": "Bay Area Science Festival at UCSF Mission Bay Campus in San Francisco"
+    }
+   ],
+   "basis": "The festival's official exhibitor page states the 2026 venue is UCSF Mission Bay Campus in San Francisco."
+  },
+  "recurrence": {
+   "value": "annual (13th edition in 2026; organized by UCSF's Science & Health Education Partnership; at UCSF Mission Bay since 2025 after years at Oracle Park)",
+   "quotes": [
+    {
+     "url": "https://bayareasciencefestival.org/",
+     "text": "The 13th edition brings together"
+    },
+    {
+     "url": "https://www.ucsf.edu/news/2026/10/432831/visit-bay-area-science-fest-experience-hands-stem-fun",
+     "text": "After years at Oracle Park, we moved the festival to UCSF Mission Bay last year."
+    }
+   ]
+  },
+  "occurrences": [
+   {
+    "start": "2026-10-17",
+    "end": "2026-10-17",
+    "quotes": [
+     {
+      "url": "https://bayareasciencefestival.org/",
+      "text": "October 17, 2026, 11am-4pm"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Past dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Bay Area Science Festival",
+    "quotes": [
+     {
+      "url": "https://bayareasciencefestival.org/",
+      "text": "Bay Area Science Festival"
+     },
+     {
+      "url": "https://bayareasciencefestival.org/exhibit/",
+      "text": "Bay Area Science Festival at UCSF Mission Bay Campus in San Francisco"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Saturday, October 17, 2026, 11 am–4 pm (13th edition)",
+    "quotes": [
+     {
+      "url": "https://bayareasciencefestival.org/",
+      "text": "October 17, 2026, 11am-4pm"
+     },
+     {
+      "url": "https://bayareasciencefestival.org/",
+      "text": "The 13th edition brings together"
+     }
+    ]
+   },
+   "time": {
+    "value": "11 am–4 pm",
+    "quotes": [
+     {
+      "url": "https://bayareasciencefestival.org/",
+      "text": "11am-4pm"
+     },
+     {
+      "url": "https://bayareasciencefestival.org/exhibit/",
+      "text": "11 AM – 4 PM"
+     }
+    ]
+   },
+   "venue": {
+    "value": "UCSF Mission Bay Campus (Koret Quad), San Francisco",
+    "quotes": [
+     {
+      "url": "https://bayareasciencefestival.org/",
+      "text": "UCSF Mission Bay Campus, Koret Quad"
+     },
+     {
+      "url": "https://bayareasciencefestival.org/exhibit/",
+      "text": "Bay Area Science Festival at UCSF Mission Bay Campus in San Francisco"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free!",
+    "quotes": [
+     {
+      "url": "https://bayareasciencefestival.org/",
+      "text": "1 Incredible Day. 125+ Hands-on Experiences. Free!"
+     },
+     {
+      "url": "https://bayareasciencefestival.org/",
+      "text": "Northern California's Largest Free celebration of Science"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-de0dc7bcb546",
+   "n-b9feac47b7a3",
+   "n-5dbf913039fc"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "Snapshot taken 18 October 2026, one day after the 2026 one-day edition (Sat Oct 17 at UCSF Mission Bay); the 2027 date is not yet posted, so the 2026 date is recorded as a past confirmed occurrence and the row shows 'Past dated'.",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-gamescape-board-game-night",
+  "name": "Board Game Night (Gamescape)",
+  "schedule": "Wednesday evening, 6:00 PM (next listed session 10/21/26; the store hosts 'a weekly schedule of game nights')",
+  "time": "6:00 PM",
+  "venue": "Gamescape, 333 Divisadero St, San Francisco, CA 94117",
+  "price": "",
+  "candidate_name": "Board Game Night (Gamescape)",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.gamescapesf.store/events",
+     "text": "San Francisco, CA 94117"
+    },
+    {
+     "url": "https://www.gamescapesf.com/",
+     "text": "located in San Francisco's Western Addition neighborhood"
+    }
+   ],
+   "basis": "The store's official pages give its San Francisco street address."
+  },
+  "recurrence": {
+   "value": "Weekly game nights at the store (Board Game Night appears on consecutive Wednesday listings, 10/14 and 10/21)",
+   "quotes": [
+    {
+     "url": "https://www.gamescapesf.com/",
+     "text": "hosting a weekly schedule of game nights for patrons to participate in."
+    },
+    {
+     "url": "https://www.gamescapesf.store/events",
+     "text": "Board Game Night - 10/21/26"
+    }
+   ]
+  },
+  "occurrences": [
+   {
+    "start": "2026-10-21",
+    "end": "2026-10-21",
+    "quotes": [
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "Board Game Night - 10/21/26"
+     },
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "Wed, Oct 21"
+     },
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "UNION ARENA Card Game Store Tournament 2026 Vol.4 - 10/18/26"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Future dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Board Game Night (Gamescape)",
+    "quotes": [
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "Board Game Night - 10/21/26"
+     },
+     {
+      "url": "https://www.gamescapesf.com/",
+      "text": "Gamescape - San Francisco's Board Game Store and Event Space"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Wednesday evening, 6:00 PM (next listed session 10/21/26; the store hosts 'a weekly schedule of game nights')",
+    "quotes": [
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "Board Game Night - 10/21/26"
+     },
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "Wed, Oct 21"
+     },
+     {
+      "url": "https://www.gamescapesf.com/",
+      "text": "hosting a weekly schedule of game nights for patrons to participate in."
+     }
+    ]
+   },
+   "time": {
+    "value": "6:00 PM",
+    "quotes": [
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "Board Game Night - 10/21/26"
+     },
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "6:00 PM"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Gamescape, 333 Divisadero St, San Francisco, CA 94117",
+    "quotes": [
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "333 Divisadero St,"
+     },
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "San Francisco, CA 94117"
+     },
+     {
+      "url": "https://www.gamescapesf.store/events",
+      "text": "Gamescape San Francisco"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-b11a4228adb5",
+   "n-9edb44128d28"
+  ],
+  "unverified": [
+   "price: unverified"
+  ],
+  "flags": [
+   "No event price is stated on the official events page (each listing shows only a 'Get tickets' button, and the page's refund policy confirms event entries are purchasable without quoting amounts), so the cost cell is blank ('Not stated'). The events page prints two-digit years (- 10/21/26); the full year 2026 appears on the same page's tournament names, which is quoted alongside the session date."
+  ],
+  "notes": "",
+  "topic": "Gaming",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-bravura-circus-bella",
+  "name": "BRAVURA (Circus Bella Big Top)",
+  "schedule": "December 11, 2026 – January 3, 2027; 23 performances at listed show times",
+  "time": "",
+  "venue": "The Crossing at East Cut, 211 Beale St at Howard St, San Francisco",
+  "price": "Ticketed performances (children 3–12 are $5 off adult ticket prices; children 2 and under free on an adult's lap)",
+  "candidate_name": "BRAVURA (Circus Bella Big Top)",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Special",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.circusbella.org/bigtop",
+     "text": "211 Beale St @ Howard St, San Francisco"
+    }
+   ],
+   "basis": "The organizer's official Big Top page names the San Francisco venue intersection."
+  },
+  "recurrence": null,
+  "occurrences": [
+   {
+    "start": "2026-12-11",
+    "end": "2027-01-03",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/press-schedule-by-date-bravura",
+      "text": "Friday, Dec. 11, 2026, 7:00 pm (Opening Night)"
+     },
+     {
+      "url": "https://www.circusbella.org/press-schedule-by-date-bravura",
+      "text": "Sunday, Jan. 3, 1:00 pm & 4:00 pm (Closing Performances)"
+     },
+     {
+      "url": "https://www.circusbella.org/bigtop",
+      "text": "Dec 11, 2026 - Jan 4, 2027"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Future dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "BRAVURA (Circus Bella Big Top)",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/bigtop",
+      "text": "BRAVURA"
+     },
+     {
+      "url": "https://www.circusbella.org/",
+      "text": "Dec. 11 2026 - Jan. 3rd 2027"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "December 11, 2026 – January 3, 2027; 23 performances at listed show times",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/press-schedule-by-date-bravura",
+      "text": "**Show Dates (23 shows):**  Friday, Dec. 11, 2026, 7:00 pm (Opening Night)"
+     },
+     {
+      "url": "https://www.circusbella.org/press-schedule-by-date-bravura",
+      "text": "Sunday, Jan. 3, 1:00 pm & 4:00 pm (Closing Performances)"
+     }
+    ]
+   },
+   "venue": {
+    "value": "The Crossing at East Cut, 211 Beale St at Howard St, San Francisco",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/bigtop",
+      "text": "The Crossing at East Cut"
+     },
+     {
+      "url": "https://www.circusbella.org/bigtop",
+      "text": "211 Beale St @ Howard St, San Francisco"
+     },
+     {
+      "url": "https://www.circusbella.org/press-schedule-by-date-bravura",
+      "text": "211 Beale St (at Howard St) San Francisco"
+     }
+    ]
+   },
+   "price": {
+    "value": "Ticketed performances (children 3–12 are $5 off adult ticket prices; children 2 and under free on an adult's lap)",
+    "quotes": [
+     {
+      "url": "https://www.circusbella.org/faqs-bigtop",
+      "text": "Tickets for Children 3 -12 years old are $5 off Adult Ticket Prices."
+     },
+     {
+      "url": "https://www.circusbella.org/faqs-bigtop",
+      "text": "Children 2 and under are free when sitting on the lap of an adult."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-fd16d026801f",
+   "n-3676d1176548",
+   "n-ba2f373562f8",
+   "n-a1f6b1fb5292"
+  ],
+  "unverified": [
+   "time: unverified",
+   "recurrence: unverified; no ongoing cadence asserted"
+  ],
+  "flags": [
+   "Price irregularity across the official pages (quoted, not reconciled): the Big Top hero announces 'Dec 11, 2026 - Jan 4, 2027' and the home page says 'Dec. 11 2026 - Jan. 3rd 2027', while the detailed show-by-date schedule ends with 'Sunday, Jan. 3, 1:00 pm & 4:00 pm (Closing Performances)'. The run is recorded through the schedule's closing date (Jan 3) and both dates are left quoted for review. This is the register's first explicitly ticketed addition from this session: it is published in the catalogue with its Paid cost badge, separate from the free entries, per the project requirement that paid events are collected but kept distinct."
+  ],
+  "notes": "",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-ai-tinkerers-sf",
+  "name": "AI Tinkerers San Francisco",
+  "schedule": "Recurring meetup series (most recent listed: Wednesday, August 26, 2026 GTM Engineering Demo Night, 6–9 pm)",
+  "time": "",
+  "venue": "San Francisco (host venue varies per event; the listed August 26 venue was 142 Minna St, with exact addresses shared with accepted attendees)",
+  "price": "",
+  "candidate_name": "AI Tinkerers San Francisco",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Special",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://sf.aitinkerers.org/",
+     "text": "AI Tinkerers San Francisco - AI Meetups, Events, and Builder Demos 2026"
+    },
+    {
+     "url": "https://sf.aitinkerers.org/p/ai-tinkerers-san-francisco-august-gtm-engineering-demo-night-w-attio",
+     "text": "LocationSan Francisco"
+    }
+   ],
+   "basis": "The organizer's official city page is dedicated to its San Francisco meetups, and the most recent listed event gives a San Francisco location."
+  },
+  "recurrence": null,
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Date/year unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "AI Tinkerers San Francisco",
+    "quotes": [
+     {
+      "url": "https://sf.aitinkerers.org/",
+      "text": "AI Tinkerers San Francisco"
+     },
+     {
+      "url": "https://sf.aitinkerers.org/",
+      "text": "AI Meetups, Events, and Builder Demos 2026"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Recurring meetup series (most recent listed: Wednesday, August 26, 2026 GTM Engineering Demo Night, 6–9 pm)",
+    "quotes": [
+     {
+      "url": "https://sf.aitinkerers.org/",
+      "text": "Wednesday, August 26th 6PM to 9PM"
+     },
+     {
+      "url": "https://sf.aitinkerers.org/p/ai-tinkerers-san-francisco-august-gtm-engineering-demo-night-w-attio",
+      "text": "On August 26, AI Tinkerers is bringing together technical founders, engineers, researchers, and hands-on builders in growth, marketing, and revenue who work at the technical frontier."
+     }
+    ]
+   },
+   "venue": {
+    "value": "San Francisco (host venue varies per event; the listed August 26 venue was 142 Minna St, with exact addresses shared with accepted attendees)",
+    "quotes": [
+     {
+      "url": "https://sf.aitinkerers.org/p/ai-tinkerers-san-francisco-august-gtm-engineering-demo-night-w-attio",
+      "text": "142 Minna St"
+     },
+     {
+      "url": "https://sf.aitinkerers.org/p/ai-tinkerers-san-francisco-august-gtm-engineering-demo-night-w-attio",
+      "text": "- Location: San Francisco, CA (exact address provided to accepted attendees)"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-c65ea5ee11a9",
+   "n-7ae2dd6b74e8"
+  ],
+  "unverified": [
+   "time: unverified",
+   "price: unverified",
+   "recurrence: unverified; no ongoing cadence asserted",
+   "date/year: unverified; no approved ISO occurrence"
+  ],
+  "flags": [
+   "No admission price is quoted on the official pages reviewed — entry is application-gated ('Available after organizer approval') — so the cost cell is blank ('Not stated'). The listed events have stated dates in the past at this snapshot and the next session is not yet posted, so no future date is asserted."
+  ],
+  "notes": "",
+  "topic": "AI & technology",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-ai-collective-sf",
+  "name": "The AI Collective — San Francisco Chapter",
+  "schedule": "Recurring chapter gatherings (the chapter page's Upcoming Events section listed 'Multimodal Engineering Night - SF Community Meetup' for Thu, Oct 22; past events were listed roughly monthly)",
+  "time": "",
+  "venue": "San Francisco (venue varies by event)",
+  "price": "",
+  "candidate_name": "The AI Collective — San Francisco Chapter",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Special",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.aicollective.com/chapters/sf",
+     "text": "Join our vibrant AI community in San Francisco."
+    },
+    {
+     "url": "https://www.aicollective.com/chapters/sf",
+     "text": "San Francisco Chapter"
+    }
+   ],
+   "basis": "This is the global AI Collective's own San Francisco chapter page."
+  },
+  "recurrence": null,
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Date/year unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "The AI Collective — San Francisco Chapter",
+    "quotes": [
+     {
+      "url": "https://www.aicollective.com/chapters/sf",
+      "text": "San Francisco Chapter"
+     },
+     {
+      "url": "https://www.aicollective.com/chapters/sf",
+      "text": "Join our vibrant AI community in San Francisco."
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Recurring chapter gatherings (the chapter page's Upcoming Events section listed 'Multimodal Engineering Night - SF Community Meetup' for Thu, Oct 22; past events were listed roughly monthly)",
+    "quotes": [
+     {
+      "url": "https://www.aicollective.com/chapters/sf",
+      "text": "Multimodal Engineering Night - SF Community Meetup"
+     },
+     {
+      "url": "https://www.aicollective.com/chapters/sf",
+      "text": "In 5 days·Thu, Oct 22nd"
+     }
+    ]
+   },
+   "venue": {
+    "value": "San Francisco (venue varies by event)",
+    "quotes": [
+     {
+      "url": "https://www.aicollective.com/chapters/sf",
+      "text": "Join our vibrant AI community in San Francisco."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-fb9bc715320b"
+  ],
+  "unverified": [
+   "time: unverified",
+   "price: unverified",
+   "recurrence: unverified; no ongoing cadence asserted",
+   "date/year: unverified; no approved ISO occurrence"
+  ],
+  "flags": [
+   "No admission price is quoted on the chapter page reviewed, so the cost cell is blank ('Not stated'). Date irregularity (quoted, not corrected): the upcoming listing was shown as 'In 5 days·Thu, Oct 22nd' with no year, so no verified ISO date is asserted even though the snapshot date makes the intended Saturday-week Thursday evident. The page states the chapter has '74,000+members'."
+  ],
+  "notes": "",
+  "topic": "AI & technology",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-musee-mecanique",
+  "name": "Musée Mécanique",
+  "schedule": "Open every day, 10 am–8 pm",
+  "time": "10 am–8 pm",
+  "venue": "Pier 45, Fisherman's Wharf, San Francisco, CA 94133",
+  "price": "",
+  "candidate_name": "Musée Mécanique",
+  "candidate_label": "New research identifier",
+  "category": "Museums & science",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://museemecanique.com/",
+     "text": "Pier 45 Fisherman's Wharf San Francisco, CA 94133"
+    }
+   ],
+   "basis": "The museum's official site states its San Francisco address."
+  },
+  "recurrence": {
+   "value": "Open every day",
+   "quotes": [
+    {
+     "url": "https://museemecanique.com/",
+     "text": "Open Everyday 10AM - 8PM"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Musée Mécanique",
+    "quotes": [
+     {
+      "url": "https://museemecanique.com/",
+      "text": "Welcome to the Musée Mécanique"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Open every day, 10 am–8 pm",
+    "quotes": [
+     {
+      "url": "https://museemecanique.com/",
+      "text": "Open Everyday 10AM - 8PM"
+     }
+    ]
+   },
+   "time": {
+    "value": "10 am–8 pm",
+    "quotes": [
+     {
+      "url": "https://museemecanique.com/",
+      "text": "10AM - 8PM"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Pier 45, Fisherman's Wharf, San Francisco, CA 94133",
+    "quotes": [
+     {
+      "url": "https://museemecanique.com/",
+      "text": "Pier 45 Fisherman's Wharf San Francisco, CA 94133"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-3988785720ba"
+  ],
+  "unverified": [
+   "price: unverified"
+  ],
+  "flags": [
+   "The official-site text captured for the landing page (via the workspace search tool, since the JavaScript-driven page returned only a '# Landing' shell on direct fetch) does not state an admission price, so the cost cell is blank ('Not stated') rather than repeating the commonly reported 'free entry' claim from unofficial pages."
+  ],
+  "notes": "",
+  "topic": "Gaming",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-japanese-tea-garden-free-hour",
+  "name": "Japanese Tea Garden free admission hour",
+  "schedule": "Mondays, Wednesdays and Fridays, 9–10 am (garden open daily 9 am–last entry)",
+  "time": "9 am–10 am",
+  "venue": "75 Hagiwara Tea Garden Drive, Golden Gate Park, San Francisco, CA 94118",
+  "price": "Free admission from 9am – 10am on Mondays, Wednesdays, and Fridays",
+  "candidate_name": "Japanese Tea Garden free admission hour",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "San Francisco, CA 94118"
+    },
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "Golden Gate Park"
+    }
+   ],
+   "basis": "The gardens operator's official page states the San Francisco address in Golden Gate Park."
+  },
+  "recurrence": {
+   "value": "Monday, Wednesday and Friday mornings",
+   "quotes": [
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "Monday, Wednesday and Friday"
+    },
+    {
+     "url": "https://gggp.org/tickets/",
+     "text": "on Mondays, Wednesdays, and Fridays"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Japanese Tea Garden free admission hour",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Japanese Tea Garden"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Free Hour"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Mondays, Wednesdays and Fridays, 9–10 am (garden open daily 9 am–last entry)",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Monday, Wednesday and Friday"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "9am – 10am"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Open Daily at 9am-Last Entry"
+     }
+    ]
+   },
+   "time": {
+    "value": "9 am–10 am",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "9am – 10am"
+     }
+    ]
+   },
+   "venue": {
+    "value": "75 Hagiwara Tea Garden Drive, Golden Gate Park, San Francisco, CA 94118",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "75 Hagiwara Tea Garden Drive"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "San Francisco, CA 94118"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Golden Gate Park"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free admission from 9am – 10am on Mondays, Wednesdays, and Fridays",
+    "quotes": [
+     {
+      "url": "https://gggp.org/tickets/",
+      "text": "Japanese Tea Garden:** Free admission from 9am – 10am on Mondays, Wednesdays, and Fridays"
+     },
+     {
+      "url": "https://gggp.org/tickets/",
+      "text": "Admission to the Gardens is free to San Francisco residents, veterans, Museums For All participants, and Gardens members."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-1a5edbabdb40",
+   "n-12abf7749741"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "Outside the free hour, general admission is ticketed (the same pages carry 'Get Tickets' links); San Francisco residents, veterans, Museums For All participants and Gardens members receive free admission year-round per the operator's tickets page.",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-conservatory-free-first-tuesday",
+  "name": "Conservatory of Flowers free first Tuesday",
+  "schedule": "First Tuesday of the month (the Conservatory is otherwise open six days a week, closed Wednesdays)",
+  "time": "10 am–4:30 pm (last entry 4 pm)",
+  "venue": "100 John F Kennedy Drive, Golden Gate Park, San Francisco, CA 94118",
+  "price": "Free admission on the 1st Tuesday every month",
+  "candidate_name": "Conservatory of Flowers free first Tuesday",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Monthly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "San Francisco, CA 94118"
+    },
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "Golden Gate Park"
+    }
+   ],
+   "basis": "The gardens operator's official page states the San Francisco address in Golden Gate Park."
+  },
+  "recurrence": {
+   "value": "First Tuesday of every month",
+   "quotes": [
+    {
+     "url": "https://gggp.org/tickets/",
+     "text": "Free admission on the 1st Tuesday every month"
+    },
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "Free Day:** First Tuesday of the Month"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Conservatory of Flowers free first Tuesday",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Conservatory of Flowers"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Free Day:** First Tuesday of the Month"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "First Tuesday of the month (the Conservatory is otherwise open six days a week, closed Wednesdays)",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "First Tuesday of the Month"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Open six days a week. Closed Wednesdays."
+     }
+    ]
+   },
+   "time": {
+    "value": "10 am–4:30 pm (last entry 4 pm)",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "10am – 4:30pm"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Last entry at 4pm"
+     }
+    ]
+   },
+   "venue": {
+    "value": "100 John F Kennedy Drive, Golden Gate Park, San Francisco, CA 94118",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "100 John F Kennedy Drive"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "San Francisco, CA 94118"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Golden Gate Park"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free admission on the 1st Tuesday every month",
+    "quotes": [
+     {
+      "url": "https://gggp.org/tickets/",
+      "text": "Conservatory of Flowers:** Free admission on the 1st Tuesday every month"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Free Day:** First Tuesday of the Month"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-1a5edbabdb40",
+   "n-12abf7749741"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "General admission is ticketed on all other days (the operator's tickets page), while San Francisco residents, veterans, Museums For All participants and Gardens members enter free year-round.",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "h-sf-botanical-garden-free-times",
+  "name": "San Francisco Botanical Garden free admission times",
+  "schedule": "Daily 7:30–9 am; the second Tuesday of every month; and Thanksgiving, Christmas and New Year's Day",
+  "time": "7:30–9 am daily (plus all day on free days)",
+  "venue": "1199 9th Ave, Golden Gate Park, San Francisco, CA 94122",
+  "price": "Free admission from 7:30am – 9am daily and the 2nd Tuesday of every month",
+  "candidate_name": "San Francisco Botanical Garden free admission times",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "San Francisco, CA 94122"
+    },
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "Golden Gate Park"
+    }
+   ],
+   "basis": "The gardens operator's official page states the San Francisco address in Golden Gate Park."
+  },
+  "recurrence": {
+   "value": "Daily 7:30–9 am, plus the second Tuesday of every month and three winter holidays",
+   "quotes": [
+    {
+     "url": "https://gggp.org/visit/admissions-hours/",
+     "text": "Free Times:** Daily 7:30-9am; Second Tuesday of every month; Thanksgiving, Christmas, and New Years Day"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "San Francisco Botanical Garden free admission times",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "San Francisco Botanical Garden"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Free Times:** Daily 7:30-9am"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Daily 7:30–9 am; the second Tuesday of every month; and Thanksgiving, Christmas and New Year's Day",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Free Times:** Daily 7:30-9am; Second Tuesday of every month; Thanksgiving, Christmas, and New Years Day"
+     }
+    ]
+   },
+   "time": {
+    "value": "7:30–9 am daily (plus all day on free days)",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Daily 7:30-9am"
+     }
+    ]
+   },
+   "venue": {
+    "value": "1199 9th Ave, Golden Gate Park, San Francisco, CA 94122",
+    "quotes": [
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "1199 9th Ave"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "San Francisco, CA 94122"
+     },
+     {
+      "url": "https://gggp.org/visit/admissions-hours/",
+      "text": "Golden Gate Park"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free admission from 7:30am – 9am daily and the 2nd Tuesday of every month",
+    "quotes": [
+     {
+      "url": "https://gggp.org/tickets/",
+      "text": "San Francisco Botanical Garden:** Free admission from 7:30am – 9am daily and the 2nd Tuesday of every month, Thanksgiving Day, Christmas Day, and New Years Day"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-1a5edbabdb40",
+   "n-12abf7749741"
+  ],
+  "unverified": [],
+  "flags": [],
+  "notes": "Outside the free times, general admission is ticketed (the operator's tickets page), while San Francisco residents, veterans, Museums For All participants and Gardens members enter free year-round.",
+  "topic": "Other",
+  "audit": {
+   "session": "d57e2eeb",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
  }
 ]

@@ -16,7 +16,7 @@
 5. Exact substring checks establish quotation provenance, **not contextual applicability**. Editions, ticket eligibility, date conflicts and geography require recorded research judgment. JSON-LD is identified as structured evidence, not misrepresented as visible page text.
 6. Only approved full ISO dates drive snapshot-relative temporal labels. No date parser invents a year from a URL slug, weekday, copyright, season header or unrelated event. Recurrence never generates future occurrences.
 
-The public ledger contains **277 distinct cited URLs across 150 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
+The public ledger contains **308 distinct cited URLs across 163 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
 
 ## Topic-gap overlay (session `3adf31d9`)
 

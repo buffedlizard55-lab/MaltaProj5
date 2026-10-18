@@ -2559,6 +2559,29 @@
    "family"
   ]
  },
+ "n-017995d825c3": {
+  "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+  "publisher": "presidio.gov",
+  "title": "Presidio Officers' Club | San Francisco Venue | The Presidio (San Francisco)",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-presidio-officers-club"
+  ]
+ },
  "n-08e115571345": {
   "url": "https://sfpl.org/events/2026/03/13/social-chess-club",
   "publisher": "sfpl.org",
@@ -2580,6 +2603,31 @@
   },
   "approved_for_rows": [
    "g-sfpl-social-chess-club-visitacion-valley"
+  ]
+ },
+ "n-12abf7749741": {
+  "url": "https://gggp.org/tickets/",
+  "publisher": "gggp.org",
+  "title": "Tickets - Gardens of Golden Gate Park",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-japanese-tea-garden-free-hour",
+   "h-conservatory-free-first-tuesday",
+   "h-sf-botanical-garden-free-times"
   ]
  },
  "n-154a97db611a": {
@@ -2647,6 +2695,31 @@
    "a-ai-council-2027"
   ]
  },
+ "n-1a5edbabdb40": {
+  "url": "https://gggp.org/visit/admissions-hours/",
+  "publisher": "gggp.org",
+  "title": "Hours & Admissions - Gardens of Golden Gate Park",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-japanese-tea-garden-free-hour",
+   "h-conservatory-free-first-tuesday",
+   "h-sf-botanical-garden-free-times"
+  ]
+ },
  "n-243a6c0ca2f1": {
   "url": "https://gracecathedral.org/organs/",
   "publisher": "gracecathedral.org",
@@ -2691,6 +2764,27 @@
    "f-sfpl-mix-gaming"
   ]
  },
+ "n-256fbc852bad": {
+  "url": "https://gracecathedral.org/calendar-events/",
+  "publisher": "gracecathedral.org",
+  "title": "Events from October 1, 2025 - Grace Cathedral",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": 0,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-choral-evensong"
+  ]
+ },
  "n-25b8afd92b67": {
   "url": "https://sfpl.org/teens",
   "publisher": "sfpl.org",
@@ -2710,6 +2804,29 @@
   },
   "approved_for_rows": [
    "f-sfpl-mix-gaming"
+  ]
+ },
+ "n-2a76f7af3b62": {
+  "url": "https://www.nps.gov/fopo/planyourvisit/fees.htm",
+  "publisher": "nps.gov",
+  "title": "Fees & Passes - Fort Point National Historic Site (U.S. National Park Service)",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-fort-point"
   ]
  },
  "n-2a77a63dd3d3": {
@@ -2798,6 +2915,95 @@
   },
   "approved_for_rows": [
    "g-sfpl-chinese-chess-main"
+  ]
+ },
+ "n-3676d1176548": {
+  "url": "https://www.circusbella.org/",
+  "publisher": "circusbella.org",
+  "title": "Circus Bella",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-weekly-juggle",
+   "h-bravura-circus-bella"
+  ]
+ },
+ "n-3988785720ba": {
+  "url": "https://museemecanique.com/",
+  "publisher": "museemecanique.com",
+  "title": "Welcome to the Musée Mécanique",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": 0,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-musee-mecanique"
+  ]
+ },
+ "n-3d69257f55cd": {
+  "url": "https://www.circusbella.org/weekly-juggle",
+  "publisher": "circusbella.org",
+  "title": "Weekly Juggle — Circus Bella",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-weekly-juggle"
+  ]
+ },
+ "n-4022a4c65585": {
+  "url": "https://www.streetcar.org/museum/",
+  "publisher": "streetcar.org",
+  "title": "San Francisco Railway Museum & Gift Shop - Market Street Railway",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": 0,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-sf-railway-museum"
   ]
  },
  "n-4571e529a8ad": {
@@ -2891,6 +3097,27 @@
    "a-ai-engineer-worlds-fair-2027"
   ]
  },
+ "n-5dbf913039fc": {
+  "url": "https://www.ucsf.edu/news/2026/10/432831/visit-bay-area-science-fest-experience-hands-stem-fun",
+  "publisher": "ucsf.edu",
+  "title": "Visit the Bay Area Science Fest to Experience Hands-On STEM Fun",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": 0,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-bay-area-science-festival"
+  ]
+ },
  "n-63caecc772fb": {
   "url": "https://noontimeconcerts.org/about-noontime-concerts/",
   "publisher": "noontimeconcerts.org",
@@ -2979,6 +3206,52 @@
    "g-sfpl-game-night-marina"
   ]
  },
+ "n-7ae2dd6b74e8": {
+  "url": "https://sf.aitinkerers.org/p/ai-tinkerers-san-francisco-august-gtm-engineering-demo-night-w-attio",
+  "publisher": "sf.aitinkerers.org",
+  "title": "AI Tinkerers San Francisco: August GTM Engineering Demo Night w/ Attio [AI Tinkerers - San Francisco]",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 2,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "h-ai-tinkerers-sf"
+  ]
+ },
+ "n-7b0c0690f632": {
+  "url": "https://sfshakes.org/",
+  "publisher": "sfshakes.org",
+  "title": "Home - San Francisco Shakespeare Festival",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-free-shakespeare-in-the-park"
+  ]
+ },
  "n-7f28d185a98a": {
   "url": "https://gracecathedral.org/series/organ-recital-series/",
   "publisher": "gracecathedral.org",
@@ -3000,6 +3273,30 @@
   },
   "approved_for_rows": [
    "f-grace-cathedral-organ-recital-series"
+  ]
+ },
+ "n-937fe667bf16": {
+  "url": "https://www.noisebridge.net/wiki/Five_Minutes_of_Fame",
+  "publisher": "noisebridge.net",
+  "title": "Five Minutes of Fame - Noisebridge",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-five-minutes-of-fame",
+   "h-circuit-hacking-mondays"
   ]
  },
  "n-9e46fc64af9f": {
@@ -3025,6 +3322,73 @@
    "a-tdx-2027"
   ]
  },
+ "n-9edb44128d28": {
+  "url": "https://www.gamescapesf.com/",
+  "publisher": "gamescapesf.com",
+  "title": "Gamescape - San Francisco's Board Game Store and Event Space",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": 0,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-gamescape-board-game-night"
+  ]
+ },
+ "n-a1f6b1fb5292": {
+  "url": "https://www.circusbella.org/faqs-bigtop",
+  "publisher": "circusbella.org",
+  "title": "FAQs Big Top — Circus Bella",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-bravura-circus-bella"
+  ]
+ },
+ "n-b11a4228adb5": {
+  "url": "https://www.gamescapesf.store/events",
+  "publisher": "gamescapesf.store",
+  "title": "Events | 333 Divisadero St,\nSan Francisco, CA 94117\n© 2024",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-gamescape-board-game-night"
+  ]
+ },
  "n-b1c41e8296e6": {
   "url": "https://gracecathedral.org/calendar-events/category/music/list/?posts_per_page=26&tribe-bar-date=2029-12-20&eventDisplay=past",
   "publisher": "gracecathedral.org",
@@ -3044,6 +3408,29 @@
   },
   "approved_for_rows": [
    "f-grace-cathedral-organ-recital-series"
+  ]
+ },
+ "n-b233e212c8d7": {
+  "url": "https://peopleinplazas.org/",
+  "publisher": "peopleinplazas.org",
+  "title": "Home - People in Plazas",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-people-in-plazas"
   ]
  },
  "n-b344e8fc540b": {
@@ -3067,6 +3454,75 @@
   },
   "approved_for_rows": [
    "g-gdc-festival-of-gaming"
+  ]
+ },
+ "n-b9feac47b7a3": {
+  "url": "https://bayareasciencefestival.org/exhibit/",
+  "publisher": "bayareasciencefestival.org",
+  "title": "Exhibit at The Festival - Bay Area Science Festival",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-bay-area-science-festival"
+  ]
+ },
+ "n-ba2f373562f8": {
+  "url": "https://www.circusbella.org/press-schedule-by-date-bravura",
+  "publisher": "circusbella.org",
+  "title": "Press Schedule By Date - Bravura — Circus Bella",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-bravura-circus-bella"
+  ]
+ },
+ "n-bfc7d47494e9": {
+  "url": "https://sfshakes.org/performance/free-shakes/",
+  "publisher": "sfshakes.org",
+  "title": "Free Shakespeare in the Park - San Francisco Shakespeare Festival",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-free-shakespeare-in-the-park"
   ]
  },
  "n-c4b58ad48b66": {
@@ -3113,6 +3569,121 @@
   },
   "approved_for_rows": [
    "f-noontime-concerts"
+  ]
+ },
+ "n-c65ea5ee11a9": {
+  "url": "https://sf.aitinkerers.org/",
+  "publisher": "sf.aitinkerers.org",
+  "title": "AI Events in San Francisco | AI Tinkerers Meetups 2026",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 10,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "h-ai-tinkerers-sf"
+  ]
+ },
+ "n-c78b1314a832": {
+  "url": "https://www.cablecarmuseum.org/",
+  "publisher": "cablecarmuseum.org",
+  "title": "San Francisco Cable Car Museum",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-cable-car-museum"
+  ]
+ },
+ "n-d569ed601d5e": {
+  "url": "https://www.streetcar.org/",
+  "publisher": "streetcar.org",
+  "title": "- Market Street Railway - Preserving San Francisco's unique transit history",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-sf-railway-museum"
+  ]
+ },
+ "n-dbef95a1bba1": {
+  "url": "https://gracecathedral.org/series/choral-evensong/",
+  "publisher": "gracecathedral.org",
+  "title": "Choral Evensong - Grace Cathedral",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-choral-evensong"
+  ]
+ },
+ "n-de0dc7bcb546": {
+  "url": "https://bayareasciencefestival.org/",
+  "publisher": "bayareasciencefestival.org",
+  "title": "Home - Bay Area Science Festival",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-bay-area-science-festival"
   ]
  },
  "n-de712b2325d6": {
@@ -3162,6 +3733,29 @@
    "f-mi-chess-socials"
   ]
  },
+ "n-e96d425b2a8a": {
+  "url": "https://www.nps.gov/fopo/planyourvisit/hours.htm",
+  "publisher": "nps.gov",
+  "title": "Operating Hours & Seasons - Fort Point National Historic Site (U.S. National Park Service)",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-fort-point"
+  ]
+ },
  "n-f128e36240c6": {
   "url": "https://archive.org/about/contact",
   "publisher": "archive.org",
@@ -3185,6 +3779,29 @@
    "f-internet-archive-tours"
   ]
  },
+ "n-f5e4d10ebd6b": {
+  "url": "https://www.cablecarmuseum.org/info.html",
+  "publisher": "cablecarmuseum.org",
+  "title": "San Francisco Cable Car Museum Info",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-cable-car-museum"
+  ]
+ },
  "n-f5f7c20bf7b8": {
   "url": "https://www.sterngrove.org/accessibility-ada",
   "publisher": "sterngrove.org",
@@ -3206,6 +3823,98 @@
   },
   "approved_for_rows": [
    "m-stern-grove-festival"
+  ]
+ },
+ "n-f5fdcd146ba6": {
+  "url": "https://www.noisebridge.net/wiki/Circuit_Hacking_Monday",
+  "publisher": "noisebridge.net",
+  "title": "Circuit Hacking Monday - Noisebridge",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-circuit-hacking-mondays"
+  ]
+ },
+ "n-fb9bc715320b": {
+  "url": "https://www.aicollective.com/chapters/sf",
+  "publisher": "aicollective.com",
+  "title": "San Francisco Chapter | The AI Collective",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 4,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "h-ai-collective-sf"
+  ]
+ },
+ "n-fd16d026801f": {
+  "url": "https://www.circusbella.org/bigtop",
+  "publisher": "circusbella.org",
+  "title": "BigTop — Circus Bella",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-bravura-circus-bella"
+  ]
+ },
+ "n-fe827991e24a": {
+  "url": "https://randallmuseum.org/directions-hours/",
+  "publisher": "randallmuseum.org",
+  "title": "Hours and Directions - Randall Museum",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_d57e2eeb.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "h-randall-museum"
   ]
  },
  "nba-warriors-sched": {

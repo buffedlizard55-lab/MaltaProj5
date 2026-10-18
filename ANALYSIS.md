@@ -2,53 +2,53 @@
 
 As of 18 October 2026. This is not a complete or live city calendar.
 
-- 274 candidate entries assessed: 233 inherited and 18 official-calendar entries plus 15 from the gaming/music/AI research pass and 8 from the free-first research pass.
-- 191 admitted to the city-only directory; 83 held for review.
+- 295 candidate entries assessed: 233 inherited and 18 official-calendar entries plus 36 from the gaming/music/AI research pass and 8 from the free-first research pass.
+- 212 admitted to the city-only directory; 83 held for review.
 - 16 listed programme umbrellas overlap child events. These totals are **not unique-event counts**.
-- 277 exact cited URLs across 150 domains. Domains are not organizations or nonprofit status.
-- Cadence: 24 weekly / 11 monthly / 32 annual / 124 special or cadence-unconfirmed.
+- 308 exact cited URLs across 163 domains. Domains are not organizations or nonprofit status.
+- Cadence: 37 weekly / 13 monthly / 35 annual / 127 special or cadence-unconfirmed.
 
 ## Upcoming, relative to the fixed snapshot
 
-70 directory entries carry at least one confirmed upcoming date; 121 do not.
-Of the dated entries, 13 are stated free on their official page; they lead the free-first
+74 directory entries carry at least one confirmed upcoming date; 138 do not.
+Of the dated entries, 15 are stated free on their official page; they lead the free-first
 landing page, while priced entries are grouped in the separate Paid events section.
 
 - Open now: 5
-- Today: 5
-- Next 7 days: 10
+- Today: 6
+- Next 7 days: 12
 - Next 30 days: 24
-- Next 90 days: 10
+- Next 90 days: 11
 - Later: 16
 
 ## Topic tags (editorial, from the verified name)
 
-- Gaming: 13
-- Music: 20
-- AI & technology: 6
-- Other: 152
+- Gaming: 15
+- Music: 23
+- AI & technology: 10
+- Other: 164
 
 ## Cost, as stated by the official page
 
-- Free: 61
-- Paid: 19
-- Not stated: 111 (blank admission cell — never assumed free)
+- Free: 75
+- Paid: 20
+- Not stated: 117 (blank admission cell — never assumed free)
 
 ## Blank factual fields in the directory
 
 - Event name: 0
 - Published schedule: 15
-- Time: 83
+- Time: 88
 - Venue / area: 0
-- Admission / conditions: 111
+- Admission / conditions: 117
 
 ## Temporal labels (fixed snapshot)
 
-- Date/year unconfirmed: 18
-- Future dated: 60
-- On snapshot date: 5
-- Past dated: 67
-- Recurring pattern; next date unconfirmed: 35
+- Date/year unconfirmed: 20
+- Future dated: 63
+- On snapshot date: 6
+- Past dated: 69
+- Recurring pattern; next date unconfirmed: 48
 - Spans snapshot date: 5
 - Tentative schedule: 1
 

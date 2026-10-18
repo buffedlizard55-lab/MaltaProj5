@@ -2,11 +2,13 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (2026-10-18):** the `21f3dd85` **free-first release** (T37–T40, PR #39) is merged on top of the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36); GitHub Pages is live from `main` (merge commit `2b077e0`, Pages build confirmed **built** 2026-10-18 11:46 UTC).
+**Current publication (2026-10-18):** the `21f3dd85` **free-first release** (their T37–T40, PR #39) is merged on top of the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36); GitHub Pages is live from `main` (merge commit `2b077e0`, Pages build confirmed **built** 2026-10-18 11:46 UTC). Session `d57e2eeb` (its own T37–T39 — see the numbering-collision note below) has rebuilt the register again on `arena/d57e2eeb-maltaproj5` and is integrating as PR → `main`.
 
-The bounded snapshot contains **274 candidates: 191 city-only directory entries / 83 review-only**, with 24 weekly / 11 monthly / 32 annual / 124 special entries, 70 entries carrying at least one confirmed future date, a cost split of **Free 61 / Paid 19 / Not stated 111**, and 277 cited official URLs across 150 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
+The bounded snapshot contains **295 candidates: 212 city-only directory entries / 83 review-only**, with 37 weekly / 13 monthly / 35 annual / 127 special entries, 74 entries carrying at least one confirmed future date, a cost split of **Free 75 / Paid 20 / Not stated 117**, and 308 cited official URLs across 163 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
 
 **New in this release (free-first):** the dashboard executive summary and main section now carry **free upcoming events only** — 13 free dated entries nearest first (next 14 days highlighted) plus 28 free recurring patterns ordered Gaming → Music → AI & technology → everything else, with per-topic nearest-free callouts; a separate [Paid events](paid.html) section collecting the 19 priced entries with exact quoted wording ("Not stated" never treated as paid); 8 new overlay entries (Noontime Concerts, Sea Chantey Sing, Mechanics' Institute Chess Socials, Gaming at The Mix, SFPL Tech Week, one paid chess marathon, 2 held for review). The complete all-cost directory remains on [Focus](focus.html) and [Upcoming](upcoming.html). Carried over from T33–T36: the [Upcoming](upcoming.html) grouping (*Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later*, nearest first); the Free / Paid / **Not stated** cost badge derived only from the verified admission quotation; dedicated [Gaming](gaming.html), [Music](music.html), [AI & technology](ai.html) and [Free to attend](free.html) pages; session `59f56c24`'s combined [Focus](focus.html) view with a Cost filter; and a mobile card layout for every events table below 820 px.
+
+**Task-numbering note (both free-first releases).** Sessions `21f3dd85` and `d57e2eeb` claimed task numbers **T37–T40 and T37–T39 respectively, in parallel and unaware of each other**, so the same numbers appear twice on the board below. The rows are kept attributed to their sessions; `d57e2eeb` is integrating second and records the full overlap resolution in its [integration log](#integration-log--d57e2eeb--merges-main-21f3dd85-free-first-release-2026-10-18) below. **Neither session's work was discarded.**
 
 **Parallel-session integration.** Session `59f56c24` merged PRs #34–#36 into `main` while `3adf31d9` was building T34–T36. Both sessions had independently created `upcoming.html` and `free.html`, and both had independently added GDC Festival of Gaming. Neither side's work was discarded — see the [integration log](#integration-log--3adf31d9--merges-main-59f56c24-topic-extras-2026-10-18) below.
 
@@ -48,7 +50,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
 | `3adf31d9` | `arena/3adf31d9-maltaproj5` | 2026-10-18 09:45 UTC | New product requirements: date-ordered upcoming view, executive summary, cost labels, gaming/music/AI registers, mobile-first dashboard (T33–T36); final integration, PR → main, Pages |
-| `21f3dd85` | `arena/21f3dd85-maltaproj5` | 2026-10-18 11:00 UTC | Free-first release: free gaming/music/AI research overlay, free+upcoming executive summary and dashboard main section, separate Paid section, final integration, PR → main, Pages (T37–T40) |
+| `21f3dd85` | `arena/21f3dd85-maltaproj5` | 2026-10-18 11:00 UTC | Free-first release: free gaming/music/AI research overlay, free+upcoming executive summary and dashboard main section, separate Paid section, final integration, PR → main, Pages (their T37–T40) |
+| `d57e2eeb` | `arena/d57e2eeb-maltaproj5` | 2026-10-18 ~11:05 UTC | Free-first gap research (gaming/music/AI focus) from official sources, additive register extension, rebuild + regression updates, final integration, PR → main, Pages (own T37–T39, numbering collision with `21f3dd85`) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -133,6 +136,9 @@ Upcoming page and cost badges are regression-covered in CI.
 | T38 | **Free-first dashboard**: executive summary focused on free + upcoming (soonest free dated entries near the 2026-10-18 snapshot); dashboard main section = **free upcoming events only**, date-ordered nearest first with next-14-days highlight; full directory remains on Focus / Upcoming | **done** — 13 free dated + 28 free recurring on the landing page; Gaming/Music/AI nearest-free callouts; 45 unit tests + browser smoke green | `21f3dd85` | `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `*.html` |
 | T39 | **Paid events in a separate section**: new `paid.html` listing only Paid-badge entries with the exact quoted price wording; nav + dashboard card; page-count and CI file-list updates | **done** — 19 priced entries on `paid.html` (19-page site); "Not stated" never listed as paid | `21f3dd85` | NEW: `paid.html` (generated); `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `tests/browser_smoke.cjs`, `.github/workflows/pages.yml`, `*.html` |
 | T40 | Final integration: rebuild, re-verify combined data line by line (validate + unit tests + source-link checks), refresh README/SOURCES counts, PR → `main`, merge without waiting, confirm Pages deploy, record PR link + merge result here | **done** (2026-10-18) — PR #39 merged `2b077e0` 11:45 UTC; CI + post-merge validation green; Pages API **built** for the merge commit; record below | `21f3dd85` | `data/*` (generated), `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md`, `COORDINATION.md` |
+| T37ᵈ | Free-first gap research from official sources: gaming, music and AI/technology first, then other free SF events not yet in the register; exact quotations with archived captures only; *review_only* for anything failing the evidence rules (ᵈ = `d57e2eeb`'s own numbering, claimed in parallel — collision with the `21f3dd85` T-numbers above) | **done** | `d57e2eeb` | NEW: `data/audit_d57e2eeb.json`, `data/research/audit-d57e2eeb.md` |
+| T38ᵈ | Additive extension of the register with T37ᵈ entries (never edits an existing row), rebuild consolidated data + all pages, update count-based regression fixtures, validate, run tests | **done** | `d57e2eeb` | NEW: `tools/register_d57e2eeb.py`; `tools/consolidate.py` (owner T27 done), `tests/` (owners done), generated `data/*` + `*.html`, `README.md`, `COORDINATION.md` |
+| T39ᵈ | Final integration of this session: re-verify combined data, confirm site builds with no broken links, PR → `main`, merge without waiting, confirm Pages deploy, record outcome | **in progress** | `d57e2eeb` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1604,3 +1610,47 @@ and the Pages API reports the latest build **built** for that exact merge commit
 2026-10-18 11:46:06 UTC. Live site: https://buffedlizard55-lab.github.io/MaltaProj5/ (sandbox
 cannot fetch github.io directly, so confirmation is via the Pages API/workflow, not assumption).
 T40 is **done**; this record rides a documentation-only follow-up PR.
+
+---
+
+## Integration log — `d57e2eeb` merges `main` (`21f3dd85` free-first release), 2026-10-18
+
+While `d57e2eeb` was still in T37 research on `arena/d57e2eeb-maltaproj5` (claim commit `1a63a7c`,
+~11:05 UTC), session **`21f3dd85`** merged PRs [#39](https://github.com/buffedlizard55-lab/MaltaProj5/pull/39)
+and [#40](https://github.com/buffedlizard55-lab/MaltaProj5/pull/40) into `main` (`c933942`): a parallel
+free-first release with its own 8-entry overlay, a free-first dashboard, and a separate Paid events
+section. Both sessions used task numbers **T37+** independently; the registry and task board keep
+both sets of rows (theirs plain, this session's marked ᵈ). PR #41 from this branch therefore
+reported **CONFLICTING**, and no CI ran on it. `main` was merged back here and every conflict was
+resolved by hand. **Neither session's work was discarded.**
+
+### What the two sessions each added
+
+| | `21f3dd85` (on `main`) | `d57e2eeb` (this branch) |
+|---|---|---|
+| Data | 8 free-first entries (`f-` ids) in a separate overlay, `tools/register_21f3dd85.py` + `data/audit_21f3dd85.json` | 21 free-first gap entries (`h-` ids) in a separate overlay, `tools/register_d57e2eeb.py` + `data/audit_d57e2eeb.json` |
+| Register reach | 274 candidates / 191 directory / 277 URLs | (on top) 295 / 212 / 308 URLs; never edits any existing row |
+| Site | free-first dashboard main section, `paid.html` (19-page site), `data/dashboard_order.json` | no dashboard-code changes; new rows flow into the same free-first dashboard by topic/cost |
+
+### How each conflict was resolved
+
+| File | Resolution |
+|---|---|
+| `tools/consolidate.py`, `scripts/validate.py`, `tests/test_audited_register.py` | **Union**: overlay chain is audited mainline → `3adf31d9` → `21f3dd85` → `d57e2eeb`; validate asserts the exact projection through all three additive overlays plus all three candidate-set assertions; the test projection mirrors the chain; counts 295 / 212. |
+| `README.md` | **Union**: count table lists both audits' additions with combined numbers; overlay paragraph names all three additive overlays; artifact rows kept for both research logs. |
+| `COORDINATION.md` | **Union**: current-publication header describes both releases, task-numbering-collision note added, both session-registry rows, both task-row sets kept. |
+| All generated files (`data/events.json` … `data/upcoming_order.json`, `data/dashboard_order.json`, `ANALYSIS.md`, all 19 HTML pages) | Regenerated from the merged code and merged data (`python3 tools/consolidate.py` then `python3 scripts/build.py`), never hand-edited; `validate.py` PASS (295 exact projections), 45/45 unit tests OK. |
+| `data/audit_21f3dd85.json`, `data/research/audit-21f3dd85.md`, `tools/register_21f3dd85.py`, `paid.html`, `.github/workflows/pages.yml`, `SOURCES.md` | **Theirs** (new files this branch had never touched). |
+| `data/audit_d57e2eeb.json`, `data/research/audit-d57e2eeb.md`, `tools/register_d57e2eeb.py` | **Ours** (new files `main` had never touched). |
+
+### Overlapping coverage, deliberately kept
+
+Both sessions independently researched **Noontime Concerts** from the same official pages, one hour
+apart: `f-noontime-concerts` (`21f3dd85`) quotes the about page's "not ticketed but suggested
+donations" wording; `h-noontime-concerts` (`d57e2eeb`) adds the verified next-session dates
+(2026-10-20, 2026-10-27, 2026-11-10) from the home page's own listings. Both rows are published with
+their own sources, following the dual-row precedent set for GDC Festival of Gaming 2027 in the
+earlier integration log; a cross-reference sits in the `h-` row's notes. No other overlap between
+the 8- and 21-entry sets (their Sea Chantey / Mechanics' Institute chess / SFPL Mix / Tech Week /
+Internet Archive / organ recitals are not repeated here; this set's 21 entries were verified
+absent from the pre-merge register).

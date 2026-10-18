@@ -66,11 +66,11 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **done** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
 | T20 | Resolve confirmed populated/marked-unverified data conflicts, strengthen consistency checks, document source-snapshot coverage, rebuild and publish | done (PR #16) | `99662c40` | `COORDINATION.md`, `data/events_base86.json`, `tools/consolidate.py`, `tools/apply_verify.py`, `scripts/build.py`, `scripts/validate.py`, generated data/pages, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 | T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **done** (PR #15 merged; this record follows in a docs PR) | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
-| T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **done** (PR #19 merged; PR check passed; Pages built; main check pending at 39093606492) | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
+| T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **done** (PR #19 merged; PR check passed; main check 39093606492 passed; Pages built) | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
 | T22 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | done — 70 rows re-read: 36 confirmed, 28 corrected, 6 unverified/flagged, 2 rows added (`data/audit_f1fd3c36.json`) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
 | T23 | Pipeline irregularity fixes found during T22 (e.g. rows that carry a value *and* an "unverified; left blank" note) | done — `apply_audit.py` removes value-plus-"unverified" contradictions (3 rows) and re-asserts blank⇔note consistency for every row; validate passes | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
 | T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **done — live**: PR [#18](https://github.com/buffedlizard55-lab/MaltaProj5/pull/18) merged 03:20 UTC (merge commit `9044bf8`); CI `Validate site` green on the PR; Pages build `built` for `9044bf8` | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
-| T25 | Resolve Ferry Fest source link returning 404 in PR #18 remote-check report; preserve only official evidence that remains live and flag anything no longer confirmed | **in progress** | `99662c40` | `COORDINATION.md`, `data/audit_f1fd3c36.json`, `tools/apply_audit.py`, generated `data/`, `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
+| T25 | Resolve Ferry Fest source link returning 404 in PR #18 remote-check report; preserve only official evidence that remains live and flag anything no longer confirmed | **done — PR #17 merged; Pages built** | `99662c40` | `COORDINATION.md`, `data/audit_f1fd3c36.json`, `tools/apply_audit.py`, generated `data/`, `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -829,11 +829,15 @@ listing, leaves unsupported facts blank, and makes the stale URL visible in the 
   visible on review. `git diff --check` passes.
 * Irregularity: the saved verification report is historical (2026-10-18T01:44:56Z), not exhaustive.
   It covers 202 URLs; the current source ledger has 226 distinct URLs, of which 25 are absent from
-  that report, while one report URL is stale. The CI 404 is the concrete new failure; no fresh
-  exhaustive remote-link run has yet verified the repaired active URL set.
-* The scope amendment and implementation are committed locally and based on `main` after PR #19
-  merged. A lease-protected push, PR checks, merge, and deployment confirmation remain outstanding;
-  final pushed commit IDs will be recorded after that push.
+  that report, while one report URL is stale. PR #18 CI found the Ferry Fest 404. PR #17's own
+  report-only URL check no longer checked that removed URL, but SF Travel returned 403 and many
+  other sources were bot-blocked or rate-limited; a green workflow is not proof that every source
+  was reachable.
+* PR #17 (`https://github.com/buffedlizard55-lab/MaltaProj5/pull/17`) merged 2026-10-18 03:33 UTC
+  as `0d24148a7f7bc623cae42439a818e6765e8b426a`. Its validation run `39093770614` passed; the
+  post-merge main validation run `39094060377` passed; Pages deployment `7149446003` succeeded for
+  the merge commit. The later board-only PR #20 also merged; current main validation `39094375568`
+  passed and latest Pages deployment `7149492354` succeeded for `092a1f40720ca469e3d2e7570d2dc18eab2fbbe4`.
 
 ### PR record — `f1fd3c36`
 

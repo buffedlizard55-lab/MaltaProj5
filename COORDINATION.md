@@ -558,3 +558,61 @@ Logged before editing (scope for T19 extended to the files below):
 | D4 | `sources.html` method rule claims tourism guides were "never as the sole row evidence", but 12 flagged rows are sourced only to SF Travel (the city DMO) | row audit by source domain | `scripts/build.py` (state the flagged exception honestly) |
 
 Rebuild reproducibility was confirmed before these fixes: `consolidate.py → apply_verify.py → build.py → validate.py` PASS with a clean `git status`.
+
+---
+
+## Audit result (T19) — `cebeabf0`, 2026-10-18
+
+**Scope:** independent audit of the merged 231-row register and live site; no new research register added.
+
+### Verification performed
+
+```
+python3 tools/consolidate.py   -> 231 rows (Weekly 25 / Monthly 11 / Annual 135 / Special 60), 214 sources
+python3 tools/apply_verify.py  -> 165 name-found / 64 not found / 2 PDF (committed verify_report.json)
+python3 scripts/build.py       -> 12 pages, 231 rows, 214 official-source records
+python3 scripts/validate.py    -> PASS (now also asserts no stale unverified flag on a populated field)
+local preview (http.server)    -> all 12 pages HTTP 200; assets/app.js passes `node --check`
+data/events.csv                -> 231 data rows
+live site                      -> https://buffedlizard55-lab.github.io/MaltaProj5/ serves the 231-row dashboard (fetched and read)
+```
+
+* Rebuild was byte-reproducible before fixes (`git status` clean after the full pipeline).
+* Register invariants re-audited: no duplicate normalized names, no missing source references,
+  5 ledger sources are cited only by review findings (e.g. the unreachable sfcurran.com record),
+  geography red-flag scan shows only in-city venues (CAAMFest's East Bay screenings and the
+  Super Bowl LX Santa Clara scope note are already flagged on the rows).
+* **Remote URL check could not run in this sandbox** (outbound TLS is closed for non-allowlisted
+  hosts; every fetch returned `TLS/SSL connection has been closed`). The authoritative remote
+  check is the PR's CI run (`tools/remotecheck.py` / `tools/verify_rows.py`, report-only steps),
+  recorded below from the PR checks — not from the sandbox.
+
+### Manual spot re-verification against official pages (2026-10-18)
+
+| Row | Result | Official source |
+|---|---|---|
+| SF Sketchfest | **Date error found and corrected** (D5): register carried the 2025 dates Jan 16–Feb 2; official 2026 run is Jan 15–Feb 1, 2026 | https://sfsketchfest2026.sched.com/ (linked from https://www.sfsketchfest.com/) |
+| Bouquets to Art | Confirmed: Mar 3–8, 2026 | https://www.famsf.org/exhibitions/bouquets-to-art-2026 |
+| SF IndieFest | Confirmed: Feb 5–15, 2026 (Roxie + online) | https://sfindie.com/2026/ |
+| SF DocFest | Confirmed: May 28–Jun 7, 2026 | https://sfindie.com/2026/ |
+| Juneteenth (Fillmore) | Confirmed: Sat Jun 13, 2026, 11am–6pm | https://juneteenth-sf.org/ ; https://www.sfmta.com/project-updates/juneteenth-parade-and-celebration |
+| QWOCMAP Film Festival | Confirmed: Jun 12–14, 2026, Presidio Theatre | https://qwocmap.org/festival/ |
+
+### Irregularities carried forward (published on Flagged for Review, not blocking)
+
+* Litquake: the register's "Oct 4–24" range includes the Oct 4 Litquake Out Loud pre-event
+  (Yerba Buena Gardens); the organizer's festival schedule page states the festival itself is
+  October 8–24, 2026 (https://www.litquake.org/2026-schedule). The row stays flagged (bot-blocked
+  source) rather than silently choosing one range.
+* The 35 flagged rows, 186 rows with at least one blank (unverified) field, 12 SF Travel-only
+  rows, CAAMFest's regional venues and all findings already on `review.html`.
+* `ANALYSIS.md` had drifted by one on three counts (D3); static docs now read 214 sources /
+  136 domains / 118 field-level / 78 page-level / 35 flagged / 186 rows with blanks.
+
+### Publication (filled in after the PR merges)
+
+| Item | Result |
+|---|---|
+| PR | _pending_ |
+| Merge | _pending_ |
+| Pages | _pending_ |

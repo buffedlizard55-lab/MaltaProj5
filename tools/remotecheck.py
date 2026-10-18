@@ -61,6 +61,8 @@ for url in sorted(urls):
 
 print(f"\nOK: {len(ok)}   bot-blocked/5xx: {len(blocked)}   dead: {len(dead)}")
 if dead:
+    print("::error title=Dead source links::" + "; ".join(f"{c} {u}" for u, c, _ in dead)[:6000])
+if dead:
     print("\nFAILED — these source links do not resolve:")
     for u, c, l in dead:
         print(f"  - [{c}] {u}  ({l})")

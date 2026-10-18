@@ -30,5 +30,5 @@ for name,p in pages.items():
   target=unquote(u.path) or name
   assert (root/target).is_file(),(name,href)
   if u.fragment and target in pages: assert unquote(u.fragment) in pages[target].ids,(name,href)
-assert len(pages)==11
+assert len(pages)==12
 print(f'PASS: {len(rows)} rows, evidence references, missing-value flags, parent links, {len(pages)} HTML pages and every local link/fragment.')

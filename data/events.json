@@ -145,7 +145,8 @@
   },
   "notes": "18+. Series row; dated themes below are occurrences, not additional series.",
   "flags": [
-   "Second register (session 4f47c142) records: Weekly (Thursdays) \u2014 Thu 6-10pm; 18+ (Tactile Dome 18+). Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Weekly (Thursdays) \u2014 Thu 6-10pm; 18+ (Tactile Dome 18+). Kept as an additional dated record, not merged into the schedule field.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "also": [
@@ -158,8 +159,8 @@
    }
   ],
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -198,12 +199,13 @@
   },
   "notes": "Permanent galleries only; ID required; excludes Bouquets to Art and special exhibition charges.",
   "flags": [
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403, 403, 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -242,12 +244,13 @@
   },
   "notes": "Permanent galleries only; excludes Bouquets to Art and special exhibition charges.",
   "flags": [
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403, 403, 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -286,12 +289,13 @@
   },
   "notes": "Permanent galleries only; ID required; excludes Bouquets to Art and special exhibition charges.",
   "flags": [
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403, 403, 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -330,12 +334,13 @@
   },
   "notes": "Permanent galleries only; excludes Bouquets to Art and special exhibition charges.",
   "flags": [
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403, 403, 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -685,7 +690,8 @@
    "Annual recurrence: unverified.",
    "Also researched independently by session 5a85baf2; the row with more populated fields was kept and both official sources are linked.",
    "Second register (session 4f47c142) records: Annual (Lunar New Year season) \u2014 Parade: Sat Mar 7, 2026, 5:15pm (starts 2nd & Market St); Community Street Fair Mar 7, 10am-4:30pm; festival season celebrates the Year of the Horse. Kept as an additional dated record, not merged into the schedule field.",
-   "Reclassified Special -> Annual: the Chinese New Year Parade is an annual edition; the 2027 date is the next announced edition."
+   "Reclassified Special -> Annual: the Chinese New Year Parade is an annual edition; the 2027 date is the next announced edition.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403, 403, 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "also": [
@@ -698,8 +704,8 @@
    }
   ],
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -872,12 +878,13 @@
   },
   "notes": "18+. A dated occurrence of After Dark.",
   "flags": [
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "after-dark",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -914,12 +921,13 @@
   },
   "notes": "18+. A dated occurrence of After Dark.",
   "flags": [
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "after-dark",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -956,12 +964,13 @@
   },
   "notes": "18+. A dated occurrence of After Dark.",
   "flags": [
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "after-dark",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -998,12 +1007,13 @@
   },
   "notes": "18+. A dated occurrence of After Dark.",
   "flags": [
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "after-dark",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1040,12 +1050,13 @@
   },
   "notes": "18+. A dated occurrence of After Dark.",
   "flags": [
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "after-dark",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1082,12 +1093,13 @@
   },
   "notes": "18+. A dated occurrence of After Dark.",
   "flags": [
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "after-dark",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1124,12 +1136,13 @@
   },
   "notes": "18+. A dated occurrence of After Dark.",
   "flags": [
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "after-dark",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1167,12 +1180,13 @@
   "notes": "18+. A dated occurrence of After Dark.",
   "flags": [
    "price: unverified; left blank.",
-   "Reclassified Annual -> Special: 'Creepatorium' is a single dated After Dark theme (Oct 29, 2026), an occurrence of the weekly After Dark series, not a separately recurring annual event."
+   "Reclassified Annual -> Special: 'Creepatorium' is a single dated After Dark theme (Oct 29, 2026), an occurrence of the weekly After Dark series, not a separately recurring annual event.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 405, 405); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "after-dark",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1325,7 +1339,8 @@
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Food & Markets.",
   "flags": [
    "City page confirms Saturday 7am-2pm and that Foodwise has operated the market since February 2026. FLAG: the City's own market rules PDF states 7 AM-3 PM, so published closing time is inconsistent across sf.gov documents.",
-   "Second register (session 4f47c142) records: Weekly (Saturdays) \u2014 Year-round: Sat 7am-2pm. Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Weekly (Saturdays) \u2014 Year-round: Sat 7am-2pm. Kept as an additional dated record, not merged into the schedule field.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "also": [
@@ -1338,8 +1353,8 @@
    }
   ],
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1522,12 +1537,13 @@
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Food & Markets.",
   "flags": [
    "Official site confirms third-Friday cadence and 18th & Castro. FLAG: the 2026 season ended September 18, 2026 and no 2027 dates are published; official and press listings also disagree on closing time (5-9pm vs 5-10pm), so time and next date are left blank.",
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1739,7 +1755,8 @@
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Street Fairs & Parades.",
   "flags": [
    "Founded by Harvey Milk in 1974.",
-   "Second register (session 4f47c142) records: Annual (first Sunday of October) \u2014 Oct 4, 2026 (52nd annual). Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Annual (first Sunday of October) \u2014 Oct 4, 2026 (52nd annual). Kept as an additional dated record, not merged into the schedule field.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403, 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "also": [
@@ -1752,8 +1769,8 @@
    }
   ],
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1886,12 +1903,13 @@
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Street Fairs & Parades.",
   "flags": [
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -1923,12 +1941,13 @@
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Cultural & Heritage.",
   "flags": [
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -2446,7 +2465,8 @@
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Civic & Holiday.",
   "flags": [
    "2027 dates corroborated by the U.S. Navy Blue Angels official 2027 schedule (blueangels.navy.mil).",
-   "Second register (session 4f47c142) records: Annual (early-mid October) \u2014 Oct 4-12, 2026; Air Show Oct 9-11 (noon-4pm) featuring the U.S. Navy Blue Angels. Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Annual (early-mid October) \u2014 Oct 4-12, 2026; Air Show Oct 9-11 (noon-4pm) featuring the U.S. Navy Blue Angels. Kept as an additional dated record, not merged into the schedule field.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403, 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "also": [
@@ -2459,8 +2479,8 @@
    }
   ],
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -2643,7 +2663,8 @@
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Music & Festivals.",
   "flags": [
    "2027 dates not published on the official site as of the verification date.",
-   "Second register (session 4f47c142) records: Annual (early October) \u2014 Oct 2-4, 2026 (performances end 7pm daily; free, no tickets). Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Annual (early October) \u2014 Oct 2-4, 2026 (performances end 7pm daily; free, no tickets). Kept as an additional dated record, not merged into the schedule field.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "also": [
@@ -2656,8 +2677,8 @@
    }
   ],
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3072,12 +3093,13 @@
   "flags": [
    "Season-level entry; individual concert dates are on the official season overview.",
    "time: unverified; left blank.",
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3108,12 +3130,13 @@
   "flags": [
    "Longest-running film festival in the Americas.",
    "time: unverified; left blank.",
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3703,12 +3726,13 @@
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Music & Festivals.",
   "flags": [
    "One-off 2026 after-party already held; no 2027 edition announced.",
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3745,7 +3769,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3782,7 +3806,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3819,7 +3843,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3856,7 +3880,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3893,7 +3917,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3930,7 +3954,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -3967,7 +3991,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4004,7 +4028,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4041,7 +4065,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4079,7 +4103,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4117,7 +4141,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4154,7 +4178,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4191,7 +4215,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4229,7 +4253,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4261,12 +4285,13 @@
   },
   "notes": "Free general admission to permanent collections for all visitors on first Tuesdays; free Saturdays for Bay Area residents (9 counties) also available.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4303,7 +4328,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4340,7 +4365,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4378,7 +4403,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4415,7 +4440,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4452,7 +4477,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4489,7 +4514,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4527,7 +4552,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4559,12 +4584,13 @@
   },
   "notes": "Nationally recognized comedy festival.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4601,7 +4627,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4638,7 +4664,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4675,7 +4701,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4712,7 +4738,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4749,7 +4775,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4781,12 +4807,13 @@
   },
   "notes": "Also produces SF DocFest (May-June).",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4819,12 +4846,13 @@
   "notes": "Citywide celebration of SF's music scene with partner events and two conferences.",
   "flags": [
    "No dedicated official event website verified; dates per SF Travel's February guide.",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4861,7 +4889,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4893,12 +4921,13 @@
   },
   "notes": "100+ global vendors of rare books and art.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4935,7 +4964,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -4949,39 +4978,38 @@
   "venue": "Fort Mason Center, Marina / Fort Mason",
   "price": "Ticketed",
   "sources": [
-   "x-www-thesuperfair-com-san-francisco",
-   "x-www-superfine-world"
+   "x-www-thesuperfair-com-san-francisco"
   ],
   "evidence": {
    "name": [
-    "x-www-thesuperfair-com-san-francisco",
-    "x-www-superfine-world"
+    "x-www-thesuperfair-com-san-francisco"
    ],
    "schedule": [
-    "x-www-superfine-world"
+    "x-www-thesuperfair-com-san-francisco"
    ],
    "venue": [
-    "x-www-superfine-world"
+    "x-www-thesuperfair-com-san-francisco"
    ],
    "price": [
-    "x-www-superfine-world"
+    "x-www-thesuperfair-com-san-francisco"
    ]
   },
   "notes": "150+ artists, installations and programs.",
   "flags": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
-   "Fair has rebranded from 'Superfine Art Fair' to 'The Superfair'; the official page states the 2026 edition has ended."
+   "Fair has rebranded from 'Superfine Art Fair' to 'The Superfair'; the official page states the 2026 edition has ended.",
+   "Automated re-check 2026-10-18: the cited page did not contain the event name in the fetched text (page may render with JavaScript or have moved). Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "c961fbe4 manual re-read",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
  {
   "id": "x-flower-bulb-day",
-  "name": "Flower Bulb Day (Union Square tulip giveaway)",
+  "name": "Tulip Day (Flower Bulb Day)",
   "category": "Community & outdoors",
   "kind": "Annual",
   "schedule": "Annual (March) \u2014 2026: Mar 21, 2026",
@@ -4989,22 +5017,20 @@
   "venue": "Union Square, Union Square / Downtown",
   "price": "Free",
   "sources": [
-   "x-sfrecpark-org-m-newsflash-home-detail-2744",
-   "x-flowerbulbday-com"
+   "x-sfrecpark-org-m-newsflash-home-detail-2744"
   ],
   "evidence": {
    "name": [
-    "x-sfrecpark-org-m-newsflash-home-detail-2744",
-    "x-flowerbulbday-com"
+    "x-sfrecpark-org-m-newsflash-home-detail-2744"
    ],
    "schedule": [
-    "x-flowerbulbday-com"
+    "x-sfrecpark-org-m-newsflash-home-detail-2744"
    ],
    "venue": [
-    "x-flowerbulbday-com"
+    "x-sfrecpark-org-m-newsflash-home-detail-2744"
    ],
    "price": [
-    "x-flowerbulbday-com"
+    "x-sfrecpark-org-m-newsflash-home-detail-2744"
    ]
   },
   "notes": "80,000+ tulips displayed; visitors pick their own bunch.",
@@ -5047,12 +5073,13 @@
   },
   "notes": "Weeklong floral design fundraiser; free Tuesdays do not apply during this week.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5089,7 +5116,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5126,7 +5153,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5163,7 +5190,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5200,7 +5227,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5232,12 +5259,13 @@
   },
   "notes": "Bay Area's only contemporary and modern art fair; 70+ galleries.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5274,7 +5302,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5311,7 +5339,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5348,7 +5376,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5386,7 +5414,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5424,7 +5452,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5461,7 +5489,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5493,12 +5521,13 @@
   },
   "notes": "60+ theater, dance and music ensembles from the Bay Area and 11 countries.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5535,7 +5564,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5567,12 +5596,13 @@
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5609,7 +5639,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5646,7 +5676,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5683,7 +5713,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5720,7 +5750,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5757,7 +5787,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5789,12 +5819,13 @@
   },
   "notes": "The City also runs a month of Juneteenth programming (sf.gov Juneteenth page).",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5826,12 +5857,13 @@
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5868,7 +5900,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5880,29 +5912,26 @@
   "schedule": "Annual (July 4) \u2014 2026: Jul 4, 2026; fireworks ~9:30pm, weather permitting",
   "time": "",
   "venue": "PIER 39, The Embarcadero, Fisherman's Wharf",
-  "price": "Free",
+  "price": "",
   "sources": [
-   "x-www-pier39-com-upcoming-events",
-   "x-www-pier39-com"
+   "x-www-pier39-com-upcoming-events"
   ],
   "evidence": {
    "name": [
-    "x-www-pier39-com-upcoming-events",
-    "x-www-pier39-com"
+    "x-www-pier39-com-upcoming-events"
    ],
    "schedule": [
-    "x-www-pier39-com"
+    "x-www-pier39-com-upcoming-events"
    ],
    "venue": [
-    "x-www-pier39-com"
+    "x-www-pier39-com-upcoming-events"
    ],
-   "price": [
-    "x-www-pier39-com"
-   ]
+   "price": []
   },
   "notes": "Bands, food, arts & crafts and waterfront fireworks.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "price: unverified \u2014 removed during integration because the replacement source does not state it."
   ],
   "parent": "",
   "check": {
@@ -5944,7 +5973,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -5976,12 +6005,13 @@
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6018,7 +6048,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6055,7 +6085,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6092,7 +6122,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6124,12 +6154,13 @@
   },
   "notes": "SFJAZZ also presents the San Francisco Jazz Festival and a 350-concert 2026-27 season at the SFJAZZ Center.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6166,7 +6197,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6199,12 +6230,13 @@
   "notes": "65+ local pizzerias, bakeries and breweries.",
   "flags": [
    "No dedicated official event website verified; date and details per SF Travel's August guide.",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6253,29 +6285,26 @@
   "schedule": "Annual (September) \u2014 2026: Sep 24, 2026, 7pm (115th season; Hilary Hahn, Giancarlo Guerrero conducting)",
   "time": "",
   "venue": "Davies Symphony Hall, 201 Van Ness Ave, Civic Center / Hayes Valley",
-  "price": "Ticketed (gala)",
+  "price": "",
   "sources": [
-   "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202",
-   "x-www-sfsymphony-org"
+   "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202"
   ],
   "evidence": {
    "name": [
-    "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202",
-    "x-www-sfsymphony-org"
+    "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202"
    ],
    "schedule": [
-    "x-www-sfsymphony-org"
+    "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202"
    ],
    "venue": [
-    "x-www-sfsymphony-org"
+    "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202"
    ],
-   "price": [
-    "x-www-sfsymphony-org"
-   ]
+   "price": []
   },
   "notes": "Season-opening gala benefiting education and community programs.",
   "flags": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "price: unverified \u2014 removed during integration because the replacement source does not state it.",
    "Gala row verified manually against the Symphony's official concert-calendar PDF; the automated HTML name check cannot read PDFs."
   ],
   "parent": "",
@@ -6318,7 +6347,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6355,7 +6384,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6392,7 +6421,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6467,7 +6496,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6479,35 +6508,33 @@
   "schedule": "Annual (late September-October) \u2014 2026: Sep 26 - Oct 25, 2026",
   "time": "",
   "venue": "Artists' studios citywide; hub at 934 Brannan St",
-  "price": "Free",
+  "price": "",
   "sources": [
-   "x-www-artspan-org-visitsfopenstudios",
-   "x-www-artspan-org"
+   "x-www-artspan-org-visitsfopenstudios"
   ],
   "evidence": {
    "name": [
-    "x-www-artspan-org-visitsfopenstudios",
-    "x-www-artspan-org"
+    "x-www-artspan-org-visitsfopenstudios"
    ],
    "schedule": [
-    "x-www-artspan-org"
+    "x-www-artspan-org-visitsfopenstudios"
    ],
    "venue": [
-    "x-www-artspan-org"
+    "x-www-artspan-org-visitsfopenstudios"
    ],
-   "price": [
-    "x-www-artspan-org"
-   ]
+   "price": []
   },
   "notes": "",
   "flags": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
-   "The ArtSpan page first cited (artspan.org/programs/visitsfopenstudios) returns its 404 template; the program's current page is linked instead."
+   "price: unverified \u2014 removed during integration because the replacement source does not state it.",
+   "The ArtSpan page first cited (artspan.org/programs/visitsfopenstudios) returns its 404 template; the program's current page is linked instead.",
+   "Automated re-check 2026-10-18: the cited page did not contain the event name in the fetched text (page may render with JavaScript or have moved). Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "c961fbe4 manual re-read",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6544,7 +6571,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6576,12 +6603,13 @@
   },
   "notes": "Oldest continuously operating international antiques show on the West Coast; 60 dealers.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6613,12 +6641,13 @@
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6655,7 +6684,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6692,7 +6721,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6729,7 +6758,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6766,7 +6795,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6803,7 +6832,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6835,12 +6864,13 @@
   },
   "notes": "Tours and events around permanent and temporary eco-friendly light art.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6878,7 +6908,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6916,7 +6946,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -6928,29 +6958,26 @@
   "schedule": "Annual (November-January) \u2014 2026: Nightly tree light shows 5-10pm (every half hour) through Jan 11, 2027; holiday music and activities in December",
   "time": "",
   "venue": "PIER 39, Fisherman's Wharf",
-  "price": "Free",
+  "price": "",
   "sources": [
-   "x-www-pier39-com-upcoming-events",
-   "x-www-pier39-com"
+   "x-www-pier39-com-upcoming-events"
   ],
   "evidence": {
    "name": [
-    "x-www-pier39-com-upcoming-events",
-    "x-www-pier39-com"
+    "x-www-pier39-com-upcoming-events"
    ],
    "schedule": [
-    "x-www-pier39-com"
+    "x-www-pier39-com-upcoming-events"
    ],
    "venue": [
-    "x-www-pier39-com"
+    "x-www-pier39-com-upcoming-events"
    ],
-   "price": [
-    "x-www-pier39-com"
-   ]
+   "price": []
   },
   "notes": "Nightly light show around the pier's Christmas tree.",
   "flags": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "price: unverified \u2014 removed during integration because the replacement source does not state it.",
    "The PIER 39 holiday page gives the season dates (November 23\u2013January 10) but not a year; no year is asserted in the row."
   ],
   "parent": "",
@@ -6993,7 +7020,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7030,7 +7057,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7067,7 +7094,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7104,7 +7131,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7142,7 +7169,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7179,7 +7206,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7211,12 +7238,13 @@
   },
   "notes": "Tours the birthplace of the disability rights movement.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7249,12 +7277,13 @@
   "notes": "Concerts, events and fan experiences across SF ahead of the Bay Area Super Bowl.",
   "flags": [
    "Scope note: Super Bowl LX itself was played at Levi's Stadium in Santa Clara (outside San Francisco city limits); only the San Francisco fan events are in scope.",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7286,12 +7315,13 @@
   },
   "notes": "Oracle Red Bull Racing and Visa Cash App Racing Bulls F1 cars and Ford vehicles on San Francisco streets.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7324,12 +7354,13 @@
   "notes": "Family-friendly, Asia-inspired night market on Irving Street.",
   "flags": [
    "No dedicated official event website verified; date per SF Travel's February guide (which linked a social media post).",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7366,7 +7397,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7399,12 +7430,13 @@
   "notes": "Easter Sunday look-alike celebration hosted by the Sisters of Perpetual Indulgence.",
   "flags": [
    "SF Travel's guide links a ticketing aggregator rather than the organizer; the Sisters of Perpetual Indulgence's own site should be checked for the current edition.",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7441,7 +7473,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7474,12 +7506,13 @@
   "notes": "Outdoor shopping, dining and live music on Valencia Street.",
   "flags": [
    "SF Travel's guide links a ticketing platform rather than an organizer site.",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7512,12 +7545,13 @@
   "notes": "Grammy-winning DJ Black Coffee's biggest Bay Area show to date.",
   "flags": [
    "Listed via SF Travel with a ticketing-platform link; no organizer website verified.",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7549,12 +7583,13 @@
   },
   "notes": "Historic display launched directly from the bridge towers for America's 250th birthday - a one-off edition (the annual 4th of July fireworks tradition normally centers on the waterfront; see PIER 39 entry).",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7587,12 +7622,13 @@
   "notes": "Weeklong festival devoted to hash products.",
   "flags": [
    "Described by SF Travel as a first-of-its-kind event; no dedicated official website verified.",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7625,12 +7661,13 @@
   "notes": "Local music, art, food and wine along the waterfront.",
   "flags": [
    "No dedicated official event page verified; date per SF Travel's July guide.",
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7662,12 +7699,13 @@
   },
   "notes": "Free outdoor sunset movie screenings.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7704,7 +7742,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7741,7 +7779,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7778,7 +7816,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7810,12 +7848,13 @@
   },
   "notes": "Guided urban hike with stairways, hidden lanes and peak views; benefits pedestrian safety advocacy.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7852,7 +7891,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7884,12 +7923,13 @@
   },
   "notes": "California artisan cheesemakers with pairings, beer, wine and live music.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7927,7 +7967,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -7964,7 +8004,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8098,10 +8138,12 @@
     "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons"
    ],
    "schedule": [
-    "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons"
+    "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons",
+    "b-sfopera-com-press-press-releases-san-francisco-opera-2026-27-sea"
    ],
    "venue": [
-    "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons"
+    "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons",
+    "b-sfopera-com-press-press-releases-san-francisco-opera-2026-27-sea"
    ],
    "price": [
     "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons"
@@ -8151,7 +8193,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8163,29 +8205,26 @@
   "schedule": "2026: Nov 10, 2026, 7:00pm",
   "time": "",
   "venue": "Chase Center, Mission Bay",
-  "price": "Ticketed",
+  "price": "",
   "sources": [
-   "x-www-chasecenter-com-events-teddy-swims-20261110",
-   "x-www-chasecenter-com-events"
+   "x-www-chasecenter-com-events-teddy-swims-20261110"
   ],
   "evidence": {
    "name": [
-    "x-www-chasecenter-com-events-teddy-swims-20261110",
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-events-teddy-swims-20261110"
    ],
    "schedule": [
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-events-teddy-swims-20261110"
    ],
    "venue": [
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-events-teddy-swims-20261110"
    ],
-   "price": [
-    "x-www-chasecenter-com-events"
-   ]
+   "price": []
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "price: unverified \u2014 removed during integration because the replacement source does not state it."
   ],
   "parent": "",
   "check": {
@@ -8202,29 +8241,26 @@
   "schedule": "2026: Nov 21, 2026, 7:30pm",
   "time": "",
   "venue": "Chase Center, Mission Bay",
-  "price": "Ticketed",
+  "price": "",
   "sources": [
-   "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121",
-   "x-www-chasecenter-com-events"
+   "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121"
   ],
   "evidence": {
    "name": [
-    "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121",
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121"
    ],
    "schedule": [
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121"
    ],
    "venue": [
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121"
    ],
-   "price": [
-    "x-www-chasecenter-com-events"
-   ]
+   "price": []
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "price: unverified \u2014 removed during integration because the replacement source does not state it."
   ],
   "parent": "",
   "check": {
@@ -8241,29 +8277,26 @@
   "schedule": "2026: Nov 28, 2026, 7:30pm",
   "time": "",
   "venue": "Chase Center, Mission Bay",
-  "price": "Ticketed",
+  "price": "",
   "sources": [
-   "x-www-chasecenter-com-news-journey-announcement-20261128",
-   "x-www-chasecenter-com-events"
+   "x-www-chasecenter-com-news-journey-announcement-20261128"
   ],
   "evidence": {
    "name": [
-    "x-www-chasecenter-com-news-journey-announcement-20261128",
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-news-journey-announcement-20261128"
    ],
    "schedule": [
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-news-journey-announcement-20261128"
    ],
    "venue": [
-    "x-www-chasecenter-com-events"
+    "x-www-chasecenter-com-news-journey-announcement-20261128"
    ],
-   "price": [
-    "x-www-chasecenter-com-events"
-   ]
+   "price": []
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "price: unverified \u2014 removed during integration because the replacement source does not state it."
   ],
   "parent": "",
   "check": {
@@ -8305,7 +8338,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8342,7 +8375,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8379,7 +8412,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8416,7 +8449,7 @@
   "parent": "",
   "check": {
    "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8448,12 +8481,13 @@
   },
   "notes": "U.S. premiere of the international touring exhibition on the lives and legacies of the pharaohs.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8485,12 +8519,13 @@
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8522,12 +8557,13 @@
   },
   "notes": "Twenty-plus Monet Venetian views reunited, including The Doge's Palace and The Grand Canal, Venice.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  },
@@ -8559,12 +8595,13 @@
   },
   "notes": "2026 headliners included Chris Lake, Solomun and Underworld.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Automated re-check 2026-10-18: the cited page did not contain the event name in the fetched text (page may render with JavaScript or have moved). Manual re-check requested."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "flagged",
+   "by": "automated fetch",
    "date": "2026-10-18"
   }
  }

@@ -1,14 +1,18 @@
 name: Validate and deploy Pages
+
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
+
 permissions:
   contents: read
+
 concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -17,35 +21,37 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python scripts/build.py && python scripts/validate.py
-      - name: Check the data pipeline is reproducible and idempotent
+
+      - name: Rebuild the register and the site from source data
         run: |
-          python data/build_data.py
-          python tools/integrate.py
-          python tools/integrate.py
+          python tools/consolidate.py
+          python tools/apply_verify.py
           python scripts/build.py
-          git diff --exit-code -- data/ '*.html'
-      - name: Check every official source URL still resolves
+
+      - name: Validate data, evidence and local links
+        run: python scripts/validate.py
+
+      - name: Ensure committed data and HTML are current (pipeline is reproducible)
+        run: git diff --exit-code -- data/ '*.html'
+
+      - name: Check every cited source URL still resolves
         run: python tools/remotecheck.py --timeout 25
-      - name: Ensure generated files are current
-        run: git diff --exit-code -- '*.html' data/events.csv
-      - name: Verify docs/ site (every row sourced, links resolve)
-        run: python tools/verify_site.py
-      - name: Stage public files (docs/ site primary + root inventory under /inventory/)
+
+      - name: Fetch every cited page and match the event name (report only)
+        continue-on-error: true
+        run: python tools/verify_rows.py --timeout 25 --out /tmp/verify_report.json
+
+      - name: Stage public files
         run: |
           mkdir -p _site
-          # Primary: full 167-event site built by tools/build_site.py (session 4f47c142)
-          cp -r docs/. _site/
-          # Secondary: 29-row bounded inventory from parallel session 3a19e72d, preserved at /inventory/
-          mkdir -p _site/inventory
-          cp *.html _site/inventory/
-          cp -r assets _site/inventory/
-          mkdir -p _site/inventory/data
-          cp data/events.csv data/events.json data/sources.json data/review.json _site/inventory/data/
+          cp *.html _site/
+          cp -r assets data _site/
           touch _site/.nojekyll
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: validate

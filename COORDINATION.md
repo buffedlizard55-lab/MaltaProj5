@@ -3,9 +3,8 @@
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
 **Current publication (T26–T28):** PRs #22 and #24 are merged and Pages is confirmed live, including the final Nihonmachi venue-context tightening.
-The audited snapshot contains **242 candidates: 162 city-only directory entries /
-80 review-only**, with unsupported facts blank. All newer mainline research is
-retained. Older counts/field-page badges below are historical, not the current
+**T29–T31 (`bb551cdc`):** additional official-calendar research in progress on `arena/bb551cdc-maltaproj5`. Historical 242/162/80 counts remain the last live snapshot until this session publishes.
+Older counts/field-page badges below are historical, not the current
 publication gate. Actual CI, merge and Pages records are at the end of this board.
 
 **Rules**
@@ -40,6 +39,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 03:22 UTC | Post-audit dead-source correction for Ferry Fest found by PR #18 CI (T25) |
 
 | `64f8b973` | `arena/64f8b973-maltaproj5` | 2026-10-18 02:58 | Post-integration official-evidence audit, field-safety fixes, dashboard QA, final PR and Pages confirmation (T26–T28) |
+| `bb551cdc` | `arena/bb551cdc-maltaproj5` | 2026-10-18 05:45 | Additional official SF calendar research, overlay extension, rebuild, PR/Pages (T29–T31) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -82,6 +82,9 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T26 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
 | T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | done — final context correction merged in PR #24 | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
 | T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | done — PR #24 checks, Pages build and corrected live content confirmed | `64f8b973` | `COORDINATION.md` |
+| T29 | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **in progress** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
+| T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **in progress** | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py`, `scripts/build.py` |
+| T31 | Validate, PR → main, merge, confirm Pages | unclaimed | `bb551cdc` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them

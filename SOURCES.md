@@ -2,7 +2,7 @@
 
 The authoritative source ledger is **`data/sources.json`** and its rendered form
 **`sources.html`**. It is generated and re-checked by the pipeline; this file explains the rules
-rather than duplicating 212 changing records across 136 domains.
+rather than duplicating 234 changing records across 142 domains.
 
 ## What a source record contains
 

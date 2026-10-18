@@ -21,7 +21,7 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 | Weekly / monthly / annual entries | 37 / 13 / 35 |
 | Special, dated or cadence-unconfirmed entries | 127 |
 | Entries with at least one confirmed future date | 74 |
-| Directory rows reading Free / Paid / Not stated | 75 / 20 / 117 |
+| Directory rows reading Free / Paid / Not stated | 78 / 17 / 117 |
 | Exact cited official-source URLs / distinct domains | 308 / 163 |
 
 The directory includes 16 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.

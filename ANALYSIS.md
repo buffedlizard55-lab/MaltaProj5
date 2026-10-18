@@ -11,7 +11,7 @@ As of 18 October 2026. This is not a complete or live city calendar.
 ## Upcoming, relative to the fixed snapshot
 
 74 directory entries carry at least one confirmed upcoming date; 138 do not.
-Of the dated entries, 15 are stated free on their official page; they lead the free-first
+Of the dated entries, 16 are stated free on their official page; they lead the free-first
 landing page, while priced entries are grouped in the separate Paid events section.
 
 - Open now: 5
@@ -30,8 +30,8 @@ landing page, while priced entries are grouped in the separate Paid events secti
 
 ## Cost, as stated by the official page
 
-- Free: 75
-- Paid: 20
+- Free: 78
+- Paid: 17
 - Not stated: 117 (blank admission cell — never assumed free)
 
 ## Blank factual fields in the directory

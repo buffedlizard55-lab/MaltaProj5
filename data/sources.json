@@ -1620,6 +1620,13 @@
   "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
   "http": 200
  },
+ "curran-home": {
+  "url": "https://sfcurran.com/visit/",
+  "publisher": "The Curran San Francisco",
+  "checked": "2026-10-18",
+  "excerpt": "Oh, Mary! Through Sun, Nov 1, 2026. The Billy Joel Legacy Thu, Nov 5, 2026. Taylor Mac in Concert Fri, Nov 6, 2026. The Music of Queen Sat, Nov 7, 2026. An Evening with Darren Criss Sat, Nov 14, 2026. World Ballet Company: Swan Lake Fri, Nov 20, 2026. The Golden Girls Live Fri, Dec 4 - Sun, Dec 20, 2026.",
+  "method": "Web page retrieved and transcribed on 2026-10-18"
+ },
  "sfm-full": {
   "url": "https://www.thesfmarathon.com/full-marathon/",
   "publisher": "The San Francisco Marathon",
@@ -1653,7 +1660,7 @@
   "http": 200
  },
  "sfzoo-freeday": {
-  "url": "https://www.sfzoo.org/plan-your-visit/",
+  "url": "https://www.sfzoo.org/",
   "publisher": "San Francisco Zoo & Gardens \u2014 SF Resident Free Day",
   "checked": "2026-10-18",
   "excerpt": "te ticket window on the day of your visit. Buying online is the easiest way to skip the line and get straight to the good stuff. General admission San Francisco residents Adult (12-64) $32 weekdays / $34 weekends & holidays Adult (12-64) $29 weekdays / $31 weekends & holidays Seniors (65+) $25 weekdays / $27 weekends & holidays Seniors (65+) $21 weekdays / $23 weekends & holida",
@@ -1669,7 +1676,7 @@
   "http": 200
  },
  "presidio-habitat": {
-  "url": "https://presidio.gov/explore/events",
+  "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
   "publisher": "Presidio Trust \u2014 Habitat Stewards",
   "checked": "2026-10-18",
   "excerpt": "Event Calendar - The Presidio (San Francisco) Skip to Content Home Things To Do Event Calendar Events at the Presidio There's always something happening at the Presidio Featured Events Friday , Oct 09 10:00 AM Litter Pickup on Presidio Tunne",

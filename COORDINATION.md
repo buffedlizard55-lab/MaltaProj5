@@ -513,3 +513,14 @@ GitHub Pages is in branch mode (`main` / root), so publishing happens on merge t
 `Validate site` workflow rebuilds from source, validates, proves the committed generated files are
 current (`git diff --exit-code`) and checks every cited URL before merge. PR link and merge result
 are recorded below once the PR exists.
+
+
+---
+
+## Merge log — `c961fbe4` integrates `main` after PRs #7 and #9
+
+`main` merged PR #7 (the 20-row expansion) and PR #9 (three source-URL fixes) while this PR was
+open. Both are folded in: the 20 rows were already imported here, and PR #9's three corrected URLs
+(`sfcurran.com/visit/`, `www.sfzoo.org/`, the Presidio 2026 season release) are the versions used
+by `tools/consolidate.py`. No data was discarded; the generated register was rebuilt after the
+merge and re-validated.

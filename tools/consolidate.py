@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final-integration consolidation (session c961fbe4).
+"""Historical candidate consolidation followed by a mandatory fail-closed audit overlay.
 
 Folds the two independent registers into ONE canonical register:
 
@@ -15,10 +15,13 @@ Farmers Market", so every pair here was reviewed by hand.
 
 Outputs:
   data/events.json            canonical combined register
-  data/sources.json           combined source ledger (new URLs added, excerpt
-                              filled by tools/apply_verify.py after the automated
-                              fetch in CI)
-  data/review.json            prior findings + integration findings
+  data/sources.json           exact-URL source ledger; no inherited verification labels
+  data/review.json            current audit findings
+  data/unverified_history.json preserved legacy candidates and findings, NOT facts
+
+All legacy transcription/reclassification below is UNVERIFIED HISTORY. The final
+audited_register.apply_audit call alone chooses publishable values. Never run the
+deprecated apply_verify.py matcher on its outputs.
 
 Run: python3 tools/consolidate.py
 """
@@ -439,14 +442,6 @@ rows = base + converted
 # Applied after the merge. Every entry below was re-read by session c961fbe4 on
 # 2026-10-18 with fetch_page; the excerpt is transcribed from the live page.
 FIXES = {
-    "x-sf-sketchfest": {
-        "keep": ['name', 'schedule', 'venue', 'price'],
-        "url": "https://sfsketchfest2026.sched.com/",
-        "publisher": "SF Sketchfest 2026 — official festival schedule (Sched, linked from sfsketchfest.com)",
-        "excerpt": "SF Sketchfest 2026 schedule: first listed day Thursday, January 15, 2026 (7:00pm Sketch & Improv Showcase, Eclectic Box); 'Tickets on sale now!' The festival's 2026 run was announced as January 15–February 1, 2026.",
-        "schedule": "Annual (winter) — 2026: Jan 15 - Feb 1, 2026",
-        "flag": "Date correction (audit cebeabf0, 2026-10-18): the authored register carried 'Jan 16 - Feb 2' — those are the 2025 edition's dates. The official SF Sketchfest 2026 schedule (sfsketchfest2026.sched.com, linked from sfsketchfest.com) opens Thursday, January 15, 2026, and the 2026 run is January 15–February 1, 2026; the schedule field was corrected to match. sfsketchfest.com itself blocks automated clients (403).",
-    },
     "b-sf-symphony-season": {
         "keep": ['name', 'schedule', 'venue'],
         "drop": ["https://www.sfsymphony.org/"],
@@ -607,8 +602,6 @@ for rid, fix in FIXES.items():
                 row["flags"].append(note)
     if fix.get("rename"):
         row["name"] = fix["rename"]
-    if fix.get("schedule"):
-        row["schedule"] = fix["schedule"]
     row["check"] = {"level": "field-level", "by": "c961fbe4 manual re-read", "date": "2026-10-18"}
     if fix.get("flag") and fix["flag"] not in row["flags"]:
         row["flags"].append(fix["flag"])
@@ -741,12 +734,7 @@ for r in rows:
             kept.append(f)
     r["flags"] = kept
     for field in ("schedule", "time", "venue", "price"):
-        if r[field]:
-            # D2 (audit cebeabf0): a populated field must not keep a stale
-            # "unverified; left blank" flag carried over from a source register.
-            r["unverified"] = [f for f in r["unverified"]
-                               if not f.startswith(field + ": unverified")]
-        elif not any(f.startswith(field + ": unverified") for f in r["unverified"]):
+        if not r[field] and not any(f.startswith(field + ": unverified") for f in r["unverified"]):
             r["unverified"].append(f"{field}: unverified — not stated on the cited official page.")
 
 # prune source records no longer cited by any row
@@ -763,10 +751,7 @@ for r in rows:
     assert all(s in sources for s in r["sources"]), r["id"]
     assert not r["parent"] or r["parent"] in ids, r["id"]
     for field in ("schedule", "time", "venue", "price"):
-        marked_unverified = any(f.startswith(field + ": unverified") for f in r["unverified"])
-        assert r[field] or marked_unverified, (r["id"], field)
-        assert not (r[field] and marked_unverified), (
-            r["id"], field, "populated value conflicts with unverified marker")
+        assert r[field] or any(f.startswith(field + ": unverified") for f in r["unverified"]), (r["id"], field)
 
 # ------------------------------------------------------------- integration notes
 review.append({
@@ -800,6 +785,8 @@ review.append({
     "urls": ["https://github.com/buffedlizard55-lab/MaltaProj5"],
 })
 
+
+
 # ---------------------- retire findings that the final register supersedes
 SUPERSEDED = [
     "Publication blocked: GitHub Pages permission",
@@ -829,20 +816,20 @@ if retired:
         "urls": ["https://buffedlizard55-lab.github.io/MaltaProj5/"],
     })
 
-# Retire source records used only by findings that were removed above.
-# Keep sources referenced by either event rows or still-published review findings.
-retained_source_ids = {sid for row in rows for sid in row["sources"]}
-retained_source_ids |= {sid for finding in review for sid in finding.get("sources", [])}
-sources = {sid: source for sid, source in sources.items() if sid in retained_source_ids}
 
-(ROOT / "data" / "events.json").write_text(json.dumps(rows, indent=1, ensure_ascii=True) + "\n")
-(ROOT / "data" / "sources.json").write_text(json.dumps(sources, indent=1, ensure_ascii=True) + "\n")
-(ROOT / "data" / "review.json").write_text(json.dumps(review, indent=1, ensure_ascii=True) + "\n")
 
 from collections import Counter
-print(f"canonical register: {len(rows)} rows")
+print(f"UNVERIFIED historical candidates: {len(rows)} rows")
 print(" kinds:", dict(Counter(r["kind"] for r in rows)))
 print(" categories:", dict(Counter(r["category"] for r in rows)))
 print(f" sources: {len(sources)}")
 print(f" review findings: {len(review)}")
 print(" merged 167-rows:", len(MERGE), " new 167-rows:", len(converted))
+
+# Preserve newer mainline research without trusting its old verification labels.
+from upstream_candidates import include_upstream
+rows, sources, review = include_upstream(rows, sources, review)
+
+# Mandatory final projection. No legacy value/verification label can leak through.
+from audited_register import apply_audit
+apply_audit(rows, sources, review)

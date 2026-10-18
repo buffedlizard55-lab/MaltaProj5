@@ -1,153 +1,40 @@
-# ANALYSIS.md — findings from the verified San Francisco register
+# Analysis — bounded SF event research snapshot
 
-Snapshot **2026-10-18**. Every figure below is computed from `data/events.json`
-(233 rows), `data/sources.json` (234 records), `data/review.json` (20 findings) and
-`data/verify_report.json` (a saved machine-fetch snapshot with the coverage gaps documented below). The published version of this
-analysis is `analysis.html`.
+As of 18 October 2026. This is not a complete or live city calendar.
 
-## Headline numbers
+- 242 candidate entries assessed: 233 inherited and 9 new official-calendar entries.
+- 163 admitted to the city-only directory; 79 held for review.
+- 14 listed programme umbrellas overlap child events. These totals are **not unique-event counts**.
+- 237 exact cited URLs across 140 domains. Domains are not organizations or nonprofit status.
+- Cadence: 20 weekly / 7 monthly / 26 annual / 110 special or cadence-unconfirmed.
 
-| Measure | Value |
-|---|---|
-| Register entries | 233 |
-| — weekly | 26 |
-| — monthly | 12 |
-| — annual | 137 |
-| — special / dated | 58 |
-| Series or standalone entries (dated occurrences excluded) | 224 |
-| Entries by category — festivals & culture | 114 |
-| — community & outdoors | 61 |
-| — markets & food | 35 |
-| — museums & science | 23 |
-| Official source records | 234 |
-| Distinct source domains | 142 |
-| Rows verified field-level | 146 |
-| Rows verified page-level | 78 |
-| Rows flagged for review | 9 |
-| Rows with at least one blank tracked field | 174 |
-| Review findings | 20 |
-| Current source URLs reported dead in the saved fetch snapshot | 0 (one failed URL was superseded; details below) |
+## Blank factual fields in the directory
 
-## Manual line-by-line audit (2026-10-18, session f1fd3c36)
+- Event name: 0
+- Published schedule: 7
+- Time: 70
+- Venue / area: 0
+- Admission / conditions: 97
 
-After the automated pass, 70 rows were re-read by a person against their official pages in
-readable form — every row the automated check could not name-match, the aggregator-only rows, the
-PDF-cited rows, and the three rows that carried a value *and* an "unverified; left blank" note.
-Result: 36 confirmed as published, 28 corrected, 6 left unverified and flagged, 2 rows added
-(Alemany Flea Market; SFFILM Doc Stories). Each change is recorded with the URL and the quoted
-text in `data/audit_f1fd3c36.json` and applied by `tools/apply_audit.py`. Irregularities found:
+## Temporal labels (fixed snapshot)
 
-* **Litquake dates disagreed between two rows** (Oct 4–24 vs Oct 8–24); the official schedule page
-  says October 8–24, 2026 and both rows now agree.
-* **California International Antiquarian Book Fair alternates cities** — the 2027 edition is in
-  Los Angeles, so the next San Francisco edition is not before 2028; the row is relabelled biennial.
-* **Lowrider Parade / King of the Streets** — the organizer's site still shows the 2025 edition;
-  the 2026 date previously listed is not on it and was removed (row flagged).
-* **Fourth of July** — the City states the Golden Gate Bridge display is the only authorized
-  fireworks in San Francisco in 2026; the PIER 39 row's "fireworks ~9:30pm" refers to viewing it.
-* **Venues corrected from official pages**: SF International Arts Festival (Mission District, not
-  Fort Mason), Queer Women of Color Film Festival (Presidio Theatre, not Brava), Peak2Peak
-  (southeast neighbourhoods, not the Mission), SF Cheese Fest (Gold Bar Distillery, Treasure Island).
-* **Renamed to the organizer's name**: Superfair (formerly Superfine Art Fair), The San Francisco
-  Fall Show, Easter in the Park (Hunky Jesus contest), Valencia LIVE! (now a monthly series).
-* **Organizer pages found for 9 aggregator-only rows** (Easter in the Park, Ferry Fest, Cinema on the
-  Square, Sunset Night Market, SF Music Week, Pizza Bagel & Beer Festival, Valencia LIVE!, Black
-  Coffee Treasure Island, SF Hash Week); the Disability History Tour and Super Bowl LX fan events
-  still rest on the SF Travel listing and remain flagged. Illuminate SF is produced by SF Travel, so
-  that listing is the organizer's own page.
-* **Regional programmes labelled**: CAAMFest, SF Jewish Film Festival, Bay Area Dance Week and the
-  Super Bowl LX events also run outside the city; only the San Francisco programme is in scope.
-* **Pipeline contradiction removed**: three rows (Ferry Plaza Farmers Market and two others)
-  carried a price and a "price: unverified; left blank" note; the operator pages do not state
-  admission, so the cells are blank and the notes consistent.
+- Date/year unconfirmed: 18
+- Future dated: 49
+- On snapshot date: 4
+- Past dated: 58
+- Recurring pattern; next date unconfirmed: 28
+- Spans snapshot date: 5
+- Tentative schedule: 1
 
-## Verification outcome (2026-10-18 automated pass)
+## Interpretation and gaps
 
-The committed machine report is a historical snapshot from before the final integration (231 rows,
-202 distinct URLs checked). It is not a current, exhaustive link check: the current source ledger
-has 226 distinct URLs, 25 of which are absent from that snapshot; one URL in the snapshot has since
-been removed. The uncovered set includes [SFMOMA's Free Days page](https://www.sfmoma.org/free-days/)
-and [San Francisco Opera's homepage](https://www.sfopera.com/), both cited for review findings.
-The exact URL-set differences are linked on `review.html`. A later CI check found Ferry Fest's
-dedicated event URL returning HTTP 404; T25 removed it from active event evidence, cleared the
-unsupported time and price, and retained the old URL only on the review finding. SF Travel remains
-the event row's official source, but its page was not freshly re-read for this repair.
+Official web visibility biases this non-random sample toward larger institutions.
+No citywide density, neighborhood equity, attendance or impact claim can be made.
+Small community/faith/pop-up events, sports fixtures, individual arts performances,
+and civic calendars remain incomplete. Regional festivals require SF-only components.
+Blocked/JS-only responses and conflicting copy remain visible in the review register.
+No year is supplied by URL, weekday, copyright or unrelated neighboring event.
+No next occurrence is generated from a weekly/monthly/annual pattern.
 
-| Result in saved snapshot | Rows / URLs |
-|---|---:|
-| Event name found on a cited page | 165 |
-| Not found in fetched text (mostly bot-blocked or JavaScript-rendered) | 64 |
-| PDF not machine-matched | 2 |
-| No response | 0 |
-| Dead/connection-failed URLs in snapshot | 1 |
-| Current source URLs reported dead by that snapshot | 0 |
-| URLs that blocked the automated client (202/403/405/429/5xx) | 47 |
-
-The sole failure was a TLS/connection error for `https://sfcurran.com/visit/`, a superseded URL
-that is no longer in the current source ledger; the current Curran entry cites the official [ATG
-box office page](https://us.atgtickets.com/venues/curran-theater/whats-on/). A blocked page is not
-evidence of a bad event. The automated check establishes page response/name matching only; it
-does not verify dates, times, venues or prices. The findings and exact URL-set differences are
-published on `review.html`. Two rows that could only be sourced to a generic landing page in the
-167-row register (Chase Center concerts, PIER 39) were re-pointed to specific official event/news
-pages during integration.
-
-In addition, 35 rows carried an automation-generated "manual re-check requested" note; 34 of them
-were then re-read by hand in the line-by-line audit above (one, Super Bowl LX fan events, rests on
-a bot-blocked aggregator page and remains flagged).
-
-## Findings
-
-### 1. Annual traditions dominate; the weekly layer is thin and market-shaped
-
-137 annual entries against 26 weekly and 12 monthly. The weekly layer is mostly farmers markets,
-museum late nights (NightLife, After Dark) and standing park programmes. This is a festival
-calendar, not a weekly-rhythm calendar.
-
-### 2. Most annual rows have no organizer-published 2027 date
-
-Of the 137 annual rows, 32 already carry a dated 2027 edition or season; the rest preserve the
-recurring pattern only. Where an organizer has not posted the next edition, the date cell is not
-invented. 174 rows have at least one blank tracked field (most often the start time, which many
-market pages do not publish separately from opening hours).
-
-### 3. Coverage is uneven and not exhaustive
-
-No official source publishes a complete count of San Francisco events, so the register cannot
-claim completeness. Known gaps: public-library programmes, most theatre (beyond opera, ballet and
-the two seasons added by session `a1b7522f`), weekday civic meetings, sports beyond the Giants,
-Warriors and Valkyries, and many neighbourhood block parties. Festivals, markets and museums are
-over-represented because their organizers publish machine-readable pages.
-
-### 4. Source concentration is high, and that is a risk
-
-234 source records sit on 142 domains, but a handful of publishers supply many rows: San Francisco
-Opera's season press page covers five productions, PIER 39's events page covers two rows, and 12
-rows cite San Francisco Travel (the city's destination-marketing body); after the audit, organizer
-pages were added to 9 of them and only 2 (Disability History Tour, Super Bowl LX fan events) rest
-on the SF Travel listing alone. One page changing can invalidate several rows at once. The review
-page names each shared-source group.
-
-### 5. Three registers reconciled without loss
-
-The 86-row register (sessions `3a19e72d`/`5a85baf2`), the 167-row inventory (session
-`4f47c142`) and the 20-row expansion (session `a1b7522f`) were merged with an explicit, reviewed
-map. 37 rows described the same event in two registers and were reconciled rather than dropped;
-each keeps both official sources. A fuzzy matcher was rejected: it proposed false pairs such as
-Frameline vs International Ocean Film Festival. One row (SOMA Nights) was removed because its only
-official site is unreachable and no other official page confirms the 2026 edition.
-
-### 6. Reclassification and de-duplication were necessary
-
-The Chinese New Year Parade and Carnaval were reclassified from Special to Annual. "After Dark:
-Creepatorium" was filed as Annual but is a single dated theme of the weekly series, so it moved to
-Special. Two duplicate pairs were merged during final review (Legion free Tuesdays, and the two
-2026 dates of After Dark: Unplug and Play). A merchandise-store window was removed: it is not an
-event.
-
-## Method limits
-
-The automated pass proves a page is live and names an event. It cannot prove a date, time, price or
-venue. Field-level rows rest on a researcher's transcription; page-level rows rest on an
-independent pass plus the automated name check. Where the two disagree or a page is ambiguous, the
-value is blank and the question is on `review.html`.
+See [Flagged for Review](review.html), [field evidence](sources.html),
+[the summary JSON](data/audit_summary.json) and [unverified history](data/unverified_history.json).

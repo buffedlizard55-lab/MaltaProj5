@@ -1,0 +1,16 @@
+{
+ "warning": "Inherited reference only, not field approval. Preserves the sole mainline URL not reproduced by the companion candidate transform.",
+ "main_commit": "092a1f40720ca469e3d2e7570d2dc18eab2fbbe4",
+ "references": {
+  "x-sf-sketchfest": [
+   {
+    "url": "https://sfsketchfest2026.sched.com/",
+    "publisher": "SF Sketchfest 2026 — official festival schedule (Sched, linked from sfsketchfest.com)",
+    "checked": "2026-10-18",
+    "excerpt": "SF Sketchfest 2026 schedule: first listed day Thursday, January 15, 2026 (7:00pm Sketch & Improv Showcase, Eclectic Box); 'Tickets on sale now!' The festival's 2026 run was announced as January 15–February 1, 2026.",
+    "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+    "manual": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,119 @@
+from curate import *
+# Explicit venue evidence replaces an unrelated CityPASS token.
+u='https://www.sfmoma.org/visit/'
+manual(u,'Our visitor entrance is at 151 Third Street, located only a few blocks from the Montgomery St BART station and other public transportation. We are just steps from Yerba Buena Gardens, hotels, and restaurants, and our parking garage is next to the museum.')
+D['family']['geography']=geo(u,'Our visitor entrance is at 151 Third Street, located only a few blocks from the Montgomery St BART station')
+D['family']['geography']['basis']='Official museum entrance at 151 Third Street by Montgomery St BART; recognized SF venue, not a CityPASS marketing-token match.'
+D['family']['publication']='listed'
+u='https://ybgfestival.org/visitor-info/'
+C[u]={'http':None,'tool_checked_at':'2026-10-18','title':'Visitor info for Yerba Buena Gardens Festival','text':'','tool_excerpt':'YBG Festival welcomes you to Yerba Buena Gardens. YBG Festival programs take place in the many outdoor spaces of Yerba Buena Gardens which spans three city blocks bound by 3rd, 4th, Market and Folsom streets in downtown San Francisco.','tool_method':'Selected paragraph read with fetch_page, 2026-10-18; not a runner capture.'}
+ybg=geo(u,'Yerba Buena Gardens which spans three city blocks bound by 3rd, 4th, Market and Folsom streets in downtown San Francisco.')
+u='https://ybgfestival.org/'
+add('x-yerba-buena-gardens-festival',u,name='Yerba Buena Gardens Festival',schedule='6 months of admission-free performances',venue='Yerba Buena Gardens',price='admission-free performances',scope=ybg,reason='Season umbrella, not one event or evidence of 100 future performances. Current individual programmes have separate dates; no annual cadence inferred from one calendar.')
+u='https://about.asianart.org/ticketing/free-and-reduced-museum-admission/'
+add('x-asian-art-museum-free-sundays',u,name='Free First Sundays',kind='Monthly',schedule='On the first Sunday of each month',venue='200 Larkin Street',price='general admission is free and tickets to our special exhibitions are offered at a discounted price of $15',scope='200 Larkin Street\nSan Francisco, CA 94102',recurrence='On the first Sunday of each month',reason='Collection galleries only; special exhibitions discounted, not free. Advance reservations strongly recommended.')
+u='https://foodwise.org/events/pop-ups-on-the-plaza-juneteenth-on-the-waterfront/'
+add('x-pop-ups-on-the-plaza',u,name='Pop-Ups on the Plaza',venue='front plaza of the Ferry Building',scope='Juneteenth celebrations in San Francisco',reason='Series record only. A single free Juneteenth edition is not proof that every future edition is free or that this series is annual.')
+add('x-juneteenth-on-the-waterfront',u,name='Juneteenth on the Waterfront',kind='Annual',schedule='Sunday, June 7, 2026, 11:00 am - 4:00 pm',time='11:00 am - 4:00 pm',venue='front plaza of the Ferry Building',price='Entry is free and open to the public, with food and drink available for purchase.',scope='Juneteenth celebrations in San Francisco',recurrence='6th annual Juneteenth on the Waterfront',dates=[date(u,'2026-06-07','2026-06-07','Sunday, June 7, 2026, 11:00 am - 4:00 pm')])
+reject('x-norcal-mlk-celebration','Official 2026 recap has no event dates or venues. Its foundation mailing address does not locate the celebrations; January holiday dates and annual cadence are not inferred.')
+reject('x-fog-design-art','Official landing page has only a description/newsletter. January dates, Fort Mason venue, times and admission not substantiated by its readable text.')
+u='https://sfartweek.com/'
+add('x-sf-art-week',u,name='San Francisco Art Week',schedule='January 16-24, 2027',dates=[date(u,'2027-01-16','2027-01-24','January 16-24, 2027')],publish=False,reason='Regional arts calendar explicitly celebrates the San Francisco Bay Area. SF components require individual venue checks; the whole programme is not city-only.')
+u='https://sanfranciscohalfmarathon.org/'
+add('x-sf-half-marathon',u,name='San Francisco Half Marathon® & 5K',schedule='February 7, 2027',venue='Golden Gate Park',scope='FEBRUARY 7, 2027 · GOLDEN GATE PARK\nSAN FRANCISCO',dates=[date(u,'2027-02-07','2027-02-07','February 7, 2027')],reason='Course described in Golden Gate Park/along Pacific Ocean; admission, start time and an annual pattern not stated in this excerpt.')
+u='https://www.mostlybritish.org/'
+add('x-mostly-british-film-festival',u,name='Mostly British Film Festival',schedule='February 5-12, 2026',venue='VOGUE THEATRE\n3290 Sacramento Street',price='Individual tickets are $20/$15',scope='3290 Sacramento Street\nSan Francisco, CA 94115',dates=[date(u,'2026-02-05','2026-02-12','February 5-12, 2026')],reason='Past 2026 edition; a stale 2023 announcement also exists and is not used to date this entry. Performance times vary.')
+u='https://www.sfindie.com/'
+for rid,n,dts,start,end in [('x-sf-indiefest','San Francisco Independent Film Festival','Feb 4-14, 2027','2027-02-04','2027-02-14'),('x-sf-docfest','San Francisco Documentary Festival','June 3-13, 2027','2027-06-03','2027-06-13')]:
+ add(rid,u,name=n,schedule=dts,dates=[date(u,start,end,dts)],publish=False,reason='Future dates confirmed, but readable organizer programme does not supply exact SF screening venues; inherited Roxie locations are not transferred across editions.')
+u='https://www.sfbeerweek.org/'
+add('x-sf-beer-week',u,name='SF Beer Week',schedule='February 20 to March 1, 2026',dates=[date(u,'2026-02-20','2026-03-01','February 20 to March 1, 2026')],publish=False,reason='Regional programme with SF and non-SF participants. Festival-wide row is quarantined until individual SF events are separately evidenced; no blanket free entry.')
+u='https://www.mlb.com/giants/fans/fanfest'
+add('x-giants-fanfest',u,name='Open House at Oracle Park',venue='Oracle Park',price='Free tickets are required for all FanFest Tour stops and the Open House.',scope=geo('https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule','SAN FRANCISCO, Calif.'),reason='Only the Oracle Park Open House is in this row; the Northern California tour is not. Organizer explicitly says check back for 2027 details; no exact date confirmed.')
+u='https://www.thesuperfair.com/san-francisco'
+add('x-superfine-art-fair',u,name='The Superfair',schedule='March 19-22, 2026',time=['Thu 4-10pm • Fri 4-10pm','Sat 10am-8pm • Sun 10am-6pm'],venue='Fort Mason Pier 2, Gateway Pavilion',price='$25 - $150',scope='2 Marina Blvd, San Francisco, CA 94123',dates=[date(u,'2026-03-19','2026-03-22','March 19-22, 2026')],reason='Organizer explicitly marks this event ended. See-you-in-2027 copy is not an exact 2027 date.')
+u='https://sfrecpark.org/m/newsflash/home/detail/2744'
+add('x-flower-bulb-day',u,name='Tulip Day',kind='Annual',schedule='Saturday, March 21',venue='Union Square',scope='San Francisco’s Union Square',recurrence='annual Tulip Day',dates=[date(u,'2026-03-21','2026-03-21','Saturday, March 21','Posted on March 04, 2026')],reason='Year established by the dated City release. Exact admission and queue/opening hours not present in the reviewed excerpt; left blank.')
+reject('x-bring-your-own-big-wheel','Homepage mixes 2026 news and an explicit 2024 date. A 2026 race year/tag is not an actual event date; Easter Sunday, Vermont route and free entrance need a current dated event source.')
+reject('x-sf-restaurant-week','Participating-restaurants page includes non-SF restaurants (for example Burlingame). Whole programme not city-only, exact dates not supplied here, and individual menus cannot establish an admission price for every venue.')
+u='https://intloceanfilmfest.org/'
+add('x-international-ocean-film-festival',u,name='International Ocean Film',kind='Annual',recurrence='annual flagship three day event',publish=False,reason='Current text prioritizes submissions. The April 9/10 BATS education programme has no explicit year; prior Fort Mason festival dates/venue cannot be transferred to a future edition.')
+u='https://www.sfclimateweek.org/'
+add('x-sf-climate-week',u,name='SF Climate Week',publish=False,reason='Organizer explicitly calls this a decentralized gathering across the Bay Area, not a city-only event. Individual SF address/date blocks need separate entries; do not assign all regional events to SF.')
+u='https://cookbookweek.com/'
+add('x-cookbook-week',u,name='Cookbook Week',schedule='April 21–25, 2026',venue='Five dinners across San Francisco',scope='April 21–25, 2026 · San Francisco, CA',dates=[date(u,'2026-04-21','2026-04-25','April 21–25, 2026')],reason='Programme umbrella; geographic venue description is official, not an invented street address. Individual menus/tickets differ; generic time/price blank.')
+reject('x-opening-day-on-the-bay','Official page title says April 27 but year, location and time remain unrendered template variables. No year, shore venue, city-only route or fixed schedule inferred.')
+u='https://dancersgroup.org/badw/'
+add('x-bay-area-dance-week',u,name='Bay Area Dance Week',publish=False,reason='Regional series includes events beyond SF; the umbrella does not qualify. Jessie Square kickoff could be a separate SF event after its year/date context is checked.')
+u='https://earthdaysf.org/'
+add('x-earth-day-sf',u,name='Earth Day San Francisco 2026',schedule='Sunday, April 19 2026',time='Noon to 6',venue='the New Farm, 10 Cargo Way',price='Free Music, Arts, And Food Festival',scope='Earth Day San Francisco 2026',dates=[date(u,'2026-04-19','2026-04-19','Sunday, April 19 2026')],reason='Corrected inherited Civic Center venue; organizer explicitly locates this edition at the New Farm.')
+u='https://decoratorshowcase.org/'
+add('x-sf-decorator-showcase',u,name='Decorator Showcase',kind='Annual',schedule='May 1 - 31, 2027',scope='An extraordinary San Francisco residence',recurrence='48th Annual Decorator Showcase',dates=[date(u,'2027-05-01','2027-05-31','May 1 - 31, 2027')],publish=False,reason='2027 dates confirmed, but organizer says stay tuned for location. 2315 Broadway was the 2026 house and is deliberately not carried into 2027.')
+u='https://caamedia.org/caamfest/'
+add('x-caamfest',u,name='CAAMFest',schedule='May 7-10, 2026',venue='San Francisco Japantown',scope='returning to San Francisco Japantown, May 7-10, 2026',dates=[date(u,'2026-05-07','2026-05-10','May 7-10, 2026')],reason='Only the explicitly announced SF Japantown programme. Copy calls the four-date span five days; quoted dates retained, duration not asserted. No East Bay venues admitted.')
+u='https://www.tap-sf.org/tacf'
+add('x-taiwanese-american-cultural-festival',u,name='Taiwanese American Cultural Festival',kind='Annual',schedule='Saturday, May 9, 2026',time='10AM - 4PM',venue='San Francisco’s Union Square',price='free and family-friendly festival',scope='San Francisco’s Union Square',recurrence='annual landmark event',dates=[date(u,'2026-05-09','2026-05-09','Saturday, May 9, 2026')])
+u='https://www.sfaapicocktailweek.com/'
+add('x-aapi-cocktail-week',u,name='SF AAPI Cocktail Week',venue=['Pacific Cocktail Haven\n550 Sutter Street','Kona’s\n32 3rd Street'],scope='32 3rd Street\nSan Francisco, CA 94103',reason='Only the two listed SF venues; no exact dated schedule in the readable source, and broad Bay Area language is not a city-only umbrella approval.')
+u='https://www.sfdesignweek.org/'
+add('x-sf-design-week',u,name='San Francisco Design Week',schedule='June 1–12, 2026',dates=[date(u,'2026-06-01','2026-06-12','June 1–12, 2026')],publish=False,reason='Bay Area design platform; the 2026 date block does not locate each venue in SF. Regional programme held for SF-specific venue isolation.')
+u='https://www.escapealcatraztri.com/'
+add('x-escape-from-alcatraz',u,name='Escape From Alcatraz Triathlon',schedule='June 5 - June 6, 2027',dates=[date(u,'2027-06-05','2027-06-06','June 5 - June 6, 2027')],publish=False,reason='Future weekend confirmed. Current text does not document the full city-only route/start/finish; no Bay-water or course-boundary assumption is used.')
+u='https://sfitalianheritage.org/event/festa-coloniale-italiana/'
+add('x-festa-coloniale-italiana',u,name='Festa Coloniale Italiana',venue='San Francisco Italian Athletic Club | 1630 Stockton Street | San Francisco, CA 94133',scope='1630 Stockton Street | San Francisco, CA 94133',reason='Organizer explicitly says TBD. September 13 annual timing and free admission inherited from older material are not verified.')
+u='https://www.sfbff.org/'
+add('x-sf-black-film-festival',u,name='San Francisco Black Film Festival',schedule='JUNE 18TH - 21st, 2026',dates=[date(u,'2026-06-18','2026-06-21','JUNE 18TH - 21st, 2026')],publish=False,reason='Dates confirmed; homepage also advertises a separate NEXUS/YBCA event. No exact venue programme for the June festival established.')
+u='https://www.fillmorejazzfest.com/'
+add('x-fillmore-jazz-festival',u,name='Fillmore Jazz Festival',schedule='Saturday & Sunday, July 3 & 4, 2027',dates=[date(u,'2027-07-03','2027-07-04','Saturday & Sunday, July 3 & 4, 2027')],publish=False,reason='2027 dates announced, but 2026 venue/hours descriptions not transferred to the future edition. The preservation fund’s free-event mission does not by itself confirm every future admission policy.')
+u='https://www.frozenfilmfestival.com/'
+add('x-sf-frozen-film-festival',u,name='San Francisco Frozen Film Festival',kind='Annual',schedule='July 21st - 25th, 2027',recurrence='annual international film festival',dates=[date(u,'2027-07-21','2027-07-25','July 21st - 25th, 2027')],publish=False,reason='Upcoming dates confirmed, but venues only described as outdoor, indoor and online. Inherited Roxie venue not copied into 2027.')
+u='https://jfi.org/festival'
+# Resolve actual captured URL by substring in case the canonical redirect differs.
+if u not in C:u=url('jfi.org/')
+add('x-sf-jewish-film-festival',u,name='San Francisco Jewish Film Festival',kind='Annual',recurrence='annual San Francisco Jewish Film Festival',publish=False,reason='Page labels the 47th edition July 15–August 1, 2026 while its call for entries runs October 2026–February 2027. This edition/year conflict is not silently repaired. Regional screenings require SF-only venue checks.')
+reject('x-aids-walk-sf','Organizer currently supplies a 2026 retrospective and broadcast/fundraising deadlines, not the actual walk date/route. Those other dates cannot verify the event date or Golden Gate Park venue.')
+u='https://www.jerryday.org/events--calendar.html'
+add('x-jerry-day',u,name='Jerry Day 2026',schedule='August 1st, 2026',time='1130am - 5:45pm',venue='Jerry Garcia Amphitheater\nMcLaren Park, San Francisco',scope='Jerry Garcia Amphitheater\nMcLaren Park, San Francisco',dates=[date(u,'2026-08-01','2026-08-01','August 1st, 2026')],reason='FREE ADMISSION appears in the afterparty block, not the main amphitheater block; main-event admission remains blank. Worldwide Jerry Day events excluded.')
+reject('x-sf-opera-season-opening','Combined September opening-production/gala row is not a single event and its gala was postponed to November 12. Canonical season, production and corrected Opera Ball entries are retained separately; this duplicate umbrella is review-only.')
+u='https://gggp.org/flowerpiano/'
+add('x-flower-piano',u,name='Flower Piano®',schedule='September 10-20, 2026',venue='San Francisco Botanical Garden | Golden Gate Park',scope='San Francisco Botanical Garden | Golden Gate Park',dates=[date(u,'2026-09-10','2026-09-20','September 10-20, 2026')],reason='Retrospective 2026 event. Current page does not establish free SF-resident admission or next-year dates; no general garden ticket policy substituted.')
+u='https://downtownsf.org/things-to-do/oktoberfest-on-front'
+add('x-oktoberfest-on-front',u,name='Oktoberfest on Front',schedule='Friday, September 18, 2026',time='2–10 PM',venue='Front',scope='Oktoberfest on Front, San Francisco’s official Oktoberfest block party',dates=[date(u,'2026-09-18','2026-09-18','Friday, September 18, 2026')],reason='Street name confirmed in event title; precise cross-street extent and organizer admission policy not supplied in the reviewed description. Third-party news headlines are not admission evidence.')
+u='https://www.sfmta.com/calendar/muni-heritage-weekend-2025'
+add('x-muni-heritage-weekend',u,name='Muni Heritage Weekend',kind='Annual',schedule='September 20–21, 2025',time='10 a.m. - 4 p.m.',venue='San Francisco Railway Museum, 77 Steuart Street between Market Street and Mission Street',price='free rides departing from the event',scope='Steuart and Mission, San Francisco, CA, United States',recurrence='annual Muni Heritage Weekend',dates=[date(u,'2025-09-20','2025-09-21','September 20–21, 2025')],reason='Confirmed 2025 edition only; free-ride policy quoted precisely, not expanded to every cable-car fare. No inferred 2026 weekend.')
+reject('x-comedy-day','Readable source gives a 2026 performance lineup but no event date or park venue. Acts’ names, sponsor years and approximate set times do not verify an event day.')
+reject('x-portola-music-festival','Current official page only says Thank You San Francisco. It cannot verify September 26–27, Pier 80, admission or annual cadence; inherited details blanked.')
+u='https://somarts.org/exhibition/sfopenstudios2026/'
+add('x-artspan-open-studios',u,name='San Francisco Open Studios',kind='Annual',schedule='open studio events through October 25, 2026',venue='San Francisco',scope='arts community in San Francisco',recurrence='52nd annual production of San Francisco Open Studios',reason='Programme umbrella. SOMArts September 19–27 is the preview exhibition, not the dates of every open studio; no inferred full-season start date or generic free admission.')
+reject('x-litquake','Current festival landing-page excerpt supplies mission/schedule links but not an explicit overall 2026 date range and SF venue set. The separately sourced Lit Crawl event remains listed.')
+u='https://www.leapsandcastleclassic.org/'
+add('x-leap-sandcastle-classic',u,name='Sandcastle Classic',kind='Annual',schedule='Saturday, OCTOBER 24, 2026',venue='San Francisco’s Ocean Beach',scope='San Francisco’s Ocean Beach',recurrence='44th Annual Sandcastle Classic',dates=[date(u,'2026-10-24','2026-10-24','Saturday, OCTOBER 24, 2026')],reason='No exact time or free admission stated. Fundraiser wording alone does not prove an entry fee either.')
+reject('x-day-of-the-dead','Official Marigold page confirms community altar activity but not November 2, 2026, Garfield Park, procession route or times. Inherited details are not established by generic Day of the Dead text.')
+u='https://www.sfhiphopdancefest.com/'
+add('x-sf-hiphop-dance-festival',u,name='San Francisco International Hip Hop DanceFest',kind='Annual',schedule='November 14 & 15, 2026',recurrence='28th Annual San Francisco International Hip Hop DanceFest',dates=[date(u,'2026-11-14','2026-11-15','November 14 & 15, 2026')],publish=False,reason='Dates confirmed. Venue/time/ticket price still need the actual ticket or venue page; the old Palace of Fine Arts venue is not assumed.')
+u='https://www.renegadecraft.com/event/san-francisco-winter/'
+add('x-renegade-craft-fair-sf',u,name='Renegade Craft Fair San Francisco',schedule=['11/14/2026 11:00 am','11/15/2026 5:00 pm'],time='11 am — 5 pm',venue='Fort Mason Center Festival Pavilion',price='a suggested $5 entry fee can be paid via QR code onsite',scope='2 Marina Blvd.,\nSan Francisco, CA 94123',dates=[date(u,'2026-11-14','2026-11-15','11/14/2026 11:00 am','11/15/2026 5:00 pm')],reason='Suggested contribution reproduced, not mislabeled as a compulsory ticket or guaranteed free entry.')
+u='https://embarcaderocenter.com/holiday-market-copy-page-format-for-2026/'
+add('x-embarcadero-center-lighting',u,name='40th Annual Building Lighting & Holiday Market',kind='Annual',schedule='Wednesday, November 18',time='4:00 PM to 6:00 PM',venue='Three Embarcadero Center, Street Level',recurrence='40th Annual Building Lighting',scope='Embarcadero Center',reason='Official title explicitly supplies 2026; date ISO is withheld until its title/year context is approved. Recognized SF venue, not a regional umbrella. RSVP link does not alone prove free admission.')
+D['x-embarcadero-center-lighting']['geography']['basis']='Official Embarcadero Center event location; recognized SF complex.'
+D['x-embarcadero-center-lighting']['occurrences']=[date(u,'2026-11-18','2026-11-18','Wednesday, November 18','2026 Holiday Market & 40th Annual Building Lighting')]
+reject('x-union-square-tree-lighting','Official district homepage has Winter Walk copy but no tree-lighting event date, time or admission. A Union Square shopping page is not field evidence for the tree-lighting row.')
+reject('x-ghirardelli-square-tree-lighting','Official page readable text is only Scroll/Image banner. Tree-lighting details need contextual organizer text; inherited annual-November description blanked.')
+u='https://downtownsf.org/things-to-do/lets-glow-sf'
+add('x-lets-glow-sf',u,name="Let's Glow SF",schedule='December 4-13, 2026',venue="Downtown's architectural icons",price='free, family-friendly celebration',scope='return to San Francisco from December 4-13, 2026',dates=[date(u,'2026-12-04','2026-12-13','December 4-13, 2026')],reason='Official description supplies downtown venue area but not a specific building list or nightly hours; these are left blank.')
+u='https://sftreelot.guardsmen.org/'
+add('x-guardsmen-tree-lot',u,name='The Guardsmen Tree Lot',kind='Annual',schedule='Every year since 1947',venue='2 Marina Blvd.',scope='2 Marina Blvd.\nSan Francisco, CA 94123',recurrence='Every year since 1947',reason='Historical annual operation confirmed; exact 2026 opening/closing dates and admission policy not stated. Tree prices are not admission.')
+u='https://www.billgrahammenorah.org/'
+add('x-bill-graham-menorah',u,name='Bill Graham Menorah',schedule='Chanukah In Union Square Dec 14th – Dec 22nd',venue='Union Square',scope='Chanukah In Union Square',reason='Year deliberately unconfirmed. Since 1975/50 years and a weekday are not used to invent 2025 or 2026; no upcoming status or free admission asserted.')
+u='https://www.somapilipinas.org/events'
+add('x-parol-lantern-festival',u,name='Parol Lantern Festival',kind='Annual',schedule='Held every December',venue='SOMA Pilipinas',scope='San Francisco’s Filipino Cultural Heritage District',recurrence='Held every December',reason='Neighborhood-level venue only. No dated 2026 announcement, detailed parade route, time or admission established by the evergreen district page.')
+u='https://www.koshercomedy.com/'
+add('x-kung-pao-kosher-comedy',u,name='KUNG PAO KOSHER COMEDY',schedule='Thurs Dec 24- Sat Dec 26, 2026',time=['Dinner: 5pm PST\nShow: 6pm PST','8:30pm PST'],venue='Imperial Palace Restaurant\n818 Washington St.',price=['Dinner Show: $95','Cocktail Show: $70'],scope='818 Washington St.\nSan Francisco 94108',dates=[date(u,'2026-12-24','2026-12-26','Thurs Dec 24- Sat Dec 26, 2026')],reason='Physical SF shows only. $30 virtual tickets are not the in-person minimum; online performances excluded. Ticket totals can include fees; verify checkout.')
+# Blocked response = unverified, never a dead-link verdict.
+S=json.load(open('data/unverified_history.json'))['sources'] if Path('data/unverified_history.json').exists() else json.load(open('data/sources.json'))
+for rid,r in R.items():
+ if rid in D:continue
+ urls=[S[s]['url'] for s in r['sources']]
+ if all(C.get(x,{}).get('http') in [202,403,405,429] and not C.get(x,{}).get('tool_excerpt') for x in urls):
+  reject(rid,'Official source response is blocked/challenge-only ('+', '.join(str(C[x]['http']) for x in urls)+'). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.')
+save()

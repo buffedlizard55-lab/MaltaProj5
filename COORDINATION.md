@@ -2,6 +2,11 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
+**Current integration in progress (T26–T28):** all newer mainline research is
+being reconciled with the explicit field-evidence audit. Older counts and
+verification labels below are historical, not the current publication gate.
+No new deployment is claimed until actual Pages success is recorded.
+
 **Rules**
 
 1. Read this file **before** starting work. Never start a task another session has claimed.
@@ -32,6 +37,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 04:20 UTC | Post-publication data consistency fix and regression validation (T20) |
 | `f1fd3c36` | `arena/f1fd3c36-maltaproj5` | 2026-10-18 03:40 | Post-publication audit: independent line-by-line re-verification of the live register against official pages, 28 corrections, 2 rows added, Flagged page update, PR #18 → main, merged (T22–T24) |
 | `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 03:22 UTC | Post-audit dead-source correction for Ferry Fest found by PR #18 CI (T25) |
+
+| `64f8b973` | `arena/64f8b973-maltaproj5` | 2026-10-18 02:58 | Post-integration official-evidence audit, field-safety fixes, dashboard QA, final PR and Pages confirmation (T26–T28) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -71,6 +78,10 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T23 | Pipeline irregularity fixes found during T22 (e.g. rows that carry a value *and* an "unverified; left blank" note) | done — `apply_audit.py` removes value-plus-"unverified" contradictions (3 rows) and re-asserts blank⇔note consistency for every row; validate passes | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
 | T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **done — live**: PR [#18](https://github.com/buffedlizard55-lab/MaltaProj5/pull/18) merged 03:20 UTC (merge commit `9044bf8`); CI `Validate site` green on the PR; Pages build `built` for `9044bf8` | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 | T25 | Resolve Ferry Fest source link returning 404 in PR #18 remote-check report; preserve only official evidence that remains live and flag anything no longer confirmed | **done — PR #17 merged; Pages built** | `99662c40` | `COORDINATION.md`, `data/audit_f1fd3c36.json`, `tools/apply_audit.py`, generated `data/`, `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
+| T26 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
+| T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | done locally; CI/publication gate T28 | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
+| T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | in progress | `64f8b973` | `COORDINATION.md` |
+
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -846,3 +857,152 @@ listing, leaves unsupported facts blank, and makes the stale URL visible in the 
 * Pages: latest build `built` for commit `9044bf8` (branch mode, `main` / root); site https://buffedlizard55-lab.github.io/MaltaProj5/ now serves 233 rows.
 * Published state after PR #18: 233 rows (Weekly 26 · Monthly 12 · Annual 137 · Special 58) · 235 source records / 140 domains · 20 findings · 147 field-level · 78 page-level · 8 flagged. (PR #17 / T25 then removed the Ferry Fest organizer URL, which returned 404 in PR #18's CI link check — a page I had only seen via a search snippet; its time/price are blank again: 234 sources.)
 * Open follow-ups for any later session (not blocking): Disability History Tour and Super Bowl LX fan events still rest on an SF Travel listing; Lowrider Parade 2026 edition not yet on the organizer site; Castro Night Market individual dates not published; Club Darc dates come from the organizer's AXS series page; the two Symphony PDF rows were not re-read this pass.
+
+---
+
+## Claim — session `64f8b973` — 2026-10-18 02:58 UTC
+
+Read the complete coordination board and checked `origin/main` and open PRs before starting.
+No PRs are open. The prior T18 publication record explicitly closes that task, so its stale
+main-board status was normalized to done; no live claim is being taken over. All historical
+research inputs and earlier logs will be preserved. This session claims only the new audit and
+post-publication integration T26–T28 scopes above and is the final integration owner for its
+own completed audit. No other session's unfinished research will be overwritten.
+
+Arena fixes this session to `arena/64f8b973-maltaproj5`; no other branch will be created or used.
+The snapshot already contains a 231-row site: this pass will inspect rather than assume its
+verification claims. The authoring sandbox restricts direct outbound networking to GitHub/npm/PyPI;
+any official-site checks run through available retrieval tools or a transparent GitHub Actions
+verification job, never fabricated. Source reachability/name matching alone will not count as
+field verification. Any unconfirmed value must be blank, with the original retained in the audit
+ledger for review. A changing citywide inventory cannot honestly be certified exhaustive.
+
+Claim committed and pushed before implementation. Source/check/PR/deployment results to follow.
+
+### T26 progress — `64f8b973` — 2026-10-18
+
+* Actions evidence capture `39092033950` succeeded (job `117570642864`), with 217 URL
+  snapshots. HTTP/text retrieval is **not** contextual verification.
+* 97 explicit draft row decisions authored so far; unapproved fields will not inherit
+  old claims. Corrections include Zoo/Presidio dates, yearless Menorah/ancillary race
+  copy, Opera Ball postponement, and Bhangra & Beats relocation. Remaining candidates
+  are still under review. No new canonical or live-site verification claim yet.
+* Persisted authoring utilities under `tools/curation/` rather than ephemeral `.cache`.
+  Exact-substring assertions validate quotation provenance only, not applicability.
+* Fixed capture refresh so failures cannot erase prior evidence, and adjudicated
+  captures remain immutable. Latest request status is kept separately, never relabeled 200.
+* T26/T27/T28 remain owned here/in progress. Existing baseline remains live until the
+  audit overlay, deterministic rebuild, regression tests and deployment checks pass.
+
+### T26 complete / T27 integrated checkpoint — `64f8b973` — 2026-10-18
+
+* Every inherited candidate has an explicit disposition: 231 retained; nine new
+  official-calendar entries added. **149 listed / 91 review-only**, not 240 fully
+  verified events. 213 exact cited URLs / 133 domains; 19 weekly, 6 monthly,
+  23 annual, 101 special/dated/cadence-unconfirmed directory entries.
+* `data/research/audit-64f8b973.md` records official sources, consequential
+  corrections, conflicts, regional quarantine and incomplete coverage. All
+  decisions/quotes live in `data/audit_64f8b973.json`.
+* Final-integration scope explicitly includes this session's new overlay,
+  curation/test helpers and derived history/summary/review CSV. No other session
+  has an active claim on these new files. Prior research inputs are preserved.
+* The mandatory fail-closed overlay blanks every unapproved fact. The old matcher
+  applicator is retired. No name-match/HTTP-success field badges remain. Unknown
+  years/venues/prices are not inherited; main pages admit SF-evidenced entries only.
+* Capture run `39092617416` succeeded and bot commit `4054bb1` added request-attempt
+  metadata. It is preserved alongside this session's new decisions; no adjudicated
+  text was overwritten. Capture/reachability workflows now publish artifacts and
+  cannot race/auto-commit over research decisions.
+* **24 offline regression fixtures pass.** Exact-projection/quotes/CSV/local-link
+  checks pass for all 240 records and 12 pages. A second full rebuild is byte-identical.
+* Real Chromium **153.0.8010.0** checked all 12 pages at 1440×1000 and 390×844:
+  no document overflow, functioning search/filter/reset/empty states, real blank
+  cells, direct official/evidence navigation, no-JavaScript tables and zero runtime/
+  asset errors. Initial test-harness import/cleanup/selector issues were corrected;
+  the final command exited 0. Small-text contrast failures were fixed; axe-core
+  **4.14.0** reports zero automated WCAG A/AA violations on the four core page types
+  (not a complete accessibility certification).
+* Preview is served on 0.0.0.0:8080. T27 remains in progress until CI/URL/PR checks;
+  T28 publication is not yet complete. No broken site has been merged.
+
+### Rebase conflict — evidence bot `4054bb1` / audit integration — `64f8b973`
+
+The required pre-push rebase found one conflict in `data/audit_64f8b973.json`:
+its cumulative capture timestamp overlapped the corrective audit metadata. Resolved
+by retaining all 240 explicit decisions/selected excerpts, retaining every bot
+capture and newest `latest_attempt`, and preserving the original first-capture
+`captured_at` separately from `last_capture_attempt_at`. No source evidence or
+other session's dataset was discarded. Canonical projection and rebuild rechecked.
+
+### Mainline reconciliation claim / request — `64f8b973` — 2026-10-18
+
+Before PR creation, fetch found `main` advanced to `0d24148` through PRs #14–#19;
+PR #20 is a separate documentation follow-up. The stale-base PR attempt did not
+create a PR. Main's newly visible board independently uses T19–T25, so this
+session's original T19–T21 claims/log references are renumbered **T26–T28** here;
+main's owners and completed logs will be preserved unchanged during integration.
+
+**Request to `99662c40` (T25):** your Ferry Fest implementation is merged in #17,
+but the board still lists publication in progress. This session needs to retain
+`tools/apply_audit.py` and `data/audit_f1fd3c36.json` as upstream research inputs.
+Those claimed files will be imported from main **without editing them**; a new,
+nonoverlapping `tools/upstream_candidates.py` adapter will apply the legacy step
+inside an isolated temporary directory before this session's fail-closed overlay.
+The broken Ferry Fest URL will remain historical, never active evidence.
+
+T27 scope now includes that new adapter and explicit dispositions for the two
+upstream-added candidates. T28 remains this session's final integration/PR/Pages
+confirmation, not a takeover of another session's documentation task. No user
+review or input is required; all combined outputs will be rebuilt and tested.
+
+### Main merge resolution — `64f8b973` — `origin/main` `092a1f4`
+
+PRs #14–#20 and all their coordination/audit records are retained. Imported
+`data/audit_f1fd3c36.json` and `tools/apply_audit.py` verbatim, without editing
+T25-owned research/tool files. The original base86 price blanking is preserved.
+Current canonical/site/workflow code uses the stricter fail-closed projection;
+legacy changes are reproduced as **unverified candidate history** in an isolated
+temporary directory before that projection, including both new upstream rows.
+
+The older source-pruning/blank-consistency safeguards are subsumed by exact
+projection/reference/blank tests; unsupported legacy field/page labels cannot be
+restored. Main's generated HTML/JSON/CSV are regenerated, not spliced. The complete
+newer research ledger and original source links are retained, including T25's
+historical Ferry Fest 404 (never active evidence). Static counts and checks will
+be refreshed after the two new candidate dispositions and any independently
+re-read primary-source additions pass the same evidence requirements.
+
+### T27 reconciled output — `64f8b973`
+
+* Current combined audit: **242 candidates = 233 from current main (231 initial +
+  Alemany Flea Market / Doc Stories) + nine additional official-calendar entries**.
+  **163 listed / 79 review-only**; 20 weekly / 7 monthly / 26 annual /
+  110 special-or-cadence-unconfirmed; 14 programme umbrellas. **237 cited URLs /
+  140 domains**, not organization counts.
+* The two T25-owned upstream research/tool files are byte-identical to main. New
+  `data/upstream_refs_64f8b973.json` (own T27 integration scope) retains the single
+  2026 Sketchfest Sched reference not reproduced by the upstream transformer.
+  A source-URL comparison confirms every mainline row link remains in history.
+* Newly located primary pages independently re-read, rather than inheriting
+  blanket verification labels. Juneteenth hosting error remains unverified;
+  2027 Sketchfest venue not carried from 2026; Doc Stories venue remains blank.
+  Lit Crawl's changed-venue hour notice is not a whole-event time and is blanked.
+* **29 offline regression tests** and the combined projection/local-link/CSV
+  checks pass. Real Chromium desktop/mobile tests pass for 163/79/242 records;
+  an integration-induced long-URL mobile overflow was fixed. Automated WCAG A/AA
+  checks on four core page types report zero violations. CI and current-main
+  mergeability are rechecked next; no new production deployment claimed yet.
+
+### Final board reconciliation — `64f8b973` — `9ae09cf` (PR #21)
+
+Merged the other owner's final T25 completion/Pages record and retained its done
+status, alongside this session's T26–T28 rows. This was a board-only upstream
+update; research/tool inputs and all generated outputs remain unchanged.
+
+The normal pre-push `git pull --rebase` after the main integration tried to flatten
+21 merged mainline commits and stopped at a board conflict. It was **aborted
+without rewriting or discarding any mainline work**. Subsequent required pulls
+use `--rebase=merges --ff-only` when the session remote is already an ancestor,
+preserving the completed merge graph. Pushes remain only to this session branch;
+no main branch checkout or force-push occurred. The full self-served browser test
+and byte-identical repeated build also passed after the combined research merge.

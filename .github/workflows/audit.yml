@@ -1,0 +1,28 @@
+name: Official evidence capture
+
+# An opt-in evidence snapshot, not a fact-verification bot. Never auto-commit over
+# reviewed decisions. The original adjudicated text stays immutable; new attempts
+# are reported separately and must be read before any deliberate approval update.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pypdf==6.1.1
+      - name: Capture page/PDF text; never turn a response into approval
+        run: python tools/audit_evidence.py --capture --timeout 25
+      - name: Preserve attempt report as an artifact, without changing the branch
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-evidence-attempt
+          path: data/audit_64f8b973.json

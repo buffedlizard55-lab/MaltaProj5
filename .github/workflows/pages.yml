@@ -16,44 +16,62 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
-      - name: Rebuild the register and the site from source data
+      - name: Rebuild the fail-closed audited register and static site
         run: |
           python tools/consolidate.py
-          python tools/apply_verify.py
-          python tools/apply_audit.py
           python scripts/build.py
 
-      - name: Validate data, evidence and local links
+      - name: Run regression fixtures (no network)
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate exact evidence projection, CSVs, every row and local links
         run: python scripts/validate.py
 
-      - name: Assert the site and CSV are regenerated from the validated data
+      - name: Require committed generated files to match the reproducible build
         run: |
-          python scripts/build.py
-          python - <<'PY'
-          import json, pathlib
-          rows = json.loads(pathlib.Path("data/events.json").read_text())
-          html = pathlib.Path("index.html").read_text()
-          assert str(len(rows)) in html, "index.html does not reflect the register size"
-          assert len(rows) == len(json.loads(pathlib.Path("data/events.json").read_text()))
-          print(f"site consistent with {len(rows)} rows")
-          PY
+          git diff --exit-code -- \
+            data/events.json data/sources.json data/review.json \
+            data/unverified_history.json data/audit_summary.json \
+            data/events.csv data/review.csv ANALYSIS.md \
+            index.html weekly.html monthly.html annual.html special.html \
+            markets.html museums.html culture.html community.html \
+            analysis.html review.html sources.html
 
-      - name: Check every cited source URL still resolves (reported, never blocks)
-        continue-on-error: true
-        run: python tools/remotecheck.py --timeout 25
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Install optional pinned headless QA tooling outside Git
+        run: >-
+          npm install --prefix .cache/browser --no-audit --no-fund
+          playwright-core@1.64.1 @sparticuz/chromium@153.0.0 axe-core@4.14.0
+      - name: Real-browser desktop/mobile and automated accessibility smoke test
+        run: NODE_PATH=.cache/browser/node_modules node tests/browser_smoke.cjs --serve
+      - name: Preserve browser results and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-qa
+          path: .cache/qa/
+          if-no-files-found: ignore
 
-      - name: Fetch every cited page and match the event name (report only)
-        continue-on-error: true
-        run: python tools/verify_rows.py --timeout 25 --out /tmp/verify_report.json
+      - name: Check every cited URL (reachability only; 404/410 block merge)
+        run: python tools/check_sources.py --timeout 20 --output /tmp/source-links.json
 
+      - name: Preserve the honest URL outcomes, including unknowns
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-link-report
+          path: /tmp/source-links.json
+          if-no-files-found: ignore
 
-# GitHub Pages is served in branch mode from `main` / (root), so a merge to main
-# publishes the committed root HTML automatically. This workflow is the gate: it
-# rebuilds from source, validates, checks that generated files are current, and
-# verifies that every cited URL still resolves before that merge can land.
+# Pages is configured separately in branch mode (main / root). A merge publishes
+# committed root HTML. This job validates it; it never claims to deploy or to
+# semantically verify a fact via a URL response or shared-page name match.

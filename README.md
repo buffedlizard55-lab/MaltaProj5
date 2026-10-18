@@ -10,30 +10,26 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 | Measure | Count |
 |---|---:|
-| Candidates assessed | 251 |
-| Prior-main candidates retained (231 initial + 2 companion additions) | 233 |
-| New official-calendar entries | 18 |
-| Entries admitted to the city-only directory | 172 |
-| Candidates held off the directory for review | 79 |
-| Weekly / monthly / annual entries | 23 / 7 / 26 |
-| Special, dated or cadence-unconfirmed entries | 116 |
-| Exact cited official-source URLs / distinct domains | 248 / 141 |
+| Candidates assessed | 266 |
+| Previously assessed candidates (231 initial + 2 companion + 13 official-calendar) | 246 |
+| Session `59f56c24` official-calendar extras | 5 |
+| New topic-gap entries added in audit `3adf31d9` (gaming / music / AI) | 15 |
+| Entries admitted to the city-only directory | 185 |
+| Candidates held off the directory for review | 81 |
+| Weekly / monthly / annual entries | 23 / 8 / 31 |
+| Special, dated or cadence-unconfirmed entries | 123 |
+| Entries with at least one confirmed future date | 67 |
+| Directory rows reading Free / Paid / Not stated | 56 / 18 / 111 |
+| Exact cited official-source URLs / distinct domains | 264 / 150 |
 
 The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
-- [Dashboard](index.html) · [Upcoming — date-sorted](upcoming.html) · [Free first](free.html) · [Gaming · Music · AI focus](focus.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
+- [Dashboard](index.html) · [Upcoming](upcoming.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
+- [Gaming](gaming.html) · [Music](music.html) · [AI & technology](ai.html) · [Free to attend](free.html) · [Focus, one page](focus.html)
 - [Markets & food](markets.html) · [Museums & science](museums.html) · [Festivals & culture](culture.html) · [Community & outdoors](community.html)
 - [Analysis](analysis.html) · [Flagged for Review](review.html) · [Sources and row-by-row evidence](sources.html)
+- [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv) · [Research log for audit `3adf31d9`](data/research/audit-3adf31d9.md)
 - [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv)
-
-## New in this update (T32, snapshot still 18 October 2026)
-
-- **Executive summary** on the dashboard: dated entries running or starting within 30 days of the snapshot, soonest first, each with its cost label.
-- **Upcoming page**: approved dated entries sorted soonest-first (running now highlighted), then weekly/monthly recurring entries with **no invented next date**.
-- **Cost on every row**: a badge derived only from the audited admission text — `FREE`, `Free with paid parts`, `Paid`, `Cost in admission text`, or `Cost not stated — unverified` (blank is never called free). A Cost filter is in the table tools.
-- **Free first page**: the whole directory ordered free → paid → cost-not-stated.
-- **Gaming · Music · AI focus page**: name-matched groups, plus two 2026 Moscone conferences whose official pages identify AI (Current San Francisco 2026, Microsoft Ignite 2026). Family Game Time (18 Oct 2026) and GDC Festival of Gaming 2027 join the gaming group. Blank admission stays blank.
-- Regularly occurring (weekly/monthly/annual) vs special/dated split is unchanged and remains on its own pages. Mobile: sticky event column, horizontal table scroll, 2-column cards.
 
 ## What a listing means
 
@@ -66,7 +62,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/validate.py
 ```
 
-`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay. Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
+`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay and the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology entries). Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
 
 The validator compares the exact projection, checks quotation provenance (including labeled event JSON-LD), recurrence/year guards, blanks, parent cycles, source references, CSV cell values, all page memberships and every local link/fragment. A second rebuild must be byte-identical. Provenance validation is **not** automatic semantic fact-checking.
 
@@ -86,7 +82,36 @@ npm install --prefix .cache/browser --no-audit --no-fund \
 NODE_PATH=.cache/browser/node_modules node tests/browser_smoke.cjs --serve
 ```
 
-Omit `--serve` when a static server already runs on port 8080. This checks 12 pages at desktop/mobile widths, filtering/reset/empty states, actual blank cells, source/evidence links, no-JavaScript tables, console/asset errors and automated WCAG A/AA findings on the four core page types. Automated accessibility tests are not a complete accessibility certification. Browser binaries, screenshots and package installs stay outside Git.
+Omit `--serve` when a static server already runs on port 8080. This checks 18 pages at desktop/mobile widths, filtering/reset/empty states (including the Cost filter), actual blank cells, cost badges, source/evidence links, upcoming nearest-first ordering, mobile card layout, mobile overflow, no-JavaScript tables, console/asset errors and automated WCAG A/AA findings on the six core page types. Automated accessibility tests are not a complete accessibility certification. Browser binaries, screenshots and package installs stay outside Git.
+
+## Site conventions
+
+* **Upcoming order.** The Upcoming page groups the 67 dated, published entries into six time
+  buckets — **Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later** — and sorts
+  nearest confirmed date first within each. Only approved 2026/2027 dates are displayed; no date is
+  inferred. The canonical nearest-first order for those 67 rows is exported to
+  `data/upcoming_order.json`, so the browser pass can assert it rather than re-derive it. An
+  occurrence that has started but not finished is grouped under **Open now** rather than being given
+  a misleading “in N days” label.
+* **Focus ordering.** [Focus, one page](focus.html) carries the whole directory ordered
+  **Gaming → Music → AI & technology → everything else**, free and soonest first inside each group.
+  The same grouping drives the three topic subpages and the label on every row.
+* **Cost labelling.** Each row's Cost column shows a short badge (**Free**, **Paid** or
+  **Not stated**) derived from that row's exact approved admission quotation — never inferred. The
+  full verified wording stays in the Admission column, and a badge whose free admission is
+  conditional carries an explicit *Conditions apply — read the exact wording* hint. A blank price
+  always renders **Not stated**: never silently free, never silently paid.
+* **Mobile.** Below 820 px every events table reflows into stacked, labelled cards (each cell
+  repeats its column header from `data-label`), and every table keeps its own independent search,
+  filter and reset controls even on pages that hold several tables.
+* **Topics.** Gaming, music and AI/technology have dedicated pages alongside the collections.
+  Gaming and AI/technology were added in session `3adf31d9` from official pages only, and session
+  `59f56c24` added the combined Focus view plus five official-calendar entries (including a quoted
+  GDC price).
+* **Overlapping coverage is kept, not silently merged.** Where two sessions independently captured
+  the same event from different official pages, both rows are published with their own sources and
+  the overlap is stated in the row's review notes — a value is never inherited from another row's
+  source.
 
 ## Files and evidence
 
@@ -95,6 +120,9 @@ Omit `--serve` when a static server already runs on port 8080. This checks 12 pa
 | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` | Upstream research/tool retained unchanged; legacy labels are not approvals |
 | `tools/upstream_candidates.py`, `data/upstream_refs_64f8b973.json` | Isolated candidate transform and preserved official 2026 Sketchfest reference |
 | `data/audit_64f8b973.json` | Finite official evidence captures, selected tool excerpts and explicit field decisions |
+| `data/audit_3adf31d9.json`, `tools/register_3adf31d9.py` | Additive fail-closed topic-gap overlay and its captures (gaming / music / AI) |
+| `data/research/audit-3adf31d9.md` | Research log for that overlay: retrieval methods, approvals and deliberate non-approvals |
+| `data/upcoming_order.json` | Canonical nearest-first order of the dated directory rows, asserted by the browser pass |
 | `data/events.json` | All audited records, including review-only dispositions; not all are published in the directory |
 | `data/sources.json` | Exact-URL ledger; statuses and contextual decisions are separate |
 | `data/audit_summary.json` | Reproducible counts/blank-field/date summary |

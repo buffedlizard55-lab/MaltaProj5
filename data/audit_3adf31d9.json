@@ -1,0 +1,1368 @@
+{
+  "schema_version": 1,
+  "session": "3adf31d9",
+  "captured_at": "2026-10-18T10:20:00+00:00",
+  "snapshot": "2026-10-18",
+  "method": "New-requirement research (T33): official organizer, venue, library and government pages for gaming, music and AI gatherings inside San Francisco. Every value below is copied from text the workspace tools actually returned on 2026-10-18 and is quoted exactly. Nothing is inherited from earlier sessions, nothing is inferred, and no value is filled in from memory. Two retrieval methods are used and labelled per capture: (a) 'workspace fetch_page' - the page body as returned by the fetch tool (some pages returned more chunks than were read; those captures are marked complete:false with the chunk counts recorded); (b) 'workspace web_search' - the verbatim result text the search tool returned for that exact official URL, used only where the page is dominated by navigation (sfpl.org) or where the relevant block was below the fetched fold (sterngrove.org). Search-snippet captures carry no HTTP status: a search result is evidence of what the tool returned, never a claim that the page was directly fetched with a 200 response.",
+  "captures": {
+    "https://gdconf.com/": {
+      "http": 200,
+      "final_url": "https://gdconf.com/",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:04:00+00:00",
+      "title": "GDC Festival of Gaming",
+      "text": "[![GDC Festival of Gaming](https://knect365.imgix.net/uploads/GDC-white-a7871e2b774f7ecda4ee930bd43649c8.png?auto=format&fit=max&h=80&dpr=1)](https://gdconf.com/)\n\nMarch 1-5, 2027\n\nMoscone CenterSan Francisco, CA\n\n# Change The Game.\n\n### March 1-5, 2027\n\n##### Moscone Center, San Francisco, CA\n\n##### ~0\n\nAttendees",
+      "retrieval": {
+        "method": "workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 2,
+        "complete": false
+      },
+      "tool_excerpt": null,
+      "evidence_origin": "Verbatim excerpt of the official page as returned by the workspace fetch tool on 2026-10-18."
+    },
+    "https://www.moscone.com/events/tdx-2027": {
+      "http": 200,
+      "final_url": "https://www.moscone.com/events/tdx-2027",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:04:00+00:00",
+      "title": "TDX 2027",
+      "text": "# TDX 2027\n\n## The Developer Conference for the Agentic Enterprise\n\n[**IN-PERSON**](https://www.salesforce.com/tdx/form-save-date-tdx27/) **\\| March 10–11, 2027 \\|** **Moscone Center \\| San Francisco, CA USA**\n\nTDX 2027 returns to San Francisco and Salesforce+ for two days of deep technical learning, innovation, and hands-on development experiences.",
+      "retrieval": {
+        "method": "workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 1,
+        "complete": true
+      },
+      "tool_excerpt": null,
+      "evidence_origin": "Verbatim excerpt of the official Moscone Center event page as returned by the workspace fetch tool on 2026-10-18."
+    },
+    "https://iclr.cc/Conferences/2027/index.html": {
+      "http": 200,
+      "final_url": "https://iclr.cc/Conferences/2027/index.html",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:05:00+00:00",
+      "title": "2027 Conference",
+      "text": "# ICLR 2027\n\nThe Fifteenth International Conference on Learning Representations\n\n[April 26-30, 2027](https://iclr.cc/Conferences/2027/Dates)\n\n## Venue\n\nVenue information will be posted here\n\nThe conference is a five-day multi-track event with a mix of invited talks,\noral paper presentations, and poster sessions. The fourth and fifth day are\nworkshops.\n\n![Moscone Center, San Francisco, CA](https://media.iclr.cc/Conferences/ICLR2027/venue-hero.jpg)",
+      "retrieval": {
+        "method": "workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 1,
+        "complete": true
+      },
+      "tool_excerpt": null,
+      "evidence_origin": "Verbatim excerpt of the official ICLR 2027 conference page as returned by the workspace fetch tool on 2026-10-18."
+    },
+    "https://ai.engineer/worldsfair/2027": {
+      "http": 200,
+      "final_url": "https://ai.engineer/worldsfair/2027",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:03:00+00:00",
+      "title": "AI Engineer World's Fair 2027: June 29 - July 1, San Francisco",
+      "text": "JUNE 29 – JULY 1, 2027 • MOSCONE WEST, SAN FRANCISCOJUNE 29 – JULY 1, 2027 • SF, CA\n\n# AI Engineer World's Fair 2027  Returns to Moscone\n\nAfter welcoming 7,500 attendees in 2026, we’re targeting 10,000 AI engineers, founders and technical leaders in 2027. Join us at Moscone West June 29–July 1 for technical tracks, workshops, an AI tools expo and conversations with the people building AI. Full program, speakers, and tickets announcing soon — join the list to be the first to know.\n\n### Moscone West, San Francisco\n\nReturn to the same venue for a gathering built around learning, meeting collaborators and seeing the breadth of AI engineering in one place.",
+      "retrieval": {
+        "method": "workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 1,
+        "complete": true
+      },
+      "tool_excerpt": null,
+      "evidence_origin": "Verbatim excerpt of the official AI Engineer World's Fair 2027 page as returned by the workspace fetch tool on 2026-10-18."
+    },
+    "https://www.databricks.com/dataaisummit": {
+      "http": 200,
+      "final_url": "https://www.databricks.com/dataaisummit",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:07:00+00:00",
+      "title": "Data + AI Summit | Databricks | June 21–24, 2027 SAN FRANCISCO",
+      "text": "# SEE YOU NEXT YEAR!\n\nJune 21–24, 2027 SAN FRANCISCO\n\nJUNE 21–24, 2027 / SAN FRANCISCO + VIRTUAL\n\nBUILD APPS AND AGENTS THAT WORK",
+      "retrieval": {
+        "method": "workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 3,
+        "complete": false
+      },
+      "tool_excerpt": "Where will Data + AI Summit 2027 be held?\n\nThe conference will take place at Moscone North, West and South (the address is 747 Howard Street, San Francisco, CA 94103).",
+      "tool_method": "workspace web_search result for the exact official URL",
+      "tool_checked_at": "2026-10-18",
+      "evidence_origin": "Fetch excerpt of the official Databricks Data + AI Summit page plus the verbatim FAQ text the workspace search tool returned for that same URL (the FAQ block was below the fetched fold)."
+    },
+    "https://www.aicouncil.com/": {
+      "http": null,
+      "title": "AI Council 2027 — AI Conference in San Francisco, March 23-24, 2027",
+      "text": "",
+      "retrieval": {
+        "method": "workspace web_search",
+        "chunks_retrieved": [],
+        "chunks_total": 0,
+        "complete": false
+      },
+      "tool_method": "workspace web_search result for the exact official URL; the page body was not fetched directly",
+      "tool_checked_at": "2026-10-18",
+      "tool_excerpt": "AI Council 2027 — AI Conference in San Francisco, March 23 ...\n\nThe technical AI conference for engineers, researchers, and founders actually building with AI. Practitioner-led talks, March 23-24, 2027, San Francisco. AI Council draws 1,200+ engineers, technical founders, and researchers — the people actually building and shipping AI systems.",
+      "evidence_origin": "Verbatim result text the workspace search tool returned for the official aicouncil.com URL on 2026-10-18. No HTTP status is claimed."
+    },
+    "https://sfpl.org/events/2026/03/13/social-chess-club": {
+      "http": null,
+      "title": "Social: Chess Club | San Francisco Public Library",
+      "text": "",
+      "retrieval": {
+        "method": "workspace web_search + workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 3,
+        "complete": false
+      },
+      "tool_method": "workspace web_search result for the exact official URL; the fetched page is 3 chunks of branch-navigation before the event block",
+      "tool_checked_at": "2026-10-18",
+      "tool_excerpt": "# Social: Chess Club\nFriday, 3/13/2026 4:30 - 5:30\n\nSuitable for:\n\n- All Ages\n\nVisitacion Valley Meeting Room\n\nVisitacion Valley\n\n201 Leland Avenue San Francisco, CA 94134 United States Join the Visitacion Valley Chess Club for fun, friendly chess games and learning for all ages and skill levels. Whether you’re brand new to the game or an experienced player looking for a challenge, come play and connect with others every 2nd and 3rd Friday of the month.",
+      "evidence_origin": "Verbatim result text the workspace search tool returned for this exact official sfpl.org event URL on 2026-10-18. No HTTP status is claimed for the snippet itself."
+    },
+    "https://sfpl.org/events/2026/05/09/activity-chess-club": {
+      "http": null,
+      "title": "Activity: Chess Club | San Francisco Public Library",
+      "text": "",
+      "retrieval": {
+        "method": "workspace web_search",
+        "chunks_retrieved": [],
+        "chunks_total": 0,
+        "complete": false
+      },
+      "tool_method": "workspace web_search result for the exact official URL; the page body was not fetched directly",
+      "tool_checked_at": "2026-10-18",
+      "tool_excerpt": "# Activity: Chess Club\nIn partnership with Bright Knights Chess Club\n\nSaturday, 5/9/2026 1:00 - 3:00\n\nExcelsior Meeting Room\n\nExcelsior\n\nAddress\n\n4400 Mission Street San Francisco, CA 94112 United States\n\nContact Telephone\n\n415-355-2868\n\nexcmgr@sfpl.org Learn to play chess or improve your game play with the Bright Knights Chess Club. For ages 5–18. Bright Knights Chess Club is a non-profit organization founded in 1999 in the Excelsior District of San Francisco, California with the mission to “bring the community together through the game of chess”. The organization has hosted the Excelsior Youth Chess Club at the San Francisco Public Library Excelsior Branch since May 2003. Bright Knights Chess Club hosts free chess programs, community events and tournaments in the San Francisco Bay Area.",
+      "evidence_origin": "Verbatim result text the workspace search tool returned for this exact official sfpl.org event URL on 2026-10-18. No HTTP status is claimed."
+    },
+    "https://sfpl.org/events/2026/07/26/social-afternoon-board-games": {
+      "http": null,
+      "title": "Social: Afternoon Board Games | San Francisco Public Library",
+      "text": "",
+      "retrieval": {
+        "method": "workspace web_search",
+        "chunks_retrieved": [],
+        "chunks_total": 0,
+        "complete": false
+      },
+      "tool_method": "workspace web_search result for the exact official URL; the page body was not fetched directly",
+      "tool_checked_at": "2026-10-18",
+      "tool_excerpt": "# Social: Afternoon Board Games\nSunday, 7/26/2026 1:00 - 4:00\n\nSuitable for:\n\n- Elementary School Age\n\nSunset Children's Area\n\nSunset\n\nAddress\n\n1305 18th Avenue San Francisco, CA 94122 United States\n\nContact Telephone\n\n415-355-2808\n\nsunmgr@sfpl.org",
+      "evidence_origin": "Verbatim result text the workspace search tool returned for this exact official sfpl.org event URL on 2026-10-18. No HTTP status is claimed."
+    },
+    "https://sfpl.org/events/2026/08/12/social-game-night": {
+      "http": null,
+      "title": "Social: Game Night | San Francisco Public Library",
+      "text": "",
+      "retrieval": {
+        "method": "workspace web_search",
+        "chunks_retrieved": [],
+        "chunks_total": 0,
+        "complete": false
+      },
+      "tool_method": "workspace web_search result for the exact official URL; the page body was not fetched directly",
+      "tool_checked_at": "2026-10-18",
+      "tool_excerpt": "# Social: Game Night\nWednesday, 8/12/2026 4:00 - 6:00\n\nSuitable for:\n\n- All Ages\n- Elementary School Age\n\nMarina Children's Area\n\nMarina\n\n1890 Chestnut Street San Francisco, CA 94123 United States",
+      "evidence_origin": "Verbatim result text the workspace search tool returned for this exact official sfpl.org event URL on 2026-10-18. No HTTP status is claimed."
+    },
+    "https://sfpl.org/events/2026/08/02/activity-chinese-chess-zhongguoxiangqi": {
+      "http": null,
+      "title": "Activity: Chinese Chess 中国象棋 | San Francisco Public Library",
+      "text": "",
+      "retrieval": {
+        "method": "workspace web_search + workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 3,
+        "complete": false
+      },
+      "tool_method": "workspace web_search result for the exact official URL; the fetched page is 3 chunks of branch-navigation before the event block",
+      "tool_checked_at": "2026-10-18",
+      "tool_excerpt": "# Activity: Chinese Chess 中国象棋\nSunday, 8/2/2026 2:00 - 4:00\n\nSuitable for:\n\n- Adults\n- Families\n\nChinese Center Exhibit Space - 3rd Fl\n\nMain Library\n\nAddress\n\n100 Larkin Street San Francisco, CA 94102 United States",
+      "evidence_origin": "Verbatim result text the workspace search tool returned for this exact official sfpl.org event URL on 2026-10-18. No HTTP status is claimed for the snippet itself."
+    },
+    "https://sfpl.org/events/2026/06/13/social-family-game-night": {
+      "http": null,
+      "title": "Social: Family Game Night | San Francisco Public Library",
+      "text": "",
+      "retrieval": {
+        "method": "workspace web_search",
+        "chunks_retrieved": [],
+        "chunks_total": 0,
+        "complete": false
+      },
+      "tool_method": "workspace web_search result for the exact official URL; the page body was not fetched directly",
+      "tool_checked_at": "2026-10-18",
+      "tool_excerpt": "# Social: Family Game Night\nSaturday, 6/13/2026 4:00 - 5:00\n\nBernal Heights Meeting Room\n\nBernal Heights\n\nAddress\n\n500 Cortland Avenue San Francisco, CA 94110 United States\n\nContact Telephone\n\n415-355-2810\n\nbhemgr@sfpl.org\n\nPlay board games, giant Jenga and a variety of other games in the company of your community. For children and their caregivers.",
+      "evidence_origin": "Verbatim result text the workspace search tool returned for this exact official sfpl.org event URL on 2026-10-18. No HTTP status is claimed."
+    },
+    "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship": {
+      "http": 200,
+      "final_url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:12:00+00:00",
+      "title": "Tournament - Mechanics' Institute",
+      "text": "# 20th Annual San Francisco Scholastic Chess Championship\n\n## Info\n\n- **Date:** Sat, Apr 11\n, 2026\n\n- **Eligibility:**\nK-12\n\n- **Rating:**\nUSCF\n\n\n- **Location:** 701 Mission Street, San Francisco, CA 94103\n- **Capacity:**\n300\n\n\n## Registration\n\n- Online Registration Open Until: Friday, April 10: 11:00 pm\n\nSchedule:\n\n- Opening Ceremony: 9:45 am\n- Round 1: 10:00 am\n- Round 2: 11:30 am\n- Round 3:  1:00 pm\n- Round 4: 2:30 pm\n- Trophy Ceremony: around 4:00 pm\n\n- Expected end time: around 5:00 pm\n\n## Eligibility\n\nThe event is free, but registration is required for all sections.",
+      "retrieval": {
+        "method": "workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 9,
+        "complete": false
+      },
+      "tool_excerpt": null,
+      "evidence_origin": "Verbatim excerpt of the official Mechanics' Institute tournament page as returned by the workspace fetch tool on 2026-10-18; the remaining chunks are final standings tables."
+    },
+    "https://www.milibrary.org/chess/chess-classes/": {
+      "http": 200,
+      "final_url": "https://www.milibrary.org/chess/chess-classes/",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:11:00+00:00",
+      "title": "Chess Classes and Programs - Mechanics' Institute",
+      "text": "# Chess Classes and Programs\n\nIntroduction to Chess (Thursdays, 5:30-6:30 PM, at Mechanics')\n\n**Class Details:**\n\n🗓 Six Thursdays\n\n🕠 **Time**: 5:30–6:30 PM\n\n📍 **Location**: Onsite in the Chess Room at Mechanics’\n\n💸 **Cost**: FREE for Mechanics’ Institute Members\n\n#### **Upcoming Classes**\n\n| Class dates | Registration |\n| --- | --- |\n| July 9 to August 13 | Registration is now open |\n| September 10 to October 15 | Registration is now open |\n| November 5 - December 17<br>(Nov 26 off) | Registration is now open |",
+      "retrieval": {
+        "method": "workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 2,
+        "complete": false
+      },
+      "tool_excerpt": null,
+      "evidence_origin": "Verbatim excerpt of the official Mechanics' Institute chess-classes page as returned by the workspace fetch tool on 2026-10-18."
+    },
+    "https://www.sterngrove.org/about-us": {
+      "http": 200,
+      "final_url": "https://www.sterngrove.org/about-us",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:09:00+00:00",
+      "title": "About Us — Stern Grove Festival",
+      "text": "# About\n\n**Stern Grove Festival is the nation’s longest-running free nonprofit music festival, bringing world-class live music to San Francisco since 1938.**\n\nEvery summer, we gather generations of Bay Area communities in a natural amphitheater unlike anywhere else—where music, nature, and people come together. From legendary artists to emerging voices, Stern Grove is a place where everyone is welcome, and every show is free.\n\n**How We Keep It Free**\n\nStern Grove Festival is made possible by a community of donors, sponsors, and supporters who believe in the power of free live music.\n\n**We need to raise approximately $65 per person to keep the Festival free.**",
+      "retrieval": {
+        "method": "workspace fetch_page",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 1,
+        "complete": true
+      },
+      "tool_excerpt": null,
+      "evidence_origin": "Verbatim excerpt of the official Stern Grove Festival about page as returned by the workspace fetch tool on 2026-10-18."
+    },
+    "https://www.sterngrove.org/accessibility-ada": {
+      "http": 200,
+      "final_url": "https://www.sterngrove.org/accessibility-ada",
+      "content_type": "text/html",
+      "checked_at": "2026-10-18T10:11:00+00:00",
+      "title": "ACCESSIBILITY (ADA) — Stern Grove Festival",
+      "text": "# Accessibility (ADA)\n\nStern Grove Festival is Wheelchair, ADA and Senior (65+) accessible.\n\nAll attendees requiring Wheelchair, ADA, or Senior accommodations must have a General Admission ticket to attend.\n\n**Hours of Operation:**\n\n11:00 AM – 5:30 PM\n\n- 19th Ave & Sloat Blvd\n\n- Vale Ave & Crestlake Dr\n\n- 20th Ave & Wawona St",
+      "retrieval": {
+        "method": "workspace fetch_page + workspace web_search",
+        "chunks_retrieved": [
+          0
+        ],
+        "chunks_total": 1,
+        "complete": true
+      },
+      "tool_method": "workspace web_search result for the exact official URL; the venue/office address block was not present in the fetched chunk",
+      "tool_checked_at": "2026-10-18",
+      "tool_excerpt": "ACCESSIBILITY (ADA) — Stern Grove Festival\n\n#### Free music for all.\n\n**We are the longest running non-profit music festival in the country, bringing FREE live music to San Francisco for 89 years.**\n\n#### Contact Info\n\n**VENUE ADDRESS:**\n\n19th Avenue and Sloat Boulevard San Francisco, CA 94132\n\n**OFFICE ADDRESS:**\n\n2 Marina Blvd., Building C, Suite 370 San Francisco, CA 94123-1284",
+      "evidence_origin": "Fetch excerpt of the official Stern Grove accessibility page plus the verbatim contact block the workspace search tool returned for that same URL."
+    }
+  },
+  "candidates": {
+    "g-gdc-festival-of-gaming": {
+      "id": "g-gdc-festival-of-gaming",
+      "name": "GDC Festival of Gaming",
+      "category": "Festivals & culture"
+    },
+    "g-sf-scholastic-chess-championship": {
+      "id": "g-sf-scholastic-chess-championship",
+      "name": "20th Annual San Francisco Scholastic Chess Championship",
+      "category": "Community & outdoors"
+    },
+    "g-mi-introduction-to-chess": {
+      "id": "g-mi-introduction-to-chess",
+      "name": "Introduction to Chess (Mechanics' Institute)",
+      "category": "Community & outdoors"
+    },
+    "g-sfpl-social-chess-club-visitacion-valley": {
+      "id": "g-sfpl-social-chess-club-visitacion-valley",
+      "name": "Social: Chess Club",
+      "category": "Community & outdoors"
+    },
+    "g-sfpl-activity-chess-club-excelsior": {
+      "id": "g-sfpl-activity-chess-club-excelsior",
+      "name": "Activity: Chess Club",
+      "category": "Community & outdoors"
+    },
+    "g-sfpl-afternoon-board-games-sunset": {
+      "id": "g-sfpl-afternoon-board-games-sunset",
+      "name": "Social: Afternoon Board Games",
+      "category": "Community & outdoors"
+    },
+    "g-sfpl-game-night-marina": {
+      "id": "g-sfpl-game-night-marina",
+      "name": "Social: Game Night",
+      "category": "Community & outdoors"
+    },
+    "g-sfpl-chinese-chess-main": {
+      "id": "g-sfpl-chinese-chess-main",
+      "name": "Activity: Chinese Chess 中国象棋",
+      "category": "Community & outdoors"
+    },
+    "g-sfpl-family-game-night-bernal": {
+      "id": "g-sfpl-family-game-night-bernal",
+      "name": "Social: Family Game Night",
+      "category": "Community & outdoors"
+    },
+    "a-ai-engineer-worlds-fair-2027": {
+      "id": "a-ai-engineer-worlds-fair-2027",
+      "name": "AI Engineer World's Fair 2027",
+      "category": "Museums & science"
+    },
+    "a-tdx-2027": {
+      "id": "a-tdx-2027",
+      "name": "TDX 2027",
+      "category": "Museums & science"
+    },
+    "a-iclr-2027": {
+      "id": "a-iclr-2027",
+      "name": "ICLR 2027",
+      "category": "Museums & science"
+    },
+    "a-data-ai-summit-2027": {
+      "id": "a-data-ai-summit-2027",
+      "name": "Data + AI Summit 2027",
+      "category": "Museums & science"
+    },
+    "a-ai-council-2027": {
+      "id": "a-ai-council-2027",
+      "name": "AI Council 2027",
+      "category": "Museums & science"
+    },
+    "m-stern-grove-festival": {
+      "id": "m-stern-grove-festival",
+      "name": "Stern Grove Festival",
+      "category": "Festivals & culture"
+    }
+  },
+  "decisions": {
+    "g-gdc-festival-of-gaming": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "GDC Festival of Gaming",
+          "quotes": [
+            {
+              "url": "https://gdconf.com/",
+              "text": "GDC Festival of Gaming"
+            }
+          ]
+        },
+        "schedule": {
+          "value": "March 1-5, 2027",
+          "quotes": [
+            {
+              "url": "https://gdconf.com/",
+              "text": "March 1-5, 2027"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Moscone Center, San Francisco, CA",
+          "quotes": [
+            {
+              "url": "https://gdconf.com/",
+              "text": "Moscone Center, San Francisco, CA"
+            }
+          ]
+        }
+      },
+      "kind": "Special",
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://gdconf.com/",
+            "text": "Moscone Center, San Francisco, CA"
+          }
+        ],
+        "basis": "The official festival page states the venue and city on its hero block."
+      },
+      "occurrences": [
+        {
+          "start": "2027-03-01",
+          "end": "2027-03-05",
+          "quotes": [
+            {
+              "url": "https://gdconf.com/",
+              "text": "March 1-5, 2027"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "Admission is not stated on the official page reviewed (the page points to a passes/pricing page without quoting a price); the price cell stays blank rather than being inferred. No ongoing cadence is asserted: the captured text dates the 2027 edition but does not state that the festival repeats annually.",
+      "notes": "Overlapping coverage, kept deliberately: another session (59f56c24) independently captured the same 2027 festival from the official Moscone Center event page and published it as 'GDC Festival of Gaming 2027' (row audit-gdc-festival-2027), which does quote a price ('Festival $549'). Both rows are retained with their own official sources rather than one being deleted. This row's captured text is gdconf.com, which states no price, so this row stays 'Not stated' instead of inheriting a value from the other row's source."
+    },
+    "g-sf-scholastic-chess-championship": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "20th Annual San Francisco Scholastic Chess Championship",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+              "text": "20th Annual San Francisco Scholastic Chess Championship"
+            }
+          ]
+        },
+        "schedule": {
+          "value": "Sat, Apr 11, 2026",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+              "text": "**Date:** Sat, Apr 11\n, 2026"
+            }
+          ]
+        },
+        "time": {
+          "value": "10:00 am – around 5:00 pm",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+              "text": "Round 1: 10:00 am"
+            },
+            {
+              "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+              "text": "Expected end time: around 5:00 pm"
+            }
+          ]
+        },
+        "venue": {
+          "value": "701 Mission Street, San Francisco, CA 94103",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+              "text": "701 Mission Street, San Francisco, CA 94103"
+            }
+          ]
+        },
+        "price": {
+          "value": "The event is free, but registration is required for all sections.",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+              "text": "The event is free, but registration is required for all sections."
+            }
+          ]
+        }
+      },
+      "kind": "Annual",
+      "recurrence": {
+        "value": "Annual scholastic championship; the 2026 edition was the 20th annual",
+        "quotes": [
+          {
+            "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+            "text": "20th Annual San Francisco Scholastic Chess Championship"
+          }
+        ]
+      },
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+            "text": "701 Mission Street, San Francisco, CA 94103"
+          }
+        ],
+        "basis": "The official tournament page gives an explicit San Francisco street address for the event location."
+      },
+      "occurrences": [
+        {
+          "start": "2026-04-11",
+          "end": "2026-04-11",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+              "text": "**Date:** Sat, Apr 11\n, 2026"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "Free admission is quoted directly from the official page, with the registration condition retained. The 2026 date is kept as published; no 2027 date is invented.",
+      "notes": ""
+    },
+    "g-mi-introduction-to-chess": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Introduction to Chess (Mechanics' Institute)",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/chess-classes/",
+              "text": "Introduction to Chess"
+            }
+          ]
+        },
+        "schedule": {
+          "value": "Six Thursdays; upcoming block November 5 - December 17 (Nov 26 off)",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/chess-classes/",
+              "text": "November 5 - December 17"
+            },
+            {
+              "url": "https://www.milibrary.org/chess/chess-classes/",
+              "text": "Six Thursdays"
+            }
+          ]
+        },
+        "time": {
+          "value": "5:30–6:30 PM",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/chess-classes/",
+              "text": "**Time**: 5:30–6:30 PM"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Onsite in the Chess Room at Mechanics’",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/chess-classes/",
+              "text": "**Location**: Onsite in the Chess Room at Mechanics’"
+            }
+          ]
+        },
+        "price": {
+          "value": "FREE for Mechanics’ Institute Members",
+          "quotes": [
+            {
+              "url": "https://www.milibrary.org/chess/chess-classes/",
+              "text": "**Cost**: FREE for Mechanics’ Institute Members"
+            }
+          ]
+        }
+      },
+      "kind": "Weekly",
+      "recurrence": {
+        "value": "Thursdays (six-week class blocks)",
+        "quotes": [
+          {
+            "url": "https://www.milibrary.org/chess/chess-classes/",
+            "text": "Introduction to Chess (Thursdays, 5:30-6:30 PM, at Mechanics')"
+          }
+        ]
+      },
+      "geography": {
+        "status": "unverified",
+        "quotes": [],
+        "basis": ""
+      },
+      "occurrences": [],
+      "publication": "review_only",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "Held for review: the official class page names the room ('Onsite in the Chess Room at Mechanics’') but the captured text does not state a San Francisco address, so city-only geography is not evidenced.",
+      "notes": ""
+    },
+    "g-sfpl-social-chess-club-visitacion-valley": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Social: Chess Club",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/03/13/social-chess-club",
+              "text": "Social: Chess Club"
+            }
+          ]
+        },
+        "time": {
+          "value": "4:30 - 5:30",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/03/13/social-chess-club",
+              "text": "4:30 - 5:30"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Visitacion Valley Meeting Room, San Francisco Public Library Visitacion Valley Branch",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/03/13/social-chess-club",
+              "text": "Visitacion Valley Meeting Room"
+            }
+          ]
+        }
+      },
+      "kind": "Monthly",
+      "recurrence": {
+        "value": "every 2nd and 3rd Friday of the month",
+        "quotes": [
+          {
+            "url": "https://sfpl.org/events/2026/03/13/social-chess-club",
+            "text": "every 2nd and 3rd Friday of the month"
+          }
+        ]
+      },
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://sfpl.org/events/2026/03/13/social-chess-club",
+            "text": "201 Leland Avenue San Francisco, CA 94134 United States"
+          }
+        ],
+        "basis": "The official library event page gives the branch's San Francisco street address."
+      },
+      "occurrences": [
+        {
+          "start": "2026-03-13",
+          "end": "2026-03-13",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/03/13/social-chess-club",
+              "text": "3/13/2026"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "Admission is not stated in the official event text; the price cell is left blank rather than assumed free because the library programme is public.",
+      "notes": "Only one dated instance of this recurring programme was confirmed from the official page; the monthly cadence is quoted, but no future date is asserted."
+    },
+    "g-sfpl-activity-chess-club-excelsior": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Activity: Chess Club",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/05/09/activity-chess-club",
+              "text": "Activity: Chess Club"
+            }
+          ]
+        },
+        "time": {
+          "value": "1:00 - 3:00",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/05/09/activity-chess-club",
+              "text": "1:00 - 3:00"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Excelsior Meeting Room, San Francisco Public Library Excelsior Branch",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/05/09/activity-chess-club",
+              "text": "Excelsior Meeting Room"
+            }
+          ]
+        }
+      },
+      "kind": "Special",
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://sfpl.org/events/2026/05/09/activity-chess-club",
+            "text": "4400 Mission Street San Francisco, CA 94112 United States"
+          }
+        ],
+        "basis": "The official library event page gives the branch's San Francisco street address."
+      },
+      "occurrences": [
+        {
+          "start": "2026-05-09",
+          "end": "2026-05-09",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/05/09/activity-chess-club",
+              "text": "5/9/2026"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "The page's free-chess sentence describes the partner club's programmes generally, not this library session, so admission is left blank instead of being promoted to a verified value.",
+      "notes": "Only one dated instance was confirmed from the official page; no ongoing cadence is asserted."
+    },
+    "g-sfpl-afternoon-board-games-sunset": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Social: Afternoon Board Games",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/07/26/social-afternoon-board-games",
+              "text": "Social: Afternoon Board Games"
+            }
+          ]
+        },
+        "time": {
+          "value": "1:00 - 4:00",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/07/26/social-afternoon-board-games",
+              "text": "1:00 - 4:00"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Sunset Children's Area, San Francisco Public Library Sunset Branch",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/07/26/social-afternoon-board-games",
+              "text": "Sunset Children's Area"
+            }
+          ]
+        }
+      },
+      "kind": "Special",
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://sfpl.org/events/2026/07/26/social-afternoon-board-games",
+            "text": "1305 18th Avenue San Francisco, CA 94122 United States"
+          }
+        ],
+        "basis": "The official library event page gives the branch's San Francisco street address."
+      },
+      "occurrences": [
+        {
+          "start": "2026-07-26",
+          "end": "2026-07-26",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/07/26/social-afternoon-board-games",
+              "text": "7/26/2026"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "Admission is not stated in the official event text; the price cell stays blank.",
+      "notes": "Only one dated instance was confirmed from the official page; no ongoing cadence is asserted."
+    },
+    "g-sfpl-game-night-marina": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Social: Game Night",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/08/12/social-game-night",
+              "text": "Social: Game Night"
+            }
+          ]
+        },
+        "time": {
+          "value": "4:00 - 6:00",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/08/12/social-game-night",
+              "text": "4:00 - 6:00"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Marina Children's Area, San Francisco Public Library Marina Branch",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/08/12/social-game-night",
+              "text": "Marina Children's Area"
+            }
+          ]
+        }
+      },
+      "kind": "Special",
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://sfpl.org/events/2026/08/12/social-game-night",
+            "text": "1890 Chestnut Street San Francisco, CA 94123 United States"
+          }
+        ],
+        "basis": "The official library event page gives the branch's San Francisco street address."
+      },
+      "occurrences": [
+        {
+          "start": "2026-08-12",
+          "end": "2026-08-12",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/08/12/social-game-night",
+              "text": "8/12/2026"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "Admission is not stated in the official event text; the price cell stays blank.",
+      "notes": "Only one dated instance was confirmed from the official page; no ongoing cadence is asserted."
+    },
+    "g-sfpl-chinese-chess-main": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Activity: Chinese Chess 中国象棋",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/08/02/activity-chinese-chess-zhongguoxiangqi",
+              "text": "Activity: Chinese Chess 中国象棋"
+            }
+          ]
+        },
+        "time": {
+          "value": "2:00 - 4:00",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/08/02/activity-chinese-chess-zhongguoxiangqi",
+              "text": "2:00 - 4:00"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Chinese Center Exhibit Space - 3rd Fl, San Francisco Public Library Main Library",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/08/02/activity-chinese-chess-zhongguoxiangqi",
+              "text": "Chinese Center Exhibit Space - 3rd Fl"
+            }
+          ]
+        }
+      },
+      "kind": "Special",
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://sfpl.org/events/2026/08/02/activity-chinese-chess-zhongguoxiangqi",
+            "text": "100 Larkin Street San Francisco, CA 94102 United States"
+          }
+        ],
+        "basis": "The official library event page gives the Main Library's San Francisco street address."
+      },
+      "occurrences": [
+        {
+          "start": "2026-08-02",
+          "end": "2026-08-02",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/08/02/activity-chinese-chess-zhongguoxiangqi",
+              "text": "8/2/2026"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "Admission is not stated in the official event text; the price cell stays blank.",
+      "notes": "Only one dated instance was confirmed from the official page; no ongoing cadence is asserted."
+    },
+    "g-sfpl-family-game-night-bernal": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Social: Family Game Night",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/06/13/social-family-game-night",
+              "text": "Social: Family Game Night"
+            }
+          ]
+        },
+        "time": {
+          "value": "4:00 - 5:00",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/06/13/social-family-game-night",
+              "text": "4:00 - 5:00"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Bernal Heights Meeting Room, San Francisco Public Library Bernal Heights Branch",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/06/13/social-family-game-night",
+              "text": "Bernal Heights Meeting Room"
+            }
+          ]
+        }
+      },
+      "kind": "Special",
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://sfpl.org/events/2026/06/13/social-family-game-night",
+            "text": "500 Cortland Avenue San Francisco, CA 94110 United States"
+          }
+        ],
+        "basis": "The official library event page gives the branch's San Francisco street address."
+      },
+      "occurrences": [
+        {
+          "start": "2026-06-13",
+          "end": "2026-06-13",
+          "quotes": [
+            {
+              "url": "https://sfpl.org/events/2026/06/13/social-family-game-night",
+              "text": "6/13/2026"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Gaming",
+      "reason": "Admission is not stated in the official event text; the price cell stays blank.",
+      "notes": "Only one dated instance was confirmed from the official page; no ongoing cadence is asserted."
+    },
+    "a-ai-engineer-worlds-fair-2027": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "AI Engineer World's Fair 2027",
+          "quotes": [
+            {
+              "url": "https://ai.engineer/worldsfair/2027",
+              "text": "AI Engineer World's Fair 2027"
+            }
+          ]
+        },
+        "schedule": {
+          "value": "June 29–July 1, 2027",
+          "quotes": [
+            {
+              "url": "https://ai.engineer/worldsfair/2027",
+              "text": "June 29–July 1"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Moscone West, San Francisco",
+          "quotes": [
+            {
+              "url": "https://ai.engineer/worldsfair/2027",
+              "text": "Moscone West, San Francisco"
+            }
+          ]
+        }
+      },
+      "kind": "Annual",
+      "recurrence": {
+        "value": "Returns to Moscone West after the 2026 edition",
+        "quotes": [
+          {
+            "url": "https://ai.engineer/worldsfair/2027",
+            "text": "Returns to Moscone"
+          },
+          {
+            "url": "https://ai.engineer/worldsfair/2027",
+            "text": "After welcoming 7,500 attendees in 2026"
+          }
+        ]
+      },
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://ai.engineer/worldsfair/2027",
+            "text": "MOSCONE WEST, SAN FRANCISCO"
+          }
+        ],
+        "basis": "The official event page states the venue hall and city in its header and venue section."
+      },
+      "occurrences": [
+        {
+          "start": "2027-06-29",
+          "end": "2027-07-01",
+          "quotes": [
+            {
+              "url": "https://ai.engineer/worldsfair/2027",
+              "text": "JUNE 29 – JULY 1, 2027"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "AI & technology",
+      "reason": "The official page states that tickets are 'announcing soon', so no admission value is approved.",
+      "notes": ""
+    },
+    "a-tdx-2027": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "TDX 2027",
+          "quotes": [
+            {
+              "url": "https://www.moscone.com/events/tdx-2027",
+              "text": "TDX 2027"
+            }
+          ]
+        },
+        "schedule": {
+          "value": "March 10–11, 2027",
+          "quotes": [
+            {
+              "url": "https://www.moscone.com/events/tdx-2027",
+              "text": "March 10–11, 2027"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Moscone Center",
+          "quotes": [
+            {
+              "url": "https://www.moscone.com/events/tdx-2027",
+              "text": "Moscone Center"
+            }
+          ]
+        }
+      },
+      "kind": "Special",
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://www.moscone.com/events/tdx-2027",
+            "text": "San Francisco, CA USA"
+          }
+        ],
+        "basis": "The official Moscone Center event page states the hall and the city/country."
+      },
+      "occurrences": [
+        {
+          "start": "2027-03-10",
+          "end": "2027-03-11",
+          "quotes": [
+            {
+              "url": "https://www.moscone.com/events/tdx-2027",
+              "text": "March 10–11, 2027"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "AI & technology",
+      "reason": "Registration is described but no price is quoted on the official venue page; admission stays blank.",
+      "notes": ""
+    },
+    "a-iclr-2027": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "ICLR 2027",
+          "quotes": [
+            {
+              "url": "https://iclr.cc/Conferences/2027/index.html",
+              "text": "ICLR 2027"
+            }
+          ]
+        },
+        "schedule": {
+          "value": "April 26-30, 2027",
+          "quotes": [
+            {
+              "url": "https://iclr.cc/Conferences/2027/index.html",
+              "text": "April 26-30, 2027"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Moscone Center, San Francisco, CA",
+          "quotes": [
+            {
+              "url": "https://iclr.cc/Conferences/2027/index.html",
+              "text": "Moscone Center, San Francisco, CA"
+            }
+          ]
+        }
+      },
+      "kind": "Annual",
+      "recurrence": {
+        "value": "Annual conference; the 2027 edition is the fifteenth",
+        "quotes": [
+          {
+            "url": "https://iclr.cc/Conferences/2027/index.html",
+            "text": "The Fifteenth International Conference on Learning Representations"
+          }
+        ]
+      },
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://iclr.cc/Conferences/2027/index.html",
+            "text": "Moscone Center, San Francisco, CA"
+          }
+        ],
+        "basis": "The official conference page's venue block carries the Moscone Center, San Francisco, CA image caption."
+      },
+      "occurrences": [
+        {
+          "start": "2027-04-26",
+          "end": "2027-04-30",
+          "quotes": [
+            {
+              "url": "https://iclr.cc/Conferences/2027/index.html",
+              "text": "April 26-30, 2027"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "AI & technology",
+      "reason": "Flagged: the page's Venue section currently reads 'Venue information will be posted here'. The venue value is taken from the official page's own venue image caption, which reads 'Moscone Center, San Francisco, CA'; confirm against the venue page before relying on it. Registration is shown as closed and no price is quoted here.",
+      "notes": ""
+    },
+    "a-data-ai-summit-2027": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Data + AI Summit 2027",
+          "quotes": [
+            {
+              "url": "https://www.databricks.com/dataaisummit",
+              "text": "Data + AI Summit"
+            }
+          ]
+        },
+        "schedule": {
+          "value": "June 21–24, 2027",
+          "quotes": [
+            {
+              "url": "https://www.databricks.com/dataaisummit",
+              "text": "June 21–24, 2027"
+            }
+          ]
+        },
+        "venue": {
+          "value": "Moscone North, West and South (the address is 747 Howard Street, San Francisco, CA 94103)",
+          "quotes": [
+            {
+              "url": "https://www.databricks.com/dataaisummit",
+              "text": "Moscone North, West and South (the address is 747 Howard Street, San Francisco, CA 94103)"
+            }
+          ]
+        }
+      },
+      "kind": "Annual",
+      "recurrence": {
+        "value": "Annual summit; the official page is the 2027 edition",
+        "quotes": [
+          {
+            "url": "https://www.databricks.com/dataaisummit",
+            "text": "SEE YOU NEXT YEAR!"
+          }
+        ]
+      },
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://www.databricks.com/dataaisummit",
+            "text": "SAN FRANCISCO + VIRTUAL"
+          }
+        ],
+        "basis": "The official summit page and its FAQ both place the in-person edition in San Francisco, with an explicit Moscone street address."
+      },
+      "occurrences": [
+        {
+          "start": "2027-06-21",
+          "end": "2027-06-24",
+          "quotes": [
+            {
+              "url": "https://www.databricks.com/dataaisummit",
+              "text": "June 21–24, 2027"
+            }
+          ]
+        }
+      ],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "AI & technology",
+      "reason": "No admission price is quoted in the captured official text; in-person and virtual formats are both stated. Price stays blank.",
+      "notes": ""
+    },
+    "a-ai-council-2027": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "AI Council 2027",
+          "quotes": [
+            {
+              "url": "https://www.aicouncil.com/",
+              "text": "AI Council"
+            }
+          ]
+        },
+        "schedule": {
+          "value": "March 23-24, 2027",
+          "quotes": [
+            {
+              "url": "https://www.aicouncil.com/",
+              "text": "March 23-24, 2027"
+            }
+          ]
+        }
+      },
+      "kind": "Special",
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://www.aicouncil.com/",
+            "text": "AI Conference in San Francisco, March 23"
+          }
+        ],
+        "basis": "The official conference page names San Francisco as the host city for the March 2027 edition."
+      },
+      "occurrences": [
+        {
+          "start": "2027-03-23",
+          "end": "2027-03-24",
+          "quotes": [
+            {
+              "url": "https://www.aicouncil.com/",
+              "text": "March 23-24, 2027"
+            }
+          ]
+        }
+      ],
+      "publication": "review_only",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "AI & technology",
+      "reason": "Held for review: the captured official text names San Francisco as the host city but does not state a venue, so the directory's name + venue + city-only geography gate is not met.",
+      "notes": ""
+    },
+    "m-stern-grove-festival": {
+      "reviewer": "3adf31d9",
+      "reviewed_at": "2026-10-18",
+      "fields": {
+        "name": {
+          "value": "Stern Grove Festival",
+          "quotes": [
+            {
+              "url": "https://www.sterngrove.org/about-us",
+              "text": "Stern Grove Festival"
+            }
+          ]
+        },
+        "venue": {
+          "value": "19th Avenue and Sloat Boulevard San Francisco, CA 94132",
+          "quotes": [
+            {
+              "url": "https://www.sterngrove.org/accessibility-ada",
+              "text": "19th Avenue and Sloat Boulevard San Francisco, CA 94132"
+            }
+          ]
+        },
+        "price": {
+          "value": "every show is free",
+          "quotes": [
+            {
+              "url": "https://www.sterngrove.org/about-us",
+              "text": "every show is free"
+            }
+          ]
+        }
+      },
+      "kind": "Annual",
+      "recurrence": {
+        "value": "Every summer",
+        "quotes": [
+          {
+            "url": "https://www.sterngrove.org/about-us",
+            "text": "Every summer, we gather generations of Bay Area communities in a natural amphitheater unlike anywhere else"
+          }
+        ]
+      },
+      "geography": {
+        "status": "confirmed_sf",
+        "quotes": [
+          {
+            "url": "https://www.sterngrove.org/about-us",
+            "text": "bringing world-class live music to San Francisco since 1938"
+          }
+        ],
+        "basis": "The official festival pages state San Francisco explicitly and publish a San Francisco venue address."
+      },
+      "occurrences": [],
+      "publication": "listed",
+      "parent": "",
+      "entry_type": "event",
+      "topic": "Music",
+      "reason": "Free admission is quoted directly from the official about page. No 2027 season dates were published on the official pages captured, so no occurrence date is asserted; the festival is labelled a recurring annual pattern with the next date unconfirmed.",
+      "notes": ""
+    }
+  }
+}

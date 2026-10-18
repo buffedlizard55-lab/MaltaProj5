@@ -4,14 +4,60 @@
 
 ## Evidence model
 
-1. Preserved historical inputs are unverified candidates, not authoritative facts. The newer mainline `audit_f1fd3c36.json` and its tool are preserved unchanged and run only in an isolated candidate-history tree; their old labels never approve fields. Both upstream-added candidates and the 2026 Sketchfest reference remain available.
+1. Preserved historical inputs are unverified candidates, not authoritative facts. Two additive,
+   fail-closed research overlays now sit on top of the mainline audit: session `59f56c24`'s five
+   official-calendar entries (merged into `data/audit_64f8b973.json`) and session `3adf31d9`'s
+   fifteen topic-gap entries (`data/audit_3adf31d9.json`). Neither can approve or edit a field
+   produced by the other or by the mainline overlay. The newer mainline `audit_f1fd3c36.json` and its tool are preserved unchanged and run only in an isolated candidate-history tree; their old labels never approve fields. Both upstream-added candidates and the 2026 Sketchfest reference remain available.
 2. `data/audit_64f8b973.json` stores finite official page/PDF text captures, request metadata, separately labeled selected retrieval-tool excerpts, structured event JSON-LD and explicit decisions.
 3. Every approved name, schedule, time, venue, admission condition, recurrence and normalized occurrence has supporting quotations. Geography records explain how the official event/venue is placed inside SF; unrelated footer/marketing city tokens are not acceptable.
 4. The build starts factual fields blank and copies only approved decisions. Unknown fields stay blank and flagged. Name + venue + confirmed SF geography are required for directory admission; other candidates remain on Flagged for Review.
 5. Exact substring checks establish quotation provenance, **not contextual applicability**. Editions, ticket eligibility, date conflicts and geography require recorded research judgment. JSON-LD is identified as structured evidence, not misrepresented as visible page text.
 6. Only approved full ISO dates drive snapshot-relative temporal labels. No date parser invents a year from a URL slug, weekday, copyright, season header or unrelated event. Recurrence never generates future occurrences.
 
-The public ledger contains **248 distinct cited URLs across 141 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
+The public ledger contains **264 distinct cited URLs across 150 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
+
+## Topic-gap overlay (session `3adf31d9`)
+
+The register originally had no AI/technology entries and only one dated gaming entry. Session
+`3adf31d9` added **15** entries from official pages only, stored in `data/audit_3adf31d9.json`
+and narrated in [the research log](data/research/audit-3adf31d9.md). The overlay is **additive and
+fail-closed**: it runs after `tools/audited_register.py` and can only add capture-evidenced rows,
+never approve or edit an existing field.
+
+Two retrieval methods were used, and each capture records which one produced it:
+
+* **`workspace fetch_page`** — the page body as returned by the fetch tool. Some pages returned more
+  chunks than were read; those captures record `chunks_retrieved` / `chunks_total` and
+  `complete: false`.
+* **`workspace web_search`** — the **verbatim result text** the search tool returned for that exact
+  official URL. Used where the event block is buried under navigation (sfpl.org puts it below three
+  chunks of branch hours) or sits under the fetched fold (the Stern Grove contact block).
+
+A search-snippet capture carries **no HTTP status**. It is evidence of what the tool returned for
+that official URL on 18 October 2026, and it is never presented as a verified page fetch with a
+200 response. The Sources page prints this distinction per source record.
+
+Deliberate non-approvals, each of which left a value blank rather than plausible:
+
+1. **Library admission is never assumed free.** Every SFPL chess, board-game and Chinese-chess entry
+   leaves its price blank, because the official event text does not state admission. The Excelsior
+   page's “Bright Knights Chess Club hosts free chess programs” describes the partner club's
+   programmes, not this library session.
+2. **Conference prices are not quoted on the pages read.** GDC, TDX, ICLR, Data + AI Summit and AI
+   Engineer World's Fair each link to a registration or pricing page without stating a number. All
+   five read **Not stated** — not “Paid”, and never a guessed ticket price.
+3. **Mechanics' Institute Introduction to Chess is held for review.** The official page names the
+   room and says “FREE for Mechanics’ Institute Members”, but the captured text never states a San
+   Francisco address, so name + venue + city-only geography is not satisfied.
+4. **AI Council 2027 is held for review** — San Francisco is named, but no venue is stated.
+5. **ICLR 2027's venue is approved with a printed caveat.** The official Venue section still reads
+   “Venue information will be posted here”; the value comes from that same page's venue image
+   caption, “Moscone Center, San Francisco, CA”, and the caveat is shown in the row.
+6. **GDC is not labelled annual.** The captured text dates the 2027 edition without saying the
+   festival repeats, so its cadence is *Special*.
+7. **Stern Grove carries no occurrence date.** The official pages support an annual cadence
+   (“since 1938”, “Every summer”) but no 2027 season dates were published on them.
 
 ## Representative official pages and scope
 

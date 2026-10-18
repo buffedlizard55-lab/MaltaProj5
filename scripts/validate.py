@@ -15,6 +15,9 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from audited_register import FIELDS, compile_register, normal  # noqa: E402
+from register_3adf31d9 import extend as extend_register, topic_of, cost_of, next_date  # noqa: E402
+
+TOPIC_PAGES = {'gaming.html': 'Gaming', 'music.html': 'Music', 'ai.html': 'AI & technology'}
 
 
 def load(name):
@@ -51,7 +54,7 @@ class Page(HTMLParser):
             self.h1 += 1
         if tag == 'meta' and a.get('name') == 'viewport':
             self.viewport = True
-        if tag == 'table' and a.get('id') == 'events':
+        if tag == 'table' and 'events' in a.get('class', '').split():
             self.in_events = True
         if self.in_events and tag == 'tr' and 'id' in a:
             self.row, self.cells = a['id'], []
@@ -96,13 +99,16 @@ def main():
     history, audit = load('unverified_history.json'), load('audit_64f8b973.json')
     assert history['warning'].startswith('UNVERIFIED'), 'Historical claims need an explicit warning'
     expected = compile_register(history['events'], history['sources'], history['review_findings'], audit)
-    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection. Rebuild; never run the old matcher applicator.'
+    expected = extend_register(*expected)
+    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection plus the additive 3adf31d9 overlay. Rebuild; never run the old matcher applicator.'
+    assert {r['id'] for r in rows} >= set(load('audit_3adf31d9.json')['candidates']), 'New-research candidates were dropped'
     ids = {r['id'] for r in rows}
     assert len(ids) == len(rows)
     assert set(audit['candidates']) <= ids, 'An inherited candidate was silently discarded'
     assert all(r['sources'] and all(s in sources for s in r['sources']) for r in rows)
     assert len({s['url'] for s in sources.values()}) == len(sources), 'Duplicate source URLs'
     listed = [r for r in rows if r['publication'] == 'listed']
+    by_id = {r['id']: r for r in rows}
     for row in rows:
         for field in FIELDS:
             assert bool(row[field]) == bool(row['field_evidence'].get(field)), (row['id'], field)
@@ -125,7 +131,7 @@ def main():
         page.feed(path.read_text())
         assert page.lang == 'en' and page.has_title and page.h1 == 1 and page.viewport, path.name
         pages[path.name] = page
-    assert len(pages) == 15, 'Unexpected page set'
+    assert len(pages) == 18, 'Unexpected page set'
     for name, page in pages.items():
         for href in page.links:
             url = urlsplit(href)
@@ -139,26 +145,45 @@ def main():
                 assert unquote(url.fragment) in pages[target].ids, (name, href)
         for rid, cells in page.event_rows.items():
             row = next(r for r in rows if r['id'] == rid)
-            assert len(cells) == 8, (name, rid, len(cells))
+            assert len(cells) == 9, (name, rid, len(cells))
             assert page.row_official[rid], ('Row missing a direct official source', name, rid)
             assert all(url in {sources[s]['url'] for s in row['sources']} for url in page.row_official[rid])
-            for index, field in ((2, 'time'), (3, 'venue'), (4, 'price')):
+            badge, conditions = cost_of(row)
+            expected_badge = badge + (' Conditions apply — read the exact wording' if conditions else '')
+            assert cells[1] == expected_badge, (name, rid, 'cost badge', cells[1], expected_badge)
+            for index, field in ((3, 'time'), (4, 'venue'), (5, 'price')):
                 assert cells[index] == normal(row[field]), (name, rid, field, cells[index])
             if not row['schedule']:
-                assert not cells[1], ('Unsupported schedule rendered', name, rid)
+                assert not cells[2], ('Unsupported schedule rendered', name, rid)
             else:
-                assert cells[1].startswith(normal(row['schedule'])), (name, rid, 'schedule')
+                assert cells[2].startswith(normal(row['schedule'])), (name, rid, 'schedule')
             if row['name']:
                 assert cells[0].startswith(normal(row['name']))
             else:
                 assert 'Unverified inherited identifier' in cells[0]
     assert set(pages['index.html'].event_rows) == {r['id'] for r in listed}
-    assert set(pages['free.html'].event_rows) == {r['id'] for r in listed}
-    assert set(pages['focus.html'].event_rows) == {r['id'] for r in listed}
-    upcoming_ids = set(pages['upcoming.html'].event_rows)
-    assert upcoming_ids and upcoming_ids <= {r['id'] for r in listed}
-    assert all(any((o['end'] or o['start']) >= '2026-10-18' for o in r['occurrences']) or r['kind'] in ('Weekly', 'Monthly') for r in listed if r['id'] in upcoming_ids)
     assert set(pages['review.html'].event_rows) == ids
+    # Upcoming carries every listed entry: dated first, then recurring, then undated.
+    assert set(pages['upcoming.html'].event_rows) == {r['id'] for r in listed}
+    for name, topic in TOPIC_PAGES.items():
+        assert set(pages[name].event_rows) == {r['id'] for r in listed if topic_of(r) == topic}, name
+    assert set(pages['free.html'].event_rows) == {r['id'] for r in listed if cost_of(r)[0] == 'Free'}
+    # Session 59f56c24's combined focus page: the whole directory, Gaming / Music / AI / Other.
+    assert set(pages['focus.html'].event_rows) == {r['id'] for r in listed}
+    focus_order = {'Gaming': 0, 'Music': 1, 'AI & technology': 2, 'Other': 3}
+    rank = -1
+    for rid in pages['focus.html'].event_rows:
+        topic = topic_of(by_id[rid])
+        assert focus_order[topic] >= rank, f'focus.html out of group order: {rid}'
+        rank = focus_order[topic]
+    # Date ordering: the Upcoming page must be nearest-first across its dated rows.
+    ordered = [rid for rid in pages['upcoming.html'].event_rows if next_date(next(r for r in rows if r['id'] == rid))]
+    dated_ids = [r['id'] for r in sorted((r for r in listed if next_date(r)), key=lambda r: (next_date(r), r['name'].casefold()))]
+    assert ordered == dated_ids, 'Upcoming page is not ordered nearest-first by approved date'
+    # Executive summary: the landing page lists the soonest entries before the table.
+    index_page = pages['index.html']
+    summary_links = [href for href in index_page.links if href.startswith('upcoming.html#')]
+    assert summary_links[:min(12, len(dated_ids))] == ['upcoming.html#' + rid for rid in dated_ids[:12]], 'Executive summary is not ordered by date'
     for name, kind in [('weekly.html', 'Weekly'), ('monthly.html', 'Monthly'), ('annual.html', 'Annual'), ('special.html', 'Special')]:
         assert set(pages[name].event_rows) == {r['id'] for r in listed if r['kind'] == kind}
     for name, category in [('markets.html', 'Markets & food'), ('museums.html', 'Museums & science'), ('culture.html', 'Festivals & culture'), ('community.html', 'Community & outdoors')]:
@@ -170,7 +195,7 @@ def main():
         assert '18 October 2026' in text
         assert 'not a real-time' in text or name in {'analysis.html', 'review.html', 'sources.html'}
         assert 'Page-level check' not in text and 'Field-level check' not in text
-    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 15 pages, row sources and local links/fragments.')
+    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 18 pages, cost badges, date ordering, row sources and local links/fragments.')
 
 
 if __name__ == '__main__':

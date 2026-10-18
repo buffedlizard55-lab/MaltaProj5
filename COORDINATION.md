@@ -28,6 +28,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `4f47c142` | `arena/4f47c142-maltaproj5` | 2026-10-18 ~00:40 | Full-inventory research (167 events), docs/ site, verification pass, second integration (PR #4) |
 | `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7) |
 | `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
+| `526a8db6` | `arena/526a8db6-maltaproj5` | 2026-10-18 | Independent final audit of delivered register, build, CI, and live publication (T19) |
+| `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 04:20 UTC | Post-publication data consistency fix and regression validation (T20) |
 | `f1fd3c36` | `arena/f1fd3c36-maltaproj5` | 2026-10-18 03:40 | Post-publication audit: independent line-by-line re-verification of the live 231-row register against official pages, corrections, Flagged page update, PR → main (T19–T21) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
@@ -59,11 +61,12 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T15 | GitHub Pages publication | **done — live** | all sessions | `.github/workflows/pages.yml` |
 | T16 | Defect D1 fix: `tools/integrate.py` idempotency + CI regression test | done | `5a85baf2` | `tools/integrate.py`, `data/sources_3a19e72d.json`, `data/review_3a19e72d.json`, `.github/workflows/pages.yml` |
 | T17 | Register expansion 86→106 entries from official sources | **done — content integrated**; PR #7 superseded | `a1b7522f` | `data/events_a1b7522f.json`, `data/sources_a1b7522f.json` |
-| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | done (PR #10, merged 02:05 UTC) | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
-
-| T19 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | done — 70 rows re-read: 36 confirmed, 28 corrected, 6 unverified/flagged, 2 rows added (`data/audit_f1fd3c36.json`) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
-| T20 | Pipeline irregularity fixes found during T19 (e.g. rows that carry a value *and* an "unverified; left blank" note) | done — `apply_audit.py` removes value-plus-"unverified" contradictions (3 rows) and re-asserts blank⇔note consistency for every row; validate passes | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
-| T21 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **in progress** — rebuilt (233 rows, 236 sources, 20 findings), validated; PR → `main` opening (link recorded below when merged) | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
+| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **done — live** | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
+| T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **done** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
+| T20 | Resolve confirmed populated/marked-unverified data conflicts, strengthen consistency checks, document source-snapshot coverage, rebuild and publish | **in progress** | `99662c40` | `COORDINATION.md`, `data/events_base86.json`, `tools/consolidate.py`, `tools/apply_verify.py`, `scripts/build.py`, `scripts/validate.py`, generated data/pages, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
+| T22 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | done — 70 rows re-read: 36 confirmed, 28 corrected, 6 unverified/flagged, 2 rows added (`data/audit_f1fd3c36.json`) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
+| T23 | Pipeline irregularity fixes found during T22 (e.g. rows that carry a value *and* an "unverified; left blank" note) | done — `apply_audit.py` removes value-plus-"unverified" contradictions (3 rows) and re-asserts blank⇔note consistency for every row; validate passes | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
+| T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **in progress** — rebuilt (233 rows, 234 sources, 20 findings), validated; PR → `main` opening (link recorded below when merged) | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -75,6 +78,18 @@ files are preserved under `data/`, and the merge map is explicit in `tools/conso
 ---
 
 ## Merge conflict log
+
+**2026-10-18 — `99662c40` rebased the T20 audit claim onto `origin/main` after PR #14 landed.**
+
+PR #14 from session `526a8db6` had already recorded an independent delivery audit as T19 and marked
+T18 complete. The local claim had independently used the same T19 number before fetching that
+update. Resolution preserved PR #14's registry entry and completed T19 unchanged, kept T18 marked
+done, and renumbered this distinct data-consistency remediation as T20. The confirmed data anomaly
+was then logged under T20 before modifying shared generated outputs. No files or findings from the
+other session were discarded. Rebasing onto the updated `main` made the first ordinary push
+non-fast-forward; fetch confirmed the remote branch contained only this session's earlier claim
+commit (`dcbec2c`). The rebased branch preserves that claim and PR #14's mainline commits; its
+update will use a lease against the observed remote SHA so no concurrent branch update is lost.
 
 **2026-10-18 — `5a85baf2` integration merge of `origin/main` (`bb74afd`) into
 `arena/5a85baf2-maltaproj5`.**
@@ -549,13 +564,48 @@ merge and re-validated.
 * Automated pass: 165 rows name-confirmed, 64 not name-matched (bots/JS), 2 PDFs, **0 dead URLs**, 46 blocked URLs.
 * Verification labels: 117 field-level · 79 page-level · 35 flagged.
 
+
+---
+
+## Independent delivery audit (T19) — `526a8db6`, 2026-10-18
+
+This session found the requested deliverable already integrated on `main` and independently checked
+the generated outputs rather than duplicating the completed research. No data or site defect was
+found. The stale top-level T18 status was corrected from “in progress” to “done — live.”
+
+### Reproducibility and validation
+
+```
+python3 tools/consolidate.py  -> 231 rows; Weekly 25, Monthly 11, Annual 135, Special 60; 213 sources
+python3 tools/apply_verify.py -> 165 name found, 64 not found, 2 PDFs; 35 bot-blocked rows flagged
+python3 scripts/build.py      -> 12 pages, 231 rows, 213 official-source records
+python3 scripts/validate.py   -> PASS: evidence, blank flags, parents, pages, local links/fragments
+git status --short           -> clean after the complete canonical pipeline
+```
+
+The audit also confirmed through the GitHub API that there were no open pull requests before this
+audit, Pages was public in branch mode from `main` / root with HTTPS enforced, and the latest Pages
+build for `e8828ef` had status `built`. The corresponding validation and Pages Actions runs
+(`39089686728` and `39089686311`) both concluded successfully. Official manual-review links remain
+available row by row on `sources.html`; unresolved bot/JavaScript checks and blank fields remain
+published on `review.html` and do not block publication.
+
+### Irregularities
+
+* The source register is a maintained inventory, not a provably exhaustive census; this limitation
+  is explicitly published in the site methodology.
+* 64 rows were not machine name-matched (including 35 bot-blocked rows), and two PDF sources were
+  not text-checked. These are not represented as machine-verified and remain visible for review.
+* No dead URL, generated-output drift, broken local link, missing row evidence reference, or Pages
+  deployment failure was found during this audit.
+
 ---
 
 ## Claim — session `f1fd3c36` (2026-10-18 03:40 UTC) — POST-PUBLICATION AUDIT
 
 Board state at intake: T1–T18 done, PRs #1–#13 merged, no open PRs, no claim younger than 60
 minutes, Pages `built` in branch mode from `main`. No other session is active, so this session
-takes the review role (T19/T20) and, once those are done, the integration role (T21).
+takes the review role (originally claimed as T19/T20, renumbered T22/T23 after sessions `526a8db6` and `99662c40` used T19/T20 concurrently) and, once those are done, the integration role (T24).
 
 Method: the sandbox's `fetch_page` tool reaches official sites (confirmed against
 foodwise.org at intake), so every row in scope is re-read by a human-readable fetch of its
@@ -572,7 +622,7 @@ URL, the quoted text, and the date) and applied by `tools/apply_audit.py` after
 * Outcomes: 36 confirmed · 28 corrected · 6 unverified (flagged) · 2 rows added
   (Alemany Flea Market — sf.gov; SFFILM Doc Stories — sffilm.org FAQ).
 * Register after audit: **233 rows** (Weekly 26 · Monthly 12 · Annual 137 · Special 58) ·
-  236 source records / 139 domains · 20 findings · labels 147 field-level · 78 page-level · 8 flagged.
+  234 source records / 139 domains · 20 findings · labels 147 field-level · 78 page-level · 8 flagged.
 * Irregularities logged on the Flagged page and in `ANALYSIS.md`: Litquake rows disagreed on dates
   (official: Oct 8–24, 2026); Antiquarian Book Fair alternates SF/LA (2027 in LA); Lowrider Parade
   site still shows the 2025 edition (2026 date removed); City says the Golden Gate Bridge display is

@@ -9,10 +9,16 @@ for r in rows:
  assert r['sources'] and all(s in sources for s in r['sources'])
  assert r['kind'] in ['Weekly','Monthly','Annual','Special']
  for k in ['schedule','time','venue','price']:
-  assert r[k] or any(f.startswith(k+': unverified') for f in r['unverified']), (r['id'],k)
+  marked_unverified = any(f.startswith(k+': unverified') for f in r['unverified'])
+  assert r[k] or marked_unverified, (r['id'],k)
+  assert not (r[k] and marked_unverified), (r['id'],k,'populated value conflicts with unverified marker')
   if r[k]: assert r['evidence'][k]
  assert not r['parent'] or r['parent'] in {x['id'] for x in rows}
 for s in sources.values(): assert s['url'].startswith('https://') and s['checked']=='2026-10-18' and s['excerpt']
+review = json.loads((root/'data/review.json').read_text())
+used_sources = {sid for row in rows for sid in row['sources']}
+used_sources |= {sid for finding in review for sid in finding.get('sources', [])}
+assert set(sources) == used_sources, {'unused': sorted(set(sources)-used_sources), 'missing': sorted(used_sources-set(sources))}
 class Parse(HTMLParser):
  def __init__(self): super().__init__(); self.links=[]; self.ids=set()
  def handle_starttag(self,tag,attrs):

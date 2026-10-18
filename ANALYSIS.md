@@ -1,8 +1,8 @@
 # ANALYSIS.md — findings from the verified San Francisco register
 
 Snapshot **2026-10-18**. Every figure below is computed from `data/events.json`
-(233 rows), `data/sources.json` (236 records), `data/review.json` (20 findings) and
-`data/verify_report.json` (the machine fetch of every cited URL). The published version of this
+(233 rows), `data/sources.json` (234 records), `data/review.json` (20 findings) and
+`data/verify_report.json` (a saved machine-fetch snapshot with the coverage gaps documented below). The published version of this
 analysis is `analysis.html`.
 
 ## Headline numbers
@@ -19,14 +19,14 @@ analysis is `analysis.html`.
 | — community & outdoors | 61 |
 | — markets & food | 35 |
 | — museums & science | 23 |
-| Official source records | 236 |
+| Official source records | 234 |
 | Distinct source domains | 139 |
-| Rows verified field-level | 150 |
-| Rows verified page-level | 75 |
+| Rows verified field-level | 147 |
+| Rows verified page-level | 78 |
 | Rows flagged for review | 8 |
-| Rows with at least one blank tracked field | 172 |
+| Rows with at least one blank tracked field | 173 |
 | Review findings | 20 |
-| Cited URLs that were dead in the last check | 0 |
+| Current source URLs reported dead in the saved fetch snapshot | 0 (one failed URL was superseded; details below) |
 
 ## Manual line-by-line audit (2026-10-18, session f1fd3c36)
 
@@ -63,23 +63,35 @@ text in `data/audit_f1fd3c36.json` and applied by `tools/apply_audit.py`. Irregu
 
 ## Verification outcome (2026-10-18 automated pass)
 
-Every cited URL was fetched from GitHub Actions and its visible text searched for the event name.
+The committed machine report is a historical snapshot from before the final integration. It is
+not a current, exhaustive link check: of the 203 distinct URLs in the current source ledger, two
+are absent from that snapshot and one URL in the snapshot has since been removed. The two current
+URLs not covered are [SFMOMA's Free Days page](https://www.sfmoma.org/free-days/) and [San
+Francisco Opera's homepage](https://www.sfopera.com/); both are cited for review findings and the
+source ledger contains manually read excerpts. They are listed again on `review.html`.
 
-| Result | Rows |
-|---|---|
+| Result in saved snapshot | Rows / URLs |
+|---|---:|
 | Event name found on a cited page | 165 |
-| Not found in the fetched text (mostly bot-blocked or JavaScript-rendered) | 64 |
-| Cites a PDF, read manually (not machine-matchable) | 2 |
+| Not found in fetched text (mostly bot-blocked or JavaScript-rendered) | 64 |
+| PDF not machine-matched | 2 |
 | No response | 0 |
-| Dead URLs (404/410/DNS) | 0 |
-| URLs that blocked the automated client (202/403/405/429/5xx) | 46 |
+| Dead/connection-failed URLs in snapshot | 1 |
+| Current source URLs reported dead by that snapshot | 0 |
+| URLs that blocked the automated client (202/403/405/429/5xx) | 47 |
 
-A blocked page is not evidence of a bad event. Those rows keep a label and their notes are
-published on `review.html`; 35 rows carried an automation-generated "manual re-check requested"
-note, of which 34 were then re-read by hand in the line-by-line audit (one, Super Bowl LX fan
-events, rests on a bot-blocked aggregator page and remains flagged). Two rows that could only be sourced to a generic landing page in the 167-row register
-(Chase Center concerts, PIER 39) were re-pointed to specific official event/news pages during
-integration.
+The sole failure was a TLS/connection error for `https://sfcurran.com/visit/`, a superseded URL
+that is no longer in the current source ledger; the current Curran entry cites the official [ATG
+box office page](https://us.atgtickets.com/venues/curran-theater/whats-on/). A blocked page is not
+evidence of a bad event. The automated check establishes page response/name matching only; it
+does not verify dates, times, venues or prices. The findings and exact URL-set differences are
+published on `review.html`. Two rows that could only be sourced to a generic landing page in the
+167-row register (Chase Center concerts, PIER 39) were re-pointed to specific official event/news
+pages during integration.
+
+In addition, 35 rows carried an automation-generated "manual re-check requested" note; 34 of them
+were then re-read by hand in the line-by-line audit above (one, Super Bowl LX fan events, rests on
+a bot-blocked aggregator page and remains flagged).
 
 ## Findings
 
@@ -93,7 +105,7 @@ calendar, not a weekly-rhythm calendar.
 
 Of the 137 annual rows, 32 already carry a dated 2027 edition or season; the rest preserve the
 recurring pattern only. Where an organizer has not posted the next edition, the date cell is not
-invented. 172 rows have at least one blank tracked field (most often the start time, which many
+invented. 173 rows have at least one blank tracked field (most often the start time, which many
 market pages do not publish separately from opening hours).
 
 ### 3. Coverage is uneven and not exhaustive
@@ -106,7 +118,7 @@ over-represented because their organizers publish machine-readable pages.
 
 ### 4. Source concentration is high, and that is a risk
 
-236 source records sit on 139 domains, but a handful of publishers supply many rows: San Francisco
+234 source records sit on 139 domains, but a handful of publishers supply many rows: San Francisco
 Opera's season press page covers five productions, PIER 39's events page covers two rows, and 12
 rows cite San Francisco Travel (the city's destination-marketing body); after the audit, organizer
 pages were added to 9 of them and only 2 (Disability History Tour, Super Bowl LX fan events) rest

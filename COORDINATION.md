@@ -738,3 +738,53 @@ PRs #14, #15 and #16 merged while this audit was in progress. Resolution, discar
 | `scripts/build.py` | Auto-merged (main's SF Travel exception wording + this session's audit paragraph). |
 | `ANALYSIS.md`, `README.md` | This branch's versions (they add the audit section) with counts re-synced to the merged output: 233 rows, 235 sources, 140 domains. |
 | `COORDINATION.md` | Both boards and all audit logs preserved. Task-number collision: this session's tasks renumbered **T22–T24** (`526a8db6` T19, `99662c40` T20, `cebeabf0` T21 stand). |
+
+---
+
+## Rebase conflict log — `99662c40`, 2026-10-18, PR #17 onto PR #18
+
+While PR #17 (T20 publication record) was open, PR #18 from session `f1fd3c36` merged its
+line-by-line audit to `main`. Rebasing retained PR #18's task records, audit log, corrections and
+integration history. The T20 completion record below was re-added after the mainline version; no
+files or findings from session `f1fd3c36` were discarded. PR #17 remains a documentation-only
+follow-up to already-merged PR #16.
+
+## Independent consistency audit (T20) — `99662c40`, 2026-10-18
+
+### Confirmed defects and changes
+
+* Three rows had populated admission values while also showing `price: unverified; left blank.`
+  The saved repository excerpts did not confirm admission, so T20 blanked prices, removed their
+  price-evidence pointers, retained unverified markers, and kept the official event links for
+  review: [Foodwise — Ferry Plaza Farmers Market](https://foodwise.org/markets/ferry-plaza-farmers-market/),
+  [SF Pride — events](https://sfpride.org/events/), and
+  [San Francisco Marathon — 2027](https://www.thesfmarathon.com/2027-50th-anniversary/).
+* Added invariants in `tools/consolidate.py` and `scripts/validate.py`: populated fields cannot also
+  be marked unverified; populated fields require evidence; the source ledger cannot retain records
+  unused by event rows or current review findings.
+* Fixed source-ledger pruning order so records referenced only by retired findings are removed.
+* The committed automated report is a historical snapshot (`2026-10-18T01:44:56Z`), not an
+  exhaustive current link check. One TLS failure was for the superseded
+  `sfcurran.com/visit/` URL; two then-current review links were not represented in the report:
+  [SFMOMA Free Days](https://www.sfmoma.org/free-days/) and
+  [San Francisco Opera](https://www.sfopera.com/). Exact gaps and stale URL are linked on
+  `review.html`; the Analysis page calls the report historical.
+
+### Verification and publication
+
+```
+python3 tools/consolidate.py  -> 231 rows; Weekly 25, Monthly 11, Annual 135, Special 60; 211 sources
+python3 tools/apply_verify.py -> historical report coverage gaps and stale URL surfaced on review page
+python3 scripts/build.py      -> 12 pages; deterministic LF CSV
+python3 scripts/validate.py   -> PASS: evidence, blanks, parents, pages, local links/fragments
+full pipeline twice           -> identical outputs; git diff --check clean
+independent invariants        -> no duplicate rows, orphan sources or populated/unverified conflicts
+PR #16 checks                 -> success, run 39092292828
+main check                    -> success, run 39092535477; remote URL step found no dead URL
+```
+
+PR **#16** (`https://github.com/buffedlizard55-lab/MaltaProj5/pull/16`) merged at
+**2026-10-18 03:07:53 UTC**, merge commit `15ada17b7bf457c6882a44d54aad6f67771ab800`.
+Pages deployment **7149220879** for that commit reported **built** from `main` / root.
+The subsequent integration PRs #15 and #18 are recorded in their own merge logs and supersede
+T20's historical counts; they preserved the blank prices and added independently sourced corrections.

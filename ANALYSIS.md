@@ -1,7 +1,7 @@
 # ANALYSIS.md — findings from the verified San Francisco register
 
 Snapshot **2026-10-18**. Every figure below is computed from `data/events.json`
-(231 rows), `data/sources.json` (213 records), `data/review.json` (19 findings) and
+(231 rows), `data/sources.json` (214 records), `data/review.json` (19 findings) and
 `data/verify_report.json` (the machine fetch of every cited URL). The published version of this
 analysis is `analysis.html`.
 
@@ -19,12 +19,12 @@ analysis is `analysis.html`.
 | — community & outdoors | 61 |
 | — markets & food | 34 |
 | — museums & science | 23 |
-| Official source records | 213 |
-| Distinct source domains | 135 |
-| Rows verified field-level | 117 |
+| Official source records | 214 |
+| Distinct source domains | 136 |
+| Rows verified field-level | 118 |
 | Rows verified page-level | 78 |
-| Rows flagged for review | 36 |
-| Rows with at least one blank tracked field | 188 |
+| Rows flagged for review | 35 |
+| Rows with at least one blank tracked field | 186 |
 | Review findings | 19 |
 | Cited URLs that were dead in the last check | 0 |
 
@@ -42,7 +42,7 @@ Every cited URL was fetched from GitHub Actions and its visible text searched fo
 | URLs that blocked the automated client (202/403/405/429/5xx) | 46 |
 
 A blocked page is not evidence of a bad event. Those rows keep a label and their notes are
-published on `review.html`; 36 rows carry an automation-generated "manual re-check requested"
+published on `review.html`; 35 rows carry an automation-generated "manual re-check requested"
 note. Two rows that could only be sourced to a generic landing page in the 167-row register
 (Chase Center concerts, PIER 39) were re-pointed to specific official event/news pages during
 integration.
@@ -59,7 +59,7 @@ calendar, not a weekly-rhythm calendar.
 
 Of the 135 annual rows, 24 already carry a dated 2027 edition or season; the rest preserve the
 recurring pattern only. Where an organizer has not posted the next edition, the date cell is not
-invented. 188 rows have at least one blank tracked field (most often the start time, which many
+invented. 186 rows have at least one blank tracked field (most often the start time, which many
 market pages do not publish separately from opening hours).
 
 ### 3. Coverage is uneven and not exhaustive
@@ -72,7 +72,7 @@ over-represented because their organizers publish machine-readable pages.
 
 ### 4. Source concentration is high, and that is a risk
 
-213 source records sit on 135 domains, but a handful of publishers supply many rows: San Francisco
+214 source records sit on 136 domains, but a handful of publishers supply many rows: San Francisco
 Opera's season press page covers five productions, PIER 39's events page covers two rows, and 12
 rows cite San Francisco Travel (the city's destination-marketing body) because no organizer page
 for that edition could be found. One page changing can invalidate several rows at once. The review

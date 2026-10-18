@@ -1524,6 +1524,14 @@
   "method": "Automated fetch; event name not matched.",
   "http": 200
  },
+ "x-sfsketchfest2026-sched-com": {
+  "url": "https://sfsketchfest2026.sched.com/",
+  "publisher": "SF Sketchfest 2026 \u2014 official festival schedule (Sched, linked from sfsketchfest.com)",
+  "checked": "2026-10-18",
+  "excerpt": "SF Sketchfest 2026 schedule: first listed day Thursday, January 15, 2026 (7:00pm Sketch & Improv Showcase, Eclectic Box); 'Tickets on sale now!' The festival's 2026 run was announced as January 15\u2013February 1, 2026.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
+ },
  "x-www-thesuperfair-com-san-francisco": {
   "url": "https://www.thesuperfair.com/san-francisco",
   "publisher": "The Superfair (formerly Superfine Art Fair) \u2014 San Francisco",

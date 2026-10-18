@@ -4599,38 +4599,43 @@
   "name": "SF Sketchfest (San Francisco Comedy Festival)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (winter) \u2014 2026: Jan 16 - Feb 2, 2026",
+  "schedule": "Annual (winter) \u2014 2026: Jan 15 - Feb 1, 2026",
   "time": "",
   "venue": "Various venues, Citywide",
   "price": "Ticketed",
   "sources": [
+   "x-sfsketchfest2026-sched-com",
    "x-www-sfsketchfest-com"
   ],
   "evidence": {
    "name": [
+    "x-sfsketchfest2026-sched-com",
     "x-www-sfsketchfest-com"
    ],
    "schedule": [
-    "x-www-sfsketchfest-com"
+    "x-www-sfsketchfest-com",
+    "x-sfsketchfest2026-sched-com"
    ],
    "venue": [
-    "x-www-sfsketchfest-com"
+    "x-www-sfsketchfest-com",
+    "x-sfsketchfest2026-sched-com"
    ],
    "price": [
-    "x-www-sfsketchfest-com"
+    "x-www-sfsketchfest-com",
+    "x-sfsketchfest2026-sched-com"
    ]
   },
   "notes": "Nationally recognized comedy festival.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Date correction (audit cebeabf0, 2026-10-18): the authored register carried 'Jan 16 - Feb 2' \u2014 those are the 2025 edition's dates. The official SF Sketchfest 2026 schedule (sfsketchfest2026.sched.com, linked from sfsketchfest.com) opens Thursday, January 15, 2026, and the 2026 run is January 15\u2013February 1, 2026; the schedule field was corrected to match. sfsketchfest.com itself blocks automated clients (403)."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },

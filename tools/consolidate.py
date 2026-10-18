@@ -731,7 +731,12 @@ for r in rows:
             kept.append(f)
     r["flags"] = kept
     for field in ("schedule", "time", "venue", "price"):
-        if not r[field] and not any(f.startswith(field + ": unverified") for f in r["unverified"]):
+        if r[field]:
+            # D2 (audit cebeabf0): a populated field must not keep a stale
+            # "unverified; left blank" flag carried over from a source register.
+            r["unverified"] = [f for f in r["unverified"]
+                               if not f.startswith(field + ": unverified")]
+        elif not any(f.startswith(field + ": unverified") for f in r["unverified"]):
             r["unverified"].append(f"{field}: unverified — not stated on the cited official page.")
 
 # prune source records no longer cited by any row

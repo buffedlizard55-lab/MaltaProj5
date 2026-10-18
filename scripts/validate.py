@@ -10,7 +10,9 @@ for r in rows:
  assert r['kind'] in ['Weekly','Monthly','Annual','Special']
  for k in ['schedule','time','venue','price']:
   assert r[k] or any(f.startswith(k+': unverified') for f in r['unverified']), (r['id'],k)
-  if r[k]: assert r['evidence'][k]
+  if r[k]:
+   assert r['evidence'][k]
+   assert not any(f.startswith(k+': unverified') for f in r['unverified']), (r['id'],k,'stale unverified flag on populated field')
  assert not r['parent'] or r['parent'] in {x['id'] for x in rows}
 for s in sources.values(): assert s['url'].startswith('https://') and s['checked']=='2026-10-18' and s['excerpt']
 class Parse(HTMLParser):

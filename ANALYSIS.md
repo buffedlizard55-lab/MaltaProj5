@@ -22,8 +22,8 @@ analysis is `analysis.html`.
 | Official source records | 213 |
 | Distinct source domains | 135 |
 | Rows verified field-level | 117 |
-| Rows verified page-level | 79 |
-| Rows flagged for review | 35 |
+| Rows verified page-level | 78 |
+| Rows flagged for review | 36 |
 | Rows with at least one blank tracked field | 188 |
 | Review findings | 19 |
 | Cited URLs that were dead in the last check | 0 |
@@ -42,7 +42,7 @@ Every cited URL was fetched from GitHub Actions and its visible text searched fo
 | URLs that blocked the automated client (202/403/405/429/5xx) | 46 |
 
 A blocked page is not evidence of a bad event. Those rows keep a label and their notes are
-published on `review.html`; 35 rows carry an automation-generated "manual re-check requested"
+published on `review.html`; 36 rows carry an automation-generated "manual re-check requested"
 note. Two rows that could only be sourced to a generic landing page in the 167-row register
 (Chase Center concerts, PIER 39) were re-pointed to specific official event/news pages during
 integration.

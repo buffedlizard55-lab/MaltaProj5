@@ -52,9 +52,7 @@
    "by": "3a19e72d / 5a85baf2",
    "date": "2026-10-18"
   },
-  "unverified": [
-   "price: unverified; left blank."
-  ]
+  "unverified": []
  },
  {
   "id": "nightlife",
@@ -618,8 +616,7 @@
    "date": "2026-10-18"
   },
   "unverified": [
-   "time: unverified; left blank.",
-   "price: unverified; left blank."
+   "time: unverified; left blank."
   ]
  },
  {
@@ -2551,9 +2548,7 @@
    "by": "3a19e72d / 5a85baf2",
    "date": "2026-10-18"
   },
-  "unverified": [
-   "price: unverified; left blank."
-  ]
+  "unverified": []
  },
  {
   "id": "b-sunday-streets",

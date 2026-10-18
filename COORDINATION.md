@@ -63,7 +63,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **done — live** (PR #10 merged; PR #13 record) | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
 | T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **done** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
 | T20 | Resolve confirmed populated/marked-unverified data conflicts, strengthen consistency checks, document source-snapshot coverage, rebuild and publish | done (PR #16) | `99662c40` | `COORDINATION.md`, `data/events_base86.json`, `tools/consolidate.py`, `tools/apply_verify.py`, `scripts/build.py`, `scripts/validate.py`, generated data/pages, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
-| T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **in progress** | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
+| T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **done** (PR #15 merged; this record follows in a docs PR) | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -629,9 +629,11 @@ live site                      -> https://buffedlizard55-lab.github.io/MaltaProj
 
 | Item | Result |
 |---|---|
-| PR | _pending_ |
-| Merge | _pending_ |
-| Pages | _pending_ |
+| PR | **#15 — "T19 independent audit: fix stale unverified flags, correct SF Sketchfest 2026 dates, sync counts"** (renumbered T21 on this board after the T19/T20 collision, see merge log) |
+| CI on the PR | `Validate site` runs `39092174061` (pre-merge head) and `39092620957` (merged head `b9142b3`) — **both success**; main-push run `39092852631` — **success** |
+| Merge | **Merged 2026-10-18 03:13 UTC**, merge commit `e499ff8` — merged by this session without waiting for outside approval. Mid-flight, PRs #14/#16 from parallel sessions merged first; the conflict resolution is logged above (no work discarded, D2 adopted `99662c40`'s blanking) |
+| Pages | Branch mode (`main` / root). Pages build for `e499ff8`: **status `built`** (run `39092852458` success). Verified live: https://buffedlizard55-lab.github.io/MaltaProj5/annual.html serves the merged register (e.g. Pride Celebration price now consistently blank/unverified; Sketchfest correction included in the built commit) |
+| Final counts served | 231 entries (Weekly 25 · Monthly 11 · Annual 135 · Special 60) · 212 official-source records · 136 domains · 118 field-level · 78 page-level · 35 flagged · 188 rows with at least one blank (unverified) field |
 
 ---
 

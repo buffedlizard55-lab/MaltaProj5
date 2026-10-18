@@ -32,7 +32,8 @@
    "Official operator page lists the three market days and year-round operation.",
    "Also researched independently by session 5a85baf2; the row with more populated fields was kept and both official sources are linked.",
    "Second register (session 4f47c142) records: Weekly (Saturdays) plus Tue & Thu \u2014 Year-round: Sat 8am-2pm; Tue & Thu 10am-2pm. Kept as an additional dated record, not merged into the schedule field.",
-   "Minor discrepancy: SF Travel's Ferry Building guide lists Tuesday hours as 8am; Foodwise (the operator) lists Tue & Thu 10am-2pm. Operator site used."
+   "Minor discrepancy: SF Travel's Ferry Building guide lists Tuesday hours as 8am; Foodwise (the operator) lists Tue & Thu 10am-2pm. Operator site used.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): every populated value matched the official page. Page: https://foodwise.org/markets/ferry-plaza-farmers-market/. Pipeline irregularity: row carried price 'Free admission' and an 'unverified; left blank' note at the same time. Admission is not stated on the operator page (farmers markets are open-air public markets); the price field is blanked and the contradictory note removed by apply_audit."
   ],
   "parent": "",
   "also": [
@@ -46,11 +47,11 @@
   ],
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
-   "price: unverified; left blank."
+   "price: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ]
  },
  {
@@ -140,7 +141,8 @@
     "exvisit"
    ],
    "price": [
-    "exvisit"
+    "exvisit",
+    "dark"
    ]
   },
   "notes": "18+. Series row; dated themes below are occurrences, not additional series.",
@@ -159,7 +161,7 @@
   ],
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": []
@@ -202,7 +204,7 @@
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -247,7 +249,7 @@
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -292,7 +294,7 @@
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -667,7 +669,7 @@
   ],
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": []
@@ -848,7 +850,7 @@
   "parent": "after-dark",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -891,7 +893,7 @@
   "parent": "after-dark",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -936,7 +938,7 @@
   "parent": "after-dark",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -979,7 +981,7 @@
   "parent": "after-dark",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -1022,7 +1024,7 @@
   "parent": "after-dark",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -1065,7 +1067,7 @@
   "parent": "after-dark",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -1110,7 +1112,7 @@
   "parent": "after-dark",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -1248,7 +1250,7 @@
   "schedule": "Weekly, year-round \u2014 every Saturday \u2014 Saturday 7am-2pm",
   "time": "Sat 7:00-14:00",
   "venue": "100 Alemany Boulevard (Bernal Heights)",
-  "price": "Free admission",
+  "price": "",
   "sources": [
    "b-sf-gov-location-alemany-farmers-market"
   ],
@@ -1264,15 +1266,13 @@
    ],
    "venue": [
     "b-sf-gov-location-alemany-farmers-market"
-   ],
-   "price": [
-    "b-sf-gov-location-alemany-farmers-market"
    ]
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Food & Markets.",
   "flags": [
    "City page confirms Saturday 7am-2pm and that Foodwise has operated the market since February 2026. FLAG: the City's own market rules PDF states 7 AM-3 PM, so published closing time is inconsistent across sf.gov documents.",
-   "Second register (session 4f47c142) records: Weekly (Saturdays) \u2014 Year-round: Sat 7am-2pm. Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Weekly (Saturdays) \u2014 Year-round: Sat 7am-2pm. Kept as an additional dated record, not merged into the schedule field.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): every populated value matched the official page. Page: https://www.sf.gov/location--alemany-farmers-market. Admission price not stated on the City page; left blank."
   ],
   "parent": "",
   "also": [
@@ -1286,10 +1286,12 @@
   ],
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
-  "unverified": []
+  "unverified": [
+   "price: unverified \u2014 not stated on the official page re-read on 2026-10-18."
+  ]
  },
  {
   "id": "b-heart-of-the-city-farmers-market",
@@ -1450,10 +1452,10 @@
   "name": "Castro Night Market",
   "category": "Markets & food",
   "kind": "Monthly",
-  "schedule": "Monthly \u2014 third Friday, March through September \u2014 2026 season: March 20, April 17, May 15, June 19, July 17, August 21, September 18",
-  "time": "",
-  "venue": "18th Street at Castro Street (Castro)",
-  "price": "Free",
+  "schedule": "Monthly \u2014 3rd Friday of every month (official pattern); next listed date: Saturday, October 31, 2026, 5\u201310 PM (Castro Halloween edition)",
+  "time": "5:00\u201310:00 PM",
+  "venue": "18th & Castro Streets (Castro)",
+  "price": "",
   "sources": [
    "b-castronightmarket-com"
   ],
@@ -1467,22 +1469,23 @@
    "venue": [
     "b-castronightmarket-com"
    ],
-   "price": [
+   "time": [
     "b-castronightmarket-com"
    ]
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Food & Markets.",
   "flags": [
-   "Official site confirms third-Friday cadence and 18th & Castro. FLAG: the 2026 season ended September 18, 2026 and no 2027 dates are published; official and press listings also disagree on closing time (5-9pm vs 5-10pm), so time and next date are left blank."
+   "Official site confirms third-Friday cadence and 18th & Castro. FLAG: the 2026 season ended September 18, 2026 and no 2027 dates are published; official and press listings also disagree on closing time (5-9pm vs 5-10pm), so time and next date are left blank.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, time, venue, price. Page: https://castronightmarket.com/. Official site lists only the monthly pattern and the next date (Oct 31, 2026, a Halloween edition). Individual Mar\u2013Sep 2026 dates are not on the official site; price is not stated. Schedule rewritten to what the page states; price blanked."
   ],
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
-   "time: unverified; left blank."
+   "price: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ]
  },
  {
@@ -1678,29 +1681,35 @@
   "price": "Suggested donation $10-$20",
   "sources": [
    "b-castrostreetfair-org",
-   "x-www-castrostreetfair-org"
+   "x-www-castrostreetfair-org",
+   "f1-castrostreetfair-org-fair"
   ],
   "evidence": {
    "name": [
     "b-castrostreetfair-org"
    ],
    "schedule": [
-    "b-castrostreetfair-org"
+    "b-castrostreetfair-org",
+    "f1-castrostreetfair-org-fair"
    ],
    "time": [
-    "b-castrostreetfair-org"
+    "b-castrostreetfair-org",
+    "f1-castrostreetfair-org-fair"
    ],
    "venue": [
-    "b-castrostreetfair-org"
+    "b-castrostreetfair-org",
+    "f1-castrostreetfair-org-fair"
    ],
    "price": [
-    "b-castrostreetfair-org"
+    "b-castrostreetfair-org",
+    "f1-castrostreetfair-org-fair"
    ]
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Street Fairs & Parades.",
   "flags": [
    "Founded by Harvey Milk in 1974.",
-   "Second register (session 4f47c142) records: Annual (first Sunday of October) \u2014 Oct 4, 2026 (52nd annual). Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Annual (first Sunday of October) \u2014 Oct 4, 2026 (52nd annual). Kept as an additional dated record, not merged into the schedule field.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: source added. Page: https://castrostreetfair.org/fair/. All fields confirmed; the General Information page that states hours and the suggested donation is added as a source."
   ],
   "parent": "",
   "also": [
@@ -1714,7 +1723,7 @@
   ],
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": []
@@ -1853,7 +1862,7 @@
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -1891,7 +1900,7 @@
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -2396,9 +2405,9 @@
   "category": "Community & outdoors",
   "kind": "Annual",
   "schedule": "Annual \u2014 October, three days \u2014 2026 air show: October 9-11 at Marina Green (festival week October 4-12). U.S. Navy Blue Angels 2027 schedule lists San Francisco Fleet Week on October 9-10, 2027.",
-  "time": "12:00pm-4:00pm",
+  "time": "12:00 noon \u2013 4:00 PM",
   "venue": "Marina Green / over San Francisco Bay between the Golden Gate Bridge and Alcatraz (Marina)",
-  "price": "Waterfront viewing free; reserved seating ticketed",
+  "price": "Free general admission; VIP viewing ticketed",
   "sources": [
    "b-fleetweeksf-org-air-show",
    "fleet"
@@ -2437,7 +2446,7 @@
   ],
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": []
@@ -2602,9 +2611,9 @@
   "category": "Festivals & culture",
   "kind": "Annual",
   "schedule": "Annual \u2014 first full weekend of October, three days \u2014 2026: Friday October 2, Saturday October 3, Sunday October 4",
-  "time": "Fri 1pm-7pm; Sat & Sun 11am-7pm",
+  "time": "Gates 11:00 AM Fri, 9:00 AM Sat\u2013Sun; music ends 7:00 PM daily",
   "venue": "Hellman Hollow, Lindley and Marx Meadows, Golden Gate Park (Golden Gate Park)",
-  "price": "Free, no tickets",
+  "price": "Free (no tickets)",
   "sources": [
    "b-hardlystrictlybluegrass-com-info-faq-2026"
   ],
@@ -2628,7 +2637,8 @@
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Music & Festivals.",
   "flags": [
    "2027 dates not published on the official site as of the verification date.",
-   "Second register (session 4f47c142) records: Annual (early October) \u2014 Oct 2-4, 2026 (performances end 7pm daily; free, no tickets). Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Annual (early October) \u2014 Oct 2-4, 2026 (performances end 7pm daily; free, no tickets). Kept as an additional dated record, not merged into the schedule field.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: time, price. Page: https://www.hardlystrictlybluegrass.com/info-faq-2026/. Dates, venue and free admission confirmed. Time field rewritten to the gate-opening and end times stated on the FAQ."
   ],
   "parent": "",
   "also": [
@@ -2642,7 +2652,7 @@
   ],
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": []
@@ -2804,8 +2814,8 @@
   "name": "Lit Crawl San Francisco (Litquake)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual \u2014 October, closing night of the Litquake festival \u2014 2026: Saturday, October 24, 2026, 5-9pm (Litquake festival October 8-24, 2026)",
-  "time": "5:00pm-9:00pm",
+  "schedule": "Annual \u2014 closing night of the Litquake festival \u2014 2026: Saturday, October 24, 2026 (festival October 8\u201324, 2026)",
+  "time": "",
   "venue": "Valencia Street and surrounding venues (Mission District)",
   "price": "Free",
   "sources": [
@@ -2818,9 +2828,6 @@
    "schedule": [
     "b-litquake-org-litcrawl"
    ],
-   "time": [
-    "b-litquake-org-litcrawl"
-   ],
    "venue": [
     "b-litquake-org-litcrawl"
    ],
@@ -2830,15 +2837,18 @@
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Literature & Books.",
   "flags": [
-   "2027 festival dates not published on the official site at the verification date."
+   "2027 festival dates not published on the official site at the verification date.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): the official page does not state: time. Page: https://www.litquake.org/litcrawl. Date, venue and free admission confirmed; the page does not state overall 5\u20139 PM hours, so the time is blanked."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "level": "flagged",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
-  "unverified": []
+  "unverified": [
+   "time: unverified \u2014 not stated on the official page re-read on 2026-10-18."
+  ]
  },
  {
   "id": "b-filbookfest",
@@ -3052,32 +3062,35 @@
   "name": "SFJAZZ season",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual concert season with more than 350 concerts \u2014 2026-27 season announced June 2026; concerts listed through spring 2027",
+  "schedule": "Annual concert season \u2014 2026-27: September 2026 \u2013 May 2027 (over 350 shows)",
   "time": "",
   "venue": "SFJAZZ Center, 201 Franklin Street (and Davies Symphony Hall for select concerts) (Hayes Valley)",
   "price": "",
   "sources": [
-   "b-sfjazz-org-tickets-productions-26-27-season-overview"
+   "b-sfjazz-org-tickets-productions-26-27-season-overview",
+   "f1-sfjazz-org-tickets-season-overview-26-27"
   ],
   "evidence": {
    "name": [
     "b-sfjazz-org-tickets-productions-26-27-season-overview"
    ],
    "schedule": [
-    "b-sfjazz-org-tickets-productions-26-27-season-overview"
+    "f1-sfjazz-org-tickets-season-overview-26-27"
    ],
    "venue": [
-    "b-sfjazz-org-tickets-productions-26-27-season-overview"
+    "b-sfjazz-org-tickets-productions-26-27-season-overview",
+    "f1-sfjazz-org-tickets-season-overview-26-27"
    ]
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Performing Arts.",
   "flags": [
-   "Season-level entry; individual concert dates are on the official season overview."
+   "Season-level entry; individual concert dates are on the official season overview.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule. Page: https://www.sfjazz.org/tickets/season-overview/26-27/."
   ],
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -3093,7 +3106,7 @@
   "schedule": "Annual \u2014 April to May, 11 days \u2014 70th festival: April 22 - May 2, 2027 (69th ran April 24 - May 4, 2026)",
   "time": "",
   "venue": "Multiple San Francisco venues (Citywide)",
-  "price": "",
+  "price": "$20 standard general admission (as of Aug 2026)",
   "sources": [
    "b-sffilm-org-yr-faq"
   ],
@@ -3106,6 +3119,9 @@
    ],
    "venue": [
     "b-sffilm-org-yr-faq"
+   ],
+   "price": [
+    "b-sffilm-org-yr-faq"
    ]
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Film.",
@@ -3115,12 +3131,11 @@
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
-   "time: unverified; left blank.",
-   "price: unverified; left blank."
+   "time: unverified; left blank."
   ]
  },
  {
@@ -3732,7 +3747,7 @@
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
@@ -4307,16 +4322,15 @@
   },
   "notes": "Free general admission to permanent collections for all visitors on first Tuesdays; free Saturdays for Bay Area residents (9 counties) also available.",
   "flags": [
-   "Duplicate row 'Legion of Honor Free Tuesdays' (legion-tue) merged into this entry during final review; its dates: First Tuesday of every month.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Duplicate row 'Legion of Honor Free Tuesdays' (legion-tue) merged into this entry during final review; its dates: First Tuesday of every month."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -4595,7 +4609,7 @@
   "name": "SF Sketchfest (San Francisco Comedy Festival)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (winter) \u2014 2026: Jan 15 - Feb 1, 2026",
+  "schedule": "Annual (January) \u2014 2026: January 15 \u2013 February 1, 2026 (official 2026 schedule, per audit cebeabf0); 2027: 24th SF Sketchfest January 14\u201331, 2027 (sfsketchfest.com)",
   "time": "",
   "venue": "Various venues, Citywide",
   "price": "Ticketed",
@@ -4609,8 +4623,7 @@
     "x-www-sfsketchfest-com"
    ],
    "schedule": [
-    "x-www-sfsketchfest-com",
-    "x-sfsketchfest2026-sched-com"
+    "x-www-sfsketchfest-com"
    ],
    "venue": [
     "x-www-sfsketchfest-com",
@@ -4623,7 +4636,8 @@
   },
   "notes": "Nationally recognized comedy festival.",
   "flags": [
-   "Date correction (audit cebeabf0, 2026-10-18): the authored register carried 'Jan 16 - Feb 2' \u2014 those are the 2025 edition's dates. The official SF Sketchfest 2026 schedule (sfsketchfest2026.sched.com, linked from sfsketchfest.com) opens Thursday, January 15, 2026, and the 2026 run is January 15\u2013February 1, 2026; the schedule field was corrected to match. sfsketchfest.com itself blocks automated clients (403)."
+   "Date correction (audit cebeabf0, 2026-10-18): the authored register carried 'Jan 16 - Feb 2' \u2014 those are the 2025 edition's dates. The official SF Sketchfest 2026 schedule (sfsketchfest2026.sched.com, linked from sfsketchfest.com) opens Thursday, January 15, 2026, and the 2026 run is January 15\u2013February 1, 2026; the schedule field was corrected to match. sfsketchfest.com itself blocks automated clients (403).",
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule. Page: https://sfsketchfest.com/. Next edition added from sfsketchfest.com; the 2026 dates corrected by session cebeabf0 from the official Sched calendar are retained."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -4631,7 +4645,7 @@
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "c961fbe4 manual re-read",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -4831,9 +4845,9 @@
   "name": "San Francisco Independent Film Festival (SF IndieFest)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (February) \u2014 2026: Feb 5-15, 2026",
+  "schedule": "Annual (February) \u2014 2026: February 5\u201315, 2026; 2027: February 4\u201314, 2027",
   "time": "",
-  "venue": "Various venues (Roxie Theater and others), Mission / citywide",
+  "venue": "Roxie Theater (Mission District) and online",
   "price": "Ticketed",
   "sources": [
    "x-www-sfindie-com"
@@ -4853,16 +4867,14 @@
    ]
   },
   "notes": "Also produces SF DocFest (May-June).",
-  "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
-  ],
+  "flags": [],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -4876,34 +4888,37 @@
   "venue": "Various locations, Citywide",
   "price": "Varies",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-february",
+   "f1-sfmusicweek-org-home"
   ],
   "evidence": {
    "name": [
     "x-www-sftravel-com-article-san-francisco-festivals-events-february"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-february",
+    "f1-sfmusicweek-org-home"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-february",
+    "f1-sfmusicweek-org-home"
    ],
    "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-february",
+    "f1-sfmusicweek-org-home"
    ]
   },
   "notes": "Citywide celebration of SF's music scene with partner events and two conferences.",
   "flags": [
-   "No dedicated official event website verified; dates per SF Travel's February guide.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "No dedicated official event website verified; dates per SF Travel's February guide."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -4950,38 +4965,41 @@
   "name": "California International Antiquarian Book Fair",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (February) \u2014 2026: Feb 27 - Mar 1, 2026",
-  "time": "",
-  "venue": "Pier 27, Embarcadero",
+  "schedule": "Biennial in San Francisco (alternates with Los Angeles) \u2014 2026: February 27 \u2013 March 1, 2026 at Pier 27; 2027 edition is in Los Angeles",
+  "time": "Fri 4\u20138 PM; Sat 11 AM\u20137 PM; Sun 11 AM\u20134 PM",
+  "venue": "Pier 27, The Embarcadero",
   "price": "Ticketed",
   "sources": [
-   "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai"
+   "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai",
+   "f1-abaa-org"
   ],
   "evidence": {
    "name": [
     "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai"
    ],
    "schedule": [
-    "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai"
+    "f1-abaa-org"
    ],
    "venue": [
-    "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai"
+    "f1-abaa-org"
    ],
    "price": [
-    "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai"
+    "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai",
+    "f1-abaa-org"
+   ],
+   "time": [
+    "f1-abaa-org"
    ]
   },
   "notes": "100+ global vendors of rare books and art.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, time, venue. Page: https://www.abaa.org/. Irregularity: the fair alternates between San Francisco and Los Angeles (and was cancelled in 2025); the 2027 edition is in Los Angeles, so the next San Francisco edition is not before 2028. Row relabelled accordingly."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -5025,41 +5043,45 @@
  },
  {
   "id": "x-superfine-art-fair",
-  "name": "Superfine Art Fair San Francisco",
+  "name": "Superfair San Francisco (formerly Superfine Art Fair)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (March) \u2014 2026: Mar 19-22, 2026",
-  "time": "",
-  "venue": "Fort Mason Center, Marina / Fort Mason",
+  "schedule": "Annual (March) \u2014 2026: March 19\u201322, 2026; 2027: March 18\u201321, 2027",
+  "time": "Thu 4\u201310 PM (preview); Fri 4\u201310 PM; Sat 10 AM\u20138 PM; Sun 10 AM\u20136 PM",
+  "venue": "Gateway Pavilion (Pier 2), Fort Mason Center",
   "price": "Ticketed",
   "sources": [
-   "x-www-thesuperfair-com-san-francisco"
+   "x-www-thesuperfair-com-san-francisco",
+   "f1-thesuperfair-com"
   ],
   "evidence": {
    "name": [
-    "x-www-thesuperfair-com-san-francisco"
+    "f1-thesuperfair-com"
    ],
    "schedule": [
-    "x-www-thesuperfair-com-san-francisco"
+    "f1-thesuperfair-com"
    ],
    "venue": [
-    "x-www-thesuperfair-com-san-francisco"
+    "f1-thesuperfair-com"
    ],
    "price": [
-    "x-www-thesuperfair-com-san-francisco"
+    "x-www-thesuperfair-com-san-francisco",
+    "f1-thesuperfair-com"
+   ],
+   "time": [
+    "f1-thesuperfair-com"
    ]
   },
-  "notes": "150+ artists, installations and programs.",
+  "notes": "Formerly listed as \u201cSuperfine Art Fair San Francisco\u201d. 150+ artists, installations and programs.",
   "flags": [
-   "Fair has rebranded from 'Superfine Art Fair' to 'The Superfair'; the official page states the 2026 edition has ended."
+   "Fair has rebranded from 'Superfine Art Fair' to 'The Superfair'; the official page states the 2026 edition has ended.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: name, schedule, time, venue. Page: https://www.thesuperfair.com/. The fair is now branded Superfair (formerly Superfine Art Fair); name, dates, hours and hall corrected to the official site."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "c961fbe4 manual re-read",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -5109,37 +5131,41 @@
   "category": "Museums & science",
   "kind": "Annual",
   "schedule": "Annual (March) \u2014 2026: Mar 3-8, 2026",
-  "time": "",
+  "time": "9:30 am\u20135:15 pm (Tue\u2013Sun)",
   "venue": "de Young Museum and Legion of Honor, Golden Gate Park / Lincoln Park",
-  "price": "Ticketed (fundraiser)",
+  "price": "Ticketed fundraiser; adult tickets from $44",
   "sources": [
-   "x-www-famsf-org-exhibitions"
+   "x-www-famsf-org-exhibitions",
+   "f1-famsf-org-press-room-bouquets-to-art-2026"
   ],
   "evidence": {
    "name": [
     "x-www-famsf-org-exhibitions"
    ],
    "schedule": [
-    "x-www-famsf-org-exhibitions"
+    "x-www-famsf-org-exhibitions",
+    "f1-famsf-org-press-room-bouquets-to-art-2026"
    ],
    "venue": [
-    "x-www-famsf-org-exhibitions"
+    "x-www-famsf-org-exhibitions",
+    "f1-famsf-org-press-room-bouquets-to-art-2026"
    ],
    "price": [
-    "x-www-famsf-org-exhibitions"
+    "f1-famsf-org-press-room-bouquets-to-art-2026"
+   ],
+   "time": [
+    "f1-famsf-org-press-room-bouquets-to-art-2026"
    ]
   },
   "notes": "Weeklong floral design fundraiser; free Tuesdays do not apply during this week.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: time, price. Page: https://www.famsf.org/press-room/bouquets-to-art-2026. Cited page famsf.org/exhibitions does not state the dates; replaced with the official FAMSF press release, which does. Time transcribed from it."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -5300,10 +5326,10 @@
   "name": "San Francisco Art Fair (formerly Art Market SF)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (April) \u2014 2026: Apr 16-19, 2026",
-  "time": "",
-  "venue": "Fort Mason Center, Marina / Fort Mason",
-  "price": "Ticketed",
+  "schedule": "Annual (April) \u2014 15th edition: April 15\u201318, 2027",
+  "time": "Thu opening 6\u20139 PM; Fri\u2013Sat 11 AM\u20137 PM; Sun 11 AM\u20136 PM",
+  "venue": "Festival Pavilion, Fort Mason Center",
+  "price": "Fair pass $65 + fees; single day $35 + fees (2027, on sale Feb 2027)",
   "sources": [
    "x-sanfranciscoartfair-com"
   ],
@@ -5319,19 +5345,20 @@
    ],
    "price": [
     "x-sanfranciscoartfair-com"
+   ],
+   "time": [
+    "x-sanfranciscoartfair-com"
    ]
   },
   "notes": "Bay Area's only contemporary and modern art fair; 70+ galleries.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, time, venue, price. Page: https://sanfranciscoartfair.com/."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -5418,7 +5445,7 @@
   "kind": "Annual",
   "schedule": "Annual (late April-May) \u2014 2026: Apr 24 - May 3, 2026",
   "time": "",
-  "venue": "Various locations (SF and Bay Area), Citywide / regional",
+  "venue": "Various locations \u2014 San Francisco events (Bay Area-wide programme; regional)",
   "price": "Free",
   "sources": [
    "x-dancersgroup-org-badw"
@@ -5438,7 +5465,9 @@
    ]
   },
   "notes": "Hundreds of free classes, performances and open rehearsals; includes Bay Area venues beyond SF.",
-  "flags": [],
+  "flags": [
+   "Manual re-read 2026-10-18 (session f1fd3c36): every populated value matched the official page. Page: https://dancersgroup.org/badw/. Regional label: Bay Area-wide programme; San Francisco events only are in scope."
+  ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
@@ -5536,7 +5565,7 @@
   "kind": "Annual",
   "schedule": "Annual (May) \u2014 2026: May 7-10, 2026",
   "time": "",
-  "venue": "Various venues (San Francisco, Berkeley, Oakland), Citywide / regional",
+  "venue": "Various venues \u2014 San Francisco programme (festival also screens in Berkeley and Oakland; regional)",
   "price": "Ticketed",
   "sources": [
    "x-caamedia-org-caamfest"
@@ -5557,7 +5586,8 @@
   },
   "notes": "Nation's largest showcase for new Asian American and Asian films; some screenings outside SF.",
   "flags": [
-   "Some CAAMFest screenings take place in Berkeley and Oakland; only the San Francisco programme is in scope for this register."
+   "Some CAAMFest screenings take place in Berkeley and Oakland; only the San Francisco programme is in scope for this register.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): every populated value matched the official page. Page: https://caamedia.org/caamfest/. Regional label: screenings also in Berkeley and Oakland; San Francisco programme only is in scope."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -5574,38 +5604,39 @@
   "name": "San Francisco International Arts Festival",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (spring) \u2014 2026: Apr 29 - May 10, 2026",
+  "schedule": "Annual (spring) \u2014 next edition: April 29 \u2013 May 9, 2027",
   "time": "",
-  "venue": "Various venues (Fort Mason Center and others), Citywide",
-  "price": "Ticketed",
+  "venue": "Multiple venues, Mission District",
+  "price": "2026: $20 early bird / $25 advance / $30 door",
   "sources": [
-   "x-www-sfiaf-org"
+   "x-www-sfiaf-org",
+   "f1-sfiaf-org-festival"
   ],
   "evidence": {
    "name": [
     "x-www-sfiaf-org"
    ],
    "schedule": [
-    "x-www-sfiaf-org"
+    "f1-sfiaf-org-festival"
    ],
    "venue": [
-    "x-www-sfiaf-org"
+    "f1-sfiaf-org-festival"
    ],
    "price": [
-    "x-www-sfiaf-org"
+    "f1-sfiaf-org-festival"
    ]
   },
   "notes": "60+ theater, dance and music ensembles from the Bay Area and 11 countries.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, venue, price. Page: https://www.sfiaf.org/festival. Venue corrected: the official festival page lists Mission District venues, not Fort Mason."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -5652,7 +5683,7 @@
   "name": "San Francisco Documentary Film Festival (SF DocFest)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (late May-June) \u2014 2026: May 28 - Jun 7, 2026",
+  "schedule": "Annual (late May\u2013June) \u2014 2026: May 28 \u2013 June 7, 2026; 2027: June 3\u201313, 2027",
   "time": "",
   "venue": "Roxie Theater and other venues, Mission / citywide",
   "price": "Ticketed",
@@ -5674,16 +5705,14 @@
    ]
   },
   "notes": "",
-  "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
-  ],
+  "flags": [],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -5883,7 +5912,7 @@
   "category": "Community & outdoors",
   "kind": "Annual",
   "schedule": "Annual (June) \u2014 2026: Jun 13, 2026",
-  "time": "",
+  "time": "11:00 AM \u2013 6:00 PM",
   "venue": "Fillmore Street, Geary to Fulton",
   "price": "Free",
   "sources": [
@@ -5901,19 +5930,18 @@
    ],
    "price": [
     "x-juneteenth-sf-org"
+   ],
+   "time": [
+    "x-juneteenth-sf-org"
    ]
   },
   "notes": "The City also runs a month of Juneteenth programming (sf.gov Juneteenth page).",
-  "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
-  ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "flags": [],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -5922,38 +5950,39 @@
   "name": "Queer Women of Color Film Festival",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (June) \u2014 2026: Jun 12-14, 2026",
+  "schedule": "Annual (June) \u2014 2026: June 12\u201314, 2026; 2027: June 11\u201313, 2027",
   "time": "",
-  "venue": "Brava Theater, Mission District",
-  "price": "Free",
+  "venue": "Presidio Theatre, 99 Moraga Ave (Presidio)",
+  "price": "Free (registration required)",
   "sources": [
-   "x-qwocmap-org-festival"
+   "x-qwocmap-org-festival",
+   "f1-qwocmap-org"
   ],
   "evidence": {
    "name": [
     "x-qwocmap-org-festival"
    ],
    "schedule": [
-    "x-qwocmap-org-festival"
+    "f1-qwocmap-org"
    ],
    "venue": [
-    "x-qwocmap-org-festival"
+    "f1-qwocmap-org"
    ],
    "price": [
-    "x-qwocmap-org-festival"
+    "f1-qwocmap-org"
    ]
   },
   "notes": "",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, venue, price. Page: https://qwocmap.org/. Venue corrected from Brava Theater to Presidio Theatre as stated on the official site."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -6005,7 +6034,8 @@
   "venue": "PIER 39, The Embarcadero, Fisherman's Wharf",
   "price": "",
   "sources": [
-   "x-www-pier39-com-upcoming-events"
+   "x-www-pier39-com-upcoming-events",
+   "x-www-sf-gov-event-20260704-fourth-of-july-fireworks-on-golden-gate-brid"
   ],
   "evidence": {
    "name": [
@@ -6020,15 +6050,17 @@
    "price": []
   },
   "notes": "Bands, food, arts & crafts and waterfront fireworks.",
-  "flags": [],
+  "flags": [
+   "Manual re-read 2026-10-18 (session f1fd3c36): the official page does not state: . Page: https://www.sf.gov/event-20260704-fourth-of-july-fireworks-on-golden-gate-bridge. Cross-check irregularity: the City states the 2026 Golden Gate Bridge display is the only authorized July 4 fireworks in San Francisco, so the \"fireworks ~9:30pm\" in this PIER 39 row refers to viewing that display, not a PIER 39-launched show. Noted for review; PIER 39 page wording retained."
+  ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
    "price: unverified \u2014 removed during integration because the replacement source does not state it."
   ],
   "parent": "",
   "check": {
-   "level": "field-level",
-   "by": "c961fbe4 manual re-read",
+   "level": "flagged",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -6076,7 +6108,7 @@
   "category": "Festivals & culture",
   "kind": "Annual",
   "schedule": "Annual (July) \u2014 2026: Jul 11, 2026 (50th annual)",
-  "time": "",
+  "time": "11:00 AM \u2013 6:00 PM",
   "venue": "Music Concourse, Golden Gate Park (between the de Young and California Academy of Sciences)",
   "price": "Free",
   "sources": [
@@ -6094,19 +6126,18 @@
    ],
    "price": [
     "x-sffolkfest-org"
+   ],
+   "time": [
+    "x-sffolkfest-org"
    ]
   },
   "notes": "",
-  "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
-  ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "flags": [],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -6155,7 +6186,7 @@
   "kind": "Annual",
   "schedule": "Annual (July-August) \u2014 2026: Jul 16 - Aug 2, 2026",
   "time": "",
-  "venue": "Various venues (San Francisco and East Bay), Citywide / regional",
+  "venue": "Various venues \u2014 San Francisco programme (festival also screens in the East Bay; regional)",
   "price": "Ticketed",
   "sources": [
    "x-jfi-org-film-festival"
@@ -6175,7 +6206,9 @@
    ]
   },
   "notes": "60+ independent films; the world's first and largest Jewish film festival; some screenings outside SF.",
-  "flags": [],
+  "flags": [
+   "Manual re-read 2026-10-18 (session f1fd3c36): every populated value matched the official page. Page: https://jfi.org/film-festival. Regional label: festival also screens in the East Bay."
+  ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
@@ -6229,7 +6262,7 @@
   "name": "SFJAZZ Summer Sessions",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (summer series, Jun 11-Aug 29, 2026) \u2014 2026: Jun 11 - Aug 29, 2026 (2026 highlights: Wynton Marsalis Septet Jul 14-15, Lettuce Jul 16-19, Take 6 Aug 13-16)",
+  "schedule": "",
   "time": "",
   "venue": "SFJAZZ Center, 201 Franklin St, Hayes Valley",
   "price": "Ticketed",
@@ -6238,9 +6271,6 @@
   ],
   "evidence": {
    "name": [
-    "x-www-sfjazz-org-onthecorner-articles-summer-2026"
-   ],
-   "schedule": [
     "x-www-sfjazz-org-onthecorner-articles-summer-2026"
    ],
    "venue": [
@@ -6252,15 +6282,16 @@
   },
   "notes": "SFJAZZ also presents the San Francisco Jazz Festival and a 350-concert 2026-27 season at the SFJAZZ Center.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): the official page does not state: schedule. Page: https://www.sfjazz.org/onthecorner/articles/summer-2026/. The official article confirms a July\u2013August 2026 Summer Sessions series but does not state series start/end dates; the previously recorded range (Jun 11\u2013Aug 29) is not on the page and is replaced by what the page states."
   ],
   "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "schedule: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ],
   "parent": "",
   "check": {
    "level": "flagged",
-   "by": "automated fetch",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -6308,38 +6339,42 @@
   "category": "Markets & food",
   "kind": "Annual",
   "schedule": "Annual (August) \u2014 2026: Aug 15, 2026",
-  "time": "",
-  "venue": "North Beach",
+  "time": "12:00\u20134:00 PM",
+  "venue": "Stockton & Filbert Streets along Washington Square, North Beach",
   "price": "Ticketed",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-august"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-august",
+   "f1-sfiacfoundation-org-san-francisco-pizza-festival"
   ],
   "evidence": {
    "name": [
     "x-www-sftravel-com-article-san-francisco-festivals-events-august"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-august"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-august",
+    "f1-sfiacfoundation-org-san-francisco-pizza-festival"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-august"
+    "f1-sfiacfoundation-org-san-francisco-pizza-festival"
    ],
    "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-august"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-august",
+    "f1-sfiacfoundation-org-san-francisco-pizza-festival"
+   ],
+   "time": [
+    "f1-sfiacfoundation-org-san-francisco-pizza-festival"
    ]
   },
   "notes": "65+ local pizzerias, bakeries and breweries.",
   "flags": [
    "No dedicated official event website verified; date and details per SF Travel's August guide.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: time, venue. Page: https://sfiacfoundation.org/san-francisco-pizza-festival."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -6617,8 +6652,8 @@
   "name": "ArtSpan SF Open Studios",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (late September-October) \u2014 2026: Sep 26 - Oct 25, 2026",
-  "time": "",
+  "schedule": "Annual (fall) \u2014 52nd SF Open Studios: studio weekends through October 25, 2026; Preview Exhibition at SOMArts September 19\u201327, 2026",
+  "time": "Preview Exhibition gallery 1\u20137 PM daily (Sep 19\u201327)",
   "venue": "Artists' studios citywide; hub at 934 Brannan St",
   "price": "",
   "sources": [
@@ -6634,20 +6669,23 @@
    "venue": [
     "x-somarts-org-exhibition-sfopenstudios2026"
    ],
-   "price": []
+   "price": [],
+   "time": [
+    "x-somarts-org-exhibition-sfopenstudios2026"
+   ]
   },
   "notes": "",
   "flags": [
-   "ArtSpan's own /visitsfopenstudios page returns its 404 template and /programs/visitsfopenstudios does the same; the official venue page is linked as evidence for the 52nd annual programme."
+   "ArtSpan's own /visitsfopenstudios page returns its 404 template and /programs/visitsfopenstudios does the same; the official venue page is linked as evidence for the 52nd annual programme.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, time. Page: https://somarts.org/exhibition/sfopenstudios2026/. The cited page gives the preview-exhibition dates and the end of the studio season; a Sep 26 start date is not stated and is removed."
   ],
   "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
    "price: unverified \u2014 removed during integration because the replacement source does not state it."
   ],
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "c961fbe4 manual re-read",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -6656,78 +6694,84 @@
   "name": "Litquake San Francisco",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (October) \u2014 2026: Oct 4-24, 2026",
+  "schedule": "Annual (October) \u2014 2026: October 8\u201324, 2026 (closing-night Lit Crawl October 24)",
   "time": "",
   "venue": "Multiple venues citywide",
   "price": "Mostly free",
   "sources": [
-   "x-www-litquake-org"
+   "x-www-litquake-org",
+   "f1-litquake-org-2026-schedule"
   ],
   "evidence": {
    "name": [
     "x-www-litquake-org"
    ],
    "schedule": [
-    "x-www-litquake-org"
+    "f1-litquake-org-2026-schedule"
    ],
    "venue": [
-    "x-www-litquake-org"
+    "x-www-litquake-org",
+    "f1-litquake-org-2026-schedule"
    ],
    "price": [
-    "x-www-litquake-org"
+    "x-www-litquake-org",
+    "f1-litquake-org-2026-schedule"
    ]
   },
   "notes": "SF's literary festival with hundreds of Bay Area writers.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule. Page: https://www.litquake.org/2026-schedule. Dates corrected from Oct 4\u201324 to Oct 8\u201324 to match the official schedule page (which also reconciles this row with the Lit Crawl row). The Oct 4 Small Press Book Fair is a pre-festival event."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
  {
   "id": "x-sf-fall-antiques-show",
-  "name": "San Francisco Fall Antiques Show",
+  "name": "The San Francisco Fall Show (art, antiques and design fair)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (October) \u2014 2026: Oct 14, 2026 (Fort Mason)",
-  "time": "",
-  "venue": "Fort Mason Center, Marina / Fort Mason",
+  "schedule": "Annual (October) \u2014 2026: show October 15\u201318, 2026; Opening Night Gala October 14, 2026",
+  "time": "Thu\u2013Sat 10:30 AM\u20137:00 PM; Sun 11:00 AM\u20135:00 PM",
+  "venue": "Festival Pavilion, Fort Mason Center",
   "price": "Ticketed",
   "sources": [
-   "x-sffallshow-org"
+   "x-sffallshow-org",
+   "f1-sffallshow-org-about"
   ],
   "evidence": {
    "name": [
-    "x-sffallshow-org"
+    "f1-sffallshow-org-about"
    ],
    "schedule": [
-    "x-sffallshow-org"
+    "f1-sffallshow-org-about"
    ],
    "venue": [
-    "x-sffallshow-org"
+    "f1-sffallshow-org-about"
    ],
    "price": [
-    "x-sffallshow-org"
+    "x-sffallshow-org",
+    "f1-sffallshow-org-about"
+   ],
+   "time": [
+    "f1-sffallshow-org-about"
    ]
   },
-  "notes": "Oldest continuously operating international antiques show on the West Coast; 60 dealers.",
+  "notes": "Formerly listed as \u201cSan Francisco Fall Antiques Show\u201d. Oldest continuously operating international antiques show on the West Coast; 60 dealers.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: name, schedule, time, venue. Page: https://sffallshow.org/about/. Official name is \"The San Francisco Fall Show\"; the previously recorded single date (Oct 14) is the gala, not the show."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -6737,9 +6781,9 @@
   "category": "Community & outdoors",
   "kind": "Annual",
   "schedule": "Annual (October) \u2014 2026: Oct 17, 2026",
-  "time": "",
-  "venue": "20th Street, Potrero Hill",
-  "price": "Free",
+  "time": "10:00 AM \u2013 5:00 PM (home page; sponsorship page says 10\u20134)",
+  "venue": "20th Street between Wisconsin and Missouri Streets, Potrero Hill",
+  "price": "",
   "sources": [
    "x-www-potrerofestival-com"
   ],
@@ -6753,21 +6797,21 @@
    "venue": [
     "x-www-potrerofestival-com"
    ],
-   "price": [
+   "time": [
     "x-www-potrerofestival-com"
    ]
   },
   "notes": "",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: time, venue, price. Page: https://potrerofestival.com/. Date confirmed. Home page says 10\u20135, sponsorship page says 10\u20134 (discrepancy noted). Admission price is not stated on the site; blanked."
   ],
   "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "price: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -6989,15 +7033,15 @@
   },
   "notes": "Tours and events around permanent and temporary eco-friendly light art.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): every populated value matched the official page. Page: https://www.sftravel.com/article/san-francisco-festivals-events-november. Illuminate SF is produced by the San Francisco Travel Association, so the SF Travel page is the organizer's own page for this row (not an aggregator). End date not stated; schedule left as \"begins\"."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7355,7 +7399,7 @@
   "name": "San Francisco Disability History Tour",
   "category": "Community & outdoors",
   "kind": "Special",
-  "schedule": "2026: Feb 6, 2026 (check-in 10:30am, tour 11am; meets at 165 Grove St)",
+  "schedule": "",
   "time": "",
   "venue": "165 Grove Street, Downtown / Mid-Market",
   "price": "Free (registration)",
@@ -7364,9 +7408,6 @@
   ],
   "evidence": {
    "name": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
-   ],
-   "schedule": [
     "x-www-sftravel-com-article-san-francisco-festivals-events-february"
    ],
    "venue": [
@@ -7378,15 +7419,16 @@
   },
   "notes": "Tours the birthplace of the disability rights movement.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): the official page does not state: schedule. Page: https://www.sftravel.com/article/san-francisco-festivals-events-february. No organizer (Disability Cultural Center) page for this tour could be located; the row rests on the SF Travel listing only. Flagged for manual review."
   ],
   "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "schedule: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ],
   "parent": "",
   "check": {
    "level": "flagged",
-   "by": "automated fetch",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7395,18 +7437,15 @@
   "name": "Super Bowl LX San Francisco Events",
   "category": "Community & outdoors",
   "kind": "Special",
-  "schedule": "2026: February 2026 (events begin Feb 2, 2026)",
+  "schedule": "",
   "time": "",
-  "venue": "Various locations, San Francisco, Citywide",
+  "venue": "Various locations, San Francisco (regional event; game played in Santa Clara)",
   "price": "Varies",
   "sources": [
    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
   ],
   "evidence": {
    "name": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
-   ],
-   "schedule": [
     "x-www-sftravel-com-article-san-francisco-festivals-events-february"
    ],
    "venue": [
@@ -7419,15 +7458,17 @@
   "notes": "Concerts, events and fan experiences across SF ahead of the Bay Area Super Bowl.",
   "flags": [
    "Scope note: Super Bowl LX itself was played at Levi's Stadium in Santa Clara (outside San Francisco city limits); only the San Francisco fan events are in scope.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested.",
+   "Manual re-read 2026-10-18 (session f1fd3c36): the official page does not state: schedule. Page: https://www.sftravel.com/article/san-francisco-festivals-events-february. Regional event: Super Bowl LX was played in Santa Clara; this row covers only San Francisco fan events and rests on an aggregator listing. Labelled regional and flagged."
   ],
   "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "schedule: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ],
   "parent": "",
   "check": {
    "level": "flagged",
-   "by": "automated fetch",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7439,7 +7480,7 @@
   "schedule": "2026: Feb 21, 2026",
   "time": "",
   "venue": "Marina Green / Marina Boulevard (custom-built track)",
-  "price": "Free",
+  "price": "",
   "sources": [
    "x-www-redbull-com-us-en-events-red-bull-showrun-san-fran"
   ],
@@ -7452,63 +7493,63 @@
    ],
    "venue": [
     "x-www-redbull-com-us-en-events-red-bull-showrun-san-fran"
-   ],
-   "price": [
-    "x-www-redbull-com-us-en-events-red-bull-showrun-san-fran"
    ]
   },
   "notes": "Oracle Red Bull Racing and Visa Cash App Racing Bulls F1 cars and Ford vehicles on San Francisco streets.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: price. Page: https://www.redbull.com/us-en/events/red-bull-showrun-san-fran. Date and location confirmed; admission price is not stated on the official event page; blanked."
   ],
   "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "price: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
  {
   "id": "x-sunset-night-market-feb",
-  "name": "Sunset Night Market",
+  "name": "Sunset Night Market (2026 series)",
   "category": "Markets & food",
   "kind": "Special",
-  "schedule": "2026: Feb 27, 2026, 5-10pm",
-  "time": "",
+  "schedule": "2026 series \u2014 February 27, 2026 (City event page); next listed date Friday, December 11, 2026 (organizer page); other 2026 dates not stated on the organizer page",
+  "time": "5:00\u201310:00 PM",
   "venue": "Irving Street between 20th & 25th Avenues, Outer Sunset",
-  "price": "Free",
+  "price": "",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-february",
+   "f1-sunsetmercantilesf-com-sunsetnightmarket2026"
   ],
   "evidence": {
    "name": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+    "f1-sunsetmercantilesf-com-sunsetnightmarket2026"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+    "f1-sunsetmercantilesf-com-sunsetnightmarket2026"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-february",
+    "f1-sunsetmercantilesf-com-sunsetnightmarket2026"
    ],
-   "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-february"
+   "time": [
+    "f1-sunsetmercantilesf-com-sunsetnightmarket2026"
    ]
   },
-  "notes": "Family-friendly, Asia-inspired night market on Irving Street.",
+  "notes": "Formerly listed as \u201cSunset Night Market\u201d. Family-friendly, Asia-inspired night market on Irving Street.",
   "flags": [
    "No dedicated official event website verified; date per SF Travel's February guide (which linked a social media post).",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: name, schedule, time, price. Page: https://sunsetmercantilesf.com/sunsetnightmarket2026/. Organizer page and City event page located. Admission price is not stated on either; blanked."
   ],
   "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "price: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7552,42 +7593,44 @@
  },
  {
   "id": "x-hunky-jesus-contest",
-  "name": "Hunky Jesus & Foxy Mary Contest",
+  "name": "Easter in the Park \u2014 Hunky Jesus & Foxy Mary contests (Sisters of Perpetual Indulgence)",
   "category": "Festivals & culture",
-  "kind": "Special",
-  "schedule": "2026: Apr 5, 2026, 10am-4pm (47th anniversary)",
-  "time": "",
-  "venue": "Dolores Park, Mission / Castro",
-  "price": "Free",
+  "kind": "Annual",
+  "schedule": "Annual (Easter Sunday) \u2014 2026: Sunday, April 5, 2026",
+  "time": "Children's Easter 10:00 AM; main stage 12:00\u20134:00 PM; Hunky Jesus contest 2:55 PM",
+  "venue": "Mission Dolores Park, north end near the tennis courts",
+  "price": "Free (donations collected)",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-april",
+   "f1-thesisters-org-easter"
   ],
   "evidence": {
    "name": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+    "f1-thesisters-org-easter"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+    "f1-thesisters-org-easter"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+    "f1-thesisters-org-easter"
    ],
    "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+    "f1-thesisters-org-easter"
+   ],
+   "time": [
+    "f1-thesisters-org-easter"
    ]
   },
-  "notes": "Easter Sunday look-alike celebration hosted by the Sisters of Perpetual Indulgence.",
+  "notes": "Formerly listed as \u201cHunky Jesus & Foxy Mary Contest\u201d. Easter Sunday look-alike celebration hosted by the Sisters of Perpetual Indulgence.",
   "flags": [
    "SF Travel's guide links a ticketing aggregator rather than the organizer; the Sisters of Perpetual Indulgence's own site should be checked for the current edition.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: name, kind, schedule, time, venue, price. Page: https://www.thesisters.org/easter. Organizer page located (previously only an SF Travel listing). Event is the Sisters' annual Easter in the Park; renamed and reclassified as annual."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7631,42 +7674,44 @@
  },
  {
   "id": "x-valencia-live",
-  "name": "Valencia LIVE! Kickoff Block Party",
+  "name": "Valencia LIVE! (monthly street party)",
   "category": "Festivals & culture",
-  "kind": "Special",
-  "schedule": "2026: May 14, 2026 (with activations all summer)",
-  "time": "",
-  "venue": "Valencia Street between 16th & 19th Streets, Mission District",
+  "kind": "Monthly",
+  "schedule": "Monthly, 2nd Thursday, May\u2013October 2026 \u2014 May 14, Jun 11, Jul 9, Aug 13, Sep 10, Oct 8, 2026",
+  "time": "5:00\u201310:00 PM",
+  "venue": "Valencia Street, rotating three-block sections between 16th and 21st Streets (Mission District)",
   "price": "Free",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-may"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-may",
+   "f1-visitvalenciastreet-com-live"
   ],
   "evidence": {
    "name": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-may"
+    "f1-visitvalenciastreet-com-live"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-may"
+    "f1-visitvalenciastreet-com-live"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-may"
+    "f1-visitvalenciastreet-com-live"
    ],
    "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-may"
+    "f1-visitvalenciastreet-com-live"
+   ],
+   "time": [
+    "f1-visitvalenciastreet-com-live"
    ]
   },
-  "notes": "Outdoor shopping, dining and live music on Valencia Street.",
+  "notes": "Formerly listed as \u201cValencia LIVE! Kickoff Block Party\u201d. Outdoor shopping, dining and live music on Valencia Street.",
   "flags": [
    "SF Travel's guide links a ticketing platform rather than an organizer site.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: name, kind, schedule, time, venue, price. Page: https://www.visitvalenciastreet.com/live. Organizer (Valencia Corridor Merchants Association) page located; the event is a monthly seasonal series, so the row is renamed and reclassified as Monthly."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7676,38 +7721,42 @@
   "category": "Festivals & culture",
   "kind": "Special",
   "schedule": "2026: Apr 11, 2026",
-  "time": "",
-  "venue": "GAA field, Treasure Island, Treasure Island (part of San Francisco)",
+  "time": "1:00\u20139:00 PM (18+)",
+  "venue": "GAA Field, 13th St & Avenue H, Treasure Island",
   "price": "Ticketed",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-april",
+   "f1-blackcoffeesf-com"
   ],
   "evidence": {
    "name": [
     "x-www-sftravel-com-article-san-francisco-festivals-events-april"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-april",
+    "f1-blackcoffeesf-com"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+    "f1-blackcoffeesf-com"
    ],
    "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-april"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-april",
+    "f1-blackcoffeesf-com"
+   ],
+   "time": [
+    "f1-blackcoffeesf-com"
    ]
   },
   "notes": "Grammy-winning DJ Black Coffee's biggest Bay Area show to date.",
   "flags": [
    "Listed via SF Travel with a ticketing-platform link; no organizer website verified.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: time, venue. Page: https://blackcoffeesf.com/."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7717,7 +7766,7 @@
   "category": "Community & outdoors",
   "kind": "Special",
   "schedule": "2026: Jul 4, 2026, 9:30pm",
-  "time": "",
+  "time": "9:30\u20139:45 PM",
   "venue": "Launched from the towers of the Golden Gate Bridge, Golden Gate Bridge / waterfront viewing areas",
   "price": "Free",
   "sources": [
@@ -7735,19 +7784,18 @@
    ],
    "price": [
     "x-www-sf-gov-event-20260704-fourth-of-july-fireworks-on-golden-gate-brid"
+   ],
+   "time": [
+    "x-www-sf-gov-event-20260704-fourth-of-july-fireworks-on-golden-gate-brid"
    ]
   },
   "notes": "Historic display launched directly from the bridge towers for America's 250th birthday - a one-off edition (the annual 4th of July fireworks tradition normally centers on the waterfront; see PIER 39 entry).",
-  "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
-  ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "flags": [],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7761,34 +7809,38 @@
   "venue": "Various locations, Citywide",
   "price": "Varies",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+   "x-sfspacewalk-com"
   ],
   "evidence": {
    "name": [
     "x-www-sftravel-com-article-san-francisco-festivals-events-july"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+    "x-sfspacewalk-com"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+    "x-sfspacewalk-com"
    ],
    "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+    "x-sfspacewalk-com"
    ]
   },
   "notes": "Weeklong festival devoted to hash products.",
   "flags": [
    "Described by SF Travel as a first-of-its-kind event; no dedicated official website verified.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): every populated value matched the official page. Page: https://sfspacewalk.com/. Organizer page located. Some partner events are outside San Francisco; only the SF events are in scope."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7798,38 +7850,41 @@
   "category": "Community & outdoors",
   "kind": "Special",
   "schedule": "2026: Jul 12, 2026, 12-6pm",
-  "time": "",
+  "time": "12:00\u20136:00 PM",
   "venue": "San Francisco Ferry Building, Embarcadero",
-  "price": "Free",
+  "price": "Free with RSVP",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+   "f1-ferrybuildingmarketplace-com-events-ferry-fest"
   ],
   "evidence": {
    "name": [
     "x-www-sftravel-com-article-san-francisco-festivals-events-july"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+    "f1-ferrybuildingmarketplace-com-events-ferry-fest"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+    "f1-ferrybuildingmarketplace-com-events-ferry-fest"
    ],
    "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "f1-ferrybuildingmarketplace-com-events-ferry-fest"
+   ],
+   "time": [
+    "f1-ferrybuildingmarketplace-com-events-ferry-fest"
    ]
   },
   "notes": "Local music, art, food and wine along the waterfront.",
   "flags": [
-   "No dedicated official event page verified; date per SF Travel's July guide.",
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "No dedicated official event page verified; date per SF Travel's July guide."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7838,38 +7893,41 @@
   "name": "Cinema on the Square (free outdoor films)",
   "category": "Festivals & culture",
   "kind": "Special",
-  "schedule": "2026: Jul 25 ('The Princess Diaries'), Aug 29 ('Pokemon Detective Pikachu'), Sep 26 ('The Conversation'), 2026 - sunset screenings",
-  "time": "",
+  "schedule": "2026 season: five free Saturday-night screenings in Union Square (City release names June 27, July 25 and August 29; SF Travel also lists September 26)",
+  "time": "Films at sunset; pre-show from two hours before sunset",
   "venue": "Union Square, Union Square / Downtown",
   "price": "Free",
   "sources": [
-   "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+   "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+   "f1-sf-gov-news-mayor-lurie-announces-second-season-of-free-movies-in-unio"
   ],
   "evidence": {
    "name": [
     "x-www-sftravel-com-article-san-francisco-festivals-events-july"
    ],
    "schedule": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "f1-sf-gov-news-mayor-lurie-announces-second-season-of-free-movies-in-unio"
    ],
    "venue": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "x-www-sftravel-com-article-san-francisco-festivals-events-july",
+    "f1-sf-gov-news-mayor-lurie-announces-second-season-of-free-movies-in-unio"
    ],
    "price": [
-    "x-www-sftravel-com-article-san-francisco-festivals-events-july"
+    "f1-sf-gov-news-mayor-lurie-announces-second-season-of-free-movies-in-unio"
+   ],
+   "time": [
+    "f1-sf-gov-news-mayor-lurie-announces-second-season-of-free-movies-in-unio"
    ]
   },
   "notes": "Free outdoor sunset movie screenings.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, time, price. Page: https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square. City (Mayor's Office) release added as an official source; it names three of the five 2026 dates. The Sep 26 screening previously recorded comes from the SF Travel listing only."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7954,10 +8012,10 @@
   "name": "Lowrider Parade & 'King of the Streets' Competition",
   "category": "Festivals & culture",
   "kind": "Special",
-  "schedule": "2026: Sep 19, 2026 (parade 1pm; hopping competition 3pm)",
-  "time": "",
-  "venue": "Mission District",
-  "price": "Free",
+  "schedule": "",
+  "time": "Parade 1:00\u20133:00 PM; car show 2:00\u20138:00 PM (2025 edition)",
+  "venue": "Mission Street between Cesar Chavez and 17th/18th Streets (Mission District)",
+  "price": "",
   "sources": [
    "x-www-sanfranciscolowridercouncil-com"
   ],
@@ -7965,27 +8023,25 @@
    "name": [
     "x-www-sanfranciscolowridercouncil-com"
    ],
-   "schedule": [
-    "x-www-sanfranciscolowridercouncil-com"
-   ],
    "venue": [
     "x-www-sanfranciscolowridercouncil-com"
    ],
-   "price": [
+   "time": [
     "x-www-sanfranciscolowridercouncil-com"
    ]
   },
   "notes": "First-ever televised lowrider parade, with hydraulic 'hopping' competition.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): the official page does not state: schedule, price. Page: https://www.sanfranciscolowridercouncil.com/. Irregularity: the official site still shows the 2025 edition; a 2026 date (Sep 19, 2026) is not published there and is removed. Row kept with the last officially published edition."
   ],
   "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "schedule: unverified \u2014 not stated on the official page re-read on 2026-10-18.",
+   "price: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ],
   "parent": "",
   "check": {
    "level": "flagged",
-   "by": "automated fetch",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -7994,9 +8050,9 @@
   "name": "Peak2Peak Urban Walking Adventure",
   "category": "Community & outdoors",
   "kind": "Special",
-  "schedule": "2026: Sep 19, 2026",
-  "time": "",
-  "venue": "Mission District and city peaks (guided route), Mission / citywide",
+  "schedule": "Annual (September) \u2014 22nd Peak2Peak: Saturday, September 19, 2026",
+  "time": "Departures 8:00\u201310:30 AM; 6\u20137 hour guided walk",
+  "venue": "Starts Louis Sutter Playground, McLaren Park; ends Barebottle Brewing, Bernal Heights (southeast SF)",
   "price": "Ticketed (fundraiser)",
   "sources": [
    "x-walksf-org-events-peak-2-peak"
@@ -8013,19 +8069,20 @@
    ],
    "price": [
     "x-walksf-org-events-peak-2-peak"
+   ],
+   "time": [
+    "x-walksf-org-events-peak-2-peak"
    ]
   },
   "notes": "Guided urban hike with stairways, hidden lanes and peak views; benefits pedestrian safety advocacy.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, time, venue. Page: https://walksf.org/events/peak-2-peak/. Venue corrected: the 2026 route is in the southeast neighbourhoods, not the Mission District."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -8073,9 +8130,9 @@
   "category": "Markets & food",
   "kind": "Special",
   "schedule": "2026: Oct 3, 2026",
-  "time": "",
-  "venue": "Treasure Island (part of San Francisco)",
-  "price": "Ticketed",
+  "time": "6:00\u20139:00 PM",
+  "venue": "Gold Bar Distillery, Treasure Island",
+  "price": "Ticketed (VIP $165; general-admission price not stated)",
   "sources": [
    "x-sfcheesefest-com"
   ],
@@ -8091,19 +8148,20 @@
    ],
    "price": [
     "x-sfcheesefest-com"
+   ],
+   "time": [
+    "x-sfcheesefest-com"
    ]
   },
   "notes": "California artisan cheesemakers with pairings, beer, wine and live music.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: time, venue, price. Page: https://sfcheesefest.com/."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -8669,16 +8727,14 @@
    ]
   },
   "notes": "U.S. premiere of the international touring exhibition on the lives and legacies of the pharaohs.",
-  "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
-  ],
+  "flags": [],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -8692,33 +8748,37 @@
   "venue": "Legion of Honor, Lincoln Park, Lincoln Park / Richmond",
   "price": "Ticketed",
   "sources": [
-   "x-www-famsf-org-exhibitions"
+   "x-www-famsf-org-exhibitions",
+   "x-www-famsf-org-press-room-2026-advance-schedule"
   ],
   "evidence": {
    "name": [
     "x-www-famsf-org-exhibitions"
    ],
    "schedule": [
-    "x-www-famsf-org-exhibitions"
+    "x-www-famsf-org-exhibitions",
+    "x-www-famsf-org-press-room-2026-advance-schedule"
    ],
    "venue": [
-    "x-www-famsf-org-exhibitions"
+    "x-www-famsf-org-exhibitions",
+    "x-www-famsf-org-press-room-2026-advance-schedule"
    ],
    "price": [
-    "x-www-famsf-org-exhibitions"
+    "x-www-famsf-org-exhibitions",
+    "x-www-famsf-org-press-room-2026-advance-schedule"
    ]
   },
   "notes": "",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: source added. Page: https://www.famsf.org/press-room/2026-advance-schedule. Dates confirmed; the row cited the generic exhibitions listing, the dated official advance schedule is added as the primary source."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -8749,16 +8809,14 @@
    ]
   },
   "notes": "Twenty-plus Monet Venetian views reunited, including The Doge's Palace and The Grand Canal, Venice.",
-  "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (bot protection or server error); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
-  ],
+  "flags": [],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -8767,38 +8825,42 @@
   "name": "Club Darc (Pier 48 waterfront electronic music season)",
   "category": "Festivals & culture",
   "kind": "Special",
-  "schedule": "2026: Inaugural season ran select weekends Feb 27 - May 16, 2026 (closing night May 16 with Underworld; 21+)",
-  "time": "",
+  "schedule": "Season 2 (Fall 2026): select nights October 17, 2026 \u2013 January 1, 2027; Season 1 ran February 27 \u2013 May 16, 2026 (21+)",
+  "time": "Shows 8:00 PM",
   "venue": "Pier 48, Shed A, SoMa / China Basin waterfront",
   "price": "Ticketed",
   "sources": [
-   "x-clubdarc-com"
+   "x-clubdarc-com",
+   "f1-axs-com-series-34846-club-darc-season-2-tickets"
   ],
   "evidence": {
    "name": [
     "x-clubdarc-com"
    ],
    "schedule": [
-    "x-clubdarc-com"
+    "f1-axs-com-series-34846-club-darc-season-2-tickets"
    ],
    "venue": [
-    "x-clubdarc-com"
+    "x-clubdarc-com",
+    "f1-axs-com-series-34846-club-darc-season-2-tickets"
    ],
    "price": [
-    "x-clubdarc-com"
+    "x-clubdarc-com",
+    "f1-axs-com-series-34846-club-darc-season-2-tickets"
+   ],
+   "time": [
+    "f1-axs-com-series-34846-club-darc-season-2-tickets"
    ]
   },
   "notes": "2026 headliners included Chris Lake, Solomun and Underworld.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page did not contain the event name in the fetched text (page may render with JavaScript or have moved). Manual re-check requested."
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, time. Page: https://clubdarc.com/. A second season has been announced since the row was written; dates come from the organizer's official ticketing series page linked from clubdarc.com."
   ],
-  "unverified": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
+  "unverified": [],
   "parent": "",
   "check": {
-   "level": "flagged",
-   "by": "automated fetch",
+   "level": "field-level",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   }
  },
@@ -8964,32 +9026,38 @@
   "venue": "San Francisco Zoo & Gardens, Playfield Lawn, 1 Zoo Road (Southwest SF)",
   "price": "",
   "sources": [
-   "sfzoo-sunset"
+   "sfzoo-sunset",
+   "f1-sfzoo-org-visit-the-zoo-calendar-of-events"
   ],
   "evidence": {
    "name": [
     "sfzoo-sunset"
    ],
    "schedule": [
-    "sfzoo-sunset"
+    "sfzoo-sunset",
+    "f1-sfzoo-org-visit-the-zoo-calendar-of-events"
    ],
    "time": [
-    "sfzoo-sunset"
+    "sfzoo-sunset",
+    "f1-sfzoo-org-visit-the-zoo-calendar-of-events"
    ],
    "venue": [
-    "sfzoo-sunset"
+    "sfzoo-sunset",
+    "f1-sfzoo-org-visit-the-zoo-calendar-of-events"
    ]
   },
   "notes": "Seasonal weekly after-hours event. Features live music, outdoor bars, kid-friendly activities, and ambassador animals. Fall 2026 run ended October 9.",
-  "flags": [],
+  "flags": [
+   "Manual re-read 2026-10-18 (session f1fd3c36): every populated value matched the official page. Page: https://www.sfzoo.org/visit-the-zoo/calendar-of-events/. Admission price not stated on the calendar entry; left blank."
+  ],
   "parent": null,
   "check": {
    "level": "field-level",
-   "by": "a1b7522f",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": [
-   "price: unverified; left blank."
+   "price: unverified \u2014 not stated on the official page re-read on 2026-10-18."
   ]
  },
  {
@@ -8997,38 +9065,44 @@
   "name": "SF Zoo ZooLights",
   "category": "Community & outdoors",
   "kind": "Annual",
-  "schedule": "Annual winter holiday program \u2014 November 6, 2026 through January 3, 2027. Open Wednesday\u2013Sunday evenings (closed Monday and Tuesday), 5:30\u20139:00 PM",
+  "schedule": "Annual winter holiday program \u2014 November 6, 2026 through January 3, 2027; Wed\u2013Sun evenings (closed Mon\u2013Tue) until December 16, then nightly",
   "time": "5:30\u20139:00 PM",
   "venue": "San Francisco Zoo & Gardens, 1 Zoo Road (Southwest SF)",
-  "price": "",
+  "price": "$30 adults / $21 children (separate evening ticket; members $3 off)",
   "sources": [
-   "sfzoo-zoolights"
+   "sfzoo-zoolights",
+   "f1-sfzoo-org-zoolights"
   ],
   "evidence": {
    "name": [
     "sfzoo-zoolights"
    ],
    "schedule": [
-    "sfzoo-zoolights"
+    "f1-sfzoo-org-zoolights"
    ],
    "time": [
-    "sfzoo-zoolights"
+    "sfzoo-zoolights",
+    "f1-sfzoo-org-zoolights"
    ],
    "venue": [
-    "sfzoo-zoolights"
+    "sfzoo-zoolights",
+    "f1-sfzoo-org-zoolights"
+   ],
+   "price": [
+    "f1-sfzoo-org-zoolights"
    ]
   },
   "notes": "First nighttime holiday program since 2018. Features over one million lights across 14 zones, themed nights including Family Techno Glow Rave, Star Wars Night, and Santa visits in December.",
-  "flags": [],
+  "flags": [
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule, price. Page: https://www.sfzoo.org/zoolights/."
+  ],
   "parent": null,
   "check": {
    "level": "field-level",
-   "by": "a1b7522f",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
-  "unverified": [
-   "price: unverified; left blank."
-  ]
+  "unverified": []
  },
  {
   "id": "sf-zoo-boo",
@@ -9038,35 +9112,42 @@
   "schedule": "Annual Halloween event \u2014 Saturday, October 31, 2026, 10:00 AM \u2013 3:00 PM",
   "time": "10:00 AM \u2013 3:00 PM",
   "venue": "San Francisco Zoo & Gardens, 1 Zoo Road (Southwest SF)",
-  "price": "",
+  "price": "Free with paid daytime Zoo admission or membership",
   "sources": [
-   "sfzoo-boo"
+   "sfzoo-boo",
+   "f1-sfzoo-org-event-boo-at-the-zoo"
   ],
   "evidence": {
    "name": [
     "sfzoo-boo"
    ],
    "schedule": [
-    "sfzoo-boo"
+    "sfzoo-boo",
+    "f1-sfzoo-org-event-boo-at-the-zoo"
    ],
    "time": [
-    "sfzoo-boo"
+    "sfzoo-boo",
+    "f1-sfzoo-org-event-boo-at-the-zoo"
    ],
    "venue": [
-    "sfzoo-boo"
+    "sfzoo-boo",
+    "f1-sfzoo-org-event-boo-at-the-zoo"
+   ],
+   "price": [
+    "f1-sfzoo-org-event-boo-at-the-zoo"
    ]
   },
   "notes": "Costume parade at 11 AM, contest at 12 PM with prizes in four categories: Family, Animal, Individual, and Toddler. Animal pumpkin enrichment.",
-  "flags": [],
+  "flags": [
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: price. Page: https://www.sfzoo.org/event/boo-at-the-zoo/."
+  ],
   "parent": null,
   "check": {
    "level": "field-level",
-   "by": "a1b7522f",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
-  "unverified": [
-   "price: unverified; left blank."
-  ]
+  "unverified": []
  },
  {
   "id": "sf-zoo-resident-free-day",
@@ -9351,23 +9432,28 @@
   "venue": "San Francisco Public Library Main Branch and Asian Art Museum, 100 + 200 Larkin Street (Civic Center)",
   "price": "Free",
   "sources": [
-   "sfpl-noi"
+   "sfpl-noi",
+   "f1-sfpl-org-events-2026-04-11-afternoon-and-night-ideas"
   ],
   "evidence": {
    "name": [
     "sfpl-noi"
    ],
    "schedule": [
-    "sfpl-noi"
+    "sfpl-noi",
+    "f1-sfpl-org-events-2026-04-11-afternoon-and-night-ideas"
    ],
    "time": [
-    "sfpl-noi"
+    "sfpl-noi",
+    "f1-sfpl-org-events-2026-04-11-afternoon-and-night-ideas"
    ],
    "venue": [
-    "sfpl-noi"
+    "sfpl-noi",
+    "f1-sfpl-org-events-2026-04-11-afternoon-and-night-ideas"
    ],
    "price": [
-    "sfpl-noi"
+    "sfpl-noi",
+    "f1-sfpl-org-events-2026-04-11-afternoon-and-night-ideas"
    ]
   },
   "notes": "International event held in cities across the US. Presented by Villa Albertine San Francisco, Asian Art Museum, SFPL, KQED and Circuit Network. 2026 theme: \"Lighting the Way.\"",
@@ -9375,7 +9461,7 @@
   "parent": null,
   "check": {
    "level": "field-level",
-   "by": "a1b7522f",
+   "by": "f1fd3c36",
    "date": "2026-10-18"
   },
   "unverified": []
@@ -9535,5 +9621,81 @@
    "date": "2026-10-18"
   },
   "unverified": []
+ },
+ {
+  "id": "f1-alemany-flea-market",
+  "parent": null,
+  "flags": [
+   "Manual re-read 2026-10-18 (session f1fd3c36): row added from the official page during the audit; blank cells are not stated there. Page: https://www.sf.gov/location--alemany-flea-market."
+  ],
+  "name": "Alemany Flea Market",
+  "category": "Markets & food",
+  "kind": "Weekly",
+  "schedule": "Weekly \u2014 Sundays, year-round",
+  "time": "7:00 AM \u2013 3:00 PM",
+  "venue": "100 Alemany Blvd (Bernal Heights / Bayshore)",
+  "price": "",
+  "sources": [
+   "f1-sf-gov-location-alemany-flea-market"
+  ],
+  "evidence": {
+   "name": [
+    "f1-sf-gov-location-alemany-flea-market"
+   ],
+   "schedule": [
+    "f1-sf-gov-location-alemany-flea-market"
+   ],
+   "time": [
+    "f1-sf-gov-location-alemany-flea-market"
+   ],
+   "venue": [
+    "f1-sf-gov-location-alemany-flea-market"
+   ]
+  },
+  "notes": "Added by session f1fd3c36 audit (gap found during line-by-line check of the Alemany Farmers Market row). Admission price not stated on the City page.",
+  "unverified": [
+   "price: unverified; left blank."
+  ],
+  "check": {
+   "level": "flagged",
+   "by": "f1fd3c36",
+   "date": "2026-10-18"
+  }
+ },
+ {
+  "id": "f1-sffilm-doc-stories",
+  "parent": null,
+  "flags": [
+   "Manual re-read 2026-10-18 (session f1fd3c36): row added from the official page during the audit; blank cells are not stated there. Page: https://sffilm.org/yr-faq/."
+  ],
+  "name": "SFFILM Doc Stories",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "schedule": "Annual (November) \u2014 2026: November 5\u20138, 2026",
+  "time": "",
+  "venue": "",
+  "price": "",
+  "sources": [
+   "b-sffilm-org-yr-faq"
+  ],
+  "evidence": {
+   "name": [
+    "b-sffilm-org-yr-faq"
+   ],
+   "schedule": [
+    "b-sffilm-org-yr-faq"
+   ]
+  },
+  "notes": "Added by session f1fd3c36 audit (listed on the SFFILM FAQ alongside the festival row). Venue, times and prices not stated on the cited page.",
+  "unverified": [
+   "time: unverified; left blank.",
+   "venue: unverified; left blank.",
+   "price: unverified; left blank."
+  ],
+  "check": {
+   "level": "flagged",
+   "by": "f1fd3c36",
+   "date": "2026-10-18"
+  }
  }
 ]

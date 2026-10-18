@@ -196,6 +196,11 @@ cat_cards = ('<h2>Browse by category</h2><div class="cards cats">'
                                     ("community.html", "Community & outdoors")])
              + "</div>")
 
+AUDIT_TAG = "Manual re-read 2026-10-18 (session f1fd3c36)"
+audited = sum(1 for r in rows if ((r.get("check") or {}).get("by") == "f1fd3c36"
+                                 or any(f.startswith(AUDIT_TAG) for f in r["flags"]))
+              and not any(f.startswith(AUDIT_TAG + ": row added") for f in r["flags"]))
+corrected = sum(1 for r in rows if any(f.startswith(AUDIT_TAG + ": values changed") for f in r["flags"]))
 howto = ('<section class="prose"><h2>How this register was built</h2><ol>'
          '<li><b>Four research passes were reconciled row by row</b> into one register (sessions '
          '3a19e72d, 5a85baf2, 4f47c142 and a1b7522f). Overlapping rows were merged, not dropped: '
@@ -206,7 +211,11 @@ howto = ('<section class="prose"><h2>How this register was built</h2><ol>'
          'searched for the event name. Bot-blocked pages are reported, not silently passed.</li>'
          f'<li><b>Result:</b> {summ.get("name_found", 0)} of {summ.get("rows", len(rows))} rows had the event name '
          'confirmed on a cited page in the latest automated pass; the rest are labelled and listed on the '
-         'Flagged page.</li></ol></section>')
+         'Flagged page.</li>'
+         f'<li><b>Manual line-by-line audit:</b> {audited} rows were then re-read by a person against their '
+         f'official pages (every row the automated pass could not confirm, aggregator-only rows, PDF rows); '
+         f'{corrected} were corrected to match the page and each change is recorded with its URL and quote '
+         '(<code>data/audit_f1fd3c36.json</code>).</li></ol></section>')
 
 write("index.html", "San Francisco, in events.",
       "Recurring gatherings and special occasions inside the City and County of San Francisco — "
@@ -309,6 +318,12 @@ park programmes.</li>
 {sum(1 for r in rows if r.get("unverified"))} have at least one blank tracked field. Where an organizer has not
 published a next date, the date cell is blank rather than extrapolated — a recurring pattern is not a
 confirmed future instance.</li>
+<li><b>A second, human pass changed things.</b> Of the {audited} rows re-read line by line against
+their official pages, {corrected} needed a correction — wrong venues (SF International Arts Festival,
+Queer Women of Color Film Festival, Peak2Peak), a festival whose two rows disagreed on its dates
+(Litquake), a fair that alternates cities (the Antiquarian Book Fair is in Los Angeles in 2027), an
+organizer site still showing last year's edition (Lowrider Parade), and renamed events (Superfair,
+The San Francisco Fall Show). Automated name-matching catches dead pages, not stale values.</li>
 <li><b>Many entries record 2026 editions that have already taken place</b> (for example Tulip Day in
 March, the Opera Ball gala and the July 4 fireworks). They are retained as dated records and are not
 presented as upcoming; the register has no “upcoming only” filter because that would require

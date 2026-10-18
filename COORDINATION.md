@@ -2,7 +2,7 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (2026-10-18):** PR #28's official-calendar additions, PR #29's publication record and the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36) are merged; GitHub Pages is live from `main`.
+**Current publication (2026-10-18):** PR #28's official-calendar additions, PR #29's publication record and the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36) are merged; GitHub Pages is live from `main`. Session `d57e2eeb` (T37–T38) has rebuilt the register to **287 candidates / 206 directory rows** on `arena/d57e2eeb-maltaproj5` and is integrating as PR → `main` (T39).
 
 The bounded snapshot contains **266 candidates: 185 city-only directory entries / 81 review-only**, with 23 weekly / 8 monthly / 31 annual / 123 special entries, 67 entries carrying at least one confirmed future date, and 264 cited official URLs across 150 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
 
@@ -129,9 +129,9 @@ Upcoming page and cost badges are regression-covered in CI.
 | T34 | Date-ordered **Upcoming** page + **executive summary** on the landing page (nearest confirmed dates first, relative to the fixed 2026-10-18 snapshot) | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `assets/app.js`, `*.html` |
 | T35 | **Cost labelling**: a Free / Paid / Not stated badge derived only from the verified admission text, always shown next to the exact official quotation | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `*.html` |
 | T36 | Category subpages **Gaming / Music / AI & technology / Free to attend** + mobile-first dashboard navigation; rebuild, validate, PR → `main`, merge, confirm Pages | **done** | `3adf31d9` | NEW: `tools/register_3adf31d9.py`; `tools/consolidate.py`, `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `tests/`, `*.html`, `README.md`, `COORDINATION.md` |
-| T37 | Free-first gap research from official sources: gaming, music and AI/technology first, then other free SF events not yet in the register; exact quotations with archived captures only; *review_only* for anything failing the evidence rules | **in progress** | `d57e2eeb` | NEW: `data/audit_d57e2eeb.json`, `data/research/audit-d57e2eeb.md` |
-| T38 | Additive extension of the register with T37 entries (never edits an existing row), rebuild consolidated data + all 18 pages, update count-based regression fixtures, validate, run tests | **in progress** (starts after T37 research record lands) | `d57e2eeb` | NEW: `tools/register_d57e2eeb.py`; `tools/consolidate.py` (owner T27 done), `tests/` (owners done), generated `data/*` + `*.html`, `README.md`, `COORDINATION.md` |
-| T39 | Final integration of this session: re-verify combined data, confirm site builds with no broken links, PR → `main`, merge without waiting, confirm Pages deploy, record outcome | **unclaimed → in progress** (starts after T38) | `d57e2eeb` | `COORDINATION.md` |
+| T37 | Free-first gap research from official sources: gaming, music and AI/technology first, then other free SF events not yet in the register; exact quotations with archived captures only; *review_only* for anything failing the evidence rules | **done** | `d57e2eeb` | NEW: `data/audit_d57e2eeb.json`, `data/research/audit-d57e2eeb.md` |
+| T38 | Additive extension of the register with T37 entries (never edits an existing row), rebuild consolidated data + all 18 pages, update count-based regression fixtures, validate, run tests | **done** | `d57e2eeb` | NEW: `tools/register_d57e2eeb.py`; `tools/consolidate.py` (owner T27 done), `tests/` (owners done), generated `data/*` + `*.html`, `README.md`, `COORDINATION.md` |
+| T39 | Final integration of this session: re-verify combined data, confirm site builds with no broken links, PR → `main`, merge without waiting, confirm Pages deploy, record outcome | **in progress** | `d57e2eeb` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them

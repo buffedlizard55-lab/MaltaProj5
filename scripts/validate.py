@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from audited_register import FIELDS, compile_register, normal  # noqa: E402
 from register_3adf31d9 import extend as extend_register, topic_of, cost_of, next_date  # noqa: E402
+from register_d57e2eeb import extend as extend_register_d57e2eeb  # noqa: E402
 
 TOPIC_PAGES = {'gaming.html': 'Gaming', 'music.html': 'Music', 'ai.html': 'AI & technology'}
 
@@ -100,8 +101,10 @@ def main():
     assert history['warning'].startswith('UNVERIFIED'), 'Historical claims need an explicit warning'
     expected = compile_register(history['events'], history['sources'], history['review_findings'], audit)
     expected = extend_register(*expected)
-    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection plus the additive 3adf31d9 overlay. Rebuild; never run the old matcher applicator.'
+    expected = extend_register_d57e2eeb(*expected)
+    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection plus the additive 3adf31d9 and d57e2eeb overlays. Rebuild; never run the old matcher applicator.'
     assert {r['id'] for r in rows} >= set(load('audit_3adf31d9.json')['candidates']), 'New-research candidates were dropped'
+    assert {r['id'] for r in rows} >= set(load('audit_d57e2eeb.json')['candidates']), 'Free-first research candidates were dropped'
     ids = {r['id'] for r in rows}
     assert len(ids) == len(rows)
     assert set(audit['candidates']) <= ids, 'An inherited candidate was silently discarded'

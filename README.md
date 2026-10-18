@@ -10,17 +10,18 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 | Measure | Count |
 |---|---:|
-| Candidates assessed | 266 |
+| Candidates assessed | 287 |
 | Previously assessed candidates (231 initial + 2 companion + 13 official-calendar) | 246 |
 | Session `59f56c24` official-calendar extras | 5 |
 | New topic-gap entries added in audit `3adf31d9` (gaming / music / AI) | 15 |
-| Entries admitted to the city-only directory | 185 |
+| New free-first gap entries added in audit `d57e2eeb` (civic / gardens / music / gaming / AI) | 21 |
+| Entries admitted to the city-only directory | 206 |
 | Candidates held off the directory for review | 81 |
-| Weekly / monthly / annual entries | 23 / 8 / 31 |
-| Special, dated or cadence-unconfirmed entries | 123 |
-| Entries with at least one confirmed future date | 67 |
-| Directory rows reading Free / Paid / Not stated | 56 / 18 / 111 |
-| Exact cited official-source URLs / distinct domains | 264 / 150 |
+| Weekly / monthly / annual entries | 36 / 10 / 34 |
+| Special, dated or cadence-unconfirmed entries | 126 |
+| Entries with at least one confirmed future date | 71 |
+| Directory rows reading Free / Paid / Not stated | 70 / 19 / 117 |
+| Exact cited official-source URLs / distinct domains | 297 / 162 |
 
 The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
@@ -62,7 +63,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/validate.py
 ```
 
-`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay and the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology entries). Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
+`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay, the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology entries), and finally the additive fail-closed `tools/register_d57e2eeb.py` free-first gap overlay (civic venues, Golden Gate Park garden free hours, free music, games and SF AI/tech communities, plus one explicitly Paid entry kept distinct). Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
 
 The validator compares the exact projection, checks quotation provenance (including labeled event JSON-LD), recurrence/year guards, blanks, parent cycles, source references, CSV cell values, all page memberships and every local link/fragment. A second rebuild must be byte-identical. Provenance validation is **not** automatic semantic fact-checking.
 
@@ -122,6 +123,8 @@ Omit `--serve` when a static server already runs on port 8080. This checks 18 pa
 | `data/audit_64f8b973.json` | Finite official evidence captures, selected tool excerpts and explicit field decisions |
 | `data/audit_3adf31d9.json`, `tools/register_3adf31d9.py` | Additive fail-closed topic-gap overlay and its captures (gaming / music / AI) |
 | `data/research/audit-3adf31d9.md` | Research log for that overlay: retrieval methods, approvals and deliberate non-approvals |
+| `data/audit_d57e2eeb.json`, `tools/register_d57e2eeb.py` | Additive fail-closed free-first gap overlay and its captures (free civic/garden/music/gaming/AI entries, one Paid) |
+| `data/research/audit-d57e2eeb.md` | Research log for that overlay: gap analysis, retrieval methods, irregularities and deliberate exclusions |
 | `data/upcoming_order.json` | Canonical nearest-first order of the dated directory rows, asserted by the browser pass |
 | `data/events.json` | All audited records, including review-only dispositions; not all are published in the directory |
 | `data/sources.json` | Exact-URL ledger; statuses and contextual decisions are separate |

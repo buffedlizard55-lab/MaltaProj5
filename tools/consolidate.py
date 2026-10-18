@@ -838,3 +838,9 @@ apply_audit(rows, sources, review)
 # AI/technology entries only. Same fail-closed rules; never edits an existing row.
 from register_3adf31d9 import apply_extension
 apply_extension()
+
+# Additive free-first gap overlay (session d57e2eeb, T37-T38): free civic venues,
+# garden free hours, free music, games and AI/tech communities. Always runs last,
+# same fail-closed rules; never edits an existing row.
+from register_d57e2eeb import apply_extension as apply_extension_d57e2eeb
+apply_extension_d57e2eeb()

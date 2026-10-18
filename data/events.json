@@ -1,0 +1,1041 @@
+[
+  {
+    "id": "ferry",
+    "name": "Ferry Plaza Farmers Market",
+    "category": "Markets & food",
+    "kind": "Weekly",
+    "schedule": "Tuesdays & Thursdays; Saturdays (year-round)",
+    "time": "Tue/Thu 10 am–2 pm; Sat 8 am–2 pm",
+    "venue": "Ferry Building / Embarcadero",
+    "price": "",
+    "sources": [
+      "ferry"
+    ],
+    "evidence": {
+      "name": [
+        "ferry"
+      ],
+      "schedule": [
+        "ferry"
+      ],
+      "time": [
+        "ferry"
+      ],
+      "venue": [
+        "ferry"
+      ]
+    },
+    "notes": "",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "nightlife",
+    "name": "NightLife",
+    "category": "Museums & science",
+    "kind": "Weekly",
+    "schedule": "Most Thursdays; not every Thursday",
+    "time": "6–10 pm",
+    "venue": "California Academy of Sciences, Golden Gate Park",
+    "price": "$26",
+    "sources": [
+      "night",
+      "academy"
+    ],
+    "evidence": {
+      "name": [
+        "night",
+        "academy"
+      ],
+      "schedule": [
+        "night",
+        "academy"
+      ],
+      "time": [
+        "night",
+        "academy"
+      ],
+      "venue": [
+        "night",
+        "academy"
+      ],
+      "price": [
+        "night",
+        "academy"
+      ]
+    },
+    "notes": "21+; physical ID. Usually one Thursday off per month; mid-Dec–early-Jan hiatus. Planetarium passes extra.",
+    "flags": [],
+    "parent": ""
+  },
+  {
+    "id": "after-dark",
+    "name": "After Dark Thursday Nights",
+    "category": "Museums & science",
+    "kind": "Weekly",
+    "schedule": "Thursdays",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. Series row; dated themes below are occurrences, not additional series.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "de-young-sat",
+    "name": "de Young Free Saturdays",
+    "category": "Museums & science",
+    "kind": "Weekly",
+    "schedule": "Saturdays",
+    "time": "",
+    "venue": "de Young",
+    "price": "Free general admission for eligible Bay Area residents",
+    "sources": [
+      "famsf",
+      "dy"
+    ],
+    "evidence": {
+      "name": [
+        "famsf",
+        "dy"
+      ],
+      "schedule": [
+        "famsf",
+        "dy"
+      ],
+      "venue": [
+        "famsf",
+        "dy"
+      ],
+      "price": [
+        "famsf",
+        "dy"
+      ]
+    },
+    "notes": "Permanent galleries only; ID required; excludes Bouquets to Art and special exhibition charges.",
+    "flags": [
+      "time: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "de-young-tue",
+    "name": "de Young Free Tuesdays",
+    "category": "Museums & science",
+    "kind": "Monthly",
+    "schedule": "First Tuesday of every month",
+    "time": "",
+    "venue": "de Young",
+    "price": "Free general admission",
+    "sources": [
+      "famsf",
+      "dy"
+    ],
+    "evidence": {
+      "name": [
+        "famsf",
+        "dy"
+      ],
+      "schedule": [
+        "famsf",
+        "dy"
+      ],
+      "venue": [
+        "famsf",
+        "dy"
+      ],
+      "price": [
+        "famsf",
+        "dy"
+      ]
+    },
+    "notes": "Permanent galleries only; excludes Bouquets to Art and special exhibition charges.",
+    "flags": [
+      "time: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "legion-sat",
+    "name": "Legion of Honor Free Saturdays",
+    "category": "Museums & science",
+    "kind": "Weekly",
+    "schedule": "Saturdays",
+    "time": "",
+    "venue": "Legion of Honor",
+    "price": "Free general admission for eligible Bay Area residents",
+    "sources": [
+      "famsf",
+      "legion"
+    ],
+    "evidence": {
+      "name": [
+        "famsf",
+        "legion"
+      ],
+      "schedule": [
+        "famsf",
+        "legion"
+      ],
+      "venue": [
+        "famsf",
+        "legion"
+      ],
+      "price": [
+        "famsf",
+        "legion"
+      ]
+    },
+    "notes": "Permanent galleries only; ID required; excludes Bouquets to Art and special exhibition charges.",
+    "flags": [
+      "time: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "legion-tue",
+    "name": "Legion of Honor Free Tuesdays",
+    "category": "Museums & science",
+    "kind": "Monthly",
+    "schedule": "First Tuesday of every month",
+    "time": "",
+    "venue": "Legion of Honor",
+    "price": "Free general admission",
+    "sources": [
+      "famsf",
+      "legion"
+    ],
+    "evidence": {
+      "name": [
+        "famsf",
+        "legion"
+      ],
+      "schedule": [
+        "famsf",
+        "legion"
+      ],
+      "venue": [
+        "famsf",
+        "legion"
+      ],
+      "price": [
+        "famsf",
+        "legion"
+      ]
+    },
+    "notes": "Permanent galleries only; excludes Bouquets to Art and special exhibition charges.",
+    "flags": [
+      "time: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "outer",
+    "name": "Outer Sunset Farmers Market & Mercantile",
+    "category": "Markets & food",
+    "kind": "Weekly",
+    "schedule": "Sundays, year-round",
+    "time": "9 am–2 pm",
+    "venue": "37th Avenue, Ortega–Quintara",
+    "price": "",
+    "sources": [
+      "outer",
+      "diwali"
+    ],
+    "evidence": {
+      "name": [
+        "outer",
+        "diwali"
+      ],
+      "schedule": [
+        "outer",
+        "diwali"
+      ],
+      "time": [
+        "outer",
+        "diwali"
+      ],
+      "venue": [
+        "outer",
+        "diwali"
+      ]
+    },
+    "notes": "",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "yoga",
+    "name": "Farmers market yoga with Avril",
+    "category": "Community & outdoors",
+    "kind": "Monthly",
+    "schedule": "First and third Sundays",
+    "time": "9 am",
+    "venue": "Outer Sunset market greenway",
+    "price": "Free; RSVP / donations",
+    "sources": [
+      "outer",
+      "diwali"
+    ],
+    "evidence": {
+      "name": [
+        "outer",
+        "diwali"
+      ],
+      "schedule": [
+        "outer",
+        "diwali"
+      ],
+      "time": [
+        "outer",
+        "diwali"
+      ],
+      "venue": [
+        "outer",
+        "diwali"
+      ],
+      "price": [
+        "outer",
+        "diwali"
+      ]
+    },
+    "notes": "",
+    "flags": [],
+    "parent": ""
+  },
+  {
+    "id": "flea",
+    "name": "Inner Sunset Flea Market",
+    "category": "Markets & food",
+    "kind": "Monthly",
+    "schedule": "Second Sundays, April–November 2026",
+    "time": "10 am–4 pm",
+    "venue": "Irving Street, 9th–11th Avenues",
+    "price": "",
+    "sources": [
+      "merc"
+    ],
+    "evidence": {
+      "name": [
+        "merc"
+      ],
+      "schedule": [
+        "merc"
+      ],
+      "time": [
+        "merc"
+      ],
+      "venue": [
+        "merc"
+      ]
+    },
+    "notes": "",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "secondhand",
+    "name": "Secondhand Saturdays",
+    "category": "Markets & food",
+    "kind": "Monthly",
+    "schedule": "Third Saturdays, April–November 2026",
+    "time": "10 am–4 pm",
+    "venue": "37th Avenue, Ortega–Quintara",
+    "price": "",
+    "sources": [
+      "merc",
+      "diwali"
+    ],
+    "evidence": {
+      "name": [
+        "merc",
+        "diwali"
+      ],
+      "schedule": [
+        "merc",
+        "diwali"
+      ],
+      "time": [
+        "merc",
+        "diwali"
+      ],
+      "venue": [
+        "merc",
+        "diwali"
+      ]
+    },
+    "notes": "",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "diwali",
+    "name": "Diwali at Outer Sunset Farmers Market",
+    "category": "Festivals & culture",
+    "kind": "Annual",
+    "schedule": "November 8, 2026",
+    "time": "9 am–2 pm",
+    "venue": "37th Avenue, Ortega–Quintara",
+    "price": "",
+    "sources": [
+      "diwali"
+    ],
+    "evidence": {
+      "name": [
+        "diwali"
+      ],
+      "schedule": [
+        "diwali"
+      ],
+      "time": [
+        "diwali"
+      ],
+      "venue": [
+        "diwali"
+      ]
+    },
+    "notes": "Fourth annual celebration.",
+    "flags": [
+      "Current heading says 2026 but embedded vendor calendar says 2025; use event heading only.",
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "muertos",
+    "name": "Día de los Muertos Outer Sunset",
+    "category": "Festivals & culture",
+    "kind": "Annual",
+    "schedule": "November 1, 2026",
+    "time": "9 am–2 pm",
+    "venue": "37th Avenue at Ortega Street",
+    "price": "",
+    "sources": [
+      "merc",
+      "outer"
+    ],
+    "evidence": {
+      "name": [
+        "merc",
+        "outer"
+      ],
+      "schedule": [
+        "merc",
+        "outer"
+      ],
+      "time": [
+        "merc",
+        "outer"
+      ],
+      "venue": [
+        "merc",
+        "outer"
+      ]
+    },
+    "notes": "",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "pride",
+    "name": "San Francisco Pride Celebration & Parade",
+    "category": "Festivals & culture",
+    "kind": "Annual",
+    "schedule": "June 26–27, 2027",
+    "time": "",
+    "venue": "San Francisco",
+    "price": "",
+    "sources": [
+      "pride"
+    ],
+    "evidence": {
+      "name": [
+        "pride"
+      ],
+      "schedule": [
+        "pride"
+      ],
+      "venue": [
+        "pride"
+      ]
+    },
+    "notes": "57th annual celebration; detailed route and times not transcribed.",
+    "flags": [
+      "Detailed route / venue: unverified beyond San Francisco.",
+      "time: unverified; left blank.",
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "chinese",
+    "name": "Chinese New Year Parade",
+    "category": "Festivals & culture",
+    "kind": "Special",
+    "schedule": "February 20, 2027",
+    "time": "5:15 pm start",
+    "venue": "2nd & Market to Kearny & Columbus",
+    "price": "Free viewing; paid bleachers",
+    "sources": [
+      "parade"
+    ],
+    "evidence": {
+      "name": [
+        "parade"
+      ],
+      "schedule": [
+        "parade"
+      ],
+      "time": [
+        "parade"
+      ],
+      "venue": [
+        "parade"
+      ],
+      "price": [
+        "parade"
+      ]
+    },
+    "notes": "Dated edition; annual recurrence not separately confirmed in retrieved FAQ.",
+    "flags": [
+      "Annual recurrence: unverified."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "carnaval",
+    "name": "Carnaval SF festival & Grand Parade",
+    "category": "Festivals & culture",
+    "kind": "Special",
+    "schedule": "May 29–30, 2027",
+    "time": "",
+    "venue": "Mission District, San Francisco",
+    "price": "Free festival and parade; grandstand tickets separate",
+    "sources": [
+      "carnaval"
+    ],
+    "evidence": {
+      "name": [
+        "carnaval"
+      ],
+      "schedule": [
+        "carnaval"
+      ],
+      "venue": [
+        "carnaval"
+      ],
+      "price": [
+        "carnaval"
+      ]
+    },
+    "notes": "Parade May 30.",
+    "flags": [
+      "Recurrence wording not explicitly confirmed; mixed historical copy (49 years / fourth decade).",
+      "time: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "excelsior",
+    "name": "Sunday Streets: Excelsior Community Block Party",
+    "category": "Community & outdoors",
+    "kind": "Special",
+    "schedule": "October 18, 2026",
+    "time": "11 am–4 pm",
+    "venue": "Mission Street, Geneva Avenue–Theresa Street",
+    "price": "",
+    "sources": [
+      "streets"
+    ],
+    "evidence": {
+      "name": [
+        "streets"
+      ],
+      "schedule": [
+        "streets"
+      ],
+      "time": [
+        "streets"
+      ],
+      "venue": [
+        "streets"
+      ]
+    },
+    "notes": "2026 season finale. Date is the research date; not necessarily still upcoming.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "family",
+    "name": "Free Family Day: K-Pop, Art, and Beyond",
+    "category": "Museums & science",
+    "kind": "Special",
+    "schedule": "October 25, 2026",
+    "time": "10 am–4 pm",
+    "venue": "SFMOMA, 151 Third Street",
+    "price": "Free with RSVP and qualifying child; exhibition surcharge",
+    "sources": [
+      "family",
+      "moma"
+    ],
+    "evidence": {
+      "name": [
+        "family",
+        "moma"
+      ],
+      "schedule": [
+        "family",
+        "moma"
+      ],
+      "time": [
+        "family",
+        "moma"
+      ],
+      "venue": [
+        "family",
+        "moma"
+      ],
+      "price": [
+        "family",
+        "moma"
+      ]
+    },
+    "notes": "Up to two adults accompanying child 18 or younger. RM x SFMOMA: adult $12 surcharge; all need timed reservation.",
+    "flags": [],
+    "parent": ""
+  },
+  {
+    "id": "death",
+    "name": "After Dark: Death and Life / La muerte y la vida",
+    "category": "Museums & science",
+    "kind": "Special",
+    "schedule": "October 22, 2026",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. A dated occurrence of After Dark.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": "after-dark"
+  },
+  {
+    "id": "digest",
+    "name": "After Dark: Digest This",
+    "category": "Museums & science",
+    "kind": "Special",
+    "schedule": "November 5, 2026",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. A dated occurrence of After Dark.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": "after-dark"
+  },
+  {
+    "id": "unplug-nov",
+    "name": "After Dark: Unplug and Play",
+    "category": "Museums & science",
+    "kind": "Special",
+    "schedule": "November 12, 2026",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. A dated occurrence of After Dark.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": "after-dark"
+  },
+  {
+    "id": "glow",
+    "name": "After Dark: Glow Opening",
+    "category": "Museums & science",
+    "kind": "Special",
+    "schedule": "November 19, 2026",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. A dated occurrence of After Dark.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": "after-dark"
+  },
+  {
+    "id": "rules",
+    "name": "After Dark: Rule Breakers",
+    "category": "Museums & science",
+    "kind": "Special",
+    "schedule": "December 3, 2026",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. A dated occurrence of After Dark.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": "after-dark"
+  },
+  {
+    "id": "unplug-dec",
+    "name": "After Dark: Unplug and Play",
+    "category": "Museums & science",
+    "kind": "Special",
+    "schedule": "December 10, 2026",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. A dated occurrence of After Dark.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": "after-dark"
+  },
+  {
+    "id": "solstice",
+    "name": "After Dark: Solstice",
+    "category": "Museums & science",
+    "kind": "Special",
+    "schedule": "December 17, 2026",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. A dated occurrence of After Dark.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": "after-dark"
+  },
+  {
+    "id": "creep",
+    "name": "After Dark: Creepatorium",
+    "category": "Museums & science",
+    "kind": "Annual",
+    "schedule": "October 29, 2026",
+    "time": "6–10 pm",
+    "venue": "Exploratorium, Pier 15",
+    "price": "",
+    "sources": [
+      "dark",
+      "exvisit"
+    ],
+    "evidence": {
+      "name": [
+        "dark",
+        "exvisit"
+      ],
+      "schedule": [
+        "dark",
+        "exvisit"
+      ],
+      "time": [
+        "dark",
+        "exvisit"
+      ],
+      "venue": [
+        "dark",
+        "exvisit"
+      ]
+    },
+    "notes": "18+. A dated occurrence of After Dark.",
+    "flags": [
+      "price: unverified; left blank."
+    ],
+    "parent": "after-dark"
+  },
+  {
+    "id": "cole",
+    "name": "Cole Valley Nights",
+    "category": "Markets & food",
+    "kind": "Special",
+    "schedule": "December 10",
+    "time": "4–9 pm",
+    "venue": "Carl–Parnassus Avenue, San Francisco",
+    "price": "",
+    "sources": [
+      "merc"
+    ],
+    "evidence": {
+      "name": [
+        "merc"
+      ],
+      "schedule": [
+        "merc"
+      ],
+      "time": [
+        "merc"
+      ],
+      "venue": [
+        "merc"
+      ]
+    },
+    "notes": "Date transcribed exactly; year is not assigned.",
+    "flags": [
+      "Year: unverified; not inferred from neighboring listings.",
+      "Recurrence: unverified.",
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "holiday",
+    "name": "Sunset Holiday Mercantile",
+    "category": "Markets & food",
+    "kind": "Special",
+    "schedule": "December 5–6",
+    "time": "11 am–5 pm",
+    "venue": "SF County Fair Building",
+    "price": "",
+    "sources": [
+      "merc"
+    ],
+    "evidence": {
+      "name": [
+        "merc"
+      ],
+      "schedule": [
+        "merc"
+      ],
+      "time": [
+        "merc"
+      ],
+      "venue": [
+        "merc"
+      ]
+    },
+    "notes": "Date transcribed exactly; year is not assigned.",
+    "flags": [
+      "Year: unverified; not inferred from neighboring listings.",
+      "Recurrence: unverified.",
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  },
+  {
+    "id": "taraval",
+    "name": "Holidays on Taraval",
+    "category": "Markets & food",
+    "kind": "Special",
+    "schedule": "December 11",
+    "time": "5–10 pm",
+    "venue": "Taraval Street, 20th–24th Avenues",
+    "price": "",
+    "sources": [
+      "merc"
+    ],
+    "evidence": {
+      "name": [
+        "merc"
+      ],
+      "schedule": [
+        "merc"
+      ],
+      "time": [
+        "merc"
+      ],
+      "venue": [
+        "merc"
+      ]
+    },
+    "notes": "Date transcribed exactly; year is not assigned.",
+    "flags": [
+      "Year: unverified; not inferred from neighboring listings.",
+      "Recurrence: unverified.",
+      "price: unverified; left blank."
+    ],
+    "parent": ""
+  }
+]

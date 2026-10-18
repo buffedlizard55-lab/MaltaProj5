@@ -1,0 +1,170 @@
+{
+  "ferry": {
+    "url": "https://www.ferrybuildingmarketplace.com/farmers-market/",
+    "publisher": "Ferry Building Marketplace",
+    "checked": "2026-10-18",
+    "excerpt": "FERRY PLAZA FARMERS MARKET. YEAR ROUND HOURS. Tuesday 10:00am to 2:00pm. Thursday 10:00am to 2:00pm. Saturday 8:00am to 2:00pm. Saturday market is held both in front of the Ferry Building, along the Embarcadero, and on the rear plaza.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "night": {
+    "url": "https://www.calacademy.org/nightlife",
+    "publisher": "California Academy of Sciences",
+    "checked": "2026-10-18",
+    "excerpt": "NightLife is Thursdays* from 6–10 p.m. Last entry into the building is 9 p.m. All guests must be 21+ with valid, physical photo ID. Usually one Thursday per month when no NightLife event is scheduled. Holiday hiatus mid-December through early-January. Tickets are $26.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "academy": {
+    "url": "https://www.calacademy.org/getting-here",
+    "publisher": "California Academy of Sciences",
+    "checked": "2026-10-18",
+    "excerpt": "Located in the heart of San Francisco in beautiful Golden Gate Park. California Academy of Sciences 55 Music Concourse Dr San Francisco, CA 94118.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "dark": {
+    "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+    "publisher": "Exploratorium",
+    "checked": "2026-10-18",
+    "excerpt": "Every Thursday Night • 6:00–10:00 pm. Pier 15. After Dark: Death and Life / La muerte y la vida — Thu, Oct 22 2026 • 6 - 10pm; Creepatorium — Thu, Oct 29 2026 • 6 - 10pm; Digest This — Thu, Nov 5 2026 • 6 - 10pm; Unplug and Play — Thu, Nov 12 2026 • 6 - 10pm; Glow Opening — Thu, Nov 19 2026 • 6 - 10pm; Rule Breakers — Thu, Dec 3 2026 • 6 - 10pm; Unplug and Play — Thu, Dec 10 2026 • 6 - 10pm; Solstice — Thu, Dec 17 2026 • 6 - 10pm. Creepatorium described as annual Halloween party.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "exvisit": {
+    "url": "https://www.exploratorium.edu/visit",
+    "publisher": "Exploratorium",
+    "checked": "2026-10-18",
+    "excerpt": "You can’t get more San Francisco than this. Waterfront museum between Pier 39 and the Ferry Building. After Dark Thursday Nights (18+). Regular hours are subject to change; check special dates and times.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "famsf": {
+    "url": "https://www.famsf.org/visit/free-reduced-admission",
+    "publisher": "Fine Arts Museums of San Francisco",
+    "checked": "2026-10-18",
+    "excerpt": "Every Saturday we offer free general admission to all residents of the nine Bay Area counties. Permanent collection galleries only; full-price special exhibitions. Verify with ID on-site. General admission is free the first Tuesday of every month. Free Saturdays and Free Tuesdays do not take place during Bouquets to Art.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "dy": {
+    "url": "https://www.famsf.org/visit/de-young",
+    "publisher": "Fine Arts Museums of San Francisco",
+    "checked": "2026-10-18",
+    "excerpt": "de Young. Free + reduced admission. Family Tour: Select Saturdays, 10:30 am. Treasures of the Pharaohs: Through Jan 31, 2027. Nengi Omuku: The Gathering: Through May 14, 2028. Rose B. Simpson: LEXICON: Through Feb 7, 2027.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "legion": {
+    "url": "https://www.famsf.org/visit/legion-of-honor",
+    "publisher": "Fine Arts Museums of San Francisco",
+    "checked": "2026-10-18",
+    "excerpt": "Legion of Honor. Free Saturdays at the Legion of Honor: Sat, 9:30 am–5:15 pm. Organ Concerts: Sat, 4 pm. Miró: Proof Against All: Through Jul 25, 2027. Eternal Paris: Photographing the City of Light: Through Apr 4, 2027.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "family": {
+    "url": "https://www.sfmoma.org/event/free-family-day-k-pop-art-and-beyond/",
+    "publisher": "SFMOMA",
+    "checked": "2026-10-18",
+    "excerpt": "Free Family Day: K-Pop, Art, and Beyond. Sunday, Oct 25, 2026. 10 a.m.–4 p.m. Museumwide. Free with RSVP. Free access to two adults when accompanied by a child 18 or younger. RM x SFMOMA: Between You and Me requires a timed ticket; $12 adult surcharge, children free but need reserved timed ticket.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "moma": {
+    "url": "https://www.sfmoma.org/visit/",
+    "publisher": "SFMOMA",
+    "checked": "2026-10-18",
+    "excerpt": "Our visitor entrance is at 151 Third Street, only a few blocks from Montgomery St BART station; steps from Yerba Buena Gardens.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "merc": {
+    "url": "https://sunsetmercantilesf.com/",
+    "publisher": "Sunset Mercantile",
+    "checked": "2026-10-18",
+    "excerpt": "Outer Sunset Farmers Market: Sundays 9 am–2 pm, 37th Avenue at Ortega to Quintara. Cole Valley Nights: December 10th, 4pm–9pm, Carl and Parnassus Avenue, San Francisco. Inner Sunset Flea Market: Second Sundays, April–Nov 2026, 10 am–4 pm, Irving Street @ 9th–11th Avenues. Secondhand Saturdays: Third Saturdays, April–Nov 2026, 10 am–4 pm, 37th Avenue @ Ortega to Quintara. Día de los Muertos Outer Sunset: Sunday, November 1, 2026, 9 am–2 pm, 37th Ave @ Ortega St, San Francisco. Sunset Holiday Mercantile: December 5 & 6, 11am–5pm, SF County Fair Building. Holidays On Taraval: December 11th, 5pm–10pm, Taraval St, 20th–24th ave.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "outer": {
+    "url": "https://sunsetmercantilesf.com/osfmm/",
+    "publisher": "Sunset Mercantile",
+    "checked": "2026-10-18",
+    "excerpt": "SUNDAYS 9 am–2 pm. 37th Avenue at Ortega to Quintara. Year-round RAIN or SHINE. Weekly Outer Sunset Farmer’s Market and Mercantile. Annual onsite cultural celebrations including Dia de los Muertos, Diwali & Lunar New Year. Free yoga: Every first and third Sunday, join Avril on the greenway at 9am; RSVP and donate.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "diwali": {
+    "url": "https://sunsetmercantilesf.com/diwali2026/",
+    "publisher": "Sunset Mercantile",
+    "checked": "2026-10-18",
+    "excerpt": "November 8th, 2026. 9am–2pm. 37th Avenue at Ortega to Quintara. Celebrate the 4th Annual Diwali at The Outer Sunset Farmers Market & Mercantile. San Francisco, CA, 94116. PLEASE STAY TUNED FOR THE PROGRAM. Embedded vendor section says 2025 Outer Sunset Farmers Market & Mercantile.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "pride": {
+    "url": "https://sfpride.org/",
+    "publisher": "San Francisco Pride",
+    "checked": "2026-10-18",
+    "excerpt": "June 26–27, 2027 • 57th Annual Celebration & Parade. Join over one million voices in San Francisco. Civic Center celebration on Saturday and Sunday (organizer social embed).",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "parade": {
+    "url": "https://chineseparade.com/faq/",
+    "publisher": "Chinese New Year Festival & Parade",
+    "checked": "2026-10-18",
+    "excerpt": "San Francisco Chinese New Year Parade: Saturday, February 20, 2027, starts at 5:15 PM from 2nd and Market St. Free event for all to attend but tickets must be purchased to sit in bleacher sections. Ends at Kearny Street & Columbus Ave.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "carnaval": {
+    "url": "https://carnavalsanfrancisco.org/",
+    "publisher": "Carnaval San Francisco",
+    "checked": "2026-10-18",
+    "excerpt": "Carnaval SF. May 29–30, 2027. San Francisco, CA. FREE 2-day family festival & Grand Parade in San Francisco’s Mission District. Grand Parade broadcasting Sunday, May 30, 2027. Theme says Forty-nine years; other copy says fourth decade.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "streets": {
+    "url": "https://sundaystreetssf.com/sunday-streets-excelsior-2026/",
+    "publisher": "Sunday Streets SF / Livable City",
+    "checked": "2026-10-18",
+    "excerpt": "Excelsior Community Block Party. Sunday, October 18, 2026 • 11 AM–4 PM. Mission Street between Geneva Avenue and Theresa Street. 2026 season finale. San Francisco’s open streets program.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "bay": {
+    "url": "https://www.baytobreakers.com/",
+    "publisher": "Bay to Breakers",
+    "checked": "2026-10-18",
+    "excerpt": "May 16, 2027. Register for 2027. Historic fun run through the streets of San Francisco. Elsewhere on same page: high-energy happenings before May 18; 2026 sanction graphic and undated May shakeout/ballgame promotions.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "fleet": {
+    "url": "https://fleetweeksf.org/",
+    "publisher": "San Francisco Fleet Week Association",
+    "checked": "2026-10-18",
+    "excerpt": "Fleet Fest: Fisherman’s Wharf and Pier 27. Saturday, October 10, 10 AM–7 PM; Sunday, October 11, 10 AM–5 PM. 2026 Air Show Lineup. Ship Tours October 7–12 at Piers 27 and 35.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "folsom": {
+    "url": "https://www.folsomstreet.org/",
+    "publisher": "Folsom Street",
+    "checked": "2026-10-18",
+    "excerpt": "UP YOUR ALLEY 7/25/2027. FOLSOM STREET FAIR 9/26/2027. Embedded posts promote 2026 fair.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "folsomdetail": {
+    "url": "https://www.folsomstreet.org/folsom-street-fair",
+    "publisher": "Folsom Street",
+    "checked": "2026-10-18",
+    "excerpt": "FOLSOM STREET FAIR. SEPTEMBER 27, 2026 11AM–6PM. Page title FOLSOM STREET FAIR 2026.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "band": {
+    "url": "https://sfrecpark.org/1570/Golden-Gate-Bandshell-Concerts",
+    "publisher": "San Francisco Recreation and Parks",
+    "checked": "2026-10-18",
+    "excerpt": "Golden Gate Bandshell Concerts. Loading. No event dates or recurrence were available in retrieved page.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "free": {
+    "url": "https://www.sfmoma.org/free-days/",
+    "publisher": "SFMOMA",
+    "checked": "2026-10-18",
+    "excerpt": "Free Community Days: Upcoming Dates TBD. Upcoming Free Family Day October 25, 2026. Surcharged exhibitions are not included.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  },
+  "opera": {
+    "url": "https://www.sfopera.com/",
+    "publisher": "San Francisco Opera",
+    "checked": "2026-10-18",
+    "excerpt": "Upcoming: Manon OCT 18, 21, 24, 27, 30 / NOV 1, War Memorial Opera House. The Marriage of Figaro OCT 31 / NOV 3, 7, 10, 13, 15, 18, 21, 27, 29, War Memorial Opera House. Strauss In Concert NOV 6, War Memorial Opera House. Opera Ball NOV 12, City Hall. The Future Is Now: Adlers in Concert NOV 20, Herbst Theatre; annual showcase. Page artwork paths identify 2026–27 season, but listing text omits year.",
+    "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
+  }
+}

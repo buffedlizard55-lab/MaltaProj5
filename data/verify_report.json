@@ -1,15 +1,15 @@
 {
- "checked_at": "2026-10-18T01:37:43Z",
+ "checked_at": "2026-10-18T01:38:21Z",
  "timeout_seconds": 30,
  "urls": {
   "https://foodwise.org/markets/ferry-plaza-farmers-market/": {
    "http": 200,
    "final_url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
-   "chars": 220380,
+   "chars": 220377,
    "content_type": "text/html",
    "pdf": false,
    "title": "Ferry Plaza Farmers Market at the San Francisco Ferry Building : Foodwise",
-   "seconds": 3.7,
+   "seconds": 0.7,
    "found_any": true,
    "matches": {
     "b-foodwise-org-markets-ferry-plaza-farmers-market": "ferry"
@@ -45,7 +45,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "NightLife - California Academy of Sciences",
-   "seconds": 3.5,
+   "seconds": 0.8,
    "found_any": true,
    "matches": {
     "night": "nightlife"
@@ -61,7 +61,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Getting Here - California Academy of Sciences",
-   "seconds": 3.6,
+   "seconds": 0.8,
    "found_any": true,
    "matches": {
     "academy": "nightlife"
@@ -104,7 +104,7 @@
    "http": 403,
    "final_url": "https://www.famsf.org/visit/free-reduced-admission",
    "error": "HTTP 403",
-   "seconds": 3.5,
+   "seconds": 0.3,
    "found_any": false,
    "matches": {
     "famsf": null
@@ -118,7 +118,7 @@
    "http": 403,
    "final_url": "https://www.famsf.org/visit/de-young",
    "error": "HTTP 403",
-   "seconds": 3.5,
+   "seconds": 0.3,
    "found_any": false,
    "matches": {
     "dy": null
@@ -132,7 +132,7 @@
    "http": 403,
    "final_url": "https://www.famsf.org/visit/getting-to-the-de-young",
    "error": "HTTP 403",
-   "seconds": 3.3,
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "dy-location": null
@@ -146,7 +146,7 @@
    "http": 403,
    "final_url": "https://www.famsf.org/visit/legion-of-honor",
    "error": "HTTP 403",
-   "seconds": 3.3,
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "legion": null
@@ -161,7 +161,7 @@
    "http": 403,
    "final_url": "https://www.famsf.org/visit/getting-to-the-legion-of-honor",
    "error": "HTTP 403",
-   "seconds": 3.1,
+   "seconds": 0.0,
    "found_any": false,
    "matches": {
     "legion-location": null
@@ -179,7 +179,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Outer Sunset Farmers Market & Mercantile™ | Sunset Mercantile",
-   "seconds": 0.3,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "outer": "farmers"
@@ -196,7 +196,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Diwali 2026 at the Outer Sunset Farmers Market | Sunset Mercantile",
-   "seconds": 1.5,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "diwali": "farmers"
@@ -213,7 +213,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Farmers markets in San Francisco | San Francisco Environment Department (SFE)",
-   "seconds": 4.3,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-sfenvironment-org-farmers-markets-in-sf": "farmers"
@@ -230,7 +230,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Sunset Mercantile | Small business-focused community event producers",
-   "seconds": 1.5,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "merc": "flea"
@@ -246,7 +246,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Inner Sunset Flea Market | Sunset Mercantile",
-   "seconds": 1.3,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-sunsetmercantilesf-com-innersunsetflea": "flea"
@@ -262,7 +262,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Pride Events",
-   "seconds": 4.3,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "b-sfpride-org-events": "pride"
@@ -278,7 +278,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Pride - Thank You for a Historic Pride!",
-   "seconds": 4.2,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "pride": "pride"
@@ -291,7 +291,7 @@
    "http": 403,
    "final_url": "https://chineseparade.com/faq/",
    "error": "HTTP 403",
-   "seconds": 0.1,
+   "seconds": 0.0,
    "found_any": false,
    "matches": {
     "parade": null,
@@ -305,7 +305,7 @@
    "http": 403,
    "final_url": "https://chineseparade.com/",
    "error": "HTTP 403",
-   "seconds": 0.1,
+   "seconds": 0.0,
    "found_any": false,
    "matches": {
     "x-chineseparade-com": null
@@ -321,7 +321,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Carnaval San Francisco",
-   "seconds": 3.8,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "carnaval": "carnaval"
@@ -338,7 +338,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Grand Parade – Carnaval San Francisco",
-   "seconds": 3.7,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "b-carnavalsanfrancisco-org-parade": "carnaval"
@@ -355,7 +355,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "FAQs – Carnaval San Francisco",
-   "seconds": 2.8,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "b-carnavalsanfrancisco-org-faq": "carnaval"
@@ -372,7 +372,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Special Events – Carnaval San Francisco",
-   "seconds": 2.6,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-carnavalsanfrancisco-org-special-events": "carnaval"
@@ -407,7 +407,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Free Family Day: K-Pop, Art, and Beyond · SFMOMA",
-   "seconds": 3.8,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "family": "family"
@@ -424,7 +424,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "SFMOMA · Visitor's Guide",
-   "seconds": 1.2,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "moma": "family"
@@ -458,7 +458,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Our Market — Heart of the City Farmers Market",
-   "seconds": 4.0,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "b-hotcfarmersmarket-org-about": "heart"
@@ -475,7 +475,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Heart of the City Farmers Market",
-   "seconds": 3.9,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "x-hotcfarmersmarket-org": "heart"
@@ -492,7 +492,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Golden Gate Bandshell Concerts | San Francisco Recreation and Parks, CAArrow LeftArrow RightSlideshow Left ArrowSlideshow Right Arrow",
-   "seconds": 4.4,
+   "seconds": 0.7,
    "found_any": true,
    "matches": {
     "b-sfrecpark-org-1570-golden-gate-bandshell-concerts": "band"
@@ -508,7 +508,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Golden Gate Park Band",
-   "seconds": 3.7,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "x-goldengateparkband-org": "band"
@@ -524,7 +524,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "DFT: Downtown First Thursdays",
-   "seconds": 0.3,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "b-dftsf-com": "first"
@@ -538,7 +538,7 @@
    "http": 403,
    "final_url": "https://castronightmarket.com/",
    "error": "HTTP 403",
-   "seconds": 0.1,
+   "seconds": 0.0,
    "found_any": false,
    "matches": {
     "b-castronightmarket-com": null
@@ -554,7 +554,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Off the Grid Fort Mason Center | Friday Night Market in San Francisco",
-   "seconds": 0.2,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "b-offthegrid-com-markets-fort-mason-center": "mason"
@@ -567,7 +567,7 @@
    "http": 403,
    "final_url": "https://castrostreetfair.org/",
    "error": "HTTP 403",
-   "seconds": 4.2,
+   "seconds": 0.0,
    "found_any": false,
    "matches": {
     "b-castrostreetfair-org": null
@@ -580,7 +580,7 @@
    "http": 403,
    "final_url": "https://www.castrostreetfair.org/",
    "error": "HTTP 403",
-   "seconds": 7.2,
+   "seconds": 0.3,
    "found_any": false,
    "matches": {
     "x-www-castrostreetfair-org": null
@@ -592,11 +592,11 @@
   "https://www.folsomstreet.org/faq": {
    "http": 200,
    "final_url": "https://www.folsomstreet.org/faq",
-   "chars": 630077,
+   "chars": 584677,
    "content_type": "text/html",
    "pdf": false,
    "title": "FREQUENTLY ASKED QUESTIONS — Folsom Street - Community Center and Events",
-   "seconds": 0.5,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "b-folsomstreet-org-faq": "folsom"
@@ -654,7 +654,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Events – The San Francisco Italian Heritage Festival & Parade",
-   "seconds": 0.4,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "b-sfitalianheritage-org-events": "italian"
@@ -671,7 +671,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "The San Francisco Italian Heritage Festival & Parade",
-   "seconds": 0.5,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-sfitalianheritage-org": "italian"
@@ -688,7 +688,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "The North Beach Festival",
-   "seconds": 4.1,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "b-northbeachfestival-org": "beach"
@@ -704,7 +704,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "North Beach Festival | Sunset Mercantile",
-   "seconds": 0.3,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-sunsetmercantilesf-com-northbeachfestival2026": "beach"
@@ -716,11 +716,11 @@
   "https://www.haightashburystreetfair.org/vending": {
    "http": 200,
    "final_url": "https://www.haightashburystreetfair.org/vending",
-   "chars": 735859,
+   "chars": 1312211,
    "content_type": "text/html",
    "pdf": false,
    "title": "Vending — HASF",
-   "seconds": 3.6,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "b-haightashburystreetfair-org-vending": "haight"
@@ -737,7 +737,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "HASF | Join the Celebration Today",
-   "seconds": 2.2,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-haightashburystreetfair-org": "haight"
@@ -767,7 +767,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Union Street Festival | Sunset Mercantile",
-   "seconds": 0.2,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-sunsetmercantilesf-com-unionstreetfestival": "union"
@@ -783,7 +783,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Home - SF Cherry Blossom Festival",
-   "seconds": 3.8,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "b-sfcherryblossom-org": "northern"
@@ -802,7 +802,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "NIHONMACHI STREET FAIR",
-   "seconds": 3.9,
+   "seconds": 2.7,
    "found_any": true,
    "matches": {
     "b-nihonmachistreetfair-org": "nihonmachi"
@@ -818,7 +818,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "FAAE Pistahan Parade and Festival",
-   "seconds": 0.3,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "b-pistahan-net": "pistahan"
@@ -830,11 +830,11 @@
   "https://www.moonfestival.org/": {
    "http": 200,
    "final_url": "https://www.moonfestival.org/",
-   "chars": 1278524,
+   "chars": 1287738,
    "content_type": "text/html",
    "pdf": false,
    "title": "SFCMA | San Francisco Chinatown Autumn Moon Festival",
-   "seconds": 3.6,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "b-moonfestival-org": "chinatown"
@@ -851,7 +851,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "St. Patrick’s Day Parade",
-   "seconds": 4.4,
+   "seconds": 0.6,
    "found_any": true,
    "matches": {
     "b-uissf-org-st-patricks-day-parade": "patrick"
@@ -867,7 +867,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Home",
-   "seconds": 3.5,
+   "seconds": 0.9,
    "found_any": true,
    "matches": {
     "x-uissf-org": "patrick"
@@ -883,7 +883,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "The 75th San Francisco Greek Food Festival Is Almost Here! | Annunciation Greek Orthodox Cathedral",
-   "seconds": 3.9,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "b-annunciation-org-news-260903-1": "greek"
@@ -896,7 +896,7 @@
    "http": 403,
    "final_url": "https://fleetweeksf.org/air-show/",
    "error": "HTTP 403",
-   "seconds": 3.9,
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "b-fleetweeksf-org-air-show": null
@@ -909,7 +909,7 @@
    "http": 403,
    "final_url": "https://fleetweeksf.org/",
    "error": "HTTP 403",
-   "seconds": 6.1,
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "fleet": null
@@ -925,7 +925,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Run Bay to Breakers | Where Cardio, Chaos & Costumes | 12K & 15K | May 16, 2027",
-   "seconds": 0.3,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "b-baytobreakers-com": "breakers"
@@ -941,7 +941,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Bay to Breakers: Sunday, May 17, 2026 | SFMTA",
-   "seconds": 0.1,
+   "seconds": 1.4,
    "found_any": true,
    "matches": {
     "x-www-sfmta-com-project-updates-bay-breakers-service-impacts": "breakers"
@@ -957,7 +957,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "The San Francisco Marathon - July 25 - 26, 2026",
-   "seconds": 0.5,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "b-thesfmarathon-com-2027-50th-anniversary": "marathon"
@@ -973,10 +973,26 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Race Weekend - The San Francisco Marathon",
-   "seconds": 0.2,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-thesfmarathon-com-race-weekend": "marathon"
+   },
+   "sample_tokens": [
+    "marathon"
+   ]
+  },
+  "https://www.thesfmarathon.com/full-marathon/": {
+   "http": 200,
+   "final_url": "https://www.thesfmarathon.com/full-marathon/",
+   "chars": 284257,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "Full Marathon - The San Francisco Marathon",
+   "seconds": 0.1,
+   "found_any": true,
+   "matches": {
+    "sfm-full": "marathon"
    },
    "sample_tokens": [
     "marathon"
@@ -1021,7 +1037,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Outside Lands",
-   "seconds": 0.5,
+   "seconds": 0.6,
    "found_any": true,
    "matches": {
     "b-outsidelands-frontgatetickets-com": "outside"
@@ -1039,7 +1055,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Outside Lands: August 7-9, 2026 | SFMTA",
-   "seconds": 0.1,
+   "seconds": 1.2,
    "found_any": true,
    "matches": {
     "x-www-sfmta-com-travel-updates-outside-lands-august-7-9-2026": "outside"
@@ -1057,7 +1073,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Noise Pop Festival 2027",
-   "seconds": 0.2,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "b-noisepopfest-com": "noise"
@@ -1073,7 +1089,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Stern Grove Festival",
-   "seconds": 0.4,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "b-sterngrove-org": "stern"
@@ -1086,7 +1102,7 @@
   "https://www.sterngrove.org/lineup2026": {
    "http": 200,
    "final_url": "https://www.sterngrove.org/lineup2026",
-   "chars": 457322,
+   "chars": 1152106,
    "content_type": "text/html",
    "pdf": false,
    "title": "Lineup — Stern Grove Festival",
@@ -1107,7 +1123,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Lit Crawl SF | Litquake",
-   "seconds": 4.3,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "b-litquake-org-litcrawl": "crawl"
@@ -1124,7 +1140,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Filipino American History Celebration | San Francisco Public Library",
-   "seconds": 4.0,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "b-sfpl-org-events-special-programs-filipino-american-history-celeb": "filipino"
@@ -1143,7 +1159,7 @@
    "content_type": "application/pdf",
    "pdf": true,
    "title": "",
-   "seconds": 4.7,
+   "seconds": 1.2,
    "found_any": false,
    "sample_tokens": [],
    "note": "PDF fetched; text check skipped (manual read required)."
@@ -1155,7 +1171,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Opera's 2026-27 Season announced",
-   "seconds": 0.7,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "b-sfopera-com-press-press-releases-san-francisco-opera-2026-27-sea": "francisco"
@@ -1169,7 +1185,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Opera in the Park | SFO",
-   "seconds": 0.4,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "x-www-sfopera-com-operainthepark": "opera"
@@ -1183,7 +1199,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "2026 2027 Season - San Francisco Ballet",
-   "seconds": 4.5,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "b-sfballet-org-2026-2027-season": "francisco"
@@ -1194,7 +1210,7 @@
    "http": 403,
    "final_url": "https://www.sfjazz.org/tickets/productions/26-27/season-overview/",
    "error": "HTTP 403",
-   "seconds": 2.3,
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "b-sfjazz-org-tickets-productions-26-27-season-overview": null
@@ -1207,7 +1223,7 @@
    "http": 403,
    "final_url": "https://sffilm.org/yr-faq/",
    "error": "HTTP 403",
-   "seconds": 2.3,
+   "seconds": 0.2,
    "found_any": false,
    "matches": {
     "b-sffilm-org-yr-faq": null
@@ -1224,7 +1240,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Attend the Festival - Frameline",
-   "seconds": 2.4,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "b-frameline-org-attend": "frameline"
@@ -1238,11 +1254,11 @@
   "https://www.frameline.org/": {
    "http": 200,
    "final_url": "https://www.frameline.org/",
-   "chars": 230365,
+   "chars": 229839,
    "content_type": "text/html",
    "pdf": false,
    "title": "Home - Frameline",
-   "seconds": 0.3,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-www-frameline-org": "frameline"
@@ -1260,7 +1276,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Press release: Giants announce tentative 2027 regular season scheduleshare-square--:R1qlq:",
-   "seconds": 0.2,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "b-mlb-com-press-release-press-release-giants-announce-tentative-20": "giants"
@@ -1292,7 +1308,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "IITC’s 2026 Indigenous Peoples Day Sunrise Gathering on Alcatraz Island Will Take Place on October 12, 2026 | International Indian Treaty CouncilAccessibility T",
-   "seconds": 0.4,
+   "seconds": 0.6,
    "found_any": true,
    "matches": {
     "b-iitc-org-iitcs-2026-indigenous-peoples-day-sunrise-gathering-on-": "indigenous"
@@ -1312,7 +1328,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Calendar • San Francisco Recreation and Parks, CA • CivicEngFacilitySubmit EventPrintEmailEvent SubscriptionView RSS FeedsSelect on CalendarExpandCollapsePrevio",
-   "seconds": 0.9,
+   "seconds": 0.8,
    "found_any": true,
    "matches": {
     "b-sfrecpark-org-calendar-aspx": "scaregrove"
@@ -1329,7 +1345,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Zumba in the Parks | San Francisco Recreation and Parks, CAArrow LeftArrow RightSlideshow Left ArrowSlideshow Right Arrow",
-   "seconds": 4.6,
+   "seconds": 0.6,
    "found_any": true,
    "matches": {
     "b-sfrecpark-org-1183-zumba-in-the-parks": "zumba"
@@ -1341,11 +1357,11 @@
   "https://foodwise.org/": {
    "http": 200,
    "final_url": "https://foodwise.org/",
-   "chars": 94736,
+   "chars": 94646,
    "content_type": "text/html",
    "pdf": false,
    "title": "Foodwise : Education. Farmers markets. Community.",
-   "seconds": 0.1,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "b-foodwise-org": "foodwise"
@@ -1394,7 +1410,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Inner Sunset Farmers' Market | PCFMA",
-   "seconds": 4.9,
+   "seconds": 1.6,
    "found_any": true,
    "matches": {
     "x-www-pcfma-org-market-inner-sunset-farmers-market": "farmers"
@@ -1406,11 +1422,11 @@
   "https://www.agriculturalinstitute.org/farmers-markets": {
    "http": 200,
    "final_url": "https://www.agriculturalinstitute.org/farmers-markets",
-   "chars": 1195370,
+   "chars": 1079738,
    "content_type": "text/html",
    "pdf": false,
    "title": "Market Directory — Agricultural Institute of Marin",
-   "seconds": 3.6,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-agriculturalinstitute-org-farmers-markets": "stonestown"
@@ -1423,7 +1439,7 @@
   "https://www.noevalleyfarmersmarket.com/": {
    "http": 200,
    "final_url": "https://www.noevalleyfarmersmarket.com/",
-   "chars": 205719,
+   "chars": 729639,
    "content_type": "text/html",
    "pdf": false,
    "title": "Noe Valley Farmers Market",
@@ -1440,11 +1456,11 @@
   "https://www.pcfma.org/visit": {
    "http": 200,
    "final_url": "https://www.pcfma.org/visit",
-   "chars": 100686,
+   "chars": 99525,
    "content_type": "text/html",
    "pdf": false,
    "title": "Market | PCFMA",
-   "seconds": 3.6,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-www-pcfma-org-visit": "castro"
@@ -1461,10 +1477,11 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Presidio Unveils Vibrant 2026 Summer Event Lineup - The Presidio (San Francisco)",
-   "seconds": 0.8,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
-    "x-presidio-gov-about-press-presidio-unveils-vibrant-2026-summer-event-li": "presidio"
+    "x-presidio-gov-about-press-presidio-unveils-vibrant-2026-summer-event-li": "presidio",
+    "presidio-summer26": "fiesta"
    },
    "sample_tokens": [
     "presidio",
@@ -1478,7 +1495,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco City Guides - Free Walking Tours - Home",
-   "seconds": 4.0,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "x-www-sfcityguides-org": "guides"
@@ -1495,7 +1512,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "October 2026 Park Programs Schedule - Visit Union Square SF",
-   "seconds": 0.2,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-visitunionsquaresf-com-park-programs": "programs"
@@ -1513,7 +1530,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Critical Mass",
-   "seconds": 4.1,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-www-sfcriticalmass-org": "critical"
@@ -1530,7 +1547,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Free and Reduced Museum Admission - Asian Art Museum",
-   "seconds": 3.7,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-about-asianart-org-ticketing-free-and-reduced-museum-admission": "first"
@@ -1544,11 +1561,11 @@
   "https://ybgfestival.org/": {
    "http": 200,
    "final_url": "https://ybgfestival.org/",
-   "chars": 98084,
+   "chars": 98086,
    "content_type": "text/html",
    "pdf": false,
    "title": "Homepage | Official site of Yerba Buena Gardens FestivalEmailFacebookInstagramPhoneTikTokTwitterYouTube",
-   "seconds": 2.3,
+   "seconds": 1.6,
    "found_any": true,
    "matches": {
     "x-ybgfestival-org": "yerba"
@@ -1565,7 +1582,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Fridays on Front St | Things To Do | Downtown San Francisco",
-   "seconds": 3.5,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-downtownsf-org-things-to-do-fridays-on-front-street": "fridays"
@@ -1582,7 +1599,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Drag Me Downtown | FREE San Francisco Pride 2026 Events",
-   "seconds": 3.6,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "x-downtownsf-org-things-to-do-drag-me-downtown-2025": "drag"
@@ -1615,7 +1632,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Pop-Ups on the Plaza: Juneteenth on the Waterfront : Foodwise",
-   "seconds": 0.2,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-foodwise-org-events-pop-ups-on-the-plaza-juneteenth-on-the-waterfront": "plaza"
@@ -1634,7 +1651,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Circus in the Parks — Circus Bella",
-   "seconds": 4.0,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "x-www-circusbella-org-circusintheparks": "circus"
@@ -1647,10 +1664,13 @@
    ]
   },
   "https://www.sfsketchfest.com/": {
-   "http": 403,
+   "http": 202,
    "final_url": "https://www.sfsketchfest.com/",
-   "error": "HTTP 403",
-   "seconds": 0.3,
+   "chars": 169,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "",
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "x-www-sfsketchfest-com": null
@@ -1666,7 +1686,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "MLK2026",
-   "seconds": 3.8,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-norcalmlkfoundation-org-mlkcelebration-mlk2026": "martin"
@@ -1683,7 +1703,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Home | FOG Design+Art",
-   "seconds": 0.3,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-www-fogfair-com": "design"
@@ -1699,7 +1719,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "SF Art Week | SF Art Week celebrates the rich arts landscape of the San Francisco Bay Area.",
-   "seconds": 0.4,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-sfartweek-com": "francisco"
@@ -1713,7 +1733,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Half Marathon & 5K",
-   "seconds": 0.3,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-sanfranciscohalfmarathon-org": "marathon"
@@ -1729,7 +1749,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Mostly British Film Festival - February 5-12, 2026 - FILMS FROM THE UK, IRELAND, AUSTRALIA, INDIA, SOUTH AFRICA AND NEW ZEALAND - Vogue Theatre - San Francisco,",
-   "seconds": 8.3,
+   "seconds": 2.5,
    "found_any": true,
    "matches": {
     "x-www-mostlybritish-org": "mostly"
@@ -1773,7 +1793,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "SF Beer Week - Discover Amazing Craft Beer Events",
-   "seconds": 4.2,
+   "seconds": 0.8,
    "found_any": true,
    "matches": {
     "x-www-sfbeerweek-org": "beer"
@@ -1786,7 +1806,7 @@
    "http": 403,
    "final_url": "https://www.abaa.org/events/57th-california-international-antiquarian-book-fair",
    "error": "HTTP 403",
-   "seconds": 3.7,
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai": null
@@ -1804,7 +1824,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Giants FanFest Tour and Open House | San Francisco Giantsclose--_R_iulf6_",
-   "seconds": 0.1,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-www-mlb-com-giants-fans-fanfest": "giants"
@@ -1817,7 +1837,7 @@
   "https://www.thesuperfair.com/san-francisco": {
    "http": 200,
    "final_url": "https://www.thesuperfair.com/san-francisco",
-   "chars": 1682765,
+   "chars": 1376413,
    "content_type": "text/html",
    "pdf": false,
    "title": "The Superfair",
@@ -1837,7 +1857,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Union Square to Bloom with 80,000 Vibrant Dutch Tulips on March 21 • San Francisco Recreation and Parks, CAArrow LeftArrow RightSlideshow Left ArrowSlideshow Ri",
-   "seconds": 4.0,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "x-sfrecpark-org-m-newsflash-home-detail-2744": "tulip"
@@ -1851,7 +1871,7 @@
    "http": 403,
    "final_url": "https://www.famsf.org/exhibitions",
    "error": "HTTP 403",
-   "seconds": 0.1,
+   "seconds": 0.0,
    "found_any": false,
    "matches": {
     "x-www-famsf-org-exhibitions": null
@@ -1870,7 +1890,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Welcome - Bring Your Own Big Wheel",
-   "seconds": 3.0,
+   "seconds": 2.0,
    "found_any": true,
    "matches": {
     "x-bringyourownbigwheel-com": "bring"
@@ -1887,7 +1907,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Participating Restaurants – San Francisco Restaurant Week",
-   "seconds": 0.6,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "x-www-sfrestaurantweek-com-restaurants": "restaurant"
@@ -1899,11 +1919,11 @@
   "https://intloceanfilmfest.org/": {
    "http": 200,
    "final_url": "https://intloceanfilmfest.org/",
-   "chars": 428975,
+   "chars": 481469,
    "content_type": "text/html",
    "pdf": false,
    "title": "IOFF | Explore Ocean Stories — Get Involved Today",
-   "seconds": 2.3,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-intloceanfilmfest-org": "international"
@@ -1920,7 +1940,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "SF Climate Week",
-   "seconds": 4.4,
+   "seconds": 1.1,
    "found_any": true,
    "matches": {
     "x-www-sfclimateweek-org": "climate"
@@ -1965,7 +1985,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "April 27: Opening Day on the Bay",
-   "seconds": 5.4,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-picya-org-event-ywqpiccwrz": "opening"
@@ -1977,11 +1997,11 @@
   "https://dancersgroup.org/badw/": {
    "http": 200,
    "final_url": "https://dancersgroup.org/badw/",
-   "chars": 141343,
+   "chars": 141342,
    "content_type": "text/html",
    "pdf": false,
    "title": "Bay Area Dance Week",
-   "seconds": 4.1,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-dancersgroup-org-badw": "dance"
@@ -1998,7 +2018,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Earth Day SF",
-   "seconds": 4.2,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "x-earthdaysf-org": "earth"
@@ -2010,11 +2030,11 @@
   "https://decoratorshowcase.org/": {
    "http": 200,
    "final_url": "https://www.decoratorshowcase.org/",
-   "chars": 624656,
+   "chars": 1401154,
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Decorator Showcase",
-   "seconds": 0.7,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "x-decoratorshowcase-org": "decorator"
@@ -2031,7 +2051,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "CAAMFest - Center for Asian American Media",
-   "seconds": 3.6,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-caamedia-org-caamfest": "caamfest"
@@ -2046,7 +2066,7 @@
    "http": 403,
    "final_url": "https://www.sfiaf.org/",
    "error": "HTTP 403",
-   "seconds": 3.4,
+   "seconds": 0.2,
    "found_any": false,
    "matches": {
     "x-www-sfiaf-org": null
@@ -2058,11 +2078,11 @@
   "https://www.tap-sf.org/tacf": {
    "http": 200,
    "final_url": "https://www.tap-sf.org/tacf",
-   "chars": 2483865,
+   "chars": 2500000,
    "content_type": "text/html",
    "pdf": false,
    "title": "Taiwanese American Cultural Festival — TAP-SF",
-   "seconds": 0.4,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-tap-sf-org-tacf": "taiwanese"
@@ -2096,7 +2116,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Design Week - San Francisco Design Week",
-   "seconds": 7.8,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "x-www-sfdesignweek-org": "design"
@@ -2112,7 +2132,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Escape From Alcatraz Triathlon (en-US)",
-   "seconds": 0.2,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-escapealcatraztri-com": "escape"
@@ -2145,7 +2165,7 @@
    "http": 403,
    "final_url": "https://juneteenth-sf.org/",
    "error": "HTTP 403",
-   "seconds": 4.0,
+   "seconds": 0.2,
    "found_any": false,
    "matches": {
     "x-juneteenth-sf-org": null
@@ -2156,10 +2176,13 @@
    ]
   },
   "https://qwocmap.org/festival/": {
-   "http": 403,
+   "http": 202,
    "final_url": "https://qwocmap.org/festival/",
-   "error": "HTTP 403",
-   "seconds": 3.9,
+   "chars": 180,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "",
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "x-qwocmap-org-festival": null
@@ -2173,11 +2196,11 @@
   "https://www.sfbff.org/": {
    "http": 200,
    "final_url": "https://www.sfbff.org/",
-   "chars": 232870,
+   "chars": 216172,
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Black Film Festival",
-   "seconds": 3.8,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-www-sfbff-org": "black"
@@ -2193,7 +2216,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Upcoming Events – PIER 39",
-   "seconds": 0.3,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-www-pier39-com-upcoming-events": "fourth"
@@ -2209,7 +2232,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Fillmore Jazz Festival - San Francisco",
-   "seconds": 0.6,
+   "seconds": 0.9,
    "found_any": true,
    "matches": {
     "x-www-fillmorejazzfest-com": "fillmore"
@@ -2219,10 +2242,13 @@
    ]
   },
   "https://sffolkfest.org/": {
-   "http": 403,
+   "http": 202,
    "final_url": "https://sffolkfest.org/",
-   "error": "HTTP 403",
-   "seconds": 4.9,
+   "chars": 169,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "",
+   "seconds": 0.4,
    "found_any": false,
    "matches": {
     "x-sffolkfest-org": null
@@ -2234,7 +2260,7 @@
   "https://www.frozenfilmfestival.com/": {
    "http": 200,
    "final_url": "https://www.frozenfilmfestival.com/",
-   "chars": 195793,
+   "chars": 615341,
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Frozen Film Festival (SFFFF)",
@@ -2254,7 +2280,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "San Francisco Jewish Film Festival • JFI.org",
-   "seconds": 2.4,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-jfi-org-film-festival": "jewish"
@@ -2270,7 +2296,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "AIDS Walk San Francisco 2026",
-   "seconds": 0.5,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "x-sf-aidswalk-net": "aids"
@@ -2301,7 +2327,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Events / Calendar - Jerry Day 2026 @ www.JerryDay.org",
-   "seconds": 0.2,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-jerryday-org-events-calendar-html": "jerry"
@@ -2331,7 +2357,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Flower Piano 2026 - San Francisco Botanical Garden",
-   "seconds": 3.9,
+   "seconds": 0.6,
    "found_any": true,
    "matches": {
     "x-gggp-org-flowerpiano": "flower"
@@ -2349,7 +2375,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Oktoberfest on Front | Things To Do | Downtown San Francisco",
-   "seconds": 0.3,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-downtownsf-org-things-to-do-oktoberfest-on-front": "oktoberfest"
@@ -2366,7 +2392,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Muni Heritage Weekend 2025 | SFMTA",
-   "seconds": 1.9,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-www-sfmta-com-calendar-muni-heritage-weekend-2025": "heritage"
@@ -2383,7 +2409,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Comedy Day 2026",
-   "seconds": 0.4,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-comedyday-org": "comedy"
@@ -2397,7 +2423,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "PortolaFacebookInstagramRedditTumblrSpotifyEmailTriangleYoutubeSnapchatMagnifyGlobeTikTokSoundcloudSearchClose",
-   "seconds": 0.4,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-portolamusicfestival-com": "portola"
@@ -2411,7 +2437,7 @@
    "http": 403,
    "final_url": "https://somarts.org/exhibition/sfopenstudios2026/",
    "error": "HTTP 403",
-   "seconds": 3.9,
+   "seconds": 0.2,
    "found_any": false,
    "matches": {
     "x-somarts-org-exhibition-sfopenstudios2026": null
@@ -2425,7 +2451,7 @@
    "http": 429,
    "final_url": "https://www.litquake.org/",
    "error": "HTTP 429",
-   "seconds": 0.2,
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "x-www-litquake-org": null
@@ -2435,10 +2461,13 @@
    ]
   },
   "https://sffallshow.org/": {
-   "http": 403,
+   "http": 202,
    "final_url": "https://sffallshow.org/",
-   "error": "HTTP 403",
-   "seconds": 3.5,
+   "chars": 169,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "",
+   "seconds": 0.3,
    "found_any": false,
    "matches": {
     "x-sffallshow-org": null
@@ -2463,11 +2492,11 @@
   "https://www.leapsandcastleclassic.org/": {
    "http": 200,
    "final_url": "https://leapsandcastleclassic.org/",
-   "chars": 194527,
+   "chars": 194582,
    "content_type": "text/html",
    "pdf": false,
    "title": "- Leap Sandcastle Classic",
-   "seconds": 2.4,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-www-leapsandcastleclassic-org": "sandcastle"
@@ -2484,7 +2513,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Day of the Dead SF by the Marigold Project",
-   "seconds": 3.9,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-dayofthedeadsf-org": "altars"
@@ -2517,7 +2546,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Renegade Craft — San Francisco Wintericon-instagramicon-facebookicon-flickr_1icon-instagramicon-facebookicon-flickr_1",
-   "seconds": 0.3,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-www-renegadecraft-com-event-san-francisco-winter": "renegade"
@@ -2587,7 +2616,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Ghirardelli Square",
-   "seconds": 0.2,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-www-ghirardellisq-com": "ghirardelli"
@@ -2601,7 +2630,7 @@
   "https://downtownsf.org/things-to-do/lets-glow-sf": {
    "http": 200,
    "final_url": "https://downtownsf.org/things-to-do/lets-glow-sf",
-   "chars": 53694,
+   "chars": 53693,
    "content_type": "text/html",
    "pdf": false,
    "title": "Let's Glow SF | Free Holiday Projection Arts Festival",
@@ -2617,11 +2646,11 @@
   "https://sftreelot.guardsmen.org/": {
    "http": 200,
    "final_url": "https://sftreelot.guardsmen.org/",
-   "chars": 161314,
+   "chars": 161311,
    "content_type": "text/html",
    "pdf": false,
    "title": "The Guardsmen Christmas Tree Lot | A San Francisco Bay Area Tradition – Guardsmen Tree LotAmerican ExpressDiners ClubDiscoverMastercardShop PayVisaAmerican Expr",
-   "seconds": 0.5,
+   "seconds": 0.4,
    "found_any": true,
    "matches": {
     "x-sftreelot-guardsmen-org": "guardsmen"
@@ -2638,7 +2667,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Nutcracker - San Francisco Ballet",
-   "seconds": 0.4,
+   "seconds": 0.5,
    "found_any": true,
    "matches": {
     "x-www-sfballet-org-productions-nutcracker": "nutcracker"
@@ -2654,7 +2683,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Bill Graham Menorah",
-   "seconds": 0.3,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-www-billgrahammenorah-org": "graham"
@@ -2673,7 +2702,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Events & Activities — SOMA PILIPINAS",
-   "seconds": 3.8,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-www-somapilipinas-org-events": "parol"
@@ -2703,7 +2732,7 @@
    "http": 403,
    "final_url": "https://www.redbull.com/us-en/events/red-bull-showrun-san-fran",
    "error": "HTTP 403",
-   "seconds": 0.5,
+   "seconds": 0.1,
    "found_any": false,
    "matches": {
     "x-www-redbull-com-us-en-events-red-bull-showrun-san-fran": null
@@ -2719,7 +2748,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Terpnami 2026: Grow Harder. Better. Faster. Stronger.",
-   "seconds": 0.5,
+   "seconds": 1.3,
    "found_any": true,
    "matches": {
     "x-sfspacewalk-com": "space"
@@ -2750,7 +2779,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "PloverFest - A one year anniversary for Sunset Dunes Park — Friends of Sunset Dunes",
-   "seconds": 3.6,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-sunsetdunes-org-events-ploverfest": "ploverfest"
@@ -2813,7 +2842,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Home - San Francisco Historium",
-   "seconds": 0.2,
+   "seconds": 0.3,
    "found_any": true,
    "matches": {
     "x-sanfranciscohistorium-com": "historium"
@@ -2863,7 +2892,7 @@
    "http": 403,
    "final_url": "https://walksf.org/events/peak-2-peak/",
    "error": "HTTP 403",
-   "seconds": 2.3,
+   "seconds": 0.3,
    "found_any": false,
    "matches": {
     "x-walksf-org-events-peak-2-peak": null
@@ -2882,7 +2911,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Epicenter San Francisco: A Tour of Downtown, \"The Tides of Fortune that Changed the World.” Sat. Sept. 19, 10AM-3PM. | THE SAN FRANCISCO HISTORICAL SOCIETY",
-   "seconds": 4.5,
+   "seconds": 0.7,
    "found_any": true,
    "matches": {
     "x-www-sfhistory-org-epicenter": "epicenter"
@@ -2911,7 +2940,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "nexus-sfbay.com",
-   "seconds": 0.2,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-www-nexus-sfbay-com": "nexus"
@@ -2944,7 +2973,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Previous Seasons | SFO",
-   "seconds": 0.4,
+   "seconds": 0.7,
    "found_any": true,
    "matches": {
     "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons": "strauss"
@@ -2961,7 +2990,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "The Ballpark Back 9 at Oracle Park | San Francisco Giantsclose--_R_iulf6_",
-   "seconds": 0.2,
+   "seconds": 0.9,
    "found_any": true,
    "matches": {
     "x-www-mlb-com-giants-ballpark-events-golf": "ballpark"
@@ -2978,7 +3007,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Teddy Swims | Chase Center",
-   "seconds": 0.6,
+   "seconds": 0.8,
    "found_any": true,
    "matches": {
     "x-www-chasecenter-com-events-teddy-swims-20261110": "teddy"
@@ -3010,7 +3039,7 @@
   "https://www.chasecenter.com/news/journey-announcement-20261128/": {
    "http": 200,
    "final_url": "https://www.chasecenter.com/news/journey-announcement-20261128/",
-   "chars": 74973,
+   "chars": 74974,
    "content_type": "text/html",
    "pdf": false,
    "title": "Journey is Coming to Chase Center on Nov. 28, 2026 | Chase Center",
@@ -3033,7 +3062,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "What's On View · SFMOMA",
-   "seconds": 0.3,
+   "seconds": 0.1,
    "found_any": true,
    "matches": {
     "x-www-sfmoma-org-exhibitions": "sfmoma"
@@ -3071,7 +3100,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Upcoming Exhibitions · SFMOMA",
-   "seconds": 0.1,
+   "seconds": 0.2,
    "found_any": true,
    "matches": {
     "x-www-sfmoma-org-upcoming-exhibitions": "sfmoma"
@@ -3086,7 +3115,7 @@
    "http": 403,
    "final_url": "https://www.famsf.org/press-room/2026-advance-schedule",
    "error": "HTTP 403",
-   "seconds": 0.1,
+   "seconds": 0.0,
    "found_any": false,
    "matches": {
     "x-www-famsf-org-press-room-2026-advance-schedule": null
@@ -3104,7 +3133,7 @@
    "content_type": "text/html",
    "pdf": false,
    "title": "Club Darc: HomeFacebookInstagramRedditTumblrSpotifyEmailTriangleYoutubeSnapchatMagnifyGlobeTikTokSoundcloudSearchClose",
-   "seconds": 0.3,
+   "seconds": 0.2,
    "found_any": false,
    "matches": {
     "x-clubdarc-com": null
@@ -3113,6 +3142,144 @@
     "waterfront",
     "electronic",
     "music"
+   ]
+  },
+  "https://www.nba.com/warriors/news/warriors-announce-2026-27-regular-season-schedule-20260813": {
+   "http": 200,
+   "final_url": "https://www.nba.com/warriors/news/warriors-announce-2026-27-regular-season-schedule-20260813",
+   "chars": 109470,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "Warriors Announce 2026-27 Regular Season Schedule",
+   "seconds": 0.9,
+   "found_any": true,
+   "matches": {
+    "nba-warriors-sched": "warriors"
+   },
+   "sample_tokens": [
+    "state",
+    "warriors"
+   ]
+  },
+  "https://www.wnba.com/team/1611661331/golden-state-valkyries": {
+   "http": 200,
+   "final_url": "https://www.wnba.com/team/1611661331/golden-state-valkyries",
+   "chars": 262941,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "Golden State Valkyries WNBA Team Roster, Schedule & StatsUser Logged OutLeague PassTicketShopUser Logged OutCaret DownCaret DownCaret DownLeague PassTicketShopW",
+   "seconds": 0.2,
+   "found_any": true,
+   "matches": {
+    "wnba-valk-sched": "state"
+   },
+   "sample_tokens": [
+    "state",
+    "valkyries"
+   ]
+  },
+  "https://www.act-sf.org/whats-on/2026-27-season": {
+   "http": 200,
+   "final_url": "https://www.act-sf.org/whats-on/2026-27-season",
+   "chars": 200023,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "2026/27 Season | American Conservatory Theater",
+   "seconds": 0.8,
+   "found_any": true,
+   "matches": {
+    "act-season-2627": "american"
+   },
+   "sample_tokens": [
+    "american",
+    "conservatory",
+    "theater"
+   ]
+  },
+  "https://sfcurran.com/": {
+   "http": 0,
+   "final_url": "https://sfcurran.com/",
+   "error": "URLError: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)>",
+   "seconds": 0.2,
+   "found_any": false,
+   "matches": {
+    "curran-home": null
+   },
+   "sample_tokens": [
+    "curran",
+    "theatre"
+   ]
+  },
+  "https://www.sfzoo.org/calendar-of-events/": {
+   "http": 200,
+   "final_url": "https://www.sfzoo.org/visit-the-zoo/calendar-of-events/",
+   "chars": 154842,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "Calendar - San Francisco Zoo & Gardens",
+   "seconds": 0.1,
+   "found_any": true,
+   "matches": {
+    "sfzoo-sunset": null,
+    "sfzoo-zoolights": null,
+    "sfzoo-boo": null,
+    "sfzoo-calendar": "member"
+   },
+   "sample_tokens": [
+    "fridays"
+   ]
+  },
+  "https://www.sfzoo.org/plan-your-visit/": {
+   "http": 200,
+   "final_url": "https://www.sfzoo.org/visit-the-zoo/plan-your-visit/",
+   "chars": 164839,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "Plan Your Visit - San Francisco Zoo & Gardens",
+   "seconds": 0.8,
+   "found_any": true,
+   "matches": {
+    "sfzoo-freeday": "resident"
+   },
+   "sample_tokens": [
+    "resident"
+   ]
+  },
+  "https://presidio.gov/explore/events": {
+   "http": 200,
+   "final_url": "https://presidio.gov/explore/events",
+   "chars": 156993,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "Event Calendar - The Presidio (San Francisco)",
+   "seconds": 0.2,
+   "found_any": true,
+   "matches": {
+    "presidio-habitat": "presidio"
+   },
+   "sample_tokens": [
+    "presidio",
+    "habitat",
+    "stewards",
+    "volunteer"
+   ]
+  },
+  "https://sfpl.org/events": {
+   "http": 200,
+   "final_url": "https://sfpl.org/events",
+   "chars": 310259,
+   "content_type": "text/html",
+   "pdf": false,
+   "title": "Upcoming Events | San Francisco Public Library",
+   "seconds": 0.4,
+   "found_any": true,
+   "matches": {
+    "sfpl-summer": "summer",
+    "sfpl-noi": null
+   },
+   "sample_tokens": [
+    "summer",
+    "stride"
    ]
   }
  },
@@ -3249,6 +3416,9 @@
   "x-www-thesfmarathon-com-race-weekend": {
    "snippet": "Race Weekend - The San Francisco Marathon July 24-25, 2027 | Historical Race Temp: 64°F Contact Menu The Races Overview Full Marathon China Airlines Bridge Half Marathon 2nd Half Marathon/City Half San Francisco Alexi Pappas 10k 5K Races Overview Seabas"
   },
+  "sfm-full": {
+   "snippet": "Full Marathon - The San Francisco Marathon July 24-25, 2027 | Historical Race Temp: 64°F Contact Menu The Races Overview Full Marathon China Airlines Bridge Half Marathon 2nd Half Marathon/City Half San Francisco Alexi Pappas"
+  },
   "b-sundaystreetssf-com": {
    "snippet": "Sunday Streets SF – Your Street. Your Day. Current Season Get Involved Volunteer Donate/Sponsor Share Your Story Our Team About History & Mission Program Guidelines Wet Weather Policy General FAQs Staff Contact Livable C"
   },
@@ -3326,6 +3496,9 @@
   },
   "x-presidio-gov-about-press-presidio-unveils-vibrant-2026-summer-event-li": {
    "snippet": "Presidio Unveils Vibrant 2026 Summer Event Lineup - The Presidio (San Francisco) Skip to Content Home About Press Presidio Unveils Vibrant 2026 Summer Event Lineup Presidio Unveils Vibrant 2026 Summer Event Lineup Free f"
+  },
+  "presidio-summer26": {
+   "snippet": "reveal Spring Awakening and will debut a new ground mural at Presidio Pop Up this June (details to come). Media partner Telemundo 48 again co-presents the exuberant Fiesta en el Parque , along with a new live experience, Presidio Soccer Festival . The Arts.Co.Lab’s Community Art Market returns for its second year, showcasing local makers and creatives. NEW this season – Urban"
   },
   "x-www-sfcityguides-org": {
    "snippet": "San Francisco City Guides - Free Walking Tours - Home Skip to primary navigation Skip to main content Skip to footer Donate Find Your Tour How It Works About Us Become a Member Become a Sponsor Become a Guide City Guides Merchandise FAQs C"
@@ -3548,6 +3721,27 @@
   },
   "x-www-sfmoma-org-upcoming-exhibitions": {
    "snippet": "Upcoming Exhibitions · SFMOMA Skip to content Pardon our dust, we’re working on a new installation that affects the Atrium, 3rd, 4th and 5th Floor. Menu What’s On View Stories Art + Artists Visit Events Become a Member For Members Ways to Giv"
+  },
+  "nba-warriors-sched": {
+   "snippet": "Warriors Announce 2026-27 Regular Season Schedule"
+  },
+  "wnba-valk-sched": {
+   "snippet": "Golden State Valkyries WNBA Team Roster, Schedule & Stats Schedule Watch Standings Stats Stats Home Inside the Game Teams Atlanta Dream Chicago Sky Connecticut Sun Dallas Wings Golden State Valkyries Indiana Fever Las Vegas Ace"
+  },
+  "act-season-2627": {
+   "snippet": "2026/27 Season | American Conservatory Theater Unfortunately it looks like you are using an outdate browser Please upgrade to a modern browser such as Chrome, Firefox, Safari, or Edge to improve your experience and security. A.C.T. My Ac"
+  },
+  "sfzoo-calendar": {
+   "snippet": "Calendar - San Francisco Zoo & Gardens Skip to content New capybaras can now be viewed at Puente al sur on a limited basis. Close Member Login English Search Visit the Zoo Plan your visit Tickets & hours Calendar of events Daily animal experiences Zoo map Guest services Animals & Exhibits Animals A-Z Amphibians Birds Invertebrates Mammals Reptiles"
+  },
+  "sfzoo-freeday": {
+   "snippet": "te ticket window on the day of your visit. Buying online is the easiest way to skip the line and get straight to the good stuff. General admission San Francisco residents Adult (12-64) $32 weekdays / $34 weekends & holidays Adult (12-64) $29 weekdays / $31 weekends & holidays Seniors (65+) $25 weekdays / $27 weekends & holidays Seniors (65+) $21 weekdays / $23 weekends & holida"
+  },
+  "presidio-habitat": {
+   "snippet": "Event Calendar - The Presidio (San Francisco) Skip to Content Home Things To Do Event Calendar Events at the Presidio There's always something happening at the Presidio Featured Events Friday , Oct 09 10:00 AM Litter Pickup on Presidio Tunne"
+  },
+  "sfpl-summer": {
+   "snippet": "ce Small Business Small Business Stroll Small Business Week Spotlight Storytime for Babies Storytime for Families Storytime for Preschoolers Storytime for Toddlers Summer Stride SWANA Interest Taxes Tech Time Tech Week Typography and Calligraphy Veterans Interest Weaving Stories: Asian American, Native Hawaiian and Pacific Islander Interest What's News Women's Interest Workforc"
   }
  },
  "rows": {
@@ -4313,7 +4507,7 @@
      "http": 200
     }
    ],
-   "sources_checked": 2
+   "sources_checked": 3
   },
   "b-sunday-streets": {
    "name": "Sunday Streets San Francisco",
@@ -6224,9 +6418,241 @@
    "status": "name_not_found",
    "hits": [],
    "sources_checked": 1
+  },
+  "warriors-season": {
+   "name": "Golden State Warriors Home Season",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "nba-warriors-sched",
+     "url": "https://www.nba.com/warriors/news/warriors-announce-2026-27-regular-season-schedule-20260813",
+     "match": "warriors",
+     "snippet": "Warriors Announce 2026-27 Regular Season Schedule",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "valkyries-season": {
+   "name": "Golden State Valkyries Home Season",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "wnba-valk-sched",
+     "url": "https://www.wnba.com/team/1611661331/golden-state-valkyries",
+     "match": "state",
+     "snippet": "Golden State Valkyries WNBA Team Roster, Schedule & Stats Schedule Watch Standings Stats Stats Home Inside the Game Teams Atlanta Dream Chicago Sky Connecticut Sun Dallas Wings Golden State Valkyries Indiana Fever Las Vegas Ace",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "act-season": {
+   "name": "American Conservatory Theater (A.C.T.) Season",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "act-season-2627",
+     "url": "https://www.act-sf.org/whats-on/2026-27-season",
+     "match": "american",
+     "snippet": "2026/27 Season | American Conservatory Theater Unfortunately it looks like you are using an outdate browser Please upgrade to a modern browser such as Chrome, Firefox, Safari, or Edge to improve your experience and security. A.C.T. My Ac",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "curran-season": {
+   "name": "Curran Theatre Season",
+   "status": "no_response",
+   "hits": [],
+   "sources_checked": 1
+  },
+  "sf-zoo-sunset-fridays": {
+   "name": "SF Zoo Sunset Fridays",
+   "status": "name_not_found",
+   "hits": [],
+   "sources_checked": 1
+  },
+  "sf-zoo-zoolights": {
+   "name": "SF Zoo ZooLights",
+   "status": "name_not_found",
+   "hits": [],
+   "sources_checked": 1
+  },
+  "sf-zoo-boo": {
+   "name": "Boo at the Zoo",
+   "status": "name_not_found",
+   "hits": [],
+   "sources_checked": 1
+  },
+  "sf-zoo-resident-free-day": {
+   "name": "SF Zoo SF Resident Free Day",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "sfzoo-freeday",
+     "url": "https://www.sfzoo.org/plan-your-visit/",
+     "match": "resident",
+     "snippet": "te ticket window on the day of your visit. Buying online is the easiest way to skip the line and get straight to the good stuff. General admission San Francisco residents Adult (12-64) $32 weekdays / $34 weekends & holidays Adult (12-64) $29 weekdays / $31 weekends & holidays Seniors (65+) $25 weekdays / $27 weekends & holidays Seniors (65+) $21 weekdays / $23 weekends & holida",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "sf-zoo-member-mornings": {
+   "name": "SF Zoo Member Mornings",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "sfzoo-calendar",
+     "url": "https://www.sfzoo.org/calendar-of-events/",
+     "match": "member",
+     "snippet": "Calendar - San Francisco Zoo & Gardens Skip to content New capybaras can now be viewed at Puente al sur on a limited basis. Close Member Login English Search Visit the Zoo Plan your visit Tickets & hours Calendar of events Daily animal experiences Zoo map Guest services Animals & Exhibits Animals A-Z Amphibians Birds Invertebrates Mammals Reptiles",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "presidio-habitat-stewards": {
+   "name": "Presidio Habitat Stewards Volunteer",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "presidio-habitat",
+     "url": "https://presidio.gov/explore/events",
+     "match": "presidio",
+     "snippet": "Event Calendar - The Presidio (San Francisco) Skip to Content Home Things To Do Event Calendar Events at the Presidio There's always something happening at the Presidio Featured Events Friday , Oct 09 10:00 AM Litter Pickup on Presidio Tunne",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "presidio-fiesta-en-el-parque": {
+   "name": "Fiesta en el Parque",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "presidio-summer26",
+     "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+     "match": "fiesta",
+     "snippet": "reveal Spring Awakening and will debut a new ground mural at Presidio Pop Up this June (details to come). Media partner Telemundo 48 again co-presents the exuberant Fiesta en el Parque , along with a new live experience, Presidio Soccer Festival . The Arts.Co.Lab’s Community Art Market returns for its second year, showcasing local makers and creatives. NEW this season – Urban",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "presidio-world-arts-west": {
+   "name": "World Arts West Dance Festival",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "presidio-summer26",
+     "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+     "match": "fiesta",
+     "snippet": "reveal Spring Awakening and will debut a new ground mural at Presidio Pop Up this June (details to come). Media partner Telemundo 48 again co-presents the exuberant Fiesta en el Parque , along with a new live experience, Presidio Soccer Festival . The Arts.Co.Lab’s Community Art Market returns for its second year, showcasing local makers and creatives. NEW this season – Urban",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "presidio-brewfest": {
+   "name": "Parks4All: Brewfest at the Presidio",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "presidio-summer26",
+     "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+     "match": "fiesta",
+     "snippet": "reveal Spring Awakening and will debut a new ground mural at Presidio Pop Up this June (details to come). Media partner Telemundo 48 again co-presents the exuberant Fiesta en el Parque , along with a new live experience, Presidio Soccer Festival . The Arts.Co.Lab’s Community Art Market returns for its second year, showcasing local makers and creatives. NEW this season – Urban",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "sfpl-summer-stride": {
+   "name": "SFPL Summer Stride",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "sfpl-summer",
+     "url": "https://sfpl.org/events",
+     "match": "summer",
+     "snippet": "ce Small Business Small Business Stroll Small Business Week Spotlight Storytime for Babies Storytime for Families Storytime for Preschoolers Storytime for Toddlers Summer Stride SWANA Interest Taxes Tech Time Tech Week Typography and Calligraphy Veterans Interest Weaving Stories: Asian American, Native Hawaiian and Pacific Islander Interest What's News Women's Interest Workforc",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "night-of-ideas-sf": {
+   "name": "Night of Ideas San Francisco",
+   "status": "name_not_found",
+   "hits": [],
+   "sources_checked": 1
+  },
+  "presidio-spring-awakening": {
+   "name": "Spring Awakening: Art & Cumbia at Outpost Meadow",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "presidio-summer26",
+     "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+     "match": "fiesta",
+     "snippet": "reveal Spring Awakening and will debut a new ground mural at Presidio Pop Up this June (details to come). Media partner Telemundo 48 again co-presents the exuberant Fiesta en el Parque , along with a new live experience, Presidio Soccer Festival . The Arts.Co.Lab’s Community Art Market returns for its second year, showcasing local makers and creatives. NEW this season – Urban",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "presidio-soccer-festival": {
+   "name": "Presidio Soccer Festival",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "presidio-summer26",
+     "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+     "match": "fiesta",
+     "snippet": "reveal Spring Awakening and will debut a new ground mural at Presidio Pop Up this June (details to come). Media partner Telemundo 48 again co-presents the exuberant Fiesta en el Parque , along with a new live experience, Presidio Soccer Festival . The Arts.Co.Lab’s Community Art Market returns for its second year, showcasing local makers and creatives. NEW this season – Urban",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "presidio-community-arts-market": {
+   "name": "Community Arts Market at Presidio Tunnel Tops",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "presidio-summer26",
+     "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+     "match": "fiesta",
+     "snippet": "reveal Spring Awakening and will debut a new ground mural at Presidio Pop Up this June (details to come). Media partner Telemundo 48 again co-presents the exuberant Fiesta en el Parque , along with a new live experience, Presidio Soccer Festival . The Arts.Co.Lab’s Community Art Market returns for its second year, showcasing local makers and creatives. NEW this season – Urban",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
+  },
+  "presidio-memorial-day": {
+   "name": "Memorial Day Commemoration at the Presidio",
+   "status": "name_found",
+   "hits": [
+    {
+     "source": "presidio-summer26",
+     "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+     "match": "fiesta",
+     "snippet": "reveal Spring Awakening and will debut a new ground mural at Presidio Pop Up this June (details to come). Media partner Telemundo 48 again co-presents the exuberant Fiesta en el Parque , along with a new live experience, Presidio Soccer Festival . The Arts.Co.Lab’s Community Art Market returns for its second year, showcasing local makers and creatives. NEW this season – Urban",
+     "http": 200
+    }
+   ],
+   "sources_checked": 1
   }
  },
- "dead": [],
+ "dead": [
+  {
+   "url": "https://sfcurran.com/",
+   "http": 0,
+   "error": "URLError: <urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1010)>"
+  }
+ ],
  "blocked": [
   {
    "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
@@ -6335,8 +6761,8 @@
   },
   {
    "url": "https://www.sfsketchfest.com/",
-   "http": 403,
-   "error": "HTTP 403"
+   "http": 202,
+   "error": ""
   },
   {
    "url": "https://www.sfindie.com/",
@@ -6375,13 +6801,13 @@
   },
   {
    "url": "https://qwocmap.org/festival/",
-   "http": 403,
-   "error": "HTTP 403"
+   "http": 202,
+   "error": ""
   },
   {
    "url": "https://sffolkfest.org/",
-   "http": 403,
-   "error": "HTTP 403"
+   "http": 202,
+   "error": ""
   },
   {
    "url": "https://www.sfjazz.org/onthecorner/articles/summer-2026/",
@@ -6405,8 +6831,8 @@
   },
   {
    "url": "https://sffallshow.org/",
-   "http": 403,
-   "error": "HTTP 403"
+   "http": 202,
+   "error": ""
   },
   {
    "url": "https://www.potrerofestival.com/",
@@ -6461,12 +6887,12 @@
  ],
  "no_response": [],
  "summary": {
-  "rows": 214,
-  "name_found": 151,
-  "name_not_found": 61,
-  "no_response": 0,
+  "rows": 233,
+  "name_found": 165,
+  "name_not_found": 65,
+  "no_response": 1,
   "pdf_not_checked": 2,
-  "dead_urls": 0,
+  "dead_urls": 1,
   "blocked_urls": 46
  }
 }

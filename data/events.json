@@ -22624,5 +22624,855 @@
    "reviewed_at": "2026-10-18",
    "method": "Explicit contextual field decisions; incomplete fields remain blank"
   }
+ },
+ {
+  "id": "f-noontime-concerts",
+  "name": "Noontime Concerts",
+  "schedule": "Every Tuesday",
+  "time": "12:30 pm",
+  "venue": "Old St. Mary’s Cathedral",
+  "price": "Free Live Concert Every Tuesday",
+  "candidate_name": "Noontime Concerts",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Weekly",
+  "entry_type": "series",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://noontimeconcerts.org/directions-and-location/",
+     "text": "Old St. Mary’s Cathedral\n\n660 California Street\n\nSan Francisco CA 94108"
+    }
+   ],
+   "basis": "The organizer's own directions page gives the venue's San Francisco street address."
+  },
+  "recurrence": {
+   "value": "presented weekly on Tuesdays",
+   "quotes": [
+    {
+     "url": "https://noontimeconcerts.org/about-noontime-concerts/",
+     "text": "Currently, Noontime Concerts are presented weekly on Tuesdays at 12:30 in historic Old Saint Mary’s Cathedral and on one Sunday each month from April through November at the historic San Francisco Mint."
+    }
+   ]
+  },
+  "occurrences": [
+   {
+    "start": "2026-10-20",
+    "end": "2026-10-20",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "10/20/2026"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "NCCO Quartet"
+     }
+    ]
+   },
+   {
+    "start": "2026-10-27",
+    "end": "2026-10-27",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "10/27/2026"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Berkelium Quartet"
+     }
+    ]
+   },
+   {
+    "start": "2026-11-10",
+    "end": "2026-11-10",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "11/10/2026"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Angela Lee, Cello and Marc Teicholz, Guitar"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Future dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Noontime Concerts",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/about-noontime-concerts/",
+      "text": "About Noontime Concerts"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Noontime Concerts | San Francisco's Musical Lunch Break"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Every Tuesday",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Free Live Concert  Every Tuesday"
+     }
+    ]
+   },
+   "time": {
+    "value": "12:30 pm",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/about-noontime-concerts/",
+      "text": "presented weekly on Tuesdays at 12:30 in historic Old Saint Mary’s Cathedral"
+     },
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "every Tuesday at 12:30 pm PST"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Old St. Mary’s Cathedral",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/directions-and-location/",
+      "text": "Old St. Mary’s Cathedral\n\n660 California Street\n\nSan Francisco CA 94108"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free Live Concert Every Tuesday",
+    "quotes": [
+     {
+      "url": "https://noontimeconcerts.org/",
+      "text": "Free Live Concert  Every Tuesday"
+     },
+     {
+      "url": "https://noontimeconcerts.org/about-noontime-concerts/",
+      "text": "Noontime Concerts are not ticketed but suggested donations are solicited to ensure all can enjoy performances regardless of ability to pay."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-63caecc772fb",
+   "n-154a97db611a",
+   "n-c51336c8be42"
+  ],
+  "unverified": [],
+  "flags": [
+   "Free weekly classical series. Admission is approved from the organizer's headline wording plus its about page: the concerts are 'not ticketed' and donations are only 'solicited ... regardless of ability to pay', so the row reads Free with the donation wording kept in the evidence. The about page also mentions one Sunday a month (April–November) at the historic San Francisco Mint; this row covers the Tuesday Old St. Mary's series the homepage headlines, including the three dated Tuesday concerts it lists. No Sunday date is asserted."
+  ],
+  "notes": "",
+  "topic": "Music",
+  "audit": {
+   "session": "21f3dd85",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "f-sea-chantey-sing",
+  "name": "Sea Chantey Sing",
+  "schedule": "first Saturday of every month",
+  "time": "6:00 PM",
+  "venue": "Maritime Museum",
+  "price": "This event is free to attend.",
+  "candidate_name": "Sea Chantey Sing",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Monthly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+     "text": "Maritime Museum, 900 Beach St, San Francisco, CA 94109"
+    }
+   ],
+   "basis": "The National Park Service event page gives the venue's San Francisco street address."
+  },
+  "recurrence": {
+   "value": "first Saturday of every month",
+   "quotes": [
+    {
+     "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+     "text": "Sea Chanteys are held on the first Saturday of every month in the Maritime Museum."
+    }
+   ]
+  },
+  "occurrences": [
+   {
+    "start": "2026-12-05",
+    "end": "2026-12-05",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+      "text": "Dec 5, 2026"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Future dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Sea Chantey Sing",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+      "text": "# Sea Chantey Sing"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "first Saturday of every month",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+      "text": "Sea Chanteys are held on the first Saturday of every month in the Maritime Museum."
+     }
+    ]
+   },
+   "time": {
+    "value": "6:00 PM",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+      "text": "Dec 5, 2026\nat\n6:00 PM"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Maritime Museum",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+      "text": "Maritime Museum, 900 Beach St, San Francisco, CA 94109"
+     }
+    ]
+   },
+   "price": {
+    "value": "This event is free to attend.",
+    "quotes": [
+     {
+      "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+      "text": "This event is free to attend."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-307fc8619aac"
+  ],
+  "unverified": [],
+  "flags": [
+   "National Park Service monthly participatory singing event. One official event page states both the monthly cadence and the 5 December 2026 instance, so the row is Monthly with that single approved occurrence; no other month's date is generated from the pattern."
+  ],
+  "notes": "",
+  "topic": "Music",
+  "audit": {
+   "session": "21f3dd85",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "f-mi-chess-socials",
+  "name": "Chess Socials",
+  "schedule": "First Friday of every month",
+  "time": "5:00–6:00 pm",
+  "venue": "Chess Room, Mechanics' Institute",
+  "price": "Free – just show up, no registration needed",
+  "candidate_name": "Chess Socials (Mechanics' Institute)",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Monthly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+     "text": "Mechanics' Institute, 4th Floor, 57 Post Street, San Francisco, CA 94104"
+    }
+   ],
+   "basis": "The socials meet on-site in the Chess Room of Mechanics' Institute; the Institute's own tournament page states its location as 57 Post Street, San Francisco."
+  },
+  "recurrence": {
+   "value": "First Friday of every month",
+   "quotes": [
+    {
+     "url": "https://www.milibrary.org/chess/chess-classes/",
+     "text": "**When**: First Friday of every month"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Chess Socials",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/chess-classes/",
+      "text": "Chess Socials (First Fridays, 5:00-6:00 PM, onsite)"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "First Friday of every month",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/chess-classes/",
+      "text": "**When**: First Friday of every month"
+     }
+    ]
+   },
+   "time": {
+    "value": "5:00–6:00 pm",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/chess-classes/",
+      "text": "**Time**: 5:00–6:00 pm"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Chess Room, Mechanics' Institute",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/chess-classes/",
+      "text": "**Where**: On-site, in the Chess Room"
+     },
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "Mechanics' Institute, 4th Floor, 57 Post Street, San Francisco, CA 94104"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free – just show up, no registration needed",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/chess-classes/",
+      "text": "**Cost**: Free – just show up, no registration needed"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-e4ee3c22de45",
+   "n-539b3becfc85"
+  ],
+  "unverified": [],
+  "flags": [
+   "Free monthly chess social, open to walk-ins. The same page lists 'Upcoming dates: June 5, July 10, Aug 7, Sep 4, Oct 2, Nov 6, Dec 4' without a year; because a yearless list cannot yield an approved ISO occurrence in this register, the row is published as a monthly pattern with no dated occurrence rather than inferring 2026 dates."
+  ],
+  "notes": "",
+  "topic": "Gaming",
+  "audit": {
+   "session": "21f3dd85",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "f-mi-winter-tuesday-night-marathon-2026",
+  "name": "2026 Winter Tuesday Night Marathon",
+  "schedule": "Tue, Nov 3 - Tue, Dec 15, 2026",
+  "time": "6:30pm",
+  "venue": "Mechanics' Institute, 4th Floor, 57 Post Street, San Francisco, CA 94104",
+  "price": "Entry fee for Mechanics' Institute Members: $70 · Entry fee for Non-Members: $100",
+  "candidate_name": "2026 Winter Tuesday Night Marathon",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Special",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+     "text": "Mechanics' Institute, 4th Floor, 57 Post Street, San Francisco, CA 94104"
+    }
+   ],
+   "basis": "The official tournament page states the venue's San Francisco street address."
+  },
+  "recurrence": null,
+  "occurrences": [
+   {
+    "start": "2026-11-03",
+    "end": "2026-12-15",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "Tue, Nov 3"
+     },
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "Tue, Dec 15, 2026"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Future dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "2026 Winter Tuesday Night Marathon",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "# 2026 Winter Tuesday Night Marathon"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Tue, Nov 3 - Tue, Dec 15, 2026",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "Tue, Nov 3"
+     },
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "Tue, Dec 15, 2026"
+     }
+    ]
+   },
+   "time": {
+    "value": "6:30pm",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "11/3\n6:30pm"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Mechanics' Institute, 4th Floor, 57 Post Street, San Francisco, CA 94104",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "Mechanics' Institute, 4th Floor, 57 Post Street, San Francisco, CA 94104"
+     }
+    ]
+   },
+   "price": {
+    "value": "Entry fee for Mechanics' Institute Members: $70 · Entry fee for Non-Members: $100",
+    "quotes": [
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "Entry fee for Mechanics' Institute Members: $70"
+     },
+     {
+      "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+      "text": "Entry fee for Non-Members: $100"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-539b3becfc85"
+  ],
+  "unverified": [
+   "recurrence: unverified; no ongoing cadence asserted"
+  ],
+  "flags": [
+   "Paid, USCF/FIDE-rated chess tournament (the page additionally requires current US Chess Federation membership). Collected under the project rule that paid events are kept but published in the separate Paid section. The 'Gaming' topic tag is this session's explicit decision: the event is a chess tournament even though its title contains no gaming word."
+  ],
+  "notes": "",
+  "topic": "Gaming",
+  "audit": {
+   "session": "21f3dd85",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "f-sfpl-mix-gaming",
+  "name": "Gaming at The Mix",
+  "schedule": "monthly gaming tournaments",
+  "time": "",
+  "venue": "The Mix at Main",
+  "price": "All programs and events are free and open to the public.",
+  "candidate_name": "Gaming at The Mix",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Monthly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://sfpl.org/teens/the-mix",
+     "text": "**Address** 100 Larkin, 2nd Floor San Francisco, CA 94102"
+    }
+   ],
+   "basis": "The library's own page for The Mix gives its San Francisco address (Main Library, 100 Larkin)."
+  },
+  "recurrence": {
+   "value": "monthly gaming tournaments",
+   "quotes": [
+    {
+     "url": "https://sfpl.org/teens/the-mix/gaming",
+     "text": "The Mix also hosts monthly gaming tournaments, giving you the chance to compete against your friends and the librarians."
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Gaming at The Mix",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/teens/the-mix/gaming",
+      "text": "## Gaming at The Mix"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "monthly gaming tournaments",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/teens/the-mix/gaming",
+      "text": "The Mix also hosts monthly gaming tournaments, giving you the chance to compete against your friends and the librarians."
+     }
+    ]
+   },
+   "venue": {
+    "value": "The Mix at Main",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/teens",
+      "text": "The Mix at Main is an innovative teen-designed space for youth ages 12-18."
+     }
+    ]
+   },
+   "price": {
+    "value": "All programs and events are free and open to the public.",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/events",
+      "text": "All programs and events are free and open to the public."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-3293a6ae3ff3",
+   "n-25b8afd92b67",
+   "sfpl-summer",
+   "n-24444ab049f6"
+  ],
+  "unverified": [
+   "time: unverified"
+  ],
+  "flags": [
+   "Admission is approved from the library's official events index (sfpl.org/events), which states 'All programs and events are free and open to the public.' This session applies that explicit all-programmes statement, in context, to this library programme rather than leaving the cost blank; the seven SFPL gaming rows captured by session 3adf31d9 did not cite the index statement and their admission cells therefore stay blank. The difference is deliberate and flagged for a future harmonization pass — no earlier row was edited. The Mix is the library's space for youth ages 12-18 (official teens page), and its page also describes drop-in console and tabletop play; this row covers the monthly tournaments it names. No tournament date or time is stated, so both stay unconfirmed."
+  ],
+  "notes": "",
+  "topic": "Gaming",
+  "audit": {
+   "session": "21f3dd85",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "f-sfpl-tech-week",
+  "name": "Tech Week",
+  "schedule": "May 9–16",
+  "time": "",
+  "venue": "San Francisco Public Library",
+  "price": "over 30 free workshops",
+  "candidate_name": "Tech Week (San Francisco Public Library)",
+  "candidate_label": "New research identifier",
+  "category": "Museums & science",
+  "kind": "Annual",
+  "entry_type": "series",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library",
+     "text": "Main Library, Computer Training Center, 5th Floor, 100 Larkin St."
+    },
+    {
+     "url": "https://sfpl.org/events",
+     "text": "100 Larkin Street\n\nSan Francisco, CA94102"
+    }
+   ],
+   "basis": "The programme is run by San Francisco Public Library; the release's flagship venue is the Main Library at 100 Larkin St., and the library's official locations block lists that address in San Francisco."
+  },
+  "recurrence": {
+   "value": "annual",
+   "quotes": [
+    {
+     "url": "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library",
+     "text": "its annual Tech Week"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Tech Week",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library",
+      "text": "its annual Tech Week"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "May 9–16",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library",
+      "text": "From May 9–16, San Francisco Public Library (SFPL) is offering over 30 free workshops for its annual Tech Week."
+     }
+    ]
+   },
+   "venue": {
+    "value": "San Francisco Public Library",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library",
+      "text": "San Francisco Public Library (SFPL) is offering over 30 free workshops for its annual Tech Week."
+     }
+    ]
+   },
+   "price": {
+    "value": "over 30 free workshops",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library",
+      "text": "San Francisco Public Library (SFPL) is offering over 30 free workshops for its annual Tech Week."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-1682bcb6d772",
+   "sfpl-summer"
+  ],
+  "unverified": [
+   "time: unverified"
+  ],
+  "flags": [
+   "The schedule quotes the edition described in the library's release dated April 24, 2026 (May 9–16); 'annual' is the release's own word, so the row is Annual and no future date is asserted. The same release lists the AI workshops 'Exploring and Trying Out AI Features in Mandarin', 'Introduction to Generative AI in Cantonese' and 'home improvement with AI', which is the basis for the explicit 'AI & technology' topic tag. Some workshops in the release required reservations and some were virtual; this umbrella row asserts only the annual, free, library-run programme, not any single workshop's terms."
+  ],
+  "notes": "",
+  "topic": "AI & technology",
+  "audit": {
+   "session": "21f3dd85",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "f-internet-archive-tours",
+  "name": "",
+  "schedule": "most Friday afternoons",
+  "time": "1:00pm",
+  "venue": "Internet Archive, 300 Funston Avenue",
+  "price": "public, free and on a drop-in basis",
+  "candidate_name": "Internet Archive public tours",
+  "candidate_label": "New research identifier",
+  "category": "Museums & science",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "review_only",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://archive.org/about/contact",
+     "text": "300 Funston Avenue\n\nSan Francisco, CA 94118"
+    }
+   ],
+   "basis": "The Internet Archive's official contact page gives its headquarters address in San Francisco, where the tours are held."
+  },
+  "recurrence": {
+   "value": "most Friday afternoons",
+   "quotes": [
+    {
+     "url": "https://archive.org/about/contact",
+     "text": "Tours are open most Friday afternoons at 1:00pm PST, and by appointment."
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "schedule": {
+    "value": "most Friday afternoons",
+    "quotes": [
+     {
+      "url": "https://archive.org/about/contact",
+      "text": "Tours are open most Friday afternoons at 1:00pm PST, and by appointment."
+     }
+    ]
+   },
+   "time": {
+    "value": "1:00pm",
+    "quotes": [
+     {
+      "url": "https://archive.org/about/contact",
+      "text": "Tours are open most Friday afternoons at 1:00pm PST, and by appointment."
+     }
+    ]
+   },
+   "venue": {
+    "value": "Internet Archive, 300 Funston Avenue",
+    "quotes": [
+     {
+      "url": "https://archive.org/about/contact",
+      "text": "# Contacts at the Internet Archive"
+     },
+     {
+      "url": "https://archive.org/about/contact",
+      "text": "300 Funston Avenue\n\nSan Francisco, CA 94118"
+     }
+    ]
+   },
+   "price": {
+    "value": "public, free and on a drop-in basis",
+    "quotes": [
+     {
+      "url": "https://archive.org/about/contact",
+      "text": "Friday's tours are public, free and on a drop-in basis."
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-f128e36240c6"
+  ],
+  "unverified": [
+   "name: unverified"
+  ],
+  "flags": [
+   "Held for review: the official archive.org contact page confirms the Friday tours, their 1:00pm time, the 300 Funston Avenue venue and that they are 'public, free and on a drop-in basis', but it gives the tour programme no title. This register requires an approved event name for directory admission, so the candidate is published here with its official link rather than given an invented name. A San Francisco Arts Commission calendar listing (sfarts.org) titles it 'Internet Archive Tour', but that is not the organizer's page and is not used as name evidence. The page also warns that holidays or extenuating circumstances may cancel a given Friday, which is why the recurrence is quoted as 'most Friday afternoons'."
+  ],
+  "notes": "",
+  "topic": "Other",
+  "audit": {
+   "session": "21f3dd85",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "f-grace-cathedral-organ-recital-series",
+  "name": "Organ Recital Series",
+  "schedule": "",
+  "time": "",
+  "venue": "Grace Cathedral",
+  "price": "",
+  "candidate_name": "Organ Recital Series (Grace Cathedral)",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Special",
+  "entry_type": "series",
+  "parent": "",
+  "publication": "review_only",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://gracecathedral.org/calendar-events/category/music/list/?posts_per_page=26&tribe-bar-date=2029-12-20&eventDisplay=past",
+     "text": "Grace Cathedral 1100 California Street, San Francisco, CA, United States"
+    }
+   ],
+   "basis": "The cathedral's own events listings give its address as 1100 California Street, San Francisco."
+  },
+  "recurrence": null,
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Date/year unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Organ Recital Series",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/series/organ-recital-series/",
+      "text": "### Organ Recital Series"
+     },
+     {
+      "url": "https://gracecathedral.org/organs/",
+      "text": "#### Organ Recital Series"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Grace Cathedral",
+    "quotes": [
+     {
+      "url": "https://gracecathedral.org/organs/",
+      "text": "### Music at Grace Cathedral"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "n-7f28d185a98a",
+   "n-243a6c0ca2f1",
+   "n-b1c41e8296e6"
+  ],
+  "unverified": [
+   "schedule: unverified",
+   "time: unverified",
+   "price: unverified",
+   "recurrence: unverified; no ongoing cadence asserted",
+   "date/year: unverified; no approved ISO occurrence"
+  ],
+  "flags": [
+   "Held for review — conflicting admission wording across the cathedral's official pages. Individual recital pages on gracecathedral.org variously state 'Cost: Free' and 'free organ recital', while another official recital page warns that 'there is an admission fee for visitors on Sundays from 1 to 5 pm' and that recital attendees 'must register in advance to avoid paying the fee'. The readable series and organs pages fetched for this pass state no price at all (and the organs page instead promotes a paid cultural membership for entry). Admission is therefore left blank and the series held off the directory until the current terms can be confirmed from one readable official page. For context only: at capture the series page listed its next recital on Sunday 1 November 2026 ('Nov 2026 · Sun 1'); that date is not approved as an occurrence of this held series row."
+  ],
+  "notes": "",
+  "topic": "Music",
+  "audit": {
+   "session": "21f3dd85",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
  }
 ]

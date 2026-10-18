@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from audited_register import compile_register, temporal, validate_decision  # noqa: E402
 from register_3adf31d9 import extend as extend_register  # noqa: E402
+from register_21f3dd85 import extend as extend_register_21f3dd85  # noqa: E402
 from audit_evidence import retain_capture  # noqa: E402
 
 
@@ -26,18 +27,20 @@ class AuditedRegister(unittest.TestCase):
 
     def project(self, audit=None, history=None):
         h = history or self.history
-        # The additive 3adf31d9 overlay always runs last, exactly as in consolidate.py.
-        return extend_register(*compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit))
+        # The additive overlays always run last, in consolidate.py order:
+        # 3adf31d9 (topic gap), then 21f3dd85 (free-first).
+        return extend_register_21f3dd85(*extend_register(*compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit)))
 
     def test_baseline_retained_and_new_entries_identified(self):
         self.assertEqual(len(self.history['events']), 233)
         self.assertEqual(len(self.audit['candidates']), 231)
         self.assertEqual(len(self.audit['extra_events']), 18)
         # 246 audited (231 candidates + 13 official-calendar extras + 2 companions), then
-        # session 59f56c24's 5 official-calendar extras and 3adf31d9's 15 topic-gap entries.
-        self.assertEqual(len(self.rows), 266)
+        # session 59f56c24's 5 official-calendar extras, 3adf31d9's 15 topic-gap entries,
+        # and 21f3dd85's 8 free-first entries (6 listed, 2 held for review).
+        self.assertEqual(len(self.rows), 274)
         self.assertTrue(set(self.audit['candidates']) <= set(self.by_id))
-        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 185)
+        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 191)
 
     def test_upstream_additions_and_source_repair_are_preserved(self):
         self.assertIn('f1-alemany-flea-market', self.by_id)

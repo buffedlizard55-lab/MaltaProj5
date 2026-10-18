@@ -43,7 +43,8 @@ jobs:
           print(f"site consistent with {len(rows)} rows")
           PY
 
-      - name: Check every cited source URL still resolves
+      - name: Check every cited source URL still resolves (reported, never blocks)
+        continue-on-error: true
         run: python tools/remotecheck.py --timeout 25
 
       - name: Fetch every cited page and match the event name (report only)

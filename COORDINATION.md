@@ -1218,3 +1218,11 @@ Main validation [39102291756](https://github.com/buffedlizard55-lab/MaltaProj5/a
 and Pages workflow [39102291538](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102291538)
 succeeded; Pages API build **1293677966** is `built` for that commit. PR #29 changed
 coordination documentation only; the 246/167/79 event register is from PR #28.
+
+## Claim — session `20276183` — 2026-10-18 — date-first dashboard and priority-focus integration
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| T32 | in progress | `20276183` | `scripts/build.py`, `assets/app.js`, `assets/style.css`, generated root HTML pages, `scripts/validate.py`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
+
+Scope is limited to the published static site's date-first executive summary, explicit cost labels/filtering, mobile/table usability, and transparent gaming/music/AI priority-focus coverage using only the existing audited records. Canonical event evidence is not changed in this claim. The source-backed register, source ledger and review records remain unchanged unless a confirmed site-consistency defect requires generated output updates.

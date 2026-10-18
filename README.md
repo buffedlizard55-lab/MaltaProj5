@@ -99,3 +99,16 @@ Omit `--serve` when a static server already runs on port 8080. This checks 12 pa
 `Validate site` rebuilds the canonical data/site, runs the regression fixtures and UI smoke test, checks every local link, and **requires committed generated files to match the build**. It also reports every cited URL: definite 404/410 responses fail; challenge, server and transport outcomes stay unknown rather than becoming false verification claims. Reports/screenshots are workflow artifacts, not auto-committed event facts.
 
 GitHub Pages is configured in branch mode: **`main` / root**. Merging validated committed HTML publishes it automatically; the validation workflow itself is not a deployment. Actual PR, merge and successful Pages build records are recorded in `COORDINATION.md` after they occur.
+
+### Confirmed publication
+
+Implementation [PR #22](https://github.com/buffedlizard55-lab/MaltaProj5/pull/22)
+merged on **18 October 2026 at 03:59:24 UTC** as `bde10dc7b431111c14b602855f4bebc0b6dbc957`.
+[PR checks](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39095344809)
+and [post-merge validation](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39095524834)
+passed, including 29 regressions, browser/accessibility, generated-file consistency
+and URL gates. [Pages deployment](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39095524296)
+succeeded; the Pages API reports **built** for that exact merge commit at 03:59:45 UTC.
+Live dashboard, review and evidence pages were fetched and confirmed to contain the
+new 163-directory / 79-held / 242-candidate snapshot. See `COORDINATION.md` for the
+full publication record and explicitly unknown source-response outcomes.

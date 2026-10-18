@@ -1822,3 +1822,44 @@ conflicted in 17 files. Resolution, nothing discarded:
 
 Post-merge verification: `consolidate.py` idempotent → `build.py` (19 pages, 299 review records)
 → `validate.py` PASS (299 exact projections through all five overlays) → **57/57 unit tests OK**.
+
+---
+
+## T-9d0b-4 done — final integration and publication record — `9d0b6c49` (2026-10-18)
+
+* **PR:** [buffedlizard55-lab/MaltaProj5#48](https://github.com/buffedlizard55-lab/MaltaProj5/pull/48)
+  — "Independent verification pass: 3 cost badges fixed, 7 irregularities published, 4 verified free entries added".
+* **PR gate:** Validate run [39149686497](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39149686497)
+  **passed** (rebuild → 57 unit tests → 299-exact-projection validate → generated-file consistency →
+  real-browser desktop/mobile + axe smoke → source-URL reachability with no 404/410; 49
+  restricted/challenge/server/transport outcomes remain unknown, not verified and not dead).
+* **Merged:** 2026-10-18 **17:29:01 UTC**, merge commit
+  [`7a07bffabb1020c24d8cbb40dd6d0935fc374549`](https://github.com/buffedlizard55-lab/MaltaProj5/commit/7a07bffabb1020c24d8cbb40dd6d0935fc374549).
+* **Post-merge main CI:** Validate run [39149785835](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39149785835) **passed**.
+* **Pages:** deployment run [39149785724](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39149785724)
+  succeeded; the Pages API reports the latest build **built**, no error, for the exact merge commit
+  `7a07bff` at 17:29:02 UTC.
+* **Live content confirmed directly** (not only via the API): the public site
+  https://buffedlizard55-lab.github.io/MaltaProj5/ was fetched after deployment and serves the new
+  state — 20 free upcoming entries in the executive summary (Rae Studios today, Chess and Mahjong
+  Fri 23 Oct, CMC Halloween Wed 28 Oct among them, each with its official source link), the Gaming
+  callout now reading "nearest free dated entry is Chess and Mahjong", the corrected cost split
+  **Free 83 / Paid 17 / Not stated 116**, 216 city-only directory entries, 299 candidates, 313 cited
+  URLs, and the "Independent verification pass" section on Flagged for Review.
+* **Published state:** 299 candidates / 216 listed / 83 review-only; 38 weekly / 13 monthly / 35
+  annual / 130 special; 78 entries with a confirmed future date; free upcoming landing rows 15 → 20
+  (3 badge corrections + 4 verified additions, of which 2 are dated free and new to the landing set).
+* **Flagged irregularities, published, never blocking:** the seven items in the research log and the
+  review-page section — Grace Cathedral's two printed Evensong times; Noontime Concerts' 12:30 pm
+  being the live-stream start; ybgfestival.org's reCAPTCHA block and its event pages' more precise
+  venues; SFMOMA Free Family Day's RSVP condition and $12 RM x SFMOMA exception; Lit Crawl's
+  ambiguous programme time; the stale "moved to Annual" consolidation note; and Noisebridge events
+  held off the register with their weekday/time conflicts logged.
+* **Parallel-work interactions this session:** merged `main` three times mid-task (PR #44 docs-only;
+  PRs #45–#46 T32 reconciliation; PR #47 docs follow-up). All conflicts resolved as unions with
+  nothing discarded; both merge logs are recorded above. `06949148`'s absolute cost-count test was
+  integrated to the merged composition with the derivation documented in the test.
+* **Open items left for a future session** (logged, not blocking): a free AI/technology entry with a
+  confirmed upcoming date; the second chunk of the City UN Plaza calendar (dates after 29 Oct); the
+  SFMOMA Free Family Day RSVP/$12 exception written into the row's own admission wording by a
+  session owning `data/audit_64f8b973.json`; and the remaining Noisebridge questions.

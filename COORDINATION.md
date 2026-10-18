@@ -43,6 +43,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `bb551cdc` | `arena/bb551cdc-maltaproj5` | 2026-10-18 05:45 | Additional official SF calendar research, overlay extension, rebuild, PR/Pages (T29–T31 calendar expansion) |
 | `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
+| `bf734dd6` | `arena/bf734dd6-maltaproj5` | 2026-10-18 09:42 UTC | Final request-alignment integration: mobile dashboard, explicit-cost display, approved-date ordering, near-term digest, validation |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -89,6 +90,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T29-cal | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
 | T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; PR Validate [39102137078](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102137078), main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169), and Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) succeeded | `bb551cdc` | `COORDINATION.md` |
+| T32 | Final integration: align live dashboard with requirements—sort by confirmed upcoming dates first, add a near-term executive digest using only explicit occurrences, clearly label source-backed admission/free/paid/unknown status, improve mobile usability, and validate generated pages | **in progress** | `bf734dd6` | `assets/app.js`, `assets/style.css`, `scripts/build.py`, `scripts/validate.py`, `tests/*`, generated top-level `*.html`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1218,3 +1220,14 @@ Main validation [39102291756](https://github.com/buffedlizard55-lab/MaltaProj5/a
 and Pages workflow [39102291538](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102291538)
 succeeded; Pages API build **1293677966** is `built` for that commit. PR #29 changed
 coordination documentation only; the 246/167/79 event register is from PR #28.
+
+
+## T32 claim — `bf734dd6` (in progress)
+
+Claimed 2026-10-18 09:42 UTC after reviewing the current task board; all prior listed work
+(T1–T31) is complete and no active claim conflicts with this scope. This session is the
+final integration pass: preserve the official-evidence gate and fixed-snapshot methodology,
+make approved upcoming occurrences prominent without inventing dates, show admission status
+without treating blanks as free, and test responsive tables/controls. The site's 246-candidate
+snapshot is documented as bounded and non-exhaustive; this task will not relabel it as a
+complete live city calendar.

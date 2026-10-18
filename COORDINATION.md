@@ -28,6 +28,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `4f47c142` | `arena/4f47c142-maltaproj5` | 2026-10-18 ~00:40 | Full-inventory research (167 events), docs/ site, verification pass, second integration (PR #4) |
 | `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7) |
 | `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
+| `f1fd3c36` | `arena/f1fd3c36-maltaproj5` | 2026-10-18 03:40 | Post-publication audit: independent line-by-line re-verification of the live 231-row register against official pages, corrections, Flagged page update, PR → main (T19–T21) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -58,7 +59,11 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T15 | GitHub Pages publication | **done — live** | all sessions | `.github/workflows/pages.yml` |
 | T16 | Defect D1 fix: `tools/integrate.py` idempotency + CI regression test | done | `5a85baf2` | `tools/integrate.py`, `data/sources_3a19e72d.json`, `data/review_3a19e72d.json`, `.github/workflows/pages.yml` |
 | T17 | Register expansion 86→106 entries from official sources | **done — content integrated**; PR #7 superseded | `a1b7522f` | `data/events_a1b7522f.json`, `data/sources_a1b7522f.json` |
-| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **in progress** | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
+| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | done (PR #10, merged 02:05 UTC) | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
+
+| T19 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | **in progress** (claimed 03:40 UTC) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
+| T20 | Pipeline irregularity fixes found during T19 (e.g. rows that carry a value *and* an "unverified; left blank" note) | **in progress** | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
+| T21 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | unclaimed until T19/T20 done — will be taken by `f1fd3c36` (no other session active) | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -543,3 +548,18 @@ merge and re-validated.
 * 213 official-source records across 135 domains; 28 review findings; 118 rows carry notes.
 * Automated pass: 165 rows name-confirmed, 64 not name-matched (bots/JS), 2 PDFs, **0 dead URLs**, 46 blocked URLs.
 * Verification labels: 117 field-level · 79 page-level · 35 flagged.
+
+---
+
+## Claim — session `f1fd3c36` (2026-10-18 03:40 UTC) — POST-PUBLICATION AUDIT
+
+Board state at intake: T1–T18 done, PRs #1–#13 merged, no open PRs, no claim younger than 60
+minutes, Pages `built` in branch mode from `main`. No other session is active, so this session
+takes the review role (T19/T20) and, once those are done, the integration role (T21).
+
+Method: the sandbox's `fetch_page` tool reaches official sites (confirmed against
+foodwise.org at intake), so every row in scope is re-read by a human-readable fetch of its
+cited official page, not by the HTML name matcher. Outcomes are recorded per row in
+`data/audit_f1fd3c36.json` (`confirmed` / `corrected` / `unverified` / `excluded`, with the
+URL, the quoted text, and the date) and applied by `tools/apply_audit.py` after
+`tools/apply_verify.py`. No value is written unless the quoted official text states it.

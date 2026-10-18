@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "session": "64f8b973",
- "captured_at": "2026-10-18T03:00:08+00:00",
+ "captured_at": "2026-10-18T03:09:45+00:00",
  "method": "Official-source extracted-text snapshot. Literal matches are candidates, NEVER approvals. Each published nonblank fact needs an explicit field decision and supporting quotation.",
  "captures": {
   "https://about.asianart.org/ticketing/free-and-reduced-museum-admission/": {
@@ -531,7 +531,19 @@
     }
    ],
    "seconds": 0.43,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://about.asianart.org/ticketing/free-and-reduced-museum-admission/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "8eac76ccd5c17db83a3c9d28c42a42a55ebf6c2e1aabba65e35d24df16d0d886",
+    "truncated_response": false,
+    "title": "Free and Reduced Museum Admission - Asian Art Museum",
+    "pdf": false,
+    "seconds": 0.45,
+    "text_truncated": false
+   }
   },
   "https://bringyourownbigwheel.com/": {
    "http": 200,
@@ -945,7 +957,19 @@
     }
    ],
    "seconds": 1.94,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://bringyourownbigwheel.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "e5afd2c571cc23027d983a8251f5095055767e6bc79f8112f22e00155de81fdc",
+    "truncated_response": false,
+    "title": "Welcome - Bring Your Own Big Wheel",
+    "pdf": false,
+    "seconds": 2.37,
+    "text_truncated": false
+   }
   },
   "https://caamedia.org/caamfest/": {
    "http": 200,
@@ -1189,7 +1213,19 @@
     }
    ],
    "seconds": 0.37,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://caamedia.org/caamfest/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "025cef3ad9cf75a786175f552b7b8da4eb9d5b60000da35005fe63d379b4a873",
+    "truncated_response": false,
+    "title": "CAAMFest - Center for Asian American Media",
+    "pdf": false,
+    "seconds": 0.46,
+    "text_truncated": false
+   }
   },
   "https://carnavalsanfrancisco.org/": {
    "http": 200,
@@ -1313,7 +1349,19 @@
    ],
    "structured": [],
    "seconds": 0.53,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://carnavalsanfrancisco.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "adbef42562644220508188530df45d52839df63aff02175a27de22c83d2bf8cb",
+    "truncated_response": false,
+    "title": "Carnaval San Francisco",
+    "pdf": false,
+    "seconds": 0.81,
+    "text_truncated": false
+   }
   },
   "https://carnavalsanfrancisco.org/faq/": {
    "http": 200,
@@ -1465,7 +1513,19 @@
    ],
    "structured": [],
    "seconds": 0.48,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://carnavalsanfrancisco.org/faq/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "1e0a9b128e9b3db5aeb58384ddc6d122955bf84080f377239a69c709102f2c5d",
+    "truncated_response": false,
+    "title": "FAQs – Carnaval San Francisco",
+    "pdf": false,
+    "seconds": 0.71,
+    "text_truncated": false
+   }
   },
   "https://carnavalsanfrancisco.org/parade/": {
    "http": 200,
@@ -1577,7 +1637,19 @@
    ],
    "structured": [],
    "seconds": 0.49,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://carnavalsanfrancisco.org/parade/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "7f283f30404a7a7c899fdeeea9410dbe59ef801b2f34fdfe845476798693b51c",
+    "truncated_response": false,
+    "title": "Grand Parade – Carnaval San Francisco",
+    "pdf": false,
+    "seconds": 0.72,
+    "text_truncated": false
+   }
   },
   "https://carnavalsanfrancisco.org/special-events/": {
    "http": 200,
@@ -1717,7 +1789,19 @@
    ],
    "structured": [],
    "seconds": 0.48,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://carnavalsanfrancisco.org/special-events/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "85a9f18d311c1a191d6770ebcdeb88862dceb8b724c17dd7058e1d5b8ae5b57b",
+    "truncated_response": false,
+    "title": "Special Events – Carnaval San Francisco",
+    "pdf": false,
+    "seconds": 0.73,
+    "text_truncated": false
+   }
   },
   "https://castronightmarket.com/": {
    "http": 200,
@@ -1809,7 +1893,19 @@
    ],
    "structured": [],
    "seconds": 0.22,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://castronightmarket.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "02b7902398a5f76bdcdd2ec2fadcb6f4e32ba93480042398a8e71bbdbeadd2c9",
+    "truncated_response": false,
+    "title": "Castro Night Market",
+    "pdf": false,
+    "seconds": 0.41,
+    "text_truncated": false
+   }
   },
   "https://castrostreetfair.org/": {
    "http": 200,
@@ -2061,7 +2157,19 @@
    ],
    "structured": [],
    "seconds": 0.5,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://castrostreetfair.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "b76a792aff6e39e98746cce70dc78e0a097e340403521bee31b3d69d4aaf8ef7",
+    "truncated_response": false,
+    "title": "Castro Street Fair | San Francisco – The first Sunday of October — join us for SF's legacy street fair!Create a website or blog at WordPress.com",
+    "pdf": false,
+    "seconds": 0.53,
+    "text_truncated": false
+   }
   },
   "https://chineseparade.com/": {
    "http": 200,
@@ -2365,7 +2473,19 @@
     }
    ],
    "seconds": 0.64,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://chineseparade.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "39d29230c67cea0a742f02f248a046cb53a2505cb17599a6e9627a3307917a1a",
+    "truncated_response": false,
+    "title": "Home • Chinese New Year Festival & Parade",
+    "pdf": false,
+    "seconds": 0.36,
+    "text_truncated": false
+   }
   },
   "https://chineseparade.com/choysundoe/": {
    "http": 200,
@@ -2541,7 +2661,19 @@
    ],
    "structured": [],
    "seconds": 0.51,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://chineseparade.com/choysundoe/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "19e94ed584394fb0d23329d5fce71ad4d34beb4f0eafdc23ee2cf69a6ca1e90b",
+    "truncated_response": false,
+    "title": "Choy Sun Doe • Chinese New Year Festival & Paradecalendar-icon",
+    "pdf": false,
+    "seconds": 1.98,
+    "text_truncated": false
+   }
   },
   "https://chineseparade.com/communityfair/": {
    "http": 200,
@@ -2741,7 +2873,19 @@
    ],
    "structured": [],
    "seconds": 0.49,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://chineseparade.com/communityfair/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "e38784dc655bf2c809f39986404f508800cc3d3eb2322c89b674dae15b926701",
+    "truncated_response": false,
+    "title": "Community Street Fair • Chinese New Year Festival & Paradecalendar-icon",
+    "pdf": false,
+    "seconds": 1.79,
+    "text_truncated": false
+   }
   },
   "https://chineseparade.com/faq/": {
    "http": 200,
@@ -2937,7 +3081,19 @@
    ],
    "structured": [],
    "seconds": 1.79,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://chineseparade.com/faq/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "8d380b1da2a6b76d417fc506f9e72b03aea56cc6abda2ce8fa5fb6e55ac64acd",
+    "truncated_response": false,
+    "title": "FAQ • Chinese New Year Festival & Parade",
+    "pdf": false,
+    "seconds": 1.79,
+    "text_truncated": false
+   }
   },
   "https://clubdarc.com/": {
    "http": 200,
@@ -3013,7 +3169,19 @@
    ],
    "structured": [],
    "seconds": 0.23,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://clubdarc.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "ddecb638ebc8927c89c3553bcb78c211ee927c2fb30af2fdde92c1f81eab4d8e",
+    "truncated_response": false,
+    "title": "Club Darc: HomeFacebookInstagramRedditTumblrSpotifyEmailTriangleYoutubeSnapchatMagnifyGlobeTikTokSoundcloudSearchClose",
+    "pdf": false,
+    "seconds": 0.16,
+    "text_truncated": false
+   }
   },
   "https://comedyday.org/": {
    "http": 200,
@@ -3093,7 +3261,19 @@
    ],
    "structured": [],
    "seconds": 0.37,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://comedyday.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "a2fe713397f67fabebe6084488deff8123e307dc4e4c3021399a48b694a26e66",
+    "truncated_response": false,
+    "title": "Comedy Day 2026",
+    "pdf": false,
+    "seconds": 0.54,
+    "text_truncated": false
+   }
   },
   "https://cookbookweek.com/": {
    "http": 200,
@@ -3322,7 +3502,19 @@
     }
    ],
    "seconds": 0.18,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://cookbookweek.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:31+00:00",
+    "sha256": "93a7d9f6b7436fdb20a18ea02ab7937571ecbb03bd3ae5a0581f15e03236c6ed",
+    "truncated_response": false,
+    "title": "Cookbook Week - April 21-25, 2026",
+    "pdf": false,
+    "seconds": 0.14,
+    "text_truncated": false
+   }
   },
   "https://dancersgroup.org/badw/": {
    "http": 200,
@@ -3586,7 +3778,19 @@
    ],
    "structured": [],
    "seconds": 0.16,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://dancersgroup.org/badw/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "a999bde50acf702ad7e81a299a75a34ff4d85323d9767e78585a68df36a5b7ef",
+    "truncated_response": false,
+    "title": "Bay Area Dance Week",
+    "pdf": false,
+    "seconds": 0.55,
+    "text_truncated": false
+   }
   },
   "https://decoratorshowcase.org/": {
    "http": 200,
@@ -3772,7 +3976,19 @@
     }
    ],
    "seconds": 0.77,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.decoratorshowcase.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "0380d794c59aa108201fc5aa4fc87c13b03ad767943fcfd370175c4cb370b617",
+    "truncated_response": false,
+    "title": "San Francisco Decorator Showcase",
+    "pdf": false,
+    "seconds": 1.24,
+    "text_truncated": false
+   }
   },
   "https://downtownsf.org/things-to-do/drag-me-downtown-2025": {
    "http": 200,
@@ -4104,7 +4320,19 @@
    ],
    "structured": [],
    "seconds": 0.67,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://downtownsf.org/things-to-do/drag-me-downtown",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "7520c7b3ebb95db332b264061e4651e8eb810c9668cd96cd0f4fded1ca6de548",
+    "truncated_response": false,
+    "title": "Drag Me Downtown | FREE San Francisco Pride 2026 Events",
+    "pdf": false,
+    "seconds": 0.93,
+    "text_truncated": false
+   }
   },
   "https://downtownsf.org/things-to-do/fridays-on-front-street": {
    "http": 200,
@@ -4340,7 +4568,19 @@
    ],
    "structured": [],
    "seconds": 0.45,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "e3a055b7baea8d3e01f49afbbfb9c8ca25316966e37384eb0e8427d5786ffb11",
+    "truncated_response": false,
+    "title": "Fridays on Front St | Things To Do | Downtown San Francisco",
+    "pdf": false,
+    "seconds": 0.57,
+    "text_truncated": false
+   }
   },
   "https://downtownsf.org/things-to-do/lets-glow-sf": {
    "http": 200,
@@ -4584,7 +4824,19 @@
    ],
    "structured": [],
    "seconds": 0.44,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://downtownsf.org/things-to-do/lets-glow-sf",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "dd7e55fdae0e2d91271f84c04322878b3b4d6b3646ad0769ce3fca01b6a3127b",
+    "truncated_response": false,
+    "title": "Let's Glow SF | Free Holiday Projection Arts Festival",
+    "pdf": false,
+    "seconds": 0.59,
+    "text_truncated": false
+   }
   },
   "https://downtownsf.org/things-to-do/oktoberfest-on-front": {
    "http": 200,
@@ -4840,7 +5092,19 @@
    ],
    "structured": [],
    "seconds": 0.41,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://downtownsf.org/things-to-do/oktoberfest-on-front",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "17bf850ca5a7922a96ce16d3287d4bbaa0b56e707a53b6ce68772dd0e374a1ae",
+    "truncated_response": false,
+    "title": "Oktoberfest on Front | Things To Do | Downtown San Francisco",
+    "pdf": false,
+    "seconds": 0.55,
+    "text_truncated": false
+   }
   },
   "https://earthdaysf.org/": {
    "http": 200,
@@ -4892,7 +5156,19 @@
    ],
    "structured": [],
    "seconds": 0.47,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://earthdaysf.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "d0a491ab77792a5f9e6bab47e4d76a34e0a3f888b1bacb1fbb62921be54dab65",
+    "truncated_response": false,
+    "title": "Earth Day SF",
+    "pdf": false,
+    "seconds": 0.53,
+    "text_truncated": false
+   }
   },
   "https://embarcaderocenter.com/holiday-market-copy-page-format-for-2026/": {
    "http": 200,
@@ -5170,7 +5446,19 @@
     }
    ],
    "seconds": 0.25,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://embarcaderocenter.com/holiday-market-copy-page-format-for-2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "3db8f07615fb43ecfcf2b335647fc2171552ab16f45c6c864e773c3588c59c20",
+    "truncated_response": false,
+    "title": "2026 Holiday Market & 40th Annual Building Lighting - Embarcadero CenterMe",
+    "pdf": false,
+    "seconds": 0.18,
+    "text_truncated": false
+   }
   },
   "https://fleetweeksf.org/": {
    "http": 200,
@@ -6155,7 +6443,19 @@
     }
    ],
    "seconds": 0.45,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://fleetweeksf.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "c66511e5507e00174167c5d004956602d4c004a33e740d82ec1276fba57aa930",
+    "truncated_response": false,
+    "title": "San Francisco Fleet Week",
+    "pdf": false,
+    "seconds": 0.45,
+    "text_truncated": false
+   }
   },
   "https://fleetweeksf.org/air-show/": {
    "http": 200,
@@ -6667,7 +6967,19 @@
     }
    ],
    "seconds": 0.18,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://fleetweeksf.org/air-show/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "7305b7e667242b1f5e7e53793750179dbc1c0aad6443bbc21cbacf643f7c75b0",
+    "truncated_response": false,
+    "title": "Fleet Week San Francisco | Air Show | Blue Angels",
+    "pdf": false,
+    "seconds": 0.3,
+    "text_truncated": false
+   }
   },
   "https://foodwise.org/": {
    "http": 200,
@@ -7393,7 +7705,19 @@
     }
    ],
    "seconds": 0.15,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://foodwise.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "a5cbc31b1f607f1ea8d7f921bc179d8cf8409aff3084215f428668cf910bb754",
+    "truncated_response": false,
+    "title": "Foodwise : Education. Farmers markets. Community.",
+    "pdf": false,
+    "seconds": 0.37,
+    "text_truncated": false
+   }
   },
   "https://foodwise.org/events/pop-ups-on-the-plaza-juneteenth-on-the-waterfront/": {
    "http": 200,
@@ -8295,7 +8619,19 @@
     }
    ],
    "seconds": 0.12,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://foodwise.org/events/pop-ups-on-the-plaza-juneteenth-on-the-waterfront/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "3fe2b938791c619f381f17e9d4944bdc0ad2e6a2271a1d94ca77b6a8eae5aaf1",
+    "truncated_response": false,
+    "title": "Pop-Ups on the Plaza: Juneteenth on the Waterfront : Foodwise",
+    "pdf": false,
+    "seconds": 0.42,
+    "text_truncated": false
+   }
   },
   "https://foodwise.org/markets/ferry-plaza-farmers-market/": {
    "http": 200,
@@ -9094,7 +9430,19 @@
     }
    ],
    "seconds": 0.14,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "22c8cde0a973560433c3a8c574de2499beb996927da6562699d90caedf4dc28c",
+    "truncated_response": false,
+    "title": "Ferry Plaza Farmers Market at the San Francisco Ferry Building : Foodwise",
+    "pdf": false,
+    "seconds": 0.24,
+    "text_truncated": false
+   }
   },
   "https://foodwise.org/markets/mission-community-market/": {
    "http": 200,
@@ -9885,7 +10233,19 @@
     }
    ],
    "seconds": 0.19,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://foodwise.org/markets/mission-community-market/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:32+00:00",
+    "sha256": "392962fe61455b1b6268b4089c4abdfc9891701f206bf644e510281087c9002f",
+    "truncated_response": false,
+    "title": "Mission Community Market in San Francisco's Mission District : Foodwise",
+    "pdf": false,
+    "seconds": 0.18,
+    "text_truncated": false
+   }
   },
   "https://gggp.org/flowerpiano/": {
    "http": 200,
@@ -10604,7 +10964,19 @@
     }
    ],
    "seconds": 0.86,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://gggp.org/flowerpiano/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "281f62d05cd8c4f0fe3a09ab9c98ec12d9e59bbfd1d8368d6813d32863866b26",
+    "truncated_response": true,
+    "title": "Flower Piano 2026 - San Francisco Botanical Garden",
+    "pdf": false,
+    "seconds": 1.47,
+    "text_truncated": false
+   }
   },
   "https://goldengateparkband.org/": {
    "http": 200,
@@ -10795,7 +11167,19 @@
     }
    ],
    "seconds": 0.52,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://goldengateparkband.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "9f498a900cea17f67301fa57883e18da6465d259a4ed5ba69993fff4de64f146",
+    "truncated_response": false,
+    "title": "Golden Gate Park Band",
+    "pdf": false,
+    "seconds": 0.44,
+    "text_truncated": false
+   }
   },
   "https://hardlystrictlybluegrass.com/info-faq-2026/": {
    "http": 200,
@@ -11023,7 +11407,19 @@
     }
    ],
    "seconds": 0.21,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://hardlystrictlybluegrass.com/info-faq-2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "99a64eebe51cbd5c4df4f8c694b570a2fc11f8deea302dc03dbe4f91f81eddcc",
+    "truncated_response": false,
+    "title": "Info & FAQ - Hardly Strictly BluegrassHardly Strictly Bluegrass",
+    "pdf": false,
+    "seconds": 0.32,
+    "text_truncated": false
+   }
   },
   "https://hotcfarmersmarket.org/": {
    "http": 200,
@@ -11124,7 +11520,19 @@
     }
    ],
    "seconds": 0.31,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://hotcfarmersmarket.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "3cf3bb060aeed72dc82a0c2330d5e2b334292170d20b2918d86cb6d7d7097bf2",
+    "truncated_response": false,
+    "title": "Heart of the City Farmers Market",
+    "pdf": false,
+    "seconds": 0.51,
+    "text_truncated": false
+   }
   },
   "https://hotcfarmersmarket.org/about": {
    "http": 200,
@@ -11245,7 +11653,19 @@
     }
    ],
    "seconds": 0.3,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://hotcfarmersmarket.org/about",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "cb81e6d53191b06cea8533e24fe9ae026cc7506de472ab09487c0f5c91a43e0e",
+    "truncated_response": false,
+    "title": "Our Market — Heart of the City Farmers Market",
+    "pdf": false,
+    "seconds": 0.55,
+    "text_truncated": false
+   }
   },
   "https://intloceanfilmfest.org/": {
    "http": 200,
@@ -11506,7 +11926,19 @@
     }
    ],
    "seconds": 0.46,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://intloceanfilmfest.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "13e3066ad917de13db434698fd1706437e10efc884b57811d2ba1e1fe614a584",
+    "truncated_response": false,
+    "title": "IOFF | Explore Ocean Stories — Get Involved Today",
+    "pdf": false,
+    "seconds": 0.69,
+    "text_truncated": false
+   }
   },
   "https://jfi.org/film-festival": {
    "http": 200,
@@ -11866,15 +12298,27 @@
    ],
    "structured": [],
    "seconds": 0.27,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://jfi.org/film-festival",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "881839d3785da95f8e0127fa71d7e2c28bfe16f2d81c7cbc57aa8ac93befe074",
+    "truncated_response": false,
+    "title": "San Francisco Jewish Film Festival • JFI.org",
+    "pdf": false,
+    "seconds": 0.3,
+    "text_truncated": false
+   }
   },
   "https://juneteenth-sf.org/": {
    "http": 403,
    "final_url": "https://juneteenth-sf.org/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:54+00:00",
-   "seconds": 0.14,
+   "checked_at": "2026-10-18T03:09:33+00:00",
+   "seconds": 0.1,
    "text_truncated": false,
    "links": []
   },
@@ -12152,7 +12596,19 @@
    ],
    "structured": [],
    "seconds": 0.76,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://norcalmlkfoundation.org/mlkcelebration/mlk2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "29f7cfb9f4ef9b04cc2f36d043796aa40325c42ebd0e7fcf396338a1addf2ccf",
+    "truncated_response": false,
+    "title": "MLK2026",
+    "pdf": false,
+    "seconds": 0.47,
+    "text_truncated": false
+   }
   },
   "https://offthegrid.com/markets/fort-mason-center": {
    "http": 200,
@@ -12222,7 +12678,19 @@
     }
    ],
    "seconds": 0.15,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://offthegrid.com/markets/fort-mason-center",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "e8d33f516139eb373937779776c6f10af29cb4a58bd63092ecc98f1c39529c5e",
+    "truncated_response": false,
+    "title": "Off the Grid Fort Mason Center | Friday Night Market in San Francisco",
+    "pdf": false,
+    "seconds": 0.11,
+    "text_truncated": false
+   }
   },
   "https://outsidelands.frontgatetickets.com/": {
    "http": 200,
@@ -12382,7 +12850,19 @@
    ],
    "structured": [],
    "seconds": 0.59,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://outsidelands.frontgatetickets.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "1129397487a0f016f6b921fe0ec581a133f0f71a95e28cb6f6aead1ef66dbc40",
+    "truncated_response": false,
+    "title": "Outside Lands",
+    "pdf": false,
+    "seconds": 0.28,
+    "text_truncated": false
+   }
   },
   "https://picya.org/event/YWQPICcwrZ": {
    "http": 200,
@@ -12397,7 +12877,19 @@
    "links": [],
    "structured": [],
    "seconds": 0.77,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://picya.org/event/YWQPICcwrZ",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "f1bb1aba410d334b747f2905f9589c8b21080ad5d95a0286343abdbb8b9a7808",
+    "truncated_response": false,
+    "title": "April 27: Opening Day on the Bay",
+    "pdf": false,
+    "seconds": 0.77,
+    "text_truncated": false
+   }
   },
   "https://portolamusicfestival.com/": {
    "http": 200,
@@ -12677,7 +13169,19 @@
    ],
    "structured": [],
    "seconds": 0.27,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://portolamusicfestival.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "347ccdb15d05394456b580d87b4beabe5d360257a16a5b23a39ce85d9956d237",
+    "truncated_response": false,
+    "title": "PortolaFacebookInstagramRedditTumblrSpotifyEmailTriangleYoutubeSnapchatMagnifyGlobeTikTokSoundcloudSearchClose",
+    "pdf": false,
+    "seconds": 0.52,
+    "text_truncated": false
+   }
   },
   "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup": {
    "http": 200,
@@ -13078,15 +13582,27 @@
     }
    ],
    "seconds": 0.24,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "671f407a2bb5acbd838ff86274a6a779d2ee7a6a37546d431bc11dfbeda11a1a",
+    "truncated_response": false,
+    "title": "Presidio Unveils Vibrant 2026 Summer Event Lineup - The Presidio (San Francisco)",
+    "pdf": false,
+    "seconds": 0.3,
+    "text_truncated": false
+   }
   },
   "https://qwocmap.org/festival/": {
    "http": 403,
    "final_url": "https://qwocmap.org/festival/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:55+00:00",
-   "seconds": 0.84,
+   "checked_at": "2026-10-18T03:09:33+00:00",
+   "seconds": 0.45,
    "text_truncated": false,
    "links": []
   },
@@ -13095,8 +13611,8 @@
    "final_url": "https://sanfranciscoartfair.com/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:54+00:00",
-   "seconds": 0.13,
+   "checked_at": "2026-10-18T03:09:33+00:00",
+   "seconds": 0.1,
    "text_truncated": false,
    "links": []
   },
@@ -13285,7 +13801,19 @@
     }
    ],
    "seconds": 0.32,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sanfranciscohalfmarathon.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:33+00:00",
+    "sha256": "7a49f23591046024c8ff2f6d8ac7b171a40b13566d0c572336545b7b505f2520",
+    "truncated_response": false,
+    "title": "San Francisco Half Marathon & 5K",
+    "pdf": false,
+    "seconds": 0.25,
+    "text_truncated": false
+   }
   },
   "https://sanfranciscohistorium.com/": {
    "http": 200,
@@ -13505,7 +14033,19 @@
     }
    ],
    "seconds": 0.32,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sanfranciscohistorium.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "71174e44a404e5b48719bb3b1247de01c075bf992f26c7321d2033cff5a89293",
+    "truncated_response": false,
+    "title": "Home - San Francisco Historium",
+    "pdf": false,
+    "seconds": 0.5,
+    "text_truncated": false
+   }
   },
   "https://sf.aidswalk.net/": {
    "http": 200,
@@ -13677,7 +14217,19 @@
    ],
    "structured": [],
    "seconds": 0.49,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sf.aidswalk.net/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "37226267b1d3f267002c596107c920d9ea169bab3e29015eb2700e991034533e",
+    "truncated_response": false,
+    "title": "AIDS Walk San Francisco 2026",
+    "pdf": false,
+    "seconds": 0.74,
+    "text_truncated": false
+   }
   },
   "https://sfartweek.com/": {
    "http": 200,
@@ -13861,15 +14413,27 @@
    ],
    "structured": [],
    "seconds": 0.31,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfartweek.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "8ed368ed3313e6c13d22bea71848545be554a4adc34ba7aa4564b1f98cbff900",
+    "truncated_response": false,
+    "title": "SF Art Week | SF Art Week celebrates the rich arts landscape of the San Francisco Bay Area.",
+    "pdf": false,
+    "seconds": 0.52,
+    "text_truncated": false
+   }
   },
   "https://sfcheesefest.com/": {
    "http": 403,
    "final_url": "https://sfcheesefest.com/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:55+00:00",
-   "seconds": 0.17,
+   "checked_at": "2026-10-18T03:09:33+00:00",
+   "seconds": 0.25,
    "text_truncated": false,
    "links": []
   },
@@ -14149,15 +14713,27 @@
     }
    ],
    "seconds": 0.33,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfcherryblossom.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "39e30bad5a0537955cd38a99b724d6e89b2d2ec6982cbe3d57504f30d3c34b7e",
+    "truncated_response": false,
+    "title": "Home - SF Cherry Blossom Festival",
+    "pdf": false,
+    "seconds": 0.37,
+    "text_truncated": false
+   }
   },
   "https://sffallshow.org/": {
    "http": 403,
    "final_url": "https://sffallshow.org/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:55+00:00",
-   "seconds": 0.15,
+   "checked_at": "2026-10-18T03:09:34+00:00",
+   "seconds": 0.52,
    "text_truncated": false,
    "links": []
   },
@@ -14572,15 +15148,27 @@
     }
    ],
    "seconds": 0.57,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sffilm.org/yr-faq/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "80a5727ea7d4ce4ddb456b6e9833ab934dcf95dc8aa8b8339da2895ecf70dbc8",
+    "truncated_response": false,
+    "title": "FAQs - SFFILM",
+    "pdf": false,
+    "seconds": 0.4,
+    "text_truncated": false
+   }
   },
   "https://sffolkfest.org/": {
    "http": 403,
    "final_url": "https://sffolkfest.org/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:55+00:00",
-   "seconds": 0.16,
+   "checked_at": "2026-10-18T03:09:34+00:00",
+   "seconds": 0.54,
    "text_truncated": false,
    "links": []
   },
@@ -15018,7 +15606,19 @@
    ],
    "structured": [],
    "seconds": 0.27,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfitalianheritage.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "ce2b2a8580d00234480d9da8e6f123d94a50d86f169270e26b960dfc89282d64",
+    "truncated_response": false,
+    "title": "The San Francisco Italian Heritage Festival & Parade",
+    "pdf": false,
+    "seconds": 0.46,
+    "text_truncated": false
+   }
   },
   "https://sfitalianheritage.org/event/festa-coloniale-italiana/": {
    "http": 200,
@@ -15098,7 +15698,19 @@
    ],
    "structured": [],
    "seconds": 0.23,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfitalianheritage.org/event/festa-coloniale-italiana/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "56d9eea0f7fc4a9e28dedd5c764a0f1a977e7ad8587bd030397e444aeb000fa8",
+    "truncated_response": false,
+    "title": "Festa Coloniale Italiana – The San Francisco Italian Heritage Festival & Parade",
+    "pdf": false,
+    "seconds": 0.35,
+    "text_truncated": false
+   }
   },
   "https://sfitalianheritage.org/events/": {
    "http": 200,
@@ -15242,7 +15854,19 @@
    ],
    "structured": [],
    "seconds": 0.21,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfitalianheritage.org/events/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "7aa3c7f1a5181db67d0bf006b3b7ae2a9fc1b9929f6d7070cf7d096044615c8d",
+    "truncated_response": false,
+    "title": "Events – The San Francisco Italian Heritage Festival & Parade",
+    "pdf": false,
+    "seconds": 0.32,
+    "text_truncated": false
+   }
   },
   "https://sfpl.org/events": {
    "http": 200,
@@ -16990,7 +17614,19 @@
    ],
    "structured": [],
    "seconds": 0.44,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfpl.org/events",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "48f67b12aa2f6c109814f3831a80a0f36fc54d028be9e97561551e25f89899a3",
+    "truncated_response": false,
+    "title": "Upcoming Events | San Francisco Public Library",
+    "pdf": false,
+    "seconds": 0.54,
+    "text_truncated": false
+   }
   },
   "https://sfpl.org/events/special-programs/filipino-american-history-celebration": {
    "http": 200,
@@ -18330,7 +18966,19 @@
    ],
    "structured": [],
    "seconds": 0.47,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "cac3a7d063988054a591dca2a7f866fbc10cde0f9422293aa0d601fb4062704c",
+    "truncated_response": false,
+    "title": "Filipino American History Celebration | San Francisco Public Library",
+    "pdf": false,
+    "seconds": 0.42,
+    "text_truncated": false
+   }
   },
   "https://sfpl.org/events/special-programs/summer-stride": {
    "http": 200,
@@ -19410,7 +20058,19 @@
    ],
    "structured": [],
    "seconds": 1.67,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfpl.org/events/special-programs/summer-stride",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "d1f2713b446656555db286eb145b5d04d154743dda7169a84d54c47c4123eff2",
+    "truncated_response": false,
+    "title": "Upcoming Events | San Francisco Public Library",
+    "pdf": false,
+    "seconds": 0.26,
+    "text_truncated": false
+   }
   },
   "https://sfpride.org/": {
    "http": 200,
@@ -20346,7 +21006,19 @@
    ],
    "structured": [],
    "seconds": 0.39,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfpride.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "0b1dda5f13a9f0df282038770483abdf0c791a5dabebb718252d504644b5598d",
+    "truncated_response": false,
+    "title": "San Francisco Pride - Thank You for a Historic Pride!",
+    "pdf": false,
+    "seconds": 0.49,
+    "text_truncated": false
+   }
   },
   "https://sfpride.org/events/": {
    "http": 200,
@@ -21330,7 +22002,19 @@
    ],
    "structured": [],
    "seconds": 0.34,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfpride.org/events/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "8f41c322e7dd997a94b3408d2b8ff5f757b2064014d89ead6cc93e000a7629ee",
+    "truncated_response": false,
+    "title": "San Francisco Pride Events",
+    "pdf": false,
+    "seconds": 0.49,
+    "text_truncated": false
+   }
   },
   "https://sfrecpark.org/1183/Zumba-in-the-Parks": {
    "http": 200,
@@ -21790,7 +22474,19 @@
    ],
    "structured": [],
    "seconds": 0.87,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfrecpark.org/1183/Zumba-in-the-Parks",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "bae9c0f9da7fbf402c1ce7dd34758fa8d70522a2c3bcea4b76e569b5056db98e",
+    "truncated_response": false,
+    "title": "Zumba in the Parks | San Francisco Recreation and Parks, CAArrow LeftArrow RightSlideshow Left ArrowSlideshow Right Arrow",
+    "pdf": false,
+    "seconds": 0.95,
+    "text_truncated": false
+   }
   },
   "https://sfrecpark.org/1570/Golden-Gate-Bandshell-Concerts": {
    "http": 200,
@@ -21990,7 +22686,19 @@
    ],
    "structured": [],
    "seconds": 0.88,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfrecpark.org/1570/Golden-Gate-Bandshell-Concerts",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "5727670c4b2cf365c20d5ab50728eb8086d25582ccbfccd1eb32c9abd19ae412",
+    "truncated_response": false,
+    "title": "Golden Gate Bandshell Concerts | San Francisco Recreation and Parks, CAArrow LeftArrow RightSlideshow Left ArrowSlideshow Right Arrow",
+    "pdf": false,
+    "seconds": 0.79,
+    "text_truncated": false
+   }
   },
   "https://sfrecpark.org/Calendar.aspx": {
    "http": 200,
@@ -22674,7 +23382,19 @@
    ],
    "structured": [],
    "seconds": 0.99,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfrecpark.org/Calendar.aspx",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "3c42aaf51e47cde225735c20e97ef32c18a65c65c6c01e55a52556b8396ac1fa",
+    "truncated_response": false,
+    "title": "Calendar • San Francisco Recreation and Parks, CA • CivicEngFacilitySubmit EventPrintEmailEvent SubscriptionView RSS FeedsSelect on CalendarExpandCollapsePreviousNextDownUpMapShareShow moreAgendaArrow LeftArrow RightSlideshow Left ArrowSlideshow Right Arrow",
+    "pdf": false,
+    "seconds": 1.13,
+    "text_truncated": false
+   }
   },
   "https://sfrecpark.org/m/newsflash/home/detail/2744": {
    "http": 200,
@@ -22882,7 +23602,19 @@
    ],
    "structured": [],
    "seconds": 0.53,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfrecpark.org/m/newsflash/home/detail/2744",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "38da1b69df4f7afc5a0a9cac1c2dd104385be9980d92a9288d9d7b58f4aa77ed",
+    "truncated_response": false,
+    "title": "Union Square to Bloom with 80,000 Vibrant Dutch Tulips on March 21 • San Francisco Recreation and Parks, CAArrow LeftArrow RightSlideshow Left ArrowSlideshow Right Arrow",
+    "pdf": false,
+    "seconds": 0.6,
+    "text_truncated": false
+   }
   },
   "https://sfspacewalk.com/": {
    "http": 200,
@@ -23162,7 +23894,19 @@
     }
    ],
    "seconds": 0.51,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfspacewalk.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "b98c15dace048039c98244d8aeb5230265073eb6416d3c80c783aa039b13b99f",
+    "truncated_response": false,
+    "title": "Terpnami 2026: Grow Harder. Better. Faster. Stronger.",
+    "pdf": false,
+    "seconds": 1.18,
+    "text_truncated": false
+   }
   },
   "https://sftreelot.guardsmen.org/": {
    "http": 200,
@@ -23343,7 +24087,19 @@
     }
    ],
    "seconds": 0.51,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sftreelot.guardsmen.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "a9136282c30ae02e4e9ad693fa8bdedfd27f7597d89db513b06d4a64b67f222d",
+    "truncated_response": false,
+    "title": "The Guardsmen Christmas Tree Lot | A San Francisco Bay Area Tradition – Guardsmen Tree LotAmerican ExpressDiners ClubDiscoverMastercardShop PayVisaAmerican ExpressDiners ClubDiscoverMastercardShop PayVisa",
+    "pdf": false,
+    "seconds": 0.5,
+    "text_truncated": false
+   }
   },
   "https://somarts.org/exhibition/sfopenstudios2026/": {
    "http": 200,
@@ -23690,7 +24446,19 @@
     }
    ],
    "seconds": 2.6,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://somarts.org/exhibition/sfopenstudios2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "acb86d7b36c1fb7d484d8ce66785450646c116fbbaf5f442aa26c0bb7855b358",
+    "truncated_response": false,
+    "title": "2026 SF Open Studios Preview Exhibition - SOMArts",
+    "pdf": false,
+    "seconds": 2.2,
+    "text_truncated": false
+   }
   },
   "https://sundaystreetssf.com/": {
    "http": 200,
@@ -23806,7 +24574,19 @@
    ],
    "structured": [],
    "seconds": 0.13,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sundaystreetssf.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "5f5e920819c08ea5bb27d7e35ad6064ed1f51852d261e916cc8a03c57beb392e",
+    "truncated_response": false,
+    "title": "Sunday Streets SF – Your Street. Your Day.",
+    "pdf": false,
+    "seconds": 0.1,
+    "text_truncated": false
+   }
   },
   "https://sundaystreetssf.com/sunday-streets-excelsior-2026/": {
    "http": 200,
@@ -23942,7 +24722,19 @@
    ],
    "structured": [],
    "seconds": 0.11,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sundaystreetssf.com/sunday-streets-excelsior-2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:34+00:00",
+    "sha256": "66b33434292cfc8d0d955ed4e8990520f060c251b7839868d5792ac5489499dd",
+    "truncated_response": false,
+    "title": "Sunday Streets Excelsior 2026 – Sunday Streets SF",
+    "pdf": false,
+    "seconds": 0.11,
+    "text_truncated": false
+   }
   },
   "https://sunsetdunes.org/events/ploverfest": {
    "http": 200,
@@ -24181,7 +24973,19 @@
     }
    ],
    "seconds": 0.38,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetdunes.org/events/ploverfest",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "0a2e48984eb1b0c95839f28ac0e315480c39fa9e25d4576d467f911ce03ec830",
+    "truncated_response": false,
+    "title": "PloverFest - A one year anniversary for Sunset Dunes Park — Friends of Sunset Dunes",
+    "pdf": false,
+    "seconds": 0.67,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/": {
    "http": 200,
@@ -24457,7 +25261,19 @@
    ],
    "structured": [],
    "seconds": 0.37,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "c98e536b93bf241135bcf9d10f690afedb02081745d32cedcce92de661932378",
+    "truncated_response": false,
+    "title": "Sunset Mercantile | Small business-focused community event producers",
+    "pdf": false,
+    "seconds": 0.57,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/colevalleynights2026/": {
    "http": 200,
@@ -24633,7 +25449,19 @@
    ],
    "structured": [],
    "seconds": 0.25,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/colevalleynights2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "abeb355892d1216af6ad2f271016a8f89e20392b270d62c1b8cc3381d22412f0",
+    "truncated_response": false,
+    "title": "Cole Valley Nights | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 0.41,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/ddlm/": {
    "http": 200,
@@ -24809,7 +25637,19 @@
    ],
    "structured": [],
    "seconds": 0.26,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/ddlm/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "388d62d6ae686332683b9d341b0d54ceec8586ae641b9a7353ad903ee6032430",
+    "truncated_response": false,
+    "title": "Día de los Muertos Outer Sunset | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 0.43,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/diwali2026/": {
    "http": 200,
@@ -24997,7 +25837,19 @@
    ],
    "structured": [],
    "seconds": 1.39,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/diwali2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "6167cdaded69dfd67196f107dd942ca0d28305f5aac24d759af5053a151fb5fc",
+    "truncated_response": false,
+    "title": "Diwali 2026 at the Outer Sunset Farmers Market | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 0.43,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/holidaysontaraval/": {
    "http": 200,
@@ -25177,7 +26029,19 @@
    ],
    "structured": [],
    "seconds": 1.2,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/holidaysontaraval/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "f7ecb805ff3495a2327cbc38dfcac5dcdf6fc7e3a2d4b489c144104ba6b91a36",
+    "truncated_response": false,
+    "title": "Holidays On Taraval | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 0.44,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/innersunsetflea/": {
    "http": 200,
@@ -25353,7 +26217,19 @@
    ],
    "structured": [],
    "seconds": 1.36,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/innersunsetflea/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "d344381adc78bf008750b0debe0215b732545763fceb7d1cb13331ff85c95283",
+    "truncated_response": false,
+    "title": "Inner Sunset Flea Market | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 0.41,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/northbeachfestival2026/": {
    "http": 200,
@@ -25537,7 +26413,19 @@
    ],
    "structured": [],
    "seconds": 2.23,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/northbeachfestival2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "fc691dc28b9b68e6e6c534b0cbeb697592313e8b63034113020a740a45efa15c",
+    "truncated_response": false,
+    "title": "North Beach Festival | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 1.49,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/osfmm/": {
    "http": 200,
@@ -25725,7 +26613,19 @@
    ],
    "structured": [],
    "seconds": 0.24,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/osfmm/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "dfb43e4c977c2d4d150af32807b03c8d0973967f27133b385e1c4bc7817de69a",
+    "truncated_response": false,
+    "title": "Outer Sunset Farmers Market & MercantileTM | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 0.43,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/secondhand/": {
    "http": 200,
@@ -25913,7 +26813,19 @@
    ],
    "structured": [],
    "seconds": 1.21,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/secondhand/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "e64e483a35a3fe7d7b1d855cacaadd48bd5ecef2b04548e9e10be2653a2c23ca",
+    "truncated_response": false,
+    "title": "Secondhand Saturdays | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 0.42,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/sunsetholidaymercantile/": {
    "http": 200,
@@ -26089,7 +27001,19 @@
    ],
    "structured": [],
    "seconds": 0.24,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "47398c3128435de96a6e5141480c8a6e79ad66369014f26e203e1c842a5e011a",
+    "truncated_response": false,
+    "title": "Sunset Holiday Mercantile | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 1.43,
+    "text_truncated": false
+   }
   },
   "https://sunsetmercantilesf.com/unionstreetfestival/": {
    "http": 200,
@@ -26261,7 +27185,19 @@
    ],
    "structured": [],
    "seconds": 1.2,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sunsetmercantilesf.com/unionstreetfestival/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "ae09a382bcd73760e29b5650eb9b3316dbbc892f821d530e39c72983d128b5f4",
+    "truncated_response": false,
+    "title": "Union Street Festival | Sunset Mercantile",
+    "pdf": false,
+    "seconds": 1.44,
+    "text_truncated": false
+   }
   },
   "https://uissf.org/": {
    "http": 200,
@@ -26405,7 +27341,19 @@
    ],
    "structured": [],
    "seconds": 1.1,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://uissf.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "5b94a6fb42bcde47b92cc2042d29ce6446e560db63b1609ebe7a5f9bea85580b",
+    "truncated_response": false,
+    "title": "Home",
+    "pdf": false,
+    "seconds": 0.62,
+    "text_truncated": false
+   }
   },
   "https://uissf.org/st-patricks-day-parade": {
    "http": 200,
@@ -26521,7 +27469,19 @@
    ],
    "structured": [],
    "seconds": 0.65,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://uissf.org/st-patricks-day-parade",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "4bc2aa695b3fa49b429fc77b6f06e78c542dd7695c1f4ae080ebc90e3ec3a2d5",
+    "truncated_response": false,
+    "title": "St. Patrick’s Day Parade",
+    "pdf": false,
+    "seconds": 0.37,
+    "text_truncated": false
+   }
   },
   "https://unionstreetsf.com/festivals": {
    "http": 200,
@@ -26693,7 +27653,19 @@
    ],
    "structured": [],
    "seconds": 3.87,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://unionstreetsf.com/festivals/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "7459a89690cbdcefb3c0ac75ce335b3c66aa12e799b18ebe1dba438bf596fa40",
+    "truncated_response": false,
+    "title": "Festivals & Events – Union Street Association",
+    "pdf": false,
+    "seconds": 3.63,
+    "text_truncated": false
+   }
   },
   "https://us.atgtickets.com/venues/curran-theater/whats-on/": {
    "http": 200,
@@ -27190,7 +28162,19 @@
     }
    ],
    "seconds": 1.37,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://us.atgtickets.com/venues/curran-theater/whats-on/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "423336900397d93587685c969f0b04ca531fbd69d8435e7b5a1eb7b94dbcbd47",
+    "truncated_response": false,
+    "title": "What's On | Curran Theatre | Official Box Office | ATG Tickets",
+    "pdf": false,
+    "seconds": 1.28,
+    "text_truncated": false
+   }
   },
   "https://visitunionsquaresf.com/park-programs": {
    "http": 200,
@@ -27410,7 +28394,19 @@
    ],
    "structured": [],
    "seconds": 0.16,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://visitunionsquaresf.com/park-programs",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:35+00:00",
+    "sha256": "c4039ec90c4dfbd96df8239ced981a9f8050667109374de1b80868ac8dd60ffd",
+    "truncated_response": false,
+    "title": "October 2026 Park Programs Schedule - Visit Union Square SF",
+    "pdf": false,
+    "seconds": 0.12,
+    "text_truncated": false
+   }
   },
   "https://walksf.org/events/peak-2-peak/": {
    "http": 200,
@@ -27912,15 +28908,27 @@
     }
    ],
    "seconds": 2.68,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://walksf.org/events/peak-2-peak/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "2eb5f35524eaf56a5629ead997d49f91a385c117b6539fd71ebb09c720903ed9",
+    "truncated_response": false,
+    "title": "Peak2Peak - Walk San Francisco",
+    "pdf": false,
+    "seconds": 2.46,
+    "text_truncated": false
+   }
   },
   "https://www.abaa.org/events/57th-california-international-antiquarian-book-fair": {
    "http": 403,
    "final_url": "https://www.abaa.org/events/57th-california-international-antiquarian-book-fair",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:57+00:00",
-   "seconds": 0.13,
+   "checked_at": "2026-10-18T03:09:36+00:00",
+   "seconds": 0.29,
    "text_truncated": false,
    "links": []
   },
@@ -28598,7 +29606,19 @@
    ],
    "structured": [],
    "seconds": 0.42,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.act-sf.org/whats-on/2026-27-season",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "3cf58d99e429fed30571dd2b3e5683ba77874720996f932f4e270a491fc59047",
+    "truncated_response": false,
+    "title": "2026/27 Season | American Conservatory Theater",
+    "pdf": false,
+    "seconds": 0.4,
+    "text_truncated": false
+   }
   },
   "https://www.agriculturalinstitute.org/farmers-markets": {
    "http": 200,
@@ -29318,7 +30338,19 @@
     }
    ],
    "seconds": 0.56,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.agriculturalinstitute.org/farmers-markets",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "a7a84bd787e61edd2a7afabbc0537dc87196df61451264f9e979eb08b26b0242",
+    "truncated_response": false,
+    "title": "Market Directory — Agricultural Institute of Marin",
+    "pdf": false,
+    "seconds": 0.93,
+    "text_truncated": false
+   }
   },
   "https://www.annunciation.org/news_260903_1": {
    "http": 200,
@@ -29585,7 +30617,19 @@
     }
    ],
    "seconds": 0.49,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.annunciation.org/news_260903_1",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "faacdcf66cf6442f4bd7cff7f089b10dbb3ff841f8b3df19c7863722df095831",
+    "truncated_response": false,
+    "title": "The 75th San Francisco Greek Food Festival Is Almost Here! | Annunciation Greek Orthodox Cathedral",
+    "pdf": false,
+    "seconds": 0.64,
+    "text_truncated": false
+   }
   },
   "https://www.baytobreakers.com/": {
    "http": 200,
@@ -29880,7 +30924,19 @@
     }
    ],
    "seconds": 0.57,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.baytobreakers.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:36+00:00",
+    "sha256": "d2c09125522597909b877777181b8c3ae18584fb660db9cf2ab85eb4d3cb37f2",
+    "truncated_response": false,
+    "title": "Run Bay to Breakers | Where Cardio, Chaos & Costumes | 12K & 15K | May 16, 2027",
+    "pdf": false,
+    "seconds": 0.28,
+    "text_truncated": false
+   }
   },
   "https://www.bhangraandbeats.com/": {
    "http": 200,
@@ -30052,7 +31108,19 @@
     }
    ],
    "seconds": 0.27,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.bhangraandbeats.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "23665385439c155aad0557760c693dc12e50767e8eed82431f86d5f249bb2505",
+    "truncated_response": false,
+    "title": "Bhangra & Beats Night Market",
+    "pdf": false,
+    "seconds": 0.57,
+    "text_truncated": false
+   }
   },
   "https://www.billgrahammenorah.org/": {
    "http": 200,
@@ -30303,7 +31371,19 @@
     }
    ],
    "seconds": 0.36,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.billgrahammenorah.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "e0080f9b8741cfbfbc64a14d3f78a13f66490f084b77f73784da5a59650c76e5",
+    "truncated_response": false,
+    "title": "Bill Graham Menorah",
+    "pdf": false,
+    "seconds": 0.55,
+    "text_truncated": false
+   }
   },
   "https://www.calacademy.org/getting-here": {
    "http": 200,
@@ -30803,7 +31883,19 @@
    ],
    "structured": [],
    "seconds": 0.42,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.calacademy.org/getting-here",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "c1d9a9421db831224b481aa7b0988b80ed17b39cfca0cc0cc3a79f09194f6fef",
+    "truncated_response": false,
+    "title": "Getting Here - California Academy of Sciences",
+    "pdf": false,
+    "seconds": 0.39,
+    "text_truncated": false
+   }
   },
   "https://www.calacademy.org/nightlife": {
    "http": 200,
@@ -31251,7 +32343,19 @@
    ],
    "structured": [],
    "seconds": 0.31,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.calacademy.org/nightlife",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "e007c5298fec3a58fe84106723f2529d9e0ba83a95508156aaa26a48f8adb238",
+    "truncated_response": false,
+    "title": "NightLife - California Academy of Sciences",
+    "pdf": false,
+    "seconds": 0.36,
+    "text_truncated": false
+   }
   },
   "https://www.castrostreetfair.org/": {
    "http": 200,
@@ -31503,7 +32607,19 @@
    ],
    "structured": [],
    "seconds": 0.35,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://castrostreetfair.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "bd0f265d4c8c510cec74c82599e724d83e5b1de39444358cc7a6181db320cb60",
+    "truncated_response": false,
+    "title": "Castro Street Fair | San Francisco – The first Sunday of October — join us for SF's legacy street fair!Create a website or blog at WordPress.com",
+    "pdf": false,
+    "seconds": 0.48,
+    "text_truncated": false
+   }
   },
   "https://www.chasecenter.com/events/teddy-swims-20261110/": {
    "http": 200,
@@ -31518,7 +32634,19 @@
    "links": [],
    "structured": [],
    "seconds": 0.74,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.chasecenter.com/events/teddy-swims-20261110/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "2cc25aa7898a7ee55bb7bb1e742c8664bf2cdc3161d809974501057a8e309f94",
+    "truncated_response": false,
+    "title": "Teddy Swims | Chase Center",
+    "pdf": false,
+    "seconds": 0.53,
+    "text_truncated": false
+   }
   },
   "https://www.chasecenter.com/news/jonas-brothers-announcement-20261121/": {
    "http": 200,
@@ -31533,7 +32661,19 @@
    "links": [],
    "structured": [],
    "seconds": 0.32,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.chasecenter.com/news/jonas-brothers-announcement-20261121/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "efdd4f7394629f02e3f96e44d7b1e90d131b8654db315bae9208072ca0b7d28f",
+    "truncated_response": false,
+    "title": "The Jonas Brothers are Coming to Chase Center on Nov. 21, 2026 | Chase Center",
+    "pdf": false,
+    "seconds": 0.36,
+    "text_truncated": false
+   }
   },
   "https://www.chasecenter.com/news/journey-announcement-20261128/": {
    "http": 200,
@@ -31548,7 +32688,19 @@
    "links": [],
    "structured": [],
    "seconds": 0.29,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.chasecenter.com/news/journey-announcement-20261128/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "7a306576203169f5188bf117f4a88f3a4593c83d5682de0a91eac549a27d89d3",
+    "truncated_response": false,
+    "title": "Journey is Coming to Chase Center on Nov. 28, 2026 | Chase Center",
+    "pdf": false,
+    "seconds": 0.31,
+    "text_truncated": false
+   }
   },
   "https://www.circusbella.org/circusintheparks": {
    "http": 200,
@@ -31851,7 +33003,19 @@
     }
    ],
    "seconds": 0.48,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.circusbella.org/circusintheparks",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "0b1e9a72ee5973decede14f27460d4427cad08e0dd3f4cf7c95620751a78842a",
+    "truncated_response": false,
+    "title": "Circus in the Parks — Circus Bella",
+    "pdf": false,
+    "seconds": 0.85,
+    "text_truncated": false
+   }
   },
   "https://www.dayofthedeadsf.org/": {
    "http": 200,
@@ -32002,7 +33166,19 @@
     }
    ],
    "seconds": 0.48,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.dayofthedeadsf.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "42fb858796facbfc99742938c7a4cb4fdca78cd7bcecf48f052b1f4052c4070e",
+    "truncated_response": false,
+    "title": "Day of the Dead SF by the Marigold Project",
+    "pdf": false,
+    "seconds": 0.53,
+    "text_truncated": false
+   }
   },
   "https://www.dftsf.com/": {
    "http": 200,
@@ -32381,7 +33557,19 @@
     }
    ],
    "seconds": 0.51,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.dftsf.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "883620aabe7bbb4a195b45c0055be9b94a45a36efc169c341911cbd2ea9cc5c7",
+    "truncated_response": false,
+    "title": "DFT: Downtown First Thursdays",
+    "pdf": false,
+    "seconds": 0.97,
+    "text_truncated": false
+   }
   },
   "https://www.escapealcatraztri.com/": {
    "http": 200,
@@ -32585,7 +33773,19 @@
    ],
    "structured": [],
    "seconds": 0.43,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.escapealcatraztri.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "f2c6cf3937b145914264a3b4e3b321cc9a4db8972e93d4e6e59fa9f37b0db770",
+    "truncated_response": false,
+    "title": "Escape From Alcatraz Triathlon (en-US)",
+    "pdf": false,
+    "seconds": 0.49,
+    "text_truncated": false
+   }
   },
   "https://www.exploratorium.edu/visit": {
    "http": 405,
@@ -32597,7 +33797,15 @@
    "text_truncated": false,
    "links": [],
    "tool_excerpt": "Plan Your Visit\nYou can’t get more San Francisco than this.\nAfter Dark Thursday Nights (18+)\nThursday 10:00 am–5:00 pm 6:00 pm–10:00 pm (Ages 18+)\nAfter Dark Thursday Night Tickets (18+)\nGeneral $22.95\nDaytime & After Dark Members FREE\nPier 15, Embarcadero, San Francisco",
-   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status.",
+   "latest_attempt": {
+    "http": 405,
+    "final_url": "https://www.exploratorium.edu/visit",
+    "error": "HTTP 405",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "seconds": 0.11,
+    "text_truncated": false
+   }
   },
   "https://www.exploratorium.edu/visit/calendar/after-dark": {
    "http": 405,
@@ -32609,15 +33817,23 @@
    "text_truncated": false,
    "links": [],
    "tool_excerpt": "After Dark Thursday Nights\nEvery Thursday Night • 6:00–10:00 pm\nStop scrolling and escape to reality at Pier 15!\nAfter Dark: Death and Life / La muerte y la vida\nThu, Oct 22 2026 • 6 - 10pm\nAfter Dark: Creepatorium\nThu, Oct 29 2026 • 6 - 10pm\nAfter Dark: Digest This\nThu, Nov 5 2026 • 6 - 10pm\nAfter Dark: Unplug and Play\nThu, Nov 12 2026 • 6 - 10pm\nAfter Dark: Glow Opening\nThu, Nov 19 2026 • 6 - 10pm\nAfter Dark: Rule Breakers\nThu, Dec 3 2026 • 6 - 10pm\nAfter Dark: Unplug and Play\nThu, Dec 10 2026 • 6 - 10pm\nAfter Dark: Solstice\nThu, Dec 17 2026 • 6 - 10pm",
-   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status.",
+   "latest_attempt": {
+    "http": 405,
+    "final_url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+    "error": "HTTP 405",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "seconds": 0.07,
+    "text_truncated": false
+   }
   },
   "https://www.famsf.org/exhibitions": {
    "http": 403,
    "final_url": "https://www.famsf.org/exhibitions",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:59+00:00",
-   "seconds": 0.33,
+   "checked_at": "2026-10-18T03:09:37+00:00",
+   "seconds": 0.13,
    "text_truncated": false,
    "links": []
   },
@@ -32626,8 +33842,8 @@
    "final_url": "https://www.famsf.org/press-room/2026-advance-schedule",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T02:59:59+00:00",
-   "seconds": 0.27,
+   "checked_at": "2026-10-18T03:09:37+00:00",
+   "seconds": 0.09,
    "text_truncated": false,
    "links": []
   },
@@ -32641,7 +33857,15 @@
    "text_truncated": false,
    "links": [],
    "tool_excerpt": "de Young\nFree + reduced admission\nNestled in Golden Gate Park\nTreasures of the Pharaohs\nThrough Jan 31, 2027\nde Young",
-   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status.",
+   "latest_attempt": {
+    "http": 403,
+    "final_url": "https://www.famsf.org/visit/de-young",
+    "error": "HTTP 403",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "seconds": 0.09,
+    "text_truncated": false
+   }
   },
   "https://www.famsf.org/visit/free-reduced-admission": {
    "http": 403,
@@ -32653,7 +33877,15 @@
    "text_truncated": false,
    "links": [],
    "tool_excerpt": "Free + reduced admission\nFree Saturdays\nFree Tuesdays\nEvery Saturday we offer free general admission to all residents of the nine Bay Area counties.\nThis offer applies only to the permanent collection galleries. Full-price admission to special exhibitions still applies.\nPlease note that Free Saturdays does not take place during Bouquets to Art, our annual weeklong fundraiser.\nGeneral admission is free the first Tuesday of every month.\nPlease note that Free Tuesdays does not take place during Bouquets to Art, our annual weeklong fundraiser.\nBenefits include: Free admission for one member, a companion, and a guest to the permanent collections and special exhibitions at the de Young and Legion of Honor",
-   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status.",
+   "latest_attempt": {
+    "http": 403,
+    "final_url": "https://www.famsf.org/visit/free-reduced-admission",
+    "error": "HTTP 403",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "seconds": 0.1,
+    "text_truncated": false
+   }
   },
   "https://www.famsf.org/visit/getting-to-the-de-young": {
    "http": 403,
@@ -32665,7 +33897,15 @@
    "text_truncated": false,
    "links": [],
    "tool_excerpt": "Getting to the de Young\nMuni to Golden Gate Park\nThe de Young encourages the use of public transportation to access the museum.\nThe following lines are within walking distance to the de Young.\n44 O’Shaughnessy Bus\n5 + 5R Fulton Bus",
-   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status.",
+   "latest_attempt": {
+    "http": 403,
+    "final_url": "https://www.famsf.org/visit/getting-to-the-de-young",
+    "error": "HTTP 403",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "seconds": 0.04,
+    "text_truncated": false
+   }
   },
   "https://www.famsf.org/visit/getting-to-the-legion-of-honor": {
    "http": 403,
@@ -32677,7 +33917,15 @@
    "text_truncated": false,
    "links": [],
    "tool_excerpt": "Getting to the Legion of Honor\nMuni to Legion of Honor\nThe 18 takes you up Legion of Honor Drive and stops directly in front of the Legion of Honor.\nTake 25th Avenue north to Clement Street. Turn left (west) on Clement Street. Take Clement Street to 34th Avenue. Turn right (north) on 34th Avenue into Lincoln Park.",
-   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status.",
+   "latest_attempt": {
+    "http": 403,
+    "final_url": "https://www.famsf.org/visit/getting-to-the-legion-of-honor",
+    "error": "HTTP 403",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "seconds": 0.05,
+    "text_truncated": false
+   }
   },
   "https://www.famsf.org/visit/legion-of-honor": {
    "http": 403,
@@ -32689,7 +33937,15 @@
    "text_truncated": false,
    "links": [],
    "tool_excerpt": "Legion of Honor\nFree Saturdays at the Legion of Honor\nSat \\ 9:30 am–5:15 pm\nLegion of Honor Free Saturdays",
-   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status.",
+   "latest_attempt": {
+    "http": 403,
+    "final_url": "https://www.famsf.org/visit/legion-of-honor",
+    "error": "HTTP 403",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "seconds": 0.04,
+    "text_truncated": false
+   }
   },
   "https://www.ferrybuildingmarketplace.com/farmers-market/": {
    "http": 200,
@@ -32953,7 +34209,19 @@
     }
    ],
    "seconds": 0.26,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.ferrybuildingmarketplace.com/farmers-market/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "961f013053db208b4f255e99309b5dc4724db0b0b18e48a10ca12ee8c13996e3",
+    "truncated_response": false,
+    "title": "Farmers Market - Ferry Building Marketplace",
+    "pdf": false,
+    "seconds": 0.17,
+    "text_truncated": false
+   }
   },
   "https://www.fillmorejazzfest.com/": {
    "http": 200,
@@ -33555,7 +34823,19 @@
     }
    ],
    "seconds": 0.54,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.fillmorejazzfest.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "bc304328398ae7e0e97110736d2963337c4e5411df63b8744184517a0b4880ca",
+    "truncated_response": false,
+    "title": "Fillmore Jazz Festival - San Francisco",
+    "pdf": false,
+    "seconds": 0.41,
+    "text_truncated": false
+   }
   },
   "https://www.fogfair.com/": {
    "http": 200,
@@ -33675,7 +34955,19 @@
    ],
    "structured": [],
    "seconds": 0.36,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.fogfair.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:37+00:00",
+    "sha256": "ba5541bdf557e7cc22a9a4e2170dcac4b7f428086a06b52199c26c1dc2c0ae86",
+    "truncated_response": false,
+    "title": "Home | FOG Design+Art",
+    "pdf": false,
+    "seconds": 0.25,
+    "text_truncated": false
+   }
   },
   "https://www.folsomstreet.org/": {
    "http": 200,
@@ -34152,7 +35444,19 @@
     }
    ],
    "seconds": 0.42,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.folsomstreet.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "7ae51868a3d4001042f9fd0b6fe3f0f7efa4192e94902487d2f149ca1eeb2911",
+    "truncated_response": false,
+    "title": "Folsom Street - Community Center and Events",
+    "pdf": false,
+    "seconds": 0.69,
+    "text_truncated": false
+   }
   },
   "https://www.folsomstreet.org/faq": {
    "http": 200,
@@ -34569,7 +35873,19 @@
     }
    ],
    "seconds": 0.43,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.folsomstreet.org/faq",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "fa6afa6bee17d695647df59c38a4936d344600c7e2bdc9f4b48e1dd65e71f07e",
+    "truncated_response": false,
+    "title": "FREQUENTLY ASKED QUESTIONS — Folsom Street - Community Center and Events",
+    "pdf": false,
+    "seconds": 0.63,
+    "text_truncated": false
+   }
   },
   "https://www.folsomstreet.org/folsom-street-fair": {
    "http": 200,
@@ -34966,7 +36282,19 @@
     }
    ],
    "seconds": 0.4,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.folsomstreet.org/folsom-street-fair",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "b39efb13e3331599d19e64ca4273ade7f6462ba3f5f8199460005dbee43e6903",
+    "truncated_response": false,
+    "title": "FOLSOM STREET FAIR 2026 — Folsom Street - Community Center and Events",
+    "pdf": false,
+    "seconds": 0.49,
+    "text_truncated": false
+   }
   },
   "https://www.frameline.org/": {
    "http": 200,
@@ -35058,7 +36386,19 @@
    ],
    "structured": [],
    "seconds": 0.19,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.frameline.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "6e436b9f6be2f02b8f62b0f93ed5c56cfd54f42df670268a7eb6652d532a9524",
+    "truncated_response": false,
+    "title": "Home - Frameline",
+    "pdf": false,
+    "seconds": 0.33,
+    "text_truncated": false
+   }
   },
   "https://www.frameline.org/attend": {
    "http": 200,
@@ -35134,7 +36474,19 @@
    ],
    "structured": [],
    "seconds": 0.24,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.frameline.org/attend",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "7bc853f248ae8685014f8667f574f75d0eb58ca15db90f0307cf954c626f24f8",
+    "truncated_response": false,
+    "title": "Attend the Festival - Frameline",
+    "pdf": false,
+    "seconds": 0.4,
+    "text_truncated": false
+   }
   },
   "https://www.frozenfilmfestival.com/": {
    "http": 200,
@@ -35398,7 +36750,19 @@
     }
    ],
    "seconds": 0.2,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.frozenfilmfestival.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "038f785b9e8931062dec81fc568cc8ad7c2447cde80f110fd218e5cb5e036be1",
+    "truncated_response": false,
+    "title": "San Francisco Frozen Film Festival (SFFFF)",
+    "pdf": false,
+    "seconds": 0.51,
+    "text_truncated": false
+   }
   },
   "https://www.ghirardellisq.com/": {
    "http": 200,
@@ -35487,7 +36851,19 @@
     }
    ],
    "seconds": 0.19,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.ghirardellisq.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "6eec5f787150001fdf56a30e0b997b6cda55d8f22b31fcc416ff35c8d272f1c9",
+    "truncated_response": false,
+    "title": "Ghirardelli Square",
+    "pdf": false,
+    "seconds": 0.35,
+    "text_truncated": false
+   }
   },
   "https://www.haightashburystreetfair.org/": {
    "http": 200,
@@ -35643,7 +37019,19 @@
     }
    ],
    "seconds": 0.49,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.haightashburystreetfair.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "f0f5aebad9d429d3c6c31be001ed1e46af48a831dd03fb8f6ca3d189117c89ad",
+    "truncated_response": false,
+    "title": "HASF | Join the Celebration Today",
+    "pdf": false,
+    "seconds": 1.1,
+    "text_truncated": false
+   }
   },
   "https://www.haightashburystreetfair.org/vending": {
    "http": 200,
@@ -35887,7 +37275,19 @@
     }
    ],
    "seconds": 0.38,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.haightashburystreetfair.org/vending",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "5efe621fc53ae186929b666977e899fbd3b4662c2e1111423a28311c5d98d100",
+    "truncated_response": false,
+    "title": "Vending — HASF",
+    "pdf": false,
+    "seconds": 0.67,
+    "text_truncated": false
+   }
   },
   "https://www.iitc.org/iitcs-2026-indigenous-peoples-day-sunrise-gathering-on-alcatraz-island-will-take-place-on-october-12-2026/": {
    "http": 200,
@@ -36520,7 +37920,19 @@
     }
    ],
    "seconds": 1.42,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.iitc.org/iitcs-2026-indigenous-peoples-day-sunrise-gathering-on-alcatraz-island-will-take-place-on-october-12-2026/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "d90adaba9cd66bbe6591dad1db6bb4fbd6c5264f9006ead6564441c80e77f640",
+    "truncated_response": false,
+    "title": "IITC’s 2026 Indigenous Peoples Day Sunrise Gathering on Alcatraz Island Will Take Place on October 12, 2026 | International Indian Treaty CouncilAccessibility ToolsIncrease TextDecrease TextGrayscaleHigh ContrastNegative ContrastLight BackgroundLinks UnderlineReadable FontReset",
+    "pdf": false,
+    "seconds": 0.23,
+    "text_truncated": false
+   }
   },
   "https://www.jerryday.org/events--calendar.html": {
    "http": 200,
@@ -36728,7 +38140,19 @@
    ],
    "structured": [],
    "seconds": 0.4,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.jerryday.org/events--calendar.html",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "e5f19ef3821ed728b2b20385b0468c3c6a73bcdaaaa497ad99f0e2701405cc10",
+    "truncated_response": false,
+    "title": "Events / Calendar - Jerry Day 2026 @ www.JerryDay.org",
+    "pdf": false,
+    "seconds": 0.45,
+    "text_truncated": false
+   }
   },
   "https://www.koshercomedy.com/": {
    "http": 200,
@@ -37014,7 +38438,19 @@
     }
    ],
    "seconds": 0.29,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.koshercomedy.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "672faeb23f33ed34b3019888460e9fe89d29d6498326c4feb49fe9ca85846e7e",
+    "truncated_response": false,
+    "title": "Kung Pao Kosher",
+    "pdf": false,
+    "seconds": 0.48,
+    "text_truncated": false
+   }
   },
   "https://www.leapsandcastleclassic.org/": {
    "http": 200,
@@ -37563,7 +38999,19 @@
     }
    ],
    "seconds": 0.47,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://leapsandcastleclassic.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "ad118a04757ecb6c4eb85a009a19d6bc3a24eb60848814c2bc223dae4186478a",
+    "truncated_response": false,
+    "title": "- Leap Sandcastle Classic",
+    "pdf": false,
+    "seconds": 0.36,
+    "text_truncated": false
+   }
   },
   "https://www.litquake.org/": {
    "http": 200,
@@ -37734,7 +39182,19 @@
     }
    ],
    "seconds": 0.44,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.litquake.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "0e931a9968909d675799c1552f3b19f75f390a7411d066f560d587c197ab8c0e",
+    "truncated_response": false,
+    "title": "Litquake Foundation | Literary Festival | San Francisco",
+    "pdf": false,
+    "seconds": 0.32,
+    "text_truncated": false
+   }
   },
   "https://www.litquake.org/litcrawl": {
    "http": 200,
@@ -37882,7 +39342,15 @@
    ],
    "structured": [],
    "seconds": 0.53,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 429,
+    "final_url": "https://www.litquake.org/litcrawl",
+    "error": "HTTP 429",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "seconds": 1.41,
+    "text_truncated": false
+   }
   },
   "https://www.mlb.com/giants/ballpark/events/golf": {
    "http": 200,
@@ -38782,7 +40250,19 @@
    ],
    "structured": [],
    "seconds": 0.87,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.mlb.com/giants/ballpark/events/golf",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "a8974b3f7fb91df25c84c4860d9fc6658be23f642a42d730848a3ca6137d09f1",
+    "truncated_response": false,
+    "title": "The Ballpark Back 9 at Oracle Park | San Francisco Giantsclose--_R_iulf6_",
+    "pdf": false,
+    "seconds": 1.11,
+    "text_truncated": false
+   }
   },
   "https://www.mlb.com/giants/fans/fanfest": {
    "http": 200,
@@ -39618,7 +41098,19 @@
    ],
    "structured": [],
    "seconds": 0.75,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.mlb.com/giants/fans/fanfest",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "70a35156bddd41c84d3799b253e78244b029a10e1ce47b8b4923e18829227e47",
+    "truncated_response": false,
+    "title": "Giants FanFest Tour and Open House | San Francisco Giantsclose--_R_iulf6_",
+    "pdf": false,
+    "seconds": 0.81,
+    "text_truncated": false
+   }
   },
   "https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule": {
    "http": 200,
@@ -40118,7 +41610,19 @@
     }
    ],
    "seconds": 0.16,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "1d5fe121629b4bf049eef5440d7bd31cbfdd1008a12976801d33d3dd5c2508f6",
+    "truncated_response": false,
+    "title": "Press release: Giants announce tentative 2027 regular season scheduleshare-square--:R1qlq:",
+    "pdf": false,
+    "seconds": 0.52,
+    "text_truncated": false
+   }
   },
   "https://www.moonfestival.org/": {
    "http": 200,
@@ -40241,7 +41745,19 @@
     }
    ],
    "seconds": 0.46,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.moonfestival.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "789a21d199a9eb7ad68c4a5cb0363b63610f3b8812cad80583bed9a63bdf85b5",
+    "truncated_response": false,
+    "title": "SFCMA | San Francisco Chinatown Autumn Moon Festival",
+    "pdf": false,
+    "seconds": 0.74,
+    "text_truncated": false
+   }
   },
   "https://www.moscone.com/events/pokemon-world-championships-2026": {
    "http": 200,
@@ -40663,7 +42179,19 @@
     }
    ],
    "seconds": 0.37,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.moscone.com/events/pokemon-world-championships-2026",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "a8be060b08a2d59e977f46c0b24e03fac823fe84a3247fab1073692d771cafa3",
+    "truncated_response": false,
+    "title": "Pokémon World Championships 2026",
+    "pdf": false,
+    "seconds": 0.21,
+    "text_truncated": false
+   }
   },
   "https://www.mostlybritish.org/": {
    "http": 200,
@@ -40807,15 +42335,27 @@
    ],
    "structured": [],
    "seconds": 5.76,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://mostlybritish.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "8d3d299905356e7604123380820f3ff5f06a51090ba6bfee780e6c16655988a9",
+    "truncated_response": false,
+    "title": "Mostly British Film Festival - February 5-12, 2026 - FILMS FROM THE UK, IRELAND, AUSTRALIA, INDIA, SOUTH AFRICA AND NEW ZEALAND - Vogue Theatre - San Francisco, CA",
+    "pdf": false,
+    "seconds": 1.41,
+    "text_truncated": false
+   }
   },
   "https://www.nba.com/warriors/news/warriors-announce-2026-27-regular-season-schedule-20260813": {
    "http": 403,
    "final_url": "https://www.nba.com/warriors/news/warriors-announce-2026-27-regular-season-schedule-20260813",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:00+00:00",
-   "seconds": 0.18,
+   "checked_at": "2026-10-18T03:09:38+00:00",
+   "seconds": 0.07,
    "text_truncated": false,
    "links": []
   },
@@ -41261,7 +42801,19 @@
    ],
    "structured": [],
    "seconds": 0.18,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.nexus-sfbay.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:38+00:00",
+    "sha256": "06c0ead0da82f1c7447910d55d0306f7eb0dbfa2529a1f5c4afc1d6e20882984",
+    "truncated_response": false,
+    "title": "nexus-sfbay.com",
+    "pdf": false,
+    "seconds": 0.14,
+    "text_truncated": false
+   }
   },
   "https://www.nihonmachistreetfair.org/": {
    "http": 200,
@@ -41634,7 +43186,19 @@
     }
    ],
    "seconds": 2.3,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.nihonmachistreetfair.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "037398cc6f52d1dea4b2f473d0bad0a7d5a2ba948d5cecbd7958c9f040cc1972",
+    "truncated_response": false,
+    "title": "NIHONMACHI STREET FAIR",
+    "pdf": false,
+    "seconds": 2.96,
+    "text_truncated": false
+   }
   },
   "https://www.noevalleyfarmersmarket.com/": {
    "http": 200,
@@ -41725,7 +43289,19 @@
     }
    ],
    "seconds": 0.3,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.noevalleyfarmersmarket.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "2176c6c0482d992f18e008c571c6e94747cf265c89c6d52449cae5232ffc86ff",
+    "truncated_response": false,
+    "title": "Noe Valley Farmers Market",
+    "pdf": false,
+    "seconds": 0.52,
+    "text_truncated": false
+   }
   },
   "https://www.noisepopfest.com/": {
    "http": 200,
@@ -41901,7 +43477,19 @@
    ],
    "structured": [],
    "seconds": 0.23,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.noisepopfest.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "5297307a7118b32ab9df829fd2dddf97e1483e7004a2e3dc20ccdb8e727d616f",
+    "truncated_response": false,
+    "title": "Noise Pop Festival 2027",
+    "pdf": false,
+    "seconds": 0.18,
+    "text_truncated": false
+   }
   },
   "https://www.northbeachfestival.org/": {
    "http": 200,
@@ -41938,7 +43526,19 @@
     }
    ],
    "seconds": 0.21,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.northbeachfestival.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "6b99c4870b6678a5a0d40bec9a2767f29e5fd1576c9c4fe7b213bd3dac331339",
+    "truncated_response": false,
+    "title": "The North Beach Festival",
+    "pdf": false,
+    "seconds": 0.66,
+    "text_truncated": false
+   }
   },
   "https://www.pcfma.org/market/castro-farmers-market": {
    "http": 200,
@@ -43014,7 +44614,19 @@
    ],
    "structured": [],
    "seconds": 4.43,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.pcfma.org/market/castro-farmers-market",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "b63b05960889f3242ade2e7caf8ad29d11a0e230033dbb2c61752d24417f95ea",
+    "truncated_response": false,
+    "title": "Castro Farmers' Market | PCFMA",
+    "pdf": false,
+    "seconds": 4.23,
+    "text_truncated": false
+   }
   },
   "https://www.pcfma.org/market/divisadero-farmers-market": {
    "http": 200,
@@ -44442,7 +46054,19 @@
    ],
    "structured": [],
    "seconds": 3.9,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.pcfma.org/market/divisadero-farmers-market",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "8960c6f5a3414ee585577e5a9c525ac19cb7ef2f9d95eb137001bebea0e3d825",
+    "truncated_response": false,
+    "title": "Divisadero Farmers' Market | PCFMA",
+    "pdf": false,
+    "seconds": 1.48,
+    "text_truncated": false
+   }
   },
   "https://www.pcfma.org/market/fillmore-farmers-market": {
    "http": 200,
@@ -45218,7 +46842,19 @@
    ],
    "structured": [],
    "seconds": 2.61,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.pcfma.org/market/fillmore-farmers-market",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "00e9030cd9f730eb4d464b36437a6bfba828508ada66385e3a6c63f1ff1c8bf9",
+    "truncated_response": false,
+    "title": "Fillmore Farmers' Market | PCFMA",
+    "pdf": false,
+    "seconds": 2.67,
+    "text_truncated": false
+   }
   },
   "https://www.pcfma.org/market/inner-sunset-farmers-market": {
    "http": 200,
@@ -46630,7 +48266,19 @@
    ],
    "structured": [],
    "seconds": 2.3,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.pcfma.org/market/inner-sunset-farmers-market",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "6f8d6db8c0ceefd7f415bfaf224d5834fd26154803f382a99cb32a2e1345363a",
+    "truncated_response": false,
+    "title": "Inner Sunset Farmers' Market | PCFMA",
+    "pdf": false,
+    "seconds": 2.54,
+    "text_truncated": false
+   }
   },
   "https://www.pcfma.org/visit": {
    "http": 200,
@@ -47130,7 +48778,19 @@
    ],
    "structured": [],
    "seconds": 0.53,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.pcfma.org/visit",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "b5d780f27fd76d3330d1d79c97dcd3d1c39ef5f2e6961b2189c70400f6e87694",
+    "truncated_response": false,
+    "title": "Market | PCFMA",
+    "pdf": false,
+    "seconds": 2.35,
+    "text_truncated": false
+   }
   },
   "https://www.pier39.com/upcoming-events/": {
    "http": 200,
@@ -47602,7 +49262,19 @@
    ],
    "structured": [],
    "seconds": 0.28,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.pier39.com/upcoming-events/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:39+00:00",
+    "sha256": "44a18db7ef79e657f74b7ec6868bd37d3f772e5ec50a3e9f62e8ac0b4fbfaa9d",
+    "truncated_response": false,
+    "title": "Upcoming Events – PIER 39",
+    "pdf": false,
+    "seconds": 0.19,
+    "text_truncated": false
+   }
   },
   "https://www.pistahan.net/": {
    "http": 200,
@@ -47908,7 +49580,19 @@
     }
    ],
    "seconds": 0.26,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.pistahan.net/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "524b9e1562b9f2dbc34c636a20ce27feb29b3ed84eb9bdfecd37c9b1e6782c7e",
+    "truncated_response": false,
+    "title": "FAAE Pistahan Parade and Festival",
+    "pdf": false,
+    "seconds": 0.51,
+    "text_truncated": false
+   }
   },
   "https://www.potrerofestival.com/": {
    "http": 200,
@@ -48080,7 +49764,19 @@
    ],
    "structured": [],
    "seconds": 0.26,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://potrerofestival.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "de0c2c0271b87e95b8099a907ba832d279165b11aaa9f76c73cdabb0801aa008",
+    "truncated_response": false,
+    "title": "Potrero Hill Festival – 51 Years on the Hill!",
+    "pdf": false,
+    "seconds": 0.44,
+    "text_truncated": false
+   }
   },
   "https://www.redbull.com/us-en/events/red-bull-showrun-san-fran": {
    "http": 200,
@@ -48226,7 +49922,19 @@
     }
    ],
    "seconds": 0.33,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.redbull.com/us-en/events/red-bull-showrun-san-fran",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "6c550e975bf1d7ed917a61fdcbe8da67b4b4b9cc8cc7a9c43e340accd7af8f94",
+    "truncated_response": false,
+    "title": "",
+    "pdf": false,
+    "seconds": 0.37,
+    "text_truncated": false
+   }
   },
   "https://www.renegadecraft.com/event/san-francisco-winter/": {
    "http": 200,
@@ -49406,7 +51114,19 @@
     }
    ],
    "seconds": 0.32,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.renegadecraft.com/event/san-francisco-winter/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "700a55b8e20ec04634081efba93d1a214d3bbf75877416b3ed303124d2c88821",
+    "truncated_response": false,
+    "title": "Renegade Craft — San Francisco Wintericon-instagramicon-facebookicon-flickr_1icon-instagramicon-facebookicon-flickr_1",
+    "pdf": false,
+    "seconds": 0.24,
+    "text_truncated": false
+   }
   },
   "https://www.sanfranciscolowridercouncil.com/": {
    "http": 200,
@@ -49478,13 +51198,25 @@
    ],
    "structured": [],
    "seconds": 0.48,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sanfranciscolowridercouncil.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "5d0fae7d6509abf35eb97529bbb1da62d5a57790172d12e0b6c4401ad8dd2f15",
+    "truncated_response": false,
+    "title": "San Francisco Lowrider Council",
+    "pdf": false,
+    "seconds": 0.36,
+    "text_truncated": false
+   }
   },
   "https://www.sf.gov/event-20260704-fourth-of-july-fireworks-on-golden-gate-bridge": {
    "http": 202,
    "final_url": "https://www.sf.gov/event-20260704-fourth-of-july-fireworks-on-golden-gate-bridge",
    "content_type": "text/html",
-   "checked_at": "2026-10-18T03:00:01+00:00",
+   "checked_at": "2026-10-18T03:09:40+00:00",
    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "truncated_response": false,
    "title": "",
@@ -49492,7 +51224,7 @@
    "pdf": false,
    "links": [],
    "structured": [],
-   "seconds": 0.18,
+   "seconds": 0.33,
    "text_truncated": false
   },
   "https://www.sf.gov/location--alemany-farmers-market": {
@@ -49510,7 +51242,19 @@
    "seconds": 0.09,
    "text_truncated": false,
    "tool_excerpt": "Alemany Farmers Market\nBuy fresh fruits and vegetables from local farmers every Saturday, 7am - 2pm.\nAlemany Farmers Market100 Alemany Boulevard\nSan Francisco, CA94110\nSaturday7:00 am to 2:00 pm\nSince February 2026, local nonprofit Foodwise operates Alemany Farmers Market",
-   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status.",
+   "latest_attempt": {
+    "http": 202,
+    "final_url": "https://www.sf.gov/location--alemany-farmers-market",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "truncated_response": false,
+    "title": "",
+    "pdf": false,
+    "seconds": 0.32,
+    "text_truncated": false
+   }
   },
   "https://www.sfaapicocktailweek.com/": {
    "http": 200,
@@ -49592,7 +51336,19 @@
     }
    ],
    "seconds": 0.38,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfaapicocktailweek.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "259168490809d3cd2588f0c8a7ae0c04e8b3c91efdadbfb632b58b63b2c5b40e",
+    "truncated_response": false,
+    "title": "SF AAPI Cocktail Week",
+    "pdf": false,
+    "seconds": 0.64,
+    "text_truncated": false
+   }
   },
   "https://www.sfballet.org/2026-2027-season/": {
    "http": 200,
@@ -51317,7 +53073,19 @@
     }
    ],
    "seconds": 0.73,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfballet.org/2026-2027-season/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:40+00:00",
+    "sha256": "475a2005030727b553092651bb09583daacee224ad26621d821b376baa7ac50c",
+    "truncated_response": false,
+    "title": "2026 2027 Season - San Francisco Ballet",
+    "pdf": false,
+    "seconds": 0.48,
+    "text_truncated": false
+   }
   },
   "https://www.sfballet.org/productions/nutcracker/": {
    "http": 200,
@@ -53188,7 +54956,19 @@
     }
    ],
    "seconds": 2.42,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfballet.org/productions/nutcracker/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "e0dfbee00c505f7b328b7bbf5fe099a0df48135e0612fc83e64c65de966524f6",
+    "truncated_response": false,
+    "title": "Nutcracker - San Francisco Ballet",
+    "pdf": false,
+    "seconds": 0.55,
+    "text_truncated": false
+   }
   },
   "https://www.sfbeerweek.org/": {
    "http": 200,
@@ -53326,7 +55106,19 @@
     }
    ],
    "seconds": 0.85,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfbeerweek.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "febf9a7614e33b210cdfc7449e44ca1403529961b0815ce2f885b55c000ab859",
+    "truncated_response": false,
+    "title": "SF Beer Week - Discover Amazing Craft Beer Events",
+    "pdf": false,
+    "seconds": 0.9,
+    "text_truncated": false
+   }
   },
   "https://www.sfbff.org/": {
    "http": 200,
@@ -53527,7 +55319,19 @@
     }
    ],
    "seconds": 3.29,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfbff.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "d0e4605080172e17233298f85d4f5a4c5245a5512b57caf8ded8401e44300a68",
+    "truncated_response": false,
+    "title": "San Francisco Black Film Festival",
+    "pdf": false,
+    "seconds": 1.29,
+    "text_truncated": false
+   }
   },
   "https://www.sfcityguides.org/": {
    "http": 200,
@@ -53883,7 +55687,19 @@
     }
    ],
    "seconds": 0.43,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfcityguides.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "4a269c64d9d18a8d9ee19192ab13f69064c02f0a4108fa3aa4794bf94e740445",
+    "truncated_response": false,
+    "title": "San Francisco City Guides - Free Walking Tours - Home",
+    "pdf": false,
+    "seconds": 0.31,
+    "text_truncated": false
+   }
   },
   "https://www.sfclimateweek.org/": {
    "http": 200,
@@ -54100,7 +55916,19 @@
     }
    ],
    "seconds": 1.4,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfclimateweek.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "44c3584adab24405e4a726b0e88d0d42d6a44fd34a2d9735a1e9a82879b8890a",
+    "truncated_response": false,
+    "title": "SF Climate Week",
+    "pdf": false,
+    "seconds": 1.23,
+    "text_truncated": false
+   }
   },
   "https://www.sfcriticalmass.org/": {
    "http": 200,
@@ -54296,7 +56124,19 @@
    ],
    "structured": [],
    "seconds": 0.43,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfcriticalmass.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "82a735b65c3251fe10e61fd7f4c9b294e35305c43dbd4026e365f9d9f216d8d9",
+    "truncated_response": false,
+    "title": "San Francisco Critical Mass",
+    "pdf": false,
+    "seconds": 1.07,
+    "text_truncated": false
+   }
   },
   "https://www.sfdesignweek.org/": {
    "http": 200,
@@ -55006,7 +56846,19 @@
     }
    ],
    "seconds": 1.03,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfdesignweek.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "ef14bfeca5280b3d753111a151d7b060ba412447d43bdde1483720e4d1cbc827",
+    "truncated_response": false,
+    "title": "San Francisco Design Week - San Francisco Design Week",
+    "pdf": false,
+    "seconds": 0.27,
+    "text_truncated": false
+   }
   },
   "https://www.sfenvironment.org/farmers-markets-in-sf": {
    "http": 200,
@@ -55342,7 +57194,19 @@
    ],
    "structured": [],
    "seconds": 0.32,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfenvironment.org/farmers-markets-in-sf",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:41+00:00",
+    "sha256": "dbfa1a1334bd6bd31493aab82a36b09612abe9b8658b0f735996ddb5ce64ced8",
+    "truncated_response": false,
+    "title": "Farmers markets in San Francisco | San Francisco Environment Department (SFE)",
+    "pdf": false,
+    "seconds": 0.35,
+    "text_truncated": false
+   }
   },
   "https://www.sfhiphopdancefest.com/": {
    "http": 200,
@@ -55558,7 +57422,19 @@
     }
    ],
    "seconds": 0.31,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfhiphopdancefest.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "f1de4e578459b2594c6ba5ffe46c96b60883b3b2c71ec447bb2525a5abe9df7b",
+    "truncated_response": false,
+    "title": "San Francisco International Hip Hop DanceFest",
+    "pdf": false,
+    "seconds": 0.7,
+    "text_truncated": false
+   }
   },
   "https://www.sfhistory.org/epicenter": {
    "http": 200,
@@ -55614,15 +57490,27 @@
    ],
    "structured": [],
    "seconds": 1.29,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://givebutter.com/epicentersftour2026",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "78e4058a688e4499039915590c1f9e83072ed0a8cb81cef3c9eef78f435cbb99",
+    "truncated_response": false,
+    "title": "Epicenter San Francisco: A Tour of Downtown, \"The Tides of Fortune that Changed the World.” Sat. Sept. 19, 10AM-3PM. | THE SAN FRANCISCO HISTORICAL SOCIETY",
+    "pdf": false,
+    "seconds": 1.02,
+    "text_truncated": false
+   }
   },
   "https://www.sfiaf.org/": {
    "http": 403,
    "final_url": "https://www.sfiaf.org/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:03+00:00",
-   "seconds": 0.45,
+   "checked_at": "2026-10-18T03:09:42+00:00",
+   "seconds": 0.53,
    "text_truncated": false,
    "links": []
   },
@@ -55776,15 +57664,27 @@
    ],
    "structured": [],
    "seconds": 0.34,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfindie.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "979022fbfa202e32c0e40eecc135b78d0b4301e61164323436a25441c07b4c0e",
+    "truncated_response": false,
+    "title": "San Francisco IndieFest – San Francisco Film Festivals: SF IndieFest, SF DocFest, SF Shorts, Green Film Festival and Another Hole in the Head. Copyright © 2024 San Francisco IndieFest. All rights reserved.",
+    "pdf": false,
+    "seconds": 0.46,
+    "text_truncated": false
+   }
   },
   "https://www.sfjazz.org/onthecorner/articles/summer-2026/": {
    "http": 403,
    "final_url": "https://www.sfjazz.org/onthecorner/articles/summer-2026/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:04+00:00",
-   "seconds": 0.53,
+   "checked_at": "2026-10-18T03:09:41+00:00",
+   "seconds": 0.07,
    "text_truncated": false,
    "links": []
   },
@@ -55793,8 +57693,8 @@
    "final_url": "https://www.sfjazz.org/tickets/productions/26-27/season-overview/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:04+00:00",
-   "seconds": 0.53,
+   "checked_at": "2026-10-18T03:09:42+00:00",
+   "seconds": 0.07,
    "text_truncated": false,
    "links": []
   },
@@ -56000,7 +57900,19 @@
     }
    ],
    "seconds": 0.2,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmoma.org/event/free-family-day-k-pop-art-and-beyond/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "530dd7697d1df674372183e0a2135e2f5bbd7832f12349c9b11fb8104920cbb5",
+    "truncated_response": false,
+    "title": "Free Family Day: K-Pop, Art, and Beyond · SFMOMA",
+    "pdf": false,
+    "seconds": 0.08,
+    "text_truncated": false
+   }
   },
   "https://www.sfmoma.org/exhibition/rm-x-sfmoma/": {
    "http": 200,
@@ -56256,7 +58168,19 @@
     }
    ],
    "seconds": 0.12,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmoma.org/exhibition/rm-x-sfmoma/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "f129fb348d3f20797bb7130a81212a2490c37442d77ca2906d48c4e8310f2fe4",
+    "truncated_response": false,
+    "title": "RM x SFMOMA",
+    "pdf": false,
+    "seconds": 0.07,
+    "text_truncated": false
+   }
   },
   "https://www.sfmoma.org/exhibitions/": {
    "http": 200,
@@ -56717,7 +58641,19 @@
     }
    ],
    "seconds": 0.09,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmoma.org/exhibitions/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "f3f8d5182feb61ecbc42c8017d31ba59f1d4ed59fcde679359823a3f817923f9",
+    "truncated_response": false,
+    "title": "What's On View · SFMOMA",
+    "pdf": false,
+    "seconds": 0.1,
+    "text_truncated": false
+   }
   },
   "https://www.sfmoma.org/free-days/": {
    "http": 200,
@@ -57019,7 +58955,19 @@
     }
    ],
    "seconds": 0.11,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmoma.org/free-days/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "1ca1893793ae78afb5bf439e0d75e3c6018e33ba1f55bf83df951d38aa5d06b0",
+    "truncated_response": false,
+    "title": "Free Days at SFMOMA",
+    "pdf": false,
+    "seconds": 0.07,
+    "text_truncated": false
+   }
   },
   "https://www.sfmoma.org/upcoming-exhibitions/": {
    "http": 200,
@@ -57284,7 +59232,19 @@
     }
    ],
    "seconds": 0.14,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmoma.org/upcoming-exhibitions/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "b067f4bbdeccaf56e445bbbfa2263f0d66919b0296ea8c207e7db4226b6e3376",
+    "truncated_response": false,
+    "title": "Upcoming Exhibitions · SFMOMA",
+    "pdf": false,
+    "seconds": 0.1,
+    "text_truncated": false
+   }
   },
   "https://www.sfmoma.org/visit/": {
    "http": 200,
@@ -57669,7 +59629,19 @@
     }
    ],
    "seconds": 0.12,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmoma.org/visit/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "d697fa46b96ffe004bae1fc91260c5cd11bfd40e8560ba06f50cd9438acf45fa",
+    "truncated_response": false,
+    "title": "SFMOMA · Visitor's Guide",
+    "pdf": false,
+    "seconds": 0.16,
+    "text_truncated": false
+   }
   },
   "https://www.sfmta.com/calendar/muni-heritage-weekend-2025": {
    "http": 200,
@@ -58135,7 +60107,19 @@
     }
    ],
    "seconds": 0.09,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmta.com/calendar/muni-heritage-weekend-2025",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "949076536eb03a24791db4e32b364dec693e37b5057529a83a8f426cab64fe69",
+    "truncated_response": false,
+    "title": "Muni Heritage Weekend 2025 | SFMTA",
+    "pdf": false,
+    "seconds": 0.12,
+    "text_truncated": false
+   }
   },
   "https://www.sfmta.com/calendar/muni-heritage-weekend-2026": {
    "http": 200,
@@ -58501,7 +60485,19 @@
     }
    ],
    "seconds": 1.12,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmta.com/calendar/muni-heritage-weekend-2026",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:44+00:00",
+    "sha256": "aaf6aca4044a14ff27d2e1014a61d32a2c5f63aff4d3da002041be9055edfa37",
+    "truncated_response": false,
+    "title": "Muni Heritage Weekend 2026 | SFMTA",
+    "pdf": false,
+    "seconds": 2.68,
+    "text_truncated": false
+   }
   },
   "https://www.sfmta.com/project-updates/bay-breakers-service-impacts": {
    "http": 200,
@@ -60943,7 +62939,19 @@
     }
    ],
    "seconds": 2.13,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmta.com/project-updates/bay-breakers-service-impacts",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "1dc40f0b1a104f549ce91657282967af761201cb7fd75a009c69148782d065a5",
+    "truncated_response": false,
+    "title": "Bay to Breakers: Sunday, May 17, 2026 | SFMTA",
+    "pdf": false,
+    "seconds": 0.22,
+    "text_truncated": false
+   }
   },
   "https://www.sfmta.com/travel-updates/outside-lands-august-7-9-2026": {
    "http": 200,
@@ -61413,7 +63421,19 @@
     }
    ],
    "seconds": 0.12,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfmta.com/travel-updates/outside-lands-august-7-9-2026",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "8dacfc6e2b6360be7a6854fcec5753811870c8f2137c8d8a318112f3cdd8de26",
+    "truncated_response": false,
+    "title": "Outside Lands: August 7-9, 2026 | SFMTA",
+    "pdf": false,
+    "seconds": 0.08,
+    "text_truncated": false
+   }
   },
   "https://www.sfopera.com/": {
    "http": 200,
@@ -61773,7 +63793,19 @@
    ],
    "structured": [],
    "seconds": 0.81,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfopera.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "787ea3548b8c4b9b7f24de3c750788bfc00bc7b29a5840e8fb564a744bd47850",
+    "truncated_response": false,
+    "title": "San Francisco Opera | SF Opera",
+    "pdf": false,
+    "seconds": 0.58,
+    "text_truncated": false
+   }
   },
   "https://www.sfopera.com/learn/pre-opera-talks/previous-seasons/": {
    "http": 200,
@@ -62357,7 +64389,19 @@
    ],
    "structured": [],
    "seconds": 0.87,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfopera.com/learn/pre-opera-talks/previous-seasons/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "02cbbbff5c3e72747aa985ee389ac681b358b237a2f1db0168a80263af643995",
+    "truncated_response": false,
+    "title": "Previous Seasons | SFO",
+    "pdf": false,
+    "seconds": 0.41,
+    "text_truncated": false
+   }
   },
   "https://www.sfopera.com/operaball": {
    "http": 200,
@@ -62665,7 +64709,19 @@
    ],
    "structured": [],
    "seconds": 2.8,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfopera.com/operaball",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "e2c323d32cec1fa4c2c02785335582f3f94dca4404b8cb46708bbc9265a8932a",
+    "truncated_response": false,
+    "title": "Opera Ball | SFO",
+    "pdf": false,
+    "seconds": 0.55,
+    "text_truncated": false
+   }
   },
   "https://www.sfopera.com/operainthepark/": {
    "http": 200,
@@ -62945,7 +65001,19 @@
    ],
    "structured": [],
    "seconds": 0.87,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfopera.com/operainthepark/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "4301d926aa43fd43d4395eee87112c5d6e444731f010656863af72158a9edc4d",
+    "truncated_response": false,
+    "title": "Opera in the Park | SFO",
+    "pdf": false,
+    "seconds": 0.53,
+    "text_truncated": false
+   }
   },
   "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/": {
    "http": 200,
@@ -63217,7 +65285,19 @@
    ],
    "structured": [],
    "seconds": 0.67,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "375d6bca4c56d3eeab41189fd418078e676f5c21dd494bcb325a69beb76d2871",
+    "truncated_response": false,
+    "title": "San Francisco Opera's 2026-27 Season announced",
+    "pdf": false,
+    "seconds": 0.48,
+    "text_truncated": false
+   }
   },
   "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1": {
    "http": 200,
@@ -63393,7 +65473,19 @@
    ],
    "structured": [],
    "seconds": 0.42,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:42+00:00",
+    "sha256": "c8333eff93c10d42d8ab914ef8c82ee9c250f76af50e0390a8e0a596baa1e5cb",
+    "truncated_response": false,
+    "title": "New Year's Eve Fireworks Celebration | SF Port",
+    "pdf": false,
+    "seconds": 0.6,
+    "text_truncated": false
+   }
   },
   "https://www.sfrestaurantweek.com/restaurants/": {
    "http": 200,
@@ -65809,15 +67901,27 @@
    ],
    "structured": [],
    "seconds": 0.51,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfrestaurantweek.com/restaurants/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "ef5c7fde115a37874739b5affae681420e8039a04e9e5f128114f8d006a91bbd",
+    "truncated_response": false,
+    "title": "Participating Restaurants – San Francisco Restaurant Week",
+    "pdf": false,
+    "seconds": 0.77,
+    "text_truncated": false
+   }
   },
   "https://www.sfsketchfest.com/": {
    "http": 403,
    "final_url": "https://www.sfsketchfest.com/",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:05+00:00",
-   "seconds": 0.31,
+   "checked_at": "2026-10-18T03:09:42+00:00",
+   "seconds": 0.29,
    "text_truncated": false,
    "links": []
   },
@@ -65834,15 +67938,27 @@
    "links": [],
    "structured": [],
    "seconds": 1.82,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+    "content_type": "application/pdf",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "a0a369612980b56c5cb9f9c899f583d9cdfd954e40d67070e01b4690643af3b2",
+    "truncated_response": false,
+    "title": "Official PDF",
+    "pdf": true,
+    "seconds": 2.15,
+    "text_truncated": false
+   }
   },
   "https://www.sftravel.com/article/san-francisco-festivals-events-april": {
    "http": 403,
    "final_url": "https://www.sftravel.com/article/san-francisco-festivals-events-april",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:05+00:00",
-   "seconds": 0.18,
+   "checked_at": "2026-10-18T03:09:42+00:00",
+   "seconds": 0.16,
    "text_truncated": false,
    "links": []
   },
@@ -65851,8 +67967,8 @@
    "final_url": "https://www.sftravel.com/article/san-francisco-festivals-events-august",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:05+00:00",
-   "seconds": 0.08,
+   "checked_at": "2026-10-18T03:09:42+00:00",
+   "seconds": 0.16,
    "text_truncated": false,
    "links": []
   },
@@ -65861,8 +67977,8 @@
    "final_url": "https://www.sftravel.com/article/san-francisco-festivals-events-february",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:05+00:00",
-   "seconds": 0.06,
+   "checked_at": "2026-10-18T03:09:42+00:00",
+   "seconds": 0.15,
    "text_truncated": false,
    "links": []
   },
@@ -65871,7 +67987,7 @@
    "final_url": "https://www.sftravel.com/article/san-francisco-festivals-events-july",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:05+00:00",
+   "checked_at": "2026-10-18T03:09:42+00:00",
    "seconds": 0.13,
    "text_truncated": false,
    "links": []
@@ -65881,8 +67997,8 @@
    "final_url": "https://www.sftravel.com/article/san-francisco-festivals-events-may",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:05+00:00",
-   "seconds": 0.14,
+   "checked_at": "2026-10-18T03:09:43+00:00",
+   "seconds": 0.1,
    "text_truncated": false,
    "links": []
   },
@@ -65891,8 +68007,8 @@
    "final_url": "https://www.sftravel.com/article/san-francisco-festivals-events-november",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:05+00:00",
-   "seconds": 0.18,
+   "checked_at": "2026-10-18T03:09:43+00:00",
+   "seconds": 0.12,
    "text_truncated": false,
    "links": []
   },
@@ -66458,7 +68574,19 @@
     }
    ],
    "seconds": 0.34,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfzoo.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "a5a5e448df79358fb0c58c31e370da598d116b3f568abbc1f10bead5e98714f5",
+    "truncated_response": false,
+    "title": "San Francisco Zoo & Gardens",
+    "pdf": false,
+    "seconds": 0.32,
+    "text_truncated": false
+   }
   },
   "https://www.sfzoo.org/calendar-of-events/": {
    "http": 200,
@@ -66934,7 +69062,19 @@
     }
    ],
    "seconds": 0.54,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfzoo.org/visit-the-zoo/calendar-of-events/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "987551afea06bdde3e0f6c8630ff4ff3903b6d0ba58b09f7c0174846060faff6",
+    "truncated_response": false,
+    "title": "Calendar - San Francisco Zoo & Gardens",
+    "pdf": false,
+    "seconds": 0.91,
+    "text_truncated": false
+   }
   },
   "https://www.sfzoo.org/event/boo-at-the-zoo/": {
    "http": 200,
@@ -67434,7 +69574,19 @@
     }
    ],
    "seconds": 0.27,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfzoo.org/event/boo-at-the-zoo/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "15e583f1f44d272d6d04d703216f0f28f17b532a77b6114799980dad7b3122dc",
+    "truncated_response": false,
+    "title": "Boo at the Zoo - San Francisco Zoo & Gardens",
+    "pdf": false,
+    "seconds": 0.37,
+    "text_truncated": false
+   }
   },
   "https://www.sfzoo.org/event/member-mornings-2-copy/": {
    "http": 200,
@@ -67926,7 +70078,19 @@
     }
    ],
    "seconds": 0.51,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfzoo.org/event/member-mornings-2-copy/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "641397fb3ef99b58b9dea3fa0283657e24e669072c36d05ace668c107df00f7a",
+    "truncated_response": false,
+    "title": "Member Mornings - San Francisco Zoo & Gardens",
+    "pdf": false,
+    "seconds": 0.34,
+    "text_truncated": false
+   }
   },
   "https://www.sfzoo.org/event/sf-resident-free-day/": {
    "http": 200,
@@ -68418,7 +70582,19 @@
     }
    ],
    "seconds": 0.26,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sfzoo.org/event/sf-resident-free-day/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "e23ed074a00e12fa8013319499e3a1ac2c171e96a1d7d9b981823a0a5b242d72",
+    "truncated_response": false,
+    "title": "SF Resident Free Day - San Francisco Zoo & Gardens",
+    "pdf": false,
+    "seconds": 0.3,
+    "text_truncated": false
+   }
   },
   "https://www.somapilipinas.org/events": {
    "http": 200,
@@ -68711,7 +70887,19 @@
     }
    ],
    "seconds": 0.42,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.somapilipinas.org/events",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:44+00:00",
+    "sha256": "d0630badf4902c62e6f80f475bb80032941e0b4b37f3bfd912fc3c289af35998",
+    "truncated_response": false,
+    "title": "Events & Activities — SOMA PILIPINAS",
+    "pdf": false,
+    "seconds": 0.95,
+    "text_truncated": false
+   }
   },
   "https://www.sterngrove.org/": {
    "http": 200,
@@ -69083,7 +71271,19 @@
     }
    ],
    "seconds": 0.81,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sterngrove.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "714cb37fb8b8e5f68aa0c0398cca7a13131bfa07d558ccc4def5d1ce07096274",
+    "truncated_response": false,
+    "title": "Stern Grove Festival",
+    "pdf": false,
+    "seconds": 0.7,
+    "text_truncated": false
+   }
   },
   "https://www.sterngrove.org/lineup2026": {
    "http": 200,
@@ -69463,7 +71663,19 @@
     }
    ],
    "seconds": 0.65,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.sterngrove.org/lineup2026",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "ffe1be42594ea82560c541deb97b6307c007445d722bff7aaeee161ca21aab32",
+    "truncated_response": false,
+    "title": "Lineup — Stern Grove Festival",
+    "pdf": false,
+    "seconds": 0.64,
+    "text_truncated": false
+   }
   },
   "https://www.tap-sf.org/tacf": {
    "http": 200,
@@ -69711,7 +71923,19 @@
     }
    ],
    "seconds": 0.84,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.tap-sf.org/tacf",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:44+00:00",
+    "sha256": "00cd0c6e97abb959c497a8b89f3a045354e3f94094ea08ed387d4060d18d9464",
+    "truncated_response": false,
+    "title": "Taiwanese American Cultural Festival — TAP-SF",
+    "pdf": false,
+    "seconds": 1.67,
+    "text_truncated": false
+   }
   },
   "https://www.thesfmarathon.com/2027-50th-anniversary/": {
    "http": 200,
@@ -70328,7 +72552,19 @@
     }
    ],
    "seconds": 0.4,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.thesfmarathon.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "aa9ac7b8b9ff8ce74b2635533a739fb6c0f7b785d7626dd8b8932892a6899e9a",
+    "truncated_response": false,
+    "title": "The San Francisco Marathon - July 25 - 26, 2026",
+    "pdf": false,
+    "seconds": 0.38,
+    "text_truncated": false
+   }
   },
   "https://www.thesfmarathon.com/full-marathon/": {
    "http": 200,
@@ -70924,7 +73160,19 @@
     }
    ],
    "seconds": 0.2,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.thesfmarathon.com/full-marathon/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "7ce51dc075ff6282b5b4be0f8fff7d4c00713b7b89b3026583013f9b7c872874",
+    "truncated_response": false,
+    "title": "Full Marathon - The San Francisco Marathon",
+    "pdf": false,
+    "seconds": 0.22,
+    "text_truncated": false
+   }
   },
   "https://www.thesfmarathon.com/race-weekend/": {
    "http": 200,
@@ -71548,7 +73796,19 @@
     }
    ],
    "seconds": 0.14,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.thesfmarathon.com/race-weekend/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "4eb614f4d2ef40be120835918200b61395a4d17fbe56a7c778154a8b397ab787",
+    "truncated_response": false,
+    "title": "Race Weekend - The San Francisco Marathon",
+    "pdf": false,
+    "seconds": 0.29,
+    "text_truncated": false
+   }
   },
   "https://www.thesuperfair.com/san-francisco": {
    "http": 200,
@@ -71785,7 +74045,19 @@
     }
    ],
    "seconds": 0.34,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.thesuperfair.com/san-francisco",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:44+00:00",
+    "sha256": "fcd392c2cb3a862802d4a41586f9a989ff177b150c6b37cdcf41107d19066b7e",
+    "truncated_response": false,
+    "title": "The Superfair",
+    "pdf": false,
+    "seconds": 0.93,
+    "text_truncated": false
+   }
   },
   "https://www.visitunionsquaresf.com/": {
    "http": 200,
@@ -72029,15 +74301,27 @@
    ],
    "structured": [],
    "seconds": 0.3,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://visitunionsquaresf.com/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:43+00:00",
+    "sha256": "7a2c2959e191d8b53726bba2a9d3b923975200c566bb6075d12856242f1754dc",
+    "truncated_response": false,
+    "title": "Home - Visit Union Square SF",
+    "pdf": false,
+    "seconds": 0.19,
+    "text_truncated": false
+   }
   },
   "https://www.wnba.com/team/1611661331/golden-state-valkyries": {
    "http": 403,
    "final_url": "https://www.wnba.com/team/1611661331/golden-state-valkyries",
    "error": "HTTP 403",
    "text": "",
-   "checked_at": "2026-10-18T03:00:06+00:00",
-   "seconds": 0.23,
+   "checked_at": "2026-10-18T03:09:43+00:00",
+   "seconds": 0.1,
    "text_truncated": false,
    "links": []
   },
@@ -72417,7 +74701,19 @@
     }
    ],
    "seconds": 0.52,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://ybca.org/event/the-haunt-a-halloween-hangout-crafted-by-artists/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:44+00:00",
+    "sha256": "8e738e7dc4aca3f610dc476cdf948176c675d29b6ea2e3008076c65301fd9867",
+    "truncated_response": false,
+    "title": "The Haunt: A Halloween hangout crafted by artists - YBCA",
+    "pdf": false,
+    "seconds": 0.41,
+    "text_truncated": false
+   }
   },
   "https://ybgfestival.org/": {
    "http": 200,
@@ -72871,7 +75167,19 @@
     ]
    ],
    "seconds": 1.64,
-   "text_truncated": false
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://ybgfestival.org/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T03:09:44+00:00",
+    "sha256": "3ae4a1a284566af666928d5a0cfd579602a6976afd35992ebcd3dbc35eb7b424",
+    "truncated_response": false,
+    "title": "Homepage | Official site of Yerba Buena Gardens FestivalEmailFacebookInstagramPhoneTikTokTwitterYouTube",
+    "pdf": false,
+    "seconds": 0.26,
+    "text_truncated": false
+   }
   }
  },
  "candidates": {

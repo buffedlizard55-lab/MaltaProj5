@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Row-by-row source verification for the SF events register.
+"""Row-by-row source verification for the SF events register (runs in CI).
 
 For every cited source URL this fetches the live page and records:
 

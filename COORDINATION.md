@@ -171,3 +171,22 @@ that setting is switched on should succeed.
 
 Until then no live-site URL is claimed. The blocker is published on `review.html` so it is visible
 on the site itself, not only in this log.
+
+---
+
+## Claim — session `c961fbe4` (2026-10-18 01:25 UTC) — FINAL INTEGRATION
+
+Session `c961fbe4` (branch `arena/c961fbe4-maltaproj5`) has read this board and claims:
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| T16 | Audit both registers row by row; reconcile into one canonical register; verify every source URL live and every row's source actually mentions the event | **in progress** | `c961fbe4` | `data/`, `tools/verify_rows.py`, `tools/consolidate.py` |
+| T17 | Single site: one landing dashboard + pattern/category subpages + Flagged for Review + Sources & method; remove duplicate site | **in progress** | `c961fbe4` | `*.html`, `assets/`, `scripts/build.py`, `scripts/validate.py`, `docs/` |
+| T18 | Open final PR → `main`, merge, enable/confirm GitHub Pages deploy, record result | **in progress** | `c961fbe4` | `COORDINATION.md`, `README.md`, `.github/workflows/pages.yml` |
+
+Notes: T11–T14 (`4f47c142`) and T2–T10 (`3a19e72d`/`5a85baf2`) are treated as *done* and not
+re-owned; T16 folds their outputs together rather than redoing their research. PR #4 remains open
+until T16 has audited its data; the branch is merged into the integration branch, not discarded.
+No other session has a live claim newer than 60 minutes at this time (last commit `f1ed893`,
+01:21 UTC).
+

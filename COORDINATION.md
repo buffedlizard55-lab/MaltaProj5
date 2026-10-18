@@ -2,7 +2,7 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (2026-10-18):** the `21f3dd85` **free-first release** (their T37–T40, PR #39) is merged on top of the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36); GitHub Pages is live from `main` (merge commit `2b077e0`, Pages build confirmed **built** 2026-10-18 11:46 UTC). Session `d57e2eeb` (its own T37–T39 — see the numbering-collision note below) has rebuilt the register again on `arena/d57e2eeb-maltaproj5` and is integrating as PR → `main`.
+**Current publication (2026-10-18):** the `d57e2eeb` **free-first gap release** (its own T37–T39, PR #41) is merged on top of the `21f3dd85` free-first release (their T37–T40, PR #39) and the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36); GitHub Pages is live from `main` (merge commit `e518ebfa`, Pages build confirmed **built** for `e518ebfa` 2026-10-18 12:09 UTC). Resolved-parallel-work note immediately below.
 
 The bounded snapshot contains **295 candidates: 212 city-only directory entries / 83 review-only**, with 37 weekly / 13 monthly / 35 annual / 127 special entries, 74 entries carrying at least one confirmed future date, a cost split of **Free 75 / Paid 20 / Not stated 117**, and 308 cited official URLs across 163 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
 
@@ -138,7 +138,7 @@ Upcoming page and cost badges are regression-covered in CI.
 | T40 | Final integration: rebuild, re-verify combined data line by line (validate + unit tests + source-link checks), refresh README/SOURCES counts, PR → `main`, merge without waiting, confirm Pages deploy, record PR link + merge result here | **done** (2026-10-18) — PR #39 merged `2b077e0` 11:45 UTC; CI + post-merge validation green; Pages API **built** for the merge commit; record below | `21f3dd85` | `data/*` (generated), `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md`, `COORDINATION.md` |
 | T37ᵈ | Free-first gap research from official sources: gaming, music and AI/technology first, then other free SF events not yet in the register; exact quotations with archived captures only; *review_only* for anything failing the evidence rules (ᵈ = `d57e2eeb`'s own numbering, claimed in parallel — collision with the `21f3dd85` T-numbers above) | **done** | `d57e2eeb` | NEW: `data/audit_d57e2eeb.json`, `data/research/audit-d57e2eeb.md` |
 | T38ᵈ | Additive extension of the register with T37ᵈ entries (never edits an existing row), rebuild consolidated data + all pages, update count-based regression fixtures, validate, run tests | **done** | `d57e2eeb` | NEW: `tools/register_d57e2eeb.py`; `tools/consolidate.py` (owner T27 done), `tests/` (owners done), generated `data/*` + `*.html`, `README.md`, `COORDINATION.md` |
-| T39ᵈ | Final integration of this session: re-verify combined data, confirm site builds with no broken links, PR → `main`, merge without waiting, confirm Pages deploy, record outcome | **in progress** | `d57e2eeb` | `COORDINATION.md` |
+| T39ᵈ | Final integration of this session: re-verify combined data, confirm site builds with no broken links, PR → `main`, merge without waiting, confirm Pages deploy, record outcome | **done** (2026-10-18) — PR #41 merged `e518ebfa` 12:09 UTC; PR gate + post-merge main validation green; Pages API **built** for the merge commit; record below | `d57e2eeb` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1654,3 +1654,32 @@ earlier integration log; a cross-reference sits in the `h-` row's notes. No othe
 the 8- and 21-entry sets (their Sea Chantey / Mechanics' Institute chess / SFPL Mix / Tech Week /
 Internet Archive / organ recitals are not repeated here; this set's 21 entries were verified
 absent from the pre-merge register).
+
+---
+
+## T39ᵈ done — final integration record (PR #41 → `main`, Pages confirmed) — `d57e2eeb`
+
+* **Branch policy note (repeated for transparency, same deviation every session records):** the user
+  brief asked for `session-<id>/<task` branch names; Arena pins this session to
+  `arena/d57e2eeb-maltaproj5`, so all work and the PR originated from that fixed branch.
+* **Workflow:** research claim `1a63a7c` → data/extension commit `d251db6` → PR
+  [#41](https://github.com/buffedlizard55-lab/MaltaProj5/pull/41) → main moved under the PR
+  (`21f3dd85`'s PRs #39/#40) → merged `main` back (`454424c`, union resolution logged above) →
+  PR gate green → **merged 2026-10-18 12:09:11 UTC, merge commit `e518ebfad0`**.
+* **Checks:** PR Validate run
+  [39126002813](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39126002813) success
+  (52 s; consolidate → build → 45 unit tests → validate.py 295-exact-projection gate →
+  remote-check of all source URLs → Playwright browser smoke); post-merge main Validate run
+  [39126106215](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39126106215) success.
+* **Pages:** Pages API latest build for `e518ebfa`: **built** (2026-10-18 12:09:12 UTC, no error);
+  https://buffedlizard55-lab.github.io/MaltaProj5/ serves the 295-candidate register.
+* **Flagged irregularities, published, never blocking:** the six official-page inconsistencies from
+  T37 are printed with exact quotes on the relevant rows and searchable on
+  [Flagged for Review](review.html); the dual Noontime Concerts rows are cross-referenced in notes
+  per the GDC-pair precedent. Nothing critical is left unqueued: all 21 additions are listed on
+  their topic pages and the free-upcoming dashboard.
+* **What another session can safely take next:** Undiscovered SF, How Weird, Amoeba in-store shows,
+  Urban Air Market (re-check when its domain is live), and a richer venue list for Circus in the
+  Parks once the 2027 park schedule is posted — all logged in
+  [`data/research/audit-d57e2eeb.md`](data/research/audit-d57e2eeb.md) as open research items.
+

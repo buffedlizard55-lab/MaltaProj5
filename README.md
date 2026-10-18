@@ -10,14 +10,14 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 | Measure | Count |
 |---|---:|
-| Candidates assessed | 246 |
+| Candidates assessed | 251 |
 | Prior-main candidates retained (231 initial + 2 companion additions) | 233 |
-| New official-calendar entries | 13 |
-| Entries admitted to the city-only directory | 167 |
+| New official-calendar entries | 18 |
+| Entries admitted to the city-only directory | 172 |
 | Candidates held off the directory for review | 79 |
 | Weekly / monthly / annual entries | 23 / 7 / 26 |
-| Special, dated or cadence-unconfirmed entries | 111 |
-| Exact cited official-source URLs / distinct domains | 242 / 140 |
+| Special, dated or cadence-unconfirmed entries | 116 |
+| Exact cited official-source URLs / distinct domains | 248 / 141 |
 
 The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
@@ -32,7 +32,7 @@ The directory includes 14 programme umbrellas and their independently sourced ch
 - **Upcoming page**: approved dated entries sorted soonest-first (running now highlighted), then weekly/monthly recurring entries with **no invented next date**.
 - **Cost on every row**: a badge derived only from the audited admission text — `FREE`, `Free with paid parts`, `Paid`, `Cost in admission text`, or `Cost not stated — unverified` (blank is never called free). A Cost filter is in the table tools.
 - **Free first page**: the whole directory ordered free → paid → cost-not-stated.
-- **Gaming · Music · AI focus page**: groups matched only from audited event names (Gaming: Pokémon World Championships 2026; Music: 11 name-matched entries; **AI: none found — flagged as a coverage gap, nothing invented**), then everything else.
+- **Gaming · Music · AI focus page**: name-matched groups, plus two 2026 Moscone conferences whose official pages identify AI (Current San Francisco 2026, Microsoft Ignite 2026). Family Game Time (18 Oct 2026) and GDC Festival of Gaming 2027 join the gaming group. Blank admission stays blank.
 - Regularly occurring (weekly/monthly/annual) vs special/dated split is unchanged and remains on its own pages. Mobile: sticky event column, horizontal table scroll, 2-column cards.
 
 ## What a listing means

@@ -1,0 +1,564 @@
+{
+ "schema_version": 2,
+ "session": "59f56c24",
+ "captured_at": "2026-10-18T12:00:00+00:00",
+ "method": "Official organizer/venue pages read 2026-10-18. Exact quotations only.",
+ "captures": {
+  "https://sfpl.org/events/2026/10/18/social-family-game-time": {
+   "http": 200,
+   "final_url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "3c94871a7ff53e37e800251ac38314d1ef0f1e710a81c791e2a433037de18751",
+   "truncated_response": false,
+   "title": "Social: Family Game Time | San Francisco Public Library",
+   "text": "Social: Family Game Time\nSunday, 10/18/2026\n2:00 - 3:30\nSuitable for:\nFamilies\nWest Portal Children's Area\nWest Portal\nAddress\n190 Lenox Way\nSan Francisco, CA94127\nUnited States\nRelax and play with family, friends and neighbors using a variety of games to choose from, including old favorites and new discoveries. For children and their caregivers.\nCommunity & Neighborhood\nGaming\nChallenge yourself with our board games, video games and more.\nThis program is sponsored by Friends of the San Francisco Public Library.\nAttending Programs\nAll programs are drop-in (no registration necessary) unless otherwise noted.\n",
+   "pdf": false,
+   "links": [],
+   "structured": [],
+   "seconds": 0,
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T12:00:00+00:00",
+    "sha256": "3c94871a7ff53e37e800251ac38314d1ef0f1e710a81c791e2a433037de18751",
+    "truncated_response": false,
+    "title": "Social: Family Game Time | San Francisco Public Library",
+    "pdf": false,
+    "seconds": 0,
+    "text_truncated": false
+   },
+   "tool_excerpt": "",
+   "tool_checked_at": ""
+  },
+  "https://www.moscone.com/events/gdc-festival-gaming-2027": {
+   "http": 200,
+   "final_url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "450aba3444aa2ecfa0565e3fd259af94846add7bdcdab1d9f594c98173b127ce",
+   "truncated_response": false,
+   "title": "GDC Festival of Gaming 2027",
+   "text": "GDC Festival of Gaming 2027\nWhere the Global Games Industry Comes Together\nIN-PERSON | March 1–5, 2027 | Moscone Center | San Francisco, CA, USA\nGDC Festival of Gaming 2027 is the premier gathering for the global business of games, bringing together professionals from every corner of the industry. Hosted at Moscone Center in San Francisco, the Festival unites game developers, designers, programmers, publishers, marketers, investors, and technology leaders to learn, connect, collaborate, and shape the future of interactive entertainment.\nWelcome to The Moscone Center!\nThe Moscone Center\nAdministrative Office\n747 Howard Street\nSan Francisco, CA 94103\n415.974.4000\n",
+   "pdf": false,
+   "links": [],
+   "structured": [],
+   "seconds": 0,
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T12:00:00+00:00",
+    "sha256": "450aba3444aa2ecfa0565e3fd259af94846add7bdcdab1d9f594c98173b127ce",
+    "truncated_response": false,
+    "title": "GDC Festival of Gaming 2027",
+    "pdf": false,
+    "seconds": 0,
+    "text_truncated": false
+   },
+   "tool_excerpt": "",
+   "tool_checked_at": ""
+  },
+  "https://gdconf.com/passes-pricing/": {
+   "http": 200,
+   "final_url": "https://gdconf.com/passes-pricing/",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "66cebcf0d37a1a9c2050b9bd29914e8f5f2d0a34fd5590cafb6bc966224c1f8a",
+   "truncated_response": false,
+   "title": "Passes & Pricing | GDC Festival of Gaming",
+   "text": "GDC Festival of Gaming\nMarch 1-5, 2027\nMoscone Center San Francisco, CA\nPasses & Pricing\nRegister by December 11 at 11:59pm PT to lock in our Early Rate.\nChoose Your Pass\nFestival $549\nEarly Rate\nThe complete GDC experience.\nGame Changer $1249\nIndie OR Start-Up $299\nFestival Hall ONLY $175\nBusiness Hall ONLY $125\nAcademic $299\n1-Day Career $125\n",
+   "pdf": false,
+   "links": [],
+   "structured": [],
+   "seconds": 0,
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://gdconf.com/passes-pricing/",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T12:00:00+00:00",
+    "sha256": "66cebcf0d37a1a9c2050b9bd29914e8f5f2d0a34fd5590cafb6bc966224c1f8a",
+    "truncated_response": false,
+    "title": "Passes & Pricing | GDC Festival of Gaming",
+    "pdf": false,
+    "seconds": 0,
+    "text_truncated": false
+   },
+   "tool_excerpt": "",
+   "tool_checked_at": ""
+  },
+  "https://www.moscone.com/events/current-san-francisco-2026": {
+   "http": 200,
+   "final_url": "https://www.moscone.com/events/current-san-francisco-2026",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "1b0ae8fb21831ba0470afc8a67b16ebe5366c548243e66aeac13e716da19bc2b",
+   "truncated_response": false,
+   "title": "Current San Francisco 2026",
+   "text": "Current San Francisco 2026\nWhere Real-Time Data and AI Come Together\nIN-PERSON | November 4–5, 2026 | Moscone West | San Francisco, CA, USA\nCurrent San Francisco 2026 is Confluent’s flagship conference dedicated to real-time data, data streaming, and artificial intelligence. Hosted at Moscone West in San Francisco, this premier event brings together developers, architects, data engineers, IT leaders, and business innovators to discover how organizations are building intelligent, event-driven applications powered by data in motion.\nWelcome to The Moscone Center!\nThe Moscone Center\nAdministrative Office\n747 Howard Street\nSan Francisco, CA 94103\n",
+   "pdf": false,
+   "links": [],
+   "structured": [],
+   "seconds": 0,
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.moscone.com/events/current-san-francisco-2026",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T12:00:00+00:00",
+    "sha256": "1b0ae8fb21831ba0470afc8a67b16ebe5366c548243e66aeac13e716da19bc2b",
+    "truncated_response": false,
+    "title": "Current San Francisco 2026",
+    "pdf": false,
+    "seconds": 0,
+    "text_truncated": false
+   },
+   "tool_excerpt": "",
+   "tool_checked_at": ""
+  },
+  "https://www.moscone.com/events/microsoft-ignite-2026": {
+   "http": 200,
+   "final_url": "https://www.moscone.com/events/microsoft-ignite-2026",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "088bbc76bd033fe4b5acfdcf36c958c7bb50805830ce0c173d590f85f61fee33",
+   "truncated_response": false,
+   "title": "Microsoft Ignite 2026",
+   "text": "Microsoft Ignite 2026\nThe Premier Conference for AI, Cloud, Security, and Developer Innovation\nIN-PERSON & DIGITAL | November 17–20 | Moscone Center | San Francisco, CA, USA\nMicrosoft Ignite 2026 is Microsoft’s flagship technical conference for IT professionals, developers, business leaders, and partners. Hosted at Moscone Center in San Francisco with a digital attendance option, Ignite brings together the global Microsoft community to explore the latest advancements in artificial intelligence, cloud computing, security, and enterprise technology.\nWelcome to The Moscone Center!\nThe Moscone Center\nAdministrative Office\n747 Howard Street\nSan Francisco, CA 94103\n",
+   "pdf": false,
+   "links": [],
+   "structured": [],
+   "seconds": 0,
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.moscone.com/events/microsoft-ignite-2026",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T12:00:00+00:00",
+    "sha256": "088bbc76bd033fe4b5acfdcf36c958c7bb50805830ce0c173d590f85f61fee33",
+    "truncated_response": false,
+    "title": "Microsoft Ignite 2026",
+    "pdf": false,
+    "seconds": 0,
+    "text_truncated": false
+   },
+   "tool_excerpt": "",
+   "tool_checked_at": ""
+  },
+  "https://www.moscone.com/events/cloudflare-connect-2026": {
+   "http": 200,
+   "final_url": "https://www.moscone.com/events/cloudflare-connect-2026",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "302fb8b36284500b4c7858b0bb68edcdfcf411b45cc280951015fb0bbdd364ff",
+   "truncated_response": false,
+   "title": "Cloudflare Connect 2026",
+   "text": "Cloudflare Connect 2026\nBuilding a Faster, Safer, and More Connected Internet\nIN-PERSON | October 19–21 | San Francisco, CA, USA\nCloudflare Connect 2026 returns to San Francisco for its second year, bringing together thousands of technology leaders, innovators, developers, and security professionals from around the world.\nOver four days, attendees will experience a bigger and bolder program featuring visionary keynotes, technical sessions, and real-world use cases.\nCloudflare Connect 2026 brings the internet community together to shape what’s next. Save the date and join Cloudflare in San Francisco this October for four days of innovation and connection.\nWelcome to The Moscone Center!\nThe Moscone Center\nAdministrative Office\n747 Howard Street\nSan Francisco, CA 94103\n",
+   "pdf": false,
+   "links": [],
+   "structured": [],
+   "seconds": 0,
+   "text_truncated": false,
+   "latest_attempt": {
+    "http": 200,
+    "final_url": "https://www.moscone.com/events/cloudflare-connect-2026",
+    "content_type": "text/html",
+    "checked_at": "2026-10-18T12:00:00+00:00",
+    "sha256": "302fb8b36284500b4c7858b0bb68edcdfcf411b45cc280951015fb0bbdd364ff",
+    "truncated_response": false,
+    "title": "Cloudflare Connect 2026",
+    "pdf": false,
+    "seconds": 0,
+    "text_truncated": false
+   },
+   "tool_excerpt": "",
+   "tool_checked_at": ""
+  }
+ },
+ "extra_events": [
+  {
+   "id": "audit-sfpl-family-game-time",
+   "name": "Social: Family Game Time",
+   "category": "Community & outdoors",
+   "tags": [
+    "gaming"
+   ]
+  },
+  {
+   "id": "audit-gdc-festival-2027",
+   "name": "GDC Festival of Gaming 2027",
+   "category": "Festivals & culture",
+   "tags": [
+    "gaming"
+   ]
+  },
+  {
+   "id": "audit-current-sf-2026",
+   "name": "Current San Francisco 2026",
+   "category": "Festivals & culture",
+   "tags": [
+    "ai"
+   ]
+  },
+  {
+   "id": "audit-microsoft-ignite-2026",
+   "name": "Microsoft Ignite 2026",
+   "category": "Festivals & culture",
+   "tags": [
+    "ai"
+   ]
+  },
+  {
+   "id": "audit-cloudflare-connect-2026",
+   "name": "Cloudflare Connect 2026",
+   "category": "Festivals & culture",
+   "tags": []
+  }
+ ],
+ "decisions": {
+  "audit-sfpl-family-game-time": {
+   "reviewer": "59f56c24",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Social: Family Game Time",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+       "text": "Social: Family Game Time"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, 10/18/2026",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+       "text": "Sunday, 10/18/2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "2:00 - 3:30",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+       "text": "2:00 - 3:30"
+      }
+     ]
+    },
+    "venue": {
+     "value": "West Portal Children's Area",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+       "text": "West Portal Children's Area"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+      "text": "190 Lenox Way San Francisco, CA94127"
+     }
+    ],
+    "basis": "Dedicated SFPL event page places West Portal Children's Area at 190 Lenox Way, San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-18",
+     "end": "2026-10-18",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+       "text": "Sunday, 10/18/2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Official SFPL event page. Topic is Gaming. Admission is not stated; drop-in is not treated as free entry. Location-page hour snippets of 3:00–4:00 are not used.",
+   "notes": "For children and their caregivers.",
+   "entry_type": "event",
+   "parent": ""
+  },
+  "audit-gdc-festival-2027": {
+   "reviewer": "59f56c24",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "GDC Festival of Gaming 2027",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+       "text": "GDC Festival of Gaming 2027"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "March 1–5, 2027",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+       "text": "March 1–5, 2027"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Moscone Center",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+       "text": "Moscone Center"
+      }
+     ]
+    },
+    "price": {
+     "value": "Festival $549",
+     "quotes": [
+      {
+       "url": "https://gdconf.com/passes-pricing/",
+       "text": "Festival $549"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+      "text": "March 1–5, 2027 | Moscone Center | San Francisco, CA, USA"
+     }
+    ],
+    "basis": "Official Moscone event page locates the 2027 festival at Moscone Center, San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2027-03-01",
+     "end": "2027-03-05",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+       "text": "March 1–5, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Official Moscone and organizer pages. Festival $549 is the Early Rate on the pricing page; other pass types and later windows are not copied as the only cost.",
+   "notes": "Early Rate copy: Register by December 11 at 11:59pm PT to lock in our Early Rate.",
+   "entry_type": "event",
+   "parent": ""
+  },
+  "audit-current-sf-2026": {
+   "reviewer": "59f56c24",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Current San Francisco 2026",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/current-san-francisco-2026",
+       "text": "Current San Francisco 2026"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "November 4–5, 2026",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/current-san-francisco-2026",
+       "text": "November 4–5, 2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Moscone West",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/current-san-francisco-2026",
+       "text": "Moscone West"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.moscone.com/events/current-san-francisco-2026",
+      "text": "November 4–5, 2026 | Moscone West | San Francisco, CA, USA"
+     }
+    ],
+    "basis": "Official Moscone event page locates Current San Francisco 2026 at Moscone West, San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-04",
+     "end": "2026-11-05",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/current-san-francisco-2026",
+       "text": "November 4–5, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Official Moscone event page for an AI / real-time data conference. Admission not stated.",
+   "notes": "Page subtitle: Where Real-Time Data and AI Come Together.",
+   "entry_type": "event",
+   "parent": ""
+  },
+  "audit-microsoft-ignite-2026": {
+   "reviewer": "59f56c24",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Microsoft Ignite 2026",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/microsoft-ignite-2026",
+       "text": "Microsoft Ignite 2026"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "November 17–20",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/microsoft-ignite-2026",
+       "text": "November 17–20"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Moscone Center",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/microsoft-ignite-2026",
+       "text": "Moscone Center"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.moscone.com/events/microsoft-ignite-2026",
+      "text": "November 17–20 | Moscone Center | San Francisco, CA, USA"
+     }
+    ],
+    "basis": "Official Moscone event page locates the in-person conference at Moscone Center, San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-17",
+     "end": "2026-11-20",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/microsoft-ignite-2026",
+       "text": "Microsoft Ignite 2026"
+      },
+      {
+       "url": "https://www.moscone.com/events/microsoft-ignite-2026",
+       "text": "November 17–20"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Official Moscone in-person record. Year is taken only from the event title, not from a URL. Digital attendance is excluded. Admission not stated.",
+   "notes": "Page also offers a digital attendance option; that is not this city listing.",
+   "entry_type": "event",
+   "parent": ""
+  },
+  "audit-cloudflare-connect-2026": {
+   "reviewer": "59f56c24",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Cloudflare Connect 2026",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/cloudflare-connect-2026",
+       "text": "Cloudflare Connect 2026"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 19–21",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/cloudflare-connect-2026",
+       "text": "October 19–21"
+      }
+     ]
+    },
+    "venue": {
+     "value": "The Moscone Center",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/cloudflare-connect-2026",
+       "text": "The Moscone Center"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.moscone.com/events/cloudflare-connect-2026",
+      "text": "747 Howard Street San Francisco, CA 94103"
+     }
+    ],
+    "basis": "Official Moscone Center event page for Cloudflare Connect 2026; administrative address is 747 Howard Street, San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-19",
+     "end": "2026-10-21",
+     "quotes": [
+      {
+       "url": "https://www.moscone.com/events/cloudflare-connect-2026",
+       "text": "Cloudflare Connect 2026"
+      },
+      {
+       "url": "https://www.moscone.com/events/cloudflare-connect-2026",
+       "text": "October 19–21"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Official Moscone event page. Event dateline names San Francisco, not a hall. Copy says both October 19–21 and over four days; those are not reconciled. Admission not stated.",
+   "notes": "",
+   "entry_type": "event",
+   "parent": ""
+  }
+ },
+ "not_added": [
+  "Gaming at The Mix — no dated occurrence, admission, or Mix-specific address on the captured gaming page.",
+  "YBG additional October shows — ybgfestival.org returned reCAPTCHA this session."
+ ]
+}

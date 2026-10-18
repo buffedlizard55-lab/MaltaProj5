@@ -54,7 +54,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T12 | Second site in `docs/` (dashboard + category subpages + Flagged for Review) | done | `4f47c142` | `docs/`, `tools/build_site.py` |
 | T13 | Line-by-line verification pass (every row sourced, links resolve, domain allowlist) | done | `4f47c142` | `tools/verify_site.py` |
 | T14 | Second integration: fold all sessions' work into one tree; publish `docs/` site as primary with the unified register under `/inventory/` | done | `4f47c142` | `COORDINATION.md`, `README.md`, `.github/workflows/pages.yml`, `docs/` |
-| T15 | GitHub Pages publication | **live (branch mode); Actions mode pending one owner setting** | all sessions | `.github/workflows/pages.yml` |
+| T15 | GitHub Pages publication | **done — live** | all sessions | `.github/workflows/pages.yml` |
 | T16 | Defect D1 fix: `tools/integrate.py` idempotency + CI regression test | done | `5a85baf2` | `tools/integrate.py`, `data/sources_3a19e72d.json`, `data/review_3a19e72d.json`, `.github/workflows/pages.yml` |
 | T17 | Register expansion 86→106 entries from official sources | in progress (PR #7 open) | `a1b7522f` | `data/events.json` et al. (see PR #7) |
 
@@ -341,8 +341,18 @@ git diff --exit-code -- data/ '*.html' after the above -> clean
 - Merge round 3 (`13776ab`): resolved COORDINATION.md (this file — `5a85baf2`'s D1 defect log and
   PR #4 assessment preserved verbatim, response added); workflow auto-merged (reproducibility +
   remote + docs checks coexist); all validators pass on the merged tree (T14 block above).
-- Next: push, confirm PR #4 CI (validate + remote check + verify_site + reproducibility), merge
-  PR #4, then attempt the Pages source switch (see T15 record).
+- PR #4 final CI (run `39086810984`, head `bb838b5`): validate **pass** in 58s — build, validate,
+  reproducibility (integrate.py ×2 byte-identical), remote source check (75 URLs), generated-files
+  freshness, docs/ verify, artifact upload. **PR #4 MERGED 01:32:45 UTC, merge commit `2fd4168`.**
+- Pages after the merge: both deploy paths succeeded for `2fd4168` — legacy branch build
+  (`pages-build-deployment`, 01:32:47, built) and the Actions deploy job (run `39086887440`:
+  validate **success** + deploy **success**; deployments `7148395584`/`7148401820` to the
+  `github-pages` environment, last status **success at 01:34:20** — the most recent deployment,
+  i.e. the served content is the staged artifact: 167-event docs/ site at `/` + unified register
+  at `/inventory/`).
+- Pages source switch attempt: `PATCH /repos/.../pages` with `build_type=workflow` → **404 Not
+  Found** (GitHub hides the resource from credentials without the Pages admin grant; `GET` works,
+  `PATCH` does not). Cannot be automated with this credential — see the note below the record.
 
 ## Activity log — `a1b7522f`
 
@@ -361,8 +371,8 @@ git diff --exit-code -- data/ '*.html' after the above -> clean
 | PR #5 (`5a85baf2`) | Merged, merge commit `397213c` (records update) |
 | PR #6 (`5a85baf2`) | Merged, merge commit `13776ab` (D1 fix + CI regression test); CI success |
 | PR #7 (`a1b7522f`) | Open — register expansion 86→106 |
-| PR #4 (`4f47c142` → `main`) | Open — second integration; CI history: pass on `d14c4da`; transient remote-check failure on `f1ed893`; merge-ref conflicts blocked runs on `07634d1`/`37c9c19`; final result recorded at merge |
-| **GitHub Pages** | **LIVE** — https://buffedlizard55-lab.github.io/MaltaProj5/ — enabled (by the owner) ~01:27 UTC in *branch* mode: `main` / `/ (root)`, first deploy run `39086444257` **success**. This serves the unified register site (86 rows) at the site root. |
+| PR #4 (`4f47c142` → `main`) | **MERGED 01:32:45 UTC, merge commit `2fd4168`** — final CI (run `39086810984`) validate **pass**: build, validation, reproducibility, remote source check, generated-files freshness, docs/ verify, artifact upload |
+| **GitHub Pages** | **LIVE** — https://buffedlizard55-lab.github.io/MaltaProj5/ — enabled by the owner ~01:27 UTC (branch mode, `main` / `/ (root)`), then deployed twice for `2fd4168`: legacy branch build **success** (01:32:47) and the Actions `Validate and deploy Pages` deploy job **success** (deployments at 01:33:23/01:34:02, last status success 01:34:20 — the most recent deployment, so the served content is the Actions artifact: the 167-event `docs/` site at `/` with the unified register at `/inventory/`). |
 
 ### Pages enablement history (superseded by the live site above, kept for the record)
 
@@ -371,12 +381,15 @@ Four 403 attempts by two sessions (PR #1 deploy run; `POST /repos/.../pages` wit
 integration`; `X-Oauth-Scopes:` empty, `X-Accepted-Github-Permissions: metadata=read`. The owner
 resolved enablement manually.
 
-### Remaining owner action (optional, to serve the 167-event site at the root URL)
+### Optional owner action (recommended for a clean single deploy path)
 
-The current branch-mode deploy serves the repo root. To publish the staged artifact instead
-(167-event `docs/` site at `/` + unified register at `/inventory/`), switch
-**Settings → Pages → Build and deployment → Source: GitHub Actions**, then re-run
-`Validate and deploy Pages`. No code change is needed — the workflow, its checks and the artifact
-staging are already on `main` once PR #4 merges. Both options keep a live, verified site; this is a
-presentation choice for the owner. `4f47c142` will attempt the switch via API once (expected 403)
-and record the result here.
+The Pages site is currently configured in *branch* mode (`main` / `/ (root)`) **and** the
+`Validate and deploy Pages` workflow also deploys on every push to `main`. Both succeeded for
+`2fd4168`; the Actions deployment is the most recent, so the served content is the staged artifact
+(167-event site at `/`, unified register at `/inventory/`). Because two deploy paths race on every
+push, the recommended setting is **Settings → Pages → Build and deployment → Source: GitHub
+Actions** — this disables the legacy branch build and leaves the validated workflow artifact as the
+single source of truth. No code change is needed. (`4f47c142`'s `PATCH` attempt to switch it via
+API returned 404 — the credential lacks the Pages admin grant — so this remains a one-click owner
+setting. Alternatively, leaving everything as-is also works: the Actions deployment completes
+after the legacy build on each push and ends up served.)

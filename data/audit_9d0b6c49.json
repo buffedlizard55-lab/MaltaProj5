@@ -1,0 +1,593 @@
+{
+ "schema_version": 1.0,
+ "session": "9d0b6c49",
+ "captured_at": "2026-10-18T17:20:00+00:00",
+ "snapshot": "2026-10-18",
+ "method": "Independent post-publication verification and free-first gap research (T-9d0b-1/2), session 9d0b6c49, 18 October 2026. Official City (sfrecpark.org), community-district (sfciviccenter.org) and organizer (sfcmc.org) pages were read with the workspace fetch_page tool; every value below is copied from text that tool actually returned and is quoted exactly. Nothing is inherited from an earlier session, nothing is inferred, and no value is filled from memory. Retrieval honesty: fetch_page reports success but no HTTP status, so every capture records http=null and labels its method; a page that returned more chunks than were read is marked complete:false with the chunk counts recorded, and only text from the retrieved chunk is used. A blank field stays blank. Candidates whose official copy conflicts, or whose venue's own status is unresolved, are documented in data/research/audit-9d0b6c49.md and held off this overlay rather than published.",
+ "captures": {
+  "https://www.sfrecpark.org/Calendar.aspx?CID=40": {
+   "http": null,
+   "final_url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T17:20:00+00:00",
+   "title": "Calendar • UN Plaza | Fulton Plaza | Civic Center Plaza",
+   "text": "## UN Plaza \\| Fulton Plaza \\| Civic Center Plaza\n\n01. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10575&month=10&year=2026&day=18&calType=0)\n\n    October 18, 2026, 10:00 AM - 11:00 AM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-18T10:00:00\n\n    Free dance fitness classes\n\n    United Nations Plaza50 United Nations PlazaSan FranciscoCA94102\n\n    Free dance fitness classes\n     [More Details](https://www.sfrecpark.org/Calendar.aspx?EID=10575&month=10&year=2026&day=18&calType=0)\n03. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10528&month=10&year=2026&day=18&calType=0)\n\n    October 19, 2026, 5:30 PM - 6:30 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-19T17:30:00\n\n    Free dance fitness classes\n\n    United Nations Plaza50 United Nations PlazaSan FranciscoCA94102\n04. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10529&month=10&year=2026&day=18&calType=0)\n\n    October 20, 2026, 5:30 PM - 6:30 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-20T17:30:00\n05. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10530&month=10&year=2026&day=18&calType=0)\n\n    October 21, 2026, 5:30 PM - 6:30 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-21T17:30:00\n06. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10531&month=10&year=2026&day=18&calType=0)\n\n    October 22, 2026, 5:30 PM - 6:30 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-22T17:30:00\n07. ### [Chess and Mahjong](https://www.sfrecpark.org/Calendar.aspx?EID=10601&month=10&year=2026&day=18&calType=0)\n\n    October 23, 2026, 2:00 PM - 5:00 PM\n\n    @\n\n    United Nations Plaza\n\n    Chess and Mahjong2026-10-23T14:00:00\n\n    Free chess and mahjong lessons and play\n\n    United Nations Plaza50 United Nations PlazaSan FranciscoCA94102\n\n    Free chess and mahjong lessons and play\n     [More Details](https://www.sfrecpark.org/Calendar.aspx?EID=10601&month=10&year=2026&day=18&calType=0)\n08. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10548&month=10&year=2026&day=18&calType=0)\n\n    October 24, 2026, 10:00 AM - 11:00 AM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-24T10:00:00\n09. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10562&month=10&year=2026&day=18&calType=0)\n\n    October 24, 2026, 11:00 AM - 12:00 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-24T11:00:00\n10. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10576&month=10&year=2026&day=18&calType=0)\n\n    October 25, 2026, 10:00 AM - 11:00 AM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-25T10:00:00\n11. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10589&month=10&year=2026&day=18&calType=0)\n\n    October 25, 2026, 11:00 AM - 12:00 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-25T11:00:00\n12. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10532&month=10&year=2026&day=18&calType=0)\n\n    October 26, 2026, 5:30 PM - 6:30 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-26T17:30:00\n13. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10533&month=10&year=2026&day=18&calType=0)\n\n    October 27, 2026, 5:30 PM - 6:30 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-27T17:30:00\n14. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10534&month=10&year=2026&day=18&calType=0)\n\n    October 28, 2026, 5:30 PM - 6:30 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance Fitness Class by Rae Studios2026-10-28T17:30:00\n15. ### [Free Dance Fitness Class by Rae Studios](https://www.sfrecpark.org/Calendar.aspx?EID=10535&month=10&year=2026&day=18&calType=0)\n\n    October 29, 2026, 5:30 PM - 6:30 PM\n\n    @\n\n    United Nations Plaza\n\n    Free Dance",
+   "retrieval": {
+    "method": "workspace fetch_page",
+    "chunks_retrieved": [
+     0
+    ],
+    "chunks_total": 2,
+    "complete": false
+   },
+   "tool_excerpt": null,
+   "evidence_origin": "Verbatim excerpt of the official page body as returned by the workspace fetch_page tool on 2026-10-18. The tool reports success but no HTTP status code, so http is null; reachability of every cited URL is enforced separately by the CI remote check."
+  },
+  "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0": {
+   "http": null,
+   "final_url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T17:20:00+00:00",
+   "title": "Calendar • Chess and Mahjong",
+   "text": "## Event Details\n\nView Map\n\n1. [Google](http://maps.google.com/maps?q=50+United+Nations+Plaza,%20San+Francisco,%20CA%2094102)\n\nDate:\n\nSeptember 18, 2026\n\n2026-09-18T14:00:00\n\nTime:\n\n2:00 PM - 5:00 PM\n\nLocation:\n\n[View Facility](https://sfrecpark.org/Facilities/Facility/Details/United-Nations-Plaza-458)\n\nUnited Nations Plaza\n\nAddress:\n\n50 United Nations Plaza\n\nSan Francisco, CA94102\n\nCost:\n\nFree\n\n## Chess and Mahjong\n\n### Friday, September 18, 2026\n\nFree chess and mahjong lessons and play\n\n* * *\n\nEver wanted to learn chess or mahjong? Whether you’re a complete beginner or looking for a casual match, join us for **Free Lessons & Open Play!** All skill levels welcome. Cards, tiles, and boards provided. Come grab a seat!",
+   "retrieval": {
+    "method": "workspace fetch_page",
+    "chunks_retrieved": [
+     0
+    ],
+    "chunks_total": 1,
+    "complete": true
+   },
+   "tool_excerpt": null,
+   "evidence_origin": "Verbatim excerpt of the official page body as returned by the workspace fetch_page tool on 2026-10-18. The tool reports success but no HTTP status code, so http is null; reachability of every cited URL is enforced separately by the CI remote check."
+  },
+  "https://sfciviccenter.org/event/learn-and-play-chess-at-un-plaza/": {
+   "http": null,
+   "final_url": "https://sfciviccenter.org/event/learn-and-play-chess-at-un-plaza/",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T17:20:00+00:00",
+   "title": "Learn and Play Chess and Mahjong at UN Plaza - SF Civic Center",
+   "text": "# Learn and Play Chess and Mahjong at UN Plaza\n\nFridays, 2-5pm\n\nWant to learn chess and mahjong, or sharpen the skills you already have? Check out the chess and mahjong event series taking place at UN Plaza every Friday, 2-5pm!\n\nFeaturing drop-in games and free lessons from the Mechanics’ Institute, the weekly event also features chess-puzzles and other games such as dominos. Free, drop-in.",
+   "retrieval": {
+    "method": "workspace fetch_page",
+    "chunks_retrieved": [
+     0
+    ],
+    "chunks_total": 1,
+    "complete": true
+   },
+   "tool_excerpt": null,
+   "evidence_origin": "Verbatim excerpt of the official page body as returned by the workspace fetch_page tool on 2026-10-18. The tool reports success but no HTTP status code, so http is null; reachability of every cited URL is enforced separately by the CI remote check."
+  },
+  "https://sfcmc.org/events/": {
+   "http": null,
+   "final_url": "https://sfcmc.org/events/",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T17:20:00+00:00",
+   "title": "Events - San Francisco Community Music Center",
+   "text": "Upcoming Events\n\nCMC presents high-quality, low cost concerts and events at its Mission District Branch and throughout the city.\n\n##### Cost\n\nAnyFree$15–$25$5–$15 (notaflof)$5–$30\n\nFree (2)\n\n### [CMC Halloween Party & Costume Parade](https://sfcmc.org/event/cmc-halloween-party-costume-parade-3/)\n\nWednesday,\n\nOctober 28, 2026\n\n4:15 pm\n\n– 5:15 pm\n\nCMC Concert Hall\n\n544 Capp Street, San Francisco, CA 94110\n\nPlease join us for our annual Halloween Spooktacular of fun and music! Featuring a showcase from CMC students from including Children’s Chorus, CMC Sparks, CMC Bernal Heights Neighborhood Choir, and more. All ages are welcome. Come in costume for the festive Costume Parade! Wednesday, October 28 from 4:15–5:15pmCMC Concert HallFree (bring a small snack or \\[…\\]\n\nCost: Free\n\n### [From Baroque to Cinema](https://sfcmc.org/event/from-baroque-to-cinema/)\n\nSunday,\n\nNovember 8, 2026\n\n3:00 pm\n\n– 5:00 pm\n\nCMC Concert Hall\n\n544 Capp Street, San Francisco, CA 94110\n\nJourney through three centuries of music with CMC faculty celebrating the unique beauty of the piano trio — violin, cello, and piano. Begin with the elegance of Baroque and Classical trios, move through the rich harmonies of the Romantic era, and explore early 20th-century styles, including Latin and film music. The program will include works \\[…\\]\n\nCost: Free\n\n[RSVP](https://from-baroque-to-cinema.eventbrite.com/)",
+   "retrieval": {
+    "method": "workspace fetch_page",
+    "chunks_retrieved": [
+     0
+    ],
+    "chunks_total": 1,
+    "complete": true
+   },
+   "tool_excerpt": null,
+   "evidence_origin": "Verbatim excerpt of the official page body as returned by the workspace fetch_page tool on 2026-10-18. The tool reports success but no HTTP status code, so http is null; reachability of every cited URL is enforced separately by the CI remote check."
+  }
+ },
+ "candidates": {
+  "i-chess-mahjong-un-plaza": {
+   "id": "i-chess-mahjong-un-plaza",
+   "name": "Chess and Mahjong (United Nations Plaza)",
+   "category": "Community & outdoors"
+  },
+  "i-rae-studios-dance-fitness": {
+   "id": "i-rae-studios-dance-fitness",
+   "name": "Free Dance Fitness Class by Rae Studios",
+   "category": "Community & outdoors"
+  },
+  "i-cmc-halloween-party": {
+   "id": "i-cmc-halloween-party",
+   "name": "CMC Halloween Party & Costume Parade",
+   "category": "Festivals & culture"
+  },
+  "i-cmc-baroque-cinema": {
+   "id": "i-cmc-baroque-cinema",
+   "name": "From Baroque to Cinema",
+   "category": "Festivals & culture"
+  }
+ },
+ "decisions": {
+  "i-chess-mahjong-un-plaza": {
+   "reviewer": "9d0b6c49",
+   "reviewed_at": "2026-10-18",
+   "parent": "",
+   "entry_type": "event",
+   "fields": {
+    "name": {
+     "value": "Chess and Mahjong",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+       "text": "## Chess and Mahjong"
+      },
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "Chess and Mahjong2026-10-23T14:00:00"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Fridays, 2-5pm",
+     "quotes": [
+      {
+       "url": "https://sfciviccenter.org/event/learn-and-play-chess-at-un-plaza/",
+       "text": "Fridays, 2-5pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "2:00 PM - 5:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+       "text": "2:00 PM - 5:00 PM"
+      },
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 23, 2026, 2:00 PM - 5:00 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "United Nations Plaza, 50 United Nations Plaza, San Francisco, CA94102",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+       "text": "United Nations Plaza"
+      },
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+       "text": "50 United Nations Plaza"
+      },
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+       "text": "San Francisco, CA94102"
+      },
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "United Nations Plaza50 United Nations PlazaSan FranciscoCA94102"
+      }
+     ]
+    },
+    "price": {
+     "value": "Cost: Free",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+       "text": "Cost: Free"
+      },
+      {
+       "url": "https://sfciviccenter.org/event/learn-and-play-chess-at-un-plaza/",
+       "text": "Free, drop-in."
+      },
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "Free chess and mahjong lessons and play"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+      "text": "50 United Nations Plaza"
+     },
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+      "text": "San Francisco, CA94102"
+     },
+     {
+      "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+      "text": "United Nations Plaza50 United Nations PlazaSan FranciscoCA94102"
+     }
+    ],
+    "basis": "The City's own Recreation and Park Department event-detail page prints the venue street address '50 United Nations Plaza, San Francisco, CA94102', and the Civic Center Community Benefit District page names UN Plaza."
+   },
+   "recurrence": {
+    "value": "every Friday, 2-5pm (weekly)",
+    "quotes": [
+     {
+      "url": "https://sfciviccenter.org/event/learn-and-play-chess-at-un-plaza/",
+      "text": "taking place at UN Plaza every Friday, 2-5pm"
+     },
+     {
+      "url": "https://sfciviccenter.org/event/learn-and-play-chess-at-un-plaza/",
+      "text": "the weekly event"
+     }
+    ]
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-23",
+     "end": "2026-10-23",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 23, 2026, 2:00 PM - 5:00 PM"
+      },
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "Chess and Mahjong2026-10-23T14:00:00"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "topic": "Gaming",
+   "reason": "City calendar confirms a dated free Friday instance; the partner district page supplies the weekly cadence in its own words. No further Friday is generated from the pattern.",
+   "notes": "Official pages disagree on the host: sfrecpark.org lists the programme plainly, while sfciviccenter.org says the free lessons come 'from the Mechanics’ Institute'. Both are quoted; no single organizer is asserted. The City event-detail page reached directly (EID=10596) shows the 18 September 2026 instance, which is past relative to the snapshot, so only the calendar-listed 23 October instance is approved as upcoming."
+  },
+  "i-rae-studios-dance-fitness": {
+   "reviewer": "9d0b6c49",
+   "reviewed_at": "2026-10-18",
+   "parent": "",
+   "entry_type": "event",
+   "fields": {
+    "name": {
+     "value": "Free Dance Fitness Class by Rae Studios",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "Free Dance Fitness Class by Rae Studios"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Dated instances listed on the City calendar from October 18 to October 29, 2026; the printed start time differs by date",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 18, 2026, 10:00 AM - 11:00 AM"
+      },
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 29, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "United Nations Plaza, 50 United Nations Plaza, San Francisco, CA 94102",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "United Nations Plaza50 United Nations PlazaSan FranciscoCA94102"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free dance fitness classes",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "Free dance fitness classes"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+      "text": "United Nations Plaza50 United Nations PlazaSan FranciscoCA94102"
+     }
+    ],
+    "basis": "Each City calendar entry prints the venue string 'United Nations Plaza, 50 United Nations Plaza, San Francisco, CA94102'."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-18",
+     "end": "2026-10-18",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 18, 2026, 10:00 AM - 11:00 AM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-19",
+     "end": "2026-10-19",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 19, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-20",
+     "end": "2026-10-20",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 20, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-21",
+     "end": "2026-10-21",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 21, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-22",
+     "end": "2026-10-22",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 22, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-24",
+     "end": "2026-10-24",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 24, 2026, 10:00 AM - 11:00 AM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-25",
+     "end": "2026-10-25",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 25, 2026, 10:00 AM - 11:00 AM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-26",
+     "end": "2026-10-26",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 26, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-27",
+     "end": "2026-10-27",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 27, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-28",
+     "end": "2026-10-28",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 28, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-29",
+     "end": "2026-10-29",
+     "quotes": [
+      {
+       "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+       "text": "October 29, 2026, 5:30 PM - 6:30 PM"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "topic": "Other",
+   "reason": "Eleven dated free instances are printed on the City's own UN Plaza calendar. No cadence sentence was found, so the row is Special/dated rather than Weekly.",
+   "notes": "Time is deliberately blank: the calendar prints a different start time per date (10:00 AM - 11:00 AM, 11:00 AM - 12:00 PM and 5:30 PM - 6:30 PM instances all appear), and 24 and 25 October each carry two instances. Collapsing them into one time cell would invent a value. Only the dates and times visible in the retrieved chunk are approved; the page returned two chunks and the second was not read, so later dates are not claimed."
+  },
+  "i-cmc-halloween-party": {
+   "reviewer": "9d0b6c49",
+   "reviewed_at": "2026-10-18",
+   "parent": "",
+   "entry_type": "event",
+   "fields": {
+    "name": {
+     "value": "CMC Halloween Party & Costume Parade",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "CMC Halloween Party & Costume Parade"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Wednesday, October 28, 2026",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "October 28, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "4:15 pm – 5:15 pm",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "4:15 pm"
+      },
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "– 5:15 pm"
+      },
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "Wednesday, October 28 from 4:15–5:15pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "CMC Concert Hall, 544 Capp Street, San Francisco, CA 94110",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "CMC Concert Hall"
+      },
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "544 Capp Street, San Francisco, CA 94110"
+      }
+     ]
+    },
+    "price": {
+     "value": "Cost: Free",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "Cost: Free"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfcmc.org/events/",
+      "text": "544 Capp Street, San Francisco, CA 94110"
+     }
+    ],
+    "basis": "The organizer's own events page prints the concert hall's San Francisco street address."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-28",
+     "end": "2026-10-28",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "Wednesday, October 28, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "topic": "Music",
+   "reason": "Single dated free concert-hall event on the organizer's own listing. Tagged Music on the organizer's description, not on the event name.",
+   "notes": "Topic is an explicit editorial decision: the verified name contains no music word, but the same official listing describes 'our annual Halloween Spooktacular of fun and music! Featuring a showcase from CMC students from including Children’s Chorus, CMC Sparks, CMC Bernal Heights Neighborhood Choir'. The listing truncates its own description at 'Free (bring a small snack or […]', so any further condition is unconfirmed and is not restated here. 'Annual' appears in the organizer's copy but no second edition date is printed, so cadence stays Special."
+  },
+  "i-cmc-baroque-cinema": {
+   "reviewer": "9d0b6c49",
+   "reviewed_at": "2026-10-18",
+   "parent": "",
+   "entry_type": "event",
+   "fields": {
+    "name": {
+     "value": "From Baroque to Cinema",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "From Baroque to Cinema"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, November 8, 2026",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "November 8, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "3:00 pm – 5:00 pm",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "3:00 pm"
+      },
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "– 5:00 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "CMC Concert Hall, 544 Capp Street, San Francisco, CA 94110",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "CMC Concert Hall"
+      },
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "544 Capp Street, San Francisco, CA 94110"
+      }
+     ]
+    },
+    "price": {
+     "value": "Cost: Free",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "Cost: Free"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfcmc.org/events/",
+      "text": "544 Capp Street, San Francisco, CA 94110"
+     }
+    ],
+    "basis": "The organizer's own events page prints the concert hall's San Francisco street address."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-08",
+     "end": "2026-11-08",
+     "quotes": [
+      {
+       "url": "https://sfcmc.org/events/",
+       "text": "Sunday, November 8, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "topic": "Music",
+   "reason": "Single dated free piano-trio concert on the organizer's own listing. Tagged Music on the organizer's description, not on the event name.",
+   "notes": "Topic is an explicit editorial decision: the verified name contains no music word, but the same official listing reads 'Journey through three centuries of music with CMC faculty celebrating the unique beauty of the piano trio — violin, cello, and piano.' The listing pairs 'Cost: Free' with an Eventbrite RSVP link; no ticket price is printed, so the price cell keeps the official 'Cost: Free' wording and the RSVP is recorded here rather than inferred as a charge."
+  }
+ }
+}

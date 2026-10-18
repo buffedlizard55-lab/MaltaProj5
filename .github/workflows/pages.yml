@@ -1,4 +1,4 @@
-name: Validate and deploy Pages
+name: Validate site
 
 on:
   push:
@@ -41,31 +41,8 @@ jobs:
         continue-on-error: true
         run: python tools/verify_rows.py --timeout 25 --out /tmp/verify_report.json
 
-      - name: Stage public files
-        run: |
-          mkdir -p _site
-          cp *.html _site/
-          cp -r assets data _site/
-          touch _site/.nojekyll
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-  deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: validate
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+# GitHub Pages is served in branch mode from `main` / (root), so a merge to main
+# publishes the committed root HTML automatically. This workflow is the gate: it
+# rebuilds from source, validates, checks that generated files are current, and
+# verifies that every cited URL still resolves before that merge can land.

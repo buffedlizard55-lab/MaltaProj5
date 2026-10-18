@@ -2,7 +2,7 @@
 
 The authoritative source ledger is **`data/sources.json`** and its rendered form
 **`sources.html`**. It is generated and re-checked by the pipeline; this file explains the rules
-rather than duplicating 199 changing records.
+rather than duplicating 213 changing records across 135 domains.
 
 ## What a source record contains
 
@@ -33,4 +33,5 @@ rather than duplicating 199 changing records.
 
 An earlier `SOURCES.md` listed the 26 source records compiled by session `3a19e72d`. Those records
 are preserved: the ledger now includes them (with their excerpts) alongside the records from the
-other two research passes. The full history is in git and in `data/sources_3a19e72d.json`.
+other three research passes (`5a85baf2`, `4f47c142`, `a1b7522f`). The full history is in git and
+in the `data/sources_*.json` snapshots.

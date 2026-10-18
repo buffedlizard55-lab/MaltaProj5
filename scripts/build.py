@@ -190,8 +190,8 @@ cat_cards = ('<h2>Browse by category</h2><div class="cards cats">'
              + "</div>")
 
 howto = ('<section class="prose"><h2>How this register was built</h2><ol>'
-         '<li><b>Two independent research passes</b> were reconciled row by row into one register '
-         '(sessions 3a19e72d, 5a85baf2 and 4f47c142). Overlapping rows were merged, not dropped: '
+         '<li><b>Four research passes were reconciled row by row</b> into one register (sessions '
+         '3a19e72d, 5a85baf2, 4f47c142 and a1b7522f). Overlapping rows were merged, not dropped: '
          'each keeps its official source.</li>'
          '<li><b>Only official pages</b> supply facts: organizers, venues, museums and City bodies. '
          'Tourism-board guides and third-party calendars were used for discovery only.</li>'
@@ -260,7 +260,7 @@ counts should not be read as unique gatherings.</p>
 </tbody></table>
 
 <h2>Verification status</h2>
-<p>Two levels are used. <b>Field-level</b> rows had their individual values transcribed from the official
+<p>Three labels are used. <b>Field-level</b> rows had their individual values transcribed from the official
 page by a researcher. <b>Page-level</b> rows were inherited from an independent pass; in integration the
 page was fetched and the event name confirmed, but each date and price was not re-transcribed.
 <b>Flagged</b> rows carry an unresolved value or note.</p>

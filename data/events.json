@@ -4627,7 +4627,7 @@
   },
   "notes": "Nationally recognized comedy festival.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -5949,7 +5949,7 @@
   },
   "notes": "",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -6102,7 +6102,7 @@
   },
   "notes": "",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -6723,7 +6723,7 @@
   },
   "notes": "Oldest continuously operating international antiques show on the West Coast; 60 dealers.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -7980,13 +7980,15 @@
    ]
   },
   "notes": "First-ever televised lowrider parade, with hydraulic 'hopping' competition.",
-  "flags": [],
+  "flags": [
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 521); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+  ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
+   "level": "flagged",
    "by": "automated fetch",
    "date": "2026-10-18"
   }

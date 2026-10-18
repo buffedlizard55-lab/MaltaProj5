@@ -26,7 +26,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `3a19e72d` | `arena/3a19e72d-maltaproj5` | 2026-10-18 ~00:20 | Research, dashboard, validation, Pages workflow (PRs #1, #2) |
 | `5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | Research, verification, analysis, checks (PR #3), first integration (PRs #5, #6) |
 | `4f47c142` | `arena/4f47c142-maltaproj5` | 2026-10-18 ~00:40 | Full-inventory research (167 events), docs/ site, verification pass, second integration (PR #4) |
-| `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7, open) |
+| `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7) |
+| `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -56,15 +57,15 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T14 | Second integration: fold all sessions' work into one tree; publish `docs/` site as primary with the unified register under `/inventory/` | done | `4f47c142` | `COORDINATION.md`, `README.md`, `.github/workflows/pages.yml`, `docs/` |
 | T15 | GitHub Pages publication | **done — live** | all sessions | `.github/workflows/pages.yml` |
 | T16 | Defect D1 fix: `tools/integrate.py` idempotency + CI regression test | done | `5a85baf2` | `tools/integrate.py`, `data/sources_3a19e72d.json`, `data/review_3a19e72d.json`, `.github/workflows/pages.yml` |
-| T17 | Register expansion 86→106 entries from official sources | in progress (PR #7 open) | `a1b7522f` | `data/events.json` et al. (see PR #7) |
+| T17 | Register expansion 86→106 entries from official sources | **done — content integrated**; PR #7 superseded | `a1b7522f` | `data/events_a1b7522f.json`, `data/sources_a1b7522f.json` |
+| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **in progress** | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
 
-**Reconciliation note (T11 vs T2/T3/T9):** sessions `5a85baf2` and `4f47c142` researched
-overlapping scopes independently. Neither dataset is discarded: the unified register
-(sessions `3a19e72d`+`5a85baf2`, root site) and the 167-event inventory (session `4f47c142`,
-`docs/` site) are both preserved. In Actions-mode deploys the larger inventory is the primary
-Pages site and the unified register is served at `/inventory/`; in the current branch-mode deploy
-(root) the unified register is served at the site root. See the PR #4 assessment and response
-below for the source-quality discussion.
+**Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
+row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
+sources), 20 rows imported from `a1b7522f`, two duplicate pairs merged, and every remaining row
+carries its own source URL. The two parallel sites were collapsed into one: the root site is the
+only published site, and `docs/` was deleted. No session's dataset was discarded — all authored
+files are preserved under `data/`, and the merge map is explicit in `tools/consolidate.py`.
 
 ---
 
@@ -460,3 +461,55 @@ Blank start times (162 rows), blank admission (35), bot-blocked sources (46 URLs
 seasonal copy, and the coverage gaps listed on `review.html`. None blocks publication; all are
 labelled with their official links.
 
+
+---
+
+## Final integration (T18) — `c961fbe4`, 2026-10-18
+
+### What was merged
+
+| Input | Rows | Outcome |
+|---|---|---|
+| Unified register (`3a19e72d` + `5a85baf2`) | 86 | Base; two duplicate Carnaval rows already reconciled by `5a85baf2`. |
+| Full inventory (`4f47c142`, PR #4 branch) | 167 | 36 rows reconciled into base rows by an explicit reviewed map; 131 new rows added. |
+| Register expansion (`a1b7522f`, PR #7 branch) | 20 | 19 new rows added; the 20th (SF Marathon) reconciled into the existing row, which now carries both sources. |
+| **Canonical register** | **231** | Weekly 25 · Monthly 11 · Annual 135 · Special 60 |
+
+`docs/` and its generator were deleted: the root site is the only published site. All authored
+inputs remain under `data/`, including `data/exclusions.json` and the per-session snapshots.
+
+### Verification performed
+
+```
+python3 tools/consolidate.py    -> 231 rows, 213 sources, 28 findings
+python3 tools/verify_rows.py    -> 231 rows; 165 name matches, 64 not found,
+                                   2 PDFs, 0 no-response, 0 dead URLs, 46 blocked URLs
+python3 tools/apply_verify.py   -> 213 source records updated with excerpts/labels
+python3 scripts/build.py        -> 12 pages, 231 rows, 213 source records
+python3 scripts/validate.py     -> PASS (data, evidence, blanks, parents, 12 pages, local links)
+```
+
+* **Dead links: 0.** `tools/remotecheck.py` gates merges on 404/410/DNS.
+* **64 rows not name-matched** are overwhelmingly bot-blocked (46 URLs returned
+  202/403/405/429/5xx) or JavaScript-rendered (the zoo calendar, Club Darc). They are labelled and
+  listed on `review.html`; blocking is never counted as verification. 35 rows carry an automation
+  "manual re-check requested" note.
+* **Manual fixes during integration:** Curran Theatre (sfcurran.com unreachable — ATG's official
+  box-office page cited instead), SF Marathon (source moved to the 2027 race page), Legion free
+  Tuesdays merged with the FAMSF first-Tuesday entry, After Dark's two 2026 dates merged,
+  CAAMFest flagged for East Bay screenings, MLK and ArtSpan re-pointed to dated official pages.
+* **Geography:** events at Levi's Stadium, the Cow Palace and other out-of-city venues are excluded
+  and recorded in `data/exclusions.json` and on `review.html`.
+
+### Irregularities carried forward (published, not blocking)
+
+Blank start times (most common blank), blank admission, blocked sources, year-ambiguous seasonal
+copy, and the coverage gaps listed on `review.html`. None blocks publication; all are labelled with
+their official links.
+
+### Publication
+
+GitHub Pages is in branch mode (`main` / root), so publishing happens on merge to `main`. The
+`Validate site` workflow rebuilds from source, validates, proves the committed generated files are
+current (`git diff --exit-code`) and checks every cited URL before merge. PR link and merge result
+are recorded below once the PR exists.

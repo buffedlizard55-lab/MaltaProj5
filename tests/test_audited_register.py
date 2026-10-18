@@ -16,6 +16,7 @@ from register_3adf31d9 import extend as extend_register  # noqa: E402
 from register_21f3dd85 import extend as extend_register_21f3dd85  # noqa: E402
 from register_d57e2eeb import extend as extend_register_d57e2eeb  # noqa: E402
 from overlay_06949148 import extend as extend_register_06949148  # noqa: E402
+from register_9d0b6c49 import extend as extend_register_9d0b6c49  # noqa: E402
 from audit_evidence import retain_capture  # noqa: E402
 
 
@@ -29,11 +30,13 @@ class AuditedRegister(unittest.TestCase):
 
     def project(self, audit=None, history=None):
         h = history or self.history
-        # The additive overlays always run last, in consolidate.py order:
-        # 3adf31d9 (topic gap), 21f3dd85 (free-first), d57e2eeb (free-first gap),
-        # and 06949148 (final official-source evidence reconciliation).
-        return extend_register_06949148(*extend_register_d57e2eeb(*extend_register_21f3dd85(
-            *extend_register(*compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit)))))
+        # The overlays always run last, in consolidate.py order: 3adf31d9 (topic gap),
+        # 21f3dd85 (free-first), d57e2eeb (free-first gap), 06949148 (final
+        # official-source evidence reconciliation), then 9d0b6c49 (independent
+        # verification pass + free-first gap).
+        return extend_register_9d0b6c49(*extend_register_06949148(*extend_register_d57e2eeb(
+            *extend_register_21f3dd85(
+                *extend_register(*compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit))))))
 
     def test_baseline_retained_and_new_entries_identified(self):
         self.assertEqual(len(self.history['events']), 233)
@@ -42,10 +45,10 @@ class AuditedRegister(unittest.TestCase):
         # 246 audited (231 candidates + 13 official-calendar extras + 2 companions), then
         # session 59f56c24's 5 official-calendar extras, 3adf31d9's 15 topic-gap entries,
         # 21f3dd85's 8 free-first entries (6 listed, 2 held for review) and d57e2eeb's
-        # 21 free-first gap entries.
-        self.assertEqual(len(self.rows), 295)
+        # 21 free-first gap entries and 9d0b6c49's 4 verified free additions.
+        self.assertEqual(len(self.rows), 299)
         self.assertTrue(set(self.audit['candidates']) <= set(self.by_id))
-        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 212)
+        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 216)
 
     def test_upstream_additions_and_source_repair_are_preserved(self):
         self.assertIn('f1-alemany-flea-market', self.by_id)

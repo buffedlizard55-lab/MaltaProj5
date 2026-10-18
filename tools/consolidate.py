@@ -857,3 +857,11 @@ apply_extension_d57e2eeb()
 # the stale T32 branch's older generated pages or replaces mainline evidence.
 from overlay_06949148 import apply_extension as apply_extension_06949148
 apply_extension_06949148()
+
+# Additive verification + gap overlay (session 9d0b6c49, T-9d0b-1/2): free, dated
+# UN Plaza and Community Music Center entries read from official City, district and
+# organizer pages, plus the review findings that publish this session's independent
+# re-verification of the already-listed rows. Same fail-closed rules; runs last;
+# never edits an existing row.
+from register_9d0b6c49 import apply_extension as apply_extension_9d0b6c49
+apply_extension_9d0b6c49()

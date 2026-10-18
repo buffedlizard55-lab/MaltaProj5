@@ -1754,3 +1754,71 @@ Outstanding semantic issues are published on [Flagged for Review](https://buffed
 **Integration/handoff.** The rebase conflicts in seven generated HTML files were resolved by regenerating from the updated mainline, preserving its strict landing-page rule; the resolution is logged above. The stale branch's three commits and provenance remain on GitHub; only its two substantive changes were independently reconciled. This integration did not claim a full re-audit of the earlier ~60-row sample or all inherited candidates. Arena's fixed branch `arena/06949148-maltaproj5` was used as required by session policy.
 
 **Documentation-record follow-up.** The PR #45 results were written into this board and the T32 research log in documentation-only [PR #46](https://github.com/buffedlizard55-lab/MaltaProj5/pull/46), merged at **17:17:13 UTC** as `e37bcab66ae52c194c1e1085f0cb1b11fa52a31d`. Follow-up validation [39148875174](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39148875174) and Pages deployment [39148874862](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39148874862) both succeeded; Pages API reports **built** for that commit at **17:17:39 UTC**. This follow-up changed no event data or generated site content.
+
+---
+
+## Session `9d0b6c49` — independent post-publication verification + gap research (claimed 2026-10-18 17:01 UTC)
+
+**Claim basis.** At claim time `main` = `2d3ac6a7` (PR #43 merged 16:59:31 UTC). `gh pr list --state open`
+returned **no open PRs**. `git ls-remote` showed **no `arena/*` branch with commits ahead of `main`**, so no
+session had unmerged in-flight work. Session `16b88bbd`'s T-16b-1 row still reads `in progress`; its
+implementation is recorded complete and its PR #43 is merged, so this session did **not** take over or edit
+that row.
+
+**Conflict actually hit, and how it was resolved.** `16b88bbd` did return: it merged documentation-only PR
+[#44](https://github.com/buffedlizard55-lab/MaltaProj5/pull/44) (`9c17534`, "Record PR 43 merge and
+confirmed Pages publication") while this session was mid-task. Both sessions had appended a new section to
+the end of `COORDINATION.md`, so `git merge origin/main` conflicted on that one file only. Resolution was a
+**union**: `16b88bbd`'s publication record is kept verbatim and placed first (earlier timestamp), this
+session's claim follows it, and nothing was discarded. A rebase was started first, aborted, and replaced by
+a merge so that this session's already-pushed branch tip would not need a force-push. `scripts/build.py`,
+`scripts/validate.py` and `tests/` were re-checked against `9c17534` before being touched — PR #44 is
+documentation-only, so no code conflict existed.
+
+Branch note: Arena pins this session to `arena/9d0b6c49-maltaproj5`, so the requested
+`session-9d0b6c49/<task>` naming cannot be used — same deviation every prior session recorded.
+
+| Task | Description | Status | Owner | File scope |
+|---|---|---|---|---|
+| T-9d0b-1 | Independent line-by-line re-verification of the **published** register against official pages, priority order: (a) the 15 free-and-dated rows that lead the landing page, (b) the 19-row Paid section, (c) rows already flagged as conflicting. Every value re-read from the cited official URL; corrections recorded with an exact quotation; anything unconfirmable left blank and flagged. No inference. | **done** — 13 official pages read directly, all landing values confirmed, 7 irregularities published (`data/research/audit-9d0b6c49.md`, review.html section) | `9d0b6c49` | **new:** `data/research/audit-9d0b6c49.md`; **read-only:** `data/events.json`, `data/review.json`, `data/sources.json` |
+| T-9d0b-2 | Additive free-first gap research from official SF sources (gaming → music → AI/technology first, then everything else), city-of-San-Francisco only. Fail-closed overlay; never edits an existing row or audit file. | **done** — 4 verified free entries (first free Gaming entry with a confirmed date; Noisebridge candidate held off with the conflict logged) (`data/audit_9d0b6c49.json`, `tools/register_9d0b6c49.py`) | `9d0b6c49` | **new:** `data/audit_9d0b6c49.json`, `tools/register_9d0b6c49.py`, `data/research/audit-9d0b6c49.md` |
+| T-9d0b-3 | Requirement-conformance audit of the live site against the brief: mobile-friendly, date-ordered with upcoming highlighted first, free+upcoming executive summary, explicit cost labelling, free-only main section, paid in a separate section, SF-only, recurring vs special split, full list. Fix only confirmed defects. | **done** — one confirmed defect fixed (cost badge tie-break mislabelled three free events as Paid; wording-governs-entry resolution + regression tests); conformance table in `data/research/audit-9d0b6c49.md` | `9d0b6c49` | `scripts/build.py`, `scripts/validate.py`, `tools/consolidate.py`, `tests/`, `assets/`, generated `*.html` / `data/*.json` / `ANALYSIS.md` |
+| T-9d0b-4 | Final integration: consolidate → build → validate → unit tests → browser smoke, PR → `main`, merge on green CI, confirm Pages build for the merge commit, record PR link and result here. | in progress | `9d0b6c49` | `README.md`, `COORDINATION.md`, `.github/workflows/*` |
+
+**Scope discipline.** T-9d0b-1/2 write only new files, so they cannot collide with any other session.
+Shared generated artefacts (`data/events.json` and the 19 HTML pages) are regenerated by
+`tools/consolidate.py` + `scripts/build.py`, never hand-edited, and only in T-9d0b-3/4 after a fresh
+`git fetch` + rebase. `git pull --rebase` before every push; small frequent commits.
+
+**Sandbox honesty.** Bash has no general outbound network (allowlist: github.com, api.github.com,
+codeload, npm, pypi). Official pages are read with the Arena `fetch_page` / `web_search` tools instead;
+each capture records the tool used and claims **no** HTTP status. Bulk URL reachability remains a CI gate.
+
+**Second conflict, and how it was resolved (2026-10-18 ~17:2x UTC).** Session `06949148` merged
+its T32 takeover PRs [#45](https://github.com/buffedlizard55-lab/MaltaProj5/pull/45) and
+[#46](https://github.com/buffedlizard55-lab/MaltaProj5/pull/46) (`e37bcab`) while this session
+was building T-9d0b-1/2. Its `tools/overlay_06949148.py` is a *reconciliation* overlay that edits
+two existing rows (a verified Oktoberfest "FREE WITH RSVP" quotation and a linked-but-unresolved
+Alemany hours conflict) and therefore rewrites the summary block. `git merge origin/main`
+conflicted in 17 files. Resolution, nothing discarded:
+
+* `tools/consolidate.py`, `scripts/validate.py`, `tests/test_audited_register.py` — **union**:
+  the overlay chain is now audited mainline → `3adf31d9` → `21f3dd85` → `d57e2eeb` →
+  **`06949148` (reconciliation)** → **`9d0b6c49` (this session, additive, last)**. Order chosen
+  because `06949148` targets the 295-candidate register it was written against, while
+  `register_9d0b6c49` is purely additive and recomputes the summary either way.
+* `tests/test_overlay_06949148.py` — its absolute cost-count assertions
+  (`Free 76 / Not stated 116`) described the 299-candidate register *without* this session's
+  badge fix (+3 Free) and 4 free additions (+4 Free). Updated to the merged composition
+  **Free 83 / Paid 17 / Not stated 116** with the derivation documented in the test; the
+  overlay's own quotation/finding assertions are untouched and still pass.
+* All generated files (`data/events.json` … `data/audit_summary.json`, all 19 HTML pages,
+  `ANALYSIS.md`, CSVs) — regenerated from the merged chain, never hand-edited.
+* `README.md` — union of the count table with the merged numbers (299 candidates / 216 listed /
+  38 weekly / 130 special / 78 future-dated / **Free 83 / Paid 17 / Not stated 116** / 313 URLs /
+  165 domains) and both overlays named in the rebuild paragraph.
+* `COORDINATION.md` — this union: their publication record kept verbatim and placed first, this
+  section follows.
+
+Post-merge verification: `consolidate.py` idempotent → `build.py` (19 pages, 299 review records)
+→ `validate.py` PASS (299 exact projections through all five overlays) → **57/57 unit tests OK**.

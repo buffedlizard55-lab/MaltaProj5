@@ -2603,6 +2603,29 @@
    "h-presidio-officers-club"
   ]
  },
+ "n-019da8665240": {
+  "url": "https://sfciviccenter.org/event/learn-and-play-chess-at-un-plaza/",
+  "publisher": "sfciviccenter.org",
+  "title": "Learn and Play Chess and Mahjong at UN Plaza - SF Civic Center",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T17:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_9d0b6c49.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "i-chess-mahjong-un-plaza"
+  ]
+ },
  "n-08e115571345": {
   "url": "https://sfpl.org/events/2026/03/13/social-chess-club",
   "publisher": "sfpl.org",
@@ -2938,6 +2961,30 @@
    "g-sfpl-chinese-chess-main"
   ]
  },
+ "n-3574783874c9": {
+  "url": "https://www.sfrecpark.org/Calendar.aspx?CID=40",
+  "publisher": "sfrecpark.org",
+  "title": "Calendar • UN Plaza | Fulton Plaza | Civic Center Plaza",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T17:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_9d0b6c49.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 2,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "i-chess-mahjong-un-plaza",
+   "i-rae-studios-dance-fitness"
+  ]
+ },
  "n-3676d1176548": {
   "url": "https://www.circusbella.org/",
   "publisher": "circusbella.org",
@@ -3137,6 +3184,29 @@
   },
   "approved_for_rows": [
    "h-bay-area-science-festival"
+  ]
+ },
+ "n-6331790131ef": {
+  "url": "https://sfrecpark.org/Calendar.aspx?EID=10596&month=9&year=2026&day=3&calType=0",
+  "publisher": "sfrecpark.org",
+  "title": "Calendar • Chess and Mahjong",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T17:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_9d0b6c49.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "i-chess-mahjong-un-plaza"
   ]
  },
  "n-63caecc772fb": {
@@ -3728,6 +3798,30 @@
   },
   "approved_for_rows": [
    "m-stern-grove-festival"
+  ]
+ },
+ "n-e3af86a5e26f": {
+  "url": "https://sfcmc.org/events/",
+  "publisher": "sfcmc.org",
+  "title": "Events - San Francisco Community Music Center",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T17:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_9d0b6c49.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "i-cmc-halloween-party",
+   "i-cmc-baroque-cinema"
   ]
  },
  "n-e4ee3c22de45": {

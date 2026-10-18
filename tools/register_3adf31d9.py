@@ -107,6 +107,33 @@ CONDITION_PATTERNS = (
     r"residency", r"resident", r"lottery", r"suggested", r"donation",
 )
 
+# When one verified admission sentence mentions BOTH "free" and money, the badge must
+# follow whichever wording governs *entry itself*. Previously every such row was forced
+# to "Paid", which mislabelled three rows whose own quoted official sentence says the
+# event is free and the money buys an optional extra. Each pattern below is a literal
+# phrase lifted from a quoted official sentence already in the register — the badge
+# never reads meaning into text that was not quoted.
+FREE_GOVERNS_ENTRY = (
+    # "Free tickets are required for all FanFest Tour stops and the Open House."
+    # https://www.mlb.com/giants/fans/fanfest — the required ticket costs nothing.
+    r"free\s+tickets?\s+(?:are|is)\s+required",
+    # "It is a free event for all to attend but tickets must be purchased to sit in
+    # the bleacher sections." https://chineseparade.com/faq/ — attendance is free;
+    # bleacher seating is an optional purchase.
+    r"free\s+event\s+for\s+all\s+to\s+attend",
+    # "general admission is free and tickets to our special exhibitions are offered at
+    # a discounted price of $15"
+    # https://about.asianart.org/ticketing/free-and-reduced-museum-admission/ — entry
+    # is free; the special exhibition is an optional extra.
+    r"general\s+admission\s+is\s+free",
+)
+PAID_GOVERNS_ENTRY = (
+    r"free\s+with\s+paid",                    # "activities are free with paid daytime admission"
+    r"paid\s+admission", r"paid\s+entry",     # entry itself costs money
+    r"members\s+free", r"free\s+for\s+members",  # free only for a paying subset
+    r"(?:kids|children)[^.]*\bfree\b",        # free only for children
+)
+
 
 def cost_of(row):
     """Return (badge, conditions_flag) for a row's verified admission text."""
@@ -115,16 +142,25 @@ def cost_of(row):
         return "Not stated", False
     paid = any(re.search(pattern, price) for pattern in PAID_PATTERNS)
     free = any(re.search(pattern, price) for pattern in FREE_PATTERNS)
+    entry_split = False
     if paid and not free:
         badge = "Paid"
     elif free and not paid:
         badge = "Free"
     elif free and paid:
-        # e.g. "activities are free with paid daytime admission" — entry is paid.
-        badge = "Paid"
+        # Decide from the quoted wording, not from the mere presence of a number.
+        entry_free = any(re.search(pattern, price) for pattern in FREE_GOVERNS_ENTRY)
+        entry_paid = any(re.search(pattern, price) for pattern in PAID_GOVERNS_ENTRY)
+        if entry_free and not entry_paid:
+            # Entry is free; the money in the sentence buys an optional extra.
+            badge, entry_split = "Free", True
+        else:
+            # Conservative default, unchanged: e.g. "activities are free with paid
+            # daytime admission" — entry is paid. A real price is never relabelled free.
+            badge = "Paid"
     else:
         badge = "See source"
-    conditions = any(re.search(pattern, price) for pattern in CONDITION_PATTERNS)
+    conditions = entry_split or any(re.search(pattern, price) for pattern in CONDITION_PATTERNS)
     return badge, conditions
 
 

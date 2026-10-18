@@ -66,7 +66,17 @@ class T32Reconciliation(unittest.TestCase):
             "https://www.sfenvironment.org/farmers-markets-in-sf",
         })
         self.assertEqual(self.summary["source_urls"], len(self.sources))
-        self.assertEqual(self.summary["cost"]["Free"], 76)
+        # Cost composition at the 18 October 2026 snapshot, this reconciliation plus the
+        # two later integration passes: 76 Free once this overlay quoted Oktoberfest's
+        # "FREE WITH RSVP"; +3 Free where the official wording makes the free phrase
+        # govern entry and a price only buys an optional extra (session 9d0b6c49's badge
+        # fix), so Paid drops 20 -> 17; +4 Free from that pass's verified additions.
+        # "Not stated" is 117 minus the Oktoberfest blank this overlay filled, and every
+        # later addition quotes an admission price, so it stays 116.
+        # scripts/validate.py's exact whole-projection assertion is the structural guard
+        # against drift; these absolutes document what the composition should be.
+        self.assertEqual(self.summary["cost"]["Free"], 83)
+        self.assertEqual(self.summary["cost"]["Paid"], 17)
         self.assertEqual(self.summary["cost"]["Not stated"], 116)
 
 

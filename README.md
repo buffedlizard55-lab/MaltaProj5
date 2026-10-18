@@ -10,20 +10,21 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 | Measure | Count |
 |---|---:|
-| Candidates assessed | 295 |
+| Candidates assessed | 299 |
 | Previously assessed candidates (231 initial + 2 companion + 13 official-calendar) | 246 |
 | Session `59f56c24` official-calendar extras | 5 |
 | New topic-gap entries added in audit `3adf31d9` (gaming / music / AI) | 15 |
 | Free-first entries added in audit `21f3dd85` (free gaming / music / AI first) | 8 |
 | New free-first gap entries added in audit `d57e2eeb` (civic / gardens / music / gaming / AI) | 21 |
 | T32 re-verification reconciled (one field confirmed, one hours conflict retained blank) | 2 decisions |
-| Entries admitted to the city-only directory | 212 |
+| Verified free entries added in the `9d0b6c49` independent verification pass (UN Plaza chess & mahjong, UN Plaza dance fitness, two CMC concerts) | 4 |
+| Entries admitted to the city-only directory | 216 |
 | Candidates held off the directory for review | 83 |
-| Weekly / monthly / annual entries | 37 / 13 / 35 |
-| Special, dated or cadence-unconfirmed entries | 127 |
-| Entries with at least one confirmed future date | 74 |
-| Directory rows reading Free / Paid / Not stated | 76 / 20 / 116 |
-| Exact cited official-source URLs / distinct domains | 309 / 163 |
+| Weekly / monthly / annual entries | 38 / 13 / 35 |
+| Special, dated or cadence-unconfirmed entries | 130 |
+| Entries with at least one confirmed future date | 78 |
+| Directory rows reading Free / Paid / Not stated | 83 / 17 / 116 |
+| Exact cited official-source URLs / distinct domains | 313 / 165 |
 
 The directory includes 16 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
@@ -67,7 +68,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/validate.py
 ```
 
-`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` projection, the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology), the `tools/register_21f3dd85.py` free-first overlay, the `tools/register_d57e2eeb.py` free-first gap overlay, and the final `tools/overlay_06949148.py` reconciliation. The final overlay adds one official admission quotation to an existing past event and adds official sources for an unresolved Alemany hours conflict without filling the time field. Each amended fact is backed by exact text in `data/audit_06949148.json`; quote provenance is validated during rebuild. The older `data/audit_95ceac65.json` snapshot and generated pages are not used to replace the newer 295-candidate mainline. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
+`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` projection, the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology), the `tools/register_21f3dd85.py` free-first overlay, the `tools/register_d57e2eeb.py` free-first gap overlay, the final `tools/overlay_06949148.py` reconciliation, and last the additive fail-closed `tools/register_9d0b6c49.py` independent verification-pass overlay (free, dated UN Plaza and Community Music Center entries). The `overlay_06949148.py` step adds one official admission quotation to an existing past event and adds official sources for an unresolved Alemany hours conflict without filling the time field; `register_9d0b6c49.py` never edits an existing row and publishes its own re-verification findings. Each amended fact is backed by exact text in `data/audit_06949148.json`; quote provenance is validated during rebuild. The older `data/audit_95ceac65.json` snapshot and generated pages are not used to replace the newer mainline. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
 
 The validator compares the exact projection, checks quotation provenance (including labeled event JSON-LD), recurrence/year guards, blanks, parent cycles, source references, CSV cell values, all page memberships and every local link/fragment. A second rebuild must be byte-identical. Provenance validation is **not** automatic semantic fact-checking.
 

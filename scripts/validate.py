@@ -9,7 +9,7 @@ for r in rows:
  assert r['sources'] and all(s in sources for s in r['sources'])
  assert r['kind'] in ['Weekly','Monthly','Annual','Special']
  for k in ['schedule','time','venue','price']:
-  assert r[k] or any(f.startswith(k+': unverified') for f in r['flags']), (r['id'],k)
+  assert r[k] or any(f.startswith(k+': unverified') for f in r['unverified']), (r['id'],k)
   if r[k]: assert r['evidence'][k]
  assert not r['parent'] or r['parent'] in {x['id'] for x in rows}
 for s in sources.values(): assert s['url'].startswith('https://') and s['checked']=='2026-10-18' and s['excerpt']
@@ -30,5 +30,5 @@ for name,p in pages.items():
   target=unquote(u.path) or name
   assert (root/target).is_file(),(name,href)
   if u.fragment and target in pages: assert unquote(u.fragment) in pages[target].ids,(name,href)
-assert len(pages)==11
+assert len(pages)==12
 print(f'PASS: {len(rows)} rows, evidence references, missing-value flags, parent links, {len(pages)} HTML pages and every local link/fragment.')

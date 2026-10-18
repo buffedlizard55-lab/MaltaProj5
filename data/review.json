@@ -1,159 +1,202 @@
 [
-  {
-    "title": "Publication blocked: GitHub Pages permission",
-    "detail": "Site build and pull-request validation passed, and PR #1 merged. Pages setup failed with Resource not accessible by integration in both repository API and workflow. Public Pages URL is not confirmed live. Repository GitHub connection needs Pages administration permission; after enabling Pages with GitHub Actions, rerun workflow.",
-    "urls": [
-      "https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573",
-      "https://github.com/buffedlizard55-lab/MaltaProj5/pull/1"
-    ]
-  },
-  {
-    "title": "Coverage is incomplete",
-    "detail": "This is a bounded official-source inventory, not a full list of every SF event. Library programs, sports, concerts, theatre, civic meetings, neighborhood and private events remain incompletely researched. No coverage percentage is known.",
-    "sources": [
-      "band",
-      "opera"
-    ]
-  },
-  {
-    "title": "Outside Lands and SF Marathon: retrieval failed",
-    "detail": "Official homepages could not be retrieved in this session. No event facts were admitted. Marathon route must also be checked against the city-only rule.",
-    "urls": [
-      "https://www.outsidelands.com/",
-      "https://www.thesanfranciscomarathon.com/"
-    ]
-  },
-  {
-    "title": "Golden Gate Bandshell: dynamic content unavailable",
-    "detail": "Retrieved city page showed only Loading; schedule, times and recurrence remain blank. Candidate excluded from inventory.",
-    "sources": [
-      "band"
-    ]
-  },
-  {
-    "title": "Fleet Fest / ship tours: past edition",
-    "detail": "Official page describes October 2026 dates already past at review. Retained as research finding, not promoted as upcoming. Next edition unverified.",
-    "sources": [
-      "fleet"
-    ]
-  },
-  {
-    "title": "Folsom Street Fair: edition mismatch",
-    "detail": "Homepage announces September 26, 2027, but linked fair detail page still describes September 27, 2026. Exact 2027 venue, time and annual recurrence were not confirmed. Up Your Alley homepage date is July 25, 2027, but venue not confirmed. Both excluded pending city/edition verification.",
-    "sources": [
-      "folsom",
-      "folsomdetail"
-    ]
-  },
-  {
-    "title": "Bay to Breakers: mixed-date copy",
-    "detail": "Homepage headline gives May 16, 2027 but other copy says before May 18 and includes older promotions. Route boundary, time and recurrence not verified; excluded from admitted inventory.",
-    "sources": [
-      "bay"
-    ]
-  },
-  {
-    "title": "SFMOMA Community Days: no date",
-    "detail": "Official upcoming date is TBD. No date inferred or event occurrence generated.",
-    "sources": [
-      "free"
-    ]
-  },
-  {
-    "title": "Opera productions: year not explicit in listing text",
-    "detail": "Official homepage lists Manon, Figaro, Strauss, Opera Ball and Adlers dates, but text omits year. Event detail/venue pages need further review before admission; no season-year inference made.",
-    "sources": [
-      "opera"
-    ]
-  },
-  {
-    "title": "GitHub Pages cannot be enabled by the session credential (reproduced twice)",
-    "detail": "Both sessions independently received HTTP 403 'Resource not accessible by integration' from POST /repos/{owner}/{repo}/pages, with and without build_type=workflow. The credential reports no OAuth scopes, so Pages administration is outside its grant. The deploy workflow is correct and will publish on the first run after an owner enables Pages (Settings -> Pages -> Build and deployment -> Source: GitHub Actions, or Deploy from a branch: main / root). This is a platform permission limitation, not a build or verification failure.",
-    "urls": [
-      "https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573"
-    ]
-  },
-  {
-    "title": "How Weird Street Faire is discontinued but still listed as active",
-    "detail": "The organizer's own site reads '2000 \u2014 2024 ... The Faire is done.' Several third-party calendars still list it as an annual San Francisco event. Not admitted as a row.",
-    "urls": [
-      "https://howweird.org/"
-    ]
-  },
-  {
-    "title": "Ghirardelli Chocolate Festival: no current edition on the venue's page",
-    "detail": "Ghirardelli Square's official events page lists no Chocolate Festival for 2026 or 2027; the last documented edition was the 23rd in September 2018. Not admitted as an active annual row.",
-    "urls": [
-      "https://www.ghirardellisq.com/upcoming-events"
-    ]
-  },
-  {
-    "title": "Recurring geography false positive: events outside the city",
-    "detail": "The Great Dickens Christmas Fair (Cow Palace, Daly City) and Super Bowl LX, FIFA World Cup 2026 matches and 49ers games (Levi's Stadium, Santa Clara) are routinely listed as San Francisco events. Excluded by the city-only rule.",
-    "urls": []
-  },
-  {
-    "title": "Conflicting hours across official pages (4 events)",
-    "detail": "Alemany Farmers Market: sf.gov says Saturday 7am-2pm while the City's own Farmers Market Rules and Regs PDF says 7 AM-3 PM. Heart of the City Farmers' Market: the operator's About page says 7am-4pm while other pages on the same site say Sunday 7am-5pm / Wednesday 7am-5:30pm. Castro Night Market: 5-9pm in some official listings versus 5-10pm on the organizer site and in the SFMTA advisory. Chinatown Autumn Moon Festival: organizer 11am-5pm versus SFMTA 11am-6pm. Disputed values are left blank on the affected rows.",
-    "urls": [
-      "https://www.sf.gov/location--alemany-farmers-market",
-      "https://hotcfarmersmarket.org/about",
-      "https://castronightmarket.com/",
-      "https://www.moonfestival.org/"
-    ]
-  },
-  {
-    "title": "Stale official pages (6 events)",
-    "detail": "Haight Ashbury Street Fair's About page still says the fair is 'held every second Sunday in June' while the 2026 fair was held Sunday, September 20. sf.gov's Filipino American History Month page still lists the previous FilBookFest edition (October 12-13, theme KAIS\u00c1'T KASAMA) while sfpl.org lists October 17-18, 2026, theme SANGGALAN. Castro Street Fair, Union Street Festival, Pistahan, North Beach Festival and the Greek Food Festival pages still present 2026 content as current.",
-    "urls": [
-      "https://www.haightashburystreetfair.org/abouthasf",
-      "https://sfpl.org/events/special-programs/filipino-american-history-celebration"
-    ]
-  },
-  {
-    "title": "Unstable edition numbers",
-    "detail": "North Beach Festival is described as both the 70th and 71st for June 2026; the Chinatown Autumn Moon Festival as both the 35th and 36th. Neither number is asserted in the register.",
-    "urls": [
-      "https://www.northbeachfestival.org/",
-      "https://www.moonfestival.org/"
-    ]
-  },
-  {
-    "title": "Dates moved or tentative after announcement",
-    "detail": "San Francisco Opera Ball was rescheduled from September 12 to November 12, 2026 over orchestra labor negotiations. SF Ballet's site shows Nutcracker as both Dec 4-27 (2026-27 season pages) and Dec 5-28 (renewals page). MLB published the Giants' 2027 schedule as tentative pending labor negotiations, so the March 25, 2027 home opener may shift.",
-    "urls": [
-      "https://www.sfopera.com/operaball",
-      "https://www.sfballet.org/2026-2027-season/",
-      "https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule"
-    ]
-  },
-  {
-    "title": "22 rows have no organizer-published next date",
-    "detail": "After their 2026 editions, organizers including Hardly Strictly Bluegrass, Litquake/Lit Crawl, Sunday Streets, the Greek Food Festival, St. Patrick's Day Parade, Pistahan, North Beach Festival and Union Street Festival had published no 2027 dates. Those date fields are blank rather than extrapolated from the previous year's pattern.",
-    "urls": []
-  },
-  {
-    "title": "sfoutsidelands.com unreachable at verification time",
-    "detail": "The primary marketing domain returned HTTP 500, so Outside Lands 2027 dates (August 6-8) were taken from the festival's official box office page instead.",
-    "urls": [
-      "https://outsidelands.frontgatetickets.com/"
-    ]
-  },
-  {
-    "title": "Coverage remains incomplete after both research passes",
-    "detail": "Combining two independent official-source passes raises the register to 106 rows but does not establish exhaustive citywide coverage. Neighbourhood street fairs, single-venue concert series, library programmes, theatre seasons and civic meetings remain undercovered. There is no citywide denominator to measure completeness against.",
-    "urls": []
-  },
-  {
-    "title": "Session a1b7522f: expanded coverage for sports, theatre, zoo, Presidio, and library events",
-    "detail": "Added 20 new rows from official sources: NBA (nba.com/warriors), WNBA (valkyries.wnba.com), A.C.T. (act-sf.org), Curran Theatre (sfcurran.com), SF Zoo (sfzoo.org), Presidio Trust (presidio.gov), SFPL (sfpl.org), and SF Marathon (thesfmarathon.com). All verified 2026-10-18.",
-    "urls": []
-  },
-  {
-    "title": "Geography note: San Francisco Marathon crosses into Marin County",
-    "detail": "The SF Marathon course crosses the Golden Gate Bridge into Sausalito, Marin County, before returning to San Francisco. The start and finish lines are within city limits, and the majority of the route is in SF. Retained with a geography flag for manual review.",
-    "urls": [
-      "https://www.thesfmarathon.com/full-marathon/"
-    ]
-  }
+ {
+  "title": "Publication blocked: GitHub Pages permission",
+  "detail": "Site build and pull-request validation passed, and PR #1 merged. Pages setup failed with Resource not accessible by integration in both repository API and workflow. Public Pages URL is not confirmed live. Repository GitHub connection needs Pages administration permission; after enabling Pages with GitHub Actions, rerun workflow.",
+  "urls": [
+   "https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573",
+   "https://github.com/buffedlizard55-lab/MaltaProj5/pull/1"
+  ]
+ },
+ {
+  "title": "Coverage is incomplete",
+  "detail": "This is a bounded official-source inventory, not a full list of every SF event. Library programs, sports, concerts, theatre, civic meetings, neighborhood and private events remain incompletely researched. No coverage percentage is known.",
+  "sources": [
+   "band",
+   "opera"
+  ]
+ },
+ {
+  "title": "Outside Lands and SF Marathon: retrieval failed",
+  "detail": "Official homepages could not be retrieved in this session. No event facts were admitted. Marathon route must also be checked against the city-only rule.",
+  "urls": [
+   "https://www.outsidelands.com/",
+   "https://www.thesanfranciscomarathon.com/"
+  ]
+ },
+ {
+  "title": "Golden Gate Bandshell: dynamic content unavailable",
+  "detail": "Retrieved city page showed only Loading; schedule, times and recurrence remain blank. Candidate excluded from inventory.",
+  "sources": [
+   "band"
+  ]
+ },
+ {
+  "title": "Fleet Fest / ship tours: past edition",
+  "detail": "Official page describes October 2026 dates already past at review. Retained as research finding, not promoted as upcoming. Next edition unverified.",
+  "sources": [
+   "fleet"
+  ]
+ },
+ {
+  "title": "Folsom Street Fair: edition mismatch",
+  "detail": "Homepage announces September 26, 2027, but linked fair detail page still describes September 27, 2026. Exact 2027 venue, time and annual recurrence were not confirmed. Up Your Alley homepage date is July 25, 2027, but venue not confirmed. Both excluded pending city/edition verification.",
+  "sources": [
+   "folsom",
+   "folsomdetail"
+  ]
+ },
+ {
+  "title": "Bay to Breakers: mixed-date copy",
+  "detail": "Homepage headline gives May 16, 2027 but other copy says before May 18 and includes older promotions. Route boundary, time and recurrence not verified; excluded from admitted inventory.",
+  "sources": [
+   "bay"
+  ]
+ },
+ {
+  "title": "SFMOMA Community Days: no date",
+  "detail": "Official upcoming date is TBD. No date inferred or event occurrence generated.",
+  "sources": [
+   "free"
+  ]
+ },
+ {
+  "title": "Opera productions: year not explicit in listing text",
+  "detail": "Official homepage lists Manon, Figaro, Strauss, Opera Ball and Adlers dates, but text omits year. Event detail/venue pages need further review before admission; no season-year inference made.",
+  "sources": [
+   "opera"
+  ]
+ },
+ {
+  "title": "GitHub Pages cannot be enabled by the session credential (reproduced twice)",
+  "detail": "Both sessions independently received HTTP 403 'Resource not accessible by integration' from POST /repos/{owner}/{repo}/pages, with and without build_type=workflow. The credential reports no OAuth scopes, so Pages administration is outside its grant. The deploy workflow is correct and will publish on the first run after an owner enables Pages (Settings -> Pages -> Build and deployment -> Source: GitHub Actions, or Deploy from a branch: main / root). This is a platform permission limitation, not a build or verification failure.",
+  "urls": [
+   "https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573"
+  ]
+ },
+ {
+  "title": "How Weird Street Faire is discontinued but still listed as active",
+  "detail": "The organizer's own site reads '2000 \u2014 2024 ... The Faire is done.' Several third-party calendars still list it as an annual San Francisco event. Not admitted as a row.",
+  "urls": [
+   "https://howweird.org/"
+  ]
+ },
+ {
+  "title": "Ghirardelli Chocolate Festival: no current edition on the venue's page",
+  "detail": "Ghirardelli Square's official events page lists no Chocolate Festival for 2026 or 2027; the last documented edition was the 23rd in September 2018. Not admitted as an active annual row.",
+  "urls": [
+   "https://www.ghirardellisq.com/upcoming-events"
+  ]
+ },
+ {
+  "title": "Recurring geography false positive: events outside the city",
+  "detail": "The Great Dickens Christmas Fair (Cow Palace, Daly City) and Super Bowl LX, FIFA World Cup 2026 matches and 49ers games (Levi's Stadium, Santa Clara) are routinely listed as San Francisco events. Excluded by the city-only rule.",
+  "urls": []
+ },
+ {
+  "title": "Conflicting hours across official pages (4 events)",
+  "detail": "Alemany Farmers Market: sf.gov says Saturday 7am-2pm while the City's own Farmers Market Rules and Regs PDF says 7 AM-3 PM. Heart of the City Farmers' Market: the operator's About page says 7am-4pm while other pages on the same site say Sunday 7am-5pm / Wednesday 7am-5:30pm. Castro Night Market: 5-9pm in some official listings versus 5-10pm on the organizer site and in the SFMTA advisory. Chinatown Autumn Moon Festival: organizer 11am-5pm versus SFMTA 11am-6pm. Disputed values are left blank on the affected rows.",
+  "urls": [
+   "https://www.sf.gov/location--alemany-farmers-market",
+   "https://hotcfarmersmarket.org/about",
+   "https://castronightmarket.com/",
+   "https://www.moonfestival.org/"
+  ]
+ },
+ {
+  "title": "Stale official pages (6 events)",
+  "detail": "Haight Ashbury Street Fair's About page still says the fair is 'held every second Sunday in June' while the 2026 fair was held Sunday, September 20. sf.gov's Filipino American History Month page still lists the previous FilBookFest edition (October 12-13, theme KAIS\u00c1'T KASAMA) while sfpl.org lists October 17-18, 2026, theme SANGGALAN. Castro Street Fair, Union Street Festival, Pistahan, North Beach Festival and the Greek Food Festival pages still present 2026 content as current.",
+  "urls": [
+   "https://www.haightashburystreetfair.org/abouthasf",
+   "https://sfpl.org/events/special-programs/filipino-american-history-celebration"
+  ]
+ },
+ {
+  "title": "Unstable edition numbers",
+  "detail": "North Beach Festival is described as both the 70th and 71st for June 2026; the Chinatown Autumn Moon Festival as both the 35th and 36th. Neither number is asserted in the register.",
+  "urls": [
+   "https://www.northbeachfestival.org/",
+   "https://www.moonfestival.org/"
+  ]
+ },
+ {
+  "title": "Dates moved or tentative after announcement",
+  "detail": "San Francisco Opera Ball was rescheduled from September 12 to November 12, 2026 over orchestra labor negotiations. SF Ballet's site shows Nutcracker as both Dec 4-27 (2026-27 season pages) and Dec 5-28 (renewals page). MLB published the Giants' 2027 schedule as tentative pending labor negotiations, so the March 25, 2027 home opener may shift.",
+  "urls": [
+   "https://www.sfopera.com/operaball",
+   "https://www.sfballet.org/2026-2027-season/",
+   "https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule"
+  ]
+ },
+ {
+  "title": "22 rows have no organizer-published next date",
+  "detail": "After their 2026 editions, organizers including Hardly Strictly Bluegrass, Litquake/Lit Crawl, Sunday Streets, the Greek Food Festival, St. Patrick's Day Parade, Pistahan, North Beach Festival and Union Street Festival had published no 2027 dates. Those date fields are blank rather than extrapolated from the previous year's pattern.",
+  "urls": []
+ },
+ {
+  "title": "sfoutsidelands.com unreachable at verification time",
+  "detail": "The primary marketing domain returned HTTP 500, so Outside Lands 2027 dates (August 6-8) were taken from the festival's official box office page instead.",
+  "urls": [
+   "https://outsidelands.frontgatetickets.com/"
+  ]
+ },
+ {
+  "title": "Coverage remains incomplete after both research passes",
+  "detail": "Combining two independent official-source passes raises the register to 86 rows but does not establish exhaustive citywide coverage. Neighbourhood street fairs, single-venue concert series, library programmes, theatre seasons and civic meetings remain undercovered. There is no citywide denominator to measure completeness against.",
+  "urls": []
+ },
+ {
+  "title": "SOMA Nights \u2014 excluded: official source unreachable",
+  "detail": "Official site soma-nights.com returned an SSL error / HTTP 500 on re-check; no other official page confirms the 2026 edition. Row removed from the register and recorded on Flagged for Review rather than published unverified.",
+  "urls": [
+   "https://soma-nights.com/"
+  ]
+ },
+ {
+  "title": "Duplicate rows merged during final review",
+  "detail": "Two pairs described the same event: 'Legion of Honor Free Tuesdays' duplicated the FAMSF free-first-Tuesday entry (FAMSF confirms free general admission on the first Tuesday of every month), and 'After Dark: Unplug and Play' appeared once for November 12 and once for December 10, 2026. Merged, with both dates preserved.",
+  "urls": [
+   "https://www.famsf.org/visit/free-reduced-admission",
+   "https://www.exploratorium.edu/visit/calendar/after-dark"
+  ]
+ },
+ {
+  "title": "Session a1b7522f: expanded coverage for sports, theatre, zoo, Presidio, and library events",
+  "detail": "Added 20 new rows from official sources: NBA (nba.com/warriors), WNBA (valkyries.wnba.com), A.C.T. (act-sf.org), Curran Theatre (sfcurran.com), SF Zoo (sfzoo.org), Presidio Trust (presidio.gov), SFPL (sfpl.org), and SF Marathon (thesfmarathon.com). All verified 2026-10-18.",
+  "urls": []
+ },
+ {
+  "title": "Geography note: San Francisco Marathon crosses into Marin County",
+  "detail": "The SF Marathon course crosses the Golden Gate Bridge into Sausalito, Marin County, before returning to San Francisco. The start and finish lines are within city limits, and the majority of the route is in SF. Retained with a geography flag for manual review.",
+  "urls": [
+   "https://www.thesfmarathon.com/full-marathon/"
+  ]
+ },
+ {
+  "title": "Integration reclassified three rows and removed one non-event",
+  "detail": "Final integration found two duplicate Carnaval rows in the 86-row register (merged), the Chinese New Year Parade and Carnaval rows filed as 'Special' even though both are annual editions (moved to Annual), and the 'After Dark: Creepatorium' theme filed as Annual even though it is a single dated theme of the weekly After Dark series (moved to Special). The Hardly Strictly Bluegrass online merchandise-store window was removed: it is a retail window, not an event.",
+  "urls": [
+   "https://github.com/buffedlizard55-lab/MaltaProj5"
+  ]
+ },
+ {
+  "title": "Two registers merged: overlapping rows reconciled by hand",
+  "detail": "Session 4f47c142's 167-row inventory and the 86-row unified register were merged with an explicit map (tools/consolidate.py). 39 rows described the same event in both registers and were reconciled, not dropped; each keeps both official sources. A fuzzy matcher was rejected because it proposed false pairs (for example Frameline vs International Ocean Film Festival).",
+  "urls": [
+   "https://github.com/buffedlizard55-lab/MaltaProj5/blob/main/tools/consolidate.py"
+  ]
+ },
+ {
+  "title": "Several rows cite a landing or listing page rather than the event page",
+  "detail": "A number of inherited rows cite an official organizer landing page that lists several events (for example pcfma.org/visit for four farmers markets, or sfopera.com's season press page for several productions). The automated check confirms the page loads and mentions the event name where it does; these rows are marked 'page-level' rather than 'field-level' verification. Field-level means a prior session transcribed the individual values; page-level means only the page and its mention of the event were re-checked automatically.",
+  "urls": [
+   "https://github.com/buffedlizard55-lab/MaltaProj5"
+  ]
+ },
+ {
+  "title": "Automated source re-check (2026-10-18): what could and could not be confirmed",
+  "detail": "On 2026-10-18 the register's cited URLs were fetched from GitHub Actions and the page text searched for the event name. Of 231 rows, 165 were confirmed on a cited page, 64 were not found, 2 cite a PDF (manual read), and 0 had no response. 1 URL(s) were dead; 47 URL(s) blocked the automated client (202/403/405/429/5xx) \u2014 blocking is not evidence of a bad page. Unconfirmed: Club Darc (Pier 48 waterfront electronic music season). Bot-blocked: Free First Tuesdays at the de Young & Legion of Honor, SF Sketchfest (San Francisco Comedy Festival), San Francisco Independent Film Festival (SF IndieFest), SF Music Week, California International Antiquarian Book Fair, Bouquets to Art (de Young & Legion of Honor), San Francisco Art Fair (formerly Art Market SF), San Francisco International Arts Festival, San Francisco Documentary Film Festival (SF DocFest), Juneteenth Celebration in the Fillmore, Queer Women of Color Film Festival, San Francisco Free Folk Festival, SFJAZZ Summer Sessions, SF's Pizza, Bagel & Beer Festival, Litquake San Francisco, San Francisco Fall Antiques Show, Potrero Hill Festival, Illuminate SF Festival of Light, San Francisco Disability History Tour, Super Bowl LX San Francisco Events, Red Bull Showrun San Francisco, Sunset Night Market, Hunky Jesus & Foxy Mary Contest, Valencia LIVE! Kickoff Block Party, Black Coffee DJ Set at Treasure Island, Fourth of July Fireworks on the Golden Gate Bridge, SF Hash Week, Ferry Fest, Cinema on the Square (free outdoor films), Lowrider Parade & 'King of the Streets' Competition, Peak2Peak Urban Walking Adventure, SF Cheese Fest, de Young: Treasures of the Pharaohs, Legion of Honor: Azzedine Alaia - Sculpting Fashion, de Young: Monet and Venice.",
+  "urls": [
+   "https://github.com/buffedlizard55-lab/MaltaProj5/blob/main/data/verify_report.json"
+  ]
+ }
 ]

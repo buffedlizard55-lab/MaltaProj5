@@ -43,10 +43,19 @@ for url in sorted(urls):
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA,
                                                   "Accept-Language": "en-US,en;q=0.9"})
-        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-            code = r.getcode()
-            ok.append((url, code, label))
-            print(f"  {code}  {url}")
+        try:
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                code = r.getcode()
+                ok.append((url, code, label))
+                print(f"  {code}  {url}")
+                time.sleep(0.2)
+                continue
+        except Exception:
+            time.sleep(2)
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                code = r.getcode()
+                ok.append((url, code, label))
+                print(f"  {code}  {url} (second attempt)")
     except urllib.error.HTTPError as e:
         if e.code in (403, 405, 406, 429) or e.code >= 500:
             blocked.append((url, e.code, label))
@@ -60,6 +69,8 @@ for url in sorted(urls):
     time.sleep(0.4)
 
 print(f"\nOK: {len(ok)}   bot-blocked/5xx: {len(blocked)}   dead: {len(dead)}")
+if dead:
+    print("::error title=Dead source links::" + "; ".join(f"{c} {u}" for u, c, _ in dead)[:6000])
 if dead:
     print("\nFAILED — these source links do not resolve:")
     for u, c, l in dead:

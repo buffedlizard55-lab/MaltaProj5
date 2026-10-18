@@ -1,0 +1,41 @@
+name: Row-source verification
+
+# Fetches every cited official page, checks that it is live and that it names the
+# event, and commits data/verify_report.json back to the branch. The authoring
+# sandbox has no general outbound network; GitHub's runners do.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'arena/**'
+    paths:
+      - 'tools/verify_rows.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch every cited source and match the event name
+        run: python tools/verify_rows.py --timeout 30
+      - name: Commit the verification report
+        run: |
+          git config user.name "source-check-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/verify_report.json
+          if git diff --cached --quiet; then
+            echo "report unchanged"
+          else
+            git commit -m "Automated row-source verification report"
+            git push
+          fi

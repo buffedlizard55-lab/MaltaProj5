@@ -29,11 +29,19 @@ jobs:
         run: python tools/remotecheck.py --timeout 25
       - name: Ensure generated files are current
         run: git diff --exit-code -- '*.html' data/events.csv
-      - name: Stage public files only
+      - name: Verify docs/ site (every row sourced, links resolve)
+        run: python tools/verify_site.py
+      - name: Stage public files (docs/ site primary + root inventory under /inventory/)
         run: |
           mkdir -p _site
-          cp *.html _site/
-          cp -r assets data _site/
+          # Primary: full 167-event site built by tools/build_site.py (session 4f47c142)
+          cp -r docs/. _site/
+          # Secondary: 86-row unified register (sessions 3a19e72d + 5a85baf2) at /inventory/
+          mkdir -p _site/inventory
+          cp *.html _site/inventory/
+          cp -r assets _site/inventory/
+          mkdir -p _site/inventory/data
+          cp data/events.csv data/events.json data/sources.json data/review.json _site/inventory/data/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

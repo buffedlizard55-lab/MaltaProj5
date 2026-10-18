@@ -1,394 +1,261 @@
-"""Dependency-free, deterministic static Pages build; committed HTML works without JS.
+#!/usr/bin/env python3
+"""Deterministic, offline static build. Only audited fields are rendered as facts.
 
-Inputs:  data/events.json, data/sources.json, data/review.json, data/verify_report.json
-Outputs: 12 HTML pages + data/events.csv
+Twelve root pages work under a GitHub Pages subpath, with or without JavaScript.
+No live-calendar claims, name-matcher report, prose date parsing or fact fallback.
 """
+from __future__ import annotations
+
 import csv
 import io
 import json
 from collections import Counter
-from html import escape as e
+from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def load(n):
-    return json.loads((ROOT / "data" / n).read_text())
+def load(name):
+    return json.loads((ROOT / "data" / name).read_text())
 
 
-rows = load("events.json")
-sources = load("sources.json")
-findings = load("review.json")
-try:
-    report = load("verify_report.json")
-except FileNotFoundError:
-    report = {"summary": {}, "rows": {}}
-
-nav = [
-    ("index.html", "Overview"),
-    ("weekly.html", "Every week"),
-    ("monthly.html", "Every month"),
-    ("annual.html", "Every year"),
-    ("special.html", "Special events"),
-    ("markets.html", "Markets & food"),
-    ("museums.html", "Museums & science"),
-    ("culture.html", "Festivals & culture"),
-    ("community.html", "Community & outdoors"),
-    ("analysis.html", "Analysis"),
-    ("review.html", "Flagged for Review"),
-    ("sources.html", "Sources & method"),
-]
-
-CHECK_LABEL = {
-    "field-level": "Field-level check",
-    "page-level": "Page-level check",
-    "flagged": "Flagged",
-}
-CHECK_TITLE = {
-    "field-level": "A researcher transcribed these values from the cited official page; the link was re-checked in integration.",
-    "page-level": "The cited official page was fetched and the event name found; individual values were not re-transcribed in integration.",
-    "flagged": "This row carries unresolved review notes or its source could not be confirmed automatically.",
-}
+rows, sources, findings, stats = (load(n) for n in ("events.json", "sources.json", "review.json", "audit_summary.json"))
+listed = [r for r in rows if r["publication"] == "listed"]
+lookup = {r["id"]: r for r in rows}
+AS_OF = "18 October 2026"
+FIELDS = ("name", "schedule", "time", "venue", "price")
+LABELS = {"name": "Event name", "schedule": "Published schedule", "time": "Time", "venue": "Venue / area", "price": "Admission / conditions"}
+NAV = [("index.html", "Overview"), ("weekly.html", "Weekly"), ("monthly.html", "Monthly"), ("annual.html", "Annual"), ("special.html", "Special & dated"), ("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors"), ("analysis.html", "Analysis & findings"), ("review.html", "Flagged for Review"), ("sources.html", "Sources & evidence")]
 
 
-def link(s):
-    x = sources[s]
-    return f'<a href="{e(x["url"])}" rel="noreferrer">{e(x["publisher"])} &#8599;</a>'
+def e(value):
+    return escape(str(value), quote=True)
 
 
-def badge(r):
-    level = (r.get("check") or {}).get("level", "page-level")
-    label = CHECK_LABEL.get(level, level)
-    n, u = len(r["flags"]), len(r.get("unverified", []))
-    cls = "flag" if n or level == "flagged" else ("warn" if level == "page-level" else "ok")
-    extra = f" · {n} note{'s' if n != 1 else ''}" if n else ""
-    if u:
-        extra += f" · {u} unverified"
-    return (f'<span class="check {cls}" title="{e(CHECK_TITLE.get(level, ""))}">'
-            f'{e(label)}{extra}</span>')
+def display(row):
+    return row["name"] or row["candidate_name"]
 
 
-def table(rs, caption="Official-source inventory · blank cells are unverified · times as published by the organizer",
-          prefix="", controls=True):
-    table_id = "events" if controls else "events-" + (prefix.strip("-") or "alt")
-    tools = ('<div class="tools"><label>Search this table <input type="search" id="search" '
-             'placeholder="Event, venue, or schedule…"></label><label>Recurrence '
-             '<select id="kind"><option value="">All types</option>'
-             + "".join(f"<option>{x}</option>" for x in ["Weekly", "Monthly", "Annual", "Special"])
-             + '</select></label><button id="reset" type="button">Reset</button>'
-             f'<span id="count" role="status">{len(rs)} entries</span></div>') if controls else ""
-    out = (tools + f'<div class="table-wrap"><table id="{table_id}">'
-           f'<caption>{e(caption)}</caption><thead><tr>'
-           + "".join(f'<th scope="col">{h}</th>' for h in
-                     ["Event / category", "Pattern", "Date or recurrence", "Time", "SF venue",
-                      "Admission", "Official source &amp; verification"])
-           + '</tr></thead><tbody>')
-    for r in rs:
-        notes = ("<details><summary>Review notes</summary><ul>"
-                 + "".join("<li>" + e(f) + "</li>" for f in r["flags"]) + "</ul></details>"
-                 if r["flags"] else '<span class="badge">No review notes</span>')
-        if r.get("unverified"):
-            notes += ('<details class="unv"><summary>Unverified blank fields</summary><ul>'
-                      + "".join("<li>" + e(f) + "</li>" for f in r["unverified"]) + "</ul></details>")
-        srcs = "".join("<div>" + link(s) + "</div>" for s in r["sources"])
-        parent = ('<small>Dated occurrence of the After Dark series — not a separate series</small>'
-                  if r["parent"] else "")
-        out += (f'<tr id="{prefix}{r["id"]}" data-kind="{r["kind"]}" data-category="{e(r["category"])}">'
-                f'<th scope="row">{e(r["name"])}<small>{e(r["category"])}</small>{parent}</th>'
-                + "".join("<td>" + e(r[k]) + "</td>"
-                          for k in ["kind", "schedule", "time", "venue", "price"])
-                + f'<td>{srcs}<a class="evidence" href="sources.html#event-{r["id"]}">Row evidence</a>'
-                + badge(r) + notes
-                + ("<p>" + e(r["notes"]) + "</p>" if r["notes"] else "")
-                + "</td></tr>")
-    out += "</tbody></table></div>"
-    if controls:
-        out += ('<p id="empty" hidden>No matching entries. Try another search or reset the filters.</p>')
-    return out
+def official(sid, label=None):
+    source = sources[sid]
+    return f'<a class="official" href="{e(source["url"])}" rel="noreferrer">{e(label or source["publisher"])} <span aria-hidden="true">↗</span></a>'
 
 
-def page(file, title, desc, body, eyebrow="SF EVENTS / RESEARCH DIRECTORY"):
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{e(desc)}">
-<title>{e(title)} · SF Events</title>
-<link rel="stylesheet" href="assets/style.css"><script defer src="assets/app.js"></script></head>
+def links(row):
+    primary, *rest = row["sources"]
+    extra = '<details class="more-links"><summary>More official pages</summary>' + '<br>'.join(official(s) for s in rest) + '</details>' if rest else ''
+    return official(primary, "Official source") + f'<a class="evidence" href="sources.html#e-{e(row["id"])}">Field evidence →</a>' + extra
+
+
+def write(filename, title, intro, body):
+    navigation = ''.join(f'<a href="{f}"' + (' aria-current="page"' if f == filename else '') + f'>{e(label)}</a>' for f, label in NAV)
+    html = f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(title)} · SF Events</title><meta name="description" content="{e(intro)}">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"><script src="assets/app.js" defer></script></head>
 <body><a class="skip" href="#main">Skip to content</a>
-<aside><a class="brand" href="index.html"><span class="logo">SF</span> events<span class="dot">.</span></a>
-<p class="eyebrow">CITY EVENT OBSERVATORY</p>
-<nav aria-label="Main navigation">{"".join(f'<a href="{f}"' + (' aria-current="page"' if f == file else "") + ">" + label + "</a>" for f, label in nav)}</nav>
-<div class="sidebar-note">SAN FRANCISCO ONLY<br>Official sources. Open evidence.<br><b>Research snapshot</b><br>18 October 2026<br><br>
-{len(rows)} entries · {len(sources)} sources</div></aside>
-<main id="main"><header><span>{e(eyebrow)}</span><a href="data/events.csv" download>Download CSV ↓</a></header>
-<div class="heading"><p class="eyebrow">EXPLORE YOUR CITY, WITH EVIDENCE</p><h1>{e(title)}</h1><p>{e(desc)}</p></div>
+<aside><a class="brand" href="index.html"><span class="logo" aria-hidden="true">SF</span>Events<span class="dot">.</span></a>
+<p class="eyebrow">A SOURCE-LINKED FIELD GUIDE</p><nav aria-label="Main navigation">{navigation}</nav>
+<div class="sidebar-note">San Francisco city only<br>Research snapshot · {AS_OF}<br>Not an exhaustive or live calendar<br><a href="sources.html#method">Read the method →</a></div></aside>
+<main id="main"><header><span>SAN FRANCISCO / RESEARCH INDEX</span><span>Snapshot: {AS_OF} · <a href="data/events.csv" download>Directory CSV ↓</a></span></header>
+<section class="heading"><p class="eyebrow">CITY ONLY. SOURCES FIRST.</p><h1>{e(title)}</h1><p>{e(intro)}</p></section>
 {body}
-<footer>Independent research directory, not an official City website. Schedules change; check the organizer before attending.
-<a href="sources.html">Method &amp; limitations</a> · <a href="review.html">Flagged for Review</a> ·
-<a href="https://github.com/buffedlizard55-lab/MaltaProj5">Repository &#8599;</a></footer>
-</main></body></html>'''
+<footer>Bounded research, not citywide completeness. Event dates and times are local to San Francisco. Temporal labels use the fixed {AS_OF} snapshot, not today.<br>Blank cells are unverified, never free by default. <a href="review.html">Open questions</a> · <a href="sources.html#method">Evidence & method</a> · <a href="https://github.com/buffedlizard55-lab/MaltaProj5">Repository ↗</a></footer></main></body></html>'''
+    (ROOT / filename).write_text(html + "\n")
 
 
-def write(file, title, desc, body, eyebrow="SF EVENTS / RESEARCH DIRECTORY"):
-    (ROOT / file).write_text(page(file, title, desc, body, eyebrow))
+def notice():
+    return f'''<div class="notice"><b>Know what this directory does—and does not—confirm.</b>
+{stats['listed']} entries have evidence-backed names, venues and San Francisco geography. Unconfirmed values stay blank and are flagged; a listing does not mean every detail is verified.
+{stats['review_only']} candidates are held off the directory on <a href="review.html">Flagged for Review</a>.
+“Future dated” means after {AS_OF}; it is not a real-time availability promise. Recurrence never generates a next date.</div>'''
 
 
-def pct(a, b):
-    return f"{a * 100 // b}%" if b else "—"
+def metrics(items):
+    return '<section class="stats" aria-label="Inventory summary">' + ''.join(f'<article{(" class=" + chr(34) + "warn" + chr(34)) if warn else ""}><span>{e(title)}</span><strong>{e(value)}</strong><small>{e(detail)}</small></article>' for title, value, detail, warn in items) + '</section>'
 
 
-kinds = Counter(r["kind"] for r in rows)
-cats = Counter(r["category"] for r in rows)
-flagged = [r for r in rows if r["flags"]]
-series = sum(1 for r in rows if not r["parent"])
-domains = {sources[s]["url"].split("/")[2] for r in rows for s in r["sources"]}
-levels = Counter((r.get("check") or {}).get("level", "page-level") for r in rows)
-summ = report.get("summary", {})
+def cards(items):
+    return '<div class="cards">' + ''.join(f'<a href="{e(url)}"><span>{e(label)}</span><strong>{e(value)}</strong><small>{e(detail)} →</small></a>' for url, label, value, detail in items) + '</div>'
 
-stats = ('<section class="stats" aria-label="Inventory statistics">'
-         + "".join(f'<article class="{cls}"><span>{label}</span><strong>{value}</strong><small>{note}</small></article>'
-                   for label, value, note, cls in [
-                       ("Inventory entries", len(rows), "Dated occurrences counted separately", ""),
-                       ("Regular events", kinds["Weekly"] + kinds["Monthly"],
-                        f'{kinds["Weekly"]} weekly · {kinds["Monthly"]} monthly', ""),
-                       ("Annual events", kinds["Annual"], "Yearly editions and seasons", ""),
-                       ("Special events", kinds["Special"], "Dated programmes and one-off editions", ""),
-                       ("Official sources", len(sources), f"{len(domains)} distinct domains", ""),
-                       ("Rows with review notes", len(flagged), f"{pct(len(flagged), len(rows))} of the register", "warn"),
-                   ]) + "</section>")
 
-legend = ('<div class="notice"><b>A transparent inventory, not an exhaustive calendar of the city.</b> '
-          'Every row links to the official page it was checked against on <b>18 October 2026</b>. '
-          'A blank cell means <b>unverified</b> — not free, not “not applicable”. '
-          'Dates are reproduced as published; next editions are never generated from a pattern. '
-          f'{len(flagged)} rows carry open review notes; all are published on '
-          '<a href="review.html">Flagged for Review</a> rather than silently resolved.'
-          '</div>'
-          '<div class="legend"><span class="check ok">Field-level check</span> values transcribed from the official page '
-          '<span class="check warn">Page-level check</span> page + event name re-confirmed automatically '
-          '<span class="check flag">Flagged</span> unresolved note or unconfirmed value</div>')
+def date_text(row):
+    spans = row["occurrences"]
+    return '; '.join(x["start"] + ((' → ' + x["end"]) if x["end"] and x["end"] != x["start"] else (' · closing unconfirmed' if not x["end"] else '')) for x in spans)
 
-cards = ('<section class="intro"><h2>A rhythm for every kind of day</h2>'
-         '<p>Weekly routines, monthly gatherings, annual traditions and dated special programmes. '
-         'Category and rhythm are editorial groupings, not organizer claims.</p><div class="cards">'
-         + "".join(f'<a href="{f}"><span>{label}</span><strong>{n:02d}</strong><small>Browse entries →</small></a>'
-                   for f, label, n in [
-                       ("weekly.html", "Every week", kinds["Weekly"]),
-                       ("monthly.html", "Every month", kinds["Monthly"]),
-                       ("annual.html", "Every year", kinds["Annual"]),
-                       ("special.html", "Special programmes", kinds["Special"]),
-                   ])
-         + "</div></section>")
 
-cat_cards = ('<h2>Browse by category</h2><div class="cards cats">'
-             + "".join(f'<a href="{f}"><span>{c}</span><strong>{cats[c]:02d}</strong>'
-                       f'<small>Official-source rows →</small></a>'
-                       for f, c in [("markets.html", "Markets & food"),
-                                    ("museums.html", "Museums & science"),
-                                    ("culture.html", "Festivals & culture"),
-                                    ("community.html", "Community & outdoors")])
-             + "</div>")
+def fact_cell(row, field):
+    value = row[field]
+    # Preserve actual empty cells. The review column identifies every missing field.
+    return f'<td>{e(value)}</td>' if value else f'<td class="unknown" aria-label="{e(LABELS[field])}: unverified"></td>'
 
-howto = ('<section class="prose"><h2>How this register was built</h2><ol>'
-         '<li><b>Four research passes were reconciled row by row</b> into one register (sessions '
-         '3a19e72d, 5a85baf2, 4f47c142 and a1b7522f). Overlapping rows were merged, not dropped: '
-         'each keeps its official source.</li>'
-         '<li><b>Only official pages</b> supply facts: organizers, venues, museums and City bodies. '
-         'Tourism-board guides and third-party calendars were used for discovery only.</li>'
-         '<li><b>Automated re-check:</b> every cited URL is fetched from GitHub Actions and the page text is '
-         'searched for the event name. Bot-blocked pages are reported, not silently passed.</li>'
-         f'<li><b>Result:</b> {summ.get("name_found", 0)} of {summ.get("rows", len(rows))} rows had the event name '
-         'confirmed on a cited page in the latest automated pass; the rest are labelled and listed on the '
-         'Flagged page.</li></ol></section>')
 
-write("index.html", "San Francisco, in events.",
-      "Recurring gatherings and special occasions inside the City and County of San Francisco — "
-      "organized, source-linked, and honest about what is still unknown.",
-      stats + legend + cards + cat_cards +
-      '<h2>All inventory entries</h2>' + table(rows) +
-      '<h2>Read next</h2><div class="cards"><a href="analysis.html"><span>Analysis</span>'
-      '<strong>Findings</strong><small>What the register shows →</small></a>'
-      '<a href="review.html"><span>Review queue</span>'
-      f'<strong>{len(flagged):02d}</strong><small>Unverified values & irregularities →</small></a>'
-      '<a href="sources.html"><span>Method</span><strong>Sources</strong>'
-      '<small>Ledger, excerpts, limits →</small></a></div>' + howto)
+def table(items, review=False):
+    items = list(items)
+    tools = '''<div class="tools" id="table-tools" hidden>
+<label for="search">Search entries<input id="search" type="search" placeholder="Event, venue, category…" autocomplete="off"></label>
+<label for="kind">Cadence<select id="kind"><option value="">All cadences</option>''' + ''.join(f'<option>{k}</option>' for k in ("Weekly", "Monthly", "Annual", "Special", "Unverified")) + '''</select></label>
+<label for="temporal">Date status<select id="temporal"><option value="">All dates</option>''' + ''.join(f'<option>{e(k)}</option>' for k in sorted({r["temporal_status"] for r in items})) + '''</select></label>
+<label for="publication">Publication<select id="publication"><option value="">All entries</option><option value="listed">In directory</option><option value="review_only">Held for review</option></select></label>
+<button type="button" id="reset">Reset</button><span id="count" role="status" aria-live="polite">''' + f'{len(items)} of {len(items)} entries</span></div>'
+    out = [tools, '<p class="table-hint">Blank cells are unverified. Open “Field evidence” for quotations. On narrow screens, scroll the table horizontally.</p>', '<div class="table-wrap" tabindex="0" role="region" aria-label="Source-linked event table"><table id="events">', f'<caption>{len(items)} {"candidate" if review else "directory"} entries · snapshot {AS_OF} · categories and programme relationships are editorial, not unique-event counts.</caption>', '<thead><tr><th scope="col">Event / programme</th><th scope="col">Published schedule</th><th scope="col">Time</th><th scope="col">Venue / area</th><th scope="col">Admission / conditions</th><th scope="col">Cadence & date status</th><th scope="col">Review notes</th><th scope="col">Official sources</th></tr></thead><tbody>']
+    for row in items:
+        rid = e(row["id"])
+        candidate = '<span class="candidate-label">Unverified inherited identifier—not a confirmed event name</span>' if not row["name"] else ''
+        parent = f'<small>Part of: <a href="review.html#{e(row["parent"])}">{e(display(lookup[row["parent"]]))}</a></small>' if row["parent"] else ''
+        missing = ', '.join(x.split(':')[0] for x in row["unverified"])
+        notes = row["flags"] + ([row["notes"]] if row["notes"] else [])
+        details = f'<details><summary>{e("Unverified: " + missing if missing else "Context & qualifications")}</summary>' + ''.join(f'<p>{e(n)}</p>' for n in notes) + ('<ul>' + ''.join(f'<li>{e(n)}</li>' for n in row["unverified"]) + '</ul>' if missing else '') + f'<a href="review.html#{rid}">Review record →</a></details>'
+        first_links = '<small class="event-links">' + official(row['sources'][0], 'Official source') + f' · <a href="sources.html#e-{rid}">Evidence</a></small>'
+        disposition = '<span class="check flag">Held for review</span>' if row["publication"] == 'review_only' else '<span class="check ok">SF location evidenced</span>'
+        dates = f'<small class="normalized">Approved dates: {e(date_text(row))}</small>' if row["occurrences"] else ''
+        kind = 'Special / cadence unconfirmed' if row["kind"] == 'Special' else row["kind"]
+        state_cls = 'past' if row["temporal_status"] == 'Past dated' else 'future' if row["temporal_status"] == 'Future dated' else 'neutral'
+        out.append(f'<tr id="{rid}" data-kind="{e(row["kind"])}" data-temporal="{e(row["temporal_status"])}" data-publication="{e(row["publication"])}"><th scope="row">{e(display(row))}{candidate}<small>{e(row["category"])} · {e(row["entry_type"])}</small>{parent}{first_links}</th>')
+        out.append(f'<td>{e(row["schedule"])}{dates}</td>' if row['schedule'] else '<td class="unknown" aria-label="Published schedule: unverified"></td>')
+        out.extend(fact_cell(row, field) for field in ("time", "venue", "price"))
+        out.append(f'<td>{e(kind)}<span class="temporal {state_cls}">{e(row["temporal_status"])}</span></td><td>{disposition}{details}</td><td>{links(row)}</td></tr>')
+    out += ['</tbody></table></div>', '<p id="empty" class="notice" role="status" hidden>No matching entries. Try fewer filters or reset the table.</p>']
+    return ''.join(out)
 
-KIND_DESC = {
-    "Weekly": ("Weekly events", "Events with a weekly rhythm — farmers markets, museum nights and standing programmes. "
-                               "Seasonal pauses and exceptions are kept in the date column, not smoothed away."),
-    "Monthly": ("Monthly events", "Events that recur once a month or on a named monthly pattern, such as first "
-                                 "Thursdays or second Sundays."),
-    "Annual": ("Annual events", "Yearly traditions, festivals, parades and seasons. Next editions appear only when "
-                               "the organizer has published them."),
-    "Special": ("Special events", "Dated programmes, one-off editions and limited runs. 'Special' is an editorial "
-                                 "label: it means a dated instance, not proof that the event never repeats."),
-}
-for kind, (title, desc) in KIND_DESC.items():
-    write(kind.lower() + ".html", title, desc, legend + table([r for r in rows if r["kind"] == kind],
-                                                              f"{title} · official-source rows"))
 
-for file, cat in [("markets.html", "Markets & food"), ("museums.html", "Museums & science"),
-                  ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors")]:
-    write(file, cat, f"Every register entry grouped under {cat}. Follow each official source and its row evidence "
-                     "for details and limitations.",
-          table([r for r in rows if r["category"] == cat], f"{cat} · official-source rows"))
+kind_counts = Counter(r["kind"] for r in listed)
+cat_counts = Counter(r["category"] for r in listed)
+body = metrics([
+    ("City-only directory", stats["listed"], f'{stats["series"]} programme umbrellas included', False),
+    ("Recurring entries", sum(kind_counts[k] for k in ("Weekly", "Monthly", "Annual")), "Cadence requires its own evidence", False),
+    ("Future dated", stats["temporal"].get("Future dated", 0), f"Relative to {AS_OF}, not live", False),
+    ("Held for review", stats["review_only"], "Not included in directory totals", True),
+    ("Official source URLs", stats["source_urls"], f'{stats["domains"]} distinct domains; not organizations', False),
+    ("Candidates assessed", stats["candidates"], f'{stats["inherited_candidates"]} inherited + {stats["new_entries"]} new', False),
+]) + notice()
+body += '<section class="intro"><h2>Find your rhythm</h2><p>Documented recurring patterns are separate from dated programmes whose ongoing cadence is not confirmed.</p>' + cards([(f, label, kind_counts[k], "Browse source-linked entries") for f, label, k in [("weekly.html", "Weekly", "Weekly"), ("monthly.html", "Monthly", "Monthly"), ("annual.html", "Annual", "Annual"), ("special.html", "Special & dated", "Special")]]) + '</section>'
+body += '<h2>Explore by category</h2>' + cards([(f, c, cat_counts[c], "Browse the directory") for f, c in [("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors")]])
+body += '<h2>City-only directory</h2>' + table(listed)
+write("index.html", "San Francisco, in events.", "Recurring gatherings, cultural traditions and special programmes—organized around official evidence, with uncertainty kept visible.", body)
 
-MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
-          "September", "October", "November", "December"]
-month_counts = Counter()
-for r in rows:
-    for m in MONTHS:
-        if m.lower() in (r["schedule"] + " " + r["notes"]).lower():
-            month_counts[m] += 1
-top_months = [m for m in MONTHS if month_counts[m]]
-pubs = Counter()
-for r in rows:
-    for s in r["sources"]:
-        pubs[sources[s]["publisher"].split("—")[0].strip()] += 1
-gov = sum(1 for s in sources.values() if ".gov" in s["url"])
-org = sum(1 for s in sources.values() if ".org" in s["url"])
-com = sum(1 for s in sources.values() if s["url"].split("/")[2].endswith((".com", ".world", ".net")))
+for filename, kind, title in [("weekly.html", "Weekly", "A weekly rhythm."), ("monthly.html", "Monthly", "Once a month. Or twice."), ("annual.html", "Annual", "Traditions that return."), ("special.html", "Special", "Special & dated programmes.")]:
+    description = "Only source-supported recurring classifications appear here. Seasonal exceptions apply; a pattern never proves the next occurrence." if kind != "Special" else "Dated editions and programme umbrellas without an approved ongoing cadence. “Special” does not claim an event will never recur. Past editions remain clearly labeled."
+    write(filename, title, description, notice() + table([r for r in listed if r["kind"] == kind]))
 
-analysis = f'''<section class="prose">
-<h2>What the register contains</h2>
-<p>{len(rows)} entries across four rhythms and four editorial categories. {series} are series or standalone
-entries; {len(rows) - series} are dated occurrences of another series (the After Dark themes), which is why
-counts should not be read as unique gatherings.</p>
-<table class="plain"><thead><tr><th>Measure</th><th>Value</th><th>Share</th></tr></thead><tbody>
-{''.join(f'<tr><td>{k}</td><td>{v}</td><td>{pct(v, len(rows))}</td></tr>' for k, v in kinds.most_common())}
-{''.join(f'<tr><td>{k}</td><td>{v}</td><td>{pct(v, len(rows))}</td></tr>' for k, v in cats.most_common())}
-</tbody></table>
+for filename, category in [("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors")]:
+    write(filename, category + ".", "An editorial category of city-only entries. Prices, eligibility, dates and unresolved questions remain attached to their official sources.", notice() + table([r for r in listed if r["category"] == category]))
 
-<h2>Verification status</h2>
-<p>Three labels are used. <b>Field-level</b> rows had their individual values transcribed from the official
-page by a researcher. <b>Page-level</b> rows were inherited from an independent pass; in integration the
-page was fetched and the event name confirmed, but each date and price was not re-transcribed.
-<b>Flagged</b> rows carry an unresolved value or note.</p>
-<table class="plain"><thead><tr><th>Level</th><th>Rows</th><th>Meaning</th></tr></thead><tbody>
-<tr><td>Field-level</td><td>{levels['field-level']}</td><td>Values transcribed from the cited official page</td></tr>
-<tr><td>Page-level</td><td>{levels['page-level']}</td><td>Page and event name re-confirmed automatically</td></tr>
-<tr><td>Flagged</td><td>{levels['flagged']}</td><td>An unresolved note; see the Flagged page</td></tr>
-</tbody></table>
-<p>Latest automated pass ({e(report.get('checked_at', 'not yet run'))}): <b>{summ.get('name_found', 0)}</b> rows
-had the event name found on a cited page, <b>{summ.get('name_not_found', 0)}</b> did not,
-<b>{summ.get('no_response', 0)}</b> had no response, and <b>{summ.get('pdf_not_checked', 0)}</b> cite a PDF.
-<b>{summ.get('dead_urls', 0)}</b> cited URL(s) were dead and <b>{summ.get('blocked_urls', 0)}</b> were
-bot-blocked or returned a server error. A blocked page is not evidence of a bad event; it means the
-automated client could not read it. Those rows keep their label and appear on the review page.</p>
 
-<h2>Coverage of the annual calendar</h2>
-<p>Counting the rows that explicitly mention each month (a row may mention several):</p>
-<div class="bars">{''.join(f'<div><span>{m}</span><i style="width:{month_counts[m] * 100 // max(month_counts.values() or [1])}%"></i><b>{month_counts[m]}</b></div>' for m in MONTHS)}</div>
-<p>Mentions peak in May–June and September–November, dip in July–August and are lowest in January.
-These are mentions, not unique events: one row can name several months, and the counts include
-recurring schedules as well as annual editions.</p>
+def plain(headers, values):
+    return '<div class="table-wrap"><table class="plain"><thead><tr>' + ''.join(f'<th scope="col">{e(h)}</th>' for h in headers) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{e(v)}</td>' for v in row) + '</tr>' for row in values) + '</tbody></table></div>'
 
-<h2>Source concentration</h2>
-<p>{len(sources)} source records across {len(domains)} domains — {gov} government domains, {org} non-profit
-or association domains, and {com} commercial organizer/venue domains. The most-cited publishers are:</p>
-<ol>{''.join(f'<li>{e(p)} — {n} row citation(s)</li>' for p, n in pubs.most_common(8))}</ol>
 
-<h2>What the data shows — and what it cannot</h2>
-<ul>
-<li><b>It is a festival city with a thin weekly layer.</b> {kinds['Annual']} annual entries against
-{kinds['Weekly']} weekly ones. The weekly layer is mostly farmers markets, museum nights and standing
-park programmes.</li>
-<li><b>Blank is the honest default.</b> {len(flagged)} rows carry review notes and
-{sum(1 for r in rows if r.get("unverified"))} have at least one blank tracked field. Where an organizer has not
-published a next date, the date cell is blank rather than extrapolated — a recurring pattern is not a
-confirmed future instance.</li>
-<li><b>Many entries record 2026 editions that have already taken place</b> (for example Tulip Day in
-March, the Opera Ball gala and the July 4 fireworks). They are retained as dated records and are not
-presented as upcoming; the register has no “upcoming only” filter because that would require
-re-deriving dates the organizers have not published.</li>
-<li><b>There is no citywide denominator.</b> No official source publishes a complete count of San Francisco
-events, so this register cannot claim exhaustive coverage. Known gaps: library programmes, most theatre,
-neighbourhood block parties, sports beyond the Giants, and weekday civic meetings.</li>
-<li><b>Two registers were reconciled.</b> The 86-row register (sessions 3a19e72d/5a85baf2) and the 167-row
-inventory (session 4f47c142) were merged with an explicit map; overlapping rows were reconciled rather
-than counted twice.</li>
-</ul>
+analysis_intro = f'''<section class="prose"><h2>What the register can tell us</h2><p>{stats['candidates']} candidate entries were assessed. {stats['listed']} meet the directory’s name, venue and SF-geography gate; {stats['review_only']} are held for review. These are <b>entries, not unique events</b>: {stats['series']} listed programme umbrellas overlap their dated children. This is not a random sample of San Francisco activity.</p>
+<p>Counts describe this dataset only. They cannot establish citywide event frequency, neighborhood equity, attendance, economic impact, or that one category dominates the city.</p></section>'''
+body = analysis_intro + '<h2>Directory composition</h2>' + plain(["Documented cadence / editorial grouping", "Entries"], [(k, kind_counts[k]) for k in ("Weekly", "Monthly", "Annual", "Special")])
+body += '<h2>Dates, without invention</h2>' + plain([f"Temporal status at {AS_OF}", "Directory entries"], sorted(stats["temporal"].items()))
+body += '<h2>Unconfirmed fields stay blank</h2>' + plain(["Field", "Blank cells in the directory"], [(LABELS[k], stats["blank_fields"][k]) for k in FIELDS])
+body += '<section class="prose"><p>Only explicit approved ISO dates drive date labels. An exhibition with only an opening date has no fabricated closing date. Ongoing admission policies and recurring markets do not automatically receive a dated next occurrence.</p><h2>Biases and limits</h2><ul><li>Official web calendars favor larger, web-visible institutions; small community, faith, nightlife and pop-up gatherings are underrepresented.</li><li>Blocked and JavaScript-only pages reduce readable evidence. Their candidates are not proof of nonexistence and are not silently counted as verified.</li><li>Regional festivals need venue-level separation. A San Francisco brand does not place every performance inside the city.</li><li>Domain counts are not counts of organizers. A .org suffix is not evidence of nonprofit legal status; no such inference is made.</li><li>Snapshot dates are not live ticket availability, cancellations or a guarantee that a source has not changed.</li></ul><h2>Next research priorities</h2><p>Isolate SF-only regional screenings; verify individual sports fixtures, theater/music performances, civic and faith calendars; resolve conflicting hours/street extents; revisit unreadable primary pages. Coverage is intentionally described as incomplete.</p><p><a href="review.html">All candidates and open questions →</a> · <a href="data/audit_summary.json">Machine-readable summary</a></p></section>'
+write("analysis.html", "Findings, not false certainty.", "A reproducible view of coverage, missing values, date quality and research limitations—not a statistical portrait of the whole city.", body)
 
-<h2>Method &amp; limitations</h2>
-<p>The full verification rules, the source ledger with transcribed excerpts and the row-by-row evidence
-ledger are on the <a href="sources.html">Sources &amp; method</a> page. Unresolved findings are on
-<a href="review.html">Flagged for Review</a>. External links were live at check time; availability can change
-and is re-tested in CI, not continuously.</p>
-</section>'''
-write("analysis.html", "Analysis & findings",
-      "What the register contains, how much of it is verified, where coverage is thin, and what the data "
-      "cannot support — all computed from the published register.", analysis)
+body = metrics([("Held off the directory", stats["review_only"], "Venue / geography / evidence unresolved", True), ("Listed with unconfirmed fields", stats["listed_with_blanks"], "Fields remain blank, never guessed", True), ("Candidates retained", stats["candidates"], "No unresolved candidate silently discarded", False)])
+body += '<section class="prose"><p><b>This page includes every candidate.</b> Filter Publication to “Held for review” to isolate quarantined entries. Candidate identifiers are preserved for traceability; where the event name itself is unconfirmed, the inherited title is explicitly labeled as an unverified identifier. They are not assertions of a real event, date or SF location.</p><p><a href="data/review.csv" download>Download all review records (CSV) ↓</a> · <a href="data/unverified_history.json">Unverified inherited history</a></p></section>'
+for i, finding in enumerate(findings, 1):
+    body += f'<section class="prose finding" id="finding-{i}"><h2>{e(finding["title"])}</h2><p>{e(finding["detail"])}</p></section>'
+exclusions = load("exclusions.json")
+body += '<section class="prose"><h2>Out-of-city exclusions</h2><p>Examples include Levi’s Stadium in Santa Clara and the Cow Palace in Daly City. Historical exclusion records remain in <a href="data/exclusions.json">the exclusion log</a>. Regional/mixed-city candidates are held for review rather than admitted wholesale.</p></section>'
+body += '<h2>Candidate review register</h2>' + table(rows, review=True)
+write("review.html", "Flagged for Review.", "Unverified fields, unresolved conflicts and candidates held off the city-only directory—published openly, with official links for manual checking.", body)
 
-body = ('<h2>Research findings &amp; coverage gaps</h2><div class="table-wrap"><table>'
-        '<caption>Unresolved findings do not block publication; they are not confirmed upcoming event rows.</caption>'
-        '<thead><tr><th>Finding</th><th>Review detail</th><th>Sources / references</th></tr></thead><tbody>')
-for f in findings:
-    body += ('<tr><th scope="row">' + e(f["title"]) + "</th><td>" + e(f["detail"]) + "</td><td>"
-             + "".join(link(s) + "<br>" for s in f.get("sources", []))
-             + "".join('<a href="' + e(u) + '">Reference / official site ↗</a><br>' for u in f.get("urls", []))
-             + "</td></tr>")
-body += '</tbody></table></div><h2>Entry-level review queue</h2>' + table(flagged, "Rows with at least one open review note")
-body += ('<h2>Blank fields (unverified, no separate review note)</h2>'
-         + table([r for r in rows if r.get("unverified") and not r["flags"]],
-                 "Blank cells mean unverified — not free and not not-applicable", prefix="blank-", controls=False))
-write("review.html", "Flagged for Review",
-      "Unconfirmed values are blank. Source conflicts, missing years, admission gaps and coverage gaps are "
-      "visible here — not silently resolved.", body)
+METHOD = '''<section class="prose" id="method"><h2>How evidence becomes a published field</h2><ol>
+<li>Historical inputs are consolidated into candidates and saved as <b>unverified history</b>, not trusted facts.</li>
+<li>Official organizer, venue, museum and government pages are read in context. Public-tourism sources are discovery/reference material, not a substitute for missing event details.</li>
+<li>Each accepted name, schedule, time, venue, admission condition, recurrence and occurrence date has an explicit decision and source quotation. Structured event JSON-LD is labeled separately from readable page text. Selected tool excerpts are not represented as complete raw page captures.</li>
+<li>The build starts every factual field blank and copies only approved decisions. Name, venue and documented SF geography are required for directory admission. Other unknowns remain blank and flagged. Geography can identify a recognized SF venue from its official address/directions; it is never inferred from a stray city token in unrelated marketing.</li>
+<li>Exact-quote checks test provenance, <b>not semantic truth</b>. Context, edition, eligibility and conflicting copy require a research judgment. A URL/status/name match never verifies the rest of a row.</li>
+<li>Only explicitly approved ISO occurrences determine labels relative to the fixed snapshot. URL slugs, weekdays, copyright dates and neighboring events never supply missing years. Recurrence evidence does not generate future dates.</li>
+</ol><p>Times are local to San Francisco. Free parking, free activities with paid entry, and virtual tickets do not establish free physical admission. Conditions such as residency, age, surcharges and RSVP remain visible.</p>
+<p>Evidence snapshot: <a href="data/audit_64f8b973.json">archived captures and explicit decisions (JSON)</a>. Original HTTP status and later attempt metadata remain separate; failed refreshes do not erase prior readable evidence. This is not continuous re-verification.</p>
+<p><a href="data/events.json">All audited records</a> · <a href="data/sources.json">Source ledger</a> · <a href="data/events.csv">Directory CSV</a> · <a href="data/review.csv">Review CSV</a> · <a href="data/unverified_history.json">UNVERIFIED inherited history</a></p></section>'''
 
-body = '''<section class="prose"><h2>Verification rules</h2><ol>
-<li>Only organizer, venue, museum or municipal pages supply admitted facts. Tourism-board guides and
-third-party calendars were used for discovery only, never as the sole row evidence.</li>
-<li>Official pages were read on 18 October 2026 and the supported event names, schedules, times, venues and
-admission restrictions transcribed. Excerpts below are selected transcriptions, not complete archived pages.</li>
-<li>Weekly, monthly and annual classifications require explicit recurrence language. <i>Special</i> is an
-editorial bucket for dated programmes; it does not mean one-time only.</li>
-<li>Dates are preserved as published. Next occurrences are not generated from a pattern, and a recurring
-pattern is not presented as a confirmed future instance.</li>
-<li>Only San Francisco venues are admitted. Events at Levi's Stadium, the Cow Palace and other out-of-city
-venues are excluded and recorded on the review page. No nearby Bay Area cities or online-only programmes.</li>
-<li>Blank schedule, time, venue or admission cells are flagged unverified. A source link verifies only the
-facts it states; a blank admission cell never means free.</li>
-<li>Automated re-check: every cited URL is fetched in CI and its text searched for the event name. Pages that
-block automated clients are reported, not treated as verified. Automation cannot prove a date or price.</li>
-</ol>
-<h2>Analysis &amp; limitations</h2>
-<p>This snapshot is not a complete list of all San Francisco events and makes no claim to be one: no
-citywide denominator exists. Museum, market and festival programmes are over-represented; library
-programmes, most theatre, weekday civic meetings and many neighbourhood events are under-covered.
-No claim is made about popularity, attendance or current ticket availability.</p>
-<p>Rows are labelled <b>field-level</b> (values transcribed from the page by a researcher),
-<b>page-level</b> (page and event name re-confirmed by the automated pass, values not re-transcribed) or
-<b>flagged</b> (unresolved note). The After Dark themes are dated occurrences of one weekly series and are
-not double-counted as series.</p>
-<p>No continuous refresh is claimed. CI checks data structure, evidence references, local links and the live
-status of each cited URL; it cannot establish factual truth.</p></section>
-<h2>Official-source register</h2>'''
-for sid, s in sources.items():
-    manual = " · read manually in integration" if s.get("manual") else ""
-    body += (f'<article class="source" id="source-{sid}"><h3>{e(s["publisher"])}</h3>'
-             f'<a href="{e(s["url"])}" rel="noreferrer">{e(s["url"])} ↗</a>'
-             f'<p>Checked {e(s["checked"])}{manual} · {e(s["method"])}</p>'
-             f'<blockquote>{e(s["excerpt"])}</blockquote></article>')
-body += '<h2>Row-by-row evidence ledger</h2>'
-for r in rows:
-    body += (f'<article class="source" id="event-{r["id"]}"><h3>{e(r["name"])}</h3><dl>'
-             + "".join(f"<dt>{e(k)}</dt><dd>{e(v)} · "
-                       + ", ".join(f'<a href="#source-{s}">{e(sources[s]["publisher"])}</a>'
-                                   for s in r["evidence"].get(k, [])) + "</dd>"
-                       for k, v in r.items() if k in ["name", "schedule", "time", "venue", "price"] and v)
-             + "</dl><p>Verification: " + e((r.get("check") or {}).get("level", "page-level"))
-             + " · Unverified / review: " + e("; ".join(r["flags"]) or "no open notes") + "</p></article>")
-write("sources.html", "Sources & method",
-      "Every row links to official pages. This ledger records what was checked, the supporting excerpts, "
-      "and what remains unresolved.", body)
 
-f = io.StringIO()
-w = csv.writer(f)
-w.writerow(["id", "name", "category", "kind", "schedule", "time", "venue", "price",
-            "source_urls", "checked", "verification", "parent", "review"])
-for r in rows:
-    w.writerow([r[k] for k in ["id", "name", "category", "kind", "schedule", "time", "venue", "price"]]
-               + [" | ".join(sources[s]["url"] for s in r["sources"]), "2026-10-18",
-                  (r.get("check") or {}).get("level", "page-level"), r["parent"], " | ".join(r["flags"])])
-(ROOT / "data" / "events.csv").write_text(f.getvalue())
-print(f"Built {len(nav)} pages, {len(rows)} rows, {len(sources)} official-source records.")
+def quotations(quotes):
+    out = []
+    for q in quotes:
+        sid = next(k for k, s in sources.items() if s["url"] == q["url"])
+        fmt = 'event JSON-LD' if q.get('format') == 'jsonld' else 'page text / selected excerpt'
+        out.append(f'<blockquote><p>{e(q["text"])}</p><cite>{official(sid)} · {fmt}</cite></blockquote>')
+    return ''.join(out)
+
+
+body = METHOD + '<h2>Row-by-row field evidence</h2><p>Only the values shown below are approved facts. A blank field remains unverified, even when the page or event name is confirmed. Read the full linked page to check current context.</p>'
+for row in rows:
+    body += f'<article class="source row-evidence" id="e-{e(row["id"])}"><h3>{e(display(row))}</h3><p>{e(row["publication"])} · reviewed {e(row["audit"]["reviewed_at"])} · <a href="review.html#{e(row["id"])}">Review record</a></p>'
+    if not row['name']:
+        body += '<p class="candidate-label">Heading is an unverified inherited identifier, not an approved event name.</p>'
+    for field in FIELDS:
+        fact = row['field_evidence'].get(field)
+        body += f'<details><summary>{e(LABELS[field])}: {e(fact["value"]) if fact else "unverified (blank)"}</summary>' + (quotations(fact['quotes']) if fact else '<p>No value approved; inherited claims are not a fallback.</p>') + '</details>'
+    if row['recurrence']:
+        body += '<details><summary>Recurrence evidence</summary>' + quotations(row['recurrence']['quotes']) + '</details>'
+    body += '<details><summary>City-only geography</summary><p>' + e(row['geography']['basis']) + '</p>' + quotations(row['geography']['quotes']) + '</details>'
+    for occurrence in row['occurrences']:
+        body += f'<details><summary>Approved occurrence: {e(occurrence["start"])}' + (f' → {e(occurrence["end"])}' if occurrence['end'] else ' · closing unconfirmed') + '</summary>' + quotations(occurrence['quotes']) + '</details>'
+    body += '</article>'
+body += '<h2>Exact-URL source ledger</h2><p>Source count is distinct cited URLs, not organizations or unique domains. A successful request is not a field approval; blocks and errors are not dead-link verdicts.</p>'
+for sid, source in sources.items():
+    http = source['http'] if source['http'] is not None else 'not captured by runner'
+    method = ' · independent selected tool excerpt read ' + source['tool_checked_at'] if source['tool_excerpt_available'] else ''
+    body += f'<article class="source" id="s-{e(sid)}"><h3>{official(sid, source["title"])}</h3><p>{e(source["url"])}</p><p>Archived runner status: {e(http)} · capture timestamp: {e(source["captured_at"] or "not recorded")}{method}. Referenced by {len(source["approved_for_rows"])} explicit row decisions; this does not certify every field or current page content.</p></article>'
+write("sources.html", "A trail back to the source.", "Explicit field decisions and quotations, not inherited verification badges. Every candidate keeps official links for manual review.", body)
+
+
+def csv_value(value):
+    value = str(value)
+    return "'" + value if value.startswith(('=', '+', '-', '@')) else value
+
+
+def export(filename, items, review=False):
+    columns = ['id', 'name', 'schedule', 'time', 'venue', 'price', 'kind', 'entry_type', 'parent', 'category', 'publication', 'temporal_status', 'approved_dates', 'unverified', 'review_notes', 'official_source_urls', 'as_of']
+    if review:
+        columns.insert(1, 'candidate_identifier_unverified')
+    stream = io.StringIO(newline='')
+    writer = csv.DictWriter(stream, fieldnames=columns, lineterminator='\n')
+    writer.writeheader()
+    for row in items:
+        record = {key: row.get(key, '') for key in columns}
+        record.update(approved_dates=date_text(row), unverified='; '.join(row['unverified']), review_notes='; '.join(row['flags'] + ([row['notes']] if row['notes'] else [])), official_source_urls=' | '.join(sources[s]['url'] for s in row['sources']))
+        if review:
+            record['candidate_identifier_unverified'] = row['candidate_name']
+        writer.writerow({key: csv_value(value) for key, value in record.items()})
+    (ROOT / 'data' / filename).write_text(stream.getvalue())
+
+
+export('events.csv', listed)
+export('review.csv', rows, review=True)
+analysis_md = f'''# Analysis — bounded SF event research snapshot
+
+As of {AS_OF}. This is not a complete or live city calendar.
+
+- {stats['candidates']} candidate entries assessed: {stats['inherited_candidates']} inherited and {stats['new_entries']} new official-calendar entries.
+- {stats['listed']} admitted to the city-only directory; {stats['review_only']} held for review.
+- {stats['series']} listed programme umbrellas overlap child events. These totals are **not unique-event counts**.
+- {stats['source_urls']} exact cited URLs across {stats['domains']} domains. Domains are not organizations or nonprofit status.
+- Cadence: {kind_counts['Weekly']} weekly / {kind_counts['Monthly']} monthly / {kind_counts['Annual']} annual / {kind_counts['Special']} special or cadence-unconfirmed.
+
+## Blank factual fields in the directory
+
+''' + '\n'.join(f'- {LABELS[k]}: {stats["blank_fields"][k]}' for k in FIELDS) + '\n\n## Temporal labels (fixed snapshot)\n\n' + '\n'.join(f'- {k}: {v}' for k, v in sorted(stats['temporal'].items())) + '''
+
+## Interpretation and gaps
+
+Official web visibility biases this non-random sample toward larger institutions.
+No citywide density, neighborhood equity, attendance or impact claim can be made.
+Small community/faith/pop-up events, sports fixtures, individual arts performances,
+and civic calendars remain incomplete. Regional festivals require SF-only components.
+Blocked/JS-only responses and conflicting copy remain visible in the review register.
+No year is supplied by URL, weekday, copyright or unrelated neighboring event.
+No next occurrence is generated from a weekly/monthly/annual pattern.
+
+See [Flagged for Review](review.html), [field evidence](sources.html),
+[the summary JSON](data/audit_summary.json) and [unverified history](data/unverified_history.json).
+'''
+(ROOT / 'ANALYSIS.md').write_text(analysis_md)
+print(f'Built 12 HTML pages, {len(listed)} directory rows, {len(rows)} review records, CSVs and ANALYSIS.md from audited data only.')

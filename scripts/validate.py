@@ -1,34 +1,172 @@
+#!/usr/bin/env python3
+"""Offline gate: audit projection, quotations, blanks, dates, CSVs and HTML links.
+
+This is structural/provenance validation, never automatic semantic verification.
+"""
+from __future__ import annotations
+
+import csv
 import json
-from pathlib import Path
+import sys
 from html.parser import HTMLParser
-from urllib.parse import urlsplit, unquote
-root=Path(__file__).resolve().parents[1]
-rows=json.loads((root/'data/events.json').read_text()); sources=json.loads((root/'data/sources.json').read_text())
-assert len({r['id'] for r in rows})==len(rows)
-for r in rows:
- assert r['sources'] and all(s in sources for s in r['sources'])
- assert r['kind'] in ['Weekly','Monthly','Annual','Special']
- for k in ['schedule','time','venue','price']:
-  assert r[k] or any(f.startswith(k+': unverified') for f in r['unverified']), (r['id'],k)
-  if r[k]: assert r['evidence'][k]
- assert not r['parent'] or r['parent'] in {x['id'] for x in rows}
-for s in sources.values(): assert s['url'].startswith('https://') and s['checked']=='2026-10-18' and s['excerpt']
-class Parse(HTMLParser):
- def __init__(self): super().__init__(); self.links=[]; self.ids=set()
- def handle_starttag(self,tag,attrs):
-  a=dict(attrs)
-  if 'id' in a: assert a['id'] not in self.ids; self.ids.add(a['id'])
-  for key in ['href','src']:
-   if key in a: self.links.append(a[key])
-pages={}
-for f in root.glob('*.html'):
- p=Parse(); p.feed(f.read_text()); pages[f.name]=p
-for name,p in pages.items():
- for href in p.links:
-  u=urlsplit(href)
-  if u.scheme or u.netloc: continue
-  target=unquote(u.path) or name
-  assert (root/target).is_file(),(name,href)
-  if u.fragment and target in pages: assert unquote(u.fragment) in pages[target].ids,(name,href)
-assert len(pages)==12
-print(f'PASS: {len(rows)} rows, evidence references, missing-value flags, parent links, {len(pages)} HTML pages and every local link/fragment.')
+from pathlib import Path
+from urllib.parse import unquote, urlsplit
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+from audited_register import FIELDS, compile_register, normal  # noqa: E402
+
+
+def load(name):
+    return json.loads((ROOT / 'data' / name).read_text())
+
+
+class Page(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.links, self.ids, self.event_rows = [], set(), {}
+        self.in_events = False
+        self.row = None
+        self.cells = None
+        self.cell = None
+        self.lang = None
+        self.title = False
+        self.has_title = False
+        self.h1 = 0
+        self.viewport = False
+        self.official_urls = []
+        self.row_official = {}
+        self.styles = []
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if 'id' in a:
+            assert a['id'] not in self.ids, ('Duplicate HTML id', a['id'])
+            self.ids.add(a['id'])
+        if tag == 'html':
+            self.lang = a.get('lang')
+        if tag == 'title':
+            self.title = True
+        if tag == 'h1':
+            self.h1 += 1
+        if tag == 'meta' and a.get('name') == 'viewport':
+            self.viewport = True
+        if tag == 'table' and a.get('id') == 'events':
+            self.in_events = True
+        if self.in_events and tag == 'tr' and 'id' in a:
+            self.row, self.cells = a['id'], []
+            self.row_official[self.row] = []
+        if self.row and tag in ('td', 'th'):
+            self.cell = []
+        if tag == 'a' and 'official' in a.get('class', '').split():
+            url = a['href']
+            assert urlsplit(url).scheme == 'https', ('Official source not HTTPS', url)
+            self.official_urls.append(url)
+            if self.row:
+                self.row_official[self.row].append(url)
+        for attr in ('href', 'src'):
+            if attr in a:
+                self.links.append(a[attr])
+        # No browser-facing localhost/backends or inline network dependencies.
+        for value in a.values():
+            if isinstance(value, str):
+                assert '://localhost' not in value and '://127.0.0.1' not in value
+
+    def handle_endtag(self, tag):
+        if tag == 'title':
+            self.title = False
+        if self.row and tag in ('td', 'th') and self.cell is not None:
+            self.cells.append(normal(' '.join(self.cell)))
+            self.cell = None
+        if tag == 'tr' and self.row:
+            self.event_rows[self.row] = self.cells
+            self.row, self.cells, self.cell = None, None, None
+        if tag == 'table':
+            self.in_events = False
+
+    def handle_data(self, text):
+        if self.title and text.strip():
+            self.has_title = True
+        if self.cell is not None:
+            self.cell.append(text)
+
+
+def main():
+    rows, sources, review, summary = (load(n) for n in ('events.json', 'sources.json', 'review.json', 'audit_summary.json'))
+    history, audit = load('unverified_history.json'), load('audit_64f8b973.json')
+    assert history['warning'].startswith('UNVERIFIED'), 'Historical claims need an explicit warning'
+    expected = compile_register(history['events'], history['sources'], history['review_findings'], audit)
+    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection. Rebuild; never run the old matcher applicator.'
+    ids = {r['id'] for r in rows}
+    assert len(ids) == len(rows)
+    assert set(audit['candidates']) <= ids, 'An inherited candidate was silently discarded'
+    assert all(r['sources'] and all(s in sources for s in r['sources']) for r in rows)
+    assert len({s['url'] for s in sources.values()}) == len(sources), 'Duplicate source URLs'
+    listed = [r for r in rows if r['publication'] == 'listed']
+    for row in rows:
+        for field in FIELDS:
+            assert bool(row[field]) == bool(row['field_evidence'].get(field)), (row['id'], field)
+            if not row[field]:
+                assert f'{field}: unverified' in row['unverified'], (row['id'], field)
+        assert not any(k in row for k in ('check', 'district', 'field-level', 'page-level')), 'Inherited verification metadata leaked'
+    for filename, items, is_review in [('events.csv', listed, False), ('review.csv', rows, True)]:
+        with (ROOT / 'data' / filename).open(newline='') as f:
+            exported = list(csv.DictReader(f))
+        assert len(exported) == len(items)
+        assert [r['id'] for r in exported] == [r['id'] for r in items]
+        for record, row in zip(exported, items):
+            assert all(record[field] == row[field] for field in FIELDS)
+            assert record['publication'] == row['publication']
+            assert record['official_source_urls'] == ' | '.join(sources[s]['url'] for s in row['sources'])
+            assert is_review or row['publication'] == 'listed'
+    pages = {}
+    for path in ROOT.glob('*.html'):
+        page = Page()
+        page.feed(path.read_text())
+        assert page.lang == 'en' and page.has_title and page.h1 == 1 and page.viewport, path.name
+        pages[path.name] = page
+    assert len(pages) == 12, 'Unexpected page set'
+    for name, page in pages.items():
+        for href in page.links:
+            url = urlsplit(href)
+            if url.scheme or url.netloc:
+                continue
+            target = unquote(url.path) or name
+            assert not target.startswith('/'), ('Subpath-incompatible local URL', name, href)
+            destination = (ROOT / target).resolve()
+            assert destination.is_relative_to(ROOT) and destination.is_file(), (name, href)
+            if url.fragment and target in pages:
+                assert unquote(url.fragment) in pages[target].ids, (name, href)
+        for rid, cells in page.event_rows.items():
+            row = next(r for r in rows if r['id'] == rid)
+            assert len(cells) == 8, (name, rid, len(cells))
+            assert page.row_official[rid], ('Row missing a direct official source', name, rid)
+            assert all(url in {sources[s]['url'] for s in row['sources']} for url in page.row_official[rid])
+            for index, field in ((2, 'time'), (3, 'venue'), (4, 'price')):
+                assert cells[index] == normal(row[field]), (name, rid, field, cells[index])
+            if not row['schedule']:
+                assert not cells[1], ('Unsupported schedule rendered', name, rid)
+            else:
+                assert cells[1].startswith(normal(row['schedule'])), (name, rid, 'schedule')
+            if row['name']:
+                assert cells[0].startswith(normal(row['name']))
+            else:
+                assert 'Unverified inherited identifier' in cells[0]
+    assert set(pages['index.html'].event_rows) == {r['id'] for r in listed}
+    assert set(pages['review.html'].event_rows) == ids
+    for name, kind in [('weekly.html', 'Weekly'), ('monthly.html', 'Monthly'), ('annual.html', 'Annual'), ('special.html', 'Special')]:
+        assert set(pages[name].event_rows) == {r['id'] for r in listed if r['kind'] == kind}
+    for name, category in [('markets.html', 'Markets & food'), ('museums.html', 'Museums & science'), ('culture.html', 'Festivals & culture'), ('community.html', 'Community & outdoors')]:
+        assert set(pages[name].event_rows) == {r['id'] for r in listed if r['category'] == category}
+    assert all(f'e-{rid}' in pages['sources.html'].ids for rid in ids), 'Missing row proof anchor'
+    assert all(f's-{sid}' in pages['sources.html'].ids for sid in sources), 'Missing source anchor'
+    for name in pages:
+        text = (ROOT / name).read_text()
+        assert '18 October 2026' in text
+        assert 'not a real-time' in text or name in {'analysis.html', 'review.html', 'sources.html'}
+        assert 'Page-level check' not in text and 'Field-level check' not in text
+    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 12 pages, row sources and local links/fragments.')
+
+
+if __name__ == '__main__':
+    main()

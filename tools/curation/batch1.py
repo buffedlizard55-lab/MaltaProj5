@@ -33,7 +33,6 @@ Please note that Free Tuesdays does not take place during Bouquets to Art, our a
 Benefits include: Free admission for one member, a companion, and a guest to the permanent collections and special exhibitions at the de Young and Legion of Honor''')
 manual('https://www.famsf.org/visit/de-young', '''de Young
 Free + reduced admission
-Nestled in Golden Gate Park
 Treasures of the Pharaohs
 Through Jan 31, 2027
 de Young''')

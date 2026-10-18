@@ -1,19 +1,31 @@
 'use strict';
+// Progressive enhancement only: all rows and links are present in static HTML.
 const search = document.querySelector('#search');
 if (search) {
-  const kind = document.querySelector('#kind');
+  const controls = ['kind', 'temporal', 'publication'].map(id => document.getElementById(id));
   const rows = [...document.querySelectorAll('#events tbody tr')];
+  const count = document.getElementById('count');
+  const empty = document.getElementById('empty');
+  const text = new Map(rows.map(row => [row, row.textContent.toLocaleLowerCase()]));
   function filter() {
     const query = search.value.trim().toLocaleLowerCase();
-    let count = 0;
+    let visible = 0;
     for (const row of rows) {
-      row.hidden = !(row.textContent.toLocaleLowerCase().includes(query) && (!kind.value || row.dataset.kind === kind.value));
-      if (!row.hidden) count++;
+      const matches = text.get(row).includes(query) && controls.every(control => !control.value || row.dataset[control.id] === control.value);
+      row.hidden = !matches;
+      if (matches) visible++;
     }
-    document.querySelector('#count').textContent = `${count} of ${rows.length} entries`;
-    document.querySelector('#empty').hidden = count !== 0;
+    count.textContent = `${visible} of ${rows.length} entries`;
+    empty.hidden = visible !== 0;
   }
   search.addEventListener('input', filter);
-  kind.addEventListener('change', filter);
-  document.querySelector('#reset').addEventListener('click', () => { search.value = ''; kind.value = ''; filter(); search.focus(); });
+  controls.forEach(control => control.addEventListener('change', filter));
+  document.getElementById('reset').addEventListener('click', () => {
+    search.value = '';
+    controls.forEach(control => { control.value = ''; });
+    filter();
+    search.focus();
+  });
+  document.getElementById('table-tools').hidden = false;
+  filter();
 }

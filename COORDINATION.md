@@ -2,6 +2,12 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
+**Current corrective audit (T19–T21):** 240 assessed candidates; 149 directory entries,
+91 review-only. The older publication logs below are historical and their inherited
+verification badges/counts are not current field verification. See the current audit
+record at the end of this board. No new deployment is claimed until an actual Pages
+success is recorded.
+
 **Rules**
 
 1. Read this file **before** starting work. Never start a task another session has claimed.
@@ -62,8 +68,12 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **done** (publication record below) | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
 
 
-| T19 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | in progress | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
-| T20 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | in progress | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml` |
+### Post-publication correction tasks
+
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| T19 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
+| T20 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | in progress | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
 | T21 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | in progress | `64f8b973` | `COORDINATION.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -586,3 +596,43 @@ Claim committed and pushed before implementation. Source/check/PR/deployment res
   captures remain immutable. Latest request status is kept separately, never relabeled 200.
 * T19/T20/T21 remain owned here/in progress. Existing baseline remains live until the
   audit overlay, deterministic rebuild, regression tests and deployment checks pass.
+
+### T19 complete / T20 integrated checkpoint — `64f8b973` — 2026-10-18
+
+* Every inherited candidate has an explicit disposition: 231 retained; nine new
+  official-calendar entries added. **149 listed / 91 review-only**, not 240 fully
+  verified events. 213 exact cited URLs / 133 domains; 19 weekly, 6 monthly,
+  23 annual, 101 special/dated/cadence-unconfirmed directory entries.
+* `data/research/audit-64f8b973.md` records official sources, consequential
+  corrections, conflicts, regional quarantine and incomplete coverage. All
+  decisions/quotes live in `data/audit_64f8b973.json`.
+* Final-integration scope explicitly includes this session's new overlay,
+  curation/test helpers and derived history/summary/review CSV. No other session
+  has an active claim on these new files. Prior research inputs are preserved.
+* The mandatory fail-closed overlay blanks every unapproved fact. The old matcher
+  applicator is retired. No name-match/HTTP-success field badges remain. Unknown
+  years/venues/prices are not inherited; main pages admit SF-evidenced entries only.
+* Capture run `39092617416` succeeded and bot commit `4054bb1` added request-attempt
+  metadata. It is preserved alongside this session's new decisions; no adjudicated
+  text was overwritten. Capture/reachability workflows now publish artifacts and
+  cannot race/auto-commit over research decisions.
+* **24 offline regression fixtures pass.** Exact-projection/quotes/CSV/local-link
+  checks pass for all 240 records and 12 pages. A second full rebuild is byte-identical.
+* Real Chromium **153.0.8010.0** checked all 12 pages at 1440×1000 and 390×844:
+  no document overflow, functioning search/filter/reset/empty states, real blank
+  cells, direct official/evidence navigation, no-JavaScript tables and zero runtime/
+  asset errors. Initial test-harness import/cleanup/selector issues were corrected;
+  the final command exited 0. Small-text contrast failures were fixed; axe-core
+  **4.14.0** reports zero automated WCAG A/AA violations on the four core page types
+  (not a complete accessibility certification).
+* Preview is served on 0.0.0.0:8080. T20 remains in progress until CI/URL/PR checks;
+  T21 publication is not yet complete. No broken site has been merged.
+
+### Rebase conflict — evidence bot `4054bb1` / audit integration — `64f8b973`
+
+The required pre-push rebase found one conflict in `data/audit_64f8b973.json`:
+its cumulative capture timestamp overlapped the corrective audit metadata. Resolved
+by retaining all 240 explicit decisions/selected excerpts, retaining every bot
+capture and newest `latest_attempt`, and preserving the original first-capture
+`captured_at` separately from `last_capture_attempt_at`. No source evidence or
+other session's dataset was discarded. Canonical projection and rebuild rechecked.

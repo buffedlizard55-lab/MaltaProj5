@@ -1,0 +1,42 @@
+{
+ "as_of": "2026-10-18",
+ "candidates": 240,
+ "inherited_candidates": 231,
+ "new_entries": 9,
+ "listed": 149,
+ "review_only": 91,
+ "series": 13,
+ "source_urls": 213,
+ "domains": 133,
+ "kinds": {
+  "Weekly": 19,
+  "Monthly": 6,
+  "Annual": 23,
+  "Special": 101
+ },
+ "categories": {
+  "Markets & food": 27,
+  "Museums & science": 21,
+  "Community & outdoors": 41,
+  "Festivals & culture": 60
+ },
+ "temporal": {
+  "Recurring pattern; next date unconfirmed": 27,
+  "Future dated": 45,
+  "On snapshot date": 4,
+  "Date/year unconfirmed": 18,
+  "Past dated": 51,
+  "Tentative schedule": 1,
+  "Spans snapshot date": 3
+ },
+ "blank_fields": {
+  "name": 0,
+  "schedule": 7,
+  "time": 63,
+  "venue": 0,
+  "price": 91
+ },
+ "listed_with_blanks": 136,
+ "supported_field_values": 648,
+ "limitation": "Bounded, non-exhaustive research snapshot; entries mix events and programme umbrellas, not a count of unique city events."
+}

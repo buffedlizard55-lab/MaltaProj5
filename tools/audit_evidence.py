@@ -195,8 +195,10 @@ def capture(extra_urls=(), timeout=25):
                        if value and normalized(value).casefold() in normalized(captures.get(url, {}).get("text", "")).casefold()]
             candidates[row["id"]]["fields"][field] = {"original": value, "literal_match_urls": matches,
                                                         "status": "candidate only — requires contextual review"}
-    output = {"schema_version": 1, "session": "64f8b973", "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-              "method": "Official-source extracted-text snapshot. Literal matches are candidates, NEVER approvals. Each published nonblank fact needs an explicit field decision and supporting quotation.",
+    output = {**old, "schema_version": old.get("schema_version", 1), "session": "64f8b973",
+              "captured_at": old.get("captured_at") or datetime.now(timezone.utc).isoformat(timespec="seconds"),
+              "last_capture_attempt_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+              "method": old.get("method") or "Official-source extracted-text snapshot. Literal matches are candidates, NEVER approvals. Each published nonblank fact needs an explicit field decision and supporting quotation.",
               "captures": dict(sorted(captures.items())), "candidates": old.get("candidates") or candidates, "decisions": old.get("decisions", {}),
               "extra_events": old.get("extra_events", [])}
     REPORT.write_text(json.dumps(output, indent=1, ensure_ascii=False) + "\n")

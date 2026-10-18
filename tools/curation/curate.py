@@ -1,6 +1,6 @@
 import json,re,unicodedata
 from pathlib import Path
-P=Path('data/audit_64f8b973.json'); A=json.loads(P.read_text()); C=A['captures']; D=A['decisions']; R={r['id']:r for r in json.load(open('data/events.json'))}
+P=Path('data/audit_64f8b973.json'); A=json.loads(P.read_text()); C=A['captures']; D=A['decisions']; R={r['id']:r for r in (json.load(open('data/unverified_history.json'))['events'] if Path('data/unverified_history.json').exists() else json.load(open('data/events.json')))}
 def N(x):return re.sub(r'\s+',' ',unicodedata.normalize('NFKC',x)).strip()
 def url(key):
  if key in C:return key
@@ -40,3 +40,8 @@ def reject(rid,reason,kind=None):
  D[rid]={'reviewer':'64f8b973','reviewed_at':'2026-10-18','fields':{},'kind':kind or 'Unverified','recurrence':None,'geography':{'status':'unverified','quotes':[],'basis':'Not established'},'occurrences':[],'publication':'review_only','reason':reason,'notes':''}
 def save():
  P.write_text(json.dumps(A,indent=1,ensure_ascii=False)+'\n');print('Reviewed decisions:',len(D),'listed:',sum(d['publication']=='listed' for d in D.values()))
+
+def JQ(u,text):
+    u=url(u)
+    assert N(text) in N(json.dumps(C[u].get('structured',[]),ensure_ascii=False)),(u,text)
+    return {'url':u,'text':text,'format':'jsonld'}

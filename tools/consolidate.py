@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final-integration consolidation (session c961fbe4).
+"""Historical candidate consolidation followed by a mandatory fail-closed audit overlay.
 
 Folds the two independent registers into ONE canonical register:
 
@@ -15,10 +15,13 @@ Farmers Market", so every pair here was reviewed by hand.
 
 Outputs:
   data/events.json            canonical combined register
-  data/sources.json           combined source ledger (new URLs added, excerpt
-                              filled by tools/apply_verify.py after the automated
-                              fetch in CI)
-  data/review.json            prior findings + integration findings
+  data/sources.json           exact-URL source ledger; no inherited verification labels
+  data/review.json            current audit findings
+  data/unverified_history.json preserved legacy candidates and findings, NOT facts
+
+All legacy transcription/reclassification below is UNVERIFIED HISTORY. The final
+audited_register.apply_audit call alone chooses publishable values. Never run the
+deprecated apply_verify.py matcher on its outputs.
 
 Run: python3 tools/consolidate.py
 """
@@ -782,8 +785,8 @@ review.append({
     "urls": ["https://github.com/buffedlizard55-lab/MaltaProj5"],
 })
 
-(ROOT / "data" / "events.json").write_text(json.dumps(rows, indent=1, ensure_ascii=True) + "\n")
-(ROOT / "data" / "sources.json").write_text(json.dumps(sources, indent=1, ensure_ascii=True) + "\n")
+
+
 # ---------------------- retire findings that the final register supersedes
 SUPERSEDED = [
     "Publication blocked: GitHub Pages permission",
@@ -813,12 +816,16 @@ if retired:
         "urls": ["https://buffedlizard55-lab.github.io/MaltaProj5/"],
     })
 
-(ROOT / "data" / "review.json").write_text(json.dumps(review, indent=1, ensure_ascii=True) + "\n")
+
 
 from collections import Counter
-print(f"canonical register: {len(rows)} rows")
+print(f"UNVERIFIED historical candidates: {len(rows)} rows")
 print(" kinds:", dict(Counter(r["kind"] for r in rows)))
 print(" categories:", dict(Counter(r["category"] for r in rows)))
 print(f" sources: {len(sources)}")
 print(f" review findings: {len(review)}")
 print(" merged 167-rows:", len(MERGE), " new 167-rows:", len(converted))
+
+# Mandatory final projection. No legacy value/verification label can leak through.
+from audited_register import apply_audit
+apply_audit(rows, sources, review)

@@ -1,94 +1,99 @@
-# MaltaProj5 — San Francisco Events Register
+# SF Events — an evidence-first city directory
 
-A verified register of events held **inside the City and County of San Francisco**, organised into
-events that recur (weekly, monthly, annually) and dated special events — with the analysis, the
-source ledger, and the irregularities found while checking them.
+A static, source-linked inventory of recurring gatherings and dated programmes **inside San Francisco city**, with unresolved candidates published separately.
 
-**231 entries · 213 official source records across 135 domains · every row links to the official
-page it was checked against on 18 October 2026.**
+**Site:** https://buffedlizard55-lab.github.io/MaltaProj5/
 
-This register is the merged output of four research passes run in parallel (sessions
-`3a19e72d`, `5a85baf2`, `4f47c142` and `a1b7522f`) and reconciled by the integration session
-`c961fbe4`; see `COORDINATION.md` for the board, the merge record and the conflict log.
+**Research snapshot:** 18 October 2026. This is **not an exhaustive or live city calendar**.
 
-## The site
+## Current audited register
 
-One static site, built at the repository root and deployed by `.github/workflows/pages.yml`.
+| Measure | Count |
+|---|---:|
+| Candidates assessed | 240 |
+| Inherited candidates retained | 231 |
+| New official-calendar entries | 9 |
+| Entries admitted to the city-only directory | 149 |
+| Candidates held off the directory for review | 91 |
+| Weekly / monthly / annual entries | 19 / 6 / 23 |
+| Special, dated or cadence-unconfirmed entries | 101 |
+| Exact cited official-source URLs / distinct domains | 213 / 133 |
 
-| Page | Contents |
-|---|---|
-| `index.html` | Dashboard: counts, verification legend, category cards, all entries |
-| `weekly.html` / `monthly.html` / `annual.html` / `special.html` | Entries by recurrence |
-| `markets.html` / `museums.html` / `culture.html` / `community.html` | Entries by category |
-| `analysis.html` | **Analysis & findings** — counts, verification mix, month coverage, source concentration, limits |
-| `review.html` | **Flagged for Review** — findings, entry-level review queue, blank (unverified) fields, coverage gaps |
-| `sources.html` | Method, the official-source ledger with excerpts, row-by-row evidence |
+The directory includes 13 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
-Every table row carries its official source links, a verification label and its review notes.
-**A blank cell means unverified — not "free" and not "not applicable."** No value is inferred:
-where an official page does not state something, the cell is empty and the row lists it under
-"unverified blank fields".
+- [Dashboard](index.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
+- [Markets & food](markets.html) · [Museums & science](museums.html) · [Festivals & culture](culture.html) · [Community & outdoors](community.html)
+- [Analysis](analysis.html) · [Flagged for Review](review.html) · [Sources and row-by-row evidence](sources.html)
+- [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv)
 
-### Verification labels
+## What a listing means
 
-| Label | Meaning |
-|---|---|
-| **Field-level** | A researcher transcribed the row's values from the cited official page; the link was re-checked in integration. |
-| **Page-level** | An independent pass supplied the row; the integration fetch confirmed the page is live and names the event, but individual values were not re-transcribed. |
-| **Flagged** | The row carries an unresolved note, or the automated check could not confirm it (for example, the site blocks automated clients). |
+An entry needs an approved **name, venue and SF geography** to enter the directory. It does **not** mean every field is verified. Each nonblank factual value has an explicit contextual decision and an exact quotation from an official organizer, venue, museum or government page. Recognized SF venues can be located from their official addresses/directions; a stray city word in unrelated marketing is not geography evidence.
 
-## Repository layout
+**Unconfirmed values remain genuinely blank**, with missing-field notes. An unverified inherited title can identify a review candidate but is labeled as an identifier, not a confirmed event name. HTTP success, a name match, a copyright/URL year, free parking, or free activities with paid entry cannot approve unrelated facts.
 
-| Path | Contents |
-|---|---|
-| `data/events.json` | Canonical register (231 rows). Generated — do not hand-edit. |
-| `data/sources.json` | Official-source ledger: URL, publisher, check date, excerpt, method, HTTP status. |
-| `data/review.json` | Findings and coverage notes. |
-| `data/verify_report.json` | Machine verification report: every fetched URL, its HTTP status, whether the event name was found, and the matched snippet. |
-| `data/events_base86.json`, `data/sources_base75.json`, `data/review_base20.json` | Pristine inputs from the 86-row register, used by the consolidation. |
-| `data/events_3a19e72d.json`, `data/events_5a85baf2.json`, `data/events_a1b7522f.json`, `data/events-weekly.json`, `data/events-annual.json`, `data/events-special.json`, `data/exclusions.json` | The sessions' authored registers, preserved verbatim. |
-| `data/events.csv` | CSV export, generated by the build. |
-| `tools/consolidate.py` | Explicit merge of the registers into one canonical dataset (reviewed merge map, not fuzzy matching), plus the manifest of excluded rows and source fixes. |
-| `tools/apply_verify.py` | Folds the automated fetch report into the data (excerpts, labels, flags). |
-| `tools/verify_rows.py` | Fetches every cited URL and checks the page names the event; runs in CI. |
-| `tools/remotecheck.py` | Dead-link gate (fails on 404/410/DNS). |
-| `tools/integrate.py` | Historical: the 86-row merge superseded by `consolidate.py`. |
-| `scripts/build.py` | Dependency-free static build (12 pages + CSV). |
-| `scripts/validate.py` | Data, evidence, blank-field and local-link validation. |
+Only explicitly approved ISO occurrences determine temporal status, relative to the fixed snapshot—not the current date. Yearless Menorah, Cole Valley Nights, Taraval and ancillary Bay to Breakers copy are not assigned invented years. A recurring pattern does not generate a next date. A future edition never inherits a previous edition’s venue, hours or admission automatically.
 
-## Working on this repository
+### Important corrections and remaining flags
 
-Read `COORDINATION.md` first — it is the shared task board. Claim a task with your session ID and
-file scope, commit and push the claim before starting, and keep scopes non-overlapping.
+- Zoo resident free day: **7 October 2026**, not an established monthly first-Tuesday policy. Boo: **31 October, 10am–3pm**, activities included with paid daytime admission or membership.
+- Fiesta en el Parque: **1 August 2026**, not August 2. Opera Ball rescheduled to **12 November 2026**; no Opera House performance that evening.
+- Bhangra & Beats: 2026 programme at **Yerba Buena Gardens, Jessie Square and Yerba Buena Lane**, not the older Clay/Battery venue.
+- Conflicting Alemany hours and Secondhand/Muertos street extents remain blank/flagged rather than reconciled by guessing.
+- Regional/mixed-city programmes—including Frameline, NEXUS, SF Art Week, SF Climate Week and the full SF Marathon—are held for SF-specific component/route evidence.
+- The 2027 Pride weekend is confirmed, but its old 2026 venue and free-entry policy are not carried forward.
 
-```bash
-python3 tools/consolidate.py   # rebuild data/events.json + sources.json + review.json
-python3 tools/apply_verify.py  # fold data/verify_report.json into the data
-python3 scripts/build.py       # build the site + CSV
-python3 scripts/validate.py    # data + local link/fragment checks
-python3 tools/remotecheck.py   # fetch every cited URL; fails on dead links
-python3 tools/verify_rows.py   # fetch every cited page and match the event name
+See [the audit research log](data/research/audit-64f8b973.md) and the official quotations for details. No .org-to-nonprofit or sample-to-citywide inference is made.
+
+## Rebuild and validate
+
+Python 3.10+; no runtime packages or build dependencies:
+
+```sh
+python3 tools/consolidate.py
+python3 scripts/build.py
+python3 -m unittest discover -s tests -v
+python3 scripts/validate.py
 ```
 
-`data/events.json`, `data/sources.json`, `data/events.csv` and the `*.html` pages are generated and
-committed, because GitHub Pages serves them from `main`. CI rebuilds from the authored inputs on every PR and fails if validation does not pass.
+`consolidate.py` first reconstructs historical candidates from the preserved research inputs, then **must** run the fail-closed `tools/audited_register.py` overlay. Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
 
-## Verification rules
+The validator compares the exact projection, checks quotation provenance (including labeled event JSON-LD), recurrence/year guards, blanks, parent cycles, source references, CSV cell values, all page memberships and every local link/fragment. A second rebuild must be byte-identical. Provenance validation is **not** automatic semantic fact-checking.
 
-1. **Geography.** Only events inside the City and County of San Francisco. Events at Levi's Stadium,
-   the Cow Palace and other out-of-city venues are excluded and recorded on `review.html`.
-2. **Official sources only.** Organizer sites, venues, museums and City pages (`sf.gov`,
-   `sfrecpark.org`, `sfmta.com`, `sfpl.org`, `sfport.com`) supply admitted facts. Tourism-board
-   guides were used for discovery; where a row could only be sourced to a tourism body, that is
-   visible in its label and notes.
-3. **No inference.** Dates are preserved as published. Next occurrences are never generated from a
-   previous year's pattern, and a recurring pattern is never presented as a confirmed instance.
-4. **Blanks are flagged.** A value not stated on the official page stays blank and is listed as
-   unverified on the row and on the review page.
-5. **Conflicts are published.** Where sources disagree, the disputed value is blanked and both
-   sources are named on `review.html`.
-6. **Coverage is not claimed to be exhaustive.** No citywide denominator exists; gaps are stated
-   on `review.html` and `analysis.html` rather than hidden.
-7. **Automated checks are reported honestly.** The CI fetch confirms that a page is live and names
-   the event. It cannot prove a date or a price, and bot-protected pages are labelled as such
-   rather than counted as verified.
+### Local preview
+
+```sh
+python3 -m http.server 8080 --bind 0.0.0.0
+```
+
+All assets and local links are relative, so the site works at a GitHub Pages subpath. No external fonts, browser API, localhost backend or JavaScript is required to read the tables. JavaScript only enhances search and filters.
+
+### Optional browser / accessibility smoke test (Linux, Node 22+)
+
+```sh
+npm install --prefix .cache/browser --no-audit --no-fund \
+  playwright-core@1.64.1 @sparticuz/chromium@153.0.0 axe-core@4.14.0
+NODE_PATH=.cache/browser/node_modules node tests/browser_smoke.cjs --serve
+```
+
+Omit `--serve` when a static server already runs on port 8080. This checks 12 pages at desktop/mobile widths, filtering/reset/empty states, actual blank cells, source/evidence links, no-JavaScript tables, console/asset errors and automated WCAG A/AA findings on the four core page types. Automated accessibility tests are not a complete accessibility certification. Browser binaries, screenshots and package installs stay outside Git.
+
+## Files and evidence
+
+| Path | Purpose |
+|---|---|
+| `data/audit_64f8b973.json` | Finite official evidence captures, selected tool excerpts and explicit field decisions |
+| `data/events.json` | All audited records, including review-only dispositions; not all are published in the directory |
+| `data/sources.json` | Exact-URL ledger; statuses and contextual decisions are separate |
+| `data/audit_summary.json` | Reproducible counts/blank-field/date summary |
+| `data/unverified_history.json` | **Unverified** inherited claims/findings; never a fallback |
+| `data/events.csv`, `data/review.csv` | Directory-only export and complete candidate-review export |
+| `tools/curation/` | Historical decision-authoring batches, with exact-quote assertions; not an automatic verifier |
+| `data/events_*`, `data/events-weekly.json`, `data/events-annual.json`, `data/events-special.json` | Preserved earlier sessions’ research inputs |
+| `COORDINATION.md` | Ownership, historical integration records, current checks and actual publication results |
+
+## CI and publication
+
+`Validate site` rebuilds the canonical data/site, runs the regression fixtures and UI smoke test, checks every local link, and **requires committed generated files to match the build**. It also reports every cited URL: definite 404/410 responses fail; challenge, server and transport outcomes stay unknown rather than becoming false verification claims. Reports/screenshots are workflow artifacts, not auto-committed event facts.
+
+GitHub Pages is configured in branch mode: **`main` / root**. Merging validated committed HTML publishes it automatically; the validation workflow itself is not a deployment. Actual PR, merge and successful Pages build records are recorded in `COORDINATION.md` after they occur.

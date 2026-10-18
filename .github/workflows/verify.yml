@@ -1,41 +1,28 @@
-name: Row-source verification
+name: Source reachability report
 
-# Fetches every cited official page, checks that it is live and that it names the
-# event, and commits data/verify_report.json back to the branch. The authoring
-# sandbox has no general outbound network; GitHub's runners do.
+# Manual, report-only replacement for the old row-name matcher. No bot writes to
+# canonical data or manufactures verification labels. Captures and approvals are
+# separate, and only an explicit audited decision can change a published field.
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - 'arena/**'
-    paths:
-      - 'tools/verify_rows.py'
 
 permissions:
-  contents: write
-
-concurrency:
-  group: verify-${{ github.ref }}
-  cancel-in-progress: true
+  contents: read
 
 jobs:
-  verify:
+  source-links:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Fetch every cited source and match the event name
-        run: python tools/verify_rows.py --timeout 30
-      - name: Commit the verification report
-        run: |
-          git config user.name "source-check-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data/verify_report.json
-          if git diff --cached --quiet; then
-            echo "report unchanged"
-          else
-            git commit -m "Automated row-source verification report"
-            git push
-          fi
+      - name: URL reachability is not event verification
+        run: python tools/check_sources.py --timeout 20 --output /tmp/source-links.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: source-link-report
+          path: /tmp/source-links.json
+          if-no-files-found: ignore

@@ -2593,6 +2593,10 @@
     {
      "url": "https://www.sf.gov/location--alemany-farmers-market",
      "text": "100 Alemany Boulevard\nSan Francisco, CA94110"
+    },
+    {
+     "url": "https://foodwise.org/markets/alemany-farmers-market/",
+     "text": "Alemany Farmers Market takes place at 100 Alemany Boulevard in Bernal Heights, San Francisco"
     }
    ],
    "basis": "Official page explicitly locates the event/venue in San Francisco."
@@ -2640,14 +2644,16 @@
    }
   },
   "sources": [
-   "b-sf-gov-location-alemany-farmers-market"
+   "b-sf-gov-location-alemany-farmers-market",
+   "x-www-sfenvironment-org-farmers-markets-in-sf",
+   "n-00d1a33df4b2"
   ],
   "unverified": [
    "time: unverified",
    "price: unverified"
   ],
   "flags": [
-   "Time left blank: current SF.gov says 7am–2pm, while the City Environment directory says 6am–3pm. Admission not explicitly stated; free parking does not imply free entrance."
+   "Time left blank for review. Current SF.gov says “every Saturday, 7am - 2pm” and operator Foodwise says “Saturday (7 am – 2 pm), year round”; SF.gov identifies Foodwise as operator since February 2026. The San Francisco Environment Department directory, dated 03/21/2025, lists “6:00am to 3:00pm” and asks visitors to confirm with the individual market website. The conflicting official statements are linked for review. Admission is not stated; free parking does not imply free entry."
   ],
   "notes": "",
   "audit": {
@@ -12827,7 +12833,7 @@
   "schedule": "Friday, September 18, 2026",
   "time": "2–10 PM",
   "venue": "Front",
-  "price": "",
+  "price": "FREE WITH RSVP",
   "candidate_name": "Oktoberfest on Front",
   "candidate_label": "Unverified inherited identifier",
   "category": "Markets & food",
@@ -12897,17 +12903,25 @@
       "text": "Front"
      }
     ]
+   },
+   "price": {
+    "value": "FREE WITH RSVP",
+    "quotes": [
+     {
+      "url": "https://downtownsf.org/things-to-do/oktoberfest-on-front",
+      "text": "FREE WITH RSVP"
+     }
+    ]
    }
   },
   "sources": [
    "x-downtownsf-org-things-to-do-oktoberfest-on-front"
   ],
   "unverified": [
-   "price: unverified",
    "recurrence: unverified; no ongoing cadence asserted"
   ],
   "flags": [
-   "Street name confirmed in event title; precise cross-street extent and organizer admission policy not supplied in the reviewed description. Third-party news headlines are not admission evidence."
+   "Official Downtown SF event page states “FREE WITH RSVP”; the verified price wording is shown verbatim. The approved 2026-09-18 occurrence is past relative to the 2026-10-18 snapshot, so this entry is not upcoming."
   ],
   "notes": "",
   "audit": {

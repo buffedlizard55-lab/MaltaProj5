@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "session": "06949148",
+  "snapshot_date": "2026-10-18",
+  "purpose": "Reconcile the two proposed corrections in the stale 95ceac65 audit branch with the current 295-candidate mainline, using independently read official pages. This is a supplemental evidence ledger, not a replacement for audit_64f8b973.json.",
+  "previous_branch": {
+    "name": "arena/95ceac65-maltaproj5",
+    "head": "b10f6453310c735183a8646d2f687bb16d8c62c0",
+    "observed_state": "3 commits ahead and 38 behind main; the captured audit snapshot predates the three later additive overlays and cannot replace the current canonical dataset."
+  },
+  "retrieval_method": "Arena fetch_page tool, 2026-10-18. The tool returned official-page text but does not expose a numeric HTTP status; http is therefore null for these supplemental captures. Exact quotations are retained below. A retrieved page is evidence, not blanket verification of every field.",
+  "captures": {
+    "https://downtownsf.org/things-to-do/oktoberfest-on-front": {
+      "http": null,
+      "tool_checked_at": "2026-10-18",
+      "tool_method": "Arena fetch_page",
+      "title": "Oktoberfest on Front | Things To Do | Downtown San Francisco",
+      "tool_excerpt": "Oktoberfest on Front, San Francisco’s official Oktoberfest block party, is back on Friday, September 18, 2026 (2–10 PM).\n\nFREE WITH RSVP\n\nAll ages welcome (21+ w/ valid ID to consume alcohol).",
+      "retrieval": {
+        "complete": true,
+        "chunks_retrieved": [0],
+        "chunks_total": 1
+      }
+    },
+    "https://foodwise.org/markets/alemany-farmers-market/": {
+      "http": null,
+      "tool_checked_at": "2026-10-18",
+      "tool_method": "Arena fetch_page",
+      "title": "Alemany Farmers Market : Foodwise",
+      "tool_excerpt": "100 Alemany Boulevard, San Francisco\nSaturday (7 am – 2 pm), year round\nAlemany Farmers Market takes place at 100 Alemany Boulevard in Bernal Heights, San Francisco.\nAs of February 2026, Foodwise is honored to steward this beloved institution, in partnership with the City and County of San Francisco.",
+      "retrieval": {
+        "complete": false,
+        "chunks_retrieved": [0],
+        "chunks_total": 3
+      }
+    },
+    "https://www.sf.gov/location--alemany-farmers-market": {
+      "http": null,
+      "tool_checked_at": "2026-10-18",
+      "tool_method": "Arena fetch_page",
+      "title": "Alemany Farmers Market | SF.gov",
+      "tool_excerpt": "Buy fresh fruits and vegetables from local farmers every Saturday, 7am - 2pm.\n\nSince February 2026, local nonprofit Foodwise operates Alemany Farmers Market, bringing over 30 years of experience championing an equitable and sustainable Bay Area community through farmers markets and education programs.\n\nSaturday7:00 am to 2:00 pm",
+      "retrieval": {
+        "complete": true,
+        "chunks_retrieved": [0],
+        "chunks_total": 1
+      }
+    },
+    "https://www.sfenvironment.org/farmers-markets-in-sf": {
+      "http": null,
+      "tool_checked_at": "2026-10-18",
+      "tool_method": "Arena fetch_page",
+      "title": "Farmers markets in San Francisco | San Francisco Environment Department (SFE)",
+      "tool_excerpt": "03/21/2025\nSan Francisco Environment Department\nBefore visiting, please refer to the individual market's website to confirm hours and guidelines.\n\nAlemany farmers market\n6:00am to 3:00pm\n100 Alemany Blvd.\nSan Francisco, 94110",
+      "retrieval": {
+        "complete": true,
+        "chunks_retrieved": [0],
+        "chunks_total": 1
+      }
+    }
+  },
+  "changes": [
+    {
+      "row_id": "x-oktoberfest-on-front",
+      "field": "price",
+      "value": "FREE WITH RSVP",
+      "quote": {
+        "url": "https://downtownsf.org/things-to-do/oktoberfest-on-front",
+        "text": "FREE WITH RSVP"
+      },
+      "disposition": "Approved verbatim from the event host’s official page. The event’s already-approved occurrence is 2026-09-18, past relative to the 2026-10-18 snapshot; this changes its cost label in the all-cost register, not the free-upcoming dashboard.",
+      "row_flag": "Official Downtown SF event page states “FREE WITH RSVP”; the verified price wording is shown verbatim. The approved 2026-09-18 occurrence is past relative to the 2026-10-18 snapshot, so this entry is not upcoming."
+    },
+    {
+      "row_id": "b-alemany-farmers-market",
+      "field": "time",
+      "value": "",
+      "disposition": "Leave blank and flag. The current SF.gov location page and the market operator Foodwise page both say 7am–2pm; the City Environment Department page dated 03/21/2025 says 6:00am to 3:00pm and itself directs visitors to the individual market website to confirm hours. Preserve the conflicting official statements for manual review instead of silently choosing one.",
+      "row_flag": "Time left blank for review. Current SF.gov says “every Saturday, 7am - 2pm” and operator Foodwise says “Saturday (7 am – 2 pm), year round”; SF.gov identifies Foodwise as operator since February 2026. The San Francisco Environment Department directory, dated 03/21/2025, lists “6:00am to 3:00pm” and asks visitors to confirm with the individual market website. The conflicting official statements are linked for review. Admission is not stated; free parking does not imply free entry.",
+      "context_quotes": [
+        {
+          "url": "https://www.sf.gov/location--alemany-farmers-market",
+          "text": "Buy fresh fruits and vegetables from local farmers every Saturday, 7am - 2pm."
+        },
+        {
+          "url": "https://foodwise.org/markets/alemany-farmers-market/",
+          "text": "Saturday (7 am – 2 pm), year round"
+        },
+        {
+          "url": "https://www.sfenvironment.org/farmers-markets-in-sf",
+          "text": "Before visiting, please refer to the individual market's website to confirm hours and guidelines."
+        },
+        {
+          "url": "https://www.sfenvironment.org/farmers-markets-in-sf",
+          "text": "6:00am to 3:00pm"
+        }
+      ],
+      "geography_quote": {
+        "url": "https://foodwise.org/markets/alemany-farmers-market/",
+        "text": "Alemany Farmers Market takes place at 100 Alemany Boulevard in Bernal Heights, San Francisco"
+      }
+    }
+  ],
+  "review_finding": {
+    "title": "Alemany Farmers Market hours: conflicting official pages",
+    "detail": "The current SF.gov location page says “every Saturday, 7am - 2pm” and identifies Foodwise as operator since February 2026; Foodwise’s current market page says “Saturday (7 am – 2 pm), year round”. The San Francisco Environment Department page, dated 03/21/2025, lists “6:00am to 3:00pm” and advises visitors to confirm hours with the individual market website. The event row’s time remains blank; all three official pages are linked so the discrepancy can be reviewed. Admission is not stated; free parking is not free entry.",
+    "urls": [
+      "https://www.sf.gov/location--alemany-farmers-market",
+      "https://foodwise.org/markets/alemany-farmers-market/",
+      "https://www.sfenvironment.org/farmers-markets-in-sf"
+    ]
+  },
+  "stale_branch_disposition": "The original branch’s 60-row sample report is preserved at its GitHub branch/head for provenance, but its old generated 246-candidate/12-page outputs and its replacement validation pipeline were not copied over the newer 295-candidate/19-page mainline. The two proposed row changes were independently reconciled here. This takeover did not re-audit the other sampled rows or the full register."
+}

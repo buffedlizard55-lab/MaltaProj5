@@ -851,6 +851,13 @@ apply_extension_21f3dd85()
 from register_d57e2eeb import apply_extension as apply_extension_d57e2eeb
 apply_extension_d57e2eeb()
 
+# Final independent-review reconciliation (session 06949148): a verified
+# admission quotation and a linked-but-unresolved Alemany hours conflict.
+# This is applied last, on the current 295-candidate register; it never imports
+# the stale T32 branch's older generated pages or replaces mainline evidence.
+from overlay_06949148 import apply_extension as apply_extension_06949148
+apply_extension_06949148()
+
 # Additive verification + gap overlay (session 9d0b6c49, T-9d0b-1/2): free, dated
 # UN Plaza and Community Music Center entries read from official City, district and
 # organizer pages, plus the review findings that publish this session's independent

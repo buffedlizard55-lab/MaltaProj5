@@ -82,6 +82,15 @@
   ]
  },
  {
+  "title": "Alemany Farmers Market hours: conflicting official pages",
+  "detail": "The current SF.gov location page says “every Saturday, 7am - 2pm” and identifies Foodwise as operator since February 2026; Foodwise’s current market page says “Saturday (7 am – 2 pm), year round”. The San Francisco Environment Department page, dated 03/21/2025, lists “6:00am to 3:00pm” and advises visitors to confirm hours with the individual market website. The event row’s time remains blank; all three official pages are linked so the discrepancy can be reviewed. Admission is not stated; free parking is not free entry.",
+  "urls": [
+   "https://www.sf.gov/location--alemany-farmers-market",
+   "https://foodwise.org/markets/alemany-farmers-market/",
+   "https://www.sfenvironment.org/farmers-markets-in-sf"
+  ]
+ },
+ {
   "title": "Independent re-verification pass (session 9d0b6c49)",
   "detail": "Every row that leads the free-first landing page, and the whole priced section, was re-read against its own cited official page on 18 October 2026 with the workspace fetch tool; no value was accepted from memory or from an earlier session's note. Thirteen official pages were read directly. Result: the quoted date, time, venue and admission wording of the landing rows is unchanged and correct on noontimeconcerts.org, gracecathedral.org, litquake.org/litcrawl, dftsf.com, bhangraandbeats.com, downtownsf.org, sunsetmercantilesf.com, carnavalsanfrancisco.org, the nps.gov Sea Chantey Sing event page and sfmoma.org. Four irregularities are published rather than silently reconciled. (1) ybgfestival.org now answers a direct fetch with a reCAPTCHA challenge, so the two Yerba Buena Gardens Festival rows could only be re-read through the search tool's verbatim text for that exact official URL; their own event pages name a more precise venue than the published cell (Great Lawn for the Afro-Filipino Jazz Project, Children's Garden for Halloween Hoopla) and both are quoted in the research log, but the published venue cell is left untouched because it is already supported. (2) SFMOMA's Free Family Day page states 'Free with RSVP' and excepts one exhibition — 'RM x SFMOMA: Between You and Me, which requires a timed ticket' with 'a surcharge of $12 for adults' — so the free badge is right for the event but the row's quoted wording does not carry that exception. (3) Noontime Concerts' 12:30 pm time is the wording 'Live Stream Starts at 12:30PM'; the homepage does not print a separate in-person start time. (4) Lit Crawl's page prints 'all programs from 6:30—7:30 PM' immediately after a list of three venue changes, so its scope is ambiguous and the row's time cell stays blank rather than adopting it. Reachability of every cited URL remains a CI gate, not a claim made here.",
   "urls": [

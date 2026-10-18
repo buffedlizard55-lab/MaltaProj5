@@ -3,23 +3,23 @@
 As of 18 October 2026. This is not a complete or live city calendar.
 
 - 242 candidate entries assessed: 233 inherited and 9 new official-calendar entries.
-- 163 admitted to the city-only directory; 79 held for review.
+- 162 admitted to the city-only directory; 80 held for review.
 - 14 listed programme umbrellas overlap child events. These totals are **not unique-event counts**.
 - 237 exact cited URLs across 140 domains. Domains are not organizations or nonprofit status.
-- Cadence: 20 weekly / 7 monthly / 26 annual / 110 special or cadence-unconfirmed.
+- Cadence: 20 weekly / 7 monthly / 25 annual / 110 special or cadence-unconfirmed.
 
 ## Blank factual fields in the directory
 
 - Event name: 0
 - Published schedule: 7
-- Time: 70
+- Time: 69
 - Venue / area: 0
-- Admission / conditions: 97
+- Admission / conditions: 96
 
 ## Temporal labels (fixed snapshot)
 
 - Date/year unconfirmed: 18
-- Future dated: 49
+- Future dated: 48
 - On snapshot date: 4
 - Past dated: 58
 - Recurring pattern; next date unconfirmed: 28

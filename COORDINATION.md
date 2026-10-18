@@ -2,9 +2,9 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (T26–T28):** PR #22 is merged and Pages is confirmed live.
-The audited snapshot contains **242 candidates: 163 city-only directory entries /
-79 review-only**, with unsupported facts blank. All newer mainline research is
+**Current publication (T26–T28):** PR #22 is merged and its Pages publication was confirmed; the final Nihonmachi venue-context tightening is being revalidated.
+The audited snapshot contains **242 candidates: 162 city-only directory entries /
+80 review-only**, with unsupported facts blank. All newer mainline research is
 retained. Older counts/field-page badges below are historical, not the current
 publication gate. Actual CI, merge and Pages records are at the end of this board.
 
@@ -1060,3 +1060,14 @@ and count documentation, then CI/PR/Pages confirmation. The official link and
 2027 dates will remain; venue will be blank and the candidate review-only.
 No other session's research/tool file will be edited. All earlier deployment
 records remain historical records of what actually shipped at that point.
+
+### Final venue decision applied — `64f8b973`
+
+Nihonmachi’s 2027 dates/annual evidence retained, but venue and geography approval
+removed because the cited location is in the 52nd-edition recap. **162 directory /
+80 held**, with 20 weekly / 7 monthly / 25 annual / 110 special entries, 242 total
+candidates and the same 237 URLs / 140 domains. Original 163/79 publication records
+above are historical, not overwritten. A dedicated thirtieth regression and live
+browser exclusion/blank-cell assertions cover this exact exception. Prior sessions’
+research/tool files remain untouched. The correction and generated pages will be
+merged only after the full strict gate passes again.

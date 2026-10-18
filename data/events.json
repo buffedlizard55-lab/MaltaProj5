@@ -4302,7 +4302,7 @@
   "name": "Nihonmachi Street Fair",
   "schedule": "August 7th & 8th, 2027",
   "time": "",
-  "venue": "San Francisco’s Japantown",
+  "venue": "",
   "price": "",
   "candidate_name": "Nihonmachi Street Fair",
   "candidate_label": "Unverified inherited identifier",
@@ -4310,16 +4310,11 @@
   "kind": "Annual",
   "entry_type": "event",
   "parent": "",
-  "publication": "listed",
+  "publication": "review_only",
   "geography": {
-   "status": "confirmed_sf",
-   "quotes": [
-    {
-     "url": "https://www.nihonmachistreetfair.org/",
-     "text": "San Francisco’s Japantown"
-    }
-   ],
-   "basis": "Official page explicitly locates the event/venue in San Francisco."
+   "status": "unverified",
+   "quotes": [],
+   "basis": "The SF Japantown sentence describes the 52nd-edition retrospective. The 53rd-edition 2027 announcement supplies dates, not a venue; location is not carried forward."
   },
   "recurrence": {
    "value": "53rd Annual Nihonmachi Street Fair",
@@ -4363,15 +4358,6 @@
       "text": "August 7th & 8th, 2027"
      }
     ]
-   },
-   "venue": {
-    "value": "San Francisco’s Japantown",
-    "quotes": [
-     {
-      "url": "https://www.nihonmachistreetfair.org/",
-      "text": "San Francisco’s Japantown"
-     }
-    ]
    }
   },
   "sources": [
@@ -4379,10 +4365,12 @@
   ],
   "unverified": [
    "time: unverified",
-   "price: unverified"
+   "venue: unverified",
+   "price: unverified",
+   "geography: unverified; not admitted to city-only directory"
   ],
   "flags": [
-   "Times, specific street closures and free admission not transferred from earlier editions."
+   "2027 dates and annual recurrence confirmed, but the venue reference belongs to the preceding edition’s recap. Venue blank and review-only; no future location, time or free admission inferred."
   ],
   "notes": "",
   "audit": {

@@ -13,9 +13,9 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 | Candidates assessed | 242 |
 | Prior-main candidates retained (231 initial + 2 companion additions) | 233 |
 | New official-calendar entries | 9 |
-| Entries admitted to the city-only directory | 163 |
-| Candidates held off the directory for review | 79 |
-| Weekly / monthly / annual entries | 20 / 7 / 26 |
+| Entries admitted to the city-only directory | 162 |
+| Candidates held off the directory for review | 80 |
+| Weekly / monthly / annual entries | 20 / 7 / 25 |
 | Special, dated or cadence-unconfirmed entries | 110 |
 | Exact cited official-source URLs / distinct domains | 237 / 140 |
 
@@ -41,7 +41,7 @@ Only explicitly approved ISO occurrences determine temporal status, relative to 
 - Bhangra & Beats: 2026 programme at **Yerba Buena Gardens, Jessie Square and Yerba Buena Lane**, not the older Clay/Battery venue.
 - Conflicting Alemany hours and Secondhand/Muertos street extents remain blank/flagged rather than reconciled by guessing.
 - Regional/mixed-city programmes—including Frameline, NEXUS, SF Art Week, SF Climate Week and the full SF Marathon—are held for SF-specific component/route evidence.
-- The 2027 Pride weekend is confirmed, but its old 2026 venue and free-entry policy are not carried forward.
+- The 2027 Pride weekend is confirmed, but its old 2026 venue and free-entry policy are not carried forward. Nihonmachi’s 2027 dates are also confirmed, but its venue is blank: the Japantown sentence is in the prior-edition retrospective.
 
 See [the audit research log](data/research/audit-64f8b973.md) and the official quotations for details. No .org-to-nonprofit or sample-to-citywide inference is made.
 
@@ -100,7 +100,7 @@ Omit `--serve` when a static server already runs on port 8080. This checks 12 pa
 
 GitHub Pages is configured in branch mode: **`main` / root**. Merging validated committed HTML publishes it automatically; the validation workflow itself is not a deployment. Actual PR, merge and successful Pages build records are recorded in `COORDINATION.md` after they occur.
 
-### Confirmed publication
+### Confirmed initial publication (PR #22)
 
 Implementation [PR #22](https://github.com/buffedlizard55-lab/MaltaProj5/pull/22)
 merged on **18 October 2026 at 03:59:24 UTC** as `bde10dc7b431111c14b602855f4bebc0b6dbc957`.
@@ -112,3 +112,12 @@ succeeded; the Pages API reports **built** for that exact merge commit at 03:59:
 Live dashboard, review and evidence pages were fetched and confirmed to contain the
 new 163-directory / 79-held / 242-candidate snapshot. See `COORDINATION.md` for the
 full publication record and explicitly unknown source-response outcomes.
+
+### Final contextual tightening
+
+A last source-context review moved the Nihonmachi 2027 candidate off the directory:
+its August 7–8 dates are explicit, but the SF Japantown venue sentence belongs to
+the prior edition’s recap. Venue remains blank, matching the same no-carryover rule
+used for Pride and Fillmore. Current totals are **162 directory / 80 held**; no
+candidate or official link was discarded. A dedicated regression prevents this
+exception returning. The initial deployment counts above are historical.

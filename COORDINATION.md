@@ -52,6 +52,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `3adf31d9` | `arena/3adf31d9-maltaproj5` | 2026-10-18 09:45 UTC | New product requirements: date-ordered upcoming view, executive summary, cost labels, gaming/music/AI registers, mobile-first dashboard (T33–T36); final integration, PR → main, Pages |
 | `21f3dd85` | `arena/21f3dd85-maltaproj5` | 2026-10-18 11:00 UTC | Free-first release: free gaming/music/AI research overlay, free+upcoming executive summary and dashboard main section, separate Paid section, final integration, PR → main, Pages (their T37–T40) |
 | `d57e2eeb` | `arena/d57e2eeb-maltaproj5` | 2026-10-18 ~11:05 UTC | Free-first gap research (gaming/music/AI focus) from official sources, additive register extension, rebuild + regression updates, final integration, PR → main, Pages (own T37–T39, numbering collision with `21f3dd85`) |
+| `c224895f` | `arena/c224895f-maltaproj5` | 2026-10-18 | Independent official-source gap research and additive event overlay for new San Francisco events (T41); final integration follows in a separate task if research passes evidence gates |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -139,6 +140,7 @@ Upcoming page and cost badges are regression-covered in CI.
 | T37ᵈ | Free-first gap research from official sources: gaming, music and AI/technology first, then other free SF events not yet in the register; exact quotations with archived captures only; *review_only* for anything failing the evidence rules (ᵈ = `d57e2eeb`'s own numbering, claimed in parallel — collision with the `21f3dd85` T-numbers above) | **done** | `d57e2eeb` | NEW: `data/audit_d57e2eeb.json`, `data/research/audit-d57e2eeb.md` |
 | T38ᵈ | Additive extension of the register with T37ᵈ entries (never edits an existing row), rebuild consolidated data + all pages, update count-based regression fixtures, validate, run tests | **done** | `d57e2eeb` | NEW: `tools/register_d57e2eeb.py`; `tools/consolidate.py` (owner T27 done), `tests/` (owners done), generated `data/*` + `*.html`, `README.md`, `COORDINATION.md` |
 | T39ᵈ | Final integration of this session: re-verify combined data, confirm site builds with no broken links, PR → `main`, merge without waiting, confirm Pages deploy, record outcome | **done** (2026-10-18) — PR #41 merged `e518ebfa` 12:09 UTC; PR gate + post-merge main validation green; Pages API **built** for the merge commit; record below | `d57e2eeb` | `COORDINATION.md` |
+| T41 | Independent gap research + additive candidate overlay: identify additional SF events from official organizer/venue/government sources; prioritize free gaming/music/AI, then other free events; collect paid only in the paid category; exact evidence, blank unsupported fields, and review-only on uncertainty | **in progress** | `c224895f` | NEW: `data/audit_c224895f.json`, `data/research/audit-c224895f.md`, `tools/register_c224895f.py`; `COORDINATION.md` (claim/status only) |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1683,3 +1685,20 @@ absent from the pre-merge register).
   Parks once the 2027 park schedule is posted — all logged in
   [`data/research/audit-d57e2eeb.md`](data/research/audit-d57e2eeb.md) as open research items.
 
+
+
+## Claim — session `c224895f` (2026-10-18) — T41 official-source gap research
+
+**Scope claimed before work:** search for additional events within the City and County of San
+Francisco that are absent from the current 295-candidate snapshot. Prioritize free Gaming, Music,
+and AI/technology gatherings, then other free events; priced events are eligible for a separate
+Paid category only when an official source explicitly states admission price. Verify each field
+against the event host's own page or a City/County/library/venue organizer source; keep
+unsupported fields blank and publish ambiguous or geographically unconfirmed candidates as
+review-only.
+
+**Files owned by this claim:** `data/audit_c224895f.json`,
+`data/research/audit-c224895f.md`, and `tools/register_c224895f.py` (all new, session-specific).
+This task will not edit any existing row, shared event/source/review register, generated page,
+index/navigation, or build/validation code. New entries will not be described as exhaustive;
+the final integration will be separately claimed only after T41 has finished.

@@ -2,7 +2,7 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (T26–T28):** PR #22 is merged and its Pages publication was confirmed; the final Nihonmachi venue-context tightening is being revalidated.
+**Current publication (T26–T28):** PRs #22 and #24 are merged and Pages is confirmed live, including the final Nihonmachi venue-context tightening.
 The audited snapshot contains **242 candidates: 162 city-only directory entries /
 80 review-only**, with unsupported facts blank. All newer mainline research is
 retained. Older counts/field-page badges below are historical, not the current
@@ -80,8 +80,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **done — live**: PR [#18](https://github.com/buffedlizard55-lab/MaltaProj5/pull/18) merged 03:20 UTC (merge commit `9044bf8`); CI `Validate site` green on the PR; Pages build `built` for `9044bf8` | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 | T25 | Resolve Ferry Fest source link returning 404 in PR #18 remote-check report; preserve only official evidence that remains live and flag anything no longer confirmed | **done — PR #17 merged; Pages built** | `99662c40` | `COORDINATION.md`, `data/audit_f1fd3c36.json`, `tools/apply_audit.py`, generated `data/`, `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 | T26 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
-| T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | in progress — single final venue-context correction | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
-| T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | in progress — rechecking final venue-context correction after prior successful publication | `64f8b973` | `COORDINATION.md` |
+| T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | done — final context correction merged in PR #24 | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
+| T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | done — PR #24 checks, Pages build and corrected live content confirmed | `64f8b973` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1071,3 +1071,30 @@ above are historical, not overwritten. A dedicated thirtieth regression and live
 browser exclusion/blank-cell assertions cover this exact exception. Prior sessions’
 research/tool files remain untouched. The correction and generated pages will be
 merged only after the full strict gate passes again.
+
+## Final current publication — T27/T28 complete after contextual tightening
+
+* [PR #24](https://github.com/buffedlizard55-lab/MaltaProj5/pull/24) merged
+  **2026-10-18 04:15:16 UTC**, commit `b5e9afca8c6dcb15c59153d1c56137ba2a37c07d`.
+* PR validation [39096365405](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39096365405)
+  (job `117583554842`) **passed all gates**, including the new **30th regression**,
+  full generated-file consistency, 12-page desktop/mobile/no-JS/accessibility and
+  every source-URL check. Post-merge main validation
+  [39096451167](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39096451167)
+  (job `117583809053`) also **passed** (39s).
+* Pages run [39096451005](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39096451005)
+  **succeeded**; actual Pages build **1293522885** reports **built** for the exact
+  merge commit, **04:15:17 → 04:15:37 UTC**, no error.
+* Live dashboard and `data/audit_summary.json` were fetched after that deployment
+  and show **162 directory / 80 held / 242 candidates**, 20 weekly / 7 monthly /
+  25 annual / 110 special-or-cadence-unconfirmed, 237 URLs / 140 domains. Nihonmachi
+  keeps confirmed 2027 dates but no assumed future venue; the dedicated regression
+  and browser assertions confirm exclusion from the main table and a real blank
+  venue in review. The prior 163/79 records describe the earlier deployed state.
+* Reachability stayed separate from facts: PR #24 checked 237 URLs with 198
+  reachable-not-verified / 39 unknown / zero definite 404/410; its post-merge run
+  had 199 / 38 / zero. Responses vary, and unknowns are not promoted to verified
+  values. All factual uncertainty and incomplete coverage remain published.
+* This last completion record is documentation-only; the corrected data and HTML
+  are already live. No other session's research/tool file was modified for the
+  final correction. No manual review/approval was requested or required.

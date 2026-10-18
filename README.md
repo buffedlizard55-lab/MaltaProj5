@@ -1,45 +1,69 @@
 # MaltaProj5 — San Francisco Events Inventory
 
-A verified inventory of events happening **within the city of San Francisco only**, organized into
-**regularly occurring events** (weekly/monthly schedules and annual traditions) and **special events**
-(one-off, dated), with analysis — published as a static GitHub Pages site.
+Verified inventories of events happening **within the city of San Francisco only**, from two parallel
+research sessions, each sourced to official sites. Unconfirmed values are left blank and flagged —
+nothing is inferred. Data snapshots taken **18 October 2026**; no continuous refresh or automatic
+factual verification is claimed.
 
-- **Site:** https://buffedlizard55-lab.github.io/MaltaProj5/
-- **Data snapshot:** 2026-10-18
-- **Dataset:** 167 events (34 weekly/regular · 95 annual · 38 special) + 14 documented exclusions
-- **Verification:** every table row links to an official source (event organizer, venue, or
-  government / official tourism body). Values that could not be confirmed from an official source are
-  left blank and flagged on the site's [Flagged for Review](https://buffedlizard55-lab.github.io/MaltaProj5/flagged.html)
-  page — nothing is inferred.
+- **Primary site (docs/):** 167 events — [dashboard](docs/index.html) ·
+  [Flagged for Review](docs/flagged.html)
+- **Secondary site (repo root):** 29-row bounded inventory with evidence ledger —
+  [dashboard](index.html) · [sources & methodology](sources.html)
+- Intended Pages URL: https://buffedlizard55-lab.github.io/MaltaProj5/
 
-## Repository layout
+> **Publication status:** GitHub Pages enablement is currently blocked — GitHub returns
+> `Resource not accessible by integration` (HTTP 403) when creating the Pages site, both via the
+> repository credential and the workflow token (see
+> [deployment attempt](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573)).
+> The owner must enable Pages in repo Settings (or re-authorize the GitHub connection with Pages
+> admin), then the deploy workflow will publish `docs/`. Full history in `COORDINATION.md`.
+
+## Primary dataset (session `4f47c142`) — `docs/` site
 
 | Path | Purpose |
 |------|---------|
-| `data/events-weekly.json` | Regularly occurring events (weekly/monthly/seasonal) |
-| `data/events-annual.json` | Annually recurring events, by month |
-| `data/events-special.json` | Special (one-off/dated) 2026 events |
-| `data/exclusions.json` | Exclusion log (out-of-city or out-of-scope events, with reasons) |
+| `data/events-weekly.json` | Regularly occurring events (weekly/monthly/seasonal) — 34 |
+| `data/events-annual.json` | Annually recurring events, by month — 95 |
+| `data/events-special.json` | Special (one-off/dated) 2026 events — 38 |
+| `data/exclusions.json` | Exclusion log (out-of-city or out-of-scope events, with reasons) — 14 |
 | `data/research/` | Raw research notes |
 | `tools/build_site.py` | Generates the static site in `docs/` from the data files |
 | `tools/verify_site.py` | Verification pass: every row sourced, no broken internal links, domain allowlist |
-| `docs/` | GitHub Pages site (dashboard + category subpages + Flagged for Review) |
-| `COORDINATION.md` | Shared task board for parallel agent sessions (owners, status, verification log) |
+| `docs/` | Site (dashboard + category subpages + Flagged for Review) |
 
-## Workflow
+```sh
+python3 tools/build_site.py     # regenerates docs/
+python3 tools/verify_site.py    # exits 1 on any unsourced row / broken link / off-allowlist domain
+```
 
-1. Research/verify events against official sources (organizer sites, sf.gov, SFMTA, SF Environment,
-   Port of SF, Presidio Trust, SF Travel — the City's destination marketing organization).
-2. Record them in the `data/*.json` files with `status` (`verified` / `flagged`) and per-row flags.
-3. Run `python3 tools/build_site.py` to regenerate `docs/`.
-4. Run `python3 tools/verify_site.py` — the build fails if any row lacks a source link, any internal
-   link is broken, or any external link falls outside the official-domain allowlist.
-5. Merge to `main`; GitHub Pages serves `docs/`.
+## Secondary dataset (session `3a19e72d`) — root site
 
-## Scope rules
+- `data/events.json`: event rows, official-source references, evidence map, unknown fields and flags
+  (includes eight Exploratorium After Dark themes linked to their parent series).
+- `data/sources.json`: official URLs, checked date, selected transcribed excerpts.
+- `data/review.json`: research gaps, excluded candidates and conflicts.
+- `data/events.csv`: downloadable inventory, generated from JSON.
+- Eleven static pages: dashboard, recurrence/category views, review queue, evidence ledger.
+- `scripts/build.py` / `scripts/validate.py`: dependency-free Python build and validation.
 
-- Events must take place **inside San Francisco city limits** (e.g., events at the Cow Palace in Daly
-  City, PayPal Park in San Jose, or Levi's Stadium in Santa Clara are excluded and logged).
+```sh
+python scripts/build.py
+python scripts/validate.py
+python -m http.server 8000 --bind 0.0.0.0
+```
+
+Generated HTML is committed; tables and navigation work without JavaScript. JS adds search/filter.
+GitHub Actions validates pull requests and attempts Pages deployment. Tests check local links,
+source references, empty-field flags and generated-file freshness — not the truth of source content
+or external uptime.
+
+## Shared scope rules
+
+- Events must take place **inside San Francisco city limits** (e.g., Cow Palace in Daly City,
+  PayPal Park in San Jose, or Levi's Stadium in Santa Clara are excluded and logged).
 - Professional sports league schedules and trade conventions are excluded as categories; individual
   special public events at those venues are included.
 - Aggregators and media articles are never the source of record for a value.
+- Sources can change; verify organizer details before attending.
+
+`COORDINATION.md` records the task board, verification log and publication history.

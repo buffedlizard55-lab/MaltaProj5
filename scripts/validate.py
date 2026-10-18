@@ -93,7 +93,7 @@ class Page(HTMLParser):
 
 def main():
     rows, sources, review, summary = (load(n) for n in ('events.json', 'sources.json', 'review.json', 'audit_summary.json'))
-    history, audit = load('unverified_history.json'), load('audit_64f8b973.json')
+    history, audit = load('unverified_history.json'), load('audit_95ceac65.json')
     assert history['warning'].startswith('UNVERIFIED'), 'Historical claims need an explicit warning'
     expected = compile_register(history['events'], history['sources'], history['review_findings'], audit)
     assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection. Rebuild; never run the old matcher applicator.'

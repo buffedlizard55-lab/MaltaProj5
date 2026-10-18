@@ -6,7 +6,7 @@
  "listed": 167,
  "review_only": 79,
  "series": 14,
- "source_urls": 242,
+ "source_urls": 243,
  "domains": 140,
  "kinds": {
   "Weekly": 23,
@@ -34,9 +34,9 @@
   "schedule": 8,
   "time": 71,
   "venue": 0,
-  "price": 96
+  "price": 95
  },
  "listed_with_blanks": 149,
- "supported_field_values": 730,
+ "supported_field_values": 731,
  "limitation": "Bounded, non-exhaustive research snapshot; entries mix events and programme umbrellas, not a count of unique city events."
 }

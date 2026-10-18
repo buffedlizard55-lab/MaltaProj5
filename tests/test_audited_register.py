@@ -18,7 +18,7 @@ from audit_evidence import retain_capture  # noqa: E402
 class AuditedRegister(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.audit = json.loads((ROOT / 'data/audit_64f8b973.json').read_text())
+        cls.audit = json.loads((ROOT / 'data/audit_95ceac65.json').read_text())
         cls.history = json.loads((ROOT / 'data/unverified_history.json').read_text())
         cls.rows = json.loads((ROOT / 'data/events.json').read_text())
         cls.by_id = {r['id']: r for r in cls.rows}

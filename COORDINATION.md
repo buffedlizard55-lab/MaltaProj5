@@ -90,7 +90,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T29-cal | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
 | T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; PR Validate [39102137078](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102137078), main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169), and Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) succeeded | `bb551cdc` | `COORDINATION.md` |
-| T32 | Independent semantic re-verification of the shipped register (renumbered from T30 at claim time — bb551cdc had taken T30/T31 while this session's claim was in flight): re-read a risk-prioritized sample of official source pages live; confirm or correct field values with exact quotations; publish confirmed corrections as a new audited overlay; flag remaining irregularities for review | **in progress** — claimed 2026-10-18, rebased onto post-PR-#30 main | `95ceac65` | NEW: `data/audit_95ceac65.json`, `data/research/audit-95ceac65.md`; canonical-overlay reference update in `tools/audited_register.py`, `scripts/validate.py`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` (shared tooling — logged here before editing); regenerated `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/unverified_history.json`, `data/events.csv`, `data/review.csv`, `ANALYSIS.md`, `*.html`; `COORDINATION.md`, `README.md` |
+| T32 | Independent semantic re-verification of the shipped register (renumbered from T30 at claim time — bb551cdc had taken T30/T31 while this session's claim was in flight): re-read a risk-prioritized sample of official source pages live; confirm or correct field values with exact quotations; publish confirmed corrections as a new audited overlay; flag remaining irregularities for review | **done** — ~60 rows re-read live against official pages; 1 field correction (Oktoberfest price), 1 conflict kept blank with enriched flag + operator evidence archived (Alemany); overlay `data/audit_95ceac65.json` published; 30 regressions + exact projection + link checks pass | `95ceac65` | `data/audit_95ceac65.json` (NEW canonical overlay), `data/research/audit-95ceac65.md` (NEW), `tools/author_audit_95ceac65.py` (NEW), `tools/audited_register.py`, `scripts/validate.py`, `scripts/build.py`, `tools/audit_evidence.py`, `.github/workflows/audit.yml`, `tests/test_audited_register.py` (overlay filename only; fixture values unchanged), regenerated `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/unverified_history.json`, `data/events.csv`, `data/review.csv`, `ANALYSIS.md`, `*.html`, `README.md`, `SOURCES.md`, `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1220,3 +1220,119 @@ Main validation [39102291756](https://github.com/buffedlizard55-lab/MaltaProj5/a
 and Pages workflow [39102291538](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102291538)
 succeeded; Pages API build **1293677966** is `built` for that commit. PR #29 changed
 coordination documentation only; the 246/167/79 event register is from PR #28.
+
+## T32 independent semantic re-verification — `95ceac65`
+
+Claimed as T30, renumbered T32 at claim time: `bb551cdc` took T30/T31
+while this session's claim commit was in flight (recorded in the branch
+reconciliation note below). Scope: an independent, live, line-by-line
+re-read of a risk-prioritized sample of the shipped register against its
+cited official pages — not a re-crawl of all 242 candidates.
+
+### What was verified live (selection of ~60 rows, every category and cadence)
+
+* All 13 newest official-calendar entries (`audit-*` rows): SFMOMAween and
+  the Kiki Ball (both appear verbatim under SFMOMA's live “Upcoming
+  Events”), Halloween Hoopla and Afro-Filipino Jazz (Yerba Buena Gardens
+  Festival — archived evidence; the live homepage is reCAPTCHA-gated, so
+  this session's live re-read is an unknown, not a contradiction), Foodwise
+  Día de los Muertos and the Sofía Jiménez demo (both match the live
+  Foodwise homepage event cards verbatim), three Presidio press-release
+  events, Outdoor Rec Day, Sunday Fun Days, Civic Center Soundtrack and
+  Illuminate LIVE.
+* Flagship recurring rows: Ferry Plaza Farmers Market, Cal Academy
+  NightLife, all eight Exploratorium After Dark rows (base + 7 themed
+  editions — every occurrence date/time matched the live calendar),
+  FAMSF Free Saturdays/Free Tuesdays, Golden Gate Park Band, Zumba in the
+  Parks (page is JS-rendered; archived capture retains the approved
+  quotes), Mission/Outer Sunset/Alemany markets, Heart of the City,
+  Castro/Divisadero/Fillmore/Noe/Stonestown/Clement/Inner Sunset markets.
+* Major dated events: Chinese New Year Parade 2027 (Feb 20, 5:15 PM,
+  route), Carnaval 2027 (May 29–30), Folsom Street Fair and Up Your Alley,
+  Hardly Strictly Bluegrass, Noise Pop 2027, Lit Crawl, Comedy Day
+  (correctly date-less — the official site prints no 2026 calendar date),
+  Opera Ball (Nov 12 City Hall reschedule), Opera in the Park, four SF
+  Opera productions, Bouquets to Art, Treasures of the Pharaohs, Monet and
+  Venice, Azzedine Alaïa, Nutcracker, RM x SFMOMA, Iturbide, Fleet Week Air
+  Show, Bay to Breakers 2027, Sunday Streets Excelsior (confirmed for the
+  snapshot date itself), Potrero Hill Festival, The Haunt at YBCA,
+  PloverFest, Embarcadero 40th lighting, Guardsmen Tree Lot, Renegade
+  Craft, Superfair, ArtSpan Open Studios, SF Art Fair 2027, SF Half
+  Marathon 2027, SFIAF 2027, Ballpark Back 9, Mostly British, Jerry Day,
+  SF Free Folk Festival, Oktoberfest on Front, QWOCMAP, Earth Day SF,
+  Taiwanese American Cultural Festival, Valencia LIVE!, Pokémon Worlds,
+  Juneteenth on the Waterfront, Peak2Peak, Tulip Day, Muni Heritage
+  Weekend 2025 (correctly past-dated), Night of Ideas, and the zoo rows
+  (ZooLights, Boo, Resident Free Day, Member Mornings).
+* The two deliberately conflicted Sunset Mercantile rows were re-read
+  live: the header/address street-extent conflicts **persist today**
+  (Secondhand: header “Ortega to Quintara” vs address “Ortega & Pacheco”;
+  Día de los Muertos: the reverse), so the review-only blanks remain
+  correct. Diwali's own page is internally consistent and verifies.
+
+### Correction applied (1 field value)
+
+* `x-oktoberfest-on-front`: price was blank with no documented conflict;
+  the organizer's official page states **“FREE WITH RSVP”** (in the
+  archived 2026-10-18 capture and re-confirmed live). Populated verbatim.
+  No other field touched.
+
+### Conflict kept blank, evidence enriched (no value change)
+
+* `b-alemany-farmers-market`: hours stay blank. Live re-read found the
+  operator Foodwise's own page states “Saturday (7 am – 2 pm), year round”,
+  agreeing with SF.gov's “every Saturday, 7am - 2pm”; the dissenting SF
+  Environment directory entry (“6:00am to 3:00pm”) is dated 03/21/2025,
+  predates the February 2026 operator changeover, and itself instructs
+  visitors to “refer to the individual market's website”. The operator
+  page is now archived as a capture and added as a second geography
+  quotation on the row (adding foodwise.org to the row's source links for
+  manual review), and the flag records the full corroboration/dissent
+  picture. The encoded conflict-blank fixture
+  (`test_conflicting_values_blank_and_flagged`) is unchanged and passes.
+
+### Irregularities flagged for manual review (published on Flagged for Review)
+
+* Live official-source conflicts that remain unresolved by design: Alemany
+  hours (2-vs-1 with a stale directory), Secondhand/Muertos street extents,
+  Jewish Film Festival year. All stay blank with the dissent recorded.
+* JS-rendered / reCAPTCHA-gated official pages (Rec Park Zumba program
+  page, Yerba Buena Gardens Festival homepage) could not be re-read live in
+  this sandbox; their approved quotations stand on the archived 2026-10-18
+  captures. Reachability/readability unknown ≠ contradiction.
+* Official pages that still print past editions (Guardsmen Tree Lot “2025
+  Key Dates”, Lowrider Council's September 20, 2025 parade): the register
+  correctly invents no new dates.
+* Four URLs this session probed by guesswork 404'd
+  (famsf.org/visit/free-admission/, sfopera.com/season/opera-ball,
+  famsf.org/events/bouquets-to-art/,
+  presidio.gov/explore/events/fiesta-en-el-parque-3); **none is a register
+  citation** — every URL the register actually cites was live at re-read
+  time. The Presidio Fiesta event detail page linked *inside* the still-live
+  press release is dead; the row cites the press release, which supports
+  every field.
+* Prior-release-note discrepancy carried over from T29: merged PR #26's
+  body says “Review-only events: 4” while data/site consistently show 79
+  (now 79 again after PR #28's 246-candidate expansion). Data is correct;
+  the PR description wording was another session's metadata.
+
+### Build, tests and publication
+
+* `tools/author_audit_95ceac65.py` deterministically layers the two
+  amendments onto the untouched `data/audit_64f8b973.json` base (verified:
+  233→234 captures, exactly 2 changed decisions, all 246 decisions / 231
+  candidates / 13 extra events otherwise byte-identical).
+* Canonical overlay references updated (one line each, logged here before
+  editing): `tools/audited_register.py`, `scripts/validate.py`,
+  `tools/audit_evidence.py`, `.github/workflows/audit.yml`,
+  `tests/test_audited_register.py`, `scripts/build.py`, plus README and
+  SOURCES documentation. `data/audit_64f8b973.json` itself is preserved
+  unchanged as the inherited layer.
+* Full gate re-run locally: `consolidate.py` → 167 SF entries / 79
+  review-only / 246 candidates; `build.py` → 12 pages; 30/30 regression
+  tests pass; `validate.py` PASS on all 246 exact projections, quote
+  provenance, recurrence/year guards, blanks, CSV values, page memberships
+  and every local link/fragment. Summary now reads 243 cited URLs / 140
+  domains / 731 supported field values (price blanks 96→95).
+* New finding published on the Flagged for Review and evidence pages:
+  “Independent re-verification (session 95ceac65)”.

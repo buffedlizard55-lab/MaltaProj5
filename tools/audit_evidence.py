@@ -24,7 +24,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "data/audit_64f8b973.json"
+REPORT = ROOT / "data/audit_95ceac65.json"
 USER_AGENT = "Mozilla/5.0 (compatible; SFEventsEvidenceAudit/1.0; +https://github.com/buffedlizard55-lab/MaltaProj5)"
 FIELDS = ("name", "schedule", "time", "venue", "price")
 
@@ -195,7 +195,7 @@ def capture(extra_urls=(), timeout=25):
                        if value and normalized(value).casefold() in normalized(captures.get(url, {}).get("text", "")).casefold()]
             candidates[row["id"]]["fields"][field] = {"original": value, "literal_match_urls": matches,
                                                         "status": "candidate only — requires contextual review"}
-    output = {**old, "schema_version": old.get("schema_version", 1), "session": "64f8b973",
+    output = {**old, "schema_version": old.get("schema_version", 1), "session": "95ceac65",
               "captured_at": old.get("captured_at") or datetime.now(timezone.utc).isoformat(timespec="seconds"),
               "last_capture_attempt_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
               "method": old.get("method") or "Official-source extracted-text snapshot. Literal matches are candidates, NEVER approvals. Each published nonblank fact needs an explicit field decision and supporting quotation.",

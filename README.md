@@ -17,7 +17,7 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 | Candidates held off the directory for review | 79 |
 | Weekly / monthly / annual entries | 23 / 7 / 26 |
 | Special, dated or cadence-unconfirmed entries | 111 |
-| Exact cited official-source URLs / distinct domains | 242 / 140 |
+| Exact cited official-source URLs / distinct domains | 243 / 140 |
 
 The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
@@ -39,7 +39,8 @@ Only explicitly approved ISO occurrences determine temporal status, relative to 
 - Zoo resident free day: **7 October 2026**, not an established monthly first-Tuesday policy. Boo: **31 October, 10am–3pm**, activities included with paid daytime admission or membership.
 - Fiesta en el Parque: **1 August 2026**, not August 2. Opera Ball rescheduled to **12 November 2026**; no Opera House performance that evening.
 - Bhangra & Beats: 2026 programme at **Yerba Buena Gardens, Jessie Square and Yerba Buena Lane**, not the older Clay/Battery venue.
-- Conflicting Alemany hours and Secondhand/Muertos street extents remain blank/flagged rather than reconciled by guessing.
+- Oktoberfest on Front: admission is the organizer page's explicit **FREE WITH RSVP**; the earlier blank was an unflagged omission, corrected by the `95ceac65` independent re-read.
+- Conflicting Alemany hours and Secondhand/Muertos street extents remain blank/flagged rather than reconciled by guessing. For Alemany, SF.gov **and** the operator Foodwise both state 7am–2pm while the older SF Environment directory says 6am–3pm; the operator page is now archived as a second geography quotation and the dissent stays flagged for manual review.
 - Regional/mixed-city programmes—including Frameline, NEXUS, SF Art Week, SF Climate Week and the full SF Marathon—are held for SF-specific component/route evidence.
 - The 2027 Pride weekend is confirmed, but its old 2026 venue and free-entry policy are not carried forward. Nihonmachi’s 2027 dates are also confirmed, but its venue is blank: the Japantown sentence is in the prior-edition retrospective.
 - T29 additions: Outdoor Rec Day (28 Feb 2026, Mission Creek Park); Sunday Fun Days (Sundays at Union Square through 27 Sep 2026); Civic Center Soundtrack and Illuminate LIVE weekly series (no ISO kickoff year in the quoted sentences); Comedy Day listed from organizer FAQ without a printed 2026 date.
@@ -57,7 +58,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/validate.py
 ```
 
-`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay. Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
+`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay. Every factual field starts blank. Only `data/audit_95ceac65.json` decisions can populate it (a self-contained overlay layering session `64f8b973`'s complete evidence base with session `95ceac65`'s independent re-verification amendments); an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
 
 The validator compares the exact projection, checks quotation provenance (including labeled event JSON-LD), recurrence/year guards, blanks, parent cycles, source references, CSV cell values, all page memberships and every local link/fragment. A second rebuild must be byte-identical. Provenance validation is **not** automatic semantic fact-checking.
 
@@ -85,7 +86,10 @@ Omit `--serve` when a static server already runs on port 8080. This checks 12 pa
 |---|---|
 | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` | Upstream research/tool retained unchanged; legacy labels are not approvals |
 | `tools/upstream_candidates.py`, `data/upstream_refs_64f8b973.json` | Isolated candidate transform and preserved official 2026 Sketchfest reference |
-| `data/audit_64f8b973.json` | Finite official evidence captures, selected tool excerpts and explicit field decisions |
+| `data/audit_64f8b973.json` | Prior evidence base, preserved unchanged as the inherited layer |
+| `data/audit_95ceac65.json` | Canonical audited overlay: all inherited captures/decisions plus session `95ceac65`'s independent live re-verification amendments and its new operator-page capture |
+| `tools/author_audit_95ceac65.py` | Deterministic authoring script for the `95ceac65` overlay (two documented amendments only) |
+| `data/research/audit-95ceac65.md` | Session `95ceac65` independent live re-verification log: method, confirmed rows, corrections, flagged irregularities |
 | `data/events.json` | All audited records, including review-only dispositions; not all are published in the directory |
 | `data/sources.json` | Exact-URL ledger; statuses and contextual decisions are separate |
 | `data/audit_summary.json` | Reproducible counts/blank-field/date summary |

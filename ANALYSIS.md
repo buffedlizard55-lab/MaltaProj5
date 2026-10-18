@@ -5,7 +5,7 @@ As of 18 October 2026. This is not a complete or live city calendar.
 - 295 candidate entries assessed: 233 inherited and 18 official-calendar entries plus 36 from the gaming/music/AI research pass and 8 from the free-first research pass.
 - 212 admitted to the city-only directory; 83 held for review.
 - 16 listed programme umbrellas overlap child events. These totals are **not unique-event counts**.
-- 308 exact cited URLs across 163 domains. Domains are not organizations or nonprofit status.
+- 309 exact cited URLs across 163 domains. Domains are not organizations or nonprofit status.
 - Cadence: 37 weekly / 13 monthly / 35 annual / 127 special or cadence-unconfirmed.
 
 ## Upcoming, relative to the fixed snapshot
@@ -30,9 +30,9 @@ landing page, while priced entries are grouped in the separate Paid events secti
 
 ## Cost, as stated by the official page
 
-- Free: 75
+- Free: 76
 - Paid: 20
-- Not stated: 117 (blank admission cell — never assumed free)
+- Not stated: 116 (blank admission cell — never assumed free)
 
 ## Blank factual fields in the directory
 
@@ -40,7 +40,7 @@ landing page, while priced entries are grouped in the separate Paid events secti
 - Published schedule: 15
 - Time: 88
 - Venue / area: 0
-- Admission / conditions: 117
+- Admission / conditions: 116
 
 ## Temporal labels (fixed snapshot)
 

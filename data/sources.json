@@ -2559,6 +2559,27 @@
    "family"
   ]
  },
+ "n-00d1a33df4b2": {
+  "url": "https://foodwise.org/markets/alemany-farmers-market/",
+  "publisher": "foodwise.org",
+  "title": "Alemany Farmers Market : Foodwise",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "audit_snapshot": "data/audit_06949148.json",
+  "retrieval": {
+   "complete": false,
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 3
+  },
+  "approved_for_rows": [
+   "b-alemany-farmers-market"
+  ]
+ },
  "n-017995d825c3": {
   "url": "https://presidio.gov/explore/attractions/presidio-officers-club",
   "publisher": "presidio.gov",
@@ -6560,7 +6581,9 @@
    "text_truncated": false
   },
   "audit_snapshot": "data/audit_64f8b973.json",
-  "approved_for_rows": []
+  "approved_for_rows": [
+   "b-alemany-farmers-market"
+  ]
  },
  "x-www-sfhiphopdancefest-com": {
   "url": "https://www.sfhiphopdancefest.com/",

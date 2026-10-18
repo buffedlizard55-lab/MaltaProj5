@@ -16,13 +16,14 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 | New topic-gap entries added in audit `3adf31d9` (gaming / music / AI) | 15 |
 | Free-first entries added in audit `21f3dd85` (free gaming / music / AI first) | 8 |
 | New free-first gap entries added in audit `d57e2eeb` (civic / gardens / music / gaming / AI) | 21 |
+| T32 re-verification reconciled (one field confirmed, one hours conflict retained blank) | 2 decisions |
 | Entries admitted to the city-only directory | 212 |
 | Candidates held off the directory for review | 83 |
 | Weekly / monthly / annual entries | 37 / 13 / 35 |
 | Special, dated or cadence-unconfirmed entries | 127 |
 | Entries with at least one confirmed future date | 74 |
-| Directory rows reading Free / Paid / Not stated | 75 / 20 / 117 |
-| Exact cited official-source URLs / distinct domains | 308 / 163 |
+| Directory rows reading Free / Paid / Not stated | 76 / 20 / 116 |
+| Exact cited official-source URLs / distinct domains | 309 / 163 |
 
 The directory includes 16 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
@@ -32,7 +33,7 @@ The site is **free-first**: the [dashboard](index.html) executive summary and ma
 - [Gaming](gaming.html) · [Music](music.html) · [AI & technology](ai.html) · [Free to attend](free.html) · [Paid events](paid.html) · [Focus, one page](focus.html)
 - [Markets & food](markets.html) · [Museums & science](museums.html) · [Festivals & culture](culture.html) · [Community & outdoors](community.html)
 - [Analysis](analysis.html) · [Flagged for Review](review.html) · [Sources and row-by-row evidence](sources.html)
-- [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv) · [Research log for audit `3adf31d9`](data/research/audit-3adf31d9.md) · [Research log for audit `21f3dd85`](data/research/audit-21f3dd85.md)
+- [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv) · [Research log for audit `3adf31d9`](data/research/audit-3adf31d9.md) · [Research log for audit `21f3dd85`](data/research/audit-21f3dd85.md) · [T32 integration audit](data/research/audit-06949148.md)
 
 ## What a listing means
 
@@ -47,7 +48,8 @@ Only explicitly approved ISO occurrences determine temporal status, relative to 
 - Zoo resident free day: **7 October 2026**, not an established monthly first-Tuesday policy. Boo: **31 October, 10am–3pm**, activities included with paid daytime admission or membership.
 - Fiesta en el Parque: **1 August 2026**, not August 2. Opera Ball rescheduled to **12 November 2026**; no Opera House performance that evening.
 - Bhangra & Beats: 2026 programme at **Yerba Buena Gardens, Jessie Square and Yerba Buena Lane**, not the older Clay/Battery venue.
-- Conflicting Alemany hours and Secondhand/Muertos street extents remain blank/flagged rather than reconciled by guessing.
+- Alemany Farmers Market hours remain blank/flagged: current SF.gov and operator Foodwise pages say 7am–2pm, while the San Francisco Environment Department directory (dated 21 March 2025) says 6am–3pm and tells visitors to confirm with the individual market site. All three official pages are linked from the review record; no time is inferred. Secondhand/Muertos street extents also remain blank/flagged.
+- Oktoberfest on Front’s official Downtown SF page states “FREE WITH RSVP”; the event’s confirmed 18 September 2026 date is past relative to this snapshot, so the correction updates the all-cost register but not the free-upcoming dashboard.
 - Regional/mixed-city programmes—including Frameline, NEXUS, SF Art Week, SF Climate Week and the full SF Marathon—are held for SF-specific component/route evidence.
 - The 2027 Pride weekend is confirmed, but its old 2026 venue and free-entry policy are not carried forward. Nihonmachi’s 2027 dates are also confirmed, but its venue is blank: the Japantown sentence is in the prior-edition retrospective.
 - T29 additions: Outdoor Rec Day (28 Feb 2026, Mission Creek Park); Sunday Fun Days (Sundays at Union Square through 27 Sep 2026); Civic Center Soundtrack and Illuminate LIVE weekly series (no ISO kickoff year in the quoted sentences); Comedy Day listed from organizer FAQ without a printed 2026 date.
@@ -65,7 +67,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/validate.py
 ```
 
-`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay, the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology entries), the additive fail-closed `tools/register_21f3dd85.py` free-first overlay, and finally the additive fail-closed `tools/register_d57e2eeb.py` free-first gap overlay (civic venues, Golden Gate Park garden free hours, free music, games and SF AI/tech communities, plus one explicitly Paid entry kept distinct). Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
+`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` projection, the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology), the `tools/register_21f3dd85.py` free-first overlay, the `tools/register_d57e2eeb.py` free-first gap overlay, and the final `tools/overlay_06949148.py` reconciliation. The final overlay adds one official admission quotation to an existing past event and adds official sources for an unresolved Alemany hours conflict without filling the time field. Each amended fact is backed by exact text in `data/audit_06949148.json`; quote provenance is validated during rebuild. The older `data/audit_95ceac65.json` snapshot and generated pages are not used to replace the newer 295-candidate mainline. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
 
 The validator compares the exact projection, checks quotation provenance (including labeled event JSON-LD), recurrence/year guards, blanks, parent cycles, source references, CSV cell values, all page memberships and every local link/fragment. A second rebuild must be byte-identical. Provenance validation is **not** automatic semantic fact-checking.
 
@@ -122,7 +124,9 @@ Omit `--serve` when a static server already runs on port 8080. This checks 19 pa
 |---|---|
 | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` | Upstream research/tool retained unchanged; legacy labels are not approvals |
 | `tools/upstream_candidates.py`, `data/upstream_refs_64f8b973.json` | Isolated candidate transform and preserved official 2026 Sketchfest reference |
-| `data/audit_64f8b973.json` | Finite official evidence captures, selected tool excerpts and explicit field decisions |
+| `data/audit_64f8b973.json` | Mainline finite official evidence captures, selected tool excerpts and explicit field decisions |
+| `data/audit_06949148.json`, `tools/overlay_06949148.py` | Final stale-T32 reconciliation; one exact RSVP cost quote, linked official Alemany-hours conflict kept blank, no fabricated HTTP status |
+| `data/research/audit-06949148.md` | Source-by-source reconciliation, integration decision, checks and limits |
 | `data/audit_3adf31d9.json`, `tools/register_3adf31d9.py` | Additive fail-closed topic-gap overlay and its captures (gaming / music / AI) |
 | `data/research/audit-3adf31d9.md` | Research log for that overlay: retrieval methods, approvals and deliberate non-approvals |
 | `data/audit_21f3dd85.json`, `tools/register_21f3dd85.py` | Additive fail-closed free-first overlay and its captures (dated free music, free gaming, free AI; one paid tournament) |

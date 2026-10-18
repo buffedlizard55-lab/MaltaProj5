@@ -15,6 +15,7 @@ from audited_register import compile_register, temporal, validate_decision  # no
 from register_3adf31d9 import extend as extend_register  # noqa: E402
 from register_21f3dd85 import extend as extend_register_21f3dd85  # noqa: E402
 from register_d57e2eeb import extend as extend_register_d57e2eeb  # noqa: E402
+from overlay_06949148 import extend as extend_register_06949148  # noqa: E402
 from audit_evidence import retain_capture  # noqa: E402
 
 
@@ -29,9 +30,10 @@ class AuditedRegister(unittest.TestCase):
     def project(self, audit=None, history=None):
         h = history or self.history
         # The additive overlays always run last, in consolidate.py order:
-        # 3adf31d9 (topic gap), then 21f3dd85 (free-first), then d57e2eeb (free-first gap).
-        return extend_register_d57e2eeb(*extend_register_21f3dd85(
-            *extend_register(*compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit))))
+        # 3adf31d9 (topic gap), 21f3dd85 (free-first), d57e2eeb (free-first gap),
+        # and 06949148 (final official-source evidence reconciliation).
+        return extend_register_06949148(*extend_register_d57e2eeb(*extend_register_21f3dd85(
+            *extend_register(*compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit)))))
 
     def test_baseline_retained_and_new_entries_identified(self):
         self.assertEqual(len(self.history['events']), 233)

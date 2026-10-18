@@ -80,5 +80,14 @@
    "https://sfshakes.org/performance/free-shakes/",
    "https://bayareasciencefestival.org/"
   ]
+ },
+ {
+  "title": "Alemany Farmers Market hours: conflicting official pages",
+  "detail": "The current SF.gov location page says “every Saturday, 7am - 2pm” and identifies Foodwise as operator since February 2026; Foodwise’s current market page says “Saturday (7 am – 2 pm), year round”. The San Francisco Environment Department page, dated 03/21/2025, lists “6:00am to 3:00pm” and advises visitors to confirm hours with the individual market website. The event row’s time remains blank; all three official pages are linked so the discrepancy can be reviewed. Admission is not stated; free parking is not free entry.",
+  "urls": [
+   "https://www.sf.gov/location--alemany-farmers-market",
+   "https://foodwise.org/markets/alemany-farmers-market/",
+   "https://www.sfenvironment.org/farmers-markets-in-sf"
+  ]
  }
 ]

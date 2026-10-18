@@ -850,3 +850,10 @@ apply_extension_21f3dd85()
 # rules; runs last after the parallel 21f3dd85 overlay; never edits an existing row.
 from register_d57e2eeb import apply_extension as apply_extension_d57e2eeb
 apply_extension_d57e2eeb()
+
+# Final independent-review reconciliation (session 06949148): a verified
+# admission quotation and a linked-but-unresolved Alemany hours conflict.
+# This is applied last, on the current 295-candidate register; it never imports
+# the stale T32 branch's older generated pages or replaces mainline evidence.
+from overlay_06949148 import apply_extension as apply_extension_06949148
+apply_extension_06949148()

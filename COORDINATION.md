@@ -129,10 +129,10 @@ Upcoming page and cost badges are regression-covered in CI.
 | T34 | Date-ordered **Upcoming** page + **executive summary** on the landing page (nearest confirmed dates first, relative to the fixed 2026-10-18 snapshot) | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `assets/app.js`, `*.html` |
 | T35 | **Cost labelling**: a Free / Paid / Not stated badge derived only from the verified admission text, always shown next to the exact official quotation | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `*.html` |
 | T36 | Category subpages **Gaming / Music / AI & technology / Free to attend** + mobile-first dashboard navigation; rebuild, validate, PR → `main`, merge, confirm Pages | **done** | `3adf31d9` | NEW: `tools/register_3adf31d9.py`; `tools/consolidate.py`, `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `tests/`, `*.html`, `README.md`, `COORDINATION.md` |
-| T37 | Free-first research: additional **free gaming / music / AI** (then other free) entries inside San Francisco from official organizer/venue/library/government pages only; exact quotations + archived captures; new fail-closed overlay chained after `3adf31d9` | **in progress** (claimed 2026-10-18 11:00 UTC) | `21f3dd85` | NEW: `data/audit_21f3dd85.json`, `data/research/audit-21f3dd85.md`, `tools/register_21f3dd85.py`; tail wiring in `tools/consolidate.py`; overlay-chain assertion in `scripts/validate.py` |
-| T38 | **Free-first dashboard**: executive summary focused on free + upcoming (soonest free dated entries near the 2026-10-18 snapshot); dashboard main section = **free upcoming events only**, date-ordered nearest first with next-14-days highlight; full directory remains on Focus / Upcoming | unclaimed → claimed by `21f3dd85` | `21f3dd85` | `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `*.html` |
-| T39 | **Paid events in a separate section**: new `paid.html` listing only Paid-badge entries with the exact quoted price wording; nav + dashboard card; page-count and CI file-list updates | unclaimed → claimed by `21f3dd85` | `21f3dd85` | NEW: `paid.html` (generated); `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `tests/browser_smoke.cjs`, `.github/workflows/verify.yml`, `*.html` |
-| T40 | Final integration: rebuild, re-verify combined data line by line (validate + unit tests + source-link checks), refresh README/SOURCES counts, PR → `main`, merge without waiting, confirm Pages deploy, record PR link + merge result here | unclaimed → claimed by `21f3dd85` | `21f3dd85` | `data/*` (generated), `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md`, `COORDINATION.md` |
+| T37 | Free-first research: additional **free gaming / music / AI** (then other free) entries inside San Francisco from official organizer/venue/library/government pages only; exact quotations + archived captures; new fail-closed overlay chained after `3adf31d9` | **done** (2026-10-18) — 8 candidates, 6 listed / 2 held; register now 274 candidates, 191 listed / 83 review-only, 277 URLs | `21f3dd85` | NEW: `data/audit_21f3dd85.json`, `data/research/audit-21f3dd85.md`, `tools/register_21f3dd85.py`; tail wiring in `tools/consolidate.py`; overlay-chain assertion in `scripts/validate.py` |
+| T38 | **Free-first dashboard**: executive summary focused on free + upcoming (soonest free dated entries near the 2026-10-18 snapshot); dashboard main section = **free upcoming events only**, date-ordered nearest first with next-14-days highlight; full directory remains on Focus / Upcoming | **done** — 13 free dated + 28 free recurring on the landing page; Gaming/Music/AI nearest-free callouts; 45 unit tests + browser smoke green | `21f3dd85` | `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `*.html` |
+| T39 | **Paid events in a separate section**: new `paid.html` listing only Paid-badge entries with the exact quoted price wording; nav + dashboard card; page-count and CI file-list updates | **done** — 19 priced entries on `paid.html` (19-page site); "Not stated" never listed as paid | `21f3dd85` | NEW: `paid.html` (generated); `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `tests/browser_smoke.cjs`, `.github/workflows/pages.yml`, `*.html` |
+| T40 | Final integration: rebuild, re-verify combined data line by line (validate + unit tests + source-link checks), refresh README/SOURCES counts, PR → `main`, merge without waiting, confirm Pages deploy, record PR link + merge result here | **in progress** (2026-10-18) — docs refreshed; PR next | `21f3dd85` | `data/*` (generated), `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1537,3 +1537,58 @@ and `data/research/audit-95ceac65.md` are NOT touched.
 → `scripts/validate.py` → unit tests → `tools/check_sources.py` reachability on cited URLs
 (reachability only, never fact approval) → PR to `main` → merge on green CI → Pages build
 confirmed via the Pages API for the merge commit.
+
+## Integration record — session `21f3dd85` (free-first release, T37–T40, 2026-10-18)
+
+**Scope executed (user's new emphasis):** free-first. The main section shows **free upcoming
+events only**; the executive summary focuses on **free + upcoming** near the 2026-10-18 snapshot;
+paid events are collected in a **separate section**; research priority **free gaming, music and
+AI first, then everything else**.
+
+**T37 (data, commit `96434ed`).** New fail-closed overlay `tools/register_21f3dd85.py` /
+`data/audit_21f3dd85.json` (15 captures, 8 candidates; no earlier row or audit file edited):
+- Listed free: Noontime Concerts (Music, Weekly, dated 2026-10-20/27 + 11-10, Old St. Mary's
+  Cathedral — noontimeconcerts.org); Sea Chantey Sing (Music, Monthly, 2026-12-05 — nps.gov);
+  Mechanics' Institute Chess Socials (Gaming, Monthly, yearless official dates left as pattern —
+  milibrary.org); Gaming at The Mix (Gaming, Monthly — sfpl.org); SFPL Tech Week (AI &
+  technology, Annual — sfpl.org).
+- Listed paid (for the separate section): 2026 Winter Tuesday Night Marathon (Gaming,
+  2026-11-03→12-15, exact $70/$100 entry fees — milibrary.org).
+- Held for review: Internet Archive Friday Tours (official page gives no programme title —
+  archive.org); Grace Cathedral Organ Recital Series (official admission wording conflicts —
+  gracecathedral.org).
+- Register after T37: **274 candidates, 191 listed / 83 review-only, 277 official URLs**; cost
+  split **Free 61 / Paid 19 / Not stated 111**; free-and-dated rows 11 → 13.
+- Evidence judgments (full log: `data/research/audit-21f3dd85.md`): SFPL admission for the two
+  new SFPL rows quotes the official events-index sentence *"All programs and events are free
+  and open to the public"* verbatim; earlier SFPL rows keep their blank price (additivity).
+  Retrieval honesty: no capture claims an HTTP status (`http: null`); fetches and search-tool
+  excerpts are labelled separately. Both SFPL excerpts were re-verified word-for-word against
+  the live pages before the PR, as was the Grace Cathedral list URL.
+
+**T38/T39 (site, commit `d17f3cc`).** 19 pages. Dashboard: free-first metrics; executive
+summary over the soonest free dated entries with Gaming/Music/AI nearest-free callouts; main
+section = 13 free dated (nearest first, next-14-days highlighted) + 28 free recurring
+(Gaming → Music → AI → Other), no paid/unpriced row on the landing tables (guarded by
+validate.py + tests); full 191-row directory remains on Focus/Upcoming. New `paid.html`:
+19 priced entries with exact quoted wording; "Not stated" is never listed as paid.
+`free.html` reordered gaming/music/AI-first. `data/dashboard_order.json` exported for QA.
+
+**Verification at integration (2026-10-18):** `tools/consolidate.py` idempotent (byte-identical
+data regeneration) → `scripts/build.py` (19 pages) → `scripts/validate.py` PASS (274 exact
+projections; free-upcoming dashboard; separate paid section; cost badges; date ordering; local
+links/fragments) → **45 unit tests OK** → browser smoke PASS locally (19 pages, desktop/mobile,
+filters, mobile cards, no-JS tables, zero console errors, zero automated WCAG A/AA violations
+on 7 core pages incl. `paid.html`). Screenshots reviewed: dashboard, free dated table, mobile
+cards. **Sandbox limits (honesty):** the sandbox cannot reach organizer sites or github.io,
+so HTTP reachability of the 277 cited URLs is enforced by the CI gate (404/410 fail) and the
+Pages build is confirmed via the GitHub Pages API/workflow after merge, never by assumption.
+
+**Known open items carried forward (published on Flagged for Review, never blocking):**
+held Mechanics' Institute Introduction to Chess whose venue is now evidenced (needs a future
+integration session to edit the earlier row); Grace Cathedral recital admission conflict;
+Internet Archive tours title; no dated free gaming/AI instance quotable this pass (SFPL's
+explicitly dated AI/gaming instances are past relative to the snapshot).
+
+**Publication record:** pending merge — PR link, CI result, merge commit and Pages
+confirmation are appended here after they occur.

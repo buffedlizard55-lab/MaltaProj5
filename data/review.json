@@ -1,5 +1,13 @@
 [
   {
+    "title": "Publication blocked: GitHub Pages permission",
+    "detail": "Site build and pull-request validation passed, and PR #1 merged. Pages setup failed with Resource not accessible by integration in both repository API and workflow. Public Pages URL is not confirmed live. Repository GitHub connection needs Pages administration permission; after enabling Pages with GitHub Actions, rerun workflow.",
+    "urls": [
+      "https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573",
+      "https://github.com/buffedlizard55-lab/MaltaProj5/pull/1"
+    ]
+  },
+  {
     "title": "Coverage is incomplete",
     "detail": "This is a bounded official-source inventory, not a full list of every SF event. Library programs, sports, concerts, theatre, civic meetings, neighborhood and private events remain incompletely researched. No coverage percentage is known.",
     "sources": [

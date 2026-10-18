@@ -2,7 +2,9 @@
 
 A bounded, official-source inventory of events within San Francisco, reviewed **18 October 2026**. **Not exhaustive.** Unconfirmed values remain empty and are flagged. No continuous refresh or automatic factual verification is claimed.
 
-Site: https://buffedlizard55-lab.github.io/MaltaProj5/
+Intended Pages URL (not live-confirmed): https://buffedlizard55-lab.github.io/MaltaProj5/
+
+Publication is blocked: GitHub returned `Resource not accessible by integration` when enabling Pages, both through the repository connection and the workflow token. PR #1 merged after validation passed. See [deployment attempt](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573). Enable Pages using GitHub Actions with an appropriately authorized GitHub connection, then rerun the workflow. No credentials are stored in this repo.
 
 ## Contents
 - `data/events.json`: event rows, official-source references, evidence map, unknown fields and flags.

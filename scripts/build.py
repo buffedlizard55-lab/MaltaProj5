@@ -60,21 +60,25 @@ def link(s):
 def badge(r):
     level = (r.get("check") or {}).get("level", "page-level")
     label = CHECK_LABEL.get(level, level)
-    cls = "ok" if level == "field-level" else ("warn" if level == "page-level" else "flag")
-    n = len(r["flags"])
+    n, u = len(r["flags"]), len(r.get("unverified", []))
+    cls = "flag" if n or level == "flagged" else ("warn" if level == "page-level" else "ok")
     extra = f" · {n} note{'s' if n != 1 else ''}" if n else ""
+    if u:
+        extra += f" · {u} unverified"
     return (f'<span class="check {cls}" title="{e(CHECK_TITLE.get(level, ""))}">'
             f'{e(label)}{extra}</span>')
 
 
-def table(rs, caption="Official-source inventory · blank cells are unverified · times as published by the organizer"):
-    out = ('<div class="tools"><label>Search this table <input type="search" id="search" '
-           'placeholder="Event, venue, or schedule…"></label><label>Recurrence '
-           '<select id="kind"><option value="">All types</option>'
-           + "".join(f"<option>{x}</option>" for x in ["Weekly", "Monthly", "Annual", "Special"])
-           + '</select></label><button id="reset" type="button">Reset</button>'
-           f'<span id="count" role="status">{len(rs)} entries</span></div>'
-           '<div class="table-wrap"><table id="events">'
+def table(rs, caption="Official-source inventory · blank cells are unverified · times as published by the organizer",
+          prefix="", controls=True):
+    table_id = "events" if controls else "events-" + (prefix.strip("-") or "alt")
+    tools = ('<div class="tools"><label>Search this table <input type="search" id="search" '
+             'placeholder="Event, venue, or schedule…"></label><label>Recurrence '
+             '<select id="kind"><option value="">All types</option>'
+             + "".join(f"<option>{x}</option>" for x in ["Weekly", "Monthly", "Annual", "Special"])
+             + '</select></label><button id="reset" type="button">Reset</button>'
+             f'<span id="count" role="status">{len(rs)} entries</span></div>') if controls else ""
+    out = (tools + f'<div class="table-wrap"><table id="{table_id}">'
            f'<caption>{e(caption)}</caption><thead><tr>'
            + "".join(f'<th scope="col">{h}</th>' for h in
                      ["Event / category", "Pattern", "Date or recurrence", "Time", "SF venue",
@@ -83,11 +87,14 @@ def table(rs, caption="Official-source inventory · blank cells are unverified �
     for r in rs:
         notes = ("<details><summary>Review notes</summary><ul>"
                  + "".join("<li>" + e(f) + "</li>" for f in r["flags"]) + "</ul></details>"
-                 if r["flags"] else '<span class="badge">No open notes</span>')
+                 if r["flags"] else '<span class="badge">No review notes</span>')
+        if r.get("unverified"):
+            notes += ('<details class="unv"><summary>Unverified blank fields</summary><ul>'
+                      + "".join("<li>" + e(f) + "</li>" for f in r["unverified"]) + "</ul></details>")
         srcs = "".join("<div>" + link(s) + "</div>" for s in r["sources"])
         parent = ('<small>Dated occurrence of the After Dark series — not a separate series</small>'
                   if r["parent"] else "")
-        out += (f'<tr id="{r["id"]}" data-kind="{r["kind"]}" data-category="{e(r["category"])}">'
+        out += (f'<tr id="{prefix}{r["id"]}" data-kind="{r["kind"]}" data-category="{e(r["category"])}">'
                 f'<th scope="row">{e(r["name"])}<small>{e(r["category"])}</small>{parent}</th>'
                 + "".join("<td>" + e(r[k]) + "</td>"
                           for k in ["kind", "schedule", "time", "venue", "price"])
@@ -95,8 +102,10 @@ def table(rs, caption="Official-source inventory · blank cells are unverified �
                 + badge(r) + notes
                 + ("<p>" + e(r["notes"]) + "</p>" if r["notes"] else "")
                 + "</td></tr>")
-    return out + ('</tbody></table></div><p id="empty" hidden>No matching entries. '
-                  'Try another search or reset the filters.</p>')
+    out += "</tbody></table></div>"
+    if controls:
+        out += ('<p id="empty" hidden>No matching entries. Try another search or reset the filters.</p>')
+    return out
 
 
 def page(file, title, desc, body, eyebrow="SF EVENTS / RESEARCH DIRECTORY"):
@@ -145,7 +154,7 @@ stats = ('<section class="stats" aria-label="Inventory statistics">'
                        ("Annual events", kinds["Annual"], "Yearly editions and seasons", ""),
                        ("Special events", kinds["Special"], "Dated programmes and one-off editions", ""),
                        ("Official sources", len(sources), f"{len(domains)} distinct domains", ""),
-                       ("Flagged rows", len(flagged), f"{pct(len(flagged), len(rows))} of the register", "warn"),
+                       ("Rows with review notes", len(flagged), f"{pct(len(flagged), len(rows))} of the register", "warn"),
                    ]) + "</section>")
 
 legend = ('<div class="notice"><b>A transparent inventory, not an exhaustive calendar of the city.</b> '
@@ -283,7 +292,8 @@ or association domains, and {com} commercial organizer/venue domains. The most-c
 <li><b>It is a festival city with a thin weekly layer.</b> {kinds['Annual']} annual entries against
 {kinds['Weekly']} weekly ones. The weekly layer is mostly farmers markets, museum nights and standing
 park programmes.</li>
-<li><b>Blank is the honest default.</b> {len(flagged)} rows carry review notes. Where an organizer has not
+<li><b>Blank is the honest default.</b> {len(flagged)} rows carry review notes and
+{sum(1 for r in rows if r.get("unverified"))} have at least one blank tracked field. Where an organizer has not
 published a next date, the date cell is blank rather than extrapolated — a recurring pattern is not a
 confirmed future instance.</li>
 <li><b>Fifteen entries are dated 2026 editions that have already happened</b> (for example Tulip Day in March
@@ -314,7 +324,10 @@ for f in findings:
              + "".join(link(s) + "<br>" for s in f.get("sources", []))
              + "".join('<a href="' + e(u) + '">Reference / official site ↗</a><br>' for u in f.get("urls", []))
              + "</td></tr>")
-body += '</tbody></table></div><h2>Entry-level review queue</h2>' + table(flagged, "Rows with at least one open note")
+body += '</tbody></table></div><h2>Entry-level review queue</h2>' + table(flagged, "Rows with at least one open review note")
+body += ('<h2>Blank fields (unverified, no separate review note)</h2>'
+         + table([r for r in rows if r.get("unverified") and not r["flags"]],
+                 "Blank cells mean unverified — not free and not not-applicable", prefix="blank-", controls=False))
 write("review.html", "Flagged for Review",
       "Unconfirmed values are blank. Source conflicts, missing years, admission gaps and coverage gaps are "
       "visible here — not silently resolved.", body)

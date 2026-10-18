@@ -402,13 +402,14 @@ for r in new_rows:
     flags = list(r.get("flags", []))
     for field, label in (("time", "time"), ("venue", "venue")):
         pass
+    unverified = []
     if not r.get("cost"):
-        flags.append("price: unverified — no admission value stated on the cited official page.")
+        unverified.append("price: unverified — no admission value stated on the cited official page.")
     if not venue:
-        flags.append("venue: unverified — no venue stated on the cited official page.")
+        unverified.append("venue: unverified — no venue stated on the cited official page.")
     # These registers carry the time inside the dated copy, not as its own field.
-    flags.append("time: unverified — the cited page states the date but not a separate "
-                 "start/end time; see the date column.")
+    unverified.append("time: unverified — the cited page states the date but not a separate "
+                      "start/end time; see the date column.")
     row = {
         "id": "x-" + r["id"],
         "name": r["name"],
@@ -422,6 +423,7 @@ for r in new_rows:
         "evidence": {"name": [sid], "schedule": [sid]},
         "notes": r.get("notes", ""),
         "flags": flags,
+        "unverified": unverified,
         "parent": "",
         "check": {"level": "page-level", "by": "4f47c142 + c961fbe4 automated fetch",
                   "date": "2026-10-18"},
@@ -543,13 +545,21 @@ FIXES = {
         "publisher": "Chase Center — Journey announcement",
         "excerpt": "Journey is Coming to Chase Center on Nov. 28, 2026. … their Final Frontier Tour … will conclude with a hometown finale show at Chase Center on Saturday, November 28.",
     },
+    "x-norcal-mlk-celebration": {
+        "keep": ["name", "schedule", "venue"],
+        "drop": ["https://norcalmlkfoundation.org/"],
+        "url": "https://norcalmlkfoundation.org/mlkcelebration/mlk2026/",
+        "publisher": "NorcalMLK Foundation — MLK2026",
+        "excerpt": "MLK2026 is here in San Francisco. The NorcalMLK Foundation hosts the premier federal holiday celebration in honor of Dr. Martin Luther King, Jr. in northern California.",
+        "flag": "The Foundation's root domain failed the automated fetch (TLS/connection error) on 2026-10-18 although the site was reachable manually; the MLK2026 event page is linked instead.",
+    },
     "x-artspan-open-studios": {
-        "keep": ['name', 'schedule', 'venue'],
-        "drop": ["https://www.artspan.org/"],
-        "url": "https://www.artspan.org/visitsfopenstudios",
-        "publisher": "ArtSpan — SF Open Studios",
-        "excerpt": "SF Open Studios organizes the city's artists to open their creative spaces to the public over a month-long period in the fall. This San Francisco tradition since 1975.",
-        "flag": "The ArtSpan page first cited (artspan.org/programs/visitsfopenstudios) returns its 404 template; the program's current page is linked instead.",
+        "keep": ["name", "schedule", "venue"],
+        "drop": ["https://www.artspan.org/visitsfopenstudios", "https://www.artspan.org/"],
+        "url": "https://somarts.org/exhibition/sfopenstudios2026/",
+        "publisher": "SOMArts Cultural Center — 2026 SF Open Studios Preview Exhibition",
+        "excerpt": "ArtSpan invites you to the 52nd annual production of San Francisco Open Studios. … nearly half the artists who will be hosting open studio events through October 25, 2026.",
+        "flag": "ArtSpan's own /visitsfopenstudios page returns its 404 template and /programs/visitsfopenstudios does the same; the official venue page is linked as evidence for the 52nd annual programme.",
     },
     "x-comedy-day": {
         "keep": ['name', 'schedule', 'venue'],
@@ -620,9 +630,18 @@ for r in rows:
                            "date": "2026-10-18"})
     # keep the "time unverified" style flags in sync with empty fields
 for r in rows:
+    r.setdefault("unverified", [])
+    kept = []
+    for f in r["flags"]:
+        if re.match(r"^(schedule|time|venue|price): unverified", f):
+            if f not in r["unverified"]:
+                r["unverified"].append(f)
+        else:
+            kept.append(f)
+    r["flags"] = kept
     for field in ("schedule", "time", "venue", "price"):
-        if not r[field] and not any(f.startswith(field + ": unverified") for f in r["flags"]):
-            r["flags"].append(f"{field}: unverified — not stated on the cited official page.")
+        if not r[field] and not any(f.startswith(field + ": unverified") for f in r["unverified"]):
+            r["unverified"].append(f"{field}: unverified — not stated on the cited official page.")
 
 # prune source records no longer cited by any row
 used_ids = {sid for r in rows for sid in r["sources"]}
@@ -638,7 +657,7 @@ for r in rows:
     assert all(s in sources for s in r["sources"]), r["id"]
     assert not r["parent"] or r["parent"] in ids, r["id"]
     for field in ("schedule", "time", "venue", "price"):
-        assert r[field] or any(f.startswith(field + ": unverified") for f in r["flags"]), (r["id"], field)
+        assert r[field] or any(f.startswith(field + ": unverified") for f in r["unverified"]), (r["id"], field)
 
 # ------------------------------------------------------------- integration notes
 review.append({

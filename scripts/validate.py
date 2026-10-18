@@ -9,7 +9,7 @@ for r in rows:
  assert r['sources'] and all(s in sources for s in r['sources'])
  assert r['kind'] in ['Weekly','Monthly','Annual','Special']
  for k in ['schedule','time','venue','price']:
-  assert r[k] or any(f.startswith(k+': unverified') for f in r['flags']), (r['id'],k)
+  assert r[k] or any(f.startswith(k+': unverified') for f in r['unverified']), (r['id'],k)
   if r[k]: assert r['evidence'][k]
  assert not r['parent'] or r['parent'] in {x['id'] for x in rows}
 for s in sources.values(): assert s['url'].startswith('https://') and s['checked']=='2026-10-18' and s['excerpt']

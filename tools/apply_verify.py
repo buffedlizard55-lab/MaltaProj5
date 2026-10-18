@@ -80,7 +80,7 @@ for row in rows:
         # manual rows that cite a PDF keep their field-level label
         if level not in ("field-level",):
             row["check"] = {"level": "page-level", "by": "manual PDF read", "date": "2026-10-18"}
-    else:
+    elif level != "field-level":
         row["check"] = {"level": "flagged", "by": "automated fetch", "date": "2026-10-18"}
         srcs = [by_source.get(s, {}) for s in row["sources"]]
         all_blocked = srcs and all(s.get("blocked") or s.get("http") in (0, None) for s in srcs)

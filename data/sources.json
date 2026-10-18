@@ -867,14 +867,6 @@
   "method": "Automated fetch attempted in CI; blocked by the site.",
   "http": 403
  },
- "x-norcalmlkfoundation-org": {
-  "url": "https://norcalmlkfoundation.org/",
-  "publisher": "NorCal MLK Foundation (official site, dates per SF Travel January guide)",
-  "checked": "2026-10-18",
-  "excerpt": "itution \u201c \u201c\u2026[W]e have difficult days ahead in the struggle for justice and peace, but I will not yield to a politic of despair. I\u2019m going to maintain hope\u2026\u201d dr martin luther king jr / march 31 1968 \u201c \u201cThe hope of a secure and livable world lies in the disciplined and dedicated nonconformists, set not on the preservation of any status quo, but set on building...an order of justi",
-  "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
-  "http": 200
- },
  "x-www-fogfair-com": {
   "url": "https://www.fogfair.com/",
   "publisher": "FOG Design+Art (official site, dates per SF Travel January guide)",
@@ -1224,9 +1216,9 @@
   "url": "https://www.litquake.org/",
   "publisher": "Litquake (official site, dates per SF Travel October guide)",
   "checked": "2026-10-18",
-  "excerpt": "Litquake Foundation | Literary Festival | San Francisco top of page About Us Staff and Board Our Donors Past Festivals 2026 Festival Festival Schedule Festival Authors Opening Night: Booksellers Ball Book Fair Litquake O",
-  "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
-  "http": 200
+  "excerpt": "Automated fetch returned HTTP 429 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "method": "Automated fetch attempted in CI; blocked by the site.",
+  "http": 429
  },
  "x-sffallshow-org": {
   "url": "https://sffallshow.org/",
@@ -1586,13 +1578,20 @@
   "manual": true,
   "http": 200
  },
- "x-www-artspan-org-visitsfopenstudios": {
-  "url": "https://www.artspan.org/visitsfopenstudios",
-  "publisher": "ArtSpan \u2014 SF Open Studios",
+ "x-norcalmlkfoundation-org-mlkcelebration-mlk2026": {
+  "url": "https://norcalmlkfoundation.org/mlkcelebration/mlk2026/",
+  "publisher": "NorcalMLK Foundation \u2014 MLK2026",
   "checked": "2026-10-18",
-  "excerpt": "SF Open Studios organizes the city's artists to open their creative spaces to the public over a month-long period in the fall. This San Francisco tradition since 1975.",
+  "excerpt": "MLK2026 is here in San Francisco. The NorcalMLK Foundation hosts the premier federal holiday celebration in honor of Dr. Martin Luther King, Jr. in northern California.",
   "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
-  "manual": true,
-  "http": 200
+  "manual": true
+ },
+ "x-somarts-org-exhibition-sfopenstudios2026": {
+  "url": "https://somarts.org/exhibition/sfopenstudios2026/",
+  "publisher": "SOMArts Cultural Center \u2014 2026 SF Open Studios Preview Exhibition",
+  "checked": "2026-10-18",
+  "excerpt": "ArtSpan invites you to the 52nd annual production of San Francisco Open Studios. \u2026 nearly half the artists who will be hosting open studio events through October 25, 2026.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
  }
 }

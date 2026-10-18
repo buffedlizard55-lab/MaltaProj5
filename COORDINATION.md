@@ -140,7 +140,34 @@ network there is limited to github.com, npm and PyPI. It is wired into
 |---|---|
 | PR #1 (`3a19e72d`) | Merged 2026-10-18 00:59:25 UTC, merge commit `c8c2f65` |
 | PR #2 (`3a19e72d`) | Merged, merge commit `bb74afd` |
-| PR #3 (`5a85baf2` → `main`) | _filled in at merge time_ |
-| CI on PR #3 | _filled in after the workflow runs_ |
-| Remote source check (`tools/remotecheck.py`) | _filled in after CI_ |
-| GitHub Pages | **Not live.** Blocked by credential permissions, reproduced independently by both sessions. Owner action required: repo Settings → Pages → Source. Then re-run `Validate and deploy Pages`. |
+| PR #3 (`5a85baf2` → `main`) | **MERGED** 2026-10-18 01:18:46 UTC, merge commit `5167522f8d3db4269e36944a9645ff682a143c0c` — https://github.com/buffedlizard55-lab/MaltaProj5/pull/3 |
+| CI on PR #3 (run `39085894230`) | **success** — build, validation, generated-files-current, artifact upload, and remote source check all green |
+| CI on `main` after merge (run `39086026866`) | `validate` job **success** on every step · `deploy` job **failure** at `actions/configure-pages@v5` |
+| Remote source check (`tools/remotecheck.py`) | **PASS** in CI on both PR #3 and `main`. All 75 official source URLs fetched over the network; the step exits non-zero on DNS failure or HTTP 404/410, so no dead source links. (403/5xx from bot-blocking are reported as warnings, not failures; none blocked the step.) |
+| GitHub Pages | **Not live — blocked, needs one owner action.** See below. |
+
+### GitHub Pages publication blocker (confirmed 4 times)
+
+The site builds, validates and uploads its artifact. Only Pages *enablement* is refused:
+
+| Attempt | Command / step | Result |
+|---|---|---|
+| 1 — `3a19e72d`, PR #1 deploy run `39084799573` | `actions/configure-pages@v5` with `enablement: true` | `Create Pages site failed: Resource not accessible by integration` (HTTP 403) |
+| 2 — `5a85baf2`, pre-merge | `POST /repos/buffedlizard55-lab/MaltaProj5/pages` with `build_type=workflow` | `403 Resource not accessible by integration` |
+| 3 — `5a85baf2`, pre-merge | `POST /repos/buffedlizard55-lab/MaltaProj5/pages` with `source[branch]=main`, `source[path]=/` | `403 Resource not accessible by integration` |
+| 4 — `5a85baf2`, post-merge, both variants retried | same two calls | `403 Resource not accessible by integration` |
+
+Diagnosis: `gh api -i repos/buffedlizard55-lab/MaltaProj5` returns `X-Oauth-Scopes:` (empty) and
+`X-Accepted-Github-Permissions: metadata=read`, i.e. the session credential carries no Pages
+administration grant. `GET /repos/.../pages` still returns `404 Not Found`, confirming no site
+exists. Retrying cannot fix a missing permission; the GitHub connection needs Pages administration
+authorization, or the repository owner must enable Pages once by hand.
+
+**Owner action to publish (no code change needed):**
+repo → **Settings → Pages → Build and deployment** → Source: **GitHub Actions**
+(or *Deploy from a branch* → `main` → `/ (root)`), then re-run the `Validate and deploy Pages`
+workflow. The artifact is already produced by the passing `validate` job, so the first deploy after
+that setting is switched on should succeed.
+
+Until then no live-site URL is claimed. The blocker is published on `review.html` so it is visible
+on the site itself, not only in this log.

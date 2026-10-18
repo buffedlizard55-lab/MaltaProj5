@@ -619,6 +619,38 @@ for rid, why in DROP_ROWS.items():
     })
 rows = [r for r in rows if r["id"] not in DROP_ROWS]
 
+# ------------------------------------------- merge session a1b7522f's 20 authored rows
+pr7 = load("events_a1b7522f.json")
+pr7_sources = load("sources_a1b7522f.json")
+pr7_review = load("review_a1b7522f.json")
+for sid, rec in pr7_sources.items():
+    assert sid not in sources, sid
+    rec.setdefault("checked", "2026-10-18")
+    rec.setdefault("excerpt", "Automated re-check pending (tools/verify_rows.py runs in CI and "
+                              "records the fetched text).")
+    rec.setdefault("method", "Row authored by session a1b7522f from this official page.")
+    sources[sid] = rec
+MERGE7 = {"sf-marathon-a1b": "b-sf-marathon"}
+for r7 in pr7:
+    r7.setdefault("check", {"level": "field-level", "by": "a1b7522f", "date": "2026-10-18"})
+    r7.setdefault("unverified", [])
+    r7.setdefault("flags", [])
+    r7.setdefault("parent", "")
+    if r7["id"] in MERGE7:
+        b = next(r for r in rows if r["id"] == MERGE7[r7["id"]])
+        for sid in r7["sources"]:
+            if sid not in b["sources"]:
+                b["sources"].append(sid)
+        if r7.get("schedule") and r7["schedule"] not in b.get("notes", ""):
+            b["flags"].append("Session a1b7522f records the 50th edition as July 24-25, 2027: "
+                              + r7["schedule"])
+        for f in r7["flags"]:
+            if f not in b["flags"]:
+                b["flags"].append(f)
+        continue
+    rows.append(r7)
+review += pr7_review
+
 # --------------------------------------------------------------- reclassify base
 for r in rows:
     if r["id"] in RECLASS:

@@ -152,6 +152,18 @@
   ]
  },
  {
+  "title": "Session a1b7522f: expanded coverage for sports, theatre, zoo, Presidio, and library events",
+  "detail": "Added 20 new rows from official sources: NBA (nba.com/warriors), WNBA (valkyries.wnba.com), A.C.T. (act-sf.org), Curran Theatre (sfcurran.com), SF Zoo (sfzoo.org), Presidio Trust (presidio.gov), SFPL (sfpl.org), and SF Marathon (thesfmarathon.com). All verified 2026-10-18.",
+  "urls": []
+ },
+ {
+  "title": "Geography note: San Francisco Marathon crosses into Marin County",
+  "detail": "The SF Marathon course crosses the Golden Gate Bridge into Sausalito, Marin County, before returning to San Francisco. The start and finish lines are within city limits, and the majority of the route is in SF. Retained with a geography flag for manual review.",
+  "urls": [
+   "https://www.thesfmarathon.com/full-marathon/"
+  ]
+ },
+ {
   "title": "Integration reclassified three rows and removed one non-event",
   "detail": "Final integration found two duplicate Carnaval rows in the 86-row register (merged), the Chinese New Year Parade and Carnaval rows filed as 'Special' even though both are annual editions (moved to Annual), and the 'After Dark: Creepatorium' theme filed as Annual even though it is a single dated theme of the weekly After Dark series (moved to Special). The Hardly Strictly Bluegrass online merchandise-store window was removed: it is a retail window, not an event.",
   "urls": [

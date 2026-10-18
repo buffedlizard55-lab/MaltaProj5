@@ -2596,7 +2596,8 @@
   "price": "Paid entry",
   "sources": [
    "b-thesfmarathon-com-2027-50th-anniversary",
-   "x-www-thesfmarathon-com-race-weekend"
+   "x-www-thesfmarathon-com-race-weekend",
+   "sfm-full"
   ],
   "evidence": {
    "name": [
@@ -2617,7 +2618,9 @@
   },
   "notes": "Verified 2026-10-18 against the linked official page. Editorial category in the wider register: Sports & Races.",
   "flags": [
-   "Second register (session 4f47c142) records: Annual (late July) \u2014 Jul 25-26, 2026 (race weekend; full marathon Sunday Jul 26, 5:15am start). Kept as an additional dated record, not merged into the schedule field."
+   "Second register (session 4f47c142) records: Annual (late July) \u2014 Jul 25-26, 2026 (race weekend; full marathon Sunday Jul 26, 5:15am start). Kept as an additional dated record, not merged into the schedule field.",
+   "Session a1b7522f records the 50th edition as July 24-25, 2027: Annual \u2014 50th edition: July 24\u201325, 2027. Full marathon: Sunday, July 25, 2027 at 5:15 AM. Ultramarathon: Saturday July 24, 10:15 PM. Half marathons and 5K races also offered",
+   "FLAG: the marathon course crosses the Golden Gate Bridge into Sausalito, Marin County, before returning to San Francisco. The start and finish lines are in SF, and the majority of the route is within city limits. Retained as a San Francisco event with a geography note."
   ],
   "parent": "",
   "also": [
@@ -2634,7 +2637,9 @@
    "by": "3a19e72d / 5a85baf2",
    "date": "2026-10-18"
   },
-  "unverified": []
+  "unverified": [
+   "price: unverified; left blank."
+  ]
  },
  {
   "id": "b-sunday-streets",
@@ -8879,5 +8884,737 @@
    "by": "automated fetch",
    "date": "2026-10-18"
   }
+ },
+ {
+  "id": "warriors-season",
+  "name": "Golden State Warriors Home Season",
+  "category": "Community & outdoors",
+  "kind": "Annual",
+  "schedule": "Annual NBA regular season \u2014 October through April; 41 home games at Chase Center. 2026-27 home opener: Friday, October 23, 2026 vs Memphis Grizzlies, 7:00 PM PT",
+  "time": "Most weekday home games 7:00 PM PT; weekend games 5:30 PM PT",
+  "venue": "Chase Center, 1 Warriors Way (Mission Bay)",
+  "price": "",
+  "sources": [
+   "nba-warriors-sched"
+  ],
+  "evidence": {
+   "name": [
+    "nba-warriors-sched"
+   ],
+   "schedule": [
+    "nba-warriors-sched"
+   ],
+   "time": [
+    "nba-warriors-sched"
+   ],
+   "venue": [
+    "nba-warriors-sched"
+   ]
+  },
+  "notes": "Season-level entry; individual game dates and times are on the official schedule. 28 nationally televised games in 2026-27. Christmas Day game vs Denver Nuggets at 7:30 PM PT on ABC.",
+  "flags": [
+   "Season-level entry; individual game dates are published on the official schedule."
+  ],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "price: unverified; left blank."
+  ]
+ },
+ {
+  "id": "valkyries-season",
+  "name": "Golden State Valkyries Home Season",
+  "category": "Community & outdoors",
+  "kind": "Annual",
+  "schedule": "Annual WNBA regular season \u2014 May through September; 22 home games at Chase Center. 2026 season home opener: May 10 vs Phoenix Mercury, 5:30 PM PT",
+  "time": "",
+  "venue": "Chase Center, 1 Warriors Way (Mission Bay)",
+  "price": "",
+  "sources": [
+   "wnba-valk-sched"
+  ],
+  "evidence": {
+   "name": [
+    "wnba-valk-sched"
+   ],
+   "schedule": [
+    "wnba-valk-sched"
+   ],
+   "venue": [
+    "wnba-valk-sched"
+   ]
+  },
+  "notes": "Season-level entry. Inaugural franchise in 2025. 2026 Valkyries advanced to the WNBA Finals. 2027 schedule not yet published.",
+  "flags": [
+   "2027 schedule not yet published on the official site."
+  ],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "time: unverified; left blank.",
+   "price: unverified; left blank."
+  ]
+ },
+ {
+  "id": "act-season",
+  "name": "American Conservatory Theater (A.C.T.) Season",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "schedule": "Annual theatre season \u2014 September through June. 2026/27 is A.C.T.'s 60th anniversary season. Productions include North by Northwest (Sep 22\u2013Oct 18, 2026), Oh Mary! (Oct 13\u2013Nov 1, 2026), John Proctor Is the Villain (Nov 12\u2013Dec 6, 2026), The Bad News Bears: A Musical (Feb 26\u2013Apr 4, 2027), The Comeuppance (Apr 20\u2013May 16, 2027)",
+  "time": "",
+  "venue": "Toni Rembe Theater, 415 Geary Street; The Strand Theater, 1127 Market Street (Theater District)",
+  "price": "",
+  "sources": [
+   "act-season-2627"
+  ],
+  "evidence": {
+   "name": [
+    "act-season-2627"
+   ],
+   "schedule": [
+    "act-season-2627"
+   ],
+   "venue": [
+    "act-season-2627"
+   ]
+  },
+  "notes": "Season-level entry. A.C.T. is one of the oldest nonprofit theatres in the US. Young Conservatory programs also run throughout the season.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "time: unverified; left blank.",
+   "price: unverified; left blank."
+  ]
+ },
+ {
+  "id": "curran-season",
+  "name": "Curran Theatre Season",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "schedule": "Annual programme of plays, concerts, dance and comedy. Current listings include Oh Mary! (through Nov 1, 2026), The Billy Joel Legacy (Nov 5, 2026), Taylor Mac (Nov 6, 2026), The Music of Queen (Nov 7, 2026), Darren Criss (Nov 14, 2026), Swan Lake (Nov 20, 2026), The Golden Girls Live (Dec 4\u201320, 2026), The Nutcracker (Dec 23, 2026)",
+  "time": "",
+  "venue": "Curran Theatre, 445 Geary Street (Theater District)",
+  "price": "",
+  "sources": [
+   "curran-home"
+  ],
+  "evidence": {
+   "name": [
+    "curran-home"
+   ],
+   "schedule": [
+    "curran-home"
+   ],
+   "venue": [
+    "curran-home"
+   ]
+  },
+  "notes": "Programme-level entry. The Curran defines the western edge of San Francisco's theater district, two blocks west of Union Square. Individual show listings change frequently.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "time: unverified; left blank.",
+   "price: unverified; left blank."
+  ]
+ },
+ {
+  "id": "sf-zoo-sunset-fridays",
+  "name": "SF Zoo Sunset Fridays",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "schedule": "Weekly during season \u2014 consecutive Fridays, 5:00\u20137:00 PM. 2026 fall run through October 9",
+  "time": "5:00\u20137:00 PM",
+  "venue": "San Francisco Zoo & Gardens, Playfield Lawn, 1 Zoo Road (Southwest SF)",
+  "price": "",
+  "sources": [
+   "sfzoo-sunset"
+  ],
+  "evidence": {
+   "name": [
+    "sfzoo-sunset"
+   ],
+   "schedule": [
+    "sfzoo-sunset"
+   ],
+   "time": [
+    "sfzoo-sunset"
+   ],
+   "venue": [
+    "sfzoo-sunset"
+   ]
+  },
+  "notes": "Seasonal weekly after-hours event. Features live music, outdoor bars, kid-friendly activities, and ambassador animals. Fall 2026 run ended October 9.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "price: unverified; left blank."
+  ]
+ },
+ {
+  "id": "sf-zoo-zoolights",
+  "name": "SF Zoo ZooLights",
+  "category": "Community & outdoors",
+  "kind": "Annual",
+  "schedule": "Annual winter holiday program \u2014 November 6, 2026 through January 3, 2027. Open Wednesday\u2013Sunday evenings (closed Monday and Tuesday), 5:30\u20139:00 PM",
+  "time": "5:30\u20139:00 PM",
+  "venue": "San Francisco Zoo & Gardens, 1 Zoo Road (Southwest SF)",
+  "price": "",
+  "sources": [
+   "sfzoo-zoolights"
+  ],
+  "evidence": {
+   "name": [
+    "sfzoo-zoolights"
+   ],
+   "schedule": [
+    "sfzoo-zoolights"
+   ],
+   "time": [
+    "sfzoo-zoolights"
+   ],
+   "venue": [
+    "sfzoo-zoolights"
+   ]
+  },
+  "notes": "First nighttime holiday program since 2018. Features over one million lights across 14 zones, themed nights including Family Techno Glow Rave, Star Wars Night, and Santa visits in December.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "price: unverified; left blank."
+  ]
+ },
+ {
+  "id": "sf-zoo-boo",
+  "name": "Boo at the Zoo",
+  "category": "Community & outdoors",
+  "kind": "Annual",
+  "schedule": "Annual Halloween event \u2014 Saturday, October 31, 2026, 10:00 AM \u2013 3:00 PM",
+  "time": "10:00 AM \u2013 3:00 PM",
+  "venue": "San Francisco Zoo & Gardens, 1 Zoo Road (Southwest SF)",
+  "price": "",
+  "sources": [
+   "sfzoo-boo"
+  ],
+  "evidence": {
+   "name": [
+    "sfzoo-boo"
+   ],
+   "schedule": [
+    "sfzoo-boo"
+   ],
+   "time": [
+    "sfzoo-boo"
+   ],
+   "venue": [
+    "sfzoo-boo"
+   ]
+  },
+  "notes": "Costume parade at 11 AM, contest at 12 PM with prizes in four categories: Family, Animal, Individual, and Toddler. Animal pumpkin enrichment.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "price: unverified; left blank."
+  ]
+ },
+ {
+  "id": "sf-zoo-resident-free-day",
+  "name": "SF Zoo SF Resident Free Day",
+  "category": "Community & outdoors",
+  "kind": "Monthly",
+  "schedule": "Monthly \u2014 first Tuesday of each month (approximate pattern). October 2026: Tuesday, October 7, 10:00 AM \u2013 4:00 PM",
+  "time": "10:00 AM \u2013 4:00 PM",
+  "venue": "San Francisco Zoo & Gardens, 1 Zoo Road (Southwest SF)",
+  "price": "Free with proof of SF residency (government-issued ID)",
+  "sources": [
+   "sfzoo-freeday"
+  ],
+  "evidence": {
+   "name": [
+    "sfzoo-freeday"
+   ],
+   "schedule": [
+    "sfzoo-freeday"
+   ],
+   "time": [
+    "sfzoo-freeday"
+   ],
+   "venue": [
+    "sfzoo-freeday"
+   ],
+   "price": [
+    "sfzoo-freeday"
+   ]
+  },
+  "notes": "One free admission per ID provided. Recurring monthly offering for San Francisco residents.",
+  "flags": [
+   "Monthly pattern inferred from calendar listing; exact cadence not stated on the consulted page."
+  ],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "sf-zoo-member-mornings",
+  "name": "SF Zoo Member Mornings",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "schedule": "Weekly during season \u2014 Saturdays, 9:00\u201310:00 AM early entry for members",
+  "time": "9:00\u201310:00 AM",
+  "venue": "San Francisco Zoo & Gardens, 1 Zoo Road (Southwest SF)",
+  "price": "Free for Zoo members",
+  "sources": [
+   "sfzoo-calendar"
+  ],
+  "evidence": {
+   "name": [
+    "sfzoo-calendar"
+   ],
+   "schedule": [
+    "sfzoo-calendar"
+   ],
+   "time": [
+    "sfzoo-calendar"
+   ],
+   "venue": [
+    "sfzoo-calendar"
+   ],
+   "price": [
+    "sfzoo-calendar"
+   ]
+  },
+  "notes": "Members-only early access before the Zoo opens to the general public.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "presidio-habitat-stewards",
+  "name": "Presidio Habitat Stewards Volunteer",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "schedule": "Weekly \u2014 Saturdays 9:00 AM\u201312:00 PM and Thursdays 1:00\u20134:00 PM, year-round",
+  "time": "Sat 9:00 AM\u201312:00 PM; Thu 1:00\u20134:00 PM",
+  "venue": "Presidio of San Francisco, Fort Funston, and Lands End (various National Park sites)",
+  "price": "Free",
+  "sources": [
+   "presidio-habitat"
+  ],
+  "evidence": {
+   "name": [
+    "presidio-habitat"
+   ],
+   "schedule": [
+    "presidio-habitat"
+   ],
+   "time": [
+    "presidio-habitat"
+   ],
+   "venue": [
+    "presidio-habitat"
+   ],
+   "price": [
+    "presidio-habitat"
+   ]
+  },
+  "notes": "Restoration volunteer program. All ages welcome. Part of the Golden Gate National Recreation Area.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "presidio-fiesta-en-el-parque",
+  "name": "Fiesta en el Parque",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "schedule": "Annual \u2014 2026: Saturday, August 2. Family-friendly Latin culture celebration at Presidio Tunnel Tops",
+  "time": "",
+  "venue": "Presidio Tunnel Tops, East Meadow (Presidio)",
+  "price": "Free",
+  "sources": [
+   "presidio-summer26"
+  ],
+  "evidence": {
+   "name": [
+    "presidio-summer26"
+   ],
+   "schedule": [
+    "presidio-summer26"
+   ],
+   "venue": [
+    "presidio-summer26"
+   ],
+   "price": [
+    "presidio-summer26"
+   ]
+  },
+  "notes": "Features salsa, merengue, and cumbia dance classes, arts and crafts, face painting, lawn games, and live performances. Co-presented with Telemundo 48. Fourth year.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "time: unverified; left blank."
+  ]
+ },
+ {
+  "id": "presidio-world-arts-west",
+  "name": "World Arts West Dance Festival",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "schedule": "Annual \u2014 2026: Sunday, September 6, 1:00\u20134:00 PM. Fifth consecutive year at the Presidio",
+  "time": "1:00\u20134:00 PM",
+  "venue": "Presidio Tunnel Tops, East Meadow (Presidio)",
+  "price": "Free",
+  "sources": [
+   "presidio-summer26"
+  ],
+  "evidence": {
+   "name": [
+    "presidio-summer26"
+   ],
+   "schedule": [
+    "presidio-summer26"
+   ],
+   "time": [
+    "presidio-summer26"
+   ],
+   "venue": [
+    "presidio-summer26"
+   ],
+   "price": [
+    "presidio-summer26"
+   ]
+  },
+  "notes": "Part of a three-weekend festival with film screenings and workshops. 2026 theme: \"Legacy of Liberation.\"",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "presidio-brewfest",
+  "name": "Parks4All: Brewfest at the Presidio",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "schedule": "Annual \u2014 2026: Saturday, May 30, 12:00\u20134:00 PM. Fourth annual Brewfest",
+  "time": "12:00\u20134:00 PM",
+  "venue": "Presidio of San Francisco (Presidio)",
+  "price": "$60\u2013$315",
+  "sources": [
+   "presidio-summer26"
+  ],
+  "evidence": {
+   "name": [
+    "presidio-summer26"
+   ],
+   "schedule": [
+    "presidio-summer26"
+   ],
+   "time": [
+    "presidio-summer26"
+   ],
+   "venue": [
+    "presidio-summer26"
+   ],
+   "price": [
+    "presidio-summer26"
+   ]
+  },
+  "notes": "Presented by the Golden Gate National Parks Conservancy. Features 15+ local breweries, food trucks, and live music in support of inclusive park programs.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "sfpl-summer-stride",
+  "name": "SFPL Summer Stride",
+  "category": "Community & outdoors",
+  "kind": "Annual",
+  "schedule": "Annual all-ages summer reading challenge \u2014 June 1 through August 31. Over 20,000 San Franciscans completed the challenge in 2025",
+  "time": "",
+  "venue": "All San Francisco Public Library branches and citywide",
+  "price": "Free",
+  "sources": [
+   "sfpl-summer"
+  ],
+  "evidence": {
+   "name": [
+    "sfpl-summer"
+   ],
+   "schedule": [
+    "sfpl-summer"
+   ],
+   "venue": [
+    "sfpl-summer"
+   ],
+   "price": [
+    "sfpl-summer"
+   ]
+  },
+  "notes": "Nearly 90% of 2025 participants reported increased summer reading. Programs include Taiko drumming, beekeeping, and more at individual branches.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": [
+   "time: unverified; left blank."
+  ]
+ },
+ {
+  "id": "night-of-ideas-sf",
+  "name": "Night of Ideas San Francisco",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "schedule": "Annual \u2014 2026: Saturday, April 11, 3:00 PM \u2013 12:00 AM. Free after-dark celebration of art, innovation, and culture",
+  "time": "3:00 PM \u2013 12:00 AM",
+  "venue": "San Francisco Public Library Main Branch and Asian Art Museum, 100 + 200 Larkin Street (Civic Center)",
+  "price": "Free",
+  "sources": [
+   "sfpl-noi"
+  ],
+  "evidence": {
+   "name": [
+    "sfpl-noi"
+   ],
+   "schedule": [
+    "sfpl-noi"
+   ],
+   "time": [
+    "sfpl-noi"
+   ],
+   "venue": [
+    "sfpl-noi"
+   ],
+   "price": [
+    "sfpl-noi"
+   ]
+  },
+  "notes": "International event held in cities across the US. Presented by Villa Albertine San Francisco, Asian Art Museum, SFPL, KQED and Circuit Network. 2026 theme: \"Lighting the Way.\"",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "presidio-spring-awakening",
+  "name": "Spring Awakening: Art & Cumbia at Outpost Meadow",
+  "category": "Festivals & culture",
+  "kind": "Annual",
+  "schedule": "Annual \u2014 2026: Saturday, May 16, 12:00\u20133:00 PM",
+  "time": "12:00\u20133:00 PM",
+  "venue": "Outpost Meadow, 609 Old Mason Street (Presidio)",
+  "price": "Free",
+  "sources": [
+   "presidio-summer26"
+  ],
+  "evidence": {
+   "name": [
+    "presidio-summer26"
+   ],
+   "schedule": [
+    "presidio-summer26"
+   ],
+   "time": [
+    "presidio-summer26"
+   ],
+   "venue": [
+    "presidio-summer26"
+   ],
+   "price": [
+    "presidio-summer26"
+   ]
+  },
+  "notes": "Celebrates new artwork by artists Favianna Rodriguez, Felicia Gabaldon, and Tosha Stimage. Part of the Presidio's annual summer event season.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "presidio-soccer-festival",
+  "name": "Presidio Soccer Festival",
+  "category": "Community & outdoors",
+  "kind": "Annual",
+  "schedule": "Annual \u2014 2026: Saturday, June 13, 1:00\u20135:00 PM. New in 2026",
+  "time": "1:00\u20135:00 PM",
+  "venue": "Main Parade Lawn (Presidio)",
+  "price": "Free",
+  "sources": [
+   "presidio-summer26"
+  ],
+  "evidence": {
+   "name": [
+    "presidio-summer26"
+   ],
+   "schedule": [
+    "presidio-summer26"
+   ],
+   "time": [
+    "presidio-summer26"
+   ],
+   "venue": [
+    "presidio-summer26"
+   ],
+   "price": [
+    "presidio-summer26"
+   ]
+  },
+  "notes": "Inaugural event in 2026. Organized by Telemundo 48 and NBC Bay Area in collaboration with the Presidio.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "presidio-community-arts-market",
+  "name": "Community Arts Market at Presidio Tunnel Tops",
+  "category": "Markets & food",
+  "kind": "Annual",
+  "schedule": "Annual \u2014 2026: Saturday\u2013Sunday, July 18\u201319, 10:00 AM \u2013 4:00 PM. Second year",
+  "time": "10:00 AM \u2013 4:00 PM",
+  "venue": "Presidio Tunnel Tops, East Meadow (Presidio)",
+  "price": "Free",
+  "sources": [
+   "presidio-summer26"
+  ],
+  "evidence": {
+   "name": [
+    "presidio-summer26"
+   ],
+   "schedule": [
+    "presidio-summer26"
+   ],
+   "time": [
+    "presidio-summer26"
+   ],
+   "venue": [
+    "presidio-summer26"
+   ],
+   "price": [
+    "presidio-summer26"
+   ]
+  },
+  "notes": "Second year of this market. Presented by Arts.Co.Lab, showcasing local makers and creatives.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
+ },
+ {
+  "id": "presidio-memorial-day",
+  "name": "Memorial Day Commemoration at the Presidio",
+  "category": "Community & outdoors",
+  "kind": "Annual",
+  "schedule": "Annual \u2014 Memorial Day (last Monday in May). 2026: Monday, May 25. Band concert 10:30 AM, program 11:00 AM",
+  "time": "Band concert 10:30 AM; program 11:00 AM",
+  "venue": "San Francisco National Cemetery (Presidio)",
+  "price": "Free",
+  "sources": [
+   "presidio-summer26"
+  ],
+  "evidence": {
+   "name": [
+    "presidio-summer26"
+   ],
+   "schedule": [
+    "presidio-summer26"
+   ],
+   "time": [
+    "presidio-summer26"
+   ],
+   "venue": [
+    "presidio-summer26"
+   ],
+   "price": [
+    "presidio-summer26"
+   ]
+  },
+  "notes": "Presented by the U.S. Department of Veterans Affairs at the San Francisco National Cemetery.",
+  "flags": [],
+  "parent": null,
+  "check": {
+   "level": "field-level",
+   "by": "a1b7522f",
+   "date": "2026-10-18"
+  },
+  "unverified": []
  }
 ]

@@ -21,10 +21,19 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
-- [Dashboard](index.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
+- [Dashboard](index.html) · [Upcoming — date-sorted](upcoming.html) · [Free first](free.html) · [Gaming · Music · AI focus](focus.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
 - [Markets & food](markets.html) · [Museums & science](museums.html) · [Festivals & culture](culture.html) · [Community & outdoors](community.html)
 - [Analysis](analysis.html) · [Flagged for Review](review.html) · [Sources and row-by-row evidence](sources.html)
 - [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv)
+
+## New in this update (T32, snapshot still 18 October 2026)
+
+- **Executive summary** on the dashboard: dated entries running or starting within 30 days of the snapshot, soonest first, each with its cost label.
+- **Upcoming page**: approved dated entries sorted soonest-first (running now highlighted), then weekly/monthly recurring entries with **no invented next date**.
+- **Cost on every row**: a badge derived only from the audited admission text — `FREE`, `Free with paid parts`, `Paid`, `Cost in admission text`, or `Cost not stated — unverified` (blank is never called free). A Cost filter is in the table tools.
+- **Free first page**: the whole directory ordered free → paid → cost-not-stated.
+- **Gaming · Music · AI focus page**: groups matched only from audited event names (Gaming: Pokémon World Championships 2026; Music: 11 name-matched entries; **AI: none found — flagged as a coverage gap, nothing invented**), then everything else.
+- Regularly occurring (weekly/monthly/annual) vs special/dated split is unchanged and remains on its own pages. Mobile: sticky event column, horizontal table scroll, 2-column cards.
 
 ## What a listing means
 

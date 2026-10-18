@@ -48,3 +48,14 @@ tr:target{background:#fff3d6!important}blockquote{font-size:13px;white-space:pre
 .event-links{font-size:11px;font-weight:400;line-height:1.7;margin-top:9px}
 /* Historical URLs in review prose must wrap instead of widening the phone viewport. */
 .prose{overflow-wrap:anywhere}
+
+/* T32: cost badges, executive summary, mobile-first readability */
+.cost{display:inline-block;margin-top:8px;font-size:11px;font-weight:650;line-height:1.5;padding:3px 8px;border-radius:20px;border:1px solid #c8dfc5;background:#e7f2e6;color:#1f5a3c}
+.cost-mixed{background:#fff6df;color:#7a5714;border-color:#ecd9a8}.cost-paid{background:#eef1f6;color:#38496b;border-color:#ccd6e6}
+.cost-see-text{background:#f2f2ee;color:#526358;border-color:#d8ddd4}.cost-unknown{background:#fdeceb;color:#8a2f2a;border-color:#f1c9c6}
+.exec{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:24px 0}
+.exec-list{margin:12px 0;padding-left:20px}.exec-list li{margin:10px 0}.exec-list small{display:block;color:var(--muted)}
+.exec-date{font-weight:650;color:var(--green);white-space:nowrap}
+@media(max-width:650px){.exec{padding:16px}.exec-list{padding-left:16px}.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+tbody th{position:sticky;left:0;background:#fff;min-width:165px;max-width:200px;z-index:1}
+.cards,.stats{grid-template-columns:1fr 1fr}h1{font-size:30px}}

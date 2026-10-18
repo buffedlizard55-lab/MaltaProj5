@@ -10,6 +10,7 @@ import csv
 import io
 import json
 from collections import Counter
+from datetime import date
 from html import escape
 from pathlib import Path
 
@@ -26,7 +27,7 @@ lookup = {r["id"]: r for r in rows}
 AS_OF = "18 October 2026"
 FIELDS = ("name", "schedule", "time", "venue", "price")
 LABELS = {"name": "Event name", "schedule": "Published schedule", "time": "Time", "venue": "Venue / area", "price": "Admission / conditions"}
-NAV = [("index.html", "Overview"), ("weekly.html", "Weekly"), ("monthly.html", "Monthly"), ("annual.html", "Annual"), ("special.html", "Special & dated"), ("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors"), ("analysis.html", "Analysis & findings"), ("review.html", "Flagged for Review"), ("sources.html", "Sources & evidence")]
+NAV = [("index.html", "Overview"), ("upcoming.html", "Upcoming"), ("free.html", "Free first"), ("focus.html", "Gaming · Music · AI"), ("weekly.html", "Weekly"), ("monthly.html", "Monthly"), ("annual.html", "Annual"), ("special.html", "Special & dated"), ("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors"), ("analysis.html", "Analysis & findings"), ("review.html", "Flagged for Review"), ("sources.html", "Sources & evidence")]
 
 
 def e(value):
@@ -85,18 +86,55 @@ def date_text(row):
     return '; '.join(x["start"] + ((' → ' + x["end"]) if x["end"] and x["end"] != x["start"] else (' · closing unconfirmed' if not x["end"] else '')) for x in spans)
 
 
+SNAPSHOT = date(2026, 10, 18)
+
+
+def next_occurrence(row):
+    """Earliest approved occurrence not yet ended at the snapshot; never inferred."""
+    upcoming = []
+    for occ in row["occurrences"]:
+        end = occ["end"] or occ["start"]
+        if end >= SNAPSHOT.isoformat():
+            upcoming.append(occ)
+    return min(upcoming, key=lambda o: o["start"]) if upcoming else None
+
+
+def cost_class(row):
+    """Label derived only from the audited, verbatim admission field."""
+    price = row["price"]
+    if not price:
+        return ("unknown", "Cost not stated — unverified")
+    low = price.lower()
+    if "free" in low and "$" in price:
+        return ("mixed", "Free with paid parts — read admission text")
+    if "free" in low:
+        return ("free", "FREE — conditions in admission text")
+    if "$" in price:
+        return ("paid", "Paid — see admission text")
+    return ("see-text", "Cost in admission text — read it")
+
+
+def dated_sort_key(row):
+    occ = next_occurrence(row)
+    if occ is None:
+        return (2, "9999-12-31", row["name"].lower())
+    ongoing = occ["start"] < SNAPSHOT.isoformat()
+    return (0 if ongoing else 1, occ["end"] if ongoing else occ["start"], row["name"].lower())
+
+
 def fact_cell(row, field):
     value = row[field]
     # Preserve actual empty cells. The review column identifies every missing field.
     return f'<td>{e(value)}</td>' if value else f'<td class="unknown" aria-label="{e(LABELS[field])}: unverified"></td>'
 
 
-def table(items, review=False):
+def table(items, review=False, topic_map=None):
     items = list(items)
     tools = '''<div class="tools" id="table-tools" hidden>
 <label for="search">Search entries<input id="search" type="search" placeholder="Event, venue, category…" autocomplete="off"></label>
 <label for="kind">Cadence<select id="kind"><option value="">All cadences</option>''' + ''.join(f'<option>{k}</option>' for k in ("Weekly", "Monthly", "Annual", "Special", "Unverified")) + '''</select></label>
 <label for="temporal">Date status<select id="temporal"><option value="">All dates</option>''' + ''.join(f'<option>{e(k)}</option>' for k in sorted({r["temporal_status"] for r in items})) + '''</select></label>
+<label for="cost">Cost<select id="cost"><option value="">All costs</option><option value="free">Free (explicit)</option><option value="mixed">Free with paid parts</option><option value="paid">Paid</option><option value="see-text">See admission text</option><option value="unknown">Cost not stated</option></select></label>
 <label for="publication">Publication<select id="publication"><option value="">All entries</option><option value="listed">In directory</option><option value="review_only">Held for review</option></select></label>
 <button type="button" id="reset">Reset</button><span id="count" role="status" aria-live="polite">''' + f'{len(items)} of {len(items)} entries</span></div>'
     out = [tools, '<p class="table-hint">Blank cells are unverified. Open “Field evidence” for quotations. On narrow screens, scroll the table horizontally.</p>', '<div class="table-wrap" tabindex="0" role="region" aria-label="Source-linked event table"><table id="events">', f'<caption>{len(items)} {"candidate" if review else "directory"} entries · snapshot {AS_OF} · categories and programme relationships are editorial, not unique-event counts.</caption>', '<thead><tr><th scope="col">Event / programme</th><th scope="col">Published schedule</th><th scope="col">Time</th><th scope="col">Venue / area</th><th scope="col">Admission / conditions</th><th scope="col">Cadence & date status</th><th scope="col">Review notes</th><th scope="col">Official sources</th></tr></thead><tbody>']
@@ -106,16 +144,18 @@ def table(items, review=False):
         parent = f'<small>Part of: <a href="review.html#{e(row["parent"])}">{e(display(lookup[row["parent"]]))}</a></small>' if row["parent"] else ''
         missing = ', '.join(x.split(':')[0] for x in row["unverified"])
         notes = row["flags"] + ([row["notes"]] if row["notes"] else [])
-        details = f'<details><summary>{e("Unverified: " + missing if missing else "Context & qualifications")}</summary>' + ''.join(f'<p>{e(n)}</p>' for n in notes) + ('<ul>' + ''.join(f'<li>{e(n)}</li>' for n in row["unverified"]) + '</ul>' if missing else '') + f'<a href="review.html#{rid}">Review record →</a></details>'
-        first_links = '<small class="event-links">' + official(row['sources'][0], 'Official source') + f' · <a href="sources.html#e-{rid}">Evidence</a></small>'
+        details = f'<details><summary>{e("Unverified: " + missing if missing else "Context & qualifications")}</summary>' + ''.join(f'<p>{e(n)}</p>' for n in notes) + ('<ul>' + ''.join(f'<li>{e(n)}</li>' for n in row["unverified"]) + '</ul>' if missing else '') + f'<a href="review.html#{e(row["id"])}">Review record →</a></details>'
+        first_links = '<small class="event-links">' + official(row['sources'][0], 'Official source') + f' · <a href="sources.html#e-{e(row["id"])}">Evidence</a></small>'
         disposition = '<span class="check flag">Held for review</span>' if row["publication"] == 'review_only' else '<span class="check ok">SF location evidenced</span>'
         dates = f'<small class="normalized">Approved dates: {e(date_text(row))}</small>' if row["occurrences"] else ''
         kind = 'Special / cadence unconfirmed' if row["kind"] == 'Special' else row["kind"]
         state_cls = 'past' if row["temporal_status"] == 'Past dated' else 'future' if row["temporal_status"] == 'Future dated' else 'neutral'
-        out.append(f'<tr id="{rid}" data-kind="{e(row["kind"])}" data-temporal="{e(row["temporal_status"])}" data-publication="{e(row["publication"])}"><th scope="row">{e(display(row))}{candidate}<small>{e(row["category"])} · {e(row["entry_type"])}</small>{parent}{first_links}</th>')
+        cost_key, cost_label = cost_class(row)
+        topic_html = ('<small>Focus: ' + e(topic_map[row['id']]) + '</small>') if topic_map and row['id'] in topic_map else ''
+        out.append(f'<tr id="{rid}" data-kind="{e(row["kind"])}" data-cost="{cost_key}" data-temporal="{e(row["temporal_status"])}" data-publication="{e(row["publication"])}"><th scope="row">{e(display(row))}{candidate}<small>{e(row["category"])} · {e(row["entry_type"])}</small>{topic_html}{parent}{first_links}</th>')
         out.append(f'<td>{e(row["schedule"])}{dates}</td>' if row['schedule'] else '<td class="unknown" aria-label="Published schedule: unverified"></td>')
         out.extend(fact_cell(row, field) for field in ("time", "venue", "price"))
-        out.append(f'<td>{e(kind)}<span class="temporal {state_cls}">{e(row["temporal_status"])}</span></td><td>{disposition}{details}</td><td>{links(row)}</td></tr>')
+        out.append(f'<td>{e(kind)}<span class="temporal {state_cls}">{e(row["temporal_status"])}</span><span class="cost cost-{cost_key}">{e(cost_label)}</span></td><td>{disposition}{details}</td><td>{links(row)}</td></tr>')
     out += ['</tbody></table></div>', '<p id="empty" class="notice" role="status" hidden>No matching entries. Try fewer filters or reset the table.</p>']
     return ''.join(out)
 
@@ -132,8 +172,75 @@ body = metrics([
 ]) + notice()
 body += '<section class="intro"><h2>Find your rhythm</h2><p>Documented recurring patterns are separate from dated programmes whose ongoing cadence is not confirmed.</p>' + cards([(f, label, kind_counts[k], "Browse source-linked entries") for f, label, k in [("weekly.html", "Weekly", "Weekly"), ("monthly.html", "Monthly", "Monthly"), ("annual.html", "Annual", "Annual"), ("special.html", "Special & dated", "Special")]]) + '</section>'
 body += '<h2>Explore by category</h2>' + cards([(f, c, cat_counts[c], "Browse the directory") for f, c in [("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors")]])
+# Executive summary: dated events near the snapshot, sorted, free highlighted.
+dated_upcoming = sorted((r for r in listed if next_occurrence(r)), key=dated_sort_key)
+window = [r for r in dated_upcoming if next_occurrence(r)["start"] <= "2026-11-17"]
+free_window = [r for r in window if cost_class(r)[0] in ("free", "mixed")]
+exec_items = ''.join(
+    f'<li><a href="upcoming.html#{e(r["id"])}">{e(display(r))}</a> <span class="exec-date">{e(next_occurrence(r)["start"])}'
+    + (f' → {e(next_occurrence(r)["end"])}' if next_occurrence(r)["end"] and next_occurrence(r)["end"] != next_occurrence(r)["start"] else '')
+    + f'</span> <span class="cost cost-{cost_class(r)[0]}">{e(cost_class(r)[1])}</span><small>{e(r["venue"]) or "Venue unverified"}</small></li>'
+    for r in window[:10])
+body += ('<section class="exec" aria-label="Executive summary"><h2>Executive summary — coming up near ' + AS_OF + '</h2>'
+         f'<p><b>{len(window)}</b> dated directory entries start or are still running by 17 November 2026 (30 days after the snapshot); '
+         f'<b>{len(free_window)}</b> of them explicitly say free in their audited admission text. Recurring weekly/monthly entries have no invented next date — see <a href="upcoming.html">Upcoming</a>. '
+         'This is a fixed research snapshot, not a live calendar: check the official source before travelling.</p>'
+         f'<ol class="exec-list">{exec_items}</ol>'
+         '<p><a href="upcoming.html">All upcoming, date-sorted →</a> · <a href="free.html">Free events first →</a> · <a href="focus.html">Gaming · Music · AI →</a></p></section>')
 body += '<h2>City-only directory</h2>' + table(listed)
 write("index.html", "San Francisco, in events.", "Recurring gatherings, cultural traditions and special programmes—organized around official evidence, with uncertainty kept visible.", body)
+
+# Upcoming: date-sorted dated entries first (ongoing highlighted), then recurring patterns with no invented date.
+up_dated = sorted((r for r in listed if next_occurrence(r)), key=dated_sort_key)
+up_body = metrics([
+    ("Starting / running now", len(up_dated), "Approved dates only; relative to " + AS_OF, False),
+    ("In the next 30 days", len(window), "From the " + AS_OF + " snapshot", False),
+    ("Of those, explicitly free", len(free_window), "Free must be in the audited admission text", False),
+    ("Cost not stated", sum(1 for r in up_dated if not r["price"]), "Blank admission stays blank", True),
+]) + notice()
+up_body += '<section class="prose"><h2>How this page is ordered</h2><p>Entries with an approved date that has not ended by ' + AS_OF + ' come first: events already running are highlighted, then the soonest start date. Weekly/monthly patterns follow <b>without a generated next date</b> — a pattern is not proof of a specific day. Past-dated and undated entries stay in the full directory on the overview.</p></section>'
+recurring = sorted((r for r in listed if r["kind"] in ("Weekly", "Monthly") and not next_occurrence(r)), key=lambda r: (r["kind"], r["name"].lower()))
+up_body += '<h2>Soonest first, then regularly recurring</h2><p class="table-hint">Dated entries come first (running now, then soonest start). Weekly/monthly patterns follow with no invented next day — check the official source for the next actual day.</p>' + table(up_dated + recurring)
+write("upcoming.html", "Upcoming, soonest first.", "Dated San Francisco events ordered by their next approved date from the 18 October 2026 snapshot, with cost on every row — plus recurring patterns whose next day is not confirmed.", up_body)
+
+# Free first: explicit-free, then free-with-paid-parts, paid, see-text, unknown last.
+cost_order = {"free": 0, "mixed": 1, "paid": 2, "see-text": 3, "unknown": 4}
+free_sorted = sorted(listed, key=lambda r: (cost_order[cost_class(r)[0]], dated_sort_key(r)))
+free_body = metrics([
+    ("Explicitly free", sum(1 for r in listed if cost_class(r)[0] == "free"), "The word free is in the audited admission text", False),
+    ("Free with paid parts", sum(1 for r in listed if cost_class(r)[0] == "mixed"), "Read the conditions before going", True),
+    ("Paid", sum(1 for r in listed if cost_class(r)[0] == "paid"), "A price appears in the audited text", False),
+    ("Cost not stated", sum(1 for r in listed if not r["price"]), "Never assumed free", True),
+]) + notice()
+free_body += '<section class="prose"><h2>Free means the source says so</h2><p>Rows are ordered free-first. A badge is derived only from the audited admission text on the same row: blank admission is labelled “Cost not stated — unverified”, never free. Free entry can still have conditions (residency, RSVP, membership, paid extras) — the full text is in the Admission column and on the evidence page.</p></section>'
+free_body += '<h2>All directory entries, free first</h2>' + table(free_sorted)
+write("free.html", "Free first.", "Every directory entry ordered by what it costs — explicit free first, cost-not-stated last — with the exact audited admission text and official source on each row.", free_body)
+
+# Focus: Gaming / Music / AI matched only from the verified event name; everything else after.
+TOPICS = [
+    ("Gaming", ("pokémon", "pokemon", "game", "gaming", "chess", "esport", "arcade")),
+    ("Music", ("music", "concert", "opera", "symphony", "jazz", "bluegrass", "k-pop", "bhangra", "soundtrack", " band", "choir", "orchestra")),
+    ("AI", ("artificial intelligence", "a.i.", " ai ")),
+]
+def topic_of(row):
+    name = " " + row["name"].lower() + " "
+    for label, words in TOPICS:
+        if any(w in name for w in words):
+            return label
+    return "Everything else"
+focus_body = notice()
+focus_body += '<section class="prose"><h2>How focus groups are made</h2><p>Groups are matched <b>only from the audited event name</b> (for example “Pokémon”, “Jazz”, “Opera”), never guessed from a venue or theme. That is auditable but incomplete: a concert whose name contains no music word stays in “Everything else”. Order on this page: <b>Gaming, then Music, then AI, then Everything else</b>; within each group, explicitly free and soonest-dated entries come first. Use the Focus label on each row.</p></section>'
+grouped = {label: [] for label, _ in TOPICS}
+grouped["Everything else"] = []
+for r in listed:
+    grouped[topic_of(r)].append(r)
+focus_body += metrics([("Gaming (name-matched)", len(grouped["Gaming"]), "Known coverage gap", True), ("Music (name-matched)", len(grouped["Music"]), "Name contains a music word", False), ("AI (name-matched)", len(grouped["AI"]), "None found — flagged gap", True), ("Everything else", len(grouped["Everything else"]), "All remaining directory entries", False)])
+if not grouped["AI"]:
+    focus_body += '<div class="notice"><b>AI: no event in the directory.</b> No listed entry has an audited name that explicitly identifies artificial intelligence, so none is invented or re-labelled here. This is a coverage gap — see <a href="review.html">Flagged for Review</a> and <a href="analysis.html">Analysis</a>.</div>'
+topic_order = {"Gaming": 0, "Music": 1, "AI": 2, "Everything else": 3}
+focus_sorted = sorted(listed, key=lambda r: (topic_order[topic_of(r)], cost_order[cost_class(r)[0]], dated_sort_key(r)))
+focus_body += '<h2>Gaming · Music · AI · then everything else</h2>' + table(focus_sorted, topic_map={r["id"]: topic_of(r) for r in listed})
+write("focus.html", "Gaming · Music · AI first.", "Free gaming, music and AI-adjacent entries first — matched only from audited event names, with honest gaps — then everything else in the city-only directory.", focus_body)
 
 for filename, kind, title in [("weekly.html", "Weekly", "A weekly rhythm."), ("monthly.html", "Monthly", "Once a month. Or twice."), ("annual.html", "Annual", "Traditions that return."), ("special.html", "Special", "Special & dated programmes.")]:
     description = "Only source-supported recurring classifications appear here. Seasonal exceptions apply; a pattern never proves the next occurrence." if kind != "Special" else "Dated editions and programme umbrellas without an approved ongoing cadence. “Special” does not claim an event will never recur. Past editions remain clearly labeled."
@@ -259,4 +366,4 @@ See [Flagged for Review](review.html), [field evidence](sources.html),
 [the summary JSON](data/audit_summary.json) and [unverified history](data/unverified_history.json).
 '''
 (ROOT / 'ANALYSIS.md').write_text(analysis_md)
-print(f'Built 12 HTML pages, {len(listed)} directory rows, {len(rows)} review records, CSVs and ANALYSIS.md from audited data only.')
+print(f'Built 15 HTML pages, {len(listed)} directory rows, {len(rows)} review records, CSVs and ANALYSIS.md from audited data only.')

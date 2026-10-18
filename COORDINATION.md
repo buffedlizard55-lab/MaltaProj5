@@ -59,8 +59,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T15 | GitHub Pages publication | **done — live** | all sessions | `.github/workflows/pages.yml` |
 | T16 | Defect D1 fix: `tools/integrate.py` idempotency + CI regression test | done | `5a85baf2` | `tools/integrate.py`, `data/sources_3a19e72d.json`, `data/review_3a19e72d.json`, `.github/workflows/pages.yml` |
 | T17 | Register expansion 86→106 entries from official sources | **done — content integrated**; PR #7 superseded | `a1b7522f` | `data/events_a1b7522f.json`, `data/sources_a1b7522f.json` |
-| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **in progress** | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
-| T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **in progress** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
+| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **done — live** | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
+| T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **done** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -545,3 +545,38 @@ merge and re-validated.
 * 213 official-source records across 135 domains; 28 review findings; 118 rows carry notes.
 * Automated pass: 165 rows name-confirmed, 64 not name-matched (bots/JS), 2 PDFs, **0 dead URLs**, 46 blocked URLs.
 * Verification labels: 117 field-level · 79 page-level · 35 flagged.
+
+
+---
+
+## Independent delivery audit (T19) — `526a8db6`, 2026-10-18
+
+This session found the requested deliverable already integrated on `main` and independently checked
+the generated outputs rather than duplicating the completed research. No data or site defect was
+found. The stale top-level T18 status was corrected from “in progress” to “done — live.”
+
+### Reproducibility and validation
+
+```
+python3 tools/consolidate.py  -> 231 rows; Weekly 25, Monthly 11, Annual 135, Special 60; 213 sources
+python3 tools/apply_verify.py -> 165 name found, 64 not found, 2 PDFs; 35 bot-blocked rows flagged
+python3 scripts/build.py      -> 12 pages, 231 rows, 213 official-source records
+python3 scripts/validate.py   -> PASS: evidence, blank flags, parents, pages, local links/fragments
+git status --short           -> clean after the complete canonical pipeline
+```
+
+The audit also confirmed through the GitHub API that there were no open pull requests before this
+audit, Pages was public in branch mode from `main` / root with HTTPS enforced, and the latest Pages
+build for `e8828ef` had status `built`. The corresponding validation and Pages Actions runs
+(`39089686728` and `39089686311`) both concluded successfully. Official manual-review links remain
+available row by row on `sources.html`; unresolved bot/JavaScript checks and blank fields remain
+published on `review.html` and do not block publication.
+
+### Irregularities
+
+* The source register is a maintained inventory, not a provably exhaustive census; this limitation
+  is explicitly published in the site methodology.
+* 64 rows were not machine name-matched (including 35 bot-blocked rows), and two PDF sources were
+  not text-checked. These are not represented as machine-verified and remain visible for review.
+* No dead URL, generated-output drift, broken local link, missing row evidence reference, or Pages
+  deployment failure was found during this audit.

@@ -1,7 +1,7 @@
 # ANALYSIS.md — findings from the verified San Francisco register
 
 Snapshot **2026-10-18**. Every figure below is computed from `data/events.json`
-(233 rows), `data/sources.json` (235 records), `data/review.json` (20 findings) and
+(233 rows), `data/sources.json` (234 records), `data/review.json` (20 findings) and
 `data/verify_report.json` (a saved machine-fetch snapshot with the coverage gaps documented below). The published version of this
 analysis is `analysis.html`.
 
@@ -19,12 +19,12 @@ analysis is `analysis.html`.
 | — community & outdoors | 61 |
 | — markets & food | 35 |
 | — museums & science | 23 |
-| Official source records | 235 |
-| Distinct source domains | 140 |
-| Rows verified field-level | 147 |
+| Official source records | 234 |
+| Distinct source domains | 142 |
+| Rows verified field-level | 146 |
 | Rows verified page-level | 78 |
-| Rows flagged for review | 8 |
-| Rows with at least one blank tracked field | 173 |
+| Rows flagged for review | 9 |
+| Rows with at least one blank tracked field | 174 |
 | Review findings | 20 |
 | Current source URLs reported dead in the saved fetch snapshot | 0 (one failed URL was superseded; details below) |
 
@@ -63,12 +63,15 @@ text in `data/audit_f1fd3c36.json` and applied by `tools/apply_audit.py`. Irregu
 
 ## Verification outcome (2026-10-18 automated pass)
 
-The committed machine report is a historical snapshot from before the final integration. It is
-not a current, exhaustive link check: of the 203 distinct URLs in the current source ledger, two
-are absent from that snapshot and one URL in the snapshot has since been removed. The two current
-URLs not covered are [SFMOMA's Free Days page](https://www.sfmoma.org/free-days/) and [San
-Francisco Opera's homepage](https://www.sfopera.com/); both are cited for review findings and the
-source ledger contains manually read excerpts. They are listed again on `review.html`.
+The committed machine report is a historical snapshot from before the final integration (231 rows,
+202 distinct URLs checked). It is not a current, exhaustive link check: the current source ledger
+has 226 distinct URLs, 25 of which are absent from that snapshot; one URL in the snapshot has since
+been removed. The uncovered set includes [SFMOMA's Free Days page](https://www.sfmoma.org/free-days/)
+and [San Francisco Opera's homepage](https://www.sfopera.com/), both cited for review findings.
+The exact URL-set differences are linked on `review.html`. A later CI check found Ferry Fest's
+dedicated event URL returning HTTP 404; T25 removed it from active event evidence, cleared the
+unsupported time and price, and retained the old URL only on the review finding. SF Travel remains
+the event row's official source, but its page was not freshly re-read for this repair.
 
 | Result in saved snapshot | Rows / URLs |
 |---|---:|
@@ -105,7 +108,7 @@ calendar, not a weekly-rhythm calendar.
 
 Of the 137 annual rows, 32 already carry a dated 2027 edition or season; the rest preserve the
 recurring pattern only. Where an organizer has not posted the next edition, the date cell is not
-invented. 173 rows have at least one blank tracked field (most often the start time, which many
+invented. 174 rows have at least one blank tracked field (most often the start time, which many
 market pages do not publish separately from opening hours).
 
 ### 3. Coverage is uneven and not exhaustive
@@ -118,7 +121,7 @@ over-represented because their organizers publish machine-readable pages.
 
 ### 4. Source concentration is high, and that is a risk
 
-235 source records sit on 140 domains, but a handful of publishers supply many rows: San Francisco
+234 source records sit on 142 domains, but a handful of publishers supply many rows: San Francisco
 Opera's season press page covers five productions, PIER 39's events page covers two rows, and 12
 rows cite San Francisco Travel (the city's destination-marketing body); after the audit, organizer
 pages were added to 9 of them and only 2 (Disability History Tour, Super Bowl LX fan events) rest

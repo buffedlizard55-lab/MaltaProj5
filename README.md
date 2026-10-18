@@ -4,8 +4,9 @@ A verified register of events held **inside the City and County of San Francisco
 events that recur (weekly, monthly, annually) and dated special events — with the analysis, the
 source ledger, and the irregularities found while checking them.
 
-**233 entries · 235 official source records across 140 domains · every row links to the official
-page it was checked against on 18 October 2026.**
+**233 entries · 234 official source records across 142 domains.** Every row links to an official
+source; fields not confirmed by available evidence are left blank and flagged. Snapshot date: 18
+October 2026.
 
 This register is the merged output of four research passes run in parallel (sessions
 `3a19e72d`, `5a85baf2`, `4f47c142` and `a1b7522f`) and reconciled by the integration session

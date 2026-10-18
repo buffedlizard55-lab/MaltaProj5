@@ -48,6 +48,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
 | `3adf31d9` | `arena/3adf31d9-maltaproj5` | 2026-10-18 09:45 UTC | New product requirements: date-ordered upcoming view, executive summary, cost labels, gaming/music/AI registers, mobile-first dashboard (T33–T36); final integration, PR → main, Pages |
+| `d57e2eeb` | `arena/d57e2eeb-maltaproj5` | 2026-10-18 ~11:05 UTC | Free-first gap research (gaming/music/AI focus) from official sources, additive register extension, rebuild + regression updates, final integration, PR → main, Pages (T37–T39) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -128,6 +129,9 @@ Upcoming page and cost badges are regression-covered in CI.
 | T34 | Date-ordered **Upcoming** page + **executive summary** on the landing page (nearest confirmed dates first, relative to the fixed 2026-10-18 snapshot) | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `assets/app.js`, `*.html` |
 | T35 | **Cost labelling**: a Free / Paid / Not stated badge derived only from the verified admission text, always shown next to the exact official quotation | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `*.html` |
 | T36 | Category subpages **Gaming / Music / AI & technology / Free to attend** + mobile-first dashboard navigation; rebuild, validate, PR → `main`, merge, confirm Pages | **done** | `3adf31d9` | NEW: `tools/register_3adf31d9.py`; `tools/consolidate.py`, `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `tests/`, `*.html`, `README.md`, `COORDINATION.md` |
+| T37 | Free-first gap research from official sources: gaming, music and AI/technology first, then other free SF events not yet in the register; exact quotations with archived captures only; *review_only* for anything failing the evidence rules | **in progress** | `d57e2eeb` | NEW: `data/audit_d57e2eeb.json`, `data/research/audit-d57e2eeb.md` |
+| T38 | Additive extension of the register with T37 entries (never edits an existing row), rebuild consolidated data + all 18 pages, update count-based regression fixtures, validate, run tests | **in progress** (starts after T37 research record lands) | `d57e2eeb` | NEW: `tools/register_d57e2eeb.py`; `tools/consolidate.py` (owner T27 done), `tests/` (owners done), generated `data/*` + `*.html`, `README.md`, `COORDINATION.md` |
+| T39 | Final integration of this session: re-verify combined data, confirm site builds with no broken links, PR → `main`, merge without waiting, confirm Pages deploy, record outcome | **unclaimed → in progress** (starts after T38) | `d57e2eeb` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them

@@ -1449,3 +1449,50 @@ duplicate.
 * `python3 scripts/validate.py` → **PASS** (266 projections, 18 pages, cost badges, date ordering, focus group order, row sources, local links/fragments).
 * `python3 -m unittest discover -s tests` → **43 tests OK**.
 * Browser pass → 18 pages, Cost filter narrows correctly, no console errors, no mobile overflow, zero automated WCAG A/AA findings.
+
+---
+
+## Publication record — T33–T36 complete (with the `59f56c24` integration) — `3adf31d9`
+
+| Item | Result |
+|---|---|
+| PR | [#37](https://github.com/buffedlizard55-lab/MaltaProj5/pull/37) merged 2026-10-18 10:48:42 UTC |
+| Merge commit | `0662f45abed0f1a3c58ddbcf2aeb14db81f1b641` |
+| PR checks | [39120609305](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39120609305) **success** |
+| Main validation | [39120720023](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39120720023) **success** |
+| Pages | [39120719769](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39120719769) **success**; Pages API reports **built** for `0662f45` at 10:49:01 UTC |
+| Live site | https://buffedlizard55-lab.github.io/MaltaProj5/ |
+| Register | 266 candidates / 185 listed / 81 review-only / 264 cited official URLs across 150 domains |
+| Pages published | 18 (index, upcoming, free, gaming, music, ai, focus, weekly, monthly, annual, special, markets, museums, culture, community, analysis, review, sources) |
+
+**Reachability is a separate question from verification.** The workflow's URL gate ran on every
+cited source; definite 404/410 responses fail the build, and challenge, server and transport
+outcomes stay recorded as unknown rather than becoming false verification claims. That gate passed.
+
+**Live-site note.** The sandbox can only reach `github.com`, `api.github.com`, `registry.npmjs.org`,
+`pypi.org` and `files.pythonhosted.org`, so `github.io` could not be fetched directly this session.
+Publication was confirmed from the Pages API (`built` for the exact merge commit) and from the
+`pages build and deployment` workflow run, both of which are the authoritative records.
+
+### Tasks closed
+
+| Task | Status |
+|---|---|
+| T33 — gaming / music / AI research from official sources | **done** |
+| T34 — date-ordered Upcoming page + executive summary | **done** |
+| T35 — cost labelling from the verified admission text | **done** |
+| T36 — topic subpages, mobile-first dashboard, PR → `main`, merge, Pages | **done** |
+
+### Flagged for review / known limitations
+
+* Two rows cover GDC Festival of Gaming 2027 from different official pages; both are published with
+  their own sources and the overlap is stated in the row's notes. The `gdconf.com` row stays
+  *Not stated* rather than inheriting the price quoted on the Moscone page.
+* Every AI & technology row reads *Not stated* — none of the official conference pages read for this
+  snapshot quoted a price.
+* All seven SFPL gaming sessions leave admission blank: their official event text does not state it.
+* Mechanics' Institute Introduction to Chess and AI Council 2027 remain on
+  [Flagged for Review](review.html) for missing venue / SF geography respectively.
+* The dashboard executive-summary heading says “Next 14 days.” while its paragraph explains that
+  entries are counted through 1 November 2026. Both numbers are correct for what they describe;
+  this is wording, not a data defect.

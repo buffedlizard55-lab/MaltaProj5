@@ -334,9 +334,9 @@
   "url": "https://unionstreetsf.com/festivals",
   "publisher": "Union Street Association \u2014 Festivals & Events",
   "checked": "2026-10-18",
-  "excerpt": "Festivals & Events \u2013 Union Street Association Skip to content Home About Us Landmarks Octagon House Victorian Walks Business Directory News Festivals & Events Become a Member Contact Home About Us Landmarks Octagon House Victorian Walks Bus",
-  "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
-  "http": 200
+  "excerpt": "Automated fetch returned HTTP 429 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "method": "Automated fetch attempted in CI; blocked by the site.",
+  "http": 429
  },
  "b-carnavalsanfrancisco-org-faq": {
   "url": "https://carnavalsanfrancisco.org/faq/",
@@ -863,9 +863,9 @@
   "url": "https://www.sfsketchfest.com/",
   "publisher": "SF Sketchfest (official site, dates per SF Travel January guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
   "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "http": 202
  },
  "x-www-fogfair-com": {
   "url": "https://www.fogfair.com/",
@@ -1095,9 +1095,9 @@
   "url": "https://qwocmap.org/festival/",
   "publisher": "QWOCMAP (official site, dates per SF Travel June guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
   "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "http": 202
  },
  "x-www-sfbff-org": {
   "url": "https://www.sfbff.org/",
@@ -1119,9 +1119,9 @@
   "url": "https://sffolkfest.org/",
   "publisher": "SF Free Folk Festival (official site, dates per SF Travel July guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
   "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "http": 202
  },
  "x-www-frozenfilmfestival-com": {
   "url": "https://www.frozenfilmfestival.com/",
@@ -1224,9 +1224,9 @@
   "url": "https://sffallshow.org/",
   "publisher": "SF Fall Show (official site, dates per SF Travel October guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
   "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "http": 202
  },
  "x-www-potrerofestival-com": {
   "url": "https://www.potrerofestival.com/",

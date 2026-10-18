@@ -2,10 +2,11 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current integration in progress (T26–T28):** all newer mainline research is
-being reconciled with the explicit field-evidence audit. Older counts and
-verification labels below are historical, not the current publication gate.
-No new deployment is claimed until actual Pages success is recorded.
+**Current publication (T26–T28):** PR #22 is merged and Pages is confirmed live.
+The audited snapshot contains **242 candidates: 163 city-only directory entries /
+79 review-only**, with unsupported facts blank. All newer mainline research is
+retained. Older counts/field-page badges below are historical, not the current
+publication gate. Actual CI, merge and Pages records are at the end of this board.
 
 **Rules**
 
@@ -79,8 +80,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **done — live**: PR [#18](https://github.com/buffedlizard55-lab/MaltaProj5/pull/18) merged 03:20 UTC (merge commit `9044bf8`); CI `Validate site` green on the PR; Pages build `built` for `9044bf8` | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 | T25 | Resolve Ferry Fest source link returning 404 in PR #18 remote-check report; preserve only official evidence that remains live and flag anything no longer confirmed | **done — PR #17 merged; Pages built** | `99662c40` | `COORDINATION.md`, `data/audit_f1fd3c36.json`, `tools/apply_audit.py`, generated `data/`, `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 | T26 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
-| T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | done locally; CI/publication gate T28 | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
-| T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | in progress | `64f8b973` | `COORDINATION.md` |
+| T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | done — CI passed, merged in PR #22 | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
+| T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | done — PR #22 merged; Pages built and live content confirmed | `64f8b973` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1006,3 +1007,44 @@ use `--rebase=merges --ff-only` when the session remote is already an ancestor,
 preserving the completed merge graph. Pushes remain only to this session branch;
 no main branch checkout or force-push occurred. The full self-served browser test
 and byte-identical repeated build also passed after the combined research merge.
+
+## Publication record — T26–T28 complete — `64f8b973`
+
+| Item | Actual observed result |
+|---|---|
+| Implementation PR | [#22](https://github.com/buffedlizard55-lab/MaltaProj5/pull/22), merged autonomously **2026-10-18 03:59:24 UTC** |
+| Merge commit | `bde10dc7b431111c14b602855f4bebc0b6dbc957` |
+| PR validation | [39095344809](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39095344809), job `117580512228`, **success** on `60c07ad` (45s). Rebuild, 29 regressions, exact data/CSV/links, strict generated-file diff, real browser/accessibility and source reachability all ran successfully; no skipped gate. |
+| Main validation | [39095524834](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39095524834), job `117581053823`, **success** on the actual merge commit; completed 04:00:19 UTC. |
+| Pages workflow | [39095524296](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39095524296), **success** for the merge commit. |
+| Actual Pages API build | `1293498302`, status **built**, commit `bde10dc7b431111c14b602855f4bebc0b6dbc957`, 03:59:25 → **03:59:45 UTC**, no error. Branch mode remains `main` / root. |
+| Live content fetched | [Dashboard](https://buffedlizard55-lab.github.io/MaltaProj5/), [Flagged for Review](https://buffedlizard55-lab.github.io/MaltaProj5/review.html), [evidence](https://buffedlizard55-lab.github.io/MaltaProj5/sources.html) retrieved successfully after deployment: **163 directory / 79 held / 242 assessed / 237 URLs / 140 domains**, correct new field evidence and blank cells. This was an actual content check, not just a queued deployment. |
+
+### Checks, sources and published irregularities
+
+* Final directory: 20 weekly / 7 monthly / 26 annual / 110 special-or-cadence-
+  unconfirmed; 14 programme umbrellas, not a unique-event or citywide-coverage count.
+  The latest source/decision provenance is `data/audit_64f8b973.json`; the companion
+  research/tool and every earlier session log/input remain preserved.
+* **237 exact source URLs checked.** PR run: 197 reachable-not-verified / 40
+  restricted-or-otherwise-unknown / zero definite 404/410. Main run: 198 / 39 /
+  zero. These changing responses are not semantic re-verification or proof that
+  every page was readable. Unknowns were not promoted to verified facts.
+* Counts above were confirmed through the successful job outcomes and check-run
+  warning annotations. CI uploaded source reports and browser screenshots; direct
+  artifact download from this authoring sandbox hit its Azure-host egress limit,
+  not a workflow failure. Artifacts remain available from the linked Actions runs.
+* Core regressions, exact quotes/field projections, recurrence/year gates, CSV
+  cells and all local paths/fragments pass. Repeated full builds are byte-identical.
+  Chromium checks all 12 pages at desktop/mobile widths, no-JS tables, filters,
+  source/evidence links, zero document overflow/runtime/asset errors. Four core
+  page types have zero automated WCAG A/AA findings (not a full certification).
+* Scope/year/price/venue conflicts, blocked/JS/error pages and known coverage gaps
+  remain published on Flagged for Review. This is deliberately **not** a claim of
+  exhaustive changing citywide coverage. Only the explicit decisions can populate
+  factual cells; old labels/matches and future edition assumptions cannot.
+* Nonblocking runner notices: upload-artifact v4 uses a deprecated Node target
+  (runner successfully forced Node 24), and ubuntu-latest migration is announced.
+  No failing check or broken deployment was merged. The completed publication
+  record is being merged as a documentation-only follow-up; event/site outputs
+  are unchanged from the successfully deployed PR #22.

@@ -32595,7 +32595,9 @@
    "checked_at": "2026-10-18T02:59:58+00:00",
    "seconds": 0.12,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "Plan Your Visit\nYou can’t get more San Francisco than this.\nAfter Dark Thursday Nights (18+)\nThursday 10:00 am–5:00 pm 6:00 pm–10:00 pm (Ages 18+)\nAfter Dark Thursday Night Tickets (18+)\nGeneral $22.95\nDaytime & After Dark Members FREE\nPier 15, Embarcadero, San Francisco",
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
   },
   "https://www.exploratorium.edu/visit/calendar/after-dark": {
    "http": 405,
@@ -32605,7 +32607,9 @@
    "checked_at": "2026-10-18T02:59:58+00:00",
    "seconds": 0.09,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "After Dark Thursday Nights\nEvery Thursday Night • 6:00–10:00 pm\nStop scrolling and escape to reality at Pier 15!\nAfter Dark: Death and Life / La muerte y la vida\nThu, Oct 22 2026 • 6 - 10pm\nAfter Dark: Creepatorium\nThu, Oct 29 2026 • 6 - 10pm\nAfter Dark: Digest This\nThu, Nov 5 2026 • 6 - 10pm\nAfter Dark: Unplug and Play\nThu, Nov 12 2026 • 6 - 10pm\nAfter Dark: Glow Opening\nThu, Nov 19 2026 • 6 - 10pm\nAfter Dark: Rule Breakers\nThu, Dec 3 2026 • 6 - 10pm\nAfter Dark: Unplug and Play\nThu, Dec 10 2026 • 6 - 10pm\nAfter Dark: Solstice\nThu, Dec 17 2026 • 6 - 10pm",
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
   },
   "https://www.famsf.org/exhibitions": {
    "http": 403,
@@ -32635,7 +32639,9 @@
    "checked_at": "2026-10-18T02:59:59+00:00",
    "seconds": 0.22,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "de Young\nFree + reduced admission\nNestled in Golden Gate Park\nTreasures of the Pharaohs\nThrough Jan 31, 2027\nde Young",
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
   },
   "https://www.famsf.org/visit/free-reduced-admission": {
    "http": 403,
@@ -32645,7 +32651,9 @@
    "checked_at": "2026-10-18T02:59:59+00:00",
    "seconds": 0.07,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "Free + reduced admission\nFree Saturdays\nFree Tuesdays\nEvery Saturday we offer free general admission to all residents of the nine Bay Area counties.\nThis offer applies only to the permanent collection galleries. Full-price admission to special exhibitions still applies.\nPlease note that Free Saturdays does not take place during Bouquets to Art, our annual weeklong fundraiser.\nGeneral admission is free the first Tuesday of every month.\nPlease note that Free Tuesdays does not take place during Bouquets to Art, our annual weeklong fundraiser.\nBenefits include: Free admission for one member, a companion, and a guest to the permanent collections and special exhibitions at the de Young and Legion of Honor",
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
   },
   "https://www.famsf.org/visit/getting-to-the-de-young": {
    "http": 403,
@@ -32655,7 +32663,9 @@
    "checked_at": "2026-10-18T02:59:59+00:00",
    "seconds": 0.09,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "Getting to the de Young\nMuni to Golden Gate Park\nThe de Young encourages the use of public transportation to access the museum.\nThe following lines are within walking distance to the de Young.\n44 O’Shaughnessy Bus\n5 + 5R Fulton Bus",
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
   },
   "https://www.famsf.org/visit/getting-to-the-legion-of-honor": {
    "http": 403,
@@ -32665,7 +32675,9 @@
    "checked_at": "2026-10-18T02:59:59+00:00",
    "seconds": 0.08,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "Getting to the Legion of Honor\nMuni to Legion of Honor\nThe 18 takes you up Legion of Honor Drive and stops directly in front of the Legion of Honor.\nTake 25th Avenue north to Clement Street. Turn left (west) on Clement Street. Take Clement Street to 34th Avenue. Turn right (north) on 34th Avenue into Lincoln Park.",
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
   },
   "https://www.famsf.org/visit/legion-of-honor": {
    "http": 403,
@@ -32675,7 +32687,9 @@
    "checked_at": "2026-10-18T02:59:59+00:00",
    "seconds": 0.08,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "Legion of Honor\nFree Saturdays at the Legion of Honor\nSat \\ 9:30 am–5:15 pm\nLegion of Honor Free Saturdays",
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
   },
   "https://www.ferrybuildingmarketplace.com/farmers-market/": {
    "http": 200,
@@ -49494,7 +49508,9 @@
    "links": [],
    "structured": [],
    "seconds": 0.09,
-   "text_truncated": false
+   "text_truncated": false,
+   "tool_excerpt": "Alemany Farmers Market\nBuy fresh fruits and vegetables from local farmers every Saturday, 7am - 2pm.\nAlemany Farmers Market100 Alemany Boulevard\nSan Francisco, CA94110\nSaturday7:00 am to 2:00 pm\nSince February 2026, local nonprofit Foodwise operates Alemany Farmers Market",
+   "tool_method": "Selected text read using fetch_page, 2026-10-18; independent of the runner HTTP status."
   },
   "https://www.sfaapicocktailweek.com/": {
    "http": 200,
@@ -80854,6 +80870,6071 @@
    }
   }
  },
- "decisions": {},
+ "decisions": {
+  "b-ferry-plaza-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Ferry Plaza Farmers Market",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+       "text": "Ferry Plaza Farmers Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Saturday (8 am – 2 pm) and Tuesday & Thursday (10 am – 2 pm), year round",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+       "text": "Saturday (8 am – 2 pm) and Tuesday & Thursday (10 am – 2 pm), year round"
+      }
+     ]
+    },
+    "time": {
+     "value": "Saturday (8 am – 2 pm) and Tuesday & Thursday (10 am – 2 pm)",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+       "text": "Saturday (8 am – 2 pm) and Tuesday & Thursday (10 am – 2 pm)"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Ferry Building, Embarcadero and Market Streets, San Francisco",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+       "text": "Ferry Building, Embarcadero and Market Streets, San Francisco"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "on Saturday, Tuesday, and Thursday, year round",
+    "quotes": [
+     {
+      "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+      "text": "on Saturday, Tuesday, and Thursday, year round"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+      "text": "Ferry Building, Embarcadero and Market Streets, San Francisco"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Admission is not stated in the reviewed operator text; the inherited Free admission value is removed.",
+   "notes": ""
+  },
+  "nightlife": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "NightLife",
+     "quotes": [
+      {
+       "url": "https://www.calacademy.org/nightlife",
+       "text": "NightLife"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "most Thursdays",
+     "quotes": [
+      {
+       "url": "https://www.calacademy.org/nightlife",
+       "text": "most Thursdays"
+      }
+     ]
+    },
+    "time": {
+     "value": "6–10 p.m.",
+     "quotes": [
+      {
+       "url": "https://www.calacademy.org/nightlife",
+       "text": "6–10 p.m."
+      }
+     ]
+    },
+    "venue": {
+     "value": "California Academy of Sciences",
+     "quotes": [
+      {
+       "url": "https://www.calacademy.org/getting-here",
+       "text": "California Academy of Sciences"
+      }
+     ]
+    },
+    "price": {
+     "value": "Tickets are $26.",
+     "quotes": [
+      {
+       "url": "https://www.calacademy.org/nightlife",
+       "text": "Tickets are $26."
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "NightLife is Thursdays* from 6–10 p.m.",
+    "quotes": [
+     {
+      "url": "https://www.calacademy.org/nightlife",
+      "text": "NightLife is Thursdays* from 6–10 p.m."
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.calacademy.org/getting-here",
+      "text": "Located in the heart of San Francisco in beautiful Golden Gate Park"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Exceptions and holiday pause are explicitly stated; no individual next date is generated.",
+   "notes": "21+ with valid, physical photo ID. There is usually one Thursday per month when no NightLife event is scheduled. Planetarium passes are sold separately."
+  },
+  "after-dark": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "After Dark Thursday Nights",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "After Dark Thursday Nights"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Every Thursday Night",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Every Thursday Night"
+      }
+     ]
+    },
+    "time": {
+     "value": "6:00–10:00 pm",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "6:00–10:00 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Pier 15",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Pier 15"
+      }
+     ]
+    },
+    "price": {
+     "value": "General $22.95 · Daytime & After Dark Members FREE",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit",
+       "text": "General $22.95"
+      },
+      {
+       "url": "https://www.exploratorium.edu/visit",
+       "text": "Daytime & After Dark Members FREE"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Every Thursday Night",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+      "text": "Every Thursday Night"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit",
+      "text": "Pier 15, Embarcadero, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Age 18+; general and member prices confirmed on the official visit page. Individual themed-event surcharges are not inferred.",
+   "notes": "After Dark is ages 18+; the cited museum visit page states this restriction."
+  },
+  "de-young-sat": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Free Saturdays",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "Free Saturdays"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Every Saturday",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "Every Saturday"
+      }
+     ]
+    },
+    "venue": {
+     "value": "de Young",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/de-young",
+       "text": "de Young"
+      }
+     ]
+    },
+    "price": {
+     "value": "free general admission to all residents of the nine Bay Area counties",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "free general admission to all residents of the nine Bay Area counties"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Every Saturday",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/free-reduced-admission",
+      "text": "Every Saturday"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-de-young",
+      "text": "Muni to Golden Gate Park"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Permanent collection galleries only; full-price special exhibitions still apply. This admission programme does not take place during Bouquets to Art. SF museum location checked against official directions.",
+   "notes": ""
+  },
+  "legion-sat": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Free Saturdays",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "Free Saturdays"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Every Saturday",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "Every Saturday"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Legion of Honor",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/legion-of-honor",
+       "text": "Legion of Honor"
+      }
+     ]
+    },
+    "price": {
+     "value": "free general admission to all residents of the nine Bay Area counties",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "free general admission to all residents of the nine Bay Area counties"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Every Saturday",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/free-reduced-admission",
+      "text": "Every Saturday"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-legion-of-honor",
+      "text": "Turn right (north) on 34th Avenue into Lincoln Park."
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Bay Area residency required; permanent collection only; Bouquets to Art exception. Official museum directions confirm Lincoln Park location.",
+   "notes": ""
+  },
+  "de-young-tue": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Free Tuesdays",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "Free Tuesdays"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "the first Tuesday of every month",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "the first Tuesday of every month"
+      }
+     ]
+    },
+    "venue": {
+     "value": "de Young",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/de-young",
+       "text": "de Young"
+      }
+     ]
+    },
+    "price": {
+     "value": "General admission is free",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "General admission is free"
+      }
+     ]
+    }
+   },
+   "kind": "Monthly",
+   "recurrence": {
+    "value": "the first Tuesday of every month",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/free-reduced-admission",
+      "text": "the first Tuesday of every month"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-de-young",
+      "text": "Muni to Golden Gate Park"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Permanent collection galleries only; full-price special exhibitions still apply. This admission programme does not take place during Bouquets to Art. SF museum location checked against official directions.",
+   "notes": ""
+  },
+  "outer": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Outer Sunset Farmers Market & Mercantile",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "Outer Sunset Farmers Market & Mercantile"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sundays: Open Year Round @ 9am-2pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "Sundays: Open Year Round @ 9am-2pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "9 am-2 pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "9 am-2 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "37th Avenue between Ortega & Quintara",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "37th Avenue between Ortega & Quintara"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Every Sunday",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/osfmm/",
+      "text": "Every Sunday"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/diwali2026/",
+      "text": "37th Avenue between Ortega & Quintara\nSan Francisco, CA, 94116"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "yoga": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Free yoga",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "Free yoga"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Every first and third Sunday",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "Every first and third Sunday"
+      }
+     ]
+    },
+    "time": {
+     "value": "9am",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "9am"
+      }
+     ]
+    },
+    "venue": {
+     "value": "the greenway",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "the greenway"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free yoga",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/osfmm/",
+       "text": "Free yoga"
+      }
+     ]
+    }
+   },
+   "kind": "Monthly",
+   "recurrence": {
+    "value": "Every first and third Sunday",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/osfmm/",
+      "text": "Every first and third Sunday"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/diwali2026/",
+      "text": "37th Avenue between Ortega & Quintara\nSan Francisco, CA, 94116"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "RSVP/donation link is in the operator text; no individual date is generated.",
+   "notes": ""
+  },
+  "flea": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Inner Sunset Flea Market",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/innersunsetflea/",
+       "text": "Inner Sunset Flea Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "2nd Sundays: April to November @ 10am-4pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/innersunsetflea/",
+       "text": "2nd Sundays: April to November @ 10am-4pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "10 am–4 pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/innersunsetflea/",
+       "text": "10 am–4 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Irving St between 9th & 11th Avenue",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/innersunsetflea/",
+       "text": "Irving St between 9th & 11th Avenue"
+      }
+     ]
+    }
+   },
+   "kind": "Monthly",
+   "recurrence": {
+    "value": "every second Sunday from April to November",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/innersunsetflea/",
+      "text": "every second Sunday from April to November"
+     }
+    ]
+   },
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Event street extent is confirmed, but the generic city-directory San Francisco token was unrelated to this flea event and has been removed."
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Second-Sunday dates and Irving 9th–11th venue confirmed. Generic city-directory text is not accepted as event geography; city-only evidence pending.",
+   "notes": ""
+  },
+  "secondhand": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Secondhand Saturdays",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/secondhand/",
+       "text": "Secondhand Saturdays"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "April – November, Third Saturdays @ 10am–4pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/secondhand/",
+       "text": "April – November, Third Saturdays @ 10am–4pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "10 am-4 pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/secondhand/",
+       "text": "10 am-4 pm"
+      }
+     ]
+    }
+   },
+   "kind": "Monthly",
+   "recurrence": {
+    "value": "THIRD SATURDAY MONTHLY",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/secondhand/",
+      "text": "THIRD SATURDAY MONTHLY"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/diwali2026/",
+      "text": "37th Avenue between Ortega & Quintara\nSan Francisco, CA, 94116"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Venue conflict on the same official page: header says Ortega to Quintara; Address says Ortega & Pacheco. Precise venue blanked for review.",
+   "notes": ""
+  },
+  "diwali": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Diwali 2026 at the Outer Sunset Farmers Market",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/diwali2026/",
+       "text": "Diwali 2026 at the Outer Sunset Farmers Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "November 8th, 2026",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/diwali2026/",
+       "text": "November 8th, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "9am-2pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/diwali2026/",
+       "text": "9am-2pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "37th Avenue between Ortega & Quintara",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/diwali2026/",
+       "text": "37th Avenue between Ortega & Quintara"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "fourth annual Diwali Festival",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/diwali2026/",
+      "text": "fourth annual Diwali Festival"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/diwali2026/",
+      "text": "37th Avenue between Ortega & Quintara\nSan Francisco, CA, 94116"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-08",
+     "end": "2026-11-08",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/diwali2026/",
+       "text": "November 8th, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "muertos": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Día de los Muertos Outer Sunset",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/ddlm/",
+       "text": "Día de los Muertos Outer Sunset"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, November 1, 2026",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/ddlm/",
+       "text": "Sunday, November 1, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "9am-2pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/ddlm/",
+       "text": "9am-2pm"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "fifth annual",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/ddlm/",
+      "text": "fifth annual"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/ddlm/",
+      "text": "San Francisco. California"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-01",
+     "end": "2026-11-01",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/ddlm/",
+       "text": "Sunday, November 1, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "review_only",
+   "reason": "Official page conflicts on the street extent (Ortega to Pacheco versus Ortega & Quintara) and says night despite 9am–2pm. Venue left blank; review-only until location extent reconciled.",
+   "notes": ""
+  },
+  "b-sf-pride-celebration": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Pride Celebration",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Pride Celebration"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "57TH ANNUAL CELEBRATION & PARADE • JUNE 26–27, 2027",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/",
+       "text": "57TH ANNUAL CELEBRATION & PARADE • JUNE 26–27, 2027"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "57TH ANNUAL CELEBRATION & PARADE",
+    "quotes": [
+     {
+      "url": "https://sfpride.org/",
+      "text": "57TH ANNUAL CELEBRATION & PARADE"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfpride.org/events/",
+      "text": "San Francisco Pride 2026"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2027-06-26",
+     "end": "2027-06-27",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/",
+       "text": "JUNE 26–27, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "review_only",
+   "reason": "Future weekend is confirmed on organizer homepage; Civic Center venue and free policy are from the 2026 edition and are not confirmed for 2027. Venue and price blanked to avoid cross-edition carryover.",
+   "notes": ""
+  },
+  "chinese": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco Chinese New Year Parade",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/faq/",
+       "text": "San Francisco Chinese New Year Parade"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Saturday, February 20, 2027",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/faq/",
+       "text": "Saturday, February 20, 2027"
+      }
+     ]
+    },
+    "time": {
+     "value": "5:15 PM",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/faq/",
+       "text": "5:15 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "2nd and Market Streets, goes around Union Square and ends at Kearny Street & Columbus Ave.",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/faq/",
+       "text": "2nd and Market Streets, goes around Union Square and ends at Kearny Street & Columbus Ave."
+      }
+     ]
+    },
+    "price": {
+     "value": "a free event for all to attend but tickets must be purchased to sit in the bleacher sections.",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/faq/",
+       "text": "a free event for all to attend but tickets must be purchased to sit in the bleacher sections."
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://chineseparade.com/faq/",
+      "text": "San Francisco Chinese New Year Parade"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2027-02-20",
+     "end": "2027-02-20",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/faq/",
+       "text": "Saturday, February 20, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Dated edition confirmed; annual recurrence language not present in reviewed FAQ, so recurrence is not asserted.",
+   "notes": ""
+  },
+  "carnaval": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Carnaval SF",
+     "quotes": [
+      {
+       "url": "https://carnavalsanfrancisco.org/",
+       "text": "Carnaval SF"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "May 29–30, 2027",
+     "quotes": [
+      {
+       "url": "https://carnavalsanfrancisco.org/",
+       "text": "May 29–30, 2027"
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco’s Mission District",
+     "quotes": [
+      {
+       "url": "https://carnavalsanfrancisco.org/",
+       "text": "San Francisco’s Mission District"
+      }
+     ]
+    },
+    "price": {
+     "value": "FREE 2–day family festival & Grand Parade",
+     "quotes": [
+      {
+       "url": "https://carnavalsanfrancisco.org/",
+       "text": "FREE 2–day family festival & Grand Parade"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://carnavalsanfrancisco.org/",
+      "text": "San Francisco’s Mission District"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2027-05-29",
+     "end": "2027-05-30",
+     "quotes": [
+      {
+       "url": "https://carnavalsanfrancisco.org/",
+       "text": "May 29–30, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Dated festival confirmed; 2026 FAQ parking times not carried into 2027. Recurrence not inferred from edition history.",
+   "notes": ""
+  },
+  "excelsior": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Sunday Streets Excelsior 2026",
+     "quotes": [
+      {
+       "url": "https://sundaystreetssf.com/sunday-streets-excelsior-2026/",
+       "text": "Sunday Streets Excelsior 2026"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, October 18, 2026",
+     "quotes": [
+      {
+       "url": "https://sundaystreetssf.com/sunday-streets-excelsior-2026/",
+       "text": "Sunday, October 18, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "11 AM – 4 PM",
+     "quotes": [
+      {
+       "url": "https://sundaystreetssf.com/sunday-streets-excelsior-2026/",
+       "text": "11 AM – 4 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Mission Street between Geneva Avenue and Theresa Street",
+     "quotes": [
+      {
+       "url": "https://sundaystreetssf.com/sunday-streets-excelsior-2026/",
+       "text": "Mission Street between Geneva Avenue and Theresa Street"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sundaystreetssf.com/sunday-streets-excelsior-2026/",
+      "text": "Sunday Streets is San Francisco’s open streets program"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-18",
+     "end": "2026-10-18",
+     "quotes": [
+      {
+       "url": "https://sundaystreetssf.com/sunday-streets-excelsior-2026/",
+       "text": "Sunday, October 18, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "family": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Free Family Day: K-Pop, Art, and Beyond",
+     "quotes": [
+      {
+       "url": "https://www.sfmoma.org/event/free-family-day-k-pop-art-and-beyond/",
+       "text": "Free Family Day: K-Pop, Art, and Beyond"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, Oct 25, 2026",
+     "quotes": [
+      {
+       "url": "https://www.sfmoma.org/event/free-family-day-k-pop-art-and-beyond/",
+       "text": "Sunday, Oct 25, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "10 a.m.–4 p.m.",
+     "quotes": [
+      {
+       "url": "https://www.sfmoma.org/event/free-family-day-k-pop-art-and-beyond/",
+       "text": "10 a.m.–4 p.m."
+      }
+     ]
+    },
+    "venue": {
+     "value": "SFMOMA",
+     "quotes": [
+      {
+       "url": "https://www.sfmoma.org/visit/",
+       "text": "SFMOMA"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free Family Day provides free access to two adults when accompanied by a child 18 or younger.",
+     "quotes": [
+      {
+       "url": "https://www.sfmoma.org/event/free-family-day-k-pop-art-and-beyond/",
+       "text": "Free Family Day provides free access to two adults when accompanied by a child 18 or younger."
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Removed a generic CityPASS marketing match. Explicit museum street address still needs official evidence."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-25",
+     "end": "2026-10-25",
+     "quotes": [
+      {
+       "url": "https://www.sfmoma.org/event/free-family-day-k-pop-art-and-beyond/",
+       "text": "Sunday, Oct 25, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "review_only",
+   "reason": "",
+   "notes": "RSVP encouraged. RM x SFMOMA requires a timed ticket and $12 adult surcharge; children 18 and younger are free but need a reserved timed ticket."
+  },
+  "death": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "After Dark: Death and Life / La muerte y la vida",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "After Dark: Death and Life / La muerte y la vida"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thu, Oct 22 2026",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Oct 22 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "6 - 10pm",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "6 - 10pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Pier 15",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Pier 15"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit",
+      "text": "Pier 15, Embarcadero, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-22",
+     "end": "2026-10-22",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Oct 22 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "digest": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "After Dark: Digest This",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "After Dark: Digest This"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thu, Nov 5 2026",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Nov 5 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "6 - 10pm",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "6 - 10pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Pier 15",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Pier 15"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit",
+      "text": "Pier 15, Embarcadero, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-05",
+     "end": "2026-11-05",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Nov 5 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "glow": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "After Dark: Glow Opening",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "After Dark: Glow Opening"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thu, Nov 19 2026",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Nov 19 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "6 - 10pm",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "6 - 10pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Pier 15",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Pier 15"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit",
+      "text": "Pier 15, Embarcadero, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-19",
+     "end": "2026-11-19",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Nov 19 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "rules": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "After Dark: Rule Breakers",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "After Dark: Rule Breakers"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thu, Dec 3 2026",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Dec 3 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "6 - 10pm",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "6 - 10pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Pier 15",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Pier 15"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit",
+      "text": "Pier 15, Embarcadero, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-12-03",
+     "end": "2026-12-03",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Dec 3 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "solstice": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "After Dark: Solstice",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "After Dark: Solstice"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thu, Dec 17 2026",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Dec 17 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "6 - 10pm",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "6 - 10pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Pier 15",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Pier 15"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit",
+      "text": "Pier 15, Embarcadero, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-12-17",
+     "end": "2026-12-17",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Dec 17 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "creep": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "After Dark: Creepatorium",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "After Dark: Creepatorium"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thu, Oct 29 2026",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Oct 29 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "6 - 10pm",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "6 - 10pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Pier 15",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Pier 15"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit",
+      "text": "Pier 15, Embarcadero, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-29",
+     "end": "2026-10-29",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Oct 29 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "unplug-nov": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "After Dark: Unplug and Play",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "After Dark: Unplug and Play"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thu, Nov 12 2026 · Thu, Dec 10 2026",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Nov 12 2026"
+      },
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Dec 10 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "6 - 10pm",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "6 - 10pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Pier 15",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Pier 15"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.exploratorium.edu/visit",
+      "text": "Pier 15, Embarcadero, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-12",
+     "end": "2026-11-12",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Nov 12 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-12-10",
+     "end": "2026-12-10",
+     "quotes": [
+      {
+       "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+       "text": "Thu, Dec 10 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "cole": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Cole Valley Nights",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/colevalleynights2026/",
+       "text": "Cole Valley Nights"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "December 10th – Holiday Nights",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/colevalleynights2026/",
+       "text": "December 10th – Holiday Nights"
+      }
+     ]
+    },
+    "time": {
+     "value": "4pm – 9pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/colevalleynights2026/",
+       "text": "4pm – 9pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Cole Street, between Carl and Parnassus",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/colevalleynights2026/",
+       "text": "Cole Street, between Carl and Parnassus"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/colevalleynights2026/",
+      "text": "San Francisco, CA"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Year not explicit in reviewed date text; no year inferred from URL, assets or weekday.",
+   "notes": ""
+  },
+  "holiday": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Sunset Holiday Mercantile",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+       "text": "Sunset Holiday Mercantile"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunset Holiday Mercantile in 2026 · Saturday, December 5 and Sunday, December 6",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+       "text": "Sunset Holiday Mercantile in 2026"
+      },
+      {
+       "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+       "text": "Saturday, December 5 and Sunday, December 6"
+      }
+     ]
+    },
+    "time": {
+     "value": "11am–5pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+       "text": "11am–5pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "SF County Fair Building in Golden Gate Park",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+       "text": "SF County Fair Building in Golden Gate Park"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free admission",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+       "text": "Free admission"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "11th Annual Sunset Holiday Mercantile",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+      "text": "11th Annual Sunset Holiday Mercantile"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+      "text": "San Francisco, CA"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-12-05",
+     "end": "2026-12-06",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+       "text": "Saturday, December 5 and Sunday, December 6"
+      },
+      {
+       "url": "https://sunsetmercantilesf.com/sunsetholidaymercantile/",
+       "text": "Sunset Holiday Mercantile in 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "taraval": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Holidays On Taraval",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/holidaysontaraval/",
+       "text": "Holidays On Taraval"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Friday, December 11th, 5pm-10pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/holidaysontaraval/",
+       "text": "Friday, December 11th, 5pm-10pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "5pm – 10pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/holidaysontaraval/",
+       "text": "5pm – 10pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "TARAVAL Street, 20th-24th Avenue",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/holidaysontaraval/",
+       "text": "TARAVAL Street, 20th-24th Avenue"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/holidaysontaraval/",
+      "text": "San Francisco, CA"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Year is not explicit; no year inferred from weekday or adjacent events.",
+   "notes": ""
+  },
+  "b-alemany-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Alemany Farmers Market",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/location--alemany-farmers-market",
+       "text": "Alemany Farmers Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "every Saturday",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/location--alemany-farmers-market",
+       "text": "every Saturday"
+      }
+     ]
+    },
+    "venue": {
+     "value": "100 Alemany Boulevard",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/location--alemany-farmers-market",
+       "text": "100 Alemany Boulevard"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "every Saturday",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/location--alemany-farmers-market",
+      "text": "every Saturday"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/location--alemany-farmers-market",
+      "text": "100 Alemany Boulevard\nSan Francisco, CA94110"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Time left blank: current SF.gov says 7am–2pm, while the City Environment directory says 6am–3pm. Admission not explicitly stated; free parking does not imply free entrance.",
+   "notes": ""
+  },
+  "b-heart-of-the-city-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Heart of the City Farmers’ Market",
+     "quotes": [
+      {
+       "url": "https://hotcfarmersmarket.org/about",
+       "text": "Heart of the City Farmers’ Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "a year-round farmers’ market on Sundays and Wednesdays",
+     "quotes": [
+      {
+       "url": "https://hotcfarmersmarket.org/about",
+       "text": "a year-round farmers’ market on Sundays and Wednesdays"
+      }
+     ]
+    },
+    "time": {
+     "value": "7am-4pm",
+     "quotes": [
+      {
+       "url": "https://hotcfarmersmarket.org/about",
+       "text": "7am-4pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Fulton Plaza between the Downtown Library and the Asian Art Museum",
+     "quotes": [
+      {
+       "url": "https://hotcfarmersmarket.org/about",
+       "text": "Fulton Plaza between the Downtown Library and the Asian Art Museum"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "on Sundays and Wednesdays",
+    "quotes": [
+     {
+      "url": "https://hotcfarmersmarket.org/about",
+      "text": "on Sundays and Wednesdays"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://hotcfarmersmarket.org/about",
+      "text": "in San Francisco's Civic Center"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "The About and homepage currently agree on 7am–4pm; earlier contradictory hour notes are superseded by this read. No admission fee is stated.",
+   "notes": "The operator states closures for Pride Parade in June, Christmas Eve, Christmas Day and New Year’s Day."
+  },
+  "b-golden-gate-park-band": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Golden Gate Park Band",
+     "quotes": [
+      {
+       "url": "https://goldengateparkband.org/",
+       "text": "Golden Gate Park Band"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Our season runs from April through September, with shows every Sunday plus July 4 and Labor Day",
+     "quotes": [
+      {
+       "url": "https://goldengateparkband.org/",
+       "text": "Our season runs from April through September, with shows every Sunday plus July 4 and Labor Day"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Spreckels Temple of Music in the Music Concourse of Golden Gate Park",
+     "quotes": [
+      {
+       "url": "https://goldengateparkband.org/",
+       "text": "Spreckels Temple of Music in the Music Concourse of Golden Gate Park"
+      }
+     ]
+    },
+    "price": {
+     "value": "free for all",
+     "quotes": [
+      {
+       "url": "https://goldengateparkband.org/",
+       "text": "free for all"
+      }
+     ]
+    },
+    "time": {
+     "value": "typically start at 1 p.m. on Sundays",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/1570/Golden-Gate-Bandshell-Concerts",
+       "text": "typically start at 1 p.m. on Sundays"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "shows every Sunday",
+    "quotes": [
+     {
+      "url": "https://goldengateparkband.org/",
+      "text": "shows every Sunday"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/1570/Golden-Gate-Bandshell-Concerts",
+      "text": "Golden Gate Bandshell Concerts | San Francisco Recreation and Parks, CA"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Seasonal series, not a confirmed next dated occurrence. Operator and City park page differ on season end wording; the operator wording is reproduced, no October date inferred.",
+   "notes": ""
+  },
+  "b-downtown-first-thursdays": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "DOWNTOWN FIRST THURSDAYS",
+     "quotes": [
+      {
+       "url": "https://www.dftsf.com/",
+       "text": "DOWNTOWN FIRST THURSDAYS"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "NOV 5, 2026",
+     "quotes": [
+      {
+       "url": "https://www.dftsf.com/",
+       "text": "NOV 5, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "5-10PM",
+     "quotes": [
+      {
+       "url": "https://www.dftsf.com/",
+       "text": "5-10PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "2nd St. between Market and Howard in SF",
+     "quotes": [
+      {
+       "url": "https://www.dftsf.com/",
+       "text": "2nd St. between Market and Howard in SF"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free w/ RSVP",
+     "quotes": [
+      {
+       "url": "https://www.dftsf.com/",
+       "text": "Free w/ RSVP"
+      }
+     ]
+    }
+   },
+   "kind": "Monthly",
+   "recurrence": {
+    "value": "Free Monthly Street Party",
+    "quotes": [
+     {
+      "url": "https://www.dftsf.com/",
+      "text": "Free Monthly Street Party"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.dftsf.com/",
+      "text": "2nd St. between Market and Howard in SF"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-05",
+     "end": "2026-11-05",
+     "quotes": [
+      {
+       "url": "https://www.dftsf.com/",
+       "text": "NOV 5, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "b-castro-night-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Castro Night Market",
+     "quotes": [
+      {
+       "url": "https://castronightmarket.com/",
+       "text": "Castro Night Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 31, 2026",
+     "quotes": [
+      {
+       "url": "https://castronightmarket.com/",
+       "text": "October 31, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "5-10PM",
+     "quotes": [
+      {
+       "url": "https://castronightmarket.com/",
+       "text": "5-10PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "18th & Castro",
+     "quotes": [
+      {
+       "url": "https://castronightmarket.com/",
+       "text": "18th & Castro"
+      }
+     ]
+    }
+   },
+   "kind": "Monthly",
+   "recurrence": {
+    "value": "on the 3rd Friday of every month",
+    "quotes": [
+     {
+      "url": "https://castronightmarket.com/",
+      "text": "on the 3rd Friday of every month"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.castrostreetfair.org/",
+      "text": "San Francisco’s Castro neighborhood"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-31",
+     "end": "2026-10-31",
+     "quotes": [
+      {
+       "url": "https://castronightmarket.com/",
+       "text": "October 31, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Organizer simultaneously advertises a third-Friday pattern and Saturday October 31. The explicit edition date is retained; no date generated from the recurrence. Admission not stated.",
+   "notes": ""
+  },
+  "b-off-the-grid-fort-mason": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Off the Grid Fort Mason Center",
+     "quotes": [
+      {
+       "url": "https://offthegrid.com/markets/fort-mason-center",
+       "text": "Off the Grid Fort Mason Center"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "City-only location not established in the reviewed excerpt."
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Runner returns only the page title. Monthly cadence, 2026 dates, times and admission are not established from that response; inherited values blanked.",
+   "notes": ""
+  },
+  "b-sf-pride-parade": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Pride Parade",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Pride Parade"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, June 28, 2026",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Sunday, June 28, 2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Market Street",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Market Street"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfpride.org/events/",
+      "text": "San Francisco Pride 2026"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-06-28",
+     "end": "2026-06-28",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Sunday, June 28, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "2026 event record only. Price/time and a 2027 event-specific day not confirmed; no day inferred from the combined 2027 Pride weekend.",
+   "notes": ""
+  },
+  "b-trans-march": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Trans March",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Trans March"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Friday, June 26, 2026",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Friday, June 26, 2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Dolores Park, Mission District",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Dolores Park, Mission District"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "The Trans March is an annual gathering and march",
+    "quotes": [
+     {
+      "url": "https://sfpride.org/events/",
+      "text": "The Trans March is an annual gathering and march"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfpride.org/events/",
+      "text": "San Francisco Pride 2026"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-06-26",
+     "end": "2026-06-26",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Friday, June 26, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "2026 event record only. Price/time and a 2027 event-specific day not confirmed; no day inferred from the combined 2027 Pride weekend.",
+   "notes": ""
+  },
+  "b-dyke-march": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Dyke March",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Dyke March"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Saturday, June 27, 2026",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Saturday, June 27, 2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Dolores Park, Mission District",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Dolores Park, Mission District"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfpride.org/events/",
+      "text": "San Francisco Pride 2026"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-06-27",
+     "end": "2026-06-27",
+     "quotes": [
+      {
+       "url": "https://sfpride.org/events/",
+       "text": "Saturday, June 27, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "2026 event record only. Price/time and a 2027 event-specific day not confirmed; no day inferred from the combined 2027 Pride weekend.",
+   "notes": ""
+  },
+  "b-castro-street-fair": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Castro Street Fair",
+     "quotes": [
+      {
+       "url": "https://www.castrostreetfair.org/",
+       "text": "Castro Street Fair"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, October 4, 2026",
+     "quotes": [
+      {
+       "url": "https://www.castrostreetfair.org/",
+       "text": "Sunday, October 4, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "11 a.m. to 6 p.m.",
+     "quotes": [
+      {
+       "url": "https://www.castrostreetfair.org/",
+       "text": "11 a.m. to 6 p.m."
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco’s Castro neighborhood",
+     "quotes": [
+      {
+       "url": "https://www.castrostreetfair.org/",
+       "text": "San Francisco’s Castro neighborhood"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "52nd annual celebration",
+    "quotes": [
+     {
+      "url": "https://www.castrostreetfair.org/",
+      "text": "52nd annual celebration"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.castrostreetfair.org/",
+      "text": "San Francisco’s Castro neighborhood"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-04",
+     "end": "2026-10-04",
+     "quotes": [
+      {
+       "url": "https://www.castrostreetfair.org/",
+       "text": "Sunday, October 4, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Organizer announces October 3, 2027, but this entry retains the fully described 2026 edition; 2026 times are not transferred to 2027. A gate donation is requested; no fixed $10–$20 admission confirmed.",
+   "notes": ""
+  },
+  "b-folsom-street-fair": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Folsom Street Fair",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "Folsom Street Fair"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, September 27, 2026",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "Sunday, September 27, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "11AM-6PM",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "11AM-6PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Folsom Street between 7th and 13th Streets",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "Folsom Street between 7th and 13th Streets"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.folsomstreet.org/faq",
+      "text": "Per San Francisco city ordinance, all permitted outdoor events must be smoke-free!"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-09-27",
+     "end": "2026-09-27",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "Sunday, September 27, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Organizer gives usual last-Sunday patterns but not a guaranteed date for a future year. Gate donation wording is not treated as a confirmed free entrance.",
+   "notes": ""
+  },
+  "b-up-your-alley": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Up Your Alley",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "Up Your Alley"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, July 26, 2026",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "Sunday, July 26, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "11AM-6PM",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "11AM-6PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Folsom Street between 8th and 11th",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "Folsom Street between 8th and 11th"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.folsomstreet.org/faq",
+      "text": "Per San Francisco city ordinance, all permitted outdoor events must be smoke-free!"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-07-26",
+     "end": "2026-07-26",
+     "quotes": [
+      {
+       "url": "https://www.folsomstreet.org/faq",
+       "text": "Sunday, July 26, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Organizer gives usual last-Sunday patterns but not a guaranteed date for a future year. Gate donation wording is not treated as a confirmed free entrance.",
+   "notes": ""
+  },
+  "b-chinese-new-year-street-fair": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Community Street Fair",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/communityfair/",
+       "text": "Community Street Fair"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "The 2027 Community Street Fair is scheduled for Sat. & Sun. Feb. 20 & 21",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/communityfair/",
+       "text": "The 2027 Community Street Fair is scheduled for Sat. & Sun. Feb. 20 & 21"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Grant between California and Broadway",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/communityfair/",
+       "text": "Grant between California and Broadway"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://chineseparade.com/communityfair/",
+      "text": "San Francisco’s exhilarating Chinatown"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2027-02-20",
+     "end": "2027-02-21",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/communityfair/",
+       "text": "The 2027 Community Street Fair is scheduled for Sat. & Sun. Feb. 20 & 21"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "b-choy-sun-doe": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Choy Sun Doe",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/choysundoe/",
+       "text": "Choy Sun Doe"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "The 2027 Choy Sun Doe Day is scheduled for Saturday, Feb. 6.",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/choysundoe/",
+       "text": "The 2027 Choy Sun Doe Day is scheduled for Saturday, Feb. 6."
+      }
+     ]
+    },
+    "venue": {
+     "value": "Chinatown",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/choysundoe/",
+       "text": "Chinatown"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://chineseparade.com/communityfair/",
+      "text": "San Francisco’s exhilarating Chinatown"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2027-02-06",
+     "end": "2027-02-06",
+     "quotes": [
+      {
+       "url": "https://chineseparade.com/choysundoe/",
+       "text": "The 2027 Choy Sun Doe Day is scheduled for Saturday, Feb. 6."
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Official announcement does not state admission or start time.",
+   "notes": ""
+  },
+  "b-italian-heritage-parade": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Italian Heritage Parade",
+     "quotes": [
+      {
+       "url": "https://sfitalianheritage.org/events/",
+       "text": "Italian Heritage Parade"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, October 10th 2027 12:30 PM",
+     "quotes": [
+      {
+       "url": "https://sfitalianheritage.org/events/",
+       "text": "Sunday, October 10th 2027 12:30 PM"
+      }
+     ]
+    },
+    "time": {
+     "value": "12:30 PM",
+     "quotes": [
+      {
+       "url": "https://sfitalianheritage.org/events/",
+       "text": "12:30 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Jefferson and Powell Streets in Fisherman’s Wharf",
+     "quotes": [
+      {
+       "url": "https://sfitalianheritage.org/events/",
+       "text": "Jefferson and Powell Streets in Fisherman’s Wharf"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfitalianheritage.org/",
+      "text": "San Francisco’s Italian-American Community celebrates the Italian Heritage Festival & Parade"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2027-10-10",
+     "end": "2027-10-10",
+     "quotes": [
+      {
+       "url": "https://sfitalianheritage.org/events/",
+       "text": "Sunday, October 10th 2027 12:30 PM"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "b-north-beach-festival": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "North Beach Festival",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/northbeachfestival2026/",
+       "text": "North Beach Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Saturday, June 20th & Sunday, June 21st",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/northbeachfestival2026/",
+       "text": "Saturday, June 20th & Sunday, June 21st"
+      }
+     ]
+    },
+    "time": {
+     "value": "11 AM to 7 PM",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/northbeachfestival2026/",
+       "text": "11 AM to 7 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "North Beach, San Francisco (centered around Columbus and Green Streets)",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/northbeachfestival2026/",
+       "text": "North Beach, San Francisco (centered around Columbus and Green Streets)"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/northbeachfestival2026/",
+      "text": "North Beach, San Francisco (centered around Columbus and Green Streets)"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-06-20",
+     "end": "2026-06-21",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/northbeachfestival2026/",
+       "text": "Saturday, June 20th & Sunday, June 21st"
+      },
+      {
+       "url": "https://sunsetmercantilesf.com/northbeachfestival2026/",
+       "text": "North Beach Festival 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Admission not confirmed. Edition numbers differ across legacy sources and are not asserted.",
+   "notes": ""
+  },
+  "b-haight-ashbury-street-fair": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Haight-Ashbury Street Fair",
+     "quotes": [
+      {
+       "url": "https://www.haightashburystreetfair.org/",
+       "text": "Haight-Ashbury Street Fair"
+      }
+     ]
+    },
+    "price": {
+     "value": "Your support helps keep the Fair free",
+     "quotes": [
+      {
+       "url": "https://www.haightashburystreetfair.org/",
+       "text": "Your support helps keep the Fair free"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "City-only location not established in the reviewed excerpt."
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Landing-page text confirms the event/free policy but not an exact street extent or dated schedule. Inherited September 20 and 11am–5:30pm not carried without a dated quote.",
+   "notes": ""
+  },
+  "b-union-street-festival": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Union Street Festival",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/unionstreetfestival/",
+       "text": "Union Street Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "June 6 – June 7, 2026",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/unionstreetfestival/",
+       "text": "June 6 – June 7, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "11 am-7 pm",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/unionstreetfestival/",
+       "text": "11 am-7 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Union Street from Fillmore to Gough Street",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/unionstreetfestival/",
+       "text": "Union Street from Fillmore to Gough Street"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sunsetmercantilesf.com/unionstreetfestival/",
+      "text": "street festivals in San Francisco"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-06-06",
+     "end": "2026-06-07",
+     "quotes": [
+      {
+       "url": "https://sunsetmercantilesf.com/unionstreetfestival/",
+       "text": "June 6 – June 7, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "b-cherry-blossom-festival": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Northern California Cherry Blossom Festival",
+     "quotes": [
+      {
+       "url": "https://sfcherryblossom.org/",
+       "text": "Northern California Cherry Blossom Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "April 10-11 and 17-18, 2027",
+     "quotes": [
+      {
+       "url": "https://sfcherryblossom.org/",
+       "text": "April 10-11 and 17-18, 2027"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "59th Annual Northern California Cherry Blossom Festival",
+    "quotes": [
+     {
+      "url": "https://sfcherryblossom.org/",
+      "text": "59th Annual Northern California Cherry Blossom Festival"
+     }
+    ]
+   },
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "City-only location not established in the reviewed excerpt."
+   },
+   "occurrences": [
+    {
+     "start": "2027-04-10",
+     "end": "2027-04-11",
+     "quotes": [
+      {
+       "url": "https://sfcherryblossom.org/",
+       "text": "April 10-11 and 17-18, 2027"
+      }
+     ]
+    },
+    {
+     "start": "2027-04-17",
+     "end": "2027-04-18",
+     "quotes": [
+      {
+       "url": "https://sfcherryblossom.org/",
+       "text": "April 10-11 and 17-18, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "review_only",
+   "reason": "Future dates confirmed; current organizer copy says Peace Plaza is under renovation. Inherited Peace Plaza venue and free admission not copied to 2027 without confirmation.",
+   "notes": ""
+  },
+  "b-nihonmachi-street-fair": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Nihonmachi Street Fair",
+     "quotes": [
+      {
+       "url": "https://www.nihonmachistreetfair.org/",
+       "text": "Nihonmachi Street Fair"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "August 7th & 8th, 2027",
+     "quotes": [
+      {
+       "url": "https://www.nihonmachistreetfair.org/",
+       "text": "August 7th & 8th, 2027"
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco’s Japantown",
+     "quotes": [
+      {
+       "url": "https://www.nihonmachistreetfair.org/",
+       "text": "San Francisco’s Japantown"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "53rd Annual Nihonmachi Street Fair",
+    "quotes": [
+     {
+      "url": "https://www.nihonmachistreetfair.org/",
+      "text": "53rd Annual Nihonmachi Street Fair"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.nihonmachistreetfair.org/",
+      "text": "San Francisco’s Japantown"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2027-08-07",
+     "end": "2027-08-08",
+     "quotes": [
+      {
+       "url": "https://www.nihonmachistreetfair.org/",
+       "text": "August 7th & 8th, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Times, specific street closures and free admission not transferred from earlier editions.",
+   "notes": ""
+  },
+  "b-pistahan": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Pistahan Parade and Festival",
+     "quotes": [
+      {
+       "url": "https://www.pistahan.net/",
+       "text": "Pistahan Parade and Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sat, Aug 8 & Sun, Aug 9, 2026",
+     "quotes": [
+      {
+       "url": "https://www.pistahan.net/",
+       "text": "Sat, Aug 8 & Sun, Aug 9, 2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Yerba Buena Gardens",
+     "quotes": [
+      {
+       "url": "https://www.pistahan.net/",
+       "text": "Yerba Buena Gardens"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free admission",
+     "quotes": [
+      {
+       "url": "https://www.pistahan.net/",
+       "text": "Free admission"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "33rd Annual Pistahan Parade and Festival",
+    "quotes": [
+     {
+      "url": "https://www.pistahan.net/",
+      "text": "33rd Annual Pistahan Parade and Festival"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.pistahan.net/",
+      "text": "Yerba Buena Gardens,\nSan Francisco, CA"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-08-08",
+     "end": "2026-08-09",
+     "quotes": [
+      {
+       "url": "https://www.pistahan.net/",
+       "text": "Sat, Aug 8 & Sun, Aug 9, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Start times and exact parade route not present in the reviewed organizer excerpt.",
+   "notes": ""
+  },
+  "b-autumn-moon-festival": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "2026 SF Chinatown Autumn Moon Festival",
+     "quotes": [
+      {
+       "url": "https://www.moonfestival.org/",
+       "text": "2026 SF Chinatown Autumn Moon Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "2026 SF Chinatown Autumn Moon Festival · September 19 - 20",
+     "quotes": [
+      {
+       "url": "https://www.moonfestival.org/",
+       "text": "2026 SF Chinatown Autumn Moon Festival"
+      },
+      {
+       "url": "https://www.moonfestival.org/",
+       "text": "September 19 - 20"
+      }
+     ]
+    },
+    "venue": {
+     "value": "GRANT Avenue\nBetween California & Broadway",
+     "quotes": [
+      {
+       "url": "https://www.moonfestival.org/",
+       "text": "GRANT Avenue\nBetween California & Broadway"
+      }
+     ]
+    },
+    "price": {
+     "value": "FREE!",
+     "quotes": [
+      {
+       "url": "https://www.moonfestival.org/",
+       "text": "FREE!"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.moonfestival.org/",
+      "text": "2026 SF Chinatown Autumn Moon Festival"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-09-19",
+     "end": "2026-09-20",
+     "quotes": [
+      {
+       "url": "https://www.moonfestival.org/",
+       "text": "September 19 - 20"
+      },
+      {
+       "url": "https://www.moonfestival.org/",
+       "text": "2026 SF Chinatown Autumn Moon Festival"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Time blank: organizer states 11am–5pm while prior official SFMTA evidence conflicts. Both precise hours are retained only in the audit history, not silently reconciled.",
+   "notes": ""
+  },
+  "b-st-patricks-day-parade": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco St. Patrick’s Day Parade",
+     "quotes": [
+      {
+       "url": "https://uissf.org/st-patricks-day-parade",
+       "text": "San Francisco St. Patrick’s Day Parade"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Saturday, March 14th, 2026",
+     "quotes": [
+      {
+       "url": "https://uissf.org/st-patricks-day-parade",
+       "text": "Saturday, March 14th, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "11:30am",
+     "quotes": [
+      {
+       "url": "https://uissf.org/st-patricks-day-parade",
+       "text": "11:30am"
+      }
+     ]
+    },
+    "venue": {
+     "value": "From 2nd & Market to the Civic Center.",
+     "quotes": [
+      {
+       "url": "https://uissf.org/st-patricks-day-parade",
+       "text": "From 2nd & Market to the Civic Center."
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://uissf.org/st-patricks-day-parade",
+      "text": "San Francisco St. Patrick’s Day Parade"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-03-14",
+     "end": "2026-03-14",
+     "quotes": [
+      {
+       "url": "https://uissf.org/st-patricks-day-parade",
+       "text": "Saturday, March 14th, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "The linked separate Unite SF festival is free; that is not treated as proof of parade admission.",
+   "notes": ""
+  },
+  "b-greek-food-festival": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco Greek Food Festival",
+     "quotes": [
+      {
+       "url": "https://www.annunciation.org/news_260903_1",
+       "text": "San Francisco Greek Food Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "September 18–20",
+     "quotes": [
+      {
+       "url": "https://www.annunciation.org/news_260903_1",
+       "text": "September 18–20"
+      }
+     ]
+    },
+    "time": {
+     "value": "Friday, September 18 and Saturday, September 19 from 11:00 a.m. to 10:00 p.m. · Sunday, September 20 from 11:00 a.m. to 7:00 p.m.",
+     "quotes": [
+      {
+       "url": "https://www.annunciation.org/news_260903_1",
+       "text": "Friday, September 18 and Saturday, September 19 from 11:00 a.m. to 10:00 p.m."
+      },
+      {
+       "url": "https://www.annunciation.org/news_260903_1",
+       "text": "Sunday, September 20 from 11:00 a.m. to 7:00 p.m."
+      }
+     ]
+    },
+    "venue": {
+     "value": "Annunciation Cathedral, 245 Valencia Street",
+     "quotes": [
+      {
+       "url": "https://www.annunciation.org/news_260903_1",
+       "text": "Annunciation Cathedral, 245 Valencia Street"
+      }
+     ]
+    },
+    "price": {
+     "value": "Admission is free",
+     "quotes": [
+      {
+       "url": "https://www.annunciation.org/news_260903_1",
+       "text": "Admission is free"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.annunciation.org/news_260903_1",
+      "text": "245 Valencia Street, San Francisco, CA 94103"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-09-18",
+     "end": "2026-09-20",
+     "quotes": [
+      {
+       "url": "https://www.annunciation.org/news_260903_1",
+       "text": "September 18–20"
+      },
+      {
+       "url": "https://www.annunciation.org/news_260903_1",
+       "text": "2026 will be your very first visit"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "b-fleet-week-air-show": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco Fleet Week Air Show",
+     "quotes": [
+      {
+       "url": "https://fleetweeksf.org/air-show/",
+       "text": "San Francisco Fleet Week Air Show"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 9, 10, 11, 2026",
+     "quotes": [
+      {
+       "url": "https://fleetweeksf.org/air-show/",
+       "text": "October 9, 10, 11, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "12:00 Noon - 4:00 PM",
+     "quotes": [
+      {
+       "url": "https://fleetweeksf.org/air-show/",
+       "text": "12:00 Noon - 4:00 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Marina Green",
+     "quotes": [
+      {
+       "url": "https://fleetweeksf.org/air-show/",
+       "text": "Marina Green"
+      }
+     ]
+    },
+    "price": {
+     "value": "General Admission is free.",
+     "quotes": [
+      {
+       "url": "https://fleetweeksf.org/air-show/",
+       "text": "General Admission is free."
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "Held annually",
+    "quotes": [
+     {
+      "url": "https://fleetweeksf.org/air-show/",
+      "text": "Held annually"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://fleetweeksf.org/air-show/",
+      "text": "San Francisco Fleet Week Air Show"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-09",
+     "end": "2026-10-11",
+     "quotes": [
+      {
+       "url": "https://fleetweeksf.org/air-show/",
+       "text": "October 9, 10, 11, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "SF Marina Green viewing event only; this entry does not admit every activity across the Bay. VIP hospitality is separate.",
+   "notes": ""
+  },
+  "b-bay-to-breakers": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Bay to Breakers",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "Bay to Breakers"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "May 16, 2027",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "May 16, 2027"
+      }
+     ]
+    },
+    "venue": {
+     "value": "THE STREETS OF SAN FRANCISCO",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "THE STREETS OF SAN FRANCISCO"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.baytobreakers.com/",
+      "text": "THIS HISTORIC FUN RUN THROUGH THE STREETS OF SAN FRANCISCO"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2027-05-16",
+     "end": "2027-05-16",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "May 16, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Race date is explicit. Ancillary shakeout/baseball blocks have no year and stale May 18 copy; their year is not inferred from the race banner.",
+   "notes": ""
+  },
+  "b-giants-vs-athletics-b2b-runners-night": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "GIANTS VS ATHLETICS",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "GIANTS VS ATHLETICS"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Date: May 16th",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "Date: May 16th"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Oracle Park",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "Oracle Park"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.baytobreakers.com/",
+      "text": "San Francisco, CA 94107"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Year deliberately blank: dates are yearless within stale copy that still says before May 18. The 2027 race banner does not verify ancillary-event years.",
+   "notes": ""
+  },
+  "b-b2b-shakeout-run-2027": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "B2B SHAKE OUT RUN",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "B2B SHAKE OUT RUN"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Date: May 15th",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "Date: May 15th"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Sports Basement: Stonestown Galleria",
+     "quotes": [
+      {
+       "url": "https://www.baytobreakers.com/",
+       "text": "Sports Basement: Stonestown Galleria"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.baytobreakers.com/",
+      "text": "San Francisco, CA 94132"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Year deliberately blank: dates are yearless within stale copy that still says before May 18. The 2027 race banner does not verify ancillary-event years.",
+   "notes": ""
+  },
+  "b-sf-marathon": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {},
+   "kind": "Unverified",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Not established"
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Strict city-only rule: the cited full marathon route includes the Golden Gate Bridge/Marin segment. Whole-race row is held for review; no mixed-city event is presented as entirely San Francisco.",
+   "notes": ""
+  },
+  "b-sunday-streets": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Sunday Streets",
+     "quotes": [
+      {
+       "url": "https://sundaystreetssf.com/",
+       "text": "Sunday Streets"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "2026",
+     "quotes": [
+      {
+       "url": "https://sundaystreetssf.com/",
+       "text": "2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco",
+     "quotes": [
+      {
+       "url": "https://sundaystreetssf.com/",
+       "text": "San Francisco"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sundaystreetssf.com/",
+      "text": "Sunday Streets is San Francisco’s open streets program"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Umbrella programme, not an individual upcoming instance. The Excelsior dated occurrence is listed separately and linked as a child; no weekly/annual frequency inferred.",
+   "notes": ""
+  },
+  "b-noise-pop-festival": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Noise Pop Festival",
+     "quotes": [
+      {
+       "url": "https://www.noisepopfest.com/",
+       "text": "Noise Pop Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "February 18-28, 2027",
+     "quotes": [
+      {
+       "url": "https://www.noisepopfest.com/",
+       "text": "February 18-28, 2027"
+      }
+     ]
+    },
+    "venue": {
+     "value": "multiple venues throughout the city of San Francisco",
+     "quotes": [
+      {
+       "url": "https://www.noisepopfest.com/",
+       "text": "multiple venues throughout the city of San Francisco"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.noisepopfest.com/",
+      "text": "Taking place across multiple venues throughout the city of San Francisco"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2027-02-18",
+     "end": "2027-02-28",
+     "quotes": [
+      {
+       "url": "https://www.noisepopfest.com/",
+       "text": "February 18-28, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Only the explicitly stated San Francisco programme; no Bay Area satellite event or ticket price inferred.",
+   "notes": ""
+  },
+  "b-lit-crawl": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Lit Crawl SF",
+     "quotes": [
+      {
+       "url": "https://www.litquake.org/litcrawl",
+       "text": "Lit Crawl SF"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "OCTOBER 24, 2026",
+     "quotes": [
+      {
+       "url": "https://www.litquake.org/litcrawl",
+       "text": "OCTOBER 24, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "all programs from 6:30—7:30 PM",
+     "quotes": [
+      {
+       "url": "https://www.litquake.org/litcrawl",
+       "text": "all programs from 6:30—7:30 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco's Mission District",
+     "quotes": [
+      {
+       "url": "https://www.litquake.org/litcrawl",
+       "text": "San Francisco's Mission District"
+      }
+     ]
+    },
+    "price": {
+     "value": "free pop-up literary event",
+     "quotes": [
+      {
+       "url": "https://www.litquake.org/litcrawl",
+       "text": "free pop-up literary event"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.litquake.org/litcrawl",
+      "text": "San Francisco's Mission District"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-24",
+     "end": "2026-10-24",
+     "quotes": [
+      {
+       "url": "https://www.litquake.org/litcrawl",
+       "text": "OCTOBER 24, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Current official text says all programs 6:30–7:30 PM; inherited 5–9 PM not reused. Venue changes are listed by the organizer; check the map before attending.",
+   "notes": ""
+  },
+  "b-filbookfest": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Filipino American International Book Festival",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
+       "text": "Filipino American International Book Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, 10/18/2026, 12:00 - 5:30",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
+       "text": "Sunday, 10/18/2026, 12:00 - 5:30"
+      }
+     ]
+    },
+    "time": {
+     "value": "12:00 - 5:30",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
+       "text": "12:00 - 5:30"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Main Library",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
+       "text": "Main Library"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
+      "text": "Filipino American community of San Francisco with the Library"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-18",
+     "end": "2026-10-18",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
+       "text": "Sunday, 10/18/2026, 12:00 - 5:30"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Only the explicitly year-stated October 18 listing is normalized; the introductory October 17–18 text lacks its own year. This is an edition record, not proof of annual recurrence.",
+   "notes": ""
+  },
+  "b-sf-symphony-season": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "SAN FRANCISCO SYMPHONY",
+     "quotes": [
+      {
+       "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+       "text": "SAN FRANCISCO SYMPHONY"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "2026\n –\n27 SEASON CONCERT CALENDAR",
+     "quotes": [
+      {
+       "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+       "text": "2026\n –\n27 SEASON CONCERT CALENDAR"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Davies Symphony Hall, 201 Van Ness Avenue, San Francisco",
+     "quotes": [
+      {
+       "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+       "text": "Davies Symphony Hall, 201 Van Ness Avenue, San Francisco"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+      "text": "All concerts are at Davies Symphony Hall, 201 Van Ness Avenue, San Francisco, unless otherwise noted."
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Umbrella season record, not a single concert. Only Davies Hall events in scope; PDF explicitly allows other venues, which are not automatically admitted.",
+   "notes": ""
+  },
+  "x-sf-symphony-opening-gala": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Opening Gala with Hilary Hahn",
+     "quotes": [
+      {
+       "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+       "text": "Opening Gala with Hilary Hahn"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Davies Symphony Hall, 201 Van Ness Avenue, San Francisco",
+     "quotes": [
+      {
+       "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+       "text": "Davies Symphony Hall, 201 Van Ness Avenue, San Francisco"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+      "text": "All concerts are at Davies Symphony Hall, 201 Van Ness Avenue, San Francisco, unless otherwise noted."
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "PDF text extraction splits the day and date across characters. Exact normalized date/time withheld pending a clean dated event page; no false automatic PDF verification.",
+   "notes": ""
+  },
+  "b-sf-opera-season": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco Opera",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "San Francisco Opera"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "2026–27 SEASON",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "2026–27 SEASON"
+      }
+     ]
+    },
+    "venue": {
+     "value": "War Memorial Opera House",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "War Memorial Opera House"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+      "text": "SAN FRANCISCO, CA (February 3, 2026)"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Umbrella season record. Opening-gala details in this old announcement are superseded by the current Opera Ball page. Season end is not generated from its child productions.",
+   "notes": ""
+  },
+  "b-opera-in-the-park": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Opera in the Park",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "Opera in the Park"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, September 13",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "Sunday, September 13"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Robin Williams Meadow in San Francisco’s Golden Gate Park",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "Robin Williams Meadow in San Francisco’s Golden Gate Park"
+      }
+     ]
+    },
+    "price": {
+     "value": "free, annual Opera in the Park concert",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "free, annual Opera in the Park concert"
+      }
+     ]
+    }
+   },
+   "kind": "Annual",
+   "recurrence": {
+    "value": "annual Opera in the Park concert",
+    "quotes": [
+     {
+      "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+      "text": "annual Opera in the Park concert"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+      "text": "Robin Williams Meadow in San Francisco’s Golden Gate Park"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-09-13",
+     "end": "2026-09-13",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "Sunday, September 13"
+      },
+      {
+       "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+       "text": "SAN FRANCISCO, CA (February 3, 2026)"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "2026 opening-weekend context checked; no next-year date inferred.",
+   "notes": ""
+  },
+  "b-sf-ballet-season": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco Ballet",
+     "quotes": [
+      {
+       "url": "https://www.sfballet.org/2026-2027-season/",
+       "text": "San Francisco Ballet"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "2026 2027 Season",
+     "quotes": [
+      {
+       "url": "https://www.sfballet.org/2026-2027-season/",
+       "text": "2026 2027 Season"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "City-only location not established in the reviewed excerpt."
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Programme is confirmed, but this season includes Palace of Fine Arts as well as other venues. An umbrella War Memorial venue and annual frequency are not copied to every production.",
+   "notes": ""
+  },
+  "b-sfjazz-season": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {},
+   "kind": "Unverified",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Not established"
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Official season page blocks this runner (403); inherited dates, venue and concert count are not field-verified in this audit.",
+   "notes": ""
+  },
+  "b-sffilm-festival": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco International Film Festival",
+     "quotes": [
+      {
+       "url": "https://sffilm.org/yr-faq/",
+       "text": "San Francisco International Film Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "April 22—May 2, 2027",
+     "quotes": [
+      {
+       "url": "https://sffilm.org/yr-faq/",
+       "text": "April 22—May 2, 2027"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "City-only location not established in the reviewed excerpt."
+   },
+   "occurrences": [
+    {
+     "start": "2027-04-22",
+     "end": "2027-05-02",
+     "quotes": [
+      {
+       "url": "https://sffilm.org/yr-faq/",
+       "text": "April 22—May 2, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "review_only",
+   "reason": "Dates confirmed. The FAQ does not establish the 2027 SF-only venue programme; no Bay Area screenings or general $20 price carried into this edition.",
+   "notes": ""
+  },
+  "b-frameline": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco International LGBTQ+ Film Festival",
+     "quotes": [
+      {
+       "url": "https://www.frameline.org/attend",
+       "text": "San Francisco International LGBTQ+ Film Festival"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "City-only location not established in the reviewed excerpt."
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Organizer explicitly includes San Francisco, Berkeley and Oakland. Whole-festival entry is held off the city-only directory; individual SF screenings need their own venue evidence. No year inferred from Frameline50.",
+   "notes": ""
+  },
+  "b-giants-home-season": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "San Francisco Giants",
+     "quotes": [
+      {
+       "url": "https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule",
+       "text": "San Francisco Giants"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "2027 regular season schedule",
+     "quotes": [
+      {
+       "url": "https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule",
+       "text": "2027 regular season schedule"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Oracle Park",
+     "quotes": [
+      {
+       "url": "https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule",
+       "text": "Oracle Park"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.mlb.com/press-release/press-release-giants-announce-tentative-2027-regular-season-schedule",
+      "text": "SAN FRANCISCO, Calif."
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Official title says tentative. This is a home-season umbrella, not a verified list of all 81 games. Away games in the same announcement are excluded.",
+   "notes": "Tentative schedule; exact times and admission are not stated.",
+   "date_status": "tentative"
+  },
+  "b-nye-fireworks": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "New Year's Eve Fireworks Celebration",
+     "quotes": [
+      {
+       "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+       "text": "New Year's Eve Fireworks Celebration"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "December 31, 2025 11:59 pm · January 1, 2026 12:15 am",
+     "quotes": [
+      {
+       "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+       "text": "December 31, 2025 11:59 pm"
+      },
+      {
+       "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+       "text": "January 1, 2026 12:15 am"
+      }
+     ]
+    },
+    "time": {
+     "value": "11:59 pm · 12:15 am",
+     "quotes": [
+      {
+       "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+       "text": "11:59 pm"
+      },
+      {
+       "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+       "text": "12:15 am"
+      }
+     ]
+    },
+    "venue": {
+     "value": "The Embarcadero",
+     "quotes": [
+      {
+       "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+       "text": "The Embarcadero"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free",
+     "quotes": [
+      {
+       "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+       "text": "Free"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+      "text": "The Embarcadero\nSan Francisco, CA 94111"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2025-12-31",
+     "end": "2026-01-01",
+     "quotes": [
+      {
+       "url": "https://www.sfport.com/meetings/new-years-eve-fireworks-celebration-1",
+       "text": "December 31, 2025 11:59 pm\nto\nJanuary 1, 2026 12:15 am"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Source confirms the past 2025/26 transition only, not December 2026 or a 2026/27 edition.",
+   "notes": ""
+  },
+  "b-scaregrove": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Scaregrove Halloween Event",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Scaregrove Halloween Event"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 30, 2026, 3:00 PM - 9:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 30, 2026, 3:00 PM - 9:00 PM"
+      }
+     ]
+    },
+    "time": {
+     "value": "3:00 PM - 9:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "3:00 PM - 9:00 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Sigmund Stern Grove",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Sigmund Stern Grove"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free Halloween fun for the entire family!",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Free Halloween fun for the entire family!"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx",
+      "text": "Sigmund Stern Grove19th Avenue and Sloat BoulevardSan FranciscoCA94132"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-30",
+     "end": "2026-10-30",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 30, 2026, 3:00 PM - 9:00 PM"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Separate published start/end times for Scaregrove and its Mobile Rec activation are retained as distinct entries; not silently treated as the same schedule.",
+   "notes": ""
+  },
+  "b-mobile-rec-civic-center-2026": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Mobile Rec and B Mo Magic Special Event at Civic Center Plaza",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Mobile Rec and B Mo Magic Special Event at Civic Center Plaza"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 17, 2026, 10:00 AM - 2:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 17, 2026, 10:00 AM - 2:00 PM"
+      }
+     ]
+    },
+    "time": {
+     "value": "10:00 AM - 2:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "10:00 AM - 2:00 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Civic Center Plaza",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Civic Center Plaza"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx",
+      "text": "335 McAllister St, San FranciscoCA94102"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-17",
+     "end": "2026-10-17",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 17, 2026, 10:00 AM - 2:00 PM"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "b-mobile-rec-sunday-streets-excelsior-2026": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Mobile Rec at Sunday Streets",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Mobile Rec at Sunday Streets"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 18, 2026, 11:00 AM - 4:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 18, 2026, 11:00 AM - 4:00 PM"
+      }
+     ]
+    },
+    "time": {
+     "value": "11:00 AM - 4:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "11:00 AM - 4:00 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Mission Street between Avalon Avenue and Geneva Avenue",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Mission Street between Avalon Avenue and Geneva Avenue"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx",
+      "text": "Event LocationMission St and Avalon AvenueSan FranciscoCA94114"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-18",
+     "end": "2026-10-18",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 18, 2026, 11:00 AM - 4:00 PM"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "b-mobile-rec-rochambeau-2026": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Mobile Rec at Rochambeau Playground",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Mobile Rec at Rochambeau Playground"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 24, 2026, 10:00 AM - 4:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 24, 2026, 10:00 AM - 4:00 PM"
+      }
+     ]
+    },
+    "time": {
+     "value": "10:00 AM - 4:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "10:00 AM - 4:00 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Rochambeau Playground",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Rochambeau Playground"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx",
+      "text": "Rochambeau Playground238 25th AvenueSan FranciscoCA94121"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-24",
+     "end": "2026-10-24",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 24, 2026, 10:00 AM - 4:00 PM"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "b-mobile-rec-scaregrove-2026": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Mobile Rec at Scaregrove",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Mobile Rec at Scaregrove"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 30, 2026, 12:00 PM - 8:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 30, 2026, 12:00 PM - 8:00 PM"
+      }
+     ]
+    },
+    "time": {
+     "value": "12:00 PM - 8:00 PM",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "12:00 PM - 8:00 PM"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Sigmund Stern Grove",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "Sigmund Stern Grove"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx",
+      "text": "Sigmund Stern Grove19th Avenue and Sloat BoulevardSan FranciscoCA94132"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-30",
+     "end": "2026-10-30",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/Calendar.aspx",
+       "text": "October 30, 2026, 12:00 PM - 8:00 PM"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Separate published start/end times for Scaregrove and its Mobile Rec activation are retained as distinct entries; not silently treated as the same schedule.",
+   "notes": ""
+  },
+  "b-zumba-in-the-parks": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Zumba in the Parks",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/1183/Zumba-in-the-Parks",
+       "text": "Zumba in the Parks"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Weekly Zumba® Schedule",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/1183/Zumba-in-the-Parks",
+       "text": "Weekly Zumba® Schedule"
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco parks",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/1183/Zumba-in-the-Parks",
+       "text": "San Francisco parks"
+      }
+     ]
+    },
+    "price": {
+     "value": "All outdoor classes remain free",
+     "quotes": [
+      {
+       "url": "https://sfrecpark.org/1183/Zumba-in-the-Parks",
+       "text": "All outdoor classes remain free"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Weekly Zumba® Schedule",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/1183/Zumba-in-the-Parks",
+      "text": "Weekly Zumba® Schedule"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/1183/Zumba-in-the-Parks",
+      "text": "Dance with Zumba in the Parks and enjoy a fun, active workout in San Francisco parks."
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "1199 9th Avenue is the specific Fall Zumba Party venue, not the venue of every class. Generic class time blank; the source lists multiple locations and October 18 cancellations.",
+   "notes": ""
+  },
+  "b-foodwise-sunday-supper-2026": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Foodwise Sunday Supper",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/",
+       "text": "Foodwise Sunday Supper"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday, October 18, 2026, 4:30 pm – 9:30 pm",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/",
+       "text": "Sunday, October 18, 2026, 4:30 pm – 9:30 pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "4:30 pm – 9:30 pm",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/",
+       "text": "4:30 pm – 9:30 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Ferry Plaza",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/",
+       "text": "Ferry Plaza"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+      "text": "Ferry Building, Embarcadero and Market Streets, San Francisco"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [
+    {
+     "start": "2026-10-18",
+     "end": "2026-10-18",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/",
+       "text": "Sunday, October 18, 2026, 4:30 pm – 9:30 pm"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Homepage confirms Ferry Plaza; no invented citywide placeholder venue or admission.",
+   "notes": ""
+  },
+  "b-opera-ball-2026": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Opera Ball 2026",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/operaball",
+       "text": "Opera Ball 2026"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thursday, November 12, 2026",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/operaball",
+       "text": "Thursday, November 12, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "6:00 PM — Red Carpet and Cocktail Reception",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/operaball",
+       "text": "6:00 PM — Red Carpet and Cocktail Reception"
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco City Hall",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/operaball",
+       "text": "San Francisco City Hall"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sfopera.com/operaball",
+      "text": "San Francisco City Hall"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-12",
+     "end": "2026-11-12",
+     "quotes": [
+      {
+       "url": "https://www.sfopera.com/operaball",
+       "text": "Thursday, November 12, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Current Opera Ball page supersedes the February season release: gala rescheduled to November 12; explicitly no Opera House performance that evening. No minimum ticket price inferred from benefactor tiers.",
+   "notes": ""
+  },
+  "b-castro-street-fair-afterparty-2026": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {},
+   "kind": "Unverified",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Not established"
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "The current organizer homepage mentions an afterparty but does not substantiate the inherited $35.25–$65.25 price or full dated venue/time block. Retained as a review candidate, not a confirmed separate show.",
+   "notes": ""
+  },
+  "x-mission-community-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Mission Community Market",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/markets/mission-community-market/",
+       "text": "Mission Community Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Thursday (3 pm – 7 pm), mid March – mid November",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/markets/mission-community-market/",
+       "text": "Thursday (3 pm – 7 pm), mid March – mid November"
+      }
+     ]
+    },
+    "time": {
+     "value": "3 pm – 7 pm",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/markets/mission-community-market/",
+       "text": "3 pm – 7 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "22nd and Bartlett Streets, San Francisco",
+     "quotes": [
+      {
+       "url": "https://foodwise.org/markets/mission-community-market/",
+       "text": "22nd and Bartlett Streets, San Francisco"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Thursday (3 pm – 7 pm), mid March – mid November",
+    "quotes": [
+     {
+      "url": "https://foodwise.org/markets/mission-community-market/",
+      "text": "Thursday (3 pm – 7 pm), mid March – mid November"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://foodwise.org/markets/mission-community-market/",
+      "text": "22nd and Bartlett Streets, San Francisco"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Explicit seasonal weekly pattern. No 2026 opening day or free admission inferred from the City guide.",
+   "notes": ""
+  },
+  "x-inner-sunset-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Inner Sunset Farmers' Market",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/inner-sunset-farmers-market",
+       "text": "Inner Sunset Farmers' Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sundays",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/inner-sunset-farmers-market",
+       "text": "Sundays"
+      }
+     ]
+    },
+    "time": {
+     "value": "9:00 am - 1:00 pm",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/inner-sunset-farmers-market",
+       "text": "9:00 am - 1:00 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "1315 8th Ave., San Francisco, California",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/inner-sunset-farmers-market",
+       "text": "1315 8th Ave., San Francisco, California"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Sundays",
+    "quotes": [
+     {
+      "url": "https://www.pcfma.org/market/inner-sunset-farmers-market",
+      "text": "Sundays"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.pcfma.org/market/inner-sunset-farmers-market",
+      "text": "1315 8th Ave., San Francisco, California"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Direct operator market page replaces the generic market-finder link. Admission not stated; free parking/produce benefits are not evidence of free admission.",
+   "notes": ""
+  },
+  "x-castro-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Castro Farmers' Market",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/castro-farmers-market",
+       "text": "Castro Farmers' Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Wednesdays",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/castro-farmers-market",
+       "text": "Wednesdays"
+      }
+     ]
+    },
+    "time": {
+     "value": "3:00 pm - 7:00 pm",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/castro-farmers-market",
+       "text": "3:00 pm - 7:00 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "270 Noe St., San Francisco, California",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/castro-farmers-market",
+       "text": "270 Noe St., San Francisco, California"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Wednesdays",
+    "quotes": [
+     {
+      "url": "https://www.pcfma.org/market/castro-farmers-market",
+      "text": "Wednesdays"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.pcfma.org/market/castro-farmers-market",
+      "text": "270 Noe St., San Francisco, California"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Direct operator market page replaces the generic market-finder link. Admission not stated; free parking/produce benefits are not evidence of free admission.",
+   "notes": ""
+  },
+  "x-divisadero-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Divisadero Farmers' Market",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/divisadero-farmers-market",
+       "text": "Divisadero Farmers' Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sundays",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/divisadero-farmers-market",
+       "text": "Sundays"
+      }
+     ]
+    },
+    "time": {
+     "value": "9:00 am - 1:00 pm",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/divisadero-farmers-market",
+       "text": "9:00 am - 1:00 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "1377 Fell St., San Francisco, California",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/divisadero-farmers-market",
+       "text": "1377 Fell St., San Francisco, California"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Sundays",
+    "quotes": [
+     {
+      "url": "https://www.pcfma.org/market/divisadero-farmers-market",
+      "text": "Sundays"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.pcfma.org/market/divisadero-farmers-market",
+      "text": "1377 Fell St., San Francisco, California"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Direct operator market page replaces the generic market-finder link. Admission not stated; free parking/produce benefits are not evidence of free admission.",
+   "notes": ""
+  },
+  "x-fillmore-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Fillmore Farmers' Market",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/fillmore-farmers-market",
+       "text": "Fillmore Farmers' Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Saturdays",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/fillmore-farmers-market",
+       "text": "Saturdays"
+      }
+     ]
+    },
+    "time": {
+     "value": "9:00 am - 1:00 pm",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/fillmore-farmers-market",
+       "text": "9:00 am - 1:00 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "1700 O'Farrell St., San Francisco, California",
+     "quotes": [
+      {
+       "url": "https://www.pcfma.org/market/fillmore-farmers-market",
+       "text": "1700 O'Farrell St., San Francisco, California"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Saturdays",
+    "quotes": [
+     {
+      "url": "https://www.pcfma.org/market/fillmore-farmers-market",
+      "text": "Saturdays"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.pcfma.org/market/fillmore-farmers-market",
+      "text": "1700 O'Farrell St., San Francisco, California"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Direct operator market page replaces the generic market-finder link. Admission not stated; free parking/produce benefits are not evidence of free admission.",
+   "notes": ""
+  },
+  "x-stonestown-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Stonestown Farmers Market",
+     "quotes": [
+      {
+       "url": "https://www.agriculturalinstitute.org/farmers-markets",
+       "text": "Stonestown Farmers Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Every Sunday, 9am - 1pm",
+     "quotes": [
+      {
+       "url": "https://www.agriculturalinstitute.org/farmers-markets",
+       "text": "Every Sunday, 9am - 1pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "9am - 1pm",
+     "quotes": [
+      {
+       "url": "https://www.agriculturalinstitute.org/farmers-markets",
+       "text": "9am - 1pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "501 Buckingham Way",
+     "quotes": [
+      {
+       "url": "https://www.agriculturalinstitute.org/farmers-markets",
+       "text": "501 Buckingham Way"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Every Sunday, 9am - 1pm",
+    "quotes": [
+     {
+      "url": "https://www.agriculturalinstitute.org/farmers-markets",
+      "text": "Every Sunday, 9am - 1pm"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.agriculturalinstitute.org/farmers-markets",
+      "text": "San Francisco Farmers Markets"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "x-clement-street-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Clement St. Farmers Market",
+     "quotes": [
+      {
+       "url": "https://www.agriculturalinstitute.org/farmers-markets",
+       "text": "Clement St. Farmers Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Every Sunday, 9am - 2pm",
+     "quotes": [
+      {
+       "url": "https://www.agriculturalinstitute.org/farmers-markets",
+       "text": "Every Sunday, 9am - 2pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "9am - 2pm",
+     "quotes": [
+      {
+       "url": "https://www.agriculturalinstitute.org/farmers-markets",
+       "text": "9am - 2pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "244 Clement St.",
+     "quotes": [
+      {
+       "url": "https://www.agriculturalinstitute.org/farmers-markets",
+       "text": "244 Clement St."
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Every Sunday, 9am - 2pm",
+    "quotes": [
+     {
+      "url": "https://www.agriculturalinstitute.org/farmers-markets",
+      "text": "Every Sunday, 9am - 2pm"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.agriculturalinstitute.org/farmers-markets",
+      "text": "San Francisco Farmers Markets"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "x-noe-valley-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Noe Valley Farmers Market",
+     "quotes": [
+      {
+       "url": "https://www.noevalleyfarmersmarket.com/",
+       "text": "Noe Valley Farmers Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "8am - 1pm, Saturdays",
+     "quotes": [
+      {
+       "url": "https://www.noevalleyfarmersmarket.com/",
+       "text": "8am - 1pm, Saturdays"
+      }
+     ]
+    },
+    "time": {
+     "value": "8am - 1pm",
+     "quotes": [
+      {
+       "url": "https://www.noevalleyfarmersmarket.com/",
+       "text": "8am - 1pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Noe Valley Town Square // 3861 24th St, San Francisco",
+     "quotes": [
+      {
+       "url": "https://www.noevalleyfarmersmarket.com/",
+       "text": "Noe Valley Town Square // 3861 24th St, San Francisco"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Saturdays",
+    "quotes": [
+     {
+      "url": "https://www.noevalleyfarmersmarket.com/",
+      "text": "Saturdays"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.noevalleyfarmersmarket.com/",
+      "text": "Noe Valley Town Square // 3861 24th St, San Francisco"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "",
+   "notes": ""
+  },
+  "x-hayes-valley-farmers-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {},
+   "kind": "Unverified",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Not established"
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "The cited PCFMA market finder does not list the claimed Hayes Valley market. Its venue, Saturday pattern, hours and free admission cannot be established; all blanked.",
+   "notes": ""
+  },
+  "x-presidio-picnic": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {},
+   "kind": "Unverified",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Not established"
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "The cited May 2026 Presidio summer release does not mention Presidio Picnic. An old Sunday schedule cannot establish an active 2026 series; inherited values blanked.",
+   "notes": ""
+  },
+  "x-presidio-twilight": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {},
+   "kind": "Unverified",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Not established"
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "The cited May 2026 Presidio summer release does not mention Presidio Twilight. An old Thursday schedule cannot establish an active 2026 series; inherited values blanked.",
+   "notes": ""
+  },
+  "x-union-square-park-programs": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Free Programming in Union Square Plaza",
+     "quotes": [
+      {
+       "url": "https://visitunionsquaresf.com/park-programs",
+       "text": "Free Programming in Union Square Plaza"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "October 2026 Park Programs Schedule",
+     "quotes": [
+      {
+       "url": "https://visitunionsquaresf.com/park-programs",
+       "text": "October 2026 Park Programs Schedule"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Union Square Plaza",
+     "quotes": [
+      {
+       "url": "https://visitunionsquaresf.com/park-programs",
+       "text": "Union Square Plaza"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free Programming",
+     "quotes": [
+      {
+       "url": "https://visitunionsquaresf.com/park-programs",
+       "text": "Free Programming"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Mondays",
+    "quotes": [
+     {
+      "url": "https://visitunionsquaresf.com/park-programs",
+      "text": "Mondays"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://visitunionsquaresf.com/park-programs",
+      "text": "Union Square Plaza"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Umbrella programme includes daily amenities and day-specific weekly activities. All programming pauses October 21–November 3, 2026; no generic time for every programme.",
+   "notes": "The official schedule explicitly pauses programming October 21 to November 3, 2026 for ice-rink load-in."
+  },
+  "x-critical-mass": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {},
+   "kind": "Unverified",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "Not established"
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Community-run primary site explicitly says no one is in charge. Under the strict official-organizer/venue/City evidence policy, official endorsement and city-only route are not established; kept for review, not rejected as nonexistent.",
+   "notes": ""
+  },
+  "x-famsf-free-tuesdays": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Free Tuesdays",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "Free Tuesdays"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "the first Tuesday of every month",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "the first Tuesday of every month"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Legion of Honor",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/legion-of-honor",
+       "text": "Legion of Honor"
+      }
+     ]
+    },
+    "price": {
+     "value": "General admission is free",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/visit/free-reduced-admission",
+       "text": "General admission is free"
+      }
+     ]
+    }
+   },
+   "kind": "Monthly",
+   "recurrence": {
+    "value": "the first Tuesday of every month",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/free-reduced-admission",
+      "text": "the first Tuesday of every month"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-legion-of-honor",
+      "text": "Turn right (north) on 34th Avenue into Lincoln Park."
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Combined two-museum row split by venue: this is Legion of Honor only, so the de Young first-Tuesday row is not double-counted. Permanent collections only; Bouquets to Art excluded.",
+   "notes": ""
+  },
+  "x-fridays-on-front-street": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Fridays on Front Street",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "Fridays on Front Street"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "July 31, 2026 • 4–9pm · August 21, 2026 • 4–9pm · October 9, 2026 • 4–9pm",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "July 31, 2026 • 4–9pm"
+      },
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "August 21, 2026 • 4–9pm"
+      },
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "October 9, 2026 • 4–9pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "4–9pm",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "4–9pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Front Street",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "Front Street"
+      }
+     ]
+    },
+    "price": {
+     "value": "FREE after-work block party",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "FREE after-work block party"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+      "text": "San Francisco's FREE after-work block party"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-07-31",
+     "end": "2026-07-31",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "July 31, 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-08-21",
+     "end": "2026-08-21",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "August 21, 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-09",
+     "end": "2026-10-09",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/fridays-on-front-street",
+       "text": "October 9, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Select dates only, not every Friday. Inherited Annual classification is not asserted without explicit yearly evidence.",
+   "notes": ""
+  },
+  "x-drag-me-downtown": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Drag Me Downtown",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/drag-me-downtown-2025",
+       "text": "Drag Me Downtown"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "returns every Friday for Pride 2026",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/drag-me-downtown-2025",
+       "text": "returns every Friday for Pride 2026"
+      }
+     ]
+    },
+    "price": {
+     "value": "FREE WITH RSVP",
+     "quotes": [
+      {
+       "url": "https://downtownsf.org/things-to-do/drag-me-downtown-2025",
+       "text": "FREE WITH RSVP"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "every Friday for Pride 2026",
+    "quotes": [
+     {
+      "url": "https://downtownsf.org/things-to-do/drag-me-downtown-2025",
+      "text": "every Friday for Pride 2026"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://downtownsf.org/things-to-do/drag-me-downtown-2025",
+      "text": "San Francisco's signature pop-up drag show series"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "Official content says Fridays, not the inherited Thursdays, despite a 2025 URL. Multiple downtown venues require individual venue transcription; held for review.",
+   "notes": ""
+  },
+  "x-bhangra-and-beats-night-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "BHANGRA & BEATS",
+     "quotes": [
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "BHANGRA & BEATS"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "BHANGRA & BEATS IS BACK FOR 2026! · two Fridays—July 24 and November 13 (Diwali edition)",
+     "quotes": [
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "BHANGRA & BEATS IS BACK FOR 2026!"
+      },
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "two Fridays—July 24 and November 13 (Diwali edition)"
+      }
+     ]
+    },
+    "time": {
+     "value": "4pm–9pm",
+     "quotes": [
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "4pm–9pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Yerba Buena Gardens, Jessie Square, and Yerba Buena Lane",
+     "quotes": [
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "Yerba Buena Gardens, Jessie Square, and Yerba Buena Lane"
+      }
+     ]
+    },
+    "price": {
+     "value": "FREE event",
+     "quotes": [
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "FREE event"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.bhangraandbeats.com/",
+      "text": "Located in the heart of the downtown San Francisco"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-07-24",
+     "end": "2026-07-24",
+     "quotes": [
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "two Fridays—July 24 and November 13 (Diwali edition)"
+      },
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "BHANGRA & BEATS IS BACK FOR 2026!"
+      }
+     ]
+    },
+    {
+     "start": "2026-11-13",
+     "end": "2026-11-13",
+     "quotes": [
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "two Fridays—July 24 and November 13 (Diwali edition)"
+      },
+      {
+       "url": "https://www.bhangraandbeats.com/",
+       "text": "BHANGRA & BEATS IS BACK FOR 2026!"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Corrected obsolete Clay/Battery venue. The organizer explicitly moved this 2026 programme to Yerba Buena.",
+   "notes": ""
+  },
+  "x-circus-in-the-parks": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Circus in the Parks",
+     "quotes": [
+      {
+       "url": "https://www.circusbella.org/circusintheparks",
+       "text": "Circus in the Parks"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "will be back in June 2027",
+     "quotes": [
+      {
+       "url": "https://www.circusbella.org/circusintheparks",
+       "text": "will be back in June 2027"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "City-only location not established in the reviewed excerpt."
+   },
+   "occurrences": [],
+   "publication": "review_only",
+   "reason": "2027 return month confirmed; no 2027 SF-only park venues or precise dates yet stated. Current page also lists separate pop-ups, not the old HOOPLA season.",
+   "notes": ""
+  }
+ },
  "extra_events": []
 }

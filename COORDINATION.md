@@ -571,3 +571,18 @@ field verification. Any unconfirmed value must be blank, with the original retai
 ledger for review. A changing citywide inventory cannot honestly be certified exhaustive.
 
 Claim committed and pushed before implementation. Source/check/PR/deployment results to follow.
+
+### T19 progress — `64f8b973` — 2026-10-18
+
+* Actions evidence capture `39092033950` succeeded (job `117570642864`), with 217 URL
+  snapshots. HTTP/text retrieval is **not** contextual verification.
+* 97 explicit draft row decisions authored so far; unapproved fields will not inherit
+  old claims. Corrections include Zoo/Presidio dates, yearless Menorah/ancillary race
+  copy, Opera Ball postponement, and Bhangra & Beats relocation. Remaining candidates
+  are still under review. No new canonical or live-site verification claim yet.
+* Persisted authoring utilities under `tools/curation/` rather than ephemeral `.cache`.
+  Exact-substring assertions validate quotation provenance only, not applicability.
+* Fixed capture refresh so failures cannot erase prior evidence, and adjudicated
+  captures remain immutable. Latest request status is kept separately, never relabeled 200.
+* T19/T20/T21 remain owned here/in progress. Existing baseline remains live until the
+  audit overlay, deterministic rebuild, regression tests and deployment checks pass.

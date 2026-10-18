@@ -146,6 +146,25 @@ def fetch(url, timeout=25):
     return result
 
 
+def retain_capture(previous, attempt, locked=False):
+    """Never erase usable evidence on failure, or mutate adjudicated evidence.
+
+    A later HTTP response is not a re-approval. Keep the original status/date with
+    its text; report the latest request separately so failure cannot look like 200.
+    """
+    if previous and (previous.get("text") or previous.get("tool_excerpt")):
+        if locked or not attempt.get("text") or attempt.get("http") != 200:
+            kept = dict(previous)
+            kept["latest_attempt"] = {k: v for k, v in attempt.items()
+                                      if k not in {"text", "links", "structured"}}
+            return kept
+        attempt = dict(attempt)
+        for key in ("tool_excerpt", "tool_method"):
+            if key in previous:
+                attempt[key] = previous[key]
+    return attempt
+
+
 def capture(extra_urls=(), timeout=25):
     rows = json.loads((ROOT / "data/events.json").read_text())
     sources = json.loads((ROOT / "data/sources.json").read_text())
@@ -165,7 +184,7 @@ def capture(extra_urls=(), timeout=25):
             result["text_truncated"] = len(text) > 140_000
             result["text"] = text[:140_000]
             result["links"] = result.get("links", [])[:600]
-            captures[url] = result
+            captures[url] = retain_capture(captures.get(url), result, locked=bool(old.get("decisions")))
             print(f"{result['http']:3} {len(text):6} {url}", flush=True)
     candidates = {}
     for row in rows:
@@ -178,7 +197,7 @@ def capture(extra_urls=(), timeout=25):
                                                         "status": "candidate only — requires contextual review"}
     output = {"schema_version": 1, "session": "64f8b973", "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
               "method": "Official-source extracted-text snapshot. Literal matches are candidates, NEVER approvals. Each published nonblank fact needs an explicit field decision and supporting quotation.",
-              "captures": dict(sorted(captures.items())), "candidates": candidates, "decisions": old.get("decisions", {}),
+              "captures": dict(sorted(captures.items())), "candidates": old.get("candidates") or candidates, "decisions": old.get("decisions", {}),
               "extra_events": old.get("extra_events", [])}
     REPORT.write_text(json.dumps(output, indent=1, ensure_ascii=False) + "\n")
     print(f"Captured {len(captures)} sources for {len(rows)} rows; no verification decisions generated.")

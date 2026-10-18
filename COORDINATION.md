@@ -31,6 +31,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `526a8db6` | `arena/526a8db6-maltaproj5` | 2026-10-18 | Independent final audit of delivered register, build, CI, and live publication (T19) |
 | `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 04:20 UTC | Post-publication data consistency fix and regression validation (T20) |
 | `f1fd3c36` | `arena/f1fd3c36-maltaproj5` | 2026-10-18 03:40 | Post-publication audit: independent line-by-line re-verification of the live register against official pages, 28 corrections, 2 rows added, Flagged page update, PR #18 → main, merged (T22–T24) |
+| `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 03:22 UTC | Post-audit dead-source correction for Ferry Fest found by PR #18 CI (T25) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -65,10 +66,11 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **done** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
 | T20 | Resolve confirmed populated/marked-unverified data conflicts, strengthen consistency checks, document source-snapshot coverage, rebuild and publish | done (PR #16) | `99662c40` | `COORDINATION.md`, `data/events_base86.json`, `tools/consolidate.py`, `tools/apply_verify.py`, `scripts/build.py`, `scripts/validate.py`, generated data/pages, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 | T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **done** (PR #15 merged; this record follows in a docs PR) | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
-| T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **in progress** | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
+| T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **done** (PR #19 merged; PR check passed; Pages built; main check pending at 39093606492) | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
 | T22 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | done — 70 rows re-read: 36 confirmed, 28 corrected, 6 unverified/flagged, 2 rows added (`data/audit_f1fd3c36.json`) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
 | T23 | Pipeline irregularity fixes found during T22 (e.g. rows that carry a value *and* an "unverified; left blank" note) | done — `apply_audit.py` removes value-plus-"unverified" contradictions (3 rows) and re-asserts blank⇔note consistency for every row; validate passes | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
 | T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **done — live**: PR [#18](https://github.com/buffedlizard55-lab/MaltaProj5/pull/18) merged 03:20 UTC (merge commit `9044bf8`); CI `Validate site` green on the PR; Pages build `built` for `9044bf8` | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
+| T25 | Resolve Ferry Fest source link returning 404 in PR #18 remote-check report; preserve only official evidence that remains live and flag anything no longer confirmed | **in progress** | `99662c40` | `COORDINATION.md`, `data/audit_f1fd3c36.json`, `tools/apply_audit.py`, generated `data/`, `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -739,10 +741,104 @@ PRs #14, #15 and #16 merged while this audit was in progress. Resolution, discar
 | `ANALYSIS.md`, `README.md` | This branch's versions (they add the audit section) with counts re-synced to the merged output: 233 rows, 235 sources, 140 domains. |
 | `COORDINATION.md` | Both boards and all audit logs preserved. Task-number collision: this session's tasks renumbered **T22–T24** (`526a8db6` T19, `99662c40` T20, `cebeabf0` T21 stand). |
 
+---
+
+## Rebase conflict log — `99662c40`, 2026-10-18, PR #17 onto PR #18
+
+While PR #17 (T20 publication record) was open, PR #18 from session `f1fd3c36` merged its
+line-by-line audit to `main`. Rebasing retained PR #18's task records, audit log, corrections and
+integration history. The T20 completion record below was re-added after the mainline version; no
+files or findings from session `f1fd3c36` were discarded. PR #17 remains a documentation-only
+follow-up to already-merged PR #16.
+
+## Independent consistency audit (T20) — `99662c40`, 2026-10-18
+
+### Confirmed defects and changes
+
+* Three rows had populated admission values while also showing `price: unverified; left blank.`
+  The saved repository excerpts did not confirm admission, so T20 blanked prices, removed their
+  price-evidence pointers, retained unverified markers, and kept the official event links for
+  review: [Foodwise — Ferry Plaza Farmers Market](https://foodwise.org/markets/ferry-plaza-farmers-market/),
+  [SF Pride — events](https://sfpride.org/events/), and
+  [San Francisco Marathon — 2027](https://www.thesfmarathon.com/2027-50th-anniversary/).
+* Added invariants in `tools/consolidate.py` and `scripts/validate.py`: populated fields cannot also
+  be marked unverified; populated fields require evidence; the source ledger cannot retain records
+  unused by event rows or current review findings.
+* Fixed source-ledger pruning order so records referenced only by retired findings are removed.
+* The committed automated report is a historical snapshot (`2026-10-18T01:44:56Z`), not an
+  exhaustive current link check. One TLS failure was for the superseded
+  `sfcurran.com/visit/` URL; two then-current review links were not represented in the report:
+  [SFMOMA Free Days](https://www.sfmoma.org/free-days/) and
+  [San Francisco Opera](https://www.sfopera.com/). Exact gaps and stale URL are linked on
+  `review.html`; the Analysis page calls the report historical.
+
+### Verification and publication
+
+```
+python3 tools/consolidate.py  -> 231 rows; Weekly 25, Monthly 11, Annual 135, Special 60; 211 sources
+python3 tools/apply_verify.py -> historical report coverage gaps and stale URL surfaced on review page
+python3 scripts/build.py      -> 12 pages; deterministic LF CSV
+python3 scripts/validate.py   -> PASS: evidence, blanks, parents, pages, local links/fragments
+full pipeline twice           -> identical outputs; git diff --check clean
+independent invariants        -> no duplicate rows, orphan sources or populated/unverified conflicts
+PR #16 checks                 -> success, run 39092292828
+main check                    -> success, run 39092535477; remote URL step found no dead URL
+```
+
+PR **#16** (`https://github.com/buffedlizard55-lab/MaltaProj5/pull/16`) merged at
+**2026-10-18 03:07:53 UTC**, merge commit `15ada17b7bf457c6882a44d54aad6f67771ab800`.
+Pages deployment **7149220879** for that commit reported **built** from `main` / root.
+The subsequent integration PRs #15 and #18 are recorded in their own merge logs and supersede
+T20's historical counts; they preserved the blank prices and added independently sourced corrections.
+
+---
+
+## Claim — T25 (2026-10-18 03:22 UTC) — post-audit 404 fix
+
+Session `99662c40` claims a narrow post-publication repair in `data/audit_f1fd3c36.json`,
+`tools/apply_audit.py`, canonical/generated data and pages, `COORDINATION.md`, and the static count
+summaries `README.md`, `SOURCES.md`, and `ANALYSIS.md` (scope amendment committed separately).
+T24 is complete: PR #18 merged and Pages deployment 7149328843 reports `built`.
+
+**Confirmed issue before edits:** PR #18's report-only remote URL check (run `39092990628`)
+returned HTTP 404 for the event source
+`https://www.ferrybuildingmarketplace.com/events/ferry-fest/`. It is presently attached to
+`Ferry Fest` with name, schedule, time, venue, and price evidence pointers. The row also cites the
+SF Travel July guide and is flagged “No dedicated official event page verified”. The dead URL was
+logged here before touching the source record. The fix preserves only the surviving official
+listing, leaves unsupported facts blank, and makes the stale URL visible in the review history.
+
+### Resolution — T25
+
+* `Ferry Fest` (`x-ferry-fest`) now cites only the SF Travel July guide
+  (https://www.sftravel.com/article/san-francisco-festivals-events-july) in its active event row.
+  The date and venue remain as previously recorded; separate time and RSVP price are blank, with
+  field-specific unverified reasons. This repair did **not** claim a fresh manual re-read of the
+  SF Travel page: automated retrieval was bot-blocked (403).
+* The former organizer URL
+  (https://www.ferrybuildingmarketplace.com/events/ferry-fest/) is removed from active evidence and
+  the source ledger, but retained as a clearly labeled historical link on the Ferry Fest review
+  finding with the CI-reported HTTP 404. The old price quote remains history only in the audit JSON.
+* `tools/apply_audit.py` now applies removed-source lists, row-level review links and field-specific
+  unverified explanations/descriptions, then prunes source records no longer cited. Static count
+  summaries were refreshed for the 233-row / 234-source / 142-domain snapshot.
+* Validation completed locally: `consolidate → apply_verify → apply_audit → build → validate` passes
+  (233 rows, 12 HTML pages; all source/evidence references, parent links, blank-value flags and
+  local links/fragments valid). Repeating the pipeline produced identical generated-output hashes;
+  custom assertions confirmed the Ferry Fest evidence/blank-field state and that the former URL is
+  visible on review. `git diff --check` passes.
+* Irregularity: the saved verification report is historical (2026-10-18T01:44:56Z), not exhaustive.
+  It covers 202 URLs; the current source ledger has 226 distinct URLs, of which 25 are absent from
+  that report, while one report URL is stale. The CI 404 is the concrete new failure; no fresh
+  exhaustive remote-link run has yet verified the repaired active URL set.
+* The scope amendment and implementation are committed locally and based on `main` after PR #19
+  merged. A lease-protected push, PR checks, merge, and deployment confirmation remain outstanding;
+  final pushed commit IDs will be recorded after that push.
+
 ### PR record — `f1fd3c36`
 
 * PR: https://github.com/buffedlizard55-lab/MaltaProj5/pull/18 — **merged** 2026-10-18 03:20 UTC, merge commit `9044bf8`.
 * CI on the PR head (`0b7a787`): `Validate site` run 39092990628 — all steps success (rebuild, validate, regeneration assert, remote link check, name-match report).
 * Pages: latest build `built` for commit `9044bf8` (branch mode, `main` / root); site https://buffedlizard55-lab.github.io/MaltaProj5/ now serves 233 rows.
-* Published state: 233 rows (Weekly 26 · Monthly 12 · Annual 137 · Special 58) · 235 source records / 140 domains · 20 findings · 147 field-level · 78 page-level · 8 flagged.
+* Published state after PR #18: 233 rows (Weekly 26 · Monthly 12 · Annual 137 · Special 58) · 235 source records / 140 domains · 20 findings · 147 field-level · 78 page-level · 8 flagged. (PR #17 / T25 then removed the Ferry Fest organizer URL, which returned 404 in PR #18's CI link check — a page I had only seen via a search snippet; its time/price are blank again: 234 sources.)
 * Open follow-ups for any later session (not blocking): Disability History Tour and Super Bowl LX fan events still rest on an SF Travel listing; Lowrider Parade 2026 edition not yet on the organizer site; Castro Night Market individual dates not published; Club Darc dates come from the organizer's AXS series page; the two Symphony PDF rows were not re-read this pass.

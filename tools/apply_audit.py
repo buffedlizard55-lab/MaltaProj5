@@ -8,7 +8,8 @@ every populated field with the page text. Each entry is:
   {id, status (confirmed|corrected|unverified|excluded), url, quote, quote2?, note?,
    set?: {field: value}            -- "" blanks a field (and flags it unverified)
    unverified_fields?: [field, ..] -- fields the page does not state (blank + flag)
-   add_source?: {url, publisher}}  -- an additional official page to link
+   add_source?: {url, publisher}   -- an additional official page to link
+   remove_sources?: [url or id]    -- dead/withdrawn sources no longer used as evidence
 
 and an optional top-level `add_rows` list of complete new rows found during the audit
 (each with its own official url/quote).
@@ -97,12 +98,14 @@ def add_flag(row, text):
 
 stats = {"confirmed": 0, "corrected": 0, "unverified": 0, "excluded": 0, "missing": []}
 corrections, irregularities = [], []
+removed_source_urls, review_urls = [], []
 
 for ent in audit["entries"]:
     row = by_id.get(ent["id"])
     if row is None:
         stats["missing"].append(ent["id"])
         continue
+    review_urls.extend(ent.get("review_urls", []))
     status = ent["status"]
     stats[status] += 1
     quote = ent.get("quote", "")
@@ -113,6 +116,25 @@ for ent in audit["entries"]:
     if sid not in row["sources"]:
         row["sources"].append(sid)
     row.setdefault("evidence", {})
+
+    # Remove sources that are now dead or withdrawn; never leave populated
+    # fields supported only by a removed URL.
+    remove_keys = set(ent.get("remove_sources") or [])
+    remove_ids = {key for key in remove_keys if key in sources}
+    remove_ids |= {key for key, rec in sources.items() if rec.get("url") in remove_keys
+                   or norm(rec.get("url", "")) in {norm(x) for x in remove_keys}}
+    for key in remove_ids:
+        removed_source_urls.append(sources[key]["url"])
+    if remove_ids:
+        row["sources"] = [key for key in row["sources"] if key not in remove_ids]
+        for field, evidence_ids in list(row["evidence"].items()):
+            row["evidence"][field] = [key for key in evidence_ids if key not in remove_ids]
+        for field in FIELDS:
+            if row.get(field) and not row["evidence"].get(field):
+                row[field] = ""
+                row["evidence"].pop(field, None)
+                set_unverified(row, field, True,
+                              f"{field}: unverified; supporting source was removed after its URL failed.")
 
     # field changes -------------------------------------------------------
     changed = []
@@ -145,7 +167,8 @@ for ent in audit["entries"]:
                 row[field] = ""
                 row["evidence"].pop(field, None)
                 changed.append(field)
-            set_unverified(row, field, True)
+            reason = (ent.get("unverified_reasons") or {}).get(field)
+            set_unverified(row, field, True, reason)
     # a confirmed populated field now has manual evidence from the re-read page
     if status in ("confirmed", "corrected"):
         for field in FIELDS:
@@ -169,7 +192,7 @@ for ent in audit["entries"]:
                                + [k for k, v in (ent.get("set") or {}).items() if v == ""]))
     desc = {"confirmed": "every populated value matched the official page",
             "corrected": "values changed to match the official page: " + ", ".join(touched or ["source added"]),
-            "unverified": "the official page does not state: " + ", ".join(blank),
+            "unverified": ent.get("unverified_description") or ("the official page does not state: " + ", ".join(blank)),
             "excluded": "row excluded"}[status]
     note = f"{TAG}: {desc}. Page: {ent['url']}."
     if ent.get("note"):
@@ -224,9 +247,19 @@ findings.append({
                f"Left unverified/flagged: {stats['unverified']} — {' | '.join(irregularities) or 'none'}. "
                f"Rows added from official pages: {', '.join(r['name'] for r in audit.get('add_rows', [])) or 'none'}. "
                "Every change is recorded as a per-row note with the page URL and the transcribed quote in data/audit_"
-               f"{SESSION}.json."),
-    "urls": [f"https://github.com/buffedlizard55-lab/MaltaProj5/blob/main/data/audit_{SESSION}.json"],
+               f"{SESSION}.json. Dead/withdrawn source URLs removed from event evidence: "
+               f"{', '.join(dict.fromkeys(removed_source_urls)) or 'none'}."),
+    "urls": list(dict.fromkeys([
+        f"https://github.com/buffedlizard55-lab/MaltaProj5/blob/main/data/audit_{SESSION}.json",
+        *review_urls,
+        *removed_source_urls,
+    ])),
 })
+
+# Drop records that no event or current review finding cites after source removals.
+used_source_ids = {sid for row in rows for sid in row["sources"]}
+used_source_ids |= {sid for finding in findings for sid in finding.get("sources", [])}
+sources = {sid: rec for sid, rec in sources.items() if sid in used_source_ids}
 
 (ROOT / "data" / "events.json").write_text(json.dumps(rows, indent=1, ensure_ascii=True) + "\n")
 (ROOT / "data" / "sources.json").write_text(json.dumps(sources, indent=1, ensure_ascii=True) + "\n")

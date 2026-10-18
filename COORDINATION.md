@@ -61,9 +61,9 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T17 | Register expansion 86→106 entries from official sources | **done — content integrated**; PR #7 superseded | `a1b7522f` | `data/events_a1b7522f.json`, `data/sources_a1b7522f.json` |
 | T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | done (PR #10, merged 02:05 UTC) | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
 
-| T19 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | **in progress** (claimed 03:40 UTC) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
-| T20 | Pipeline irregularity fixes found during T19 (e.g. rows that carry a value *and* an "unverified; left blank" note) | **in progress** | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
-| T21 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | unclaimed until T19/T20 done — will be taken by `f1fd3c36` (no other session active) | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
+| T19 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | done — 70 rows re-read: 36 confirmed, 28 corrected, 6 unverified/flagged, 2 rows added (`data/audit_f1fd3c36.json`) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
+| T20 | Pipeline irregularity fixes found during T19 (e.g. rows that carry a value *and* an "unverified; left blank" note) | done — `apply_audit.py` removes value-plus-"unverified" contradictions (3 rows) and re-asserts blank⇔note consistency for every row; validate passes | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
+| T21 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **in progress** — rebuilt (233 rows, 236 sources, 20 findings), validated; PR → `main` opening (link recorded below when merged) | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -563,3 +563,24 @@ cited official page, not by the HTML name matcher. Outcomes are recorded per row
 `data/audit_f1fd3c36.json` (`confirmed` / `corrected` / `unverified` / `excluded`, with the
 URL, the quoted text, and the date) and applied by `tools/apply_audit.py` after
 `tools/apply_verify.py`. No value is written unless the quoted official text states it.
+
+### Result — session `f1fd3c36` (2026-10-18)
+
+* Audit file: `data/audit_f1fd3c36.json` — 70 entries + 2 `add_rows`; every entry has the official
+  URL and the transcribed quote. Applied by `tools/apply_audit.py` (idempotent; wired into
+  `.github/workflows/pages.yml` after `apply_verify.py`; documented in `README.md`).
+* Outcomes: 36 confirmed · 28 corrected · 6 unverified (flagged) · 2 rows added
+  (Alemany Flea Market — sf.gov; SFFILM Doc Stories — sffilm.org FAQ).
+* Register after audit: **233 rows** (Weekly 26 · Monthly 12 · Annual 137 · Special 58) ·
+  236 source records / 139 domains · 20 findings · labels 147 field-level · 78 page-level · 8 flagged.
+* Irregularities logged on the Flagged page and in `ANALYSIS.md`: Litquake rows disagreed on dates
+  (official: Oct 8–24, 2026); Antiquarian Book Fair alternates SF/LA (2027 in LA); Lowrider Parade
+  site still shows the 2025 edition (2026 date removed); City says the Golden Gate Bridge display is
+  the only authorized July 4 fireworks (PIER 39 row annotated); venues corrected for SFIAF, QWOCFF,
+  Peak2Peak, SF Cheese Fest; renamed to organizer names: Superfair, The San Francisco Fall Show,
+  Easter in the Park, Valencia LIVE! (now Monthly); organizer pages added to 9 aggregator-only rows;
+  regional labels on CAAMFest, SF Jewish Film Festival, Bay Area Dance Week, Super Bowl LX events.
+* Not re-read this pass (left as previously labelled): the two Symphony PDF rows (manual read by
+  `c961fbe4` stands) and rows the automated pass already name-matched that were not in the priority set.
+* Verification: `consolidate → apply_verify → apply_audit → build → validate` passes locally
+  (PASS: 233 rows, 12 pages, every local link/fragment); `apply_audit.py` run twice yields no diff.

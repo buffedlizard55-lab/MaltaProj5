@@ -30,10 +30,10 @@ class AuditedRegister(unittest.TestCase):
     def test_baseline_retained_and_new_entries_identified(self):
         self.assertEqual(len(self.history['events']), 233)
         self.assertEqual(len(self.audit['candidates']), 231)
-        self.assertEqual(len(self.audit['extra_events']), 13)
-        self.assertEqual(len(self.rows), 246)
+        self.assertEqual(len(self.audit['extra_events']), 18)
+        self.assertEqual(len(self.rows), 251)
         self.assertTrue(set(self.audit['candidates']) <= set(self.by_id))
-        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 167)
+        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 172)
 
     def test_upstream_additions_and_source_repair_are_preserved(self):
         self.assertIn('f1-alemany-flea-market', self.by_id)
@@ -189,6 +189,26 @@ class AuditedRegister(unittest.TestCase):
         self.assertEqual(temporal(d(schedule='May 2027', name='2027 URL')), 'Date/year unconfirmed')
         self.assertEqual(temporal(d(recurrence={'value': 'Weekly'})), 'Recurring pattern; next date unconfirmed')
         self.assertEqual(temporal(d('2027-03-25', '2027-03-25', date_status='tentative')), 'Tentative schedule')
+
+    def test_session_59f56c24_official_calendar_additions(self):
+        family = self.by_id['audit-sfpl-family-game-time']
+        self.assertEqual(family['publication'], 'listed')
+        self.assertEqual(family['occurrences'][0]['start'], '2026-10-18')
+        self.assertEqual(family['price'], '')
+        self.assertEqual(family['venue'], "West Portal Children's Area")
+        gdc = self.by_id['audit-gdc-festival-2027']
+        self.assertEqual(gdc['occurrences'][0]['start'], '2027-03-01')
+        self.assertEqual(gdc['occurrences'][0]['end'], '2027-03-05')
+        self.assertEqual(gdc['price'], 'Festival $549')
+        current = self.by_id['audit-current-sf-2026']
+        self.assertEqual(current['venue'], 'Moscone West')
+        self.assertEqual(current['occurrences'][0]['start'], '2026-11-04')
+        ignite = self.by_id['audit-microsoft-ignite-2026']
+        self.assertEqual(ignite['occurrences'][0]['start'], '2026-11-17')
+        self.assertEqual(ignite['occurrences'][0]['end'], '2026-11-20')
+        cloudflare = self.by_id['audit-cloudflare-connect-2026']
+        self.assertEqual(cloudflare['occurrences'][0]['start'], '2026-10-19')
+        self.assertEqual(cloudflare['occurrences'][0]['end'], '2026-10-21')
 
     def test_parent_cycle_fails(self):
         a = deepcopy(self.audit)

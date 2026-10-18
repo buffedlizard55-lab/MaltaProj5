@@ -91,9 +91,9 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
 | T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; PR Validate [39102137078](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102137078), main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169), and Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) succeeded | `bb551cdc` | `COORDINATION.md` |
 | T32 | Mobile-first executive summary, date-sorted Upcoming, clear cost badges, Free-first + Gaming/Music/AI focus pages (derived only from audited verified fields; no new facts) | done | `2fa50487` | `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `assets/app.js`, `tests/browser_smoke.cjs`, `.github/workflows/pages.yml`, generated `*.html`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
-| T33 | Official-source research: dated SF gaming / music / AI extras (exact quotations only); isolated overlay | **in progress** | `59f56c24` | `data/research/audit-59f56c24.md`, `data/audit_59f56c24.json`, `tools/overlay_59f56c24.py` |
-| T34 | Overlay extras into the audited register; rebuild T32 dashboard; update regressions | unclaimed | — | `data/audit_64f8b973.json`, generated `data/` + `*.html`, `tests/test_audited_register.py`, `scripts/build.py` (focus IDs only) |
-| T35 | Validate, PR → main, merge, confirm Pages | unclaimed | — | `COORDINATION.md`, `README.md` |
+| T33 | Official-source research: dated SF gaming / music / AI extras (exact quotations only); isolated overlay | **done** | `59f56c24` | `data/research/audit-59f56c24.md`, `data/audit_59f56c24.json`, `tools/overlay_59f56c24.py` |
+| T34 | Overlay extras into the audited register; rebuild T32 dashboard; update regressions | **done** — 251 candidates / 172 listed / 79 review-only | `59f56c24` | `data/audit_64f8b973.json`, generated `data/` + `*.html`, `tests/test_audited_register.py`, `scripts/build.py` (focus IDs only) |
+| T35 | Validate, PR → main, merge, confirm Pages | **in progress** | `59f56c24` | `COORDINATION.md`, `README.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1241,3 +1241,19 @@ Verification result: `python3 tools/consolidate.py`, `python3 scripts/build.py`,
 * Documentation PR [#33](https://github.com/buffedlizard55-lab/MaltaProj5/pull/33) merged into `main` at **2026-10-18 09:52:33 UTC** as merge commit `d5a51c644be316418139d50d805301afba3833b7`.
 * PR validation run [39116984088](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39116984088) completed **successfully** after the full no-network regression, evidence/link, browser/mobile/accessibility, generated-file, and source-reachability gates.
 * Post-merge main validation [39117053899](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39117053899) completed **successfully**. GitHub Pages deployment [39117053780](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39117053780) completed **successfully**; Pages API reports build commit `d5a51c644be316418139d50d805301afba3833b7` as `built` at **2026-10-18 09:52:55 UTC**. Live site: https://buffedlizard55-lab.github.io/MaltaProj5/.
+
+## T33–T34 — session `59f56c24` (2026-10-18)
+
+T32 dashboard (upcoming / free / focus) is kept. This session adds five listed specials from official pages. Mix at SFPL remains undated. YBG homepage was not recaptured (live recaptcha).
+
+| ID | Official page | Listed facts | Left blank |
+|---|---|---|---|
+| `audit-sfpl-family-game-time` | https://sfpl.org/events/2026/10/18/social-family-game-time | 18 Oct 2026, 2:00–3:30 pm, West Portal Children's Area | price (drop-in ≠ free) |
+| `audit-gdc-festival-2027` | Moscone + https://gdconf.com/passes-pricing/ | 1–5 Mar 2027, Moscone, Festival $549 Early Rate | other pass prices |
+| `audit-current-sf-2026` | Moscone Current SF 2026 | 4–5 Nov 2026, Moscone West | price |
+| `audit-microsoft-ignite-2026` | Moscone Ignite 2026 | 17–20 Nov 2026, Moscone | price; digital option excluded |
+| `audit-cloudflare-connect-2026` | Moscone Cloudflare Connect 2026 | 19–21 Oct 2026, The Moscone Center | price; “four days” copy not used as a span |
+
+Focus grouping: Family Game Time and GDC join Gaming; Current SF and Ignite join AI from official subtitles (not invented names). Cloudflare stays in Everything else.
+
+Offline: 31 unit tests + `scripts/validate.py` PASS (251 / 172 / 79, 15 pages). Unverified fields remain blank and do not block merge.

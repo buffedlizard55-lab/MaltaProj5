@@ -222,19 +222,28 @@ TOPICS = [
     ("Music", ("music", "concert", "opera", "symphony", "jazz", "bluegrass", "k-pop", "bhangra", "soundtrack", " band", "choir", "orchestra")),
     ("AI", ("artificial intelligence", "a.i.", " ai ")),
 ]
+FOCUS_IDS = {
+    "audit-sfpl-family-game-time": "Gaming",
+    "audit-gdc-festival-2027": "Gaming",
+    "audit-current-sf-2026": "AI",
+    "audit-microsoft-ignite-2026": "AI",
+}
+
 def topic_of(row):
+    if row["id"] in FOCUS_IDS:
+        return FOCUS_IDS[row["id"]]
     name = " " + row["name"].lower() + " "
     for label, words in TOPICS:
         if any(w in name for w in words):
             return label
     return "Everything else"
 focus_body = notice()
-focus_body += '<section class="prose"><h2>How focus groups are made</h2><p>Groups are matched <b>only from the audited event name</b> (for example “Pokémon”, “Jazz”, “Opera”), never guessed from a venue or theme. That is auditable but incomplete: a concert whose name contains no music word stays in “Everything else”. Order on this page: <b>Gaming, then Music, then AI, then Everything else</b>; within each group, explicitly free and soonest-dated entries come first. Use the Focus label on each row.</p></section>'
+focus_body += '<section class="prose"><h2>How focus groups are made</h2><p>Groups are matched from the audited event name (for example “Pokémon”, “Jazz”, “Opera”), never guessed from a venue. Two 2026 Moscone conferences are also grouped as AI because their official event pages identify artificial intelligence in the subtitle: Current San Francisco 2026 and Microsoft Ignite 2026. A concert whose name contains no music word stays in “Everything else”. Order on this page: <b>Gaming, then Music, then AI, then Everything else</b>; within each group, explicitly free and soonest-dated entries come first. Use the Focus label on each row.</p></section>'
 grouped = {label: [] for label, _ in TOPICS}
 grouped["Everything else"] = []
 for r in listed:
     grouped[topic_of(r)].append(r)
-focus_body += metrics([("Gaming (name-matched)", len(grouped["Gaming"]), "Known coverage gap", True), ("Music (name-matched)", len(grouped["Music"]), "Name contains a music word", False), ("AI (name-matched)", len(grouped["AI"]), "None found — flagged gap", True), ("Everything else", len(grouped["Everything else"]), "All remaining directory entries", False)])
+focus_body += metrics([("Gaming (name-matched)", len(grouped["Gaming"]), "Official gaming names plus 2026 extras", False), ("Music (name-matched)", len(grouped["Music"]), "Name contains a music word", False), ("AI (name-matched)", len(grouped["AI"]), "Official AI subtitles on two Moscone conferences" if grouped["AI"] else "None found — flagged gap", not grouped["AI"]), ("Everything else", len(grouped["Everything else"]), "All remaining directory entries", False)])
 if not grouped["AI"]:
     focus_body += '<div class="notice"><b>AI: no event in the directory.</b> No listed entry has an audited name that explicitly identifies artificial intelligence, so none is invented or re-labelled here. This is a coverage gap — see <a href="review.html">Flagged for Review</a> and <a href="analysis.html">Analysis</a>.</div>'
 topic_order = {"Gaming": 0, "Music": 1, "AI": 2, "Everything else": 3}

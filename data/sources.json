@@ -822,6 +822,32 @@
    "audit-foodwise-dia-muertos"
   ]
  },
+ "audit-58687eb65c42": {
+  "url": "https://gdconf.com/passes-pricing/",
+  "publisher": "gdconf.com",
+  "title": "Passes & Pricing | GDC Festival of Gaming",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T12:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://gdconf.com/passes-pricing/",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "66cebcf0d37a1a9c2050b9bd29914e8f5f2d0a34fd5590cafb6bc966224c1f8a",
+   "truncated_response": false,
+   "title": "Passes & Pricing | GDC Festival of Gaming",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-gdc-festival-2027"
+  ]
+ },
  "x-gggp-org-flowerpiano": {
   "url": "https://gggp.org/flowerpiano/",
   "publisher": "Gardens of Golden Gate Park (official site)",
@@ -1569,6 +1595,32 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": [
    "night-of-ideas-sf"
+  ]
+ },
+ "audit-7adb29e4dc7b": {
+  "url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+  "publisher": "sfpl.org",
+  "title": "Social: Family Game Time | San Francisco Public Library",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T12:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://sfpl.org/events/2026/10/18/social-family-game-time",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "3c94871a7ff53e37e800251ac38314d1ef0f1e710a81c791e2a433037de18751",
+   "truncated_response": false,
+   "title": "Social: Family Game Time | San Francisco Public Library",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-sfpl-family-game-time"
   ]
  },
  "b-sfpl-org-events-special-programs-filipino-american-history-celeb": {
@@ -3671,6 +3723,110 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": [
    "b-autumn-moon-festival"
+  ]
+ },
+ "audit-f2c26c175f2e": {
+  "url": "https://www.moscone.com/events/cloudflare-connect-2026",
+  "publisher": "moscone.com",
+  "title": "Cloudflare Connect 2026",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T12:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://www.moscone.com/events/cloudflare-connect-2026",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "302fb8b36284500b4c7858b0bb68edcdfcf411b45cc280951015fb0bbdd364ff",
+   "truncated_response": false,
+   "title": "Cloudflare Connect 2026",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-cloudflare-connect-2026"
+  ]
+ },
+ "audit-7a39ecdc681e": {
+  "url": "https://www.moscone.com/events/current-san-francisco-2026",
+  "publisher": "moscone.com",
+  "title": "Current San Francisco 2026",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T12:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://www.moscone.com/events/current-san-francisco-2026",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "1b0ae8fb21831ba0470afc8a67b16ebe5366c548243e66aeac13e716da19bc2b",
+   "truncated_response": false,
+   "title": "Current San Francisco 2026",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-current-sf-2026"
+  ]
+ },
+ "audit-6a88427b80e7": {
+  "url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+  "publisher": "moscone.com",
+  "title": "GDC Festival of Gaming 2027",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T12:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://www.moscone.com/events/gdc-festival-gaming-2027",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "450aba3444aa2ecfa0565e3fd259af94846add7bdcdab1d9f594c98173b127ce",
+   "truncated_response": false,
+   "title": "GDC Festival of Gaming 2027",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-gdc-festival-2027"
+  ]
+ },
+ "audit-a58d841c18fc": {
+  "url": "https://www.moscone.com/events/microsoft-ignite-2026",
+  "publisher": "moscone.com",
+  "title": "Microsoft Ignite 2026",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T12:00:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://www.moscone.com/events/microsoft-ignite-2026",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T12:00:00+00:00",
+   "sha256": "088bbc76bd033fe4b5acfdcf36c958c7bb50805830ce0c173d590f85f61fee33",
+   "truncated_response": false,
+   "title": "Microsoft Ignite 2026",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-microsoft-ignite-2026"
   ]
  },
  "x-www-moscone-com-events-pokemon-world-championships-2026": {

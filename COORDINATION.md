@@ -82,7 +82,10 @@ T18 complete. The local claim had independently used the same T19 number before 
 update. Resolution preserved PR #14's registry entry and completed T19 unchanged, kept T18 marked
 done, and renumbered this distinct data-consistency remediation as T20. The confirmed data anomaly
 was then logged under T20 before modifying shared generated outputs. No files or findings from the
-other session were discarded.
+other session were discarded. Rebasing onto the updated `main` made the first ordinary push
+non-fast-forward; fetch confirmed the remote branch contained only this session's earlier claim
+commit (`dcbec2c`). The rebased branch preserves that claim and PR #14's mainline commits; its
+update will use a lease against the observed remote SHA so no concurrent branch update is lost.
 
 **2026-10-18 — `5a85baf2` integration merge of `origin/main` (`bb74afd`) into
 `arena/5a85baf2-maltaproj5`.**

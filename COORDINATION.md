@@ -29,6 +29,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7) |
 | `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
 | `526a8db6` | `arena/526a8db6-maltaproj5` | 2026-10-18 | Independent final audit of delivered register, build, CI, and live publication (T19) |
+| `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 04:20 UTC | Post-publication data consistency fix and regression validation (T20) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -61,6 +62,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T17 | Register expansion 86→106 entries from official sources | **done — content integrated**; PR #7 superseded | `a1b7522f` | `data/events_a1b7522f.json`, `data/sources_a1b7522f.json` |
 | T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **done — live** | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
 | T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **done** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
+| T20 | Resolve confirmed populated/marked-unverified data conflicts, strengthen consistency checks, document source-snapshot coverage, rebuild and publish | **in progress** | `99662c40` | `COORDINATION.md`, `data/events_base86.json`, `tools/consolidate.py`, `tools/apply_verify.py`, `scripts/build.py`, `scripts/validate.py`, generated data/pages, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -72,6 +74,18 @@ files are preserved under `data/`, and the merge map is explicit in `tools/conso
 ---
 
 ## Merge conflict log
+
+**2026-10-18 — `99662c40` rebased the T20 audit claim onto `origin/main` after PR #14 landed.**
+
+PR #14 from session `526a8db6` had already recorded an independent delivery audit as T19 and marked
+T18 complete. The local claim had independently used the same T19 number before fetching that
+update. Resolution preserved PR #14's registry entry and completed T19 unchanged, kept T18 marked
+done, and renumbered this distinct data-consistency remediation as T20. The confirmed data anomaly
+was then logged under T20 before modifying shared generated outputs. No files or findings from the
+other session were discarded. Rebasing onto the updated `main` made the first ordinary push
+non-fast-forward; fetch confirmed the remote branch contained only this session's earlier claim
+commit (`dcbec2c`). The rebased branch preserves that claim and PR #14's mainline commits; its
+update will use a lease against the observed remote SHA so no concurrent branch update is lost.
 
 **2026-10-18 — `5a85baf2` integration merge of `origin/main` (`bb74afd`) into
 `arena/5a85baf2-maltaproj5`.**

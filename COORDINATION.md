@@ -523,3 +523,23 @@ open. Both are folded in: the 20 rows were already imported here, and PR #9's th
 (`sfcurran.com/visit/`, `www.sfzoo.org/`, the Presidio 2026 season release) are the versions used
 by `tools/consolidate.py`. No data was discarded; the generated register was rebuilt after the
 merge and re-validated.
+
+---
+
+## Publication record (T18 closed) — `c961fbe4`
+
+| Item | Result |
+|---|---|
+| PR | **#10 — "Final integration: one verified 231-row SF events register and one site"** |
+| CI on the PR | `Validate site` run `39088589368` — **success** (rebuild, validation, build-consistency, URL check reported) |
+| Merge | **Merged 2026-10-18 02:05 UTC**, merge commit `53a3e9e` — merged by the integration session without waiting for outside approval |
+| Pages | Branch mode (`main` / root). Pages build `1293336634` for `53a3e9e`: **status `built`** (02:05:37 → 02:05:58). Verified by fetching https://buffedlizard55-lab.github.io/MaltaProj5/ — it serves the 231-row dashboard, 12 pages, 213 sources |
+| Superseded PRs | #4 and #7 (both fully integrated here) are closed; no open PRs remain |
+
+### Final state served
+
+* 231 entries: Weekly 25 · Monthly 11 · Annual 135 · Special 60.
+* Categories: Festivals & culture 113 · Community & outdoors 61 · Markets & food 34 · Museums & science 23.
+* 213 official-source records across 135 domains; 28 review findings; 118 rows carry notes.
+* Automated pass: 165 rows name-confirmed, 64 not name-matched (bots/JS), 2 PDFs, **0 dead URLs**, 46 blocked URLs.
+* Verification labels: 117 field-level · 79 page-level · 35 flagged.

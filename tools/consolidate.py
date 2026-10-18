@@ -833,3 +833,8 @@ rows, sources, review = include_upstream(rows, sources, review)
 # Mandatory final projection. No legacy value/verification label can leak through.
 from audited_register import apply_audit
 apply_audit(rows, sources, review)
+
+# Additive new-requirement overlay (session 3adf31d9, T33-T36): gaming, music and
+# AI/technology entries only. Same fail-closed rules; never edits an existing row.
+from register_3adf31d9 import apply_extension
+apply_extension()

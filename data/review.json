@@ -28,5 +28,21 @@
   "title": "Evidence and coverage limitations",
   "detail": "HTTP 200, a page title, a name match, a URL year, free parking, free refreshments, and an organization's domain suffix do not establish event facts, admission or nonprofit status. Blank cells are unverified. Commercial ticketing/JS pages, neighborhood micro-events, civic and faith calendars, sports fixtures and individual arts performances need further coverage. No claim of citywide completeness or ongoing automated fact verification is made.",
   "urls": []
+ },
+ {
+  "title": "Gaming, music and AI research pass (session 3adf31d9)",
+  "detail": "15 entries were added from official organizer, venue, library and conference pages: GDC Festival of Gaming; the San Francisco Scholastic Chess Championship and Mechanics' Institute chess programmes; San Francisco Public Library chess, board-game and Chinese-chess clubs; the AI Engineer World's Fair, TDX, ICLR, Data + AI Summit and AI Council conferences; and the Stern Grove Festival. Every value is quoted from the page that was read on 18 October 2026. Where a page states no admission, the price cell is blank and labelled 'Not stated' — never 'Free'. Two candidates are held for review because the captured official text names no venue (Mechanics' Institute Introduction to Chess) or no venue at all (AI Council 2027). Several sources were read through the workspace search tool's verbatim result text rather than a full page fetch (sfpl.org's branch navigation and the Stern Grove contact block); those captures record no HTTP status and are labelled as such.",
+  "urls": [
+   "https://gdconf.com/",
+   "https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship",
+   "https://www.sterngrove.org/about-us",
+   "https://ai.engineer/worldsfair/2027",
+   "https://iclr.cc/Conferences/2027/index.html"
+  ]
+ },
+ {
+  "title": "Topic tags and cost badges are labels, not verified fields",
+  "detail": "The Gaming / Music / AI & technology tags are editorial presentation labels derived from the verified event name (or from this session's explicit decision). A tag never changes a fact, a date or a source, and it is not evidence that an event belongs to a genre. The Free / Paid / Not stated badge is computed only from the verified admission text quoted from the official page, and the exact official wording is always shown next to the badge. A blank admission cell is 'Not stated', never 'Free'.",
+  "urls": []
  }
 ]

@@ -428,17 +428,19 @@
  },
  "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202": {
   "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
-  "publisher": "San Francisco Symphony \u2014 2026-27 Season Calendar",
+  "publisher": "San Francisco Symphony \u2014 2026\u201327 season concert calendar (PDF)",
   "checked": "2026-10-18",
-  "excerpt": "SAN FRANCISCO SYMPHONY 2026 -27 SEASON ... SPECIAL EVENT Opening Gala with Hilary Hahn, Thursday, September 24, 2026, at 7:00pm ... Davies Symphony Hall.",
-  "method": "Official page retrieved with fetch_page/search index on 2026-10-18; excerpt transcribed from that page, not a full-page archive."
+  "excerpt": "SPECIAL EVENT. Opening Gala with Hilary Hahn. Thursday, September 24, 2026, at 7:00pm. Giancarlo Guerrero conductor. Hilary Hahn violin. FELIX MENDELSSOHN Violin Concerto.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
  },
  "b-sfopera-com-press-press-releases-san-francisco-opera-2026-27-sea": {
   "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
-  "publisher": "San Francisco Opera \u2014 2026-27 season press release",
+  "publisher": "San Francisco Opera \u2014 2026\u201327 season announcement",
   "checked": "2026-10-18",
-  "excerpt": "San Francisco Opera's 104th Season Opens September 12. September 12-13 opening weekend includes OPERA BALL gala, SIMON BOCCANEGRA and free, annual OPERA IN THE PARK concert. ... SIMON BOCCANEGRA by Giuseppe Verdi, September 12-27, 2026. All performances take place at the War Memorial Opera House (301 Van Ness Avenue in San Francisco), unless noted.",
-  "method": "Official page retrieved with fetch_page/search index on 2026-10-18; excerpt transcribed from that page, not a full-page archive."
+  "excerpt": "On November 6, Kim and the San Francisco Opera Orchestra take the stage for Strauss in Concert, an all-Richard Strauss program featuring soprano soloist Adela Zaharia.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
  },
  "b-sfballet-org-2026-2027-season": {
   "url": "https://www.sfballet.org/2026-2027-season/",
@@ -515,13 +517,6 @@
   "publisher": "San Francisco Opera \u2014 Opera Ball",
   "checked": "2026-10-18",
   "excerpt": "Opera Ball 2026 - Thursday, November 12, 2026. Following the postponement of our opening night celebration, Opera Ball 2026 will now take place on Thursday, November 12, 2026, at San Francisco City Hall. ... rescheduled ... due to the San Francisco Opera orchestra labor negotiations.",
-  "method": "Official page retrieved with fetch_page/search index on 2026-10-18; excerpt transcribed from that page, not a full-page archive."
- },
- "b-hardlystrictlybluegrass-com": {
-  "url": "https://hardlystrictlybluegrass.com/",
-  "publisher": "Hardly Strictly Bluegrass (official homepage)",
-  "checked": "2026-10-18",
-  "excerpt": "GET THE APP! The HSB app is the best way to stay on top of announcements and updates. ... MISS YOUR MERCH MOMENT? Our online merch store is open October 13 - 27. ... HSB AT 25: RELIVE YOUR FAVORITE MOMENTS ... 25 years of HSB. Scenes from HSB 2025.",
   "method": "Official page retrieved with fetch_page/search index on 2026-10-18; excerpt transcribed from that page, not a full-page archive."
  },
  "x-hotcfarmersmarket-org": {
@@ -716,13 +711,6 @@
  "x-about-asianart-org-ticketing-free-and-reduced-museum-admission": {
   "url": "https://about.asianart.org/ticketing/free-and-reduced-museum-admission/",
   "publisher": "Asian Art Museum (official site)",
-  "checked": "2026-10-18",
-  "excerpt": "Automated re-check pending (tools/verify_rows.py runs in CI and records the fetched text).",
-  "method": "Row authored by session 4f47c142; page fetched and event-name match checked automatically on 2026-10-18. Field values not re-transcribed in this pass unless the row carries a manual-check note."
- },
- "x-soma-nights-com": {
-  "url": "https://soma-nights.com/",
-  "publisher": "SOMA Nights (official site, linked from SF Travel guides)",
   "checked": "2026-10-18",
   "excerpt": "Automated re-check pending (tools/verify_rows.py runs in CI and records the fetched text).",
   "method": "Row authored by session 4f47c142; page fetched and event-name match checked automatically on 2026-10-18. Field values not re-transcribed in this pass unless the row carries a manual-check note."
@@ -1100,10 +1088,11 @@
  },
  "x-comedyday-org": {
   "url": "https://comedyday.org/",
-  "publisher": "Comedy Day (official site, dates per SF Travel September guide)",
+  "publisher": "Comedy Day (official)",
   "checked": "2026-10-18",
-  "excerpt": "Automated re-check pending (tools/verify_rows.py runs in CI and records the fetched text).",
-  "method": "Row authored by session 4f47c142; page fetched and event-name match checked automatically on 2026-10-18. Field values not re-transcribed in this pass unless the row carries a manual-check note."
+  "excerpt": "Comedy Day 2026.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
  },
  "x-portolamusicfestival-com": {
   "url": "https://portolamusicfestival.com/",
@@ -1398,5 +1387,61 @@
   "checked": "2026-10-18",
   "excerpt": "Automated re-check pending (tools/verify_rows.py runs in CI and records the fetched text).",
   "method": "Row authored by session 4f47c142; page fetched and event-name match checked automatically on 2026-10-18. Field values not re-transcribed in this pass unless the row carries a manual-check note."
+ },
+ "x-www-thesuperfair-com-san-francisco": {
+  "url": "https://www.thesuperfair.com/san-francisco",
+  "publisher": "The Superfair (formerly Superfine Art Fair) \u2014 San Francisco",
+  "checked": "2026-10-18",
+  "excerpt": "The 2026 San Francisco Fair has ended. We'll see you in 2027! The Superfair San Francisco March 19-22, 2026 \u2026 Fort Mason Pier 2, Gateway Pavilion \u2026 $25 - $150.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
+ },
+ "x-sfrecpark-org-m-newsflash-home-detail-2744": {
+  "url": "https://sfrecpark.org/m/newsflash/home/detail/2744",
+  "publisher": "San Francisco Recreation and Parks \u2014 press release (4 March 2026)",
+  "checked": "2026-10-18",
+  "excerpt": "Union Square to Bloom with 80,000 Vibrant Dutch Tulips on March 21 \u2026 the Union Square Alliance hosts its annual Tulip Day Presented by JPMorganChase \u2026 80,000 colorful, American-produced flowers \u2026 eight tulips per person.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
+ },
+ "x-www-pier39-com-upcoming-events": {
+  "url": "https://www.pier39.com/upcoming-events/",
+  "publisher": "PIER 39 \u2014 Upcoming Events",
+  "checked": "2026-10-18",
+  "excerpt": "PIER 39 celebrates the Holiday season from November 23rd until January 10th. \u2026 The highlight of PIER 39's Holiday celebration is our Live 60' Christmas Tree in Entrance Plaza.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
+ },
+ "x-www-chasecenter-com-events-teddy-swims-20261110": {
+  "url": "https://www.chasecenter.com/events/teddy-swims-20261110/",
+  "publisher": "Chase Center \u2014 Teddy Swims event page",
+  "checked": "2026-10-18",
+  "excerpt": "Teddy Swims. The UGLY Tour \u2026 Date Tuesday, November 10, 2026. Show Starts 7:00 PM. Doors Open 6:00 PM.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
+ },
+ "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121": {
+  "url": "https://www.chasecenter.com/news/jonas-brothers-announcement-20261121/",
+  "publisher": "Chase Center \u2014 Jonas Brothers announcement",
+  "checked": "2026-10-18",
+  "excerpt": "The Jonas Brothers are Coming to Chase Center on Nov. 21, 2026. \u2026 The Burning Up Tour All Over Again will make a stop at Chase Center on Saturday, November 21.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
+ },
+ "x-www-chasecenter-com-news-journey-announcement-20261128": {
+  "url": "https://www.chasecenter.com/news/journey-announcement-20261128/",
+  "publisher": "Chase Center \u2014 Journey announcement",
+  "checked": "2026-10-18",
+  "excerpt": "Journey is Coming to Chase Center on Nov. 28, 2026. \u2026 their Final Frontier Tour \u2026 will conclude with a hometown finale show at Chase Center on Saturday, November 28.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
+ },
+ "x-www-artspan-org-visitsfopenstudios": {
+  "url": "https://www.artspan.org/visitsfopenstudios",
+  "publisher": "ArtSpan \u2014 SF Open Studios",
+  "checked": "2026-10-18",
+  "excerpt": "SF Open Studios organizes the city's artists to open their creative spaces to the public over a month-long period in the fall. This San Francisco tradition since 1975.",
+  "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+  "manual": true
  }
 }

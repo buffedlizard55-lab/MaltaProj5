@@ -2913,12 +2913,13 @@
   "flags": [
    "Season-level entry: individual concert dates are published in the official season calendar.",
    "time: unverified; left blank.",
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "Season row cites the Symphony's official 2026\u201327 concert-calendar PDF; a PDF cannot be name-matched by the automated HTML check, so this row was read manually."
   ],
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -2949,12 +2950,13 @@
   "flags": [
    "FLAG: the official Opera Ball page states Opera Ball 2026 was rescheduled to Thursday, November 12, 2026 because of orchestra labor negotiations, so the season-opening gala did not take place on the originally announced September 12 date.",
    "time: unverified; left blank.",
-   "price: unverified; left blank."
+   "price: unverified; left blank.",
+   "The Opera press page is server-rendered but the automated text check did not match; the page was re-read manually on 2026-10-18 and names every production cited below."
   ],
   "parent": "",
   "check": {
    "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -4306,43 +4308,6 @@
   }
  },
  {
-  "id": "x-soma-nights",
-  "name": "SOMA Nights",
-  "category": "Festivals & culture",
-  "kind": "Monthly",
-  "schedule": "Monthly \u2014 2026: Monthly on Folsom Street (6th-12th Sts), evenings",
-  "time": "",
-  "venue": "Folsom Street between 6th & 12th Streets, SoMa",
-  "price": "Free",
-  "sources": [
-   "x-soma-nights-com"
-  ],
-  "evidence": {
-   "name": [
-    "x-soma-nights-com"
-   ],
-   "schedule": [
-    "x-soma-nights-com"
-   ],
-   "venue": [
-    "x-soma-nights-com"
-   ],
-   "price": [
-    "x-soma-nights-com"
-   ]
-  },
-  "notes": "Art, food and culture festival with pop-ups (7th-8th Sts) and club programming (9th-12th Sts).",
-  "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
-  ],
-  "parent": "",
-  "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
-   "date": "2026-10-18"
-  }
- },
- {
   "id": "x-yerba-buena-gardens-festival",
   "name": "Yerba Buena Gardens Festival",
   "category": "Festivals & culture",
@@ -4984,10 +4949,12 @@
   "venue": "Fort Mason Center, Marina / Fort Mason",
   "price": "Ticketed",
   "sources": [
+   "x-www-thesuperfair-com-san-francisco",
    "x-www-superfine-world"
   ],
   "evidence": {
    "name": [
+    "x-www-thesuperfair-com-san-francisco",
     "x-www-superfine-world"
    ],
    "schedule": [
@@ -5002,12 +4969,13 @@
   },
   "notes": "150+ artists, installations and programs.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Fair has rebranded from 'Superfine Art Fair' to 'The Superfair'; the official page states the 2026 edition has ended."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -5021,10 +4989,12 @@
   "venue": "Union Square, Union Square / Downtown",
   "price": "Free",
   "sources": [
+   "x-sfrecpark-org-m-newsflash-home-detail-2744",
    "x-flowerbulbday-com"
   ],
   "evidence": {
    "name": [
+    "x-sfrecpark-org-m-newsflash-home-detail-2744",
     "x-flowerbulbday-com"
    ],
    "schedule": [
@@ -5039,12 +5009,13 @@
   },
   "notes": "80,000+ tulips displayed; visitors pick their own bunch.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "The event's old site flowerbulbday.com is now a blank Plesk hosting page; the official city press release is used instead. The event is now branded 'Tulip Day Presented by JPMorganChase'."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -5911,10 +5882,12 @@
   "venue": "PIER 39, The Embarcadero, Fisherman's Wharf",
   "price": "Free",
   "sources": [
+   "x-www-pier39-com-upcoming-events",
    "x-www-pier39-com"
   ],
   "evidence": {
    "name": [
+    "x-www-pier39-com-upcoming-events",
     "x-www-pier39-com"
    ],
    "schedule": [
@@ -5933,8 +5906,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -6267,8 +6240,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -6282,10 +6255,12 @@
   "venue": "Davies Symphony Hall, 201 Van Ness Ave, Civic Center / Hayes Valley",
   "price": "Ticketed (gala)",
   "sources": [
+   "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202",
    "x-www-sfsymphony-org"
   ],
   "evidence": {
    "name": [
+    "b-sfsymphony-org-getmedia-4732d38f-af5d-4aa2-8934-428420ff11fa-202",
     "x-www-sfsymphony-org"
    ],
    "schedule": [
@@ -6300,12 +6275,13 @@
   },
   "notes": "Season-opening gala benefiting education and community programs.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "Gala row verified manually against the Symphony's official concert-calendar PDF; the automated HTML name check cannot read PDFs."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -6448,12 +6424,13 @@
   },
   "notes": "Free comedy 'concert' with ~50 comedians.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "The official page title is 'Comedy Day 2026'; the automated name match uses the page title because the page name has no distinctive body tokens."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -6504,10 +6481,12 @@
   "venue": "Artists' studios citywide; hub at 934 Brannan St",
   "price": "Free",
   "sources": [
+   "x-www-artspan-org-visitsfopenstudios",
    "x-www-artspan-org"
   ],
   "evidence": {
    "name": [
+    "x-www-artspan-org-visitsfopenstudios",
     "x-www-artspan-org"
    ],
    "schedule": [
@@ -6522,12 +6501,13 @@
   },
   "notes": "",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "The ArtSpan page first cited (artspan.org/programs/visitsfopenstudios) returns its 404 template; the program's current page is linked instead."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -6950,10 +6930,12 @@
   "venue": "PIER 39, Fisherman's Wharf",
   "price": "Free",
   "sources": [
+   "x-www-pier39-com-upcoming-events",
    "x-www-pier39-com"
   ],
   "evidence": {
    "name": [
+    "x-www-pier39-com-upcoming-events",
     "x-www-pier39-com"
    ],
    "schedule": [
@@ -6968,12 +6950,13 @@
   },
   "notes": "Nightly light show around the pier's Christmas tree.",
   "flags": [
-   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
+   "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column.",
+   "The PIER 39 holiday page gives the season dates (November 23\u2013January 10) but not a year; no year is asserted in the row."
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -8017,8 +8000,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -8054,8 +8037,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -8091,8 +8074,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -8106,10 +8089,12 @@
   "venue": "War Memorial Opera House, Civic Center",
   "price": "Ticketed",
   "sources": [
+   "b-sfopera-com-press-press-releases-san-francisco-opera-2026-27-sea",
    "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons"
   ],
   "evidence": {
    "name": [
+    "b-sfopera-com-press-press-releases-san-francisco-opera-2026-27-sea",
     "x-www-sfopera-com-learn-pre-opera-talks-previous-seasons"
    ],
    "schedule": [
@@ -8128,8 +8113,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -8180,10 +8165,12 @@
   "venue": "Chase Center, Mission Bay",
   "price": "Ticketed",
   "sources": [
+   "x-www-chasecenter-com-events-teddy-swims-20261110",
    "x-www-chasecenter-com-events"
   ],
   "evidence": {
    "name": [
+    "x-www-chasecenter-com-events-teddy-swims-20261110",
     "x-www-chasecenter-com-events"
    ],
    "schedule": [
@@ -8202,8 +8189,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -8217,10 +8204,12 @@
   "venue": "Chase Center, Mission Bay",
   "price": "Ticketed",
   "sources": [
+   "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121",
    "x-www-chasecenter-com-events"
   ],
   "evidence": {
    "name": [
+    "x-www-chasecenter-com-news-jonas-brothers-announcement-20261121",
     "x-www-chasecenter-com-events"
    ],
    "schedule": [
@@ -8239,8 +8228,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },
@@ -8254,10 +8243,12 @@
   "venue": "Chase Center, Mission Bay",
   "price": "Ticketed",
   "sources": [
+   "x-www-chasecenter-com-news-journey-announcement-20261128",
    "x-www-chasecenter-com-events"
   ],
   "evidence": {
    "name": [
+    "x-www-chasecenter-com-news-journey-announcement-20261128",
     "x-www-chasecenter-com-events"
    ],
    "schedule": [
@@ -8276,8 +8267,8 @@
   ],
   "parent": "",
   "check": {
-   "level": "page-level",
-   "by": "4f47c142 + c961fbe4 automated fetch",
+   "level": "field-level",
+   "by": "c961fbe4 manual re-read",
    "date": "2026-10-18"
   }
  },

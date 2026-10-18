@@ -291,12 +291,19 @@ def slug_source(url):
     return "x-" + h[:70]
 
 
-def add_source(url, publisher, note=""):
+def add_source(url, publisher, note="", excerpt="", manual=False):
     if url.startswith("http://"):
         note = (note + " Original register cited " + url + "; upgraded to https for this link.").strip()
         url = "https://" + url[len("http://"):]
     for sid, rec in sources.items():
         if rec["url"] == url:
+            if excerpt:
+                rec["excerpt"] = excerpt
+                rec["publisher"] = publisher
+                rec["method"] = note or ("Page read manually on 2026-10-18; excerpt transcribed from "
+                                         "the page, not a full-page archive.")
+                if manual:
+                    rec["manual"] = True
             return sid
     sid = slug_source(url)
     n = 2
@@ -307,10 +314,13 @@ def add_source(url, publisher, note=""):
         "url": url,
         "publisher": publisher,
         "checked": "2026-10-18",
-        "excerpt": "Automated re-check pending (tools/verify_rows.py runs in CI and records the fetched text).",
+        "excerpt": excerpt or ("Automated re-check pending (tools/verify_rows.py runs in CI and "
+                               "records the fetched text)."),
         "method": note or ("Row source inherited from session 4f47c142; page fetched and "
                            "event-name match checked automatically on 2026-10-18."),
     }
+    if manual:
+        sources[sid]["manual"] = True
     return sid
 
 
@@ -423,6 +433,134 @@ for r in new_rows:
 
 rows = base + converted
 
+# --------------------------------------------------- row-level source corrections
+# Applied after the merge. Every entry below was re-read by session c961fbe4 on
+# 2026-10-18 with fetch_page; the excerpt is transcribed from the live page.
+FIXES = {
+    "b-sf-symphony-season": {
+        "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+        "publisher": "San Francisco Symphony — 2026–27 season concert calendar (PDF)",
+        "excerpt": "SAN FRANCISCO SYMPHONY 2026–27 SEASON CONCERT CALENDAR. All concerts are at Davies Symphony Hall, 201 Van Ness Avenue, San Francisco, unless otherwise noted.",
+        "flag": "Season row cites the Symphony's official 2026–27 concert-calendar PDF; a PDF cannot be name-matched by the automated HTML check, so this row was read manually.",
+    },
+    "x-sf-symphony-opening-gala": {
+        "url": "https://www.sfsymphony.org/getmedia/4732d38f-af5d-4aa2-8934-428420ff11fa/2026-27-Season-Calendar.pdf",
+        "publisher": "San Francisco Symphony — 2026–27 season concert calendar (PDF)",
+        "excerpt": "SPECIAL EVENT. Opening Gala with Hilary Hahn. Thursday, September 24, 2026, at 7:00pm. Giancarlo Guerrero conductor. Hilary Hahn violin. FELIX MENDELSSOHN Violin Concerto.",
+        "flag": "Gala row verified manually against the Symphony's official concert-calendar PDF; the automated HTML name check cannot read PDFs.",
+    },
+    "b-sf-opera-season": {
+        "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+        "publisher": "San Francisco Opera — 2026–27 season announcement",
+        "excerpt": "San Francisco Opera's 104th Season Opens September 12. … MARY, QUEEN OF SCOTS … MANON … THE MARRIAGE OF FIGARO … Strauss in Concert … OPERA BALL gala … free, annual OPERA IN THE PARK concert.",
+        "flag": "The Opera press page is server-rendered but the automated text check did not match; the page was re-read manually on 2026-10-18 and names every production cited below.",
+    },
+    "x-sf-opera-season-opening": {
+        "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+        "publisher": "San Francisco Opera — 2026–27 season announcement",
+        "excerpt": "Opening weekend begins with the annual Opera Ball benefit … on Saturday, September 12, featuring Verdi's Simon Boccanegra (September 12–27).",
+    },
+    "x-sf-opera-mary-queen-of-scots": {
+        "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+        "publisher": "San Francisco Opera — 2026–27 season announcement",
+        "excerpt": "Thea Musgrave's 1977 English-language opera, Mary, Queen of Scots (September 20–October 4) … starring soprano Heidi Stober as Mary.",
+    },
+    "x-sf-opera-manon": {
+        "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+        "publisher": "San Francisco Opera — 2026–27 season announcement",
+        "excerpt": "Jules Massenet's Manon (October 15–November 1), with soprano Amina Edris and tenor Pene Pati.",
+    },
+    "x-sf-opera-figaro": {
+        "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+        "publisher": "San Francisco Opera — 2026–27 season announcement",
+        "excerpt": "Mozart's The Marriage of Figaro (Le Nozze di Figaro) (October 31–November 29).",
+    },
+    "x-sf-opera-strauss-in-concert": {
+        "url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+        "publisher": "San Francisco Opera — 2026–27 season announcement",
+        "excerpt": "On November 6, Kim and the San Francisco Opera Orchestra take the stage for Strauss in Concert, an all-Richard Strauss program featuring soprano soloist Adela Zaharia.",
+    },
+    "x-superfine-art-fair": {
+        "url": "https://www.thesuperfair.com/san-francisco",
+        "publisher": "The Superfair (formerly Superfine Art Fair) — San Francisco",
+        "excerpt": "The 2026 San Francisco Fair has ended. We'll see you in 2027! The Superfair San Francisco March 19-22, 2026 … Fort Mason Pier 2, Gateway Pavilion … $25 - $150.",
+        "flag": "Fair has rebranded from 'Superfine Art Fair' to 'The Superfair'; the official page states the 2026 edition has ended.",
+    },
+    "x-flower-bulb-day": {
+        "url": "https://sfrecpark.org/m/newsflash/home/detail/2744",
+        "publisher": "San Francisco Recreation and Parks — press release (4 March 2026)",
+        "excerpt": "Union Square to Bloom with 80,000 Vibrant Dutch Tulips on March 21 … the Union Square Alliance hosts its annual Tulip Day Presented by JPMorganChase … 80,000 colorful, American-produced flowers … eight tulips per person.",
+        "flag": "The event's old site flowerbulbday.com is now a blank Plesk hosting page; the official city press release is used instead. The event is now branded 'Tulip Day Presented by JPMorganChase'.",
+    },
+    "x-fourth-of-july-pier39": {
+        "url": "https://www.pier39.com/upcoming-events/",
+        "publisher": "PIER 39 — Upcoming Events",
+        "excerpt": "4th of July at PIER 39! … With over 100+ unique shops, restaurants, attractions, and Free Entertainment on two Levels.",
+    },
+    "x-pier39-holiday-lineup": {
+        "url": "https://www.pier39.com/upcoming-events/",
+        "publisher": "PIER 39 — Upcoming Events",
+        "excerpt": "PIER 39 celebrates the Holiday season from November 23rd until January 10th. … The highlight of PIER 39's Holiday celebration is our Live 60' Christmas Tree in Entrance Plaza.",
+        "flag": "The PIER 39 holiday page gives the season dates (November 23–January 10) but not a year; no year is asserted in the row.",
+    },
+    "x-chase-center-teddy-swims": {
+        "url": "https://www.chasecenter.com/events/teddy-swims-20261110/",
+        "publisher": "Chase Center — Teddy Swims event page",
+        "excerpt": "Teddy Swims. The UGLY Tour … Date Tuesday, November 10, 2026. Show Starts 7:00 PM. Doors Open 6:00 PM.",
+    },
+    "x-chase-center-jonas-brothers": {
+        "url": "https://www.chasecenter.com/news/jonas-brothers-announcement-20261121/",
+        "publisher": "Chase Center — Jonas Brothers announcement",
+        "excerpt": "The Jonas Brothers are Coming to Chase Center on Nov. 21, 2026. … The Burning Up Tour All Over Again will make a stop at Chase Center on Saturday, November 21.",
+    },
+    "x-chase-center-journey": {
+        "url": "https://www.chasecenter.com/news/journey-announcement-20261128/",
+        "publisher": "Chase Center — Journey announcement",
+        "excerpt": "Journey is Coming to Chase Center on Nov. 28, 2026. … their Final Frontier Tour … will conclude with a hometown finale show at Chase Center on Saturday, November 28.",
+    },
+    "x-artspan-open-studios": {
+        "url": "https://www.artspan.org/visitsfopenstudios",
+        "publisher": "ArtSpan — SF Open Studios",
+        "excerpt": "SF Open Studios organizes the city's artists to open their creative spaces to the public over a month-long period in the fall. This San Francisco tradition since 1975.",
+        "flag": "The ArtSpan page first cited (artspan.org/programs/visitsfopenstudios) returns its 404 template; the program's current page is linked instead.",
+    },
+    "x-comedy-day": {
+        "url": "https://comedyday.org/",
+        "publisher": "Comedy Day (official)",
+        "excerpt": "Comedy Day 2026.",
+        "flag": "The official page title is 'Comedy Day 2026'; the automated name match uses the page title because the page name has no distinctive body tokens.",
+    },
+}
+
+for rid, fix in FIXES.items():
+    row = next(r for r in rows if r["id"] == rid)
+    sid = add_source(fix["url"], fix["publisher"], note="Page re-read manually on 2026-10-18; "
+                     "excerpt transcribed from the live page.", excerpt=fix["excerpt"], manual=True)
+    if sid not in row["sources"]:
+        row["sources"].insert(0, sid)
+    row["evidence"].setdefault("name", [])
+    if sid not in row["evidence"]["name"]:
+        row["evidence"]["name"].insert(0, sid)
+    row["check"] = {"level": "field-level", "by": "c961fbe4 manual re-read", "date": "2026-10-18"}
+    if fix.get("flag") and fix["flag"] not in row["flags"]:
+        row["flags"].append(fix["flag"])
+
+# SOMA Nights: the only official page is unreachable and no other official page
+# confirms the 2026 edition. Do not publish unverified details.
+DROP_ROWS = {
+    "x-soma-nights": "Official site soma-nights.com returned an SSL error / HTTP 500 on re-check; no other "
+                     "official page confirms the 2026 edition. Row removed from the register and recorded on "
+                     "Flagged for Review rather than published unverified.",
+}
+for rid, why in DROP_ROWS.items():
+    row = next(r for r in rows if r["id"] == rid)
+    review.append({
+        "title": f"{row['name']} — excluded: official source unreachable",
+        "detail": why,
+        "urls": ["https://soma-nights.com/"],
+    })
+rows = [r for r in rows if r["id"] not in DROP_ROWS]
+
 # --------------------------------------------------------------- reclassify base
 for r in rows:
     if r["id"] in RECLASS:
@@ -437,6 +575,11 @@ for r in rows:
     for field in ("schedule", "time", "venue", "price"):
         if not r[field] and not any(f.startswith(field + ": unverified") for f in r["flags"]):
             r["flags"].append(f"{field}: unverified — not stated on the cited official page.")
+
+# prune source records no longer cited by any row
+used_ids = {sid for r in rows for sid in r["sources"]}
+used_ids |= {sid for f in review for sid in f.get("sources", [])}
+sources = {sid: rec for sid, rec in sources.items() if sid in used_ids}
 
 # --------------------------------------------------------------------- integrity
 ids = [r["id"] for r in rows]

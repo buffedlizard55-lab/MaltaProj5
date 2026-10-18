@@ -106,12 +106,16 @@ def fetch(url):
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
             raw = r.read(2_500_000)
+            ctype = r.headers.get_content_type() or ""
+            is_pdf = raw[:4] == b"%PDF" or ctype == "application/pdf"
             charset = r.headers.get_content_charset() or "utf-8"
             html = raw.decode(charset, "ignore")
             p = Text()
-            p.feed(html)
+            if not is_pdf:
+                p.feed(html)
             text = re.sub(r"\s+", " ", " ".join(p.parts))
-            return {"http": r.getcode(), "final_url": r.geturl(), "chars": len(html),
+            return {"http": r.getcode(), "final_url": r.geturl(), "chars": len(raw),
+                    "content_type": ctype, "pdf": is_pdf,
                     "title": re.sub(r"\s+", " ", p.title).strip()[:160], "text": text,
                     "seconds": round(time.time() - t0, 1)}
     except urllib.error.HTTPError as e:
@@ -149,11 +153,15 @@ for url, res in fetched.items():
     res["matches"] = {}
     for sid in urls[url]:
         row = used[sid][0]
+        hay = norm(res.get("title", "") + " " + text)
         toks = tokens(row["name"])
-        hit = next((t for t in toks if t in norm(text)), None)
+        if not toks:
+            toks = [w for w in re.findall(r"[a-z0-9]+", norm(row["name"]))
+                    if len(w) >= 4 and not w.isdigit()]
+        hit = next((t for t in toks if t in hay), None)
         if not hit:
             full = norm(row["name"])
-            if full and len(full) > 12 and full in norm(text):
+            if full and len(full) > 10 and full in hay:
                 hit = full
         res["matches"][sid] = hit
         res["found_any"] = res["found_any"] or bool(hit)
@@ -162,6 +170,9 @@ for url, res in fetched.items():
             snippet = text[max(0, i - 160): i + 220].strip()
             report["sources"].setdefault(sid, {})["snippet"] = re.sub(r"\s+", " ", snippet)[:380]
     res["sample_tokens"] = tokens(used[urls[url][0]][0]["name"])
+    if res.get("pdf"):
+        res.pop("matches", None)
+        res["note"] = "PDF fetched; text check skipped (manual read required)."
     report["urls"][url] = res
     if res["http"] in (404, 410, 0):
         report["dead"].append({"url": url, "http": res["http"], "error": res.get("error", "")})
@@ -178,9 +189,15 @@ for row in rows:
             hits.append({"source": sid, "url": url, "match": hit,
                          "snippet": report["sources"].get(sid, {}).get("snippet", ""),
                          "http": r.get("http")})
-    status = "name_found" if hits else "name_not_found"
-    if not any(report["urls"].get(sources[s]["url"], {}).get("http") for s in row["sources"]):
+    statuses = [report["urls"].get(sources[s]["url"], {}) for s in row["sources"]]
+    if hits:
+        status = "name_found"
+    elif any(x.get("pdf") for x in statuses):
+        status = "pdf_not_checked"
+    elif not any(x.get("http") for x in statuses):
         status = "no_response"
+    else:
+        status = "name_not_found"
     report["rows"][row["id"]] = {"name": row["name"], "status": status,
                                  "hits": hits[:2],
                                  "sources_checked": len(row["sources"])}
@@ -188,8 +205,10 @@ for row in rows:
 ok = sum(1 for v in report["rows"].values() if v["status"] == "name_found")
 notfound = [v for v in report["rows"].values() if v["status"] == "name_not_found"]
 noresp = [v for v in report["rows"].values() if v["status"] == "no_response"]
+pdfs = [v for v in report["rows"].values() if v["status"] == "pdf_not_checked"]
 report["summary"] = {"rows": len(rows), "name_found": ok,
                      "name_not_found": len(notfound), "no_response": len(noresp),
+                     "pdf_not_checked": len(pdfs),
                      "dead_urls": len(report["dead"]), "blocked_urls": len(report["blocked"])}
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(report, indent=1, ensure_ascii=False) + "\n")

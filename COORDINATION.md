@@ -41,8 +41,6 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 
 | `64f8b973` | `arena/64f8b973-maltaproj5` | 2026-10-18 02:58 | Post-integration official-evidence audit, field-safety fixes, dashboard QA, final PR and Pages confirmation (T26–T28) |
 | `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
-
-
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
@@ -1168,3 +1166,15 @@ No data, source, or site file owned by that session was modified.
 * The task board contains two historical rows numbered T21 from an earlier
   cross-session integration. This historical numbering irregularity is left intact;
   it does not affect the register or deployed pages.
+
+### T29 branch reconciliation — 2026-10-18
+
+Before the second push, `git pull --rebase origin main` incorporated PR #26. The
+push was then rejected non-fast-forward because the session remote still held the
+original T29 claim commit `cdc1e66` on the pre-PR-#26 base. Fetch showed that this
+remote branch contained only that earlier claim, with no other session commits.
+A merge was used (no force push); `COORDINATION.md` conflicted where the original
+“in progress” claim overlapped this completed T29 record and the newer mainline
+session row. Resolution retained both the `t26-3164fba7` mainline record and T29's
+completed audit/results, then added this reconciliation note. No other files or
+session work were discarded.

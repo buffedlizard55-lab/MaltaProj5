@@ -43,7 +43,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `bb551cdc` | `arena/bb551cdc-maltaproj5` | 2026-10-18 05:45 | Additional official SF calendar research, overlay extension, rebuild, PR/Pages (T29–T31 calendar expansion) |
 | `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
-| `95ceac65` | `arena/95ceac65-maltaproj5` | 2026-10-18 | Independent semantic re-verification of the live register against official pages (T30); corrections only with exact quotations; PR → main → Pages confirmation |
+| `95ceac65` | `arena/95ceac65-maltaproj5` | 2026-10-18 | Independent semantic re-verification of the live register against official pages (T32); corrections only with exact quotations; PR → main → Pages confirmation |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by

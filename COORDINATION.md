@@ -26,6 +26,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 |---|---|---|---|
 | `3a19e72d` | `arena/3a19e72d-maltaproj5` | 2026-10-18 ~00:20 | Research, dashboard, validation, Pages workflow (PRs #1, #2) |
 | `5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | Research, verification, analysis, checks (PR #3) and **final integration** |
+| `171ecc03` | `arena/171ecc03-maltaproj5` | 2026-10-18 00:53 | Supplemental source audit; scope narrowed after discovering the merged integrated site on main |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -47,11 +48,14 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T8 | Remote source-URL checking | done | `5a85baf2` | `tools/remotecheck.py`, `.github/workflows/pages.yml` |
 | T9 | Final integration: merge registers, re-verify combined data, one site | done | `5a85baf2` | `tools/integrate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `README.md` |
 | T10 | Open PR → `main`, merge, confirm Pages deploy | done | `5a85baf2` | `COORDINATION.md` |
+| T11 | Supplemental official-source audit for event schedules missing from the 86-row integrated register | in progress | `171ecc03` | `data/events_171ecc03.json`, `data/sources_171ecc03.json`, `data/review_171ecc03.json` |
 | — | **GitHub Pages publication** | **needs review** | `3a19e72d`, `5a85baf2` | `.github/workflows/pages.yml`, `data/review.json` |
 
 ---
 
 ## Merge conflict log
+
+**2026-10-18 — `171ecc03` rebase of `origin/main` (`5167522`).** The remote main branch advanced after this session’s initial claim. `COORDINATION.md` had an add/add conflict. Resolution retained the entire existing two-session board, integration history, CI/Pages findings, and PR log, then added this session’s registry entry and a non-overlapping supplemental-data scope. No prior session content was discarded. The parallel `site/` implementation made against the stale local checkout is being omitted to avoid creating a duplicate of the already integrated site.
 
 **2026-10-18 — `5a85baf2` integration merge of `origin/main` (`bb74afd`) into
 `arena/5a85baf2-maltaproj5`.**
@@ -131,6 +135,21 @@ network there is limited to github.com, npm and PyPI. It is wired into
   twice; same result. This confirms `3a19e72d`'s finding from a second session.
 - Integration (T9): merged `origin/main`, resolved three conflicts as logged above, produced the
   86-row combined register, confirmed `scripts/build.py` and `scripts/validate.py` pass unchanged.
+
+---
+
+## Supplemental-source request — `171ecc03`
+
+- The canonical `data/events.json`, build scripts, review page, navigation, and Pages workflow already exist on `main` and are owned by the completed `5a85baf2` integration. This session will not edit those shared outputs.
+- Request to the final-integration owner: review `data/events_171ecc03.json` and its row-level official sources, then merge only non-duplicate verified records into the canonical dataset and site if appropriate. `data/sources_171ecc03.json` records discovery/coverage sources; `data/review_171ecc03.json` records conflicts and omissions.
+- GitHub Pages remains `needs review` per the existing log: prior sessions received HTTP 403 `Resource not accessible by integration` when enabling the Pages site. This session will not edit the Pages workflow owned by the integration session; the permission blocker remains documented for the owner.
+
+## Activity log — `171ecc03`
+
+- 2026-10-18 00:53 UTC: Read the initial local coordination state and claimed the end-to-end task before research. The local checkout still appeared to be at the initial commit when the claim was pushed.
+- 2026-10-18: Before pushing implementation, `git pull --rebase origin main` fetched the already integrated work from sessions `3a19e72d` and `5a85baf2` (main now at `5167522`). Re-scoped this session to supplemental row-level research to avoid overwriting their shared site, data, or deployment work.
+- Supplemental research target: current recurring market/operator pages and newly published 2026–2027 event dates. Every retained supplemental row will carry official source links and evidence notes; known conflicts or missing values will remain blank and be flagged. Detailed findings will be recorded after validation.
+- The local live-preview implementation is not being submitted because main already contains the integrated dashboard; no canonical rows or shared site pages were changed by this session.
 
 ---
 

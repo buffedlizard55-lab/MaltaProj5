@@ -63,6 +63,7 @@ fs.mkdirSync(output, { recursive: true });
     assert.equal(await page.locator('#events tbody tr').count(), stats.listed);
     assert.equal(await page.locator('#events tbody tr:not([hidden])').count(), stats.listed);
     assert.equal(await page.locator('#b-sf-pride-celebration').count(), 0);
+    assert.equal(await page.locator('#b-nihonmachi-street-fair').count(), 0);
     assert.equal(await page.locator('#b-ferry-plaza-farmers-market td').nth(3).textContent(), '');
     assert.match(await page.locator('#b-opera-ball-2026').textContent(), /November 12, 2026/);
     assert.match(await page.locator('#b-opera-ball-2026').textContent(), /Future dated/);
@@ -93,6 +94,7 @@ fs.mkdirSync(output, { recursive: true });
     assert.equal(await page.locator('#events tbody tr:not([hidden])').count(), stats.review_only);
     assert.equal(await page.locator('#b-sf-pride-celebration td').nth(2).textContent(), '');
     assert.equal(await page.locator('#b-sf-pride-celebration td').nth(3).textContent(), '');
+    assert.equal(await page.locator('#b-nihonmachi-street-fair td').nth(2).textContent(), '');
 
     await page.setViewportSize({ width: 390, height: 844 });
     for (const filename of pages) {

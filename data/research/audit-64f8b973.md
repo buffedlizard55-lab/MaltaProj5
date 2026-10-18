@@ -5,9 +5,9 @@ Research date: **18 October 2026**. This log supersedes the earlier site’s fie
 ## Dispositions and scope
 
 - All **231 initial candidates** received explicit dispositions; **2 additional mainline audit candidates** were retained and reviewed, plus **9 newly sourced official-calendar entries**. Total: **242**.
-- **163 entries** pass the name + venue + SF geography directory gate. **79 candidates** remain review-only. This is not “242 fully verified events.”
+- **162 entries** pass the name + venue + SF geography directory gate. **80 candidates** remain review-only. This is not “242 fully verified events.”
 - Every unapproved factual field is blank, including unknown names. An unverified inherited title remains an explicitly labeled candidate identifier for traceability.
-- 20 weekly, 7 monthly, 26 annual entries have explicit recurrence evidence; 110 special/dated/cadence-unconfirmed entries have no unsupported ongoing cadence claim.
+- 20 weekly, 7 monthly, 25 annual entries have explicit recurrence evidence; 110 special/dated/cadence-unconfirmed entries have no unsupported ongoing cadence claim.
 - Directory entries include 14 programme umbrellas. Parent/child links prevent treating the totals as unique-event counts; other changing citywide coverage is incomplete.
 
 ## Evidence trail
@@ -50,8 +50,8 @@ The nine new entries are six official upcoming calendar blocks (SFMOMAween, Kiki
 
 ## Checks executed before PR
 
-- Exact canonical projection and quotation validation: **pass**, 242 records / 163 directory / 79 held.
-- **29 offline regression tests pass**: unsupported fallback, name-only approval, missing decisions, unsupported cadence/location, invented year/month, observed Zoo/Presidio/Opera regressions, cross-edition carryover, regional quarantine, pricing eligibility, FAMSF split, structured address, closing-date blanks, temporal status, parent cycles, failed evidence refresh retention.
+- Exact canonical projection and quotation validation: **pass**, 242 records / 162 directory / 80 held.
+- **30 offline regression tests pass**: unsupported fallback, name-only approval, missing decisions, unsupported cadence/location, invented year/month, observed Zoo/Presidio/Opera regressions, cross-edition carryover, regional quarantine, pricing eligibility, FAMSF split, structured address, closing-date blanks, temporal status, parent cycles, failed evidence refresh retention.
 - Full rebuild repeated: canonical JSON, both CSVs, analysis markdown and all 12 HTML pages are **byte-identical**.
 - Local HTML/fragment/reference/CSV checks: **pass**.
 - Real Chromium 153 smoke test: all 12 pages at **1440×1000** and **390×844**, no document overflow, functioning filters/reset/empty state, official/evidence navigation, no-JavaScript readability and no runtime/asset errors.
@@ -92,3 +92,13 @@ pages, 163 directory rows and 79 held candidates; zero automated WCAG findings o
 four core page types. A new mobile overflow caused by the historical 404 URL was
 found by the real-browser test and fixed with wrapping. CI and Pages results are
 still recorded only after they actually occur.
+
+## Final cross-edition exception removed
+
+The full Nihonmachi homepage places “San Francisco’s Japantown” in its 52nd-edition
+retrospective, while the 53rd-edition 2027 announcement gives only August 7–8 dates.
+Those dates/annual evidence are retained, but future venue is now blank and the
+candidate held for review, consistently with Pride/Fillmore. Current counts are
+162 directory / 80 held; 25 listed annual entries. A thirtieth regression and
+browser assertions prevent this specific carryover from returning. The earlier
+163/79 deployment/check records describe the actual pre-tightening snapshot.

@@ -33,7 +33,7 @@ class AuditedRegister(unittest.TestCase):
         self.assertEqual(len(self.audit['extra_events']), 9)
         self.assertEqual(len(self.rows), 242)
         self.assertTrue(set(self.audit['candidates']) <= set(self.by_id))
-        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 163)
+        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 162)
 
     def test_upstream_additions_and_source_repair_are_preserved(self):
         self.assertIn('f1-alemany-flea-market', self.by_id)
@@ -146,6 +146,14 @@ class AuditedRegister(unittest.TestCase):
         self.assertEqual(r['price'], '')
         self.assertEqual(r['publication'], 'review_only')
         self.assertEqual(self.by_id['x-sf-decorator-showcase']['venue'], '')
+
+    def test_nihonmachi_retrospective_cannot_locate_2027_edition(self):
+        row = self.by_id['b-nihonmachi-street-fair']
+        self.assertEqual(row['venue'], '')
+        self.assertEqual(row['publication'], 'review_only')
+        self.assertEqual(row['geography']['status'], 'unverified')
+        self.assertEqual(row['occurrences'][0]['start'], '2027-08-07')
+        self.assertEqual(row['occurrences'][0]['end'], '2027-08-08')
 
     def test_free_virtual_ticket_not_physical_minimum(self):
         r = self.by_id['x-kung-pao-kosher-comedy']

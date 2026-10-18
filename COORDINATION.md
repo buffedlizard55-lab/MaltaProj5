@@ -1868,3 +1868,28 @@ Post-merge verification: `consolidate.py` idempotent → `build.py` (19 pages, 2
   confirmed upcoming date; the second chunk of the City UN Plaza calendar (dates after 29 Oct); the
   SFMOMA Free Family Day RSVP/$12 exception written into the row's own admission wording by a
   session owning `data/audit_64f8b973.json`; and the remaining Noisebridge questions.
+
+---
+
+## Session `a26fd458` — third free-first research pass + integration (claimed 2026-10-18 ~13:05 UTC)
+
+**Claim (commit `e8aedf5`, rebased onto `ed00748`):** T41 research, T42 additive overlay +
+rebuild, T43 final integration (PR → `main`, Pages confirmation, record). Scope:
+**new** files `data/audit_a26fd458.json`, `data/research/audit-a26fd458.md`,
+`tools/register_a26fd458.py`; additive wiring in `tools/consolidate.py` (owner T27 done);
+regression-count updates in `scripts/validate.py` / `tests/` (owners done); generated
+`data/*`, `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md`, `COORDINATION.md`.
+No existing row is edited; no other session's audit file is touched.
+
+**Rebase conflict log (2026-10-18).** While this session's claim commit was being pushed,
+session `06949148` (PRs #45/#46) and session `9d0b6c49` (PRs #47/#48/#49) merged to
+`main`, so `git pull --rebase` reported a conflict in `COORDINATION.md` (session-registry
+tail). Resolved as a **union**: `06949148`'s registry row kept verbatim, `9d0b6c49`'s
+registry row added (they had published a log section but no registry row), and this
+session's row appended last. No other file conflicted. Neither session's work was
+discarded. The register on the new base is 299 candidates / 216 listed / 83 review-only /
+313 official URLs; this session's overlay chains **after** `register_9d0b6c49.py`.
+
+**Branch policy note (same deviation every prior session records).** Arena pins this
+session to `arena/a26fd458-maltaproj5`, so the requested `session-a26fd458/<task>`
+naming cannot be used; all work and the PR originate from the fixed branch.

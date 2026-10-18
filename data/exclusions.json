@@ -1,0 +1,118 @@
+{
+  "snapshot_date": "2026-10-18",
+  "description": "Events and event categories excluded from the dataset, with reasons. Scope rule: events must take place inside San Francisco city limits.",
+  "exclusions": [
+    {
+      "name": "Grand National Rodeo, Horse and Stock Show",
+      "venue": "Cow Palace, 2600 Geneva Ave, Daly City",
+      "reason": "Venue is in Daly City (unincorporated San Mateo County), outside San Francisco city limits. Listed in SF Travel's October guide under San Francisco events - flagged as a scope irregularity.",
+      "dates": "Oct 9-10, 2026 (per SF Travel)",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-october",
+      "source_name": "SF Travel October guide (listing that was excluded)"
+    },
+    {
+      "name": "The Great Dickens Christmas Fair",
+      "venue": "Cow Palace, 2600 Geneva Ave, Daly City",
+      "reason": "Venue is in Daly City, outside San Francisco city limits (SF Travel's own December guide lists the Daly City address). Weekends from Nov 21, 2026.",
+      "dates": "Weekends Nov 21 - Dec 2026 (per SF Travel)",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-december",
+      "source_name": "SF Travel December guide (listing that was excluded)"
+    },
+    {
+      "name": "Sonoma International Film Festival",
+      "venue": "Sonoma, CA",
+      "reason": "Takes place in the town of Sonoma, outside San Francisco city limits. Appeared in SF Travel's March San Francisco events guide - flagged as a scope irregularity.",
+      "dates": "Mar 25-29, 2026 (per SF Travel)",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-march",
+      "source_name": "SF Travel March guide (listing that was excluded)"
+    },
+    {
+      "name": "Mill Valley Film Festival",
+      "venue": "Mill Valley and other Marin County venues",
+      "reason": "Takes place in Marin County, outside San Francisco city limits. Appeared in SF Travel's October San Francisco events guide - flagged as a scope irregularity.",
+      "dates": "Oct 1-11, 2026 (per SF Travel)",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-october",
+      "source_name": "SF Travel October guide (listing that was excluded)"
+    },
+    {
+      "name": "Beach Break Film Festival",
+      "venue": "Half Moon Bay, CA",
+      "reason": "Takes place in Half Moon Bay, outside San Francisco city limits. Appeared in SF Travel's December San Francisco events guide.",
+      "dates": "2026 edition (per SF Travel)",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-december",
+      "source_name": "SF Travel December guide (listing that was excluded)"
+    },
+    {
+      "name": "Holidays at Filoli",
+      "venue": "Filoli Historic House and Gardens, 86 Canada Rd, Woodside, CA",
+      "reason": "Takes place in Woodside, outside San Francisco city limits. Appeared in SF Travel's December San Francisco events guide, which itself notes the Woodside address.",
+      "dates": "December 2026 (per SF Travel)",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-december",
+      "source_name": "SF Travel December guide (listing that was excluded)"
+    },
+    {
+      "name": "Bay FC home games (NWSL soccer)",
+      "venue": "PayPal Park, San Jose, CA",
+      "reason": "Although described as San Francisco's NWSL club in SF Travel's August guide, Bay FC plays home matches at PayPal Park in San Jose - outside San Francisco city limits.",
+      "dates": "2026 season incl. home games Aug 1 and Aug 23, 2026 (per SF Travel)",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-august",
+      "source_name": "SF Travel August guide (listing that was excluded)"
+    },
+    {
+      "name": "FIFA World Cup 26 matches (Bay Area host city)",
+      "venue": "Levi's Stadium, Santa Clara, CA",
+      "reason": "The Bay Area's FIFA World Cup matches are played at Levi's Stadium in Santa Clara - outside San Francisco city limits - even though SF Travel's June guide says 'San Francisco will host six FIFA World Cup matches.' Only in-city watch parties and fan events are in scope.",
+      "dates": "June 2026",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-june",
+      "source_name": "SF Travel June guide (wording flagged)"
+    },
+    {
+      "name": "Super Bowl LX (the game)",
+      "venue": "Levi's Stadium, Santa Clara, CA",
+      "reason": "The game itself is at Levi's Stadium in Santa Clara. San Francisco fan events and activations are in scope (see Special Events).",
+      "dates": "Feb 8, 2026",
+      "source_url": "https://www.sftravel.com/article/san-francisco-festivals-events-february",
+      "source_name": "SF Travel February guide (context)"
+    },
+    {
+      "name": "626 Night Market (Bay Area)",
+      "venue": "Unverified for 2026 - historically Alameda County Fairgrounds, Pleasanton, CA",
+      "reason": "Aggregators list a Bay Area 626 Night Market (Oct 9-11, 2026) under San Francisco event guides, but the venue could not be confirmed to be inside San Francisco city limits from an official source. Excluded pending official confirmation.",
+      "dates": "Oct 9-11, 2026 (per aggregator listings)",
+      "source_url": "https://sf.funcheap.com/city-guide/october-street-fairs-festivals/",
+      "source_name": "Aggregator listing (not an official source; venue unverified)"
+    },
+    {
+      "name": "Professional team home-game schedules (SF Giants at Oracle Park; Golden State Warriors at Chase Center)",
+      "venue": "Oracle Park; Chase Center",
+      "reason": "In scope by location, but excluded from the events dataset by editorial decision: recurring professional sports league schedules (81 home games/season etc.) are a fixture category rather than individually listed events. Individual special events at these venues (e.g., Ballpark Back 9, concerts, FanFest) ARE included.",
+      "dates": "2026 seasons",
+      "source_url": "https://www.mlb.com/giants/tickets/events",
+      "source_name": "SF Giants events page (scope decision context)"
+    },
+    {
+      "name": "Trade shows and professional conventions (e.g., Dreamforce, Microsoft Ignite, SEMICON West, AGU Fall Meeting at Moscone Center)",
+      "venue": "Moscone Center and other venues",
+      "reason": "In scope by location, but excluded by editorial decision: professional conventions and trade shows are industry attendance events rather than public events. Large public consumer events at Moscone (e.g., Pokemon World Championships) ARE included.",
+      "dates": "Throughout 2026",
+      "source_url": "https://www.moscone.com/",
+      "source_name": "Moscone Center (official venue site; scope decision context)"
+    },
+    {
+      "name": "Opera at the Ballpark (claimed Nov 11, 2026 edition)",
+      "venue": "Oracle Park (claimed)",
+      "reason": "Irregularity: a third-party blog claimed a Nov 11, 2026 Opera at the Ballpark simulcast of La Traviata. The official San Francisco Opera 2026-27 season contains no La Traviata production, and the official simulcast page (sfopera.com/simulcast) appears to carry content from the November 11, 2022 La Traviata edition. No 2026 Opera at the Ballpark edition could be confirmed from official sources - excluded.",
+      "dates": "Claimed Nov 11, 2026 (unverified)",
+      "source_url": "https://www.sfopera.com/press/press-releases/San-Francisco-Opera-2026-27-season/",
+      "source_name": "SF Opera official 2026-27 season (used to disprove the claim)"
+    },
+    {
+      "name": "The Giant Race 2026 (date)",
+      "venue": "Oracle Park",
+      "reason": "Event retained nowhere in the main tables pending date verification: SF Travel's September guide lists The Giant Race without a 2026 date; the Giants' events page shows 'August 17-18' (matching the 2024 edition); the race's own site was not updated with a 2026 date. The race's 2026 date is UNVERIFIED - see Flagged for Review. (Historically: 15th annual ran Aug 17-18, 2024, per race-sfgiants.com.)",
+      "dates": "2026 date unverified",
+      "source_url": "https://www.mlb.com/giants/ballpark/events/giant-race",
+      "source_name": "SF Giants Giant Race page (ambiguous year)"
+    }
+  ]
+}

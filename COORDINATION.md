@@ -63,3 +63,11 @@ details below.
 - 2026-10-18: completed T5 (tools/build_site.py → docs/ static site) and T6 (tools/verify_site.py: 0 errors / 0 warnings; HTTP smoke test all 200; row counts 34/95/38 confirmed). Committed b274acc, pushed.
 - 2026-10-18 (merge): discovered origin/main advanced (session 3a19e72d merged PRs #1–#2: 29-row inventory + root site + validation workflow + Pages permission blocker). Cross-checked their data against this session's verified dataset — consistent (Ferry Plaza hours, Pride 2027, etc.); no invented sources found. Merged origin/main into arena/4f47c142-maltaproj5: no file collisions (their site at repo root, this session's site in docs/; their data at data/events.json, this session's at data/events-*.json). COORDINATION.md unified (both boards + both activity logs); README.md merged (documents both sites). Their work preserved in full; P1 recorded as done (redundant), P2 in progress (blocked).
 - 2026-10-18 (T7): PR to main opened from arena/4f47c142-maltaproj5 with the merged tree; Pages enable attempted via gh CLI (see publish log).
+
+Integration irregularity (recorded per coordination protocol): the Pages workflow from session 3a19e72d
+staged only their root site for publication, which would have served the 29-row inventory at the site
+root while ignoring the fuller docs/ site. Since only one artifact can occupy the Pages root URL, the
+workflow's staging step was amended (not deleted — deploy/validate logic untouched) to publish docs/
+(167 events) as primary and the root inventory under /inventory/ (all their pages, assets and data
+preserved, relative links intact). `tools/verify_site.py` was also added to the CI validate job.
+Their scripts/build.py + validate.py still run unchanged in CI.

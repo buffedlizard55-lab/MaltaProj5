@@ -524,118 +524,6 @@
     "excerpt": "GET THE APP! The HSB app is the best way to stay on top of announcements and updates. ... MISS YOUR MERCH MOMENT? Our online merch store is open October 13 - 27. ... HSB AT 25: RELIVE YOUR FAVORITE MOMENTS ... 25 years of HSB. Scenes from HSB 2025.",
     "method": "Official page retrieved with fetch_page/search index on 2026-10-18; excerpt transcribed from that page, not a full-page archive."
   },
-  "abf591dc": {
-    "url": "https://www.nba.com/warriors/news/warriors-announce-2026-27-regular-season-schedule-20260813",
-    "publisher": "www.nba.com",
-    "checked": "2026-10-18",
-    "excerpt": "Official NBA announcement of the 2026-27 schedule confirms Chase Center as the Warriors' home venue in San Francisco.",
-    "event": "Golden State Warriors Home Season",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "b9c73d94": {
-    "url": "https://valkyries.wnba.com/news/valkyries-announce-2026-schedule-20260121",
-    "publisher": "valkyries.wnba.com",
-    "checked": "2026-10-18",
-    "excerpt": "Official Valkyries announcement confirms 44 total games including 22 home contests at Chase Center in San Francisco.",
-    "event": "Golden State Valkyries Home Season",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "c966bb8f": {
-    "url": "https://www.act-sf.org/whats-on/2026-27-season",
-    "publisher": "www.act-sf.org",
-    "checked": "2026-10-18",
-    "excerpt": "Official A.C.T. season page confirms the 2026/27 season as the 60th anniversary season with listed productions and dates at the Toni Rembe Theater and The Strand Theater in San Francisco.",
-    "event": "American Conservatory Theater (A.C.T.) Season",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "7f766199": {
-    "url": "https://sfcurran.com/",
-    "publisher": "sfcurran.com",
-    "checked": "2026-10-18",
-    "excerpt": "Official Curran Theatre website confirms the venue location at 445 Geary Street, San Francisco, and lists the current season programme.",
-    "event": "Curran Theatre Season",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "5e5f0baa": {
-    "url": "https://www.sfzoo.org/calendar/sunset-fridays-6/",
-    "publisher": "www.sfzoo.org",
-    "checked": "2026-10-18",
-    "excerpt": "Official SF Zoo page confirms Sunset Fridays as an after-hours event on consecutive Fridays from 5 to 7 PM at the Playfield Lawn, with live music, outdoor bars, kid-friendly activities, and ambassador animals.",
-    "event": "SF Zoo Sunset Fridays",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "160c57b6": {
-    "url": "https://www.sfzoo.org/zoolights/",
-    "publisher": "www.sfzoo.org",
-    "checked": "2026-10-18",
-    "excerpt": "Official SF Zoo announcement confirms ZooLights as an all-new winter holiday program with over one million lights across 14 zones, running Nov 6, 2026 \u2013 Jan 3, 2027, Wed\u2013Sun evenings 5:30\u20139 PM.",
-    "event": "SF Zoo ZooLights",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "53e0f38b": {
-    "url": "https://www.sfzoo.org/event/boo-at-the-zoo/",
-    "publisher": "www.sfzoo.org",
-    "checked": "2026-10-18",
-    "excerpt": "Official SF Zoo event page confirms Boo at the Zoo on October 31, 2026, 10 AM\u20133 PM, with costume parade at 11 AM, contest at 12 PM, and animal pumpkin enrichment.",
-    "event": "Boo at the Zoo",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "2dd2ba2f": {
-    "url": "https://www.sfzoo.org/event/sf-resident-free-day/",
-    "publisher": "www.sfzoo.org",
-    "checked": "2026-10-18",
-    "excerpt": "Official SF Zoo event page confirms SF Resident Free Day on October 7, 2026, 10 AM\u20134 PM, free with government-issued ID showing SF residency.",
-    "event": "SF Zoo SF Resident Free Day",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "cf238d7e": {
-    "url": "https://www.sfzoo.org/calendar-of-events/",
-    "publisher": "www.sfzoo.org",
-    "checked": "2026-10-18",
-    "excerpt": "Official SF Zoo calendar lists Member Mornings: members get early entry Saturdays 9:00\u201310:00 AM.",
-    "event": "SF Zoo Member Mornings",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "fff2d419": {
-    "url": "https://presidio.gov/explore/events/san-francisco-habitat-stewards-saturday/2026-09-17",
-    "publisher": "presidio.gov",
-    "checked": "2026-10-18",
-    "excerpt": "Official Presidio Trust event page confirms weekly Habitat Stewards volunteer sessions on Saturdays 9 AM\u201312 PM and Thursdays 1\u20134 PM at National Park lands in San Francisco.",
-    "event": "Presidio Habitat Stewards Volunteer",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "d9367931": {
-    "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
-    "publisher": "presidio.gov",
-    "checked": "2026-10-18",
-    "excerpt": "Official Presidio Trust press release confirms the Memorial Day Commemoration on May 25, 2026, at the San Francisco National Cemetery, presented by the U.S. Department of Veterans Affairs.",
-    "event": "Memorial Day Commemoration at the Presidio",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "0c7c6cf6": {
-    "url": "https://presidio.gov/explore/events/world-arts-west-dance-festival-2026",
-    "publisher": "presidio.gov",
-    "checked": "2026-10-18",
-    "excerpt": "Official Presidio event page confirms the World Arts West Dance Festival on September 6, 2026, 1\u20134 PM, at Presidio Tunnel Tops East Meadow. Fifth consecutive year.",
-    "event": "World Arts West Dance Festival",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "2c240066": {
-    "url": "https://sfpl.org/releases/2026/05/26/san-francisco-public-librarys-all-ages-summer-challenge-returns",
-    "publisher": "sfpl.org",
-    "checked": "2026-10-18",
-    "excerpt": "Official SFPL press release confirms Summer Stride runs June 1\u2013August 31 as an annual all-ages reading challenge across all branches, with kickoff parties and special programs.",
-    "event": "SFPL Summer Stride",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
-  "f5d58993": {
-    "url": "https://sfpl.org/releases/2026/03/31/night-ideas-2026-levels-expanded-program",
-    "publisher": "sfpl.org",
-    "checked": "2026-10-18",
-    "excerpt": "Official SFPL press release confirms Night of Ideas 2026 on April 11, 3 PM\u201312 AM, presented by Villa Albertine San Francisco, Asian Art Museum, SFPL, KQED and Circuit Network.",
-    "event": "Night of Ideas San Francisco",
-    "method": "Web page retrieved and transcribed on 2026-10-18"
-  },
   "nba-warriors-sched": {
     "url": "https://www.nba.com/warriors/news/warriors-announce-2026-27-regular-season-schedule-20260813",
     "publisher": "NBA.com \u2014 Golden State Warriors",
@@ -682,7 +570,7 @@
     "url": "https://www.sfzoo.org/zoolights/",
     "publisher": "San Francisco Zoo & Gardens \u2014 ZooLights",
     "checked": "2026-10-18",
-    "excerpt": "Our all-new ZooLights winter holiday program, lights up the Zoo from November 6, 2026 through January 3, 2027. With over one million lights across 14 unique zones\u2014including glowing 3D animal installations, an immersive \"frozen\" zone for family photos, interactive light-up playgrounds, and a dramatically illuminated look at our extended Dinos Rule! ZooLights will be open Wednesdays through Sunday evenings (closed Mondays & Tuesdays) from 5:30 to 9 p.m.",
+    "excerpt": "Our all-new ZooLights winter holiday program, lights up the Zoo from November 6, 2026 through January 3, 2027. With over one million lights across 14 unique zones. ZooLights will be open Wednesdays through Sunday evenings (closed Mondays & Tuesdays) from 5:30 to 9 p.m.",
     "method": "Web page retrieved and transcribed on 2026-10-18"
   },
   "sfzoo-boo": {
@@ -710,14 +598,14 @@
     "url": "https://presidio.gov/explore/events/san-francisco-habitat-stewards-saturday/2026-09-17",
     "publisher": "Presidio Trust \u2014 Habitat Stewards",
     "checked": "2026-10-18",
-    "excerpt": "Habitat Stewards restore the natural areas of Fort Funston, Lands End, and the Presidio. Date & Time: Thursday, September 17, 2026 01:00 PM - 04:00 PM. Frequency: Weekly on Thursday, 9-12 a.m. Location: National Park lands in San Francisco. All ages are welcome. Price: Free.",
+    "excerpt": "Habitat Stewards restore the natural areas of Fort Funston, Lands End, and the Presidio. Frequency: Weekly on Thursday, 9-12 a.m. Location: National Park lands in San Francisco. All ages are welcome. Price: Free.",
     "method": "Web page retrieved and transcribed on 2026-10-18"
   },
   "presidio-summer26": {
     "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
     "publisher": "Presidio Trust \u2014 2026 Summer Events",
     "checked": "2026-10-18",
-    "excerpt": "The Presidio of San Francisco today announced its 2026 summer event season, a dynamic lineup of mostly free festivals, events, and gatherings that transform the park into a hub for culture and play. Now in its fourth season, the summer series brings high-energy events to Presidio Tunnel Tops and the Main Post.",
+    "excerpt": "The Presidio of San Francisco today announced its 2026 summer event season, a dynamic lineup of mostly free festivals, events, and gatherings that transform the park into a hub for culture and play. Now in its fourth season.",
     "method": "Web page retrieved and transcribed on 2026-10-18"
   },
   "presidio-waw": {

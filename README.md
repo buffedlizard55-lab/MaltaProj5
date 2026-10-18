@@ -121,3 +121,11 @@ the prior edition’s recap. Venue remains blank, matching the same no-carryover
 used for Pride and Fillmore. Current totals are **162 directory / 80 held**; no
 candidate or official link was discarded. A dedicated regression prevents this
 exception returning. The initial deployment counts above are historical.
+
+The final tightening shipped in [PR #24](https://github.com/buffedlizard55-lab/MaltaProj5/pull/24),
+merged **18 October 2026 at 04:15:16 UTC** as `b5e9afca8c6dcb15c59153d1c56137ba2a37c07d`.
+Its [30-test PR gate](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39096365405)
+and [post-merge validation](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39096451167)
+passed. [Pages](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39096451005)
+reported **built** for that commit at 04:15:37 UTC. Live dashboard and summary JSON
+were fetched and confirmed at the current **162 directory / 80 held** counts.

@@ -102,3 +102,13 @@ candidate held for review, consistently with Pride/Fillmore. Current counts are
 162 directory / 80 held; 25 listed annual entries. A thirtieth regression and
 browser assertions prevent this specific carryover from returning. The earlier
 163/79 deployment/check records describe the actual pre-tightening snapshot.
+
+The final correction was merged in PR #24 (`b5e9afc`, 2026-10-18 04:15:16 UTC).
+All 30 regressions, strict rebuild/field/CSV/local-link/browser/accessibility and
+source-URL gates passed both on the PR (run 39096365405) and actual main merge
+(run 39096451167). Pages run 39096451005 succeeded; API build 1293522885 was built
+for that exact commit at 04:15:37 UTC. Live dashboard/summary JSON confirmed
+162 directory / 80 held / 242 assessed, 237 URLs / 140 domains. Source responses
+included explicit unknowns (39 on the PR, 38 on main), zero definite 404/410;
+none was interpreted as automatic semantic verification. Full details and the
+preserved earlier publication records are in COORDINATION.md.

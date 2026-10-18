@@ -2,7 +2,7 @@
 // Progressive enhancement only: all rows and links are present in static HTML.
 const search = document.querySelector('#search');
 if (search) {
-  const controls = ['kind', 'temporal', 'publication'].map(id => document.getElementById(id));
+  const controls = ['kind', 'temporal', 'publication', 'cost'].filter(id => document.getElementById(id)).map(id => document.getElementById(id));
   const rows = [...document.querySelectorAll('#events tbody tr')];
   const count = document.getElementById('count');
   const empty = document.getElementById('empty');

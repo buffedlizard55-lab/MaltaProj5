@@ -125,7 +125,7 @@ def main():
         page.feed(path.read_text())
         assert page.lang == 'en' and page.has_title and page.h1 == 1 and page.viewport, path.name
         pages[path.name] = page
-    assert len(pages) == 12, 'Unexpected page set'
+    assert len(pages) == 15, 'Unexpected page set'
     for name, page in pages.items():
         for href in page.links:
             url = urlsplit(href)
@@ -153,6 +153,11 @@ def main():
             else:
                 assert 'Unverified inherited identifier' in cells[0]
     assert set(pages['index.html'].event_rows) == {r['id'] for r in listed}
+    assert set(pages['free.html'].event_rows) == {r['id'] for r in listed}
+    assert set(pages['focus.html'].event_rows) == {r['id'] for r in listed}
+    upcoming_ids = set(pages['upcoming.html'].event_rows)
+    assert upcoming_ids and upcoming_ids <= {r['id'] for r in listed}
+    assert all(any((o['end'] or o['start']) >= '2026-10-18' for o in r['occurrences']) or r['kind'] in ('Weekly', 'Monthly') for r in listed if r['id'] in upcoming_ids)
     assert set(pages['review.html'].event_rows) == ids
     for name, kind in [('weekly.html', 'Weekly'), ('monthly.html', 'Monthly'), ('annual.html', 'Annual'), ('special.html', 'Special')]:
         assert set(pages[name].event_rows) == {r['id'] for r in listed if r['kind'] == kind}
@@ -165,7 +170,7 @@ def main():
         assert '18 October 2026' in text
         assert 'not a real-time' in text or name in {'analysis.html', 'review.html', 'sources.html'}
         assert 'Page-level check' not in text and 'Field-level check' not in text
-    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 12 pages, row sources and local links/fragments.')
+    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 15 pages, row sources and local links/fragments.')
 
 
 if __name__ == '__main__':

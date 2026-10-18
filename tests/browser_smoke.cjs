@@ -12,7 +12,7 @@ const chromiumPackage = require('@sparticuz/chromium');
 const binary = chromiumPackage.default || chromiumPackage;
 
 const base = (process.env.BASE_URL || 'http://127.0.0.1:8080').replace(/\/$/, '');
-const pages = ['index.html', 'weekly.html', 'monthly.html', 'annual.html', 'special.html', 'markets.html', 'museums.html', 'culture.html', 'community.html', 'analysis.html', 'review.html', 'sources.html'];
+const pages = ['index.html', 'upcoming.html', 'free.html', 'focus.html', 'weekly.html', 'monthly.html', 'annual.html', 'special.html', 'markets.html', 'museums.html', 'culture.html', 'community.html', 'analysis.html', 'review.html', 'sources.html'];
 const stats = JSON.parse(fs.readFileSync('data/audit_summary.json', 'utf8'));
 const output = path.resolve('.cache/qa');
 let server;
@@ -48,7 +48,7 @@ fs.mkdirSync(output, { recursive: true });
       const response = await page.goto(`${base}/${filename}`);
       assert.equal(response.status(), 200, filename);
       assert.equal(await page.locator('h1').count(), 1, filename);
-      assert.equal(await page.locator('nav[aria-label="Main navigation"] a').count(), 12);
+      assert.equal(await page.locator('nav[aria-label="Main navigation"] a').count(), 15);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), `Desktop document overflow: ${filename}`);
       if (['index.html', 'review.html', 'sources.html', 'analysis.html'].includes(filename)) {
         await page.addScriptTag({ path: require.resolve('axe-core/axe.min.js') });

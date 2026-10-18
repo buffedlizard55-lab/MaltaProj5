@@ -29,7 +29,7 @@ jobs:
           mkdir -p _site
           # Primary: full 167-event site built by tools/build_site.py (session 4f47c142)
           cp -r docs/. _site/
-          # Secondary: 29-row bounded inventory from parallel session 3a19e72d, preserved at /inventory/
+          # Secondary: 86-row unified register (sessions 3a19e72d + 5a85baf2) at /inventory/
           mkdir -p _site/inventory
           cp *.html _site/inventory/
           cp -r assets _site/inventory/

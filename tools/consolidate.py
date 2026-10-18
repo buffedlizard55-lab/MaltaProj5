@@ -748,7 +748,10 @@ for r in rows:
     assert all(s in sources for s in r["sources"]), r["id"]
     assert not r["parent"] or r["parent"] in ids, r["id"]
     for field in ("schedule", "time", "venue", "price"):
-        assert r[field] or any(f.startswith(field + ": unverified") for f in r["unverified"]), (r["id"], field)
+        marked_unverified = any(f.startswith(field + ": unverified") for f in r["unverified"])
+        assert r[field] or marked_unverified, (r["id"], field)
+        assert not (r[field] and marked_unverified), (
+            r["id"], field, "populated value conflicts with unverified marker")
 
 # ------------------------------------------------------------- integration notes
 review.append({
@@ -782,8 +785,6 @@ review.append({
     "urls": ["https://github.com/buffedlizard55-lab/MaltaProj5"],
 })
 
-(ROOT / "data" / "events.json").write_text(json.dumps(rows, indent=1, ensure_ascii=True) + "\n")
-(ROOT / "data" / "sources.json").write_text(json.dumps(sources, indent=1, ensure_ascii=True) + "\n")
 # ---------------------- retire findings that the final register supersedes
 SUPERSEDED = [
     "Publication blocked: GitHub Pages permission",
@@ -813,6 +814,14 @@ if retired:
         "urls": ["https://buffedlizard55-lab.github.io/MaltaProj5/"],
     })
 
+# Retire source records used only by findings that were removed above.
+# Keep sources referenced by either event rows or still-published review findings.
+retained_source_ids = {sid for row in rows for sid in row["sources"]}
+retained_source_ids |= {sid for finding in review for sid in finding.get("sources", [])}
+sources = {sid: source for sid, source in sources.items() if sid in retained_source_ids}
+
+(ROOT / "data" / "events.json").write_text(json.dumps(rows, indent=1, ensure_ascii=True) + "\n")
+(ROOT / "data" / "sources.json").write_text(json.dumps(sources, indent=1, ensure_ascii=True) + "\n")
 (ROOT / "data" / "review.json").write_text(json.dumps(review, indent=1, ensure_ascii=True) + "\n")
 
 from collections import Counter

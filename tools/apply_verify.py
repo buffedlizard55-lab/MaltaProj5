@@ -99,20 +99,32 @@ for row in rows:
 # --------------------------------------------------------------------- findings
 findings = [f for f in findings if not f["title"].startswith("Automated source re-check (")]
 summary = report.get("summary", {})
-detail = (f"On 2026-10-18 the register's cited URLs were fetched from GitHub Actions and the page text "
-          f"searched for the event name. Of {summary.get('rows', len(rows))} rows, "
-          f"{summary.get('name_found', 0)} were confirmed on a cited page, "
-          f"{summary.get('name_not_found', 0)} were not found, "
-          f"{summary.get('pdf_not_checked', 0)} cite a PDF (manual read), and "
-          f"{summary.get('no_response', 0)} had no response. "
-          f"{summary.get('dead_urls', 0)} URL(s) were dead; {summary.get('blocked_urls', 0)} URL(s) "
-          f"blocked the automated client (202/403/405/429/5xx) — blocking is not evidence of a bad page. "
-          f"Unconfirmed: {', '.join(unconfirmed) or 'none'}. "
-          f"Bot-blocked: {', '.join(blocked_rows) or 'none'}.")
+report_urls = set(urls)
+current_urls = {source["url"] for source in sources.values()}
+uncovered_urls = sorted(current_urls - report_urls)
+stale_urls = sorted(report_urls - current_urls)
+dead_current = [item["url"] for item in report.get("dead", []) if item["url"] in current_urls]
+dead_stale = [item["url"] for item in report.get("dead", []) if item["url"] not in current_urls]
+detail = (f"Historical automated snapshot checked at {report.get('checked_at', 'unknown time')}: "
+          f"{summary.get('rows', len(rows))} rows; {summary.get('name_found', 0)} event names found, "
+          f"{summary.get('name_not_found', 0)} not found, {summary.get('pdf_not_checked', 0)} PDF(s) "
+          f"not machine-matched, and {summary.get('no_response', 0)} rows with no response. "
+          f"The saved report lists {summary.get('dead_urls', 0)} dead/connection-failed URL(s), "
+          f"including {len(dead_stale)} URL(s) no longer cited in the current source ledger and "
+          f"{len(dead_current)} current source URL(s) were reported dead. "
+          f"{len(uncovered_urls)} current source URL(s) are absent from this historical report; "
+          f"{len(stale_urls)} reported URL(s) are no longer in the source ledger. "
+          f"{summary.get('blocked_urls', 0)} URL(s) blocked the automated client (202/403/405/429/5xx); "
+          f"blocking is not evidence that a page is wrong. Machine status does not verify dates, times, "
+          f"venue or admission. Unconfirmed rows: {', '.join(unconfirmed) or 'none'}. "
+          f"Bot-blocked rows: {', '.join(blocked_rows) or 'none'}.")
+review_urls = ["https://github.com/buffedlizard55-lab/MaltaProj5/blob/main/data/verify_report.json"]
+review_urls.extend(uncovered_urls)
+review_urls.extend(dead_stale)
 findings.append({
-    "title": "Automated source re-check (2026-10-18): what could and could not be confirmed",
+    "title": "Automated source re-check (2026-10-18): historical snapshot and coverage gaps",
     "detail": detail,
-    "urls": ["https://github.com/buffedlizard55-lab/MaltaProj5/blob/main/data/verify_report.json"],
+    "urls": list(dict.fromkeys(review_urls)),
 })
 
 (ROOT / "data" / "events.json").write_text(json.dumps(rows, indent=1, ensure_ascii=True) + "\n")

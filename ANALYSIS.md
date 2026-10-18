@@ -1,8 +1,8 @@
 # ANALYSIS.md — findings from the verified San Francisco register
 
 Snapshot **2026-10-18**. Every figure below is computed from `data/events.json`
-(231 rows), `data/sources.json` (213 records), `data/review.json` (19 findings) and
-`data/verify_report.json` (the machine fetch of every cited URL). The published version of this
+(231 rows), `data/sources.json` (211 records), `data/review.json` (19 findings) and
+`data/verify_report.json` (a saved machine-fetch snapshot with the coverage gaps documented below). The published version of this
 analysis is `analysis.html`.
 
 ## Headline numbers
@@ -19,33 +19,42 @@ analysis is `analysis.html`.
 | — community & outdoors | 61 |
 | — markets & food | 34 |
 | — museums & science | 23 |
-| Official source records | 213 |
+| Official source records | 211 |
 | Distinct source domains | 135 |
 | Rows verified field-level | 117 |
-| Rows verified page-level | 79 |
-| Rows flagged for review | 35 |
+| Rows verified page-level | 78 |
+| Rows flagged for review | 36 |
 | Rows with at least one blank tracked field | 188 |
 | Review findings | 19 |
-| Cited URLs that were dead in the last check | 0 |
+| Current source URLs reported dead in the saved fetch snapshot | 0 (one failed URL was superseded; details below) |
 
-## Verification outcome (2026-10-18 automated pass)
+## Verification outcome (saved snapshot: 2026-10-18 01:44:56 UTC)
 
-Every cited URL was fetched from GitHub Actions and its visible text searched for the event name.
+The committed machine report is a historical snapshot from before the final integration. It is
+not a current, exhaustive link check: of the 203 distinct URLs in the current source ledger, two
+are absent from that snapshot and one URL in the snapshot has since been removed. The two current
+URLs not covered are [SFMOMA's Free Days page](https://www.sfmoma.org/free-days/) and [San
+Francisco Opera's homepage](https://www.sfopera.com/); both are cited for review findings and the
+source ledger contains manually read excerpts. They are listed again on `review.html`.
 
-| Result | Rows |
-|---|---|
+| Result in saved snapshot | Rows / URLs |
+|---|---:|
 | Event name found on a cited page | 165 |
-| Not found in the fetched text (mostly bot-blocked or JavaScript-rendered) | 64 |
-| Cites a PDF, read manually (not machine-matchable) | 2 |
+| Not found in fetched text (mostly bot-blocked or JavaScript-rendered) | 64 |
+| PDF not machine-matched | 2 |
 | No response | 0 |
-| Dead URLs (404/410/DNS) | 0 |
-| URLs that blocked the automated client (202/403/405/429/5xx) | 46 |
+| Dead/connection-failed URLs in snapshot | 1 |
+| Current source URLs reported dead by that snapshot | 0 |
+| URLs that blocked the automated client (202/403/405/429/5xx) | 47 |
 
-A blocked page is not evidence of a bad event. Those rows keep a label and their notes are
-published on `review.html`; 35 rows carry an automation-generated "manual re-check requested"
-note. Two rows that could only be sourced to a generic landing page in the 167-row register
-(Chase Center concerts, PIER 39) were re-pointed to specific official event/news pages during
-integration.
+The sole failure was a TLS/connection error for `https://sfcurran.com/visit/`, a superseded URL
+that is no longer in the current source ledger; the current Curran entry cites the official [ATG
+box office page](https://us.atgtickets.com/venues/curran-theater/whats-on/). A blocked page is not
+evidence of a bad event. The automated check establishes page response/name matching only; it
+does not verify dates, times, venues or prices. The findings and exact URL-set differences are
+published on `review.html`. Two rows that could only be sourced to a generic landing page in the
+167-row register (Chase Center concerts, PIER 39) were re-pointed to specific official event/news
+pages during integration.
 
 ## Findings
 
@@ -72,7 +81,7 @@ over-represented because their organizers publish machine-readable pages.
 
 ### 4. Source concentration is high, and that is a risk
 
-213 source records sit on 135 domains, but a handful of publishers supply many rows: San Francisco
+211 source records sit on 135 domains, but a handful of publishers supply many rows: San Francisco
 Opera's season press page covers five productions, PIER 39's events page covers two rows, and 12
 rows cite San Francisco Travel (the city's destination-marketing body) because no organizer page
 for that edition could be found. One page changing can invalidate several rows at once. The review

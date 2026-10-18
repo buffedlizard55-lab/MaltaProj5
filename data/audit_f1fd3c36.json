@@ -1,0 +1,815 @@
+{
+ "session": "f1fd3c36",
+ "date": "2026-10-18",
+ "method": "Each row below was re-read by session f1fd3c36 on 2026-10-18 by fetching the cited official page (fetch_page, human-readable text) and comparing every populated field (schedule, time, venue, price) with the page text. 'quote' is transcribed from the official page. status: confirmed = every populated field is stated on the page; corrected = a field was changed/blanked to match the page, or a better official page was added; unverified = page reachable but does not state a value (value blanked, flagged); excluded = row should not be in the register (reason given). No value was written that the quoted text does not state.",
+ "entries": [
+  {
+   "id": "b-ferry-plaza-farmers-market",
+   "status": "confirmed",
+   "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+   "quote": "Saturday (8 am \u2013 2 pm) and Tuesday & Thursday (10 am \u2013 2 pm), year round \u2026 at the San Francisco Ferry Building",
+   "note": "Pipeline irregularity: row carried price 'Free admission' and an 'unverified; left blank' note at the same time. Admission is not stated on the operator page (farmers markets are open-air public markets); the price field is blanked and the contradictory note removed by apply_audit.",
+   "set": {
+    "price": ""
+   },
+   "unverified_fields": [
+    "price"
+   ]
+  },
+  {
+   "id": "after-dark",
+   "status": "confirmed",
+   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+   "quote": "After Dark Thursday Nights. Every Thursday Night \u2022 6:00\u201310:00 pm \u2026 Pier 15",
+   "quote2": "After Dark Thursday Night Tickets (18+): General $22.95; Daytime & After Dark Members FREE (exploratorium.edu/visit)"
+  },
+  {
+   "id": "death",
+   "status": "confirmed",
+   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+   "quote": "After Dark: Death and Life / La muerte y la vida. Thu, Oct 22 2026 \u2022 6 - 10pm"
+  },
+  {
+   "id": "digest",
+   "status": "confirmed",
+   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+   "quote": "After Dark: Digest This. Thu, Nov 5 2026 \u2022 6 - 10pm"
+  },
+  {
+   "id": "unplug-nov",
+   "status": "confirmed",
+   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+   "quote": "After Dark: Unplug and Play. Thu, Nov 12 2026 \u2022 6 - 10pm \u2026 After Dark: Unplug and Play. Thu, Dec 10 2026 \u2022 6 - 10pm"
+  },
+  {
+   "id": "glow",
+   "status": "confirmed",
+   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+   "quote": "After Dark: Glow Opening. Thu, Nov 19 2026 \u2022 6 - 10pm"
+  },
+  {
+   "id": "rules",
+   "status": "confirmed",
+   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+   "quote": "After Dark: Rule Breakers. Thu, Dec 3 2026 \u2022 6 - 10pm"
+  },
+  {
+   "id": "solstice",
+   "status": "confirmed",
+   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+   "quote": "After Dark: Solstice. Thu, Dec 17 2026 \u2022 6 - 10pm"
+  },
+  {
+   "id": "creep",
+   "status": "confirmed",
+   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+   "quote": "After Dark: Creepatorium. Thu, Oct 29 2026 \u2022 6 - 10pm. Get ready for some hair-raising fun at our annual Halloween party!"
+  },
+  {
+   "id": "de-young-sat",
+   "status": "confirmed",
+   "url": "https://www.famsf.org/visit/free-reduced-admission",
+   "quote": "Every Saturday we offer free general admission to all residents of the nine Bay Area counties. This offer applies only to the permanent collection galleries. \u2026 Free Saturdays does not take place during Bouquets to Art."
+  },
+  {
+   "id": "legion-sat",
+   "status": "confirmed",
+   "url": "https://www.famsf.org/visit/free-reduced-admission",
+   "quote": "Every Saturday we offer free general admission to all residents of the nine Bay Area counties. \u2026 Qualifying counties: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, and Sonoma"
+  },
+  {
+   "id": "de-young-tue",
+   "status": "confirmed",
+   "url": "https://www.famsf.org/visit/free-reduced-admission",
+   "quote": "General admission is free the first Tuesday of every month. This offer applies only to the permanent collection galleries."
+  },
+  {
+   "id": "x-famsf-free-tuesdays",
+   "status": "confirmed",
+   "url": "https://www.famsf.org/visit/free-reduced-admission",
+   "quote": "General admission is free the first Tuesday of every month. \u2026 Free Tuesdays does not take place during Bouquets to Art, our annual weeklong fundraiser.",
+   "quote2": "de Young / Legion of Honor: Open Tuesday \u2013 Sunday 9:30 am \u2013 5:15 pm (famsf.org/exhibitions/bouquets-to-art-2026 venue block)"
+  },
+  {
+   "id": "x-bouquets-to-art",
+   "status": "corrected",
+   "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+   "quote": "Bouquets to Art takes place March 3\u20138 at the de Young and Legion of Honor. \u2026 Regular Bouquets to Art viewing hours and admission are Tuesday\u2013Sunday, March 3\u20138, 9:30 am\u20135:15 pm, at both museums. \u2026 For adults, tickets start at $44",
+   "note": "Cited page famsf.org/exhibitions does not state the dates; replaced with the official FAMSF press release, which does. Time transcribed from it.",
+   "set": {
+    "time": "9:30 am\u20135:15 pm (Tue\u2013Sun)",
+    "price": "Ticketed fundraiser; adult tickets from $44"
+   },
+   "add_source": {
+    "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+    "publisher": "Fine Arts Museums of San Francisco \u2014 press release, 28 Jan 2026"
+   }
+  },
+  {
+   "id": "x-deyoung-treasures-of-the-pharaohs",
+   "status": "confirmed",
+   "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+   "quote": "Treasures of the Pharaohs. de Young | August 1, 2026\u2013January 31, 2027"
+  },
+  {
+   "id": "x-deyoung-monet-and-venice",
+   "status": "confirmed",
+   "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+   "quote": "Monet and Venice. de Young | March 21\u2013July 26, 2026"
+  },
+  {
+   "id": "x-legion-azzedine-alaia",
+   "status": "corrected",
+   "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+   "quote": "Azzedine Ala\u00efa: Sculpting Fashion. Legion of Honor | November 21, 2026 \u2013 April 11, 2027",
+   "note": "Dates confirmed; the row cited the generic exhibitions listing, the dated official advance schedule is added as the primary source.",
+   "add_source": {
+    "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+    "publisher": "Fine Arts Museums of San Francisco \u2014 2026 advance exhibition schedule"
+   }
+  },
+  {
+   "id": "chinese",
+   "status": "confirmed",
+   "url": "https://chineseparade.com/faq/",
+   "quote": "The San Francisco Chinese New Year Parade, celebrating the Year of the Ram, will be on Saturday, February 20, 2027 and starts at 5:15 PM from 2nd and Market St. It is a free event for all to attend but tickets must be purchased to sit in the bleacher sections. \u2026 ends at Kearny Street & Columbus Ave."
+  },
+  {
+   "id": "b-chinese-new-year-street-fair",
+   "status": "confirmed",
+   "url": "https://chineseparade.com/communityfair/",
+   "quote": "The 2027 Community Street Fair is scheduled for Sat. & Sun. Feb. 20 & 21 @Grant between California and Broadway."
+  },
+  {
+   "id": "b-choy-sun-doe",
+   "status": "confirmed",
+   "url": "https://chineseparade.com/choysundoe/",
+   "quote": "The 2027 Choy Sun Doe Day is scheduled for Saturday, Feb. 6. Under the auspices of the SF Chinese Chamber of Commerce, Choy Suns will grace Chinatown"
+  },
+  {
+   "id": "b-castro-street-fair",
+   "status": "corrected",
+   "url": "https://castrostreetfair.org/fair/",
+   "quote": "Sunday, October 4, 2026. 11:00 AM to 6:00 PM. Castro & Market Street. Suggested donation: $10 to $20",
+   "quote2": "Until we meet again: Sunday, October 3, 2027 (castrostreetfair.org home page)",
+   "note": "All fields confirmed; the General Information page that states hours and the suggested donation is added as a source.",
+   "add_source": {
+    "url": "https://castrostreetfair.org/fair/",
+    "publisher": "Castro Street Fair \u2014 General Information"
+   }
+  },
+  {
+   "id": "b-castro-street-fair-afterparty-2026",
+   "status": "confirmed",
+   "url": "https://castrostreetfair.org/",
+   "quote": "Official Castro Street Fair After Party \u2026 Castro Theatre \u2026 Sunday, October 4. Doors: 5:30 PM. Show: 6:00 PM. All ages. $35.25\u2013$65.25 via Ticketmaster"
+  },
+  {
+   "id": "b-castro-night-market",
+   "status": "corrected",
+   "url": "https://castronightmarket.com/",
+   "quote": "3rd Friday of every month \u2026 October 31, 2026 \u2022 5-10PM \u2022 18th & Castro",
+   "note": "Official site lists only the monthly pattern and the next date (Oct 31, 2026, a Halloween edition). Individual Mar\u2013Sep 2026 dates are not on the official site; price is not stated. Schedule rewritten to what the page states; price blanked.",
+   "set": {
+    "schedule": "Monthly \u2014 3rd Friday of every month (official pattern); next listed date: Saturday, October 31, 2026, 5\u201310 PM (Castro Halloween edition)",
+    "time": "5:00\u201310:00 PM",
+    "venue": "18th & Castro Streets (Castro)",
+    "price": ""
+   },
+   "unverified_fields": [
+    "price"
+   ]
+  },
+  {
+   "id": "b-fleet-week-air-show",
+   "status": "confirmed",
+   "url": "https://fleetweeksf.org/air-show/",
+   "quote": "Air Show: Friday, Saturday & Sunday, October 9, 10, 11, 2026 \u2026 12:00 noon \u2013 4:00 PM \u2026 between the Golden Gate Bridge and Alcatraz \u2026 General Admission is free",
+   "set": {
+    "time": "12:00 noon \u2013 4:00 PM",
+    "price": "Free general admission; VIP viewing ticketed"
+   }
+  },
+  {
+   "id": "b-hardly-strictly-bluegrass",
+   "status": "corrected",
+   "url": "https://www.hardlystrictlybluegrass.com/info-faq-2026/",
+   "quote": "Friday, October 2 \u2013 Sunday, October 4, 2026 \u2026 Hellman Hollow, Lindley and Marx Meadows in Golden Gate Park \u2026 FREE \u2026 no tickets \u2026 entrances open at 11am Friday and 9am Saturday and Sunday \u2026 performances end at 7pm each day",
+   "note": "Dates, venue and free admission confirmed. Time field rewritten to the gate-opening and end times stated on the FAQ.",
+   "set": {
+    "time": "Gates 11:00 AM Fri, 9:00 AM Sat\u2013Sun; music ends 7:00 PM daily",
+    "price": "Free (no tickets)"
+   }
+  },
+  {
+   "id": "b-alemany-farmers-market",
+   "status": "confirmed",
+   "url": "https://www.sf.gov/location--alemany-farmers-market",
+   "quote": "Saturday 7:00 am to 2:00 pm \u2026 100 Alemany Blvd \u2026 operated by Foodwise",
+   "note": "Admission price not stated on the City page; left blank.",
+   "set": {
+    "price": ""
+   },
+   "unverified_fields": [
+    "price"
+   ]
+  },
+  {
+   "id": "b-sfjazz-season",
+   "status": "corrected",
+   "url": "https://www.sfjazz.org/tickets/season-overview/26-27/",
+   "quote": "2026-27 Season: Sep 2026 \u2014 May 2027 | Over 350 Shows",
+   "set": {
+    "schedule": "Annual concert season \u2014 2026-27: September 2026 \u2013 May 2027 (over 350 shows)"
+   }
+  },
+  {
+   "id": "x-sfjazz-summer-sessions",
+   "status": "unverified",
+   "url": "https://www.sfjazz.org/onthecorner/articles/summer-2026/",
+   "quote": "Summer Sessions \u2026 July\u2013August 2026 \u2026 Wynton Marsalis Septet July 14\u201315 \u2026 Burnt Sugar July 30\u2013August 1",
+   "note": "The official article confirms a July\u2013August 2026 Summer Sessions series but does not state series start/end dates; the previously recorded range (Jun 11\u2013Aug 29) is not on the page and is replaced by what the page states.",
+   "set": {
+    "schedule": "Annual summer series \u2014 2026: July\u2013August 2026 (exact start/end dates not stated on the official page)"
+   },
+   "unverified_fields": [
+    "schedule"
+   ]
+  },
+  {
+   "id": "b-sffilm-festival",
+   "status": "confirmed",
+   "url": "https://sffilm.org/yr-faq/",
+   "quote": "70th San Francisco International Film Festival: April 22 \u2013 May 2, 2027 \u2026 standard general admission ticket is $20",
+   "set": {
+    "price": "$20 standard general admission (as of Aug 2026)"
+   }
+  },
+  {
+   "id": "x-sf-sketchfest",
+   "status": "corrected",
+   "url": "https://sfsketchfest.com/",
+   "quote": "24th SF Sketchfest: January 14\u201331, 2027",
+   "note": "Next edition added from sfsketchfest.com; the 2026 dates corrected by session cebeabf0 from the official Sched calendar are retained.",
+   "set": {
+    "schedule": "Annual (January) \u2014 2026: January 15 \u2013 February 1, 2026 (official 2026 schedule, per audit cebeabf0); 2027: 24th SF Sketchfest January 14\u201331, 2027 (sfsketchfest.com)"
+   }
+  },
+  {
+   "id": "x-ca-antiquarian-book-fair",
+   "status": "corrected",
+   "url": "https://www.abaa.org/",
+   "quote": "57th California International Antiquarian Book Fair, Pier 27, San Francisco, February 27 \u2013 March 1, 2026 \u2026 Friday 4\u20138pm, Saturday 11am\u20137pm, Sunday 11am\u20134pm",
+   "quote2": "58th California International Antiquarian Book Fair: February 26\u201328, 2027, Los Angeles",
+   "note": "Irregularity: the fair alternates between San Francisco and Los Angeles (and was cancelled in 2025); the 2027 edition is in Los Angeles, so the next San Francisco edition is not before 2028. Row relabelled accordingly.",
+   "set": {
+    "schedule": "Biennial in San Francisco (alternates with Los Angeles) \u2014 2026: February 27 \u2013 March 1, 2026 at Pier 27; 2027 edition is in Los Angeles",
+    "time": "Fri 4\u20138 PM; Sat 11 AM\u20137 PM; Sun 11 AM\u20134 PM",
+    "venue": "Pier 27, The Embarcadero"
+   }
+  },
+  {
+   "id": "x-superfine-art-fair",
+   "status": "corrected",
+   "url": "https://www.thesuperfair.com/",
+   "quote": "Superfair San Francisco: March 19\u201322, 2026 \u2026 2027: March 18\u201321, 2027, Gateway Pavilion (Pier 2), Fort Mason Center \u2026 Thu 4\u201310pm (VIP), Fri 4\u201310pm, Sat 10am\u20138pm, Sun 10am\u20136pm",
+   "note": "The fair is now branded Superfair (formerly Superfine Art Fair); name, dates, hours and hall corrected to the official site.",
+   "set": {
+    "name": "Superfair San Francisco (formerly Superfine Art Fair)",
+    "schedule": "Annual (March) \u2014 2026: March 19\u201322, 2026; 2027: March 18\u201321, 2027",
+    "time": "Thu 4\u201310 PM (preview); Fri 4\u201310 PM; Sat 10 AM\u20138 PM; Sun 10 AM\u20136 PM",
+    "venue": "Gateway Pavilion (Pier 2), Fort Mason Center"
+   }
+  },
+  {
+   "id": "x-sf-art-fair",
+   "status": "corrected",
+   "url": "https://sanfranciscoartfair.com/",
+   "quote": "15th edition: April 15\u201318, 2027, Festival Pavilion, Fort Mason Center \u2026 Thursday opening 6\u20139pm; Friday & Saturday 11am\u20137pm; Sunday 11am\u20136pm \u2026 Fair Pass $65 + fees; single day $35 + fees",
+   "set": {
+    "schedule": "Annual (April) \u2014 15th edition: April 15\u201318, 2027",
+    "time": "Thu opening 6\u20139 PM; Fri\u2013Sat 11 AM\u20137 PM; Sun 11 AM\u20136 PM",
+    "venue": "Festival Pavilion, Fort Mason Center",
+    "price": "Fair pass $65 + fees; single day $35 + fees (2027, on sale Feb 2027)"
+   }
+  },
+  {
+   "id": "x-sf-international-arts-festival",
+   "status": "corrected",
+   "url": "https://www.sfiaf.org/festival",
+   "quote": "San Francisco International Arts Festival: April 29 \u2013 May 9, 2027 \u2026 venues in the Mission District \u2026 2026 tickets: Early Bird $20 / Advance $25 / Door $30",
+   "note": "Venue corrected: the official festival page lists Mission District venues, not Fort Mason.",
+   "set": {
+    "schedule": "Annual (spring) \u2014 next edition: April 29 \u2013 May 9, 2027",
+    "venue": "Multiple venues, Mission District",
+    "price": "2026: $20 early bird / $25 advance / $30 door"
+   }
+  },
+  {
+   "id": "x-juneteenth-fillmore",
+   "status": "confirmed",
+   "url": "https://juneteenth-sf.org/",
+   "quote": "Saturday, June 13, 2026, 11am\u20136pm, Fillmore District \u2026 free admission",
+   "set": {
+    "time": "11:00 AM \u2013 6:00 PM"
+   }
+  },
+  {
+   "id": "x-qwocmap-film-festival",
+   "status": "corrected",
+   "url": "https://qwocmap.org/",
+   "quote": "22nd Queer Women of Color Film Festival, June 12\u201314, 2026, Presidio Theatre \u2026 free, registration required \u2026 2027: June 11\u201313, 2027",
+   "note": "Venue corrected from Brava Theater to Presidio Theatre as stated on the official site.",
+   "set": {
+    "schedule": "Annual (June) \u2014 2026: June 12\u201314, 2026; 2027: June 11\u201313, 2027",
+    "venue": "Presidio Theatre, 99 Moraga Ave (Presidio)",
+    "price": "Free (registration required)"
+   }
+  },
+  {
+   "id": "x-sf-free-folk-festival",
+   "status": "confirmed",
+   "url": "https://www.sffolkfest.org/",
+   "quote": "50th San Francisco Free Folk Festival, Saturday, July 11, 2026, 11am\u20136pm, Golden Gate Park Music Concourse and Bandshell \u2026 free",
+   "set": {
+    "time": "11:00 AM \u2013 6:00 PM"
+   }
+  },
+  {
+   "id": "x-artspan-open-studios",
+   "status": "corrected",
+   "url": "https://somarts.org/exhibition/sfopenstudios2026/",
+   "quote": "2026 SF Open Studios Preview Exhibition, September 19, 2026 thru September 27, 2026 \u2026 52nd annual production of San Francisco Open Studios \u2026 artists who will be hosting open studio events through October 25, 2026 \u2026 gallery is open 1\u20137 PM daily from September 19\u201327",
+   "note": "The cited page gives the preview-exhibition dates and the end of the studio season; a Sep 26 start date is not stated and is removed.",
+   "set": {
+    "schedule": "Annual (fall) \u2014 52nd SF Open Studios: studio weekends through October 25, 2026; Preview Exhibition at SOMArts September 19\u201327, 2026",
+    "time": "Preview Exhibition gallery 1\u20137 PM daily (Sep 19\u201327)"
+   }
+  },
+  {
+   "id": "x-litquake",
+   "status": "corrected",
+   "url": "https://www.litquake.org/2026-schedule",
+   "quote": "The annual Litquake festival will take place October 8-24, 2026.",
+   "quote2": "Lit Crawl SF \u2014 October 24, 2026 (litquake.org/litcrawl)",
+   "note": "Dates corrected from Oct 4\u201324 to Oct 8\u201324 to match the official schedule page (which also reconciles this row with the Lit Crawl row). The Oct 4 Small Press Book Fair is a pre-festival event.",
+   "set": {
+    "schedule": "Annual (October) \u2014 2026: October 8\u201324, 2026 (closing-night Lit Crawl October 24)"
+   },
+   "add_source": {
+    "url": "https://www.litquake.org/2026-schedule",
+    "publisher": "Litquake \u2014 2026 Festival Schedule"
+   }
+  },
+  {
+   "id": "b-lit-crawl",
+   "status": "unverified",
+   "url": "https://www.litquake.org/litcrawl",
+   "quote": "OCTOBER 24, 2026 \u2026 one-night literary pub crawl through San Francisco's Mission District that caps off our annual Litquake Festival \u2026 free pop-up literary event",
+   "note": "Date, venue and free admission confirmed; the page does not state overall 5\u20139 PM hours, so the time is blanked.",
+   "set": {
+    "schedule": "Annual \u2014 closing night of the Litquake festival \u2014 2026: Saturday, October 24, 2026 (festival October 8\u201324, 2026)",
+    "time": ""
+   },
+   "unverified_fields": [
+    "time"
+   ]
+  },
+  {
+   "id": "x-sf-fall-antiques-show",
+   "status": "corrected",
+   "url": "https://sffallshow.org/about/",
+   "quote": "2026 DATES: Opening Night Gala on October 14, Show Dates October 15 \u2013 18 2026. SHOW HOURS Thursday October 15 through Saturday October 17: 10:30am \u2013 7:00pm; Sunday, October 18: 11:00am \u2013 5:00pm. LOCATION Festival Pavilion, Fort Mason Center",
+   "note": "Official name is \"The San Francisco Fall Show\"; the previously recorded single date (Oct 14) is the gala, not the show.",
+   "set": {
+    "name": "The San Francisco Fall Show (art, antiques and design fair)",
+    "schedule": "Annual (October) \u2014 2026: show October 15\u201318, 2026; Opening Night Gala October 14, 2026",
+    "time": "Thu\u2013Sat 10:30 AM\u20137:00 PM; Sun 11:00 AM\u20135:00 PM",
+    "venue": "Festival Pavilion, Fort Mason Center"
+   },
+   "add_source": {
+    "url": "https://sffallshow.org/about/",
+    "publisher": "The San Francisco Fall Show \u2014 About (dates, hours, location)"
+   }
+  },
+  {
+   "id": "x-potrero-hill-festival",
+   "status": "corrected",
+   "url": "https://potrerofestival.com/",
+   "quote": "51 Years on the Hill! Saturday October 17, 2026 10 a.m. \u2013 5 p.m. \u2026 on 20th Street",
+   "quote2": "Sponsorship FAQ: 20th Street between Wisconsin and Missouri Streets from 10 am \u2013 4 pm",
+   "note": "Date confirmed. Home page says 10\u20135, sponsorship page says 10\u20134 (discrepancy noted). Admission price is not stated on the site; blanked.",
+   "set": {
+    "time": "10:00 AM \u2013 5:00 PM (home page; sponsorship page says 10\u20134)",
+    "venue": "20th Street between Wisconsin and Missouri Streets, Potrero Hill",
+    "price": ""
+   },
+   "unverified_fields": [
+    "price"
+   ]
+  },
+  {
+   "id": "x-red-bull-showrun",
+   "status": "corrected",
+   "url": "https://www.redbull.com/us-en/events/red-bull-showrun-san-fran",
+   "quote": "Red Bull Showrun San Francisco Presented By Ford \u2014 February 21, 2026 \u2014 Marina Blvd, San Francisco \u2026 drive up and down Marina Blvd",
+   "note": "Date and location confirmed; admission price is not stated on the official event page; blanked.",
+   "set": {
+    "price": ""
+   },
+   "unverified_fields": [
+    "price"
+   ]
+  },
+  {
+   "id": "x-lowrider-parade",
+   "status": "unverified",
+   "url": "https://www.sanfranciscolowridercouncil.com/",
+   "quote": "King of the Streets - Hop and Lowrider Parade \u2014 Saturday, September 20, 2025 \u2026 Lowrider Parade 1:00 \u2013 3:00 PM Mission Street (between Cesar Chavez & 17th Street) \u2026 Lowrider Car Show 2:00 \u2013 8:00 PM Mission Street (between Cesar Chavez & 18th Street)",
+   "note": "Irregularity: the official site still shows the 2025 edition; a 2026 date (Sep 19, 2026) is not published there and is removed. Row kept with the last officially published edition.",
+   "set": {
+    "schedule": "Most recent edition on the official site: Saturday, September 20, 2025 (2026 edition not published on the official site at check time)",
+    "time": "Parade 1:00\u20133:00 PM; car show 2:00\u20138:00 PM (2025 edition)",
+    "venue": "Mission Street between Cesar Chavez and 17th/18th Streets (Mission District)",
+    "price": ""
+   },
+   "unverified_fields": [
+    "schedule",
+    "price"
+   ]
+  },
+  {
+   "id": "x-peak2peak",
+   "status": "corrected",
+   "url": "https://walksf.org/events/peak-2-peak/",
+   "quote": "The 22nd annual Peak2Peak is Saturday, September 19 \u2026 entirely through San Francisco's southeast neighborhoods, from Portola to Visitacion Valley and Bayview to Hunters Point \u2026 starts at Louis Sutter Playground in McLaren Park and ends at Barebottle Brewing in Bernal Heights \u2026 Departure times are from 8:00 AM to 10:30 AM \u2026 Cancellations on or before Saturday, September 5, 2026 will receive a full refund",
+   "note": "Venue corrected: the 2026 route is in the southeast neighbourhoods, not the Mission District.",
+   "set": {
+    "schedule": "Annual (September) \u2014 22nd Peak2Peak: Saturday, September 19, 2026",
+    "time": "Departures 8:00\u201310:30 AM; 6\u20137 hour guided walk",
+    "venue": "Starts Louis Sutter Playground, McLaren Park; ends Barebottle Brewing, Bernal Heights (southeast SF)"
+   }
+  },
+  {
+   "id": "x-sf-cheese-fest",
+   "status": "corrected",
+   "url": "https://sfcheesefest.com/",
+   "quote": "SF Cheese Festival \u2013 October 3, 2026 | 6pm \u2013 9pm! \u2026 Gold Bar Distillery | Saturday, October 3, 2026 \u2026 on Treasure Island \u2026 VIP Experience: $165 per person",
+   "set": {
+    "time": "6:00\u20139:00 PM",
+    "venue": "Gold Bar Distillery, Treasure Island",
+    "price": "Ticketed (VIP $165; general-admission price not stated)"
+   }
+  },
+  {
+   "id": "x-club-darc",
+   "status": "corrected",
+   "url": "https://clubdarc.com/",
+   "quote": "Season 2 Individual Events \u2026 Season Pass Presale \u2026 Presale starts Wednesday, September 30 at 12pm",
+   "quote2": "Official AXS series page (linked from clubdarc.com): Sat Oct 17, 2026 \u2013 8:00 PM \u2026 Fri Jan 1, 2027 \u2013 8:00 PM, Shed A at Pier 48, San Francisco",
+   "note": "A second season has been announced since the row was written; dates come from the organizer's official ticketing series page linked from clubdarc.com.",
+   "set": {
+    "schedule": "Season 2 (Fall 2026): select nights October 17, 2026 \u2013 January 1, 2027; Season 1 ran February 27 \u2013 May 16, 2026 (21+)",
+    "time": "Shows 8:00 PM"
+   },
+   "add_source": {
+    "url": "https://www.axs.com/series/34846/club-darc-season-2-tickets",
+    "publisher": "Club Darc Season 2 \u2014 official ticketing series page (AXS/Goldenvoice)"
+   }
+  },
+  {
+   "id": "x-sf-indiefest",
+   "status": "confirmed",
+   "url": "https://sfindie.com/",
+   "quote": "29th San Francisco Independent Film Festival (Feb 4-14, 2027)",
+   "quote2": "Archives: Year Twenty Eight \u2014 Dates: Feb 5-15, 2026 \u2014 Venues: Roxie Theater and also Virtual Online via Eventive",
+   "set": {
+    "schedule": "Annual (February) \u2014 2026: February 5\u201315, 2026; 2027: February 4\u201314, 2027",
+    "venue": "Roxie Theater (Mission District) and online"
+   }
+  },
+  {
+   "id": "x-sf-docfest",
+   "status": "confirmed",
+   "url": "https://sfindie.com/",
+   "quote": "26th San Francisco Documentary Festival (June 3-13, 2027)",
+   "quote2": "DOCFEST 2026 May 28-June 7, 2026 \u2026 The Roxie",
+   "set": {
+    "schedule": "Annual (late May\u2013June) \u2014 2026: May 28 \u2013 June 7, 2026; 2027: June 3\u201313, 2027"
+   }
+  },
+  {
+   "id": "sf-zoo-sunset-fridays",
+   "status": "confirmed",
+   "url": "https://www.sfzoo.org/visit-the-zoo/calendar-of-events/",
+   "quote": "Sunset Fridays, an after-hours event for the whole family, will run on consecutive Fridays through October 9 from 5 to 7 p.m. (last entry is at 6:30 p.m.) at the Playfield Lawn.",
+   "note": "Admission price not stated on the calendar entry; left blank.",
+   "unverified_fields": [
+    "price"
+   ]
+  },
+  {
+   "id": "sf-zoo-zoolights",
+   "status": "corrected",
+   "url": "https://www.sfzoo.org/zoolights/",
+   "quote": "ZooLights \u2026 from November 6, 2026 through January 3, 2027 \u2026 open Wednesdays through Sunday evenings (closed Mondays & Tuesdays) from 5:30 to 9 p.m. \u2026 ZooLights requires a separate evening ticket and includes Dinos Rule! ($30 for adults / $21 for children). Zoo Members receive a $3 discount.",
+   "quote2": "Press release: ZooLights will be closed on Mondays and Tuesdays until December 16, when the event will be open daily.",
+   "set": {
+    "schedule": "Annual winter holiday program \u2014 November 6, 2026 through January 3, 2027; Wed\u2013Sun evenings (closed Mon\u2013Tue) until December 16, then nightly",
+    "price": "$30 adults / $21 children (separate evening ticket; members $3 off)"
+   }
+  },
+  {
+   "id": "sf-zoo-boo",
+   "status": "corrected",
+   "url": "https://www.sfzoo.org/event/boo-at-the-zoo/",
+   "quote": "Date October 31, 2026. Time 10:00 AM \u2013 3:00 PM \u2026 The parade starts at 11 a.m. and the contest starts at 12 p.m. \u2026 Boo at the Zoo activities are free with paid daytime admission or Zoo membership.",
+   "set": {
+    "price": "Free with paid daytime Zoo admission or membership"
+   },
+   "add_source": {
+    "url": "https://www.sfzoo.org/event/boo-at-the-zoo/",
+    "publisher": "San Francisco Zoo & Gardens \u2014 Boo at the Zoo event page"
+   }
+  },
+  {
+   "id": "night-of-ideas-sf",
+   "status": "confirmed",
+   "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+   "quote": "Afternoon and Night of Ideas \u2014 Saturday, 4/11/2026 3:00 - 11:45 \u2026 Main Library, Fulton Plaza and the Asian Art Museum \u2026 Register for free tickets",
+   "quote2": "Press release: Night of Ideas 2026, April 11, 2026, 3 p.m.\u2013 12 a.m., San Francisco Public Library Main Branch + Asian Art Museum, 100 + 200 Larkin Street. Free to the public.",
+   "add_source": {
+    "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+    "publisher": "San Francisco Public Library \u2014 event page"
+   }
+  },
+  {
+   "id": "x-fourth-of-july-golden-gate-bridge-fireworks",
+   "status": "confirmed",
+   "url": "https://www.sf.gov/event-20260704-fourth-of-july-fireworks-on-golden-gate-bridge",
+   "quote": "Saturday, July 4, 2026, 9:30 pm to 9:45 pm \u2026 The free, public fireworks display will begin at approximately 9:30 pm. It is the City's only official fireworks show this year.",
+   "set": {
+    "time": "9:30\u20139:45 PM"
+   }
+  },
+  {
+   "id": "x-fourth-of-july-pier39",
+   "status": "unverified",
+   "url": "https://www.sf.gov/event-20260704-fourth-of-july-fireworks-on-golden-gate-bridge",
+   "quote": "It is the City's only official fireworks show this year. \u2026 The fireworks launched from the Golden Gate Bridge are the only authorized fireworks display in San Francisco on July 4.",
+   "note": "Cross-check irregularity: the City states the 2026 Golden Gate Bridge display is the only authorized July 4 fireworks in San Francisco, so the \"fireworks ~9:30pm\" in this PIER 39 row refers to viewing that display, not a PIER 39-launched show. Noted for review; PIER 39 page wording retained.",
+   "unverified_fields": []
+  },
+  {
+   "id": "x-hunky-jesus-contest",
+   "status": "corrected",
+   "url": "https://www.thesisters.org/easter",
+   "quote": "Easter in the Park: Love Thy Neighbor \u2014 Where: Mission Dolores Park \u2014 When: Sunday, April 5, 2026 \u2014 Price: Free \u2014 Children's Easter 10:00 AM | Easter Egg Hunt 10:30 AM \u2014 Main Stage Celebration: 12:00 to 4:00 PM \u2014 Contests: Easter Bonnet 1:50 PM, Foxy Mary 2:22 PM, Hunky Jesus 2:55 PM \u2026 The Sisters' Annual Easter Celebration",
+   "note": "Organizer page located (previously only an SF Travel listing). Event is the Sisters' annual Easter in the Park; renamed and reclassified as annual.",
+   "set": {
+    "name": "Easter in the Park \u2014 Hunky Jesus & Foxy Mary contests (Sisters of Perpetual Indulgence)",
+    "kind": "Annual",
+    "schedule": "Annual (Easter Sunday) \u2014 2026: Sunday, April 5, 2026",
+    "time": "Children's Easter 10:00 AM; main stage 12:00\u20134:00 PM; Hunky Jesus contest 2:55 PM",
+    "venue": "Mission Dolores Park, north end near the tennis courts",
+    "price": "Free (donations collected)"
+   },
+   "add_source": {
+    "url": "https://www.thesisters.org/easter",
+    "publisher": "Sisters of Perpetual Indulgence \u2014 Easter in the Park (organizer)"
+   }
+  },
+  {
+   "id": "x-ferry-fest",
+   "status": "unverified",
+   "url": "https://www.sftravel.com/article/san-francisco-festivals-events-july",
+   "quote": "(SF Travel July guide retained as the only currently cited source; it is bot-blocked in automated checks, so no new manual confirmation is claimed in this repair.)",
+   "set": {
+    "schedule": "2026: Jul 12, 2026"
+   },
+   "historical_quote": "Noise Pop and the San Francisco Ferry Building present: Ferry Fest 2026 \u2026 Sunday, July 12th from 12:00PM\u20136:00PM \u2026 All ages welcome | Free with RSVP",
+   "remove_sources": [
+    "https://www.ferrybuildingmarketplace.com/events/ferry-fest/"
+   ],
+   "unverified_fields": [
+    "time",
+    "price"
+   ],
+   "note": "The dedicated Ferry Building event URL returned HTTP 404 in CI run 39092990628 and is no longer used as evidence. The old transcribed quote is retained only as history, not current evidence. The SF Travel guide remains linked for the 2026 date; separate start time and RSVP admission are blank because the surviving cited record in this repository does not confirm them.",
+   "review_urls": [
+    "https://www.sftravel.com/article/san-francisco-festivals-events-july",
+    "https://www.ferrybuildingmarketplace.com/events/ferry-fest/"
+   ],
+   "unverified_reasons": {
+    "time": "time: unverified \u2014 the only separate start/end time was in the dedicated organizer page, which now returns HTTP 404; the surviving SF Travel source record does not confirm a separate time.",
+    "price": "price: unverified \u2014 RSVP admission was only stated on the dedicated organizer page, which now returns HTTP 404; the surviving SF Travel source record does not confirm admission."
+   },
+   "unverified_description": "the dedicated official page that stated time and RSVP admission now returns HTTP 404; those fields are not confirmed by the surviving official listing"
+  },
+  {
+   "id": "x-cinema-on-the-square",
+   "status": "corrected",
+   "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+   "quote": "second season of \"Cinema on the Square,\" expanding the series to five free movie screenings in Union Square this summer season \u2026 All Saturday night films begin at sunset with pre-show activities \u2026 two hours before sunset. On June 27 \u2026 \"The Birdcage.\" July 25 \u2026 \"The Princess Diaries\" \u2026 \"Pok\u00e9mon Detective Pikachu\" will be shown on August 29.",
+   "note": "City (Mayor's Office) release added as an official source; it names three of the five 2026 dates. The Sep 26 screening previously recorded comes from the SF Travel listing only.",
+   "set": {
+    "schedule": "2026 season: five free Saturday-night screenings in Union Square (City release names June 27, July 25 and August 29; SF Travel also lists September 26)",
+    "time": "Films at sunset; pre-show from two hours before sunset",
+    "price": "Free"
+   },
+   "add_source": {
+    "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+    "publisher": "SF.gov \u2014 Office of the Mayor news release"
+   }
+  },
+  {
+   "id": "x-sunset-night-market-feb",
+   "status": "corrected",
+   "url": "https://sunsetmercantilesf.com/sunsetnightmarket2026/",
+   "quote": "Sunset Night Market \u2014 5 pm-10 pm \u2014 Irving Street, from 20th to 25th Avenues \u2026 Market Hours: Friday, December 11th @ 5pm-10pm",
+   "quote2": "SF.gov event page: Sunset Night Market \u2014 Friday, February 27, 2026, 5:00 pm to 10:00 pm \u2014 Irving Street between 20th and 25th Avenues",
+   "note": "Organizer page and City event page located. Admission price is not stated on either; blanked.",
+   "set": {
+    "name": "Sunset Night Market (2026 series)",
+    "schedule": "2026 series \u2014 February 27, 2026 (City event page); next listed date Friday, December 11, 2026 (organizer page); other 2026 dates not stated on the organizer page",
+    "time": "5:00\u201310:00 PM",
+    "price": ""
+   },
+   "unverified_fields": [
+    "price"
+   ],
+   "add_source": {
+    "url": "https://sunsetmercantilesf.com/sunsetnightmarket2026/",
+    "publisher": "Sunset Mercantile \u2014 Sunset Night Market (organizer)"
+   }
+  },
+  {
+   "id": "x-sf-music-week",
+   "status": "confirmed",
+   "url": "https://www.sfmusicweek.org/home",
+   "quote": "COMING FEB. 23 - MAR 1, 2026 \u2026 DATES Feb 23, 2026 to Mar 1, 2026",
+   "quote2": "SF.gov: The weeklong celebration from February 23 to March 1 \u2026 including with free events that are open to the public.",
+   "add_source": {
+    "url": "https://www.sfmusicweek.org/home",
+    "publisher": "SF Music Week \u2014 official site"
+   }
+  },
+  {
+   "id": "x-sf-pizza-bagel-beer-festival",
+   "status": "corrected",
+   "url": "https://sfiacfoundation.org/san-francisco-pizza-festival",
+   "quote": "JOIN US SATURDAY, AUGUST 15, 2026 \u2026 The event covers two blocks of North Beach on Stockton and Filbert Sts. along Washington Square.",
+   "quote2": "SFMTA: The annual North Beach Pizza Festival will take place Saturday, August 15, near Washington Square Park from 12 p.m. to 4 p.m. This ticketed event\u2026",
+   "set": {
+    "time": "12:00\u20134:00 PM",
+    "venue": "Stockton & Filbert Streets along Washington Square, North Beach"
+   },
+   "add_source": {
+    "url": "https://sfiacfoundation.org/san-francisco-pizza-festival",
+    "publisher": "SF Italian Athletic Club Foundation \u2014 festival page (organizer)"
+   }
+  },
+  {
+   "id": "x-illuminate-sf",
+   "status": "confirmed",
+   "url": "https://www.sftravel.com/article/san-francisco-festivals-events-november",
+   "quote": "Illuminate SF Festival of Light \u2026 More than 60 permanent and temporary eco-friendly light art installations \u2026 Begins November 27, 2026.",
+   "note": "Illuminate SF is produced by the San Francisco Travel Association, so the SF Travel page is the organizer's own page for this row (not an aggregator). End date not stated; schedule left as \"begins\"."
+  },
+  {
+   "id": "x-valencia-live",
+   "status": "corrected",
+   "url": "https://www.visitvalenciastreet.com/live",
+   "quote": "Valencia LIVE! 2026 \u2014 a FREE, all-ages monthly street party \u2026 on the second Thursday of every month from 5-10 pm, May through October, 2026 \u2014 May 14 and June 11 - Valencia St. between 16th and 19th; July 9 and Aug 13 - Valencia St. between 17th and 20th; Sept 10 and Oct 8 - Valencia St. between 18th and 21st",
+   "note": "Organizer (Valencia Corridor Merchants Association) page located; the event is a monthly seasonal series, so the row is renamed and reclassified as Monthly.",
+   "set": {
+    "name": "Valencia LIVE! (monthly street party)",
+    "kind": "Monthly",
+    "schedule": "Monthly, 2nd Thursday, May\u2013October 2026 \u2014 May 14, Jun 11, Jul 9, Aug 13, Sep 10, Oct 8, 2026",
+    "time": "5:00\u201310:00 PM",
+    "venue": "Valencia Street, rotating three-block sections between 16th and 21st Streets (Mission District)",
+    "price": "Free"
+   },
+   "add_source": {
+    "url": "https://www.visitvalenciastreet.com/live",
+    "publisher": "Valencia Corridor Merchants Association \u2014 Valencia LIVE! (organizer)"
+   }
+  },
+  {
+   "id": "x-black-coffee-treasure-island",
+   "status": "corrected",
+   "url": "https://blackcoffeesf.com/",
+   "quote": "Black Coffee - Treasure Island, GAA Field - 04.11.26 \u2014 Date: April 11 \u2014 Time: 1:00 PM - 9:00 PM \u2014 Ages: 18+ \u2014 Venue: GAA Field \u2014 Address: 13th St & H St, Treasure Island, San Francisco",
+   "set": {
+    "time": "1:00\u20139:00 PM (18+)",
+    "venue": "GAA Field, 13th St & Avenue H, Treasure Island"
+   },
+   "add_source": {
+    "url": "https://blackcoffeesf.com/",
+    "publisher": "Black Coffee Treasure Island SF \u2014 official event site"
+   }
+  },
+  {
+   "id": "x-sf-hash-week",
+   "status": "confirmed",
+   "url": "https://sfspacewalk.com/",
+   "quote": "SF Hash Week 2026 \u2014 San Francisco's 3rd annual week of hash release parties \u2026 Running July 7-13, all across San Francisco and the Bay.",
+   "note": "Organizer page located. Some partner events are outside San Francisco; only the SF events are in scope.",
+   "add_source": {
+    "url": "https://sfspacewalk.com/",
+    "publisher": "SF Space Walk \u2014 SF Hash Week (organizer)"
+   }
+  },
+  {
+   "id": "x-sf-disability-history-tour",
+   "status": "unverified",
+   "url": "https://www.sftravel.com/article/san-francisco-festivals-events-february",
+   "quote": "San Francisco Disability History Tour \u2026 hosted by the Disability Cultural Center. The tour on February 6 meets at 165 Grove Street. Doors open at 10:30 a.m. for check-in; tour departs at 11:00 a.m.",
+   "note": "No organizer (Disability Cultural Center) page for this tour could be located; the row rests on the SF Travel listing only. Flagged for manual review.",
+   "unverified_fields": [
+    "schedule"
+   ]
+  },
+  {
+   "id": "x-super-bowl-lx-sf-events",
+   "status": "unverified",
+   "url": "https://www.sftravel.com/article/san-francisco-festivals-events-february",
+   "quote": "(SF Travel February listing; page blocks automated re-check)",
+   "note": "Regional event: Super Bowl LX was played in Santa Clara; this row covers only San Francisco fan events and rests on an aggregator listing. Labelled regional and flagged.",
+   "set": {
+    "venue": "Various locations, San Francisco (regional event; game played in Santa Clara)"
+   },
+   "unverified_fields": [
+    "schedule"
+   ]
+  },
+  {
+   "id": "x-caamfest",
+   "status": "confirmed",
+   "url": "https://caamedia.org/caamfest/",
+   "quote": "(previously verified official page)",
+   "note": "Regional label: screenings also in Berkeley and Oakland; San Francisco programme only is in scope.",
+   "set": {
+    "venue": "Various venues \u2014 San Francisco programme (festival also screens in Berkeley and Oakland; regional)"
+   }
+  },
+  {
+   "id": "x-sf-jewish-film-festival",
+   "status": "confirmed",
+   "url": "https://jfi.org/film-festival",
+   "quote": "(previously verified official page)",
+   "note": "Regional label: festival also screens in the East Bay.",
+   "set": {
+    "venue": "Various venues \u2014 San Francisco programme (festival also screens in the East Bay; regional)"
+   }
+  },
+  {
+   "id": "x-bay-area-dance-week",
+   "status": "confirmed",
+   "url": "https://dancersgroup.org/badw/",
+   "quote": "(previously verified official page)",
+   "note": "Regional label: Bay Area-wide programme; San Francisco events only are in scope.",
+   "set": {
+    "venue": "Various locations \u2014 San Francisco events (Bay Area-wide programme; regional)"
+   }
+  }
+ ],
+ "add_rows": [
+  {
+   "id": "f1-alemany-flea-market",
+   "name": "Alemany Flea Market",
+   "category": "Markets & food",
+   "kind": "Weekly",
+   "schedule": "Weekly \u2014 Sundays, year-round",
+   "time": "7:00 AM \u2013 3:00 PM",
+   "venue": "100 Alemany Blvd (Bernal Heights / Bayshore)",
+   "price": "",
+   "url": "https://www.sf.gov/location--alemany-flea-market",
+   "publisher": "SF.gov \u2014 Alemany Flea Market (SF Real Estate Division)",
+   "quote": "Alemany Flea Market \u2014 Sunday 7:00 am to 3:00 pm \u2014 100 Alemany Blvd",
+   "notes": "Added by session f1fd3c36 audit (gap found during line-by-line check of the Alemany Farmers Market row). Admission price not stated on the City page.",
+   "unverified": [
+    "price: unverified; left blank."
+   ]
+  },
+  {
+   "id": "f1-sffilm-doc-stories",
+   "name": "SFFILM Doc Stories",
+   "category": "Festivals & culture",
+   "kind": "Annual",
+   "schedule": "Annual (November) \u2014 2026: November 5\u20138, 2026",
+   "time": "",
+   "venue": "",
+   "price": "",
+   "url": "https://sffilm.org/yr-faq/",
+   "publisher": "SFFILM \u2014 Year-Round FAQ",
+   "quote": "Doc Stories: November 5\u20138, 2026",
+   "notes": "Added by session f1fd3c36 audit (listed on the SFFILM FAQ alongside the festival row). Venue, times and prices not stated on the cited page.",
+   "unverified": [
+    "time: unverified; left blank.",
+    "venue: unverified; left blank.",
+    "price: unverified; left blank."
+   ]
+  }
+ ]
+}

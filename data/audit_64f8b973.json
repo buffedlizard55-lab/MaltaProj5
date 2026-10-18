@@ -12320,7 +12320,10 @@
    "checked_at": "2026-10-18T02:59:54+00:00",
    "seconds": 0.14,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "Something’s wrong here… If you’re the site owner, contact your hosting provider. If you are a visitor, please check back soon.",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Independent fetch_page read, 2026-10-18: hosting-error content only; not event evidence."
   },
   "https://norcalmlkfoundation.org/mlkcelebration/mlk2026/": {
    "http": 200,
@@ -13604,7 +13607,10 @@
    "checked_at": "2026-10-18T02:59:55+00:00",
    "seconds": 0.84,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "22nd Queer Women of Color Film Festival Trailer\n50 films across three Festival experiences. Free, and open to the public.\nIn-Person Festival\nJune 12-14, 2026\n34 films across seven curated screenings at San Francisco's historic Presidio Theatre.\nLocation Presidio Theatre, 99 Moraga Avenue, San Francisco\nSatellite Screenings\nMay, July, August, September, and November 2026\nJoin QWOCFF satellite screenings in cities around the world.",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
   },
   "https://sanfranciscoartfair.com/": {
    "http": 403,
@@ -13614,7 +13620,10 @@
    "checked_at": "2026-10-18T02:59:54+00:00",
    "seconds": 0.13,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "San Francisco Art Fair returns to Fort Mason’s Festival Pavilion this April 15–18, 2027.\nSan Francisco Art Fair will present 85 leading galleries from around the world alongside a dynamic series of public programming this April 2027 at Fort Mason Festival Pavilion.",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
   },
   "https://sanfranciscohalfmarathon.org/": {
    "http": 200,
@@ -15170,7 +15179,10 @@
    "checked_at": "2026-10-18T02:59:55+00:00",
    "seconds": 0.16,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "The 50th annual San Francisco Free Folk Festival was in Golden Gate Park on Saturday July 11, 2026, in the same location as our last several festivals.\nAdmission to everything is free!",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
   },
   "https://sfitalianheritage.org/": {
    "http": 200,
@@ -33845,7 +33857,10 @@
    "checked_at": "2026-10-18T02:59:59+00:00",
    "seconds": 0.27,
    "text_truncated": false,
-   "links": []
+   "links": [],
+   "tool_excerpt": "The Fine Arts Museums of San Francisco are pleased to share information about upcoming 2026 exhibitions and select programs.\nMonet and Venice de Young | March 21–July 26, 2026\nTreasures of the Pharaohs de Young | August 1, 2026–January 31, 2027\nSan Francisco hosts the US premiere of the international touring exhibition Treasures of the Pharaohs.\nAzzedine Alaïa: Sculpting Fashion Legion of Honor | November 21, 2026 – April 11, 2027",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
   },
   "https://www.famsf.org/visit/de-young": {
    "http": 403,
@@ -75191,6 +75206,106 @@
    "tool_method": "Selected paragraph read with fetch_page, 2026-10-18; not a runner capture.",
    "tool_checked_at": "2026-10-18",
    "evidence_origin": "Selected retrieval-tool excerpt; no runner HTTP status returned"
+  },
+  "https://www.sf.gov/location--alemany-flea-market": {
+   "http": null,
+   "title": "Alemany Flea Market | SF.gov",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "Alemany Flea Market\nAlemany Flea Market100 Alemany Boulevard\nSan Francisco, CA94110\nSunday7:00 am to 3:00 pm\nFree on-site parking\nSan Francisco's Real Estate Department manages the Alemany Flea Market and 2 others in the City and the Alemany Farmers Market.",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://www.famsf.org/press-room/bouquets-to-art-2026": {
+   "http": null,
+   "title": "Bouquets to Art Ushers in Spring with Artistic Arrangements at the de Young and Legion of Honor",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "March 3–8, 2026 \\ de Young and Legion of Honor\nBouquets to Art—the annual floral fundraiser of the Fine Arts Museums of San Francisco\nRegular Bouquets to Art viewing hours and admission are Tuesday–Sunday, March 3–8, 9:30 am–5:15 pm, at both museums.\nOn Thursday, March 5, we will host public-access evening hours at the de Young, 6–9 pm.\nFor adults, tickets start at $44 and include same-day admission to Bouquets to Art and the de Young and Legion of Honor’s permanent-collection galleries. Tickets are timed for entry.",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://www.sfzoo.org/zoolights/": {
+   "http": null,
+   "title": "ZooLights - San Francisco Zoo & Gardens",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "ZooLights\nOur all-new ZooLights winter holiday program, lights up the Zoo from November 6, 2026 through January 3, 2027.\nZooLights will be open Wednesdays through Sunday evenings (closed Mondays & Tuesdays) from 5:30 to 9 p.m.\nZooLights requires a separate evening ticket and includes Dinos Rule! ($30 for adults / $21 for children). Zoo Members receive a $3 discount.\nThis is a separate ticket from a general admission daytime Zoo ticket.",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas": {
+   "http": null,
+   "title": "Afternoon and Night of Ideas | San Francisco Public Library",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "Saturday, 4/11/2026\n3:00 - 11:45\nMain Library\n100 Larkin Street\nSan Francisco, CA94102\nOur remarkable springtime event, the Afternoon and Night of Ideas, returns to the San Francisco Main Library, Fulton Plaza and the Asian Art Museum on April 11.\nKicking off with family programs that start at 3 p.m.\nDoors to the Main Library reopen at 7 p.m. for the full Night of Ideas.\nThis annual event is presented by Villa Albertine San Francisco, Asian Art Museum, Circuit Network, KQED, and San Francisco Public Library\nRegister for free tickets",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://sfsketchfest.com/": {
+   "http": null,
+   "title": "SF Sketchfest - The San Francisco Comedy Festival",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "Jan 14 - 31, 2027\nSF Sketchfest 2027\nLineup announcing in November!\nRelive 2026 highlights",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://www.sfiaf.org/festival": {
+   "http": null,
+   "title": "The Festival",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "San Francisco International Arts Festival\nThe San Francisco International Arts Festival (SFIAF) is a multidisciplinary performance and educational program that takes place at numerous venues in San Francisco's Mission District during the first two weeks of May.\nThe next Festival will take place from April 29 - May 9 2027.\nOur website for the 2027 Festival will be live with Early Bird Tickets on sale on February 1, 2027.",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://sanfranciscoartfair.com/visit/": {
+   "http": null,
+   "title": "Tickets - San Francisco Art Fair | April 15–18, 2027",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "Fair Pass $65 + fees\nOpening Evening presented by RBC Wealth Management Thursday, April 15, 2027: 6—9pm\nFriday, April 16, 2027: 11am—7pm\nSaturday, April 17, 2027: 11am—7pm\nSunday, April 18, 2027: 11am—6pm\nSingle Day Ticket $35 + fees\nTickets Available February 2027\nFort Mason Festival Pavilion\n2 Marina Boulevard\nSan Francisco, CA 94123",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://sffallshow.org/about/": {
+   "http": null,
+   "title": "The San Francisco Fall Show - About",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "The San Francisco Fall Show\n2026 DATES\nOpening Night Gala on October 14, Show Dates October 15 – 18\n2026 SHOW HOURS\nThursday October 15 through Saturday October 17: 10:30am – 7:00pm\nSunday, October 18: 11:00am – 5:00pm\nFestival Pavilion, Fort Mason Center for Arts & Culture\n2 Marina Blvd\nSan Francisco CA 94109",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://www.visitvalenciastreet.com/live": {
+   "http": null,
+   "title": "Valencia LIVE! — VCMA",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "Valencia LIVE! 2026\nA FREE, all-ages monthly street party and neighborhood celebration on the second Thursday of every month from 5-10 pm, May through October, 2026\nThe street party is going down on Valencia St.\nMay 14 and June 11 - Valencia St. between 16th and 19th\nJuly 9 and Aug 13 - Valencia St. between 17th and 20th\nSept 10 and Oct 8 - Valencia St. between 18th and 21st\nValencia LiVE! is located on Valencia St. in the American Indian Cultural District.\nBART\n16th and Mission St\n24th and Mission St.\nMUNI\n22 Fillmore, 27 Bryant, 33 Ashbury/18th St, 14 Mission, 14R Mission Rapid, 49 Van Ness/Mission",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
+  },
+  "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square": {
+   "http": null,
+   "title": "Mayor Lurie Announces Second Season Of Free Movies In Union Square",
+   "text": "",
+   "links": [],
+   "structured": [],
+   "tool_excerpt": "June 10, 2026\nSAN FRANCISCO – Mayor Daniel Lurie today announced the second season of “Cinema on the Square,” expanding the series to five free movie screenings in Union Square this summer season.\nThe series of free outdoor movies will begin June 20 with a special one-year anniversary screening of “KPop Demon Hunters.”\nAll Saturday night films begin at sunset with pre-show activities including performances, a bar, and prizes taking place two hours before sunset.\nOn June 27, there will be a special Pride-themed edition of ‘Cinema on the Square’ with a screening of “The Birdcage.” July 25 features the San Francisco-based hit Disney film “The Princess Diaries” and, to help celebrate the Pokémon World Championships held in San Francisco, “Pokémon Detective Pikachu” will be shown on August 29. September 26 will see the filmed-in Union Square classic, “The Conversation.”",
+   "tool_checked_at": "2026-10-18",
+   "tool_method": "Selected relevant text independently read with fetch_page on 2026-10-18 after inspecting the merged f1fd3c36 audit; not a full raw runner capture."
   }
  },
  "candidates": {
@@ -87172,15 +87287,6 @@
       }
      ]
     },
-    "time": {
-     "value": "all programs from 6:30—7:30 PM",
-     "quotes": [
-      {
-       "url": "https://www.litquake.org/litcrawl",
-       "text": "all programs from 6:30—7:30 PM"
-      }
-     ]
-    },
     "venue": {
      "value": "San Francisco's Mission District",
      "quotes": [
@@ -87225,7 +87331,7 @@
     }
    ],
    "publication": "listed",
-   "reason": "Current official text says all programs 6:30–7:30 PM; inherited 5–9 PM not reused. Venue changes are listed by the organizer; check the map before attending.",
+   "reason": "Date and free Mission-district crawl confirmed. The 6:30–7:30 PM line belongs to the venue-change notice and does not establish overall crawl hours; time is blank. This supersedes the earlier draft misreading.",
    "notes": "",
    "parent": "",
    "entry_type": "event"
@@ -92271,20 +92377,50 @@
   "x-sf-sketchfest": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "SF Sketchfest 2027",
+     "quotes": [
+      {
+       "url": "https://sfsketchfest.com/",
+       "text": "SF Sketchfest 2027"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Jan 14 - 31, 2027",
+     "quotes": [
+      {
+       "url": "https://sfsketchfest.com/",
+       "text": "Jan 14 - 31, 2027"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
     "status": "unverified",
     "quotes": [],
-    "basis": "Not established"
+    "basis": "City-only location not established in the reviewed excerpt."
    },
-   "occurrences": [],
+   "occurrences": [
+    {
+     "start": "2027-01-14",
+     "end": "2027-01-31",
+     "quotes": [
+      {
+       "url": "https://sfsketchfest.com/",
+       "text": "Jan 14 - 31, 2027"
+      }
+     ]
+    }
+   ],
    "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "reason": "2027 banner independently read. Current venue programme not announced; do not carry 2026 venues into it. Upstream cebeabf0 2026 Sched dates remain in candidate history and the companion audit, not silently discarded.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-sf-music-week": {
    "reviewer": "64f8b973",
@@ -92325,56 +92461,256 @@
   "x-bouquets-to-art": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
-   "recurrence": null,
-   "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+   "fields": {
+    "name": {
+     "value": "Bouquets to Art",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+       "text": "Bouquets to Art"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "March 3–8, 2026",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+       "text": "March 3–8, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "Tuesday–Sunday, March 3–8, 9:30 am–5:15 pm, at both museums. · On Thursday, March 5, we will host public-access evening hours at the de Young, 6–9 pm.",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+       "text": "Tuesday–Sunday, March 3–8, 9:30 am–5:15 pm, at both museums."
+      },
+      {
+       "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+       "text": "On Thursday, March 5, we will host public-access evening hours at the de Young, 6–9 pm."
+      }
+     ]
+    },
+    "venue": {
+     "value": "de Young and Legion of Honor",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+       "text": "de Young and Legion of Honor"
+      }
+     ]
+    },
+    "price": {
+     "value": "For adults, tickets start at $44",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+       "text": "For adults, tickets start at $44"
+      }
+     ]
+    }
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "kind": "Annual",
+   "recurrence": {
+    "value": "annual floral fundraiser",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+      "text": "annual floral fundraiser"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-de-young",
+      "text": "Muni to Golden Gate Park"
+     },
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-legion-of-honor",
+      "text": "Turn right (north) on 34th Avenue into Lincoln Park."
+     }
+    ],
+    "basis": "Both named museums are recognized San Francisco venues, documented in their official directions."
+   },
+   "occurrences": [
+    {
+     "start": "2026-03-03",
+     "end": "2026-03-08",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+       "text": "March 3–8, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Specific fundraiser ticket policy, not a free-general-admission day. Separate opening-night and member-hours events are not included in the main viewing schedule.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-sf-art-fair": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "San Francisco Art Fair",
+     "quotes": [
+      {
+       "url": "https://sanfranciscoartfair.com/",
+       "text": "San Francisco Art Fair"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "April 15–18, 2027",
+     "quotes": [
+      {
+       "url": "https://sanfranciscoartfair.com/",
+       "text": "April 15–18, 2027"
+      }
+     ]
+    },
+    "time": {
+     "value": "Thursday, April 15, 2027: 6—9pm · Friday, April 16, 2027: 11am—7pm · Saturday, April 17, 2027: 11am—7pm · Sunday, April 18, 2027: 11am—6pm",
+     "quotes": [
+      {
+       "url": "https://sanfranciscoartfair.com/visit/",
+       "text": "Thursday, April 15, 2027: 6—9pm"
+      },
+      {
+       "url": "https://sanfranciscoartfair.com/visit/",
+       "text": "Friday, April 16, 2027: 11am—7pm"
+      },
+      {
+       "url": "https://sanfranciscoartfair.com/visit/",
+       "text": "Saturday, April 17, 2027: 11am—7pm"
+      },
+      {
+       "url": "https://sanfranciscoartfair.com/visit/",
+       "text": "Sunday, April 18, 2027: 11am—6pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Fort Mason Festival Pavilion",
+     "quotes": [
+      {
+       "url": "https://sanfranciscoartfair.com/visit/",
+       "text": "Fort Mason Festival Pavilion"
+      }
+     ]
+    },
+    "price": {
+     "value": "Fair Pass $65 + fees · Single Day Ticket $35 + fees",
+     "quotes": [
+      {
+       "url": "https://sanfranciscoartfair.com/visit/",
+       "text": "Fair Pass $65 + fees"
+      },
+      {
+       "url": "https://sanfranciscoartfair.com/visit/",
+       "text": "Single Day Ticket $35 + fees"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sanfranciscoartfair.com/visit/",
+      "text": "2 Marina Boulevard\nSan Francisco, CA 94123"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "occurrences": [
+    {
+     "start": "2027-04-15",
+     "end": "2027-04-18",
+     "quotes": [
+      {
+       "url": "https://sanfranciscoartfair.com/",
+       "text": "April 15–18, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "2027 ticket/hours page independently read. Thursday evening requires Fair Pass; single-day tickets are for public days Friday–Sunday. Ticket sales start February 2027, not assumed currently available.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-sf-international-arts-festival": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "San Francisco International Arts Festival",
+     "quotes": [
+      {
+       "url": "https://www.sfiaf.org/festival",
+       "text": "San Francisco International Arts Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "April 29 - May 9 2027",
+     "quotes": [
+      {
+       "url": "https://www.sfiaf.org/festival",
+       "text": "April 29 - May 9 2027"
+      }
+     ]
+    },
+    "venue": {
+     "value": "numerous venues in San Francisco's Mission District",
+     "quotes": [
+      {
+       "url": "https://www.sfiaf.org/festival",
+       "text": "numerous venues in San Francisco's Mission District"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sfiaf.org/festival",
+      "text": "numerous venues in San Francisco's Mission District"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "occurrences": [
+    {
+     "start": "2027-04-29",
+     "end": "2027-05-09",
+     "quotes": [
+      {
+       "url": "https://www.sfiaf.org/festival",
+       "text": "April 29 - May 9 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Explicit SF Mission programme only. Upstream 2026 ticket prices are not carried into the 2027 edition; prices and individual showtimes remain blank.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-juneteenth-fillmore": {
    "reviewer": "64f8b973",
@@ -92389,7 +92725,7 @@
    },
    "occurrences": [],
    "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "reason": "Independent retrieval of the official site now returns a hosting error (“Something’s wrong here”), not event facts. Earlier manual claims remain in companion history; no fields restored from an error/blocked page.",
    "notes": "",
    "parent": "",
    "entry_type": "event"
@@ -92397,38 +92733,152 @@
   "x-qwocmap-film-festival": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "Queer Women of Color Film Festival",
+     "quotes": [
+      {
+       "url": "https://qwocmap.org/festival/",
+       "text": "Queer Women of Color Film Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "June 12-14, 2026",
+     "quotes": [
+      {
+       "url": "https://qwocmap.org/festival/",
+       "text": "June 12-14, 2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Presidio Theatre, 99 Moraga Avenue, San Francisco",
+     "quotes": [
+      {
+       "url": "https://qwocmap.org/festival/",
+       "text": "Presidio Theatre, 99 Moraga Avenue, San Francisco"
+      }
+     ]
+    },
+    "price": {
+     "value": "Free, and open to the public.",
+     "quotes": [
+      {
+       "url": "https://qwocmap.org/festival/",
+       "text": "Free, and open to the public."
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://qwocmap.org/festival/",
+      "text": "Presidio Theatre, 99 Moraga Avenue, San Francisco"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "occurrences": [
+    {
+     "start": "2026-06-12",
+     "end": "2026-06-14",
+     "quotes": [
+      {
+       "url": "https://qwocmap.org/festival/",
+       "text": "June 12-14, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Only the explicit SF in-person festival. Worldwide/online/satellite events are excluded; a 2027 date/venue is not inferred from upstream copy.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-sf-free-folk-festival": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
-   "recurrence": null,
-   "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+   "fields": {
+    "name": {
+     "value": "San Francisco Free Folk Festival",
+     "quotes": [
+      {
+       "url": "https://sffolkfest.org/",
+       "text": "San Francisco Free Folk Festival"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Saturday July 11, 2026",
+     "quotes": [
+      {
+       "url": "https://sffolkfest.org/",
+       "text": "Saturday July 11, 2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Golden Gate Park",
+     "quotes": [
+      {
+       "url": "https://sffolkfest.org/",
+       "text": "Golden Gate Park"
+      }
+     ]
+    },
+    "price": {
+     "value": "Admission to everything is free!",
+     "quotes": [
+      {
+       "url": "https://sffolkfest.org/",
+       "text": "Admission to everything is free!"
+      }
+     ]
+    }
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "kind": "Annual",
+   "recurrence": {
+    "value": "50th annual San Francisco Free Folk Festival",
+    "quotes": [
+     {
+      "url": "https://sffolkfest.org/",
+      "text": "50th annual San Francisco Free Folk Festival"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sffolkfest.org/",
+      "text": "San Francisco Free Folk Festival was in Golden Gate Park"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-07-11",
+     "end": "2026-07-11",
+     "quotes": [
+      {
+       "url": "https://sffolkfest.org/",
+       "text": "Saturday July 11, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Direct organizer retrospective confirms the 2026 park edition. Overall hours are not printed on this homepage; inherited 11–6 not carried without the dated programme.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-sfjazz-summer-sessions": {
    "reviewer": "64f8b973",
@@ -92469,20 +92919,81 @@
   "x-sf-fall-antiques-show": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "The San Francisco Fall Show",
+     "quotes": [
+      {
+       "url": "https://sffallshow.org/about/",
+       "text": "The San Francisco Fall Show"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Show Dates October 15 – 18",
+     "quotes": [
+      {
+       "url": "https://sffallshow.org/about/",
+       "text": "Show Dates October 15 – 18"
+      }
+     ]
+    },
+    "time": {
+     "value": "Thursday October 15 through Saturday October 17: 10:30am – 7:00pm · Sunday, October 18: 11:00am – 5:00pm",
+     "quotes": [
+      {
+       "url": "https://sffallshow.org/about/",
+       "text": "Thursday October 15 through Saturday October 17: 10:30am – 7:00pm"
+      },
+      {
+       "url": "https://sffallshow.org/about/",
+       "text": "Sunday, October 18: 11:00am – 5:00pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Festival Pavilion, Fort Mason Center for Arts & Culture",
+     "quotes": [
+      {
+       "url": "https://sffallshow.org/about/",
+       "text": "Festival Pavilion, Fort Mason Center for Arts & Culture"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sffallshow.org/about/",
+      "text": "2 Marina Blvd\nSan Francisco CA 94109"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "occurrences": [
+    {
+     "start": "2026-10-15",
+     "end": "2026-10-18",
+     "quotes": [
+      {
+       "url": "https://sffallshow.org/about/",
+       "text": "Show Dates October 15 – 18"
+      },
+      {
+       "url": "https://sffallshow.org/about/",
+       "text": "2026 DATES"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Show dates/hours, not separate October 14 gala. Event name corrected to organizer title. Numeric admission and an ongoing yearly pattern are not assumed.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-illuminate-sf": {
    "reviewer": "64f8b973",
@@ -92577,20 +93088,164 @@
   "x-valencia-live": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
-   "recurrence": null,
-   "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+   "fields": {
+    "name": {
+     "value": "Valencia LIVE! 2026",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Valencia LIVE! 2026"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "second Thursday of every month from 5-10 pm, May through October, 2026",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "second Thursday of every month from 5-10 pm, May through October, 2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "5-10 pm",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "5-10 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Valencia St.",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Valencia St."
+      }
+     ]
+    },
+    "price": {
+     "value": "FREE, all-ages monthly street party",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "FREE, all-ages monthly street party"
+      }
+     ]
+    }
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
-   "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "kind": "Monthly",
+   "recurrence": {
+    "value": "second Thursday of every month",
+    "quotes": [
+     {
+      "url": "https://www.visitvalenciastreet.com/live",
+      "text": "second Thursday of every month"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.visitvalenciastreet.com/live",
+      "text": "Valencia LiVE! is located on Valencia St. in the American Indian Cultural District."
+     }
+    ],
+    "basis": "Official organizer gives Valencia corridor street blocks, SF American Indian Cultural District, 16th/24th Mission BART and MUNI directions; recognized SF neighborhood, not a generic city-footer token."
+   },
+   "occurrences": [
+    {
+     "start": "2026-05-14",
+     "end": "2026-05-14",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "May 14 and June 11"
+      },
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Valencia LIVE! 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-06-11",
+     "end": "2026-06-11",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "May 14 and June 11"
+      },
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Valencia LIVE! 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-07-09",
+     "end": "2026-07-09",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "July 9 and Aug 13"
+      },
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Valencia LIVE! 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-08-13",
+     "end": "2026-08-13",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "July 9 and Aug 13"
+      },
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Valencia LIVE! 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-09-10",
+     "end": "2026-09-10",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Sept 10 and Oct 8"
+      },
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Valencia LIVE! 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-10-08",
+     "end": "2026-10-08",
+     "quotes": [
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Sept 10 and Oct 8"
+      },
+      {
+       "url": "https://www.visitvalenciastreet.com/live",
+       "text": "Valencia LIVE! 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "SF Mission/Valencia corridor explicitly identified by local BART/MUNI and cultural-district directions. Street extent rotates by date; no 2027 dates generated.",
+   "notes": "May/June: 16th–19th; July/August: 17th–20th; September/October: 18th–21st. All six listed dates are in 2026.",
+   "entry_type": "event",
+   "parent": ""
   },
   "x-black-coffee-treasure-island": {
    "reviewer": "64f8b973",
@@ -92667,20 +93322,142 @@
   "x-cinema-on-the-square": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "Cinema on the Square",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "Cinema on the Square"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "five free movie screenings in Union Square this summer season",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "five free movie screenings in Union Square this summer season"
+      }
+     ]
+    },
+    "time": {
+     "value": "All Saturday night films begin at sunset",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "All Saturday night films begin at sunset"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Union Square",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "Union Square"
+      }
+     ]
+    },
+    "price": {
+     "value": "free movie screenings",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "free movie screenings"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+      "text": "SAN FRANCISCO – Mayor Daniel Lurie today announced the second season of “Cinema on the Square,” expanding the series to five free movie screenings in Union Square"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "occurrences": [
+    {
+     "start": "2026-06-20",
+     "end": "2026-06-20",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "June 20"
+      },
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "June 10, 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-06-27",
+     "end": "2026-06-27",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "June 27"
+      },
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "June 10, 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-07-25",
+     "end": "2026-07-25",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "July 25"
+      },
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "June 10, 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-08-29",
+     "end": "2026-08-29",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "August 29"
+      },
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "June 10, 2026"
+      }
+     ]
+    },
+    {
+     "start": "2026-09-26",
+     "end": "2026-09-26",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "September 26"
+      },
+      {
+       "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+       "text": "June 10, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "All five dates are present in the independently read June 2026 City release, including September 26. Sunset is not converted to a guessed clock time. Programme umbrella, not five additional candidate rows.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "series",
+   "parent": ""
   },
   "x-sf-cheese-fest": {
    "reviewer": "64f8b973",
@@ -92703,56 +93480,188 @@
   "x-deyoung-treasures-of-the-pharaohs": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "Treasures of the Pharaohs",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "Treasures of the Pharaohs"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "August 1, 2026–January 31, 2027",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "August 1, 2026–January 31, 2027"
+      }
+     ]
+    },
+    "venue": {
+     "value": "de Young",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "de Young"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-de-young",
+      "text": "Muni to Golden Gate Park"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "occurrences": [
+    {
+     "start": "2026-08-01",
+     "end": "2027-01-31",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "August 1, 2026–January 31, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Upstream dated-exhibition source independently re-read. No general museum hours or general-admission price substituted for the special exhibition.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-legion-azzedine-alaia": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "Azzedine Alaïa: Sculpting Fashion",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "Azzedine Alaïa: Sculpting Fashion"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "November 21, 2026 – April 11, 2027",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "November 21, 2026 – April 11, 2027"
+      }
+     ]
+    },
+    "venue": {
+     "value": "Legion of Honor",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "Legion of Honor"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-legion-of-honor",
+      "text": "Turn right (north) on 34th Avenue into Lincoln Park."
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "occurrences": [
+    {
+     "start": "2026-11-21",
+     "end": "2027-04-11",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "November 21, 2026 – April 11, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Upstream dated-exhibition source independently re-read. No general museum hours or general-admission price substituted for the special exhibition.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-deyoung-monet-and-venice": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "Monet and Venice",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "Monet and Venice"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "March 21–July 26, 2026",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "March 21–July 26, 2026"
+      }
+     ]
+    },
+    "venue": {
+     "value": "de Young",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "de Young"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.famsf.org/visit/getting-to-the-de-young",
+      "text": "Muni to Golden Gate Park"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Official source response is blocked/challenge-only (403). This is not a dead-link finding or field verification. All inherited event facts withheld pending readable contextual official evidence.",
+   "occurrences": [
+    {
+     "start": "2026-03-21",
+     "end": "2026-07-26",
+     "quotes": [
+      {
+       "url": "https://www.famsf.org/press-room/2026-advance-schedule",
+       "text": "March 21–July 26, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Upstream dated-exhibition source independently re-read. No general museum hours or general-admission price substituted for the special exhibition.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "warriors-season": {
    "reviewer": "64f8b973",
@@ -94632,20 +95541,82 @@
   "sf-zoo-zoolights": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
+   "fields": {
+    "name": {
+     "value": "ZooLights",
+     "quotes": [
+      {
+       "url": "https://www.sfzoo.org/zoolights/",
+       "text": "ZooLights"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "November 6, 2026 through January 3, 2027",
+     "quotes": [
+      {
+       "url": "https://www.sfzoo.org/zoolights/",
+       "text": "November 6, 2026 through January 3, 2027"
+      }
+     ]
+    },
+    "time": {
+     "value": "5:30 to 9 p.m.",
+     "quotes": [
+      {
+       "url": "https://www.sfzoo.org/zoolights/",
+       "text": "5:30 to 9 p.m."
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco Zoo & Garden",
+     "quotes": [
+      {
+       "url": "https://www.sfzoo.org/event/boo-at-the-zoo/",
+       "text": "San Francisco Zoo & Garden"
+      }
+     ]
+    },
+    "price": {
+     "value": "separate evening ticket and includes Dinos Rule! ($30 for adults / $21 for children). Zoo Members receive a $3 discount.",
+     "quotes": [
+      {
+       "url": "https://www.sfzoo.org/zoolights/",
+       "text": "separate evening ticket and includes Dinos Rule! ($30 for adults / $21 for children). Zoo Members receive a $3 discount."
+      }
+     ]
+    }
+   },
+   "kind": "Special",
    "recurrence": null,
    "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx",
+      "text": "San Francisco Zoo1 Zoo RoadSan FranciscoCA94132"
+     }
+    ],
+    "basis": "Official San Francisco event/venue location, checked in context."
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Current official Zoo calendar response contains only the calendar heading, not this named event. Old seasonal hours/dates/admission cannot establish an active 2026 edition.",
+   "occurrences": [
+    {
+     "start": "2026-11-06",
+     "end": "2027-01-03",
+     "quotes": [
+      {
+       "url": "https://www.sfzoo.org/zoolights/",
+       "text": "November 6, 2026 through January 3, 2027"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Independently read the dedicated page. It says Wed–Sun, closed Mon/Tue; upstream mentions daily opening after December 16 from a separate release, which is not assumed here. Date span does not mean open every night. Annual recurrence not established by this new programme.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "sf-zoo-boo": {
    "reviewer": "64f8b973",
@@ -95538,20 +96509,90 @@
   "night-of-ideas-sf": {
    "reviewer": "64f8b973",
    "reviewed_at": "2026-10-18",
-   "fields": {},
-   "kind": "Unverified",
-   "recurrence": null,
-   "geography": {
-    "status": "unverified",
-    "quotes": [],
-    "basis": "Not established"
+   "fields": {
+    "name": {
+     "value": "Afternoon and Night of Ideas",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+       "text": "Afternoon and Night of Ideas"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Saturday, 4/11/2026",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+       "text": "Saturday, 4/11/2026"
+      }
+     ]
+    },
+    "time": {
+     "value": "3:00 - 11:45",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+       "text": "3:00 - 11:45"
+      }
+     ]
+    },
+    "venue": {
+     "value": "San Francisco Main Library, Fulton Plaza and the Asian Art Museum",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+       "text": "San Francisco Main Library, Fulton Plaza and the Asian Art Museum"
+      }
+     ]
+    },
+    "price": {
+     "value": "Register for free tickets",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+       "text": "Register for free tickets"
+      }
+     ]
+    }
    },
-   "occurrences": [],
-   "publication": "review_only",
-   "reason": "Generic SFPL calendar does not substantiate the inherited Night of Ideas edition schedule, venue set or dates. Library calendar presence/free programmes in general are not contextual verification of this row.",
+   "kind": "Annual",
+   "recurrence": {
+    "value": "This annual event",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+      "text": "This annual event"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+      "text": "100 Larkin Street\nSan Francisco, CA94102"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [
+    {
+     "start": "2026-04-11",
+     "end": "2026-04-11",
+     "quotes": [
+      {
+       "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+       "text": "Saturday, 4/11/2026"
+      }
+     ]
+    }
+   ],
+   "publication": "listed",
+   "reason": "Dedicated City-library event page replaces generic calendar. Its printed time is transcribed without inventing an AM/PM suffix; prose establishes 3pm start and 7pm evening reopening. An upstream press-release midnight end differs; no forced reconciliation.",
    "notes": "",
-   "parent": "",
-   "entry_type": "event"
+   "entry_type": "event",
+   "parent": ""
   },
   "x-sf-ballet-nutcracker": {
    "reviewer": "64f8b973",
@@ -96309,6 +97350,122 @@
    "notes": "",
    "entry_type": "event",
    "parent": ""
+  },
+  "f1-alemany-flea-market": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Alemany Flea Market",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/location--alemany-flea-market",
+       "text": "Alemany Flea Market"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "Sunday7:00 am to 3:00 pm",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/location--alemany-flea-market",
+       "text": "Sunday7:00 am to 3:00 pm"
+      }
+     ]
+    },
+    "time": {
+     "value": "7:00 am to 3:00 pm",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/location--alemany-flea-market",
+       "text": "7:00 am to 3:00 pm"
+      }
+     ]
+    },
+    "venue": {
+     "value": "100 Alemany Boulevard",
+     "quotes": [
+      {
+       "url": "https://www.sf.gov/location--alemany-flea-market",
+       "text": "100 Alemany Boulevard"
+      }
+     ]
+    }
+   },
+   "kind": "Weekly",
+   "recurrence": {
+    "value": "Sunday7:00 am to 3:00 pm",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/location--alemany-flea-market",
+      "text": "Sunday7:00 am to 3:00 pm"
+     }
+    ]
+   },
+   "geography": {
+    "status": "confirmed_sf",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/location--alemany-flea-market",
+      "text": "100 Alemany Boulevard\nSan Francisco, CA94110"
+     }
+    ],
+    "basis": "Official page explicitly locates the event/venue in San Francisco."
+   },
+   "occurrences": [],
+   "publication": "listed",
+   "reason": "Preserves the upstream-added candidate after independent City-page reading. Admission not stated; free parking is not free entry. No year-round claim inferred.",
+   "notes": "",
+   "entry_type": "event",
+   "parent": ""
+  },
+  "f1-sffilm-doc-stories": {
+   "reviewer": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "fields": {
+    "name": {
+     "value": "Doc Stories",
+     "quotes": [
+      {
+       "url": "https://sffilm.org/yr-faq/",
+       "text": "Doc Stories"
+      }
+     ]
+    },
+    "schedule": {
+     "value": "November 5–8, 2026",
+     "quotes": [
+      {
+       "url": "https://sffilm.org/yr-faq/",
+       "text": "November 5–8, 2026"
+      }
+     ]
+    }
+   },
+   "kind": "Special",
+   "recurrence": null,
+   "geography": {
+    "status": "unverified",
+    "quotes": [],
+    "basis": "City-only location not established in the reviewed excerpt."
+   },
+   "occurrences": [
+    {
+     "start": "2026-11-05",
+     "end": "2026-11-08",
+     "quotes": [
+      {
+       "url": "https://sffilm.org/yr-faq/",
+       "text": "November 5–8, 2026"
+      }
+     ]
+    }
+   ],
+   "publication": "review_only",
+   "reason": "Preserves upstream-added dated candidate. Venue/time/price and annual cadence are not supplied by this FAQ, so the entry remains held off the SF-only directory.",
+   "notes": "",
+   "entry_type": "event",
+   "parent": ""
   }
  },
  "extra_events": [
@@ -96368,5 +97525,14 @@
   }
  ],
  "review_completed_at": "2026-10-18",
- "last_capture_attempt_at": "2026-10-18T03:09:45+00:00"
+ "last_capture_attempt_at": "2026-10-18T03:09:45+00:00",
+ "upstream_reconciliation": {
+  "main_commit": "092a1f40720ca469e3d2e7570d2dc18eab2fbbe4",
+  "legacy_audit": "data/audit_f1fd3c36.json",
+  "upstream_added_ids": [
+   "f1-alemany-flea-market",
+   "f1-sffilm-doc-stories"
+  ],
+  "note": "Companion tool/ledger preserved unchanged and executed only in temporary candidate-history tree; no inherited field/page label is an approval. Selected new sources independently re-read above."
+ }
 }

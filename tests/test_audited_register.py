@@ -28,11 +28,22 @@ class AuditedRegister(unittest.TestCase):
         return compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit)
 
     def test_baseline_retained_and_new_entries_identified(self):
-        self.assertEqual(len(self.history['events']), 231)
+        self.assertEqual(len(self.history['events']), 233)
+        self.assertEqual(len(self.audit['candidates']), 231)
         self.assertEqual(len(self.audit['extra_events']), 9)
-        self.assertEqual(len(self.rows), 240)
+        self.assertEqual(len(self.rows), 242)
         self.assertTrue(set(self.audit['candidates']) <= set(self.by_id))
-        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 149)
+        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 163)
+
+    def test_upstream_additions_and_source_repair_are_preserved(self):
+        self.assertIn('f1-alemany-flea-market', self.by_id)
+        self.assertEqual(self.by_id['f1-alemany-flea-market']['publication'], 'listed')
+        self.assertEqual(self.by_id['f1-sffilm-doc-stories']['publication'], 'review_only')
+        sources = json.loads((ROOT / 'data/sources.json').read_text())
+        urls = {s['url'] for s in sources.values()}
+        self.assertNotIn('https://www.ferrybuildingmarketplace.com/events/ferry-fest/', urls)
+        self.assertIn('https://sfsketchfest2026.sched.com/', urls)
+        self.assertEqual(self.by_id['b-lit-crawl']['time'], '')
 
     def test_exact_projection(self):
         rows, _, _, summary = self.project()

@@ -46,3 +46,5 @@ tr:target{background:#fff3d6!important}blockquote{font-size:13px;white-space:pre
 :root{--muted:#526358}
 .heading .eyebrow{color:#356245}thead th{color:#48604e}
 .event-links{font-size:11px;font-weight:400;line-height:1.7;margin-top:9px}
+/* Historical URLs in review prose must wrap instead of widening the phone viewport. */
+.prose{overflow-wrap:anywhere}

@@ -10,16 +10,16 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 | Measure | Count |
 |---|---:|
-| Candidates assessed | 240 |
-| Inherited candidates retained | 231 |
+| Candidates assessed | 242 |
+| Prior-main candidates retained (231 initial + 2 companion additions) | 233 |
 | New official-calendar entries | 9 |
-| Entries admitted to the city-only directory | 149 |
-| Candidates held off the directory for review | 91 |
-| Weekly / monthly / annual entries | 19 / 6 / 23 |
-| Special, dated or cadence-unconfirmed entries | 101 |
-| Exact cited official-source URLs / distinct domains | 213 / 133 |
+| Entries admitted to the city-only directory | 163 |
+| Candidates held off the directory for review | 79 |
+| Weekly / monthly / annual entries | 20 / 7 / 26 |
+| Special, dated or cadence-unconfirmed entries | 110 |
+| Exact cited official-source URLs / distinct domains | 237 / 140 |
 
-The directory includes 13 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
+The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
 - [Dashboard](index.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
 - [Markets & food](markets.html) · [Museums & science](museums.html) · [Festivals & culture](culture.html) · [Community & outdoors](community.html)
@@ -56,7 +56,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/validate.py
 ```
 
-`consolidate.py` first reconstructs historical candidates from the preserved research inputs, then **must** run the fail-closed `tools/audited_register.py` overlay. Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
+`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay. Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
 
 The validator compares the exact projection, checks quotation provenance (including labeled event JSON-LD), recurrence/year guards, blanks, parent cycles, source references, CSV cell values, all page memberships and every local link/fragment. A second rebuild must be byte-identical. Provenance validation is **not** automatic semantic fact-checking.
 
@@ -82,6 +82,8 @@ Omit `--serve` when a static server already runs on port 8080. This checks 12 pa
 
 | Path | Purpose |
 |---|---|
+| `data/audit_f1fd3c36.json`, `tools/apply_audit.py` | Upstream research/tool retained unchanged; legacy labels are not approvals |
+| `tools/upstream_candidates.py`, `data/upstream_refs_64f8b973.json` | Isolated candidate transform and preserved official 2026 Sketchfest reference |
 | `data/audit_64f8b973.json` | Finite official evidence captures, selected tool excerpts and explicit field decisions |
 | `data/events.json` | All audited records, including review-only dispositions; not all are published in the directory |
 | `data/sources.json` | Exact-URL ledger; statuses and contextual decisions are separate |

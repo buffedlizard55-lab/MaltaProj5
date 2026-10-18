@@ -826,6 +826,10 @@ print(f" sources: {len(sources)}")
 print(f" review findings: {len(review)}")
 print(" merged 167-rows:", len(MERGE), " new 167-rows:", len(converted))
 
+# Preserve newer mainline research without trusting its old verification labels.
+from upstream_candidates import include_upstream
+rows, sources, review = include_upstream(rows, sources, review)
+
 # Mandatory final projection. No legacy value/verification label can leak through.
 from audited_register import apply_audit
 apply_audit(rows, sources, review)

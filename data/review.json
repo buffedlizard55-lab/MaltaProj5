@@ -1,7 +1,7 @@
 [
  {
   "title": "Publication gate and remaining uncertainty",
-  "detail": "149 entries have an approved name, venue and San Francisco geography; 91 candidates are held off the directory. Every unapproved field is blank. A listed entry is not a claim that every fact is known.",
+  "detail": "163 entries have an approved name, venue and San Francisco geography; 79 candidates are held off the directory. Every unapproved field is blank. A listed entry is not a claim that every fact is known.",
   "urls": []
  },
  {
@@ -17,6 +17,11 @@
  {
   "title": "Known corrections and conflicts",
   "detail": "Zoo resident day is October 7 (not a monthly first-Tuesday rule); Boo October 31 is 10am–3pm with paid admission/membership. Fiesta en el Parque is August 1. Opera Ball moved to November 12. Bhangra & Beats moved to Yerba Buena. Alemany hours, Secondhand/Muertos street extents and Jewish Film Festival year conflict remain flagged, not guessed.",
+  "urls": []
+ },
+ {
+  "title": "Concurrent research retained; Ferry Fest dead URL is historical only",
+  "detail": "The f1fd3c36 audit and 99662c40 repair are preserved unchanged as candidate history, including Alemany Flea Market and Doc Stories. Newly located sources were independently re-read where possible; old field/page labels are not automatic approvals. Ferry Fest’s former https://www.ferrybuildingmarketplace.com/events/ferry-fest/ returned 404 in upstream CI run 39092990628 and is not active evidence. Its surviving SF Travel guide remains a review link; unsupported facts remain blank.",
   "urls": []
  },
  {

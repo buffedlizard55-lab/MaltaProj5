@@ -25,6 +25,19 @@
    "x-asian-art-museum-free-sundays"
   ]
  },
+ "f1-blackcoffeesf-com": {
+  "url": "https://blackcoffeesf.com/",
+  "publisher": "Black Coffee Treasure Island SF — official event site",
+  "title": "Black Coffee Treasure Island SF — official event site",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
  "x-bringyourownbigwheel-com": {
   "url": "https://bringyourownbigwheel.com/",
   "publisher": "Bring Your Own Big Wheel (official site, dates per SF Travel April guide)",
@@ -220,6 +233,19 @@
    "seconds": 0.53,
    "text_truncated": false
   },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
+ "f1-castrostreetfair-org-fair": {
+  "url": "https://castrostreetfair.org/fair/",
+  "publisher": "Castro Street Fair — General Information",
+  "title": "Castro Street Fair — General Information",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
  },
@@ -955,8 +981,8 @@
   "source_role": "Official cited page; link alone is not a verified fact",
   "captured_at": "2026-10-18T02:59:54+00:00",
   "http": 403,
-  "tool_excerpt_available": false,
-  "tool_checked_at": "",
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
   "latest_attempt": null,
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
@@ -1118,6 +1144,19 @@
    "audit-presidio-inside-out"
   ]
  },
+ "f1-qwocmap-org": {
+  "url": "https://qwocmap.org/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "title": "Official page re-read by session f1fd3c36",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
  "x-qwocmap-org-festival": {
   "url": "https://qwocmap.org/festival/",
   "publisher": "QWOCMAP (official site, dates per SF Travel June guide)",
@@ -1125,11 +1164,13 @@
   "source_role": "Official cited page; link alone is not a verified fact",
   "captured_at": "2026-10-18T02:59:55+00:00",
   "http": 403,
-  "tool_excerpt_available": false,
-  "tool_checked_at": "",
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
   "latest_attempt": null,
   "audit_snapshot": "data/audit_64f8b973.json",
-  "approved_for_rows": []
+  "approved_for_rows": [
+   "x-qwocmap-film-festival"
+  ]
  },
  "x-sanfranciscoartfair-com": {
   "url": "https://sanfranciscoartfair.com/",
@@ -1138,11 +1179,28 @@
   "source_role": "Official cited page; link alone is not a verified fact",
   "captured_at": "2026-10-18T02:59:54+00:00",
   "http": 403,
-  "tool_excerpt_available": false,
-  "tool_checked_at": "",
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
   "latest_attempt": null,
   "audit_snapshot": "data/audit_64f8b973.json",
-  "approved_for_rows": []
+  "approved_for_rows": [
+   "x-sf-art-fair"
+  ]
+ },
+ "audit-8b5ccfaf6523": {
+  "url": "https://sanfranciscoartfair.com/visit/",
+  "publisher": "sanfranciscoartfair.com",
+  "title": "Tickets - San Francisco Art Fair | April 15–18, 2027",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-sf-art-fair"
+  ]
  },
  "x-sanfranciscohalfmarathon-org": {
   "url": "https://sanfranciscohalfmarathon.org/",
@@ -1298,6 +1356,21 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
  },
+ "f1-sffallshow-org-about": {
+  "url": "https://sffallshow.org/about/",
+  "publisher": "The San Francisco Fall Show — About (dates, hours, location)",
+  "title": "The San Francisco Fall Show - About",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-sf-fall-antiques-show"
+  ]
+ },
  "b-sffilm-org-yr-faq": {
   "url": "https://sffilm.org/yr-faq/",
   "publisher": "SFFILM — FAQs",
@@ -1321,7 +1394,8 @@
   },
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": [
-   "b-sffilm-festival"
+   "b-sffilm-festival",
+   "f1-sffilm-doc-stories"
   ]
  },
  "x-sffolkfest-org": {
@@ -1331,6 +1405,21 @@
   "source_role": "Official cited page; link alone is not a verified fact",
   "captured_at": "2026-10-18T02:59:55+00:00",
   "http": 403,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-sf-free-folk-festival"
+  ]
+ },
+ "f1-sfiacfoundation-org-san-francisco-pizza-festival": {
+  "url": "https://sfiacfoundation.org/san-francisco-pizza-festival",
+  "publisher": "SF Italian Athletic Club Foundation — festival page (organizer)",
+  "title": "SF Italian Athletic Club Foundation — festival page (organizer)",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
   "tool_excerpt_available": false,
   "tool_checked_at": "",
   "latest_attempt": null,
@@ -1438,6 +1527,21 @@
   },
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
+ },
+ "f1-sfpl-org-events-2026-04-11-afternoon-and-night-ideas": {
+  "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+  "publisher": "San Francisco Public Library — event page",
+  "title": "Afternoon and Night of Ideas | San Francisco Public Library",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "night-of-ideas-sf"
+  ]
  },
  "b-sfpl-org-events-special-programs-filipino-american-history-celeb": {
   "url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
@@ -1600,6 +1704,7 @@
    "b-mobile-rec-sunday-streets-excelsior-2026",
    "b-mobile-rec-rochambeau-2026",
    "b-mobile-rec-scaregrove-2026",
+   "sf-zoo-zoolights",
    "sf-zoo-boo",
    "sf-zoo-resident-free-day",
    "sf-zoo-member-mornings"
@@ -1630,6 +1735,34 @@
   "approved_for_rows": [
    "x-flower-bulb-day"
   ]
+ },
+ "audit-926546921eac": {
+  "url": "https://sfsketchfest.com/",
+  "publisher": "sfsketchfest.com",
+  "title": "SF Sketchfest - The San Francisco Comedy Festival",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-sf-sketchfest"
+  ]
+ },
+ "upstream-ref-9b1d33ea13ac": {
+  "url": "https://sfsketchfest2026.sched.com/",
+  "publisher": "SF Sketchfest 2026 — official festival schedule (Sched, linked from sfsketchfest.com)",
+  "title": "SF Sketchfest 2026 — official festival schedule (Sched, linked from sfsketchfest.com)",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
  },
  "x-sfspacewalk-com": {
   "url": "https://sfspacewalk.com/",
@@ -2047,6 +2180,19 @@
    "holiday"
   ]
  },
+ "f1-sunsetmercantilesf-com-sunsetnightmarket2026": {
+  "url": "https://sunsetmercantilesf.com/sunsetnightmarket2026/",
+  "publisher": "Sunset Mercantile — Sunset Night Market (organizer)",
+  "title": "Sunset Mercantile — Sunset Night Market (organizer)",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
  "x-sunsetmercantilesf-com-unionstreetfestival": {
   "url": "https://sunsetmercantilesf.com/unionstreetfestival/",
   "publisher": "Union Street Festival (official site, linked from SF Travel guide)",
@@ -2225,6 +2371,19 @@
    "x-peak2peak"
   ]
  },
+ "f1-abaa-org": {
+  "url": "https://www.abaa.org/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "title": "Official page re-read by session f1fd3c36",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
  "x-www-abaa-org-events-57th-california-international-antiquarian-book-fai": {
   "url": "https://www.abaa.org/events/57th-california-international-antiquarian-book-fair",
   "publisher": "ABAA (official site)",
@@ -2315,9 +2474,22 @@
    "b-greek-food-festival"
   ]
  },
- "bay": {
+ "f1-axs-com-series-34846-club-darc-season-2-tickets": {
+  "url": "https://www.axs.com/series/34846/club-darc-season-2-tickets",
+  "publisher": "Club Darc Season 2 — official ticketing series page (AXS/Goldenvoice)",
+  "title": "Club Darc Season 2 — official ticketing series page (AXS/Goldenvoice)",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
+ "b-baytobreakers-com": {
   "url": "https://www.baytobreakers.com/",
-  "publisher": "Bay to Breakers",
+  "publisher": "Bay to Breakers (official)",
   "title": "Run Bay to Breakers | Where Cardio, Chaos & Costumes | 12K & 15K | May 16, 2027",
   "source_role": "Official cited page; link alone is not a verified fact",
   "captured_at": "2026-10-18T02:59:58+00:00",
@@ -2730,11 +2902,30 @@
   "source_role": "Official cited page; link alone is not a verified fact",
   "captured_at": "2026-10-18T02:59:59+00:00",
   "http": 403,
-  "tool_excerpt_available": false,
-  "tool_checked_at": "",
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
   "latest_attempt": null,
   "audit_snapshot": "data/audit_64f8b973.json",
-  "approved_for_rows": []
+  "approved_for_rows": [
+   "x-deyoung-treasures-of-the-pharaohs",
+   "x-legion-azzedine-alaia",
+   "x-deyoung-monet-and-venice"
+  ]
+ },
+ "f1-famsf-org-press-room-bouquets-to-art-2026": {
+  "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+  "publisher": "Fine Arts Museums of San Francisco — press release, 28 Jan 2026",
+  "title": "Bouquets to Art Ushers in Spring with Artistic Arrangements at the de Young and Legion of Honor",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-bouquets-to-art"
+  ]
  },
  "dy": {
   "url": "https://www.famsf.org/visit/de-young",
@@ -2804,7 +2995,10 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": [
    "de-young-sat",
-   "de-young-tue"
+   "de-young-tue",
+   "x-bouquets-to-art",
+   "x-deyoung-treasures-of-the-pharaohs",
+   "x-deyoung-monet-and-venice"
   ]
  },
  "legion-location": {
@@ -2827,7 +3021,9 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": [
    "legion-sat",
-   "x-famsf-free-tuesdays"
+   "x-famsf-free-tuesdays",
+   "x-bouquets-to-art",
+   "x-legion-azzedine-alaia"
   ]
  },
  "legion": {
@@ -3253,6 +3449,19 @@
    "seconds": 0.32,
    "text_truncated": false
   },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
+ "f1-litquake-org-2026-schedule": {
+  "url": "https://www.litquake.org/2026-schedule",
+  "publisher": "Litquake — 2026 Festival Schedule",
+  "title": "Litquake — 2026 Festival Schedule",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
  },
@@ -3901,6 +4110,36 @@
    "b-alemany-farmers-market"
   ]
  },
+ "f1-sf-gov-location-alemany-flea-market": {
+  "url": "https://www.sf.gov/location--alemany-flea-market",
+  "publisher": "SF.gov — Alemany Flea Market (SF Real Estate Division)",
+  "title": "Alemany Flea Market | SF.gov",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "f1-alemany-flea-market"
+  ]
+ },
+ "f1-sf-gov-news-mayor-lurie-announces-second-season-of-free-movies-in-unio": {
+  "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+  "publisher": "SF.gov — Office of the Mayor news release",
+  "title": "Mayor Lurie Announces Second Season Of Free Movies In Union Square",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-cinema-on-the-square"
+  ]
+ },
  "x-www-sfaapicocktailweek-com": {
   "url": "https://www.sfaapicocktailweek.com/",
   "publisher": "SF AAPI Cocktail Week (official site, dates per SF Travel May guide)",
@@ -4223,6 +4462,21 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
  },
+ "f1-sfiaf-org-festival": {
+  "url": "https://www.sfiaf.org/festival",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "title": "The Festival",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-sf-international-arts-festival"
+  ]
+ },
  "x-www-sfindie-com": {
   "url": "https://www.sfindie.com/",
   "publisher": "SF IndieFest (official site, dates per SF Travel February guide)",
@@ -4270,6 +4524,19 @@
   "source_role": "Official cited page; link alone is not a verified fact",
   "captured_at": "2026-10-18T03:00:04+00:00",
   "http": 403,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
+ "f1-sfjazz-org-tickets-season-overview-26-27": {
+  "url": "https://www.sfjazz.org/tickets/season-overview/26-27/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "title": "Official page re-read by session f1fd3c36",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
   "tool_excerpt_available": false,
   "tool_checked_at": "",
   "latest_attempt": null,
@@ -4486,6 +4753,19 @@
    "seconds": 0.08,
    "text_truncated": false
   },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
+ "f1-sfmusicweek-org-home": {
+  "url": "https://www.sfmusicweek.org/home",
+  "publisher": "SF Music Week — official site",
+  "title": "SF Music Week — official site",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
  },
@@ -4810,9 +5090,9 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
  },
- "audit-7ca30b8882d0": {
+ "f1-sfzoo-org-event-boo-at-the-zoo": {
   "url": "https://www.sfzoo.org/event/boo-at-the-zoo/",
-  "publisher": "sfzoo.org",
+  "publisher": "San Francisco Zoo & Gardens — Boo at the Zoo event page",
   "title": "Boo at the Zoo - San Francisco Zoo & Gardens",
   "source_role": "Official cited page; link alone is not a verified fact",
   "captured_at": "2026-10-18T03:00:05+00:00",
@@ -4833,6 +5113,7 @@
   },
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": [
+   "sf-zoo-zoolights",
    "sf-zoo-boo"
   ]
  },
@@ -4886,6 +5167,34 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": [
    "sf-zoo-resident-free-day"
+  ]
+ },
+ "f1-sfzoo-org-visit-the-zoo-calendar-of-events": {
+  "url": "https://www.sfzoo.org/visit-the-zoo/calendar-of-events/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "title": "Official page re-read by session f1fd3c36",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
+ "f1-sfzoo-org-zoolights": {
+  "url": "https://www.sfzoo.org/zoolights/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "title": "ZooLights - San Francisco Zoo & Gardens",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "sf-zoo-zoolights"
   ]
  },
  "x-www-somapilipinas-org-events": {
@@ -5062,6 +5371,32 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
  },
+ "f1-thesisters-org-easter": {
+  "url": "https://www.thesisters.org/easter",
+  "publisher": "Sisters of Perpetual Indulgence — Easter in the Park (organizer)",
+  "title": "Sisters of Perpetual Indulgence — Easter in the Park (organizer)",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
+ "f1-thesuperfair-com": {
+  "url": "https://www.thesuperfair.com/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "title": "Official page re-read by session f1fd3c36",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": []
+ },
  "x-www-thesuperfair-com-san-francisco": {
   "url": "https://www.thesuperfair.com/san-francisco",
   "publisher": "The Superfair (formerly Superfine Art Fair) — San Francisco",
@@ -5111,6 +5446,21 @@
   },
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": []
+ },
+ "f1-visitvalenciastreet-com-live": {
+  "url": "https://www.visitvalenciastreet.com/live",
+  "publisher": "Valencia Corridor Merchants Association — Valencia LIVE! (organizer)",
+  "title": "Valencia LIVE! — VCMA",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-valencia-live"
+  ]
  },
  "wnba-valk-sched": {
   "url": "https://www.wnba.com/team/1611661331/golden-state-valkyries",

@@ -1,42 +1,42 @@
 {
  "as_of": "2026-10-18",
- "candidates": 240,
- "inherited_candidates": 231,
+ "candidates": 242,
+ "inherited_candidates": 233,
  "new_entries": 9,
- "listed": 149,
- "review_only": 91,
- "series": 13,
- "source_urls": 213,
- "domains": 133,
+ "listed": 163,
+ "review_only": 79,
+ "series": 14,
+ "source_urls": 237,
+ "domains": 140,
  "kinds": {
-  "Weekly": 19,
-  "Monthly": 6,
-  "Annual": 23,
-  "Special": 101
+  "Weekly": 20,
+  "Monthly": 7,
+  "Annual": 26,
+  "Special": 110
  },
  "categories": {
-  "Markets & food": 27,
-  "Museums & science": 21,
-  "Community & outdoors": 41,
-  "Festivals & culture": 60
+  "Markets & food": 28,
+  "Museums & science": 25,
+  "Community & outdoors": 42,
+  "Festivals & culture": 68
  },
  "temporal": {
-  "Recurring pattern; next date unconfirmed": 27,
-  "Future dated": 45,
+  "Recurring pattern; next date unconfirmed": 28,
+  "Future dated": 49,
   "On snapshot date": 4,
   "Date/year unconfirmed": 18,
-  "Past dated": 51,
+  "Past dated": 58,
   "Tentative schedule": 1,
-  "Spans snapshot date": 3
+  "Spans snapshot date": 5
  },
  "blank_fields": {
   "name": 0,
   "schedule": 7,
-  "time": 63,
+  "time": 70,
   "venue": 0,
-  "price": 91
+  "price": 97
  },
- "listed_with_blanks": 136,
- "supported_field_values": 648,
+ "listed_with_blanks": 147,
+ "supported_field_values": 709,
  "limitation": "Bounded, non-exhaustive research snapshot; entries mix events and programme umbrellas, not a count of unique city events."
 }

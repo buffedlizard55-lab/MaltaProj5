@@ -4,11 +4,11 @@ Research date: **18 October 2026**. This log supersedes the earlier site’s fie
 
 ## Dispositions and scope
 
-- All **231 inherited candidates** received explicit dispositions, plus **9 newly sourced official-calendar entries**.
-- **149 entries** pass the name + venue + SF geography directory gate. **91 candidates** remain review-only. This is not “240 fully verified events.”
+- All **231 initial candidates** received explicit dispositions; **2 additional mainline audit candidates** were retained and reviewed, plus **9 newly sourced official-calendar entries**. Total: **242**.
+- **163 entries** pass the name + venue + SF geography directory gate. **79 candidates** remain review-only. This is not “242 fully verified events.”
 - Every unapproved factual field is blank, including unknown names. An unverified inherited title remains an explicitly labeled candidate identifier for traceability.
-- 19 weekly, 6 monthly, 23 annual entries have explicit recurrence evidence; 101 special/dated/cadence-unconfirmed entries have no unsupported ongoing cadence claim.
-- Directory entries include 13 programme umbrellas. Parent/child links prevent treating the totals as unique-event counts; other changing citywide coverage is incomplete.
+- 20 weekly, 7 monthly, 26 annual entries have explicit recurrence evidence; 110 special/dated/cadence-unconfirmed entries have no unsupported ongoing cadence claim.
+- Directory entries include 14 programme umbrellas. Parent/child links prevent treating the totals as unique-event counts; other changing citywide coverage is incomplete.
 
 ## Evidence trail
 
@@ -50,11 +50,45 @@ The nine new entries are six official upcoming calendar blocks (SFMOMAween, Kiki
 
 ## Checks executed before PR
 
-- Exact canonical projection and quotation validation: **pass**, 240 records / 149 directory / 91 held.
-- **24 offline regression tests pass**: unsupported fallback, name-only approval, missing decisions, unsupported cadence/location, invented year/month, observed Zoo/Presidio/Opera regressions, cross-edition carryover, regional quarantine, pricing eligibility, FAMSF split, structured address, closing-date blanks, temporal status, parent cycles, failed evidence refresh retention.
+- Exact canonical projection and quotation validation: **pass**, 242 records / 163 directory / 79 held.
+- **29 offline regression tests pass**: unsupported fallback, name-only approval, missing decisions, unsupported cadence/location, invented year/month, observed Zoo/Presidio/Opera regressions, cross-edition carryover, regional quarantine, pricing eligibility, FAMSF split, structured address, closing-date blanks, temporal status, parent cycles, failed evidence refresh retention.
 - Full rebuild repeated: canonical JSON, both CSVs, analysis markdown and all 12 HTML pages are **byte-identical**.
 - Local HTML/fragment/reference/CSV checks: **pass**.
 - Real Chromium 153 smoke test: all 12 pages at **1440×1000** and **390×844**, no document overflow, functioning filters/reset/empty state, official/evidence navigation, no-JavaScript readability and no runtime/asset errors.
 - Automated axe-core WCAG A/AA test: initial small-metadata contrast failures corrected; **zero automated violations** on overview, analysis, review and evidence page types. This is not a complete accessibility certification.
 
 External URL checks, actual CI, PR merge and successful GitHub Pages publication are recorded in `COORDINATION.md` only after they run; no deployment is claimed by this research log.
+
+## Reconciliation with newer main (`092a1f4`, PRs #14–#20)
+
+The other sessions' full coordination logs, `data/audit_f1fd3c36.json`,
+`tools/apply_audit.py` and base86 price blanking are retained. The claimed upstream
+tool/ledger were not edited. An isolated temporary-tree adapter applies that
+research as **unverified candidate history** before this audit's mandatory gate.
+Both added candidates remain: Alemany Flea Market is SF/weekly evidenced from the
+City page; Doc Stories has November 5–8, 2026 dates but no verified venue and stays
+held. A small reference ledger retains the official 2026 Sketchfest Sched link;
+a comparison found no other mainline row source URL missing from the combined
+history. Ferry Fest's former 404 is historical only, visible in review and excluded
+from active sources. The combined register cites 237 exact URLs across 140 domains.
+
+New primary pages from the companion research were independently re-read and
+archived as labeled excerpts: FAMSF's advance schedule/Bouquets release, the Zoo's
+dedicated ZooLights page, SFPL's Night of Ideas page, SFIAF, the 2027 art-fair ticket
+page, Free Folk Festival, QWOCFF's SF in-person block, Fall Show, Valencia LIVE!, and
+the City's Cinema on the Square release. Current 2027 ticket/venue evidence was
+not mixed with 2026 editions. Juneteenth's site currently returns a hosting error,
+so no prior claimed facts were restored from that error page. Sketchfest's 2027
+banner confirms dates, not a venue; its prior 2026 claims remain history.
+
+**Context correction:** Lit Crawl's 6:30–7:30 PM line follows the changed-venue
+notice and does not establish hours for the whole crawl. Its time is now blank,
+superseding the earlier draft reading. This demonstrates why exact quote matching
+is only provenance, not semantic verification.
+
+Combined local checks pass after reconciliation: 29 offline tests; all 242 record
+projections and page/CSV/link checks; real desktop/mobile Chromium with all 12
+pages, 163 directory rows and 79 held candidates; zero automated WCAG findings on
+four core page types. A new mobile overflow caused by the historical 404 URL was
+found by the real-browser test and fixed with wrapping. CI and Pages results are
+still recorded only after they actually occur.

@@ -381,7 +381,7 @@
   "publisher": "Comedy Day (official)",
   "title": "Comedy Day 2026",
   "source_role": "Official cited page; link alone is not a verified fact",
-  "captured_at": "2026-10-18T02:59:53+00:00",
+  "captured_at": "2026-10-18T05:50:00+00:00",
   "http": 200,
   "tool_excerpt_available": false,
   "tool_checked_at": "",
@@ -389,16 +389,44 @@
    "http": 200,
    "final_url": "https://comedyday.org/",
    "content_type": "text/html",
-   "checked_at": "2026-10-18T03:09:31+00:00",
-   "sha256": "a2fe713397f67fabebe6084488deff8123e307dc4e4c3021399a48b694a26e66",
+   "checked_at": "2026-10-18T05:50:00+00:00",
+   "sha256": "549c93b3e7535356317a5517893a026e985e095d2f7ba2bcc86203cc861022b0",
    "truncated_response": false,
    "title": "Comedy Day 2026",
    "pdf": false,
-   "seconds": 0.54,
+   "seconds": 0,
    "text_truncated": false
   },
   "audit_snapshot": "data/audit_64f8b973.json",
-  "approved_for_rows": []
+  "approved_for_rows": [
+   "x-comedy-day"
+  ]
+ },
+ "audit-760385fb026f": {
+  "url": "https://comedyday.org/faq.html",
+  "publisher": "comedyday.org",
+  "title": "Comedy Day FAQ",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T05:50:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://comedyday.org/faq.html",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T05:50:00+00:00",
+   "sha256": "00764dbf88355d1d730251fa42e7d183ffb6b581aa6e68aef80a09403a0c95cb",
+   "truncated_response": false,
+   "title": "Comedy Day FAQ",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "x-comedy-day"
+  ]
  },
  "x-cookbookweek-com": {
   "url": "https://cookbookweek.com/",
@@ -1708,6 +1736,58 @@
    "sf-zoo-boo",
    "sf-zoo-resident-free-day",
    "sf-zoo-member-mornings"
+  ]
+ },
+ "audit-5375c51419c0": {
+  "url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+  "publisher": "sfrecpark.org",
+  "title": "Calendar • Outdoor Rec Day 2026",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T05:50:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T05:50:00+00:00",
+   "sha256": "1b1cdfecf40f4ef40bd90096e9b4d948b3603b7bd5a9a4cae5b537dee2148c0a",
+   "truncated_response": false,
+   "title": "Calendar • Outdoor Rec Day 2026",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-outdoor-rec-day-2026"
+  ]
+ },
+ "audit-eb478575b5e8": {
+  "url": "https://sfrecpark.org/m/newsflash/home/detail/2736",
+  "publisher": "sfrecpark.org",
+  "title": "Mayor Lurie Announces New Season of Free Live Music in Golden Gate Park • San Francisco Recreation and Parks, CA",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T05:50:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://sfrecpark.org/m/newsflash/home/detail/2736",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T05:50:00+00:00",
+   "sha256": "004d89020e6147d4f6368139dcd090170e2fce6031d8b83eef4b8e003dccbbf1",
+   "truncated_response": false,
+   "title": "Mayor Lurie Announces New Season of Free Live Music in Golden Gate Park • San Francisco Recreation and Parks, CA",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-illuminate-live-2026"
   ]
  },
  "x-sfrecpark-org-m-newsflash-home-detail-2744": {
@@ -4125,6 +4205,32 @@
    "f1-alemany-flea-market"
   ]
  },
+ "audit-af0286894fa6": {
+  "url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+  "publisher": "sf.gov",
+  "title": "Mayor Lurie Announces New Season Of Free Live Music, Food Trucks In Civic Center | SF.gov",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T05:50:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T05:50:00+00:00",
+   "sha256": "b9b6f460fd1adf3f6766afca6a30746ef4f5d7902a04234344e99f7e060309dc",
+   "truncated_response": false,
+   "title": "Mayor Lurie Announces New Season Of Free Live Music, Food Trucks In Civic Center | SF.gov",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-civic-center-soundtrack-2026"
+  ]
+ },
  "f1-sf-gov-news-mayor-lurie-announces-second-season-of-free-movies-in-unio": {
   "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
   "publisher": "SF.gov — Office of the Mayor news release",
@@ -4898,6 +5004,32 @@
   "audit_snapshot": "data/audit_64f8b973.json",
   "approved_for_rows": [
    "b-nye-fireworks"
+  ]
+ },
+ "audit-e10724b6aa0a": {
+  "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+  "publisher": "sfrecpark.org",
+  "title": "Calendar • San Francisco Recreation and Parks, CA • CivicEng",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T05:50:00+00:00",
+  "http": 200,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": {
+   "http": 200,
+   "final_url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+   "content_type": "text/html",
+   "checked_at": "2026-10-18T05:50:00+00:00",
+   "sha256": "d642d045a35b46e46b40752280cca2236e85b8159b3599f7d16a42035f0465ed",
+   "truncated_response": false,
+   "title": "Calendar • San Francisco Recreation and Parks, CA • CivicEng",
+   "pdf": false,
+   "seconds": 0,
+   "text_truncated": false
+  },
+  "audit_snapshot": "data/audit_64f8b973.json",
+  "approved_for_rows": [
+   "audit-sunday-fun-days-2026"
   ]
  },
  "x-www-sfrestaurantweek-com-restaurants": {

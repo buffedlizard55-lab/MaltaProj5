@@ -13027,46 +13027,82 @@
  },
  {
   "id": "x-comedy-day",
-  "name": "",
+  "name": "Comedy Day",
   "schedule": "",
   "time": "",
-  "venue": "",
-  "price": "",
+  "venue": "Robin Williams Meadow (formerly Sharon Meadow), Golden Gate Park",
+  "price": "FREE",
   "candidate_name": "Comedy Day",
   "candidate_label": "Unverified inherited identifier",
   "category": "Festivals & culture",
-  "kind": "Unverified",
+  "kind": "Annual",
   "entry_type": "event",
   "parent": "",
-  "publication": "review_only",
+  "publication": "listed",
   "geography": {
-   "status": "unverified",
-   "quotes": [],
-   "basis": "Not established"
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://comedyday.org/faq.html",
+     "text": "eastern end of Golden Gate Park across from McLaren Lodge at the corner of Kezar and John F. Kennedy Drives (one block off the corners of Stanyan and Haight)"
+    }
+   ],
+   "basis": "Official organizer FAQ locates the meadow in Golden Gate Park at Stanyan and Haight, San Francisco."
   },
-  "recurrence": null,
+  "recurrence": {
+   "value": "each year",
+   "quotes": [
+    {
+     "url": "https://comedyday.org/faq.html",
+     "text": "putting on the big show each year"
+    }
+   ]
+  },
   "occurrences": [],
   "date_status": "confirmed",
-  "temporal_status": "Date/year unconfirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
   "as_of": "2026-10-18",
-  "field_evidence": {},
+  "field_evidence": {
+   "name": {
+    "value": "Comedy Day",
+    "quotes": [
+     {
+      "url": "https://comedyday.org/",
+      "text": "Comedy Day"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Robin Williams Meadow (formerly Sharon Meadow), Golden Gate Park",
+    "quotes": [
+     {
+      "url": "https://comedyday.org/faq.html",
+      "text": "Robin Williams Meadow (formerly Sharon Meadow) is located at the eastern end of Golden Gate Park"
+     }
+    ]
+   },
+   "price": {
+    "value": "FREE",
+    "quotes": [
+     {
+      "url": "https://comedyday.org/faq.html",
+      "text": "Is Comedy Day really FREE?"
+     }
+    ]
+   }
+  },
   "sources": [
-   "x-comedyday-org"
+   "x-comedyday-org",
+   "audit-760385fb026f"
   ],
   "unverified": [
-   "name: unverified",
    "schedule: unverified",
-   "time: unverified",
-   "venue: unverified",
-   "price: unverified",
-   "geography: unverified; not admitted to city-only directory",
-   "recurrence: unverified; no ongoing cadence asserted",
-   "date/year: unverified; no approved ISO occurrence"
+   "time: unverified"
   ],
   "flags": [
-   "Readable source gives a 2026 performance lineup but no event date or park venue. Acts’ names, sponsor years and approximate set times do not verify an event day."
+   "Official organizer pages confirm name, park venue and free admission. No calendar date is printed on those pages; schedule left blank."
   ],
-  "notes": "",
+  "notes": "Homepage title is Comedy Day 2026; body is a performer grid without a date.",
   "audit": {
    "session": "64f8b973",
    "reviewed_at": "2026-10-18",
@@ -20342,6 +20378,407 @@
    "New dated 2026 local Presidio component, not the entire regional festival or a next-year date prediction."
   ],
   "notes": "",
+  "audit": {
+   "session": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "audit-outdoor-rec-day-2026",
+  "name": "Outdoor Rec Day 2026",
+  "schedule": "Saturday, February 28, 2026",
+  "time": "11:00 AM - 3:00 PM",
+  "venue": "Mission Creek Park (North and South)",
+  "price": "Free",
+  "candidate_name": "Outdoor Rec Day 2026",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Special",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+     "text": "Berry Street and Channel Street San Francisco, CA94158"
+    }
+   ],
+   "basis": "Official Rec Park calendar lists Mission Creek Park at Berry Street and Channel Street, San Francisco."
+  },
+  "recurrence": null,
+  "occurrences": [
+   {
+    "start": "2026-02-28",
+    "end": "2026-02-28",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+      "text": "Saturday, February 28, 2026"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Past dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Outdoor Rec Day 2026",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+      "text": "Outdoor Rec Day 2026"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Saturday, February 28, 2026",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+      "text": "Saturday, February 28, 2026"
+     }
+    ]
+   },
+   "time": {
+    "value": "11:00 AM - 3:00 PM",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+      "text": "11:00 AM - 3:00 PM"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Mission Creek Park (North and South)",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+      "text": "Mission Creek Park (North and South)"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/Calendar.aspx?EID=9528",
+      "text": "Free"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "audit-5375c51419c0"
+  ],
+  "unverified": [
+   "recurrence: unverified; no ongoing cadence asserted"
+  ],
+  "flags": [
+   "Newly captured official Rec Park calendar entry."
+  ],
+  "notes": "",
+  "audit": {
+   "session": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "audit-sunday-fun-days-2026",
+  "name": "Union Square Daily Programming: Sunday Fun Days",
+  "schedule": "Sundays from 11 am to 2 pm through September 27, 2026",
+  "time": "11:00 AM - 2:00 PM",
+  "venue": "Union Square, Post and Stockton, San Francisco, CA 94108",
+  "price": "Free",
+  "candidate_name": "Union Square Daily Programming: Sunday Fun Days",
+  "candidate_label": "New research identifier",
+  "category": "Community & outdoors",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+     "text": "Post and Stockton San Francisco, CA94108"
+    }
+   ],
+   "basis": "Official Rec Park calendar locates Union Square at Post and Stockton, San Francisco."
+  },
+  "recurrence": {
+   "value": "Sundays from 11 am to 2 pm through September 27, 2026",
+   "quotes": [
+    {
+     "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+     "text": "on Sundays from 11 am to 2 pm through September 27, 2026"
+    }
+   ]
+  },
+  "occurrences": [
+   {
+    "start": "2026-07-12",
+    "end": "2026-07-12",
+    "quotes": [
+     {
+      "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+      "text": "Sunday, July 12, 2026"
+     }
+    ]
+   }
+  ],
+  "date_status": "confirmed",
+  "temporal_status": "Past dated",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Union Square Daily Programming: Sunday Fun Days",
+    "quotes": [
+     {
+      "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+      "text": "Union Square Daily Programming: Sunday Fun Days"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Sundays from 11 am to 2 pm through September 27, 2026",
+    "quotes": [
+     {
+      "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+      "text": "on Sundays from 11 am to 2 pm through September 27, 2026"
+     }
+    ]
+   },
+   "time": {
+    "value": "11:00 AM - 2:00 PM",
+    "quotes": [
+     {
+      "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+      "text": "11:00 AM - 2:00 PM"
+     }
+    ]
+   },
+   "venue": {
+    "value": "Union Square, Post and Stockton, San Francisco, CA 94108",
+    "quotes": [
+     {
+      "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+      "text": "Union Square Address: Post and Stockton San Francisco, CA94108"
+     }
+    ]
+   },
+   "price": {
+    "value": "Free",
+    "quotes": [
+     {
+      "url": "https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&EID=9947",
+      "text": "Free"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "audit-e10724b6aa0a"
+  ],
+  "unverified": [],
+  "flags": [
+   "Newly captured official Rec Park calendar entry for Sunday Fun Days."
+  ],
+  "notes": "The 12 July 2026 instance is past the snapshot; weekly Sunday cadence is quoted through 27 September 2026.",
+  "audit": {
+   "session": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "audit-civic-center-soundtrack-2026",
+  "name": "Civic Center Soundtrack concert series",
+  "schedule": "Tuesdays and Thursdays from 12 p.m. to 3 p.m. through October",
+  "time": "12 p.m. to 3 p.m.",
+  "venue": "Fulton Plaza",
+  "price": "free live music",
+  "candidate_name": "Civic Center Soundtrack concert series",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+     "text": "in the heart of San Francisco"
+    }
+   ],
+   "basis": "Official SF.gov mayor’s office release locates the series at Fulton Plaza in San Francisco."
+  },
+  "recurrence": {
+   "value": "Tuesdays and Thursdays from 12 p.m. to 3 p.m. through October",
+   "quotes": [
+    {
+     "url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+     "text": "Tuesdays and Thursdays from 12 p.m. to 3 p.m. through October"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Civic Center Soundtrack concert series",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+      "text": "Civic Center Soundtrack concert series"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "Tuesdays and Thursdays from 12 p.m. to 3 p.m. through October",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+      "text": "concerts taking place Tuesdays and Thursdays from 12 p.m. to 3 p.m. through October"
+     }
+    ]
+   },
+   "time": {
+    "value": "12 p.m. to 3 p.m.",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+      "text": "from 12 p.m. to 3 p.m."
+     }
+    ]
+   },
+   "venue": {
+    "value": "Fulton Plaza",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+      "text": "Fulton Plaza"
+     }
+    ]
+   },
+   "price": {
+    "value": "free live music",
+    "quotes": [
+     {
+      "url": "https://www.sf.gov/news-mayor-lurie-announces-new-season-of-free-live-music-food-trucks-in-civic-center",
+      "text": "free live music"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "audit-af0286894fa6"
+  ],
+  "unverified": [],
+  "flags": [
+   "Official SF.gov announcement. Kickoff “Tuesday, April 14” has no year in that sentence, so no ISO occurrence is recorded."
+  ],
+  "notes": "Season end “through October” is not an ISO date.",
+  "audit": {
+   "session": "64f8b973",
+   "reviewed_at": "2026-10-18",
+   "method": "Explicit contextual field decisions; incomplete fields remain blank"
+  }
+ },
+ {
+  "id": "audit-illuminate-live-2026",
+  "name": "Illuminate LIVE",
+  "schedule": "2026 season: more than 125 free performances running through mid-November, with shows most Wednesdays, Fridays, and Sundays",
+  "time": "",
+  "venue": "historic Golden Gate Bandshell, also known as the Spreckels Temple of Music",
+  "price": "free outdoor concerts",
+  "candidate_name": "Illuminate LIVE",
+  "candidate_label": "New research identifier",
+  "category": "Festivals & culture",
+  "kind": "Weekly",
+  "entry_type": "event",
+  "parent": "",
+  "publication": "listed",
+  "geography": {
+   "status": "confirmed_sf",
+   "quotes": [
+    {
+     "url": "https://sfrecpark.org/m/newsflash/home/detail/2736",
+     "text": "free outdoor concerts in Golden Gate Park"
+    }
+   ],
+   "basis": "Official Rec Park news flash locates Illuminate LIVE at the Golden Gate Park Bandshell in San Francisco."
+  },
+  "recurrence": {
+   "value": "shows most Wednesdays, Fridays, and Sundays",
+   "quotes": [
+    {
+     "url": "https://sfrecpark.org/m/newsflash/home/detail/2736",
+     "text": "shows most Wednesdays, Fridays, and Sundays"
+    }
+   ]
+  },
+  "occurrences": [],
+  "date_status": "confirmed",
+  "temporal_status": "Recurring pattern; next date unconfirmed",
+  "as_of": "2026-10-18",
+  "field_evidence": {
+   "name": {
+    "value": "Illuminate LIVE",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/m/newsflash/home/detail/2736",
+      "text": "Illuminate LIVE"
+     }
+    ]
+   },
+   "schedule": {
+    "value": "2026 season: more than 125 free performances running through mid-November, with shows most Wednesdays, Fridays, and Sundays",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/m/newsflash/home/detail/2736",
+      "text": "The 2026 season of Illuminate LIVE will include more than 125 free performances running through mid-November, with shows most Wednesdays, Fridays, and Sundays"
+     }
+    ]
+   },
+   "venue": {
+    "value": "historic Golden Gate Bandshell, also known as the Spreckels Temple of Music",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/m/newsflash/home/detail/2736",
+      "text": "historic Golden Gate Bandshell, also known as the Spreckels Temple of Music"
+     }
+    ]
+   },
+   "price": {
+    "value": "free outdoor concerts",
+    "quotes": [
+     {
+      "url": "https://sfrecpark.org/m/newsflash/home/detail/2736",
+      "text": "free outdoor concerts"
+     }
+    ]
+   }
+  },
+  "sources": [
+   "audit-eb478575b5e8"
+  ],
+  "unverified": [
+   "time: unverified"
+  ],
+  "flags": [
+   "Official Rec Park press release. “Sunday, March 1” has no year in that sentence, so no ISO occurrence is recorded."
+  ],
+  "notes": "Distinct from the review-only Illuminate SF Festival of Light candidate.",
   "audit": {
    "session": "64f8b973",
    "reviewed_at": "2026-10-18",

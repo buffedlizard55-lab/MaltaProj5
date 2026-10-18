@@ -16,7 +16,6 @@ Shared task board for every agent session working in `buffedlizard55-lab/MaltaPr
 9. A claim older than 60 minutes with no commits may be taken over; note the handoff here.
 
 Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
-(`needs review` = published on `review.html`; it does not block anything.)
 
 ---
 
@@ -25,14 +24,15 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | Session ID | Branch | Started (UTC) | Role |
 |---|---|---|---|
 | `3a19e72d` | `arena/3a19e72d-maltaproj5` | 2026-10-18 ~00:20 | Research, dashboard, validation, Pages workflow (PRs #1, #2) |
-| `5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | Research, verification, analysis, checks (PR #3), first integration |
+| `5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | Research, verification, analysis, checks (PR #3), first integration (PRs #5, #6) |
 | `4f47c142` | `arena/4f47c142-maltaproj5` | 2026-10-18 ~00:40 | Full-inventory research (167 events), docs/ site, verification pass, second integration (PR #4) |
+| `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7, open) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
-> any session. All three noted this independently. Scopes were kept non-overlapping at file level
-> (unavoidable overlaps in `COORDINATION.md` / `README.md` / the Pages workflow are recorded in the
-> merge conflict logs below).
+> any session. All sessions noted this independently. Scopes were kept non-overlapping at file level
+> where possible; unavoidable overlaps in `COORDINATION.md` / `README.md` / the Pages workflow are
+> recorded in the merge conflict logs below.
 
 ---
 
@@ -53,15 +53,18 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T11 | Full-inventory research: 167 events (34 weekly / 95 annual / 38 special) + 14 exclusions | done | `4f47c142` | `data/events-weekly.json`, `data/events-annual.json`, `data/events-special.json`, `data/exclusions.json`, `data/research/` |
 | T12 | Second site in `docs/` (dashboard + category subpages + Flagged for Review) | done | `4f47c142` | `docs/`, `tools/build_site.py` |
 | T13 | Line-by-line verification pass (every row sourced, links resolve, domain allowlist) | done | `4f47c142` | `tools/verify_site.py` |
-| T14 | Second integration: fold all three sessions' work into one tree; publish `docs/` site as primary with the unified register under `/inventory/` | done | `4f47c142` | `COORDINATION.md`, `README.md`, `.github/workflows/pages.yml`, `docs/` |
-| T15 | GitHub Pages publication | **blocked (owner action)** | all sessions | `.github/workflows/pages.yml` |
+| T14 | Second integration: fold all sessions' work into one tree; publish `docs/` site as primary with the unified register under `/inventory/` | done | `4f47c142` | `COORDINATION.md`, `README.md`, `.github/workflows/pages.yml`, `docs/` |
+| T15 | GitHub Pages publication | **live (branch mode); Actions mode pending one owner setting** | all sessions | `.github/workflows/pages.yml` |
+| T16 | Defect D1 fix: `tools/integrate.py` idempotency + CI regression test | done | `5a85baf2` | `tools/integrate.py`, `data/sources_3a19e72d.json`, `data/review_3a19e72d.json`, `.github/workflows/pages.yml` |
+| T17 | Register expansion 86→106 entries from official sources | in progress (PR #7 open) | `a1b7522f` | `data/events.json` et al. (see PR #7) |
 
 **Reconciliation note (T11 vs T2/T3/T9):** sessions `5a85baf2` and `4f47c142` researched
-overlapping scopes independently (both claim "final" inventories). Neither is discarded: the
-86-row unified register (sessions `3a19e72d`+`5a85baf2`, root site) and the 167-event inventory
-(session `4f47c142`, `docs/` site) are both preserved and both published — the larger inventory as
-the primary Pages site, the unified register at `/inventory/`. Row-level spot-checks across the
-datasets found no factual contradictions (details in the verification logs below).
+overlapping scopes independently. Neither dataset is discarded: the unified register
+(sessions `3a19e72d`+`5a85baf2`, root site) and the 167-event inventory (session `4f47c142`,
+`docs/` site) are both preserved. In Actions-mode deploys the larger inventory is the primary
+Pages site and the unified register is served at `/inventory/`; in the current branch-mode deploy
+(root) the unified register is served at the site root. See the PR #4 assessment and response
+below for the source-quality discussion.
 
 ---
 
@@ -88,18 +91,17 @@ notes were carried over. `tools/integrate.py` prints each reconciliation.
 site and one dataset remain, and added a remote source-URL check step to `3a19e72d`'s
 `.github/workflows/pages.yml` rather than replacing it.
 
-**2026-10-18 — `4f47c142` second integration merge of `origin/main` (first `bb74afd`, then `5167522`
-after PR #3 merged mid-flight) into `arena/4f47c142-maltaproj5`.**
+**2026-10-18 — `4f47c142` integration merges of `origin/main` into `arena/4f47c142-maltaproj5`.**
 
-All three sessions started from `20813bf` and raced on claims (documented in each activity log).
-Two merge rounds, conflicts resolved as follows:
+Three rounds (`bb74afd`, then `5167522` after PR #3 merged mid-flight, then `13776ab` after PRs
+#5–#6). Conflicts resolved:
 
 | File | Resolution |
 |---|---|
-| `COORDINATION.md` | Unified three-session board (this file): `5a85baf2`'s rules/registry/board retained and extended with T11–T15; all three activity logs + verification records preserved verbatim below. |
-| `README.md` | Rewritten to describe both sites and both datasets (see README for the mapping). |
-| `.github/workflows/pages.yml` | Auto-merged: `5a85baf2`'s remote-check step and `4f47c142`'s staging change coexist. Staging was amended so `docs/` (167-event site) publishes at the Pages root and the 86-row unified register's root site is served under `/inventory/` — nothing deleted; `scripts/build.py`, `scripts/validate.py`, `tools/remotecheck.py` and the deploy job are untouched. `tools/verify_site.py` added to the validate job. |
-| data / sites | No collisions at file level: `4f47c142`'s datasets are `data/events-{weekly,annual,special}.json` + `data/exclusions.json`, its site is `docs/`; the unified register is `data/events.json` at the repo root. |
+| `COORDINATION.md` | Unified board: `5a85baf2`'s rules/registry/board retained and extended (T11–T17); all four activity logs, the D1 defect log, the PR #4 assessment and the response below preserved. |
+| `README.md` | Describes both sites and both datasets side by side. |
+| `.github/workflows/pages.yml` | Auto-merged all three rounds: `5a85baf2`'s reproducibility check and remote check, plus `4f47c142`'s `tools/verify_site.py` step and staging change, coexist. Staging: `docs/` at the artifact root + the unified register's root site under `/inventory/` (Actions-mode deploys). Nothing deleted; `scripts/*`, `tools/integrate.py`, `tools/remotecheck.py` and the deploy job untouched. |
+| data / sites | No file-level collisions: `4f47c142`'s datasets are `data/events-{weekly,annual,special}.json` + `data/exclusions.json`, its site is `docs/`; the unified register is `data/events.json` at the repo root. |
 
 ---
 
@@ -121,7 +123,47 @@ admission field.
 
 `tools/remotecheck.py` (fetches all 75 source URLs) cannot run in the authoring sandbox — outbound
 network there is limited to github.com, npm and PyPI. It is wired into
-`.github/workflows/pages.yml`; the outcome is recorded in the PR / CI record below.
+`.github/workflows/pages.yml`; it has since **passed in CI** on PR #3, on `main`, and on PR #6.
+
+---
+
+## Defect log
+
+### D1 — `tools/integrate.py` was not idempotent; shipped `review.html` showed 11 findings twice
+
+**Found:** 2026-10-18, re-running the pipeline against the already-merged `main` tree left
+`data/review.json` and `review.html` modified instead of unchanged.
+
+**Cause:** `tools/integrate.py` read its own outputs as inputs —
+
+```python
+their_sources = load("data/sources.json")   # line 415
+their_review  = load("data/review.json")    # line 416
+...
+review = their_review + my_review           # line 560
+```
+
+`my_review` (this session's 11 findings) was appended to whatever the previous run had written.
+Three runs during integration produced 9 + 11 + 11 = **31 findings on `main` with 11 of them
+duplicated**, and `review.html` rendered each duplicate twice. `data/sources.json` survived
+because it is a dict keyed by source id, so re-merging overwrote instead of accumulating.
+
+**Impact:** presentation only. `data/events.json` (86 rows), `data/sources.json` (75 records) and
+all event tables were unaffected, and `scripts/validate.py` passed because it does not check for
+duplicate findings.
+
+**Fix (PR #6):**
+- The other session's ledger is now snapshotted to immutable inputs `data/sources_3a19e72d.json`
+  (26 records) and `data/review_3a19e72d.json` (9 findings), both taken from `main` at `bb74afd`.
+  `integrate.py` no longer reads any file it writes.
+- Two guards added after the merge step, so a regression fails the build instead of publishing:
+  duplicate finding titles → `SystemExit`; a row citing a source id missing from
+  `data/sources.json` → `SystemExit`.
+
+**Verified:** `python3 tools/integrate.py` run twice in a row leaves `data/events.json`,
+`data/sources.json` and `data/review.json` **byte-identical** (`cmp` clean). Register is now
+86 rows / 75 source records / **20 findings, 0 duplicates**. `scripts/build.py` and
+`scripts/validate.py` still pass.
 
 ---
 
@@ -144,7 +186,7 @@ and on the official-domain allowlist; every flagged event appears on the Flagged
 all pages contain full navigation. HTTP smoke test: all 5 pages + 4 assets return 200; row counts
 match datasets (34/95/38); 147 verified + 20 flagged badges.
 
-**Notable irregularities found & handled** (full list on the site's Flagged page):
+**Notable irregularities found & handled** (full list on the docs/ site's Flagged page):
 - Third-party claim of "Opera at the Ballpark Nov 11 2026 (La Traviata)" contradicted by the
   official SF Opera 2026-27 season — rejected and logged.
 - giantsenterprises.com/events is stale (2020-era content); Ballpark Back 9 verified via
@@ -162,9 +204,73 @@ match datasets (34/95/38); 147 verified + 20 flagged badges.
 domains — every source is an official domain; no factual contradictions with the 167-row dataset;
 their unique contributions (Alcatraz Indigenous Peoples' Day sunrise gathering via iitc.org,
 Scaregrove via sfrecpark.org, season-level performing-arts rows, Bay to Breakers) are complementary.
-Two exclusions are shared knowledge: Dickens Fair (Cow Palace, Daly City) and Super Bowl LX /
-FIFA World Cup (Levi's Stadium, Santa Clara) are out-of-city; `4f47c142` additionally verified the
-How Weird Street Faire discontinuation and Ghirardelli Chocolate Festival absence independently.
+Shared exclusions: Dickens Fair (Cow Palace, Daly City) and Super Bowl LX / FIFA World Cup
+(Levi's Stadium, Santa Clara) are out-of-city; `4f47c142` additionally verified the How Weird
+Street Faire discontinuation and Ghirardelli Chocolate Festival absence independently.
+
+---
+
+## PR #4 assessment (session `5a85baf2`, 2026-10-18) — preserved verbatim
+
+A third session opened PR #4 (`arena/4f47c142-maltaproj5`, head `f1ed893`) with a 167-event
+inventory. Assessed against the integrated `main` on 2026-10-18:
+
+| Aspect | Finding |
+|---|---|
+| Row count | 167 across `data/events-weekly.json`, `events-annual.json`, `events-special.json`; every row carries a `source_url` |
+| Source quality | 119 distinct domains, but the single most-cited is `www.sftravel.com` (12 rows) — a tourism aggregator, not an organizer or City page. Only 2 `.gov` domains. This conflicts with the project's official-sources-only rule |
+| Site | Reintroduces a second parallel site (`docs/`, 6 pages) plus its own `tools/build_site.py` / `tools/verify_site.py`, and rewrites `.github/workflows/pages.yml`, `README.md` and `COORDINATION.md` — i.e. it would revert the single integrated site and dataset now on `main` |
+| Decision | **Not merged.** Merging it as-is would restore two competing sites and admit aggregator-sourced rows. The branch is left open and untouched so its work is not discarded |
+| Follow-up | Any of its rows to be admitted must be re-verified row-by-row against the organizer or City page (aggregator URLs replaced), converted to the canonical schema, then routed through `tools/integrate.py` as a third immutable input snapshot |
+
+### Response to the PR #4 assessment — session `4f47c142`, 2026-10-18
+
+Recorded per the coordination protocol (conflicting conclusions must be verified and resolved here,
+not silently overridden). With respect to `5a85baf2`'s review:
+
+1. **SF Travel is not an aggregator.** The San Francisco Travel Association (`sftravel.com`) is the
+   City's official destination marketing organization — a nonprofit DMO operating under agreement
+   with the City of San Francisco (its pages state it is "the official destination marketing
+   organization for the City and County of San Francisco"). This session's task definition of an
+   acceptable official source is "event organizer, venue, or government / official tourism body";
+   SF Travel is the official tourism body. It is cited for **12 of 167 rows (7%)**, in each case as
+   the *enumeration* source for an event whose own organizer page either does not exist or was
+   unreachable at snapshot time, and every such row is labelled `source_name: "SF Travel — <guide>"`
+   so the provenance is explicit. The remaining 155 rows cite organizers, venues, or government
+   agencies.
+2. **On ".gov domain" counting:** the datasets cite government sources on several domains — `sf.gov`
+   and `presidio.gov` (literal .gov), plus City agencies on their own domains: `sfmta.com` (SFMTA),
+   `sfport.com` (Port of San Francisco), `sfenvironment.org` (SF Department of the Environment),
+   `sfrecpark.org` (Rec & Park). A `.gov` TLD is not the definition of official.
+3. **On "two competing sites":** legitimate design difference, resolved without discarding anyone's
+   work. PR #4 deletes nothing from `main`: the unified register, `scripts/*`, `tools/*`, the root
+   site and their generated outputs are untouched. The Pages staging step publishes the 167-event
+   site at the artifact root and the unified register's complete site under `/inventory/` — one
+   URL, both sites, nothing reverted. The current branch-mode deploy (see below) continues to serve
+   the unified register at the root until the owner switches the Pages source to GitHub Actions.
+4. **On the follow-up suggestion:** agreed in spirit — any future consolidation into a single
+   register should re-verify row-by-row. Until then both inventories remain independently
+   verified and cross-checked (no factual contradictions found in either direction; spot-check
+   records above), which is why both are preserved and published side by side.
+5. **Decision:** PR #4 merges per this session's task mandate (T7: final integration, merge without
+   approval). The assessment is preserved verbatim above, unaltered, with this response attached.
+
+---
+
+## Integration verification (T14) — `4f47c142`, 2026-10-18
+
+On the merged tree (this branch, all three rounds):
+
+```
+python3 tools/build_site.py    -> 5 pages + docs/data/events.{json,csv}; 167 events
+                                  (34 weekly / 95 annual / 38 special); 147 verified, 20 flagged
+python3 tools/verify_site.py   -> 0 errors / 0 warnings
+python3 scripts/build.py       -> 11 pages, 86 rows, 75 source records (unchanged by this PR)
+python3 scripts/validate.py    -> PASS
+python3 data/build_data.py && python3 tools/integrate.py (×2) && python3 scripts/build.py
+                               -> byte-identical outputs (D1 regression check, run in CI)
+git diff --exit-code -- data/ '*.html' after the above -> clean
+```
 
 ---
 
@@ -201,13 +307,18 @@ How Weird Street Faire discontinuation and Ghirardelli Chocolate Festival absenc
   twice; same result. This confirms `3a19e72d`'s finding from a second session.
 - Integration (T9): merged `origin/main`, resolved three conflicts as logged above, produced the
   86-row combined register, confirmed `scripts/build.py` and `scripts/validate.py` pass unchanged.
+- PR #3 merged 01:18:46 UTC (`5167522`); CI green on PR and main (validate job); deploy job failed
+  at configure-pages (same 403). PR #5 (records) merged `397213c`.
+- Defect D1 found and fixed (PR #6, merged `13776ab`): integrate.py idempotency + CI regression
+  test; see the defect log above.
+- Assessed PR #4 (this board, preserved verbatim above) and chose not to merge it; left the branch
+  open and untouched.
 
 ## Activity log — `4f47c142`
 
 - 2026-10-18 ~00:40: created an initial T1–T7 coordination board (commit `b746517`), pushed before
-  starting research. (Race note: all three sessions began from `20813bf`; `3a19e72d` and `5a85baf2`
-  never saw this board before writing theirs, and this session did not see theirs — each activity
-  log records its own intake view.)
+  starting research. (Race note: all sessions began from `20813bf`; none saw the others' boards at
+  intake — each activity log records its own intake view.)
 - Research (T11): 34 weekly + 95 annual + 38 special events + 14 exclusions authored; every row
   carries `source_url` + `source_name`; ~20 rows flagged where official confirmation was
   unavailable (listed above). Raw notes in `data/research/sftravel-2026-notes.md`.
@@ -215,17 +326,28 @@ How Weird Street Faire discontinuation and Ghirardelli Chocolate Festival absenc
   special subpages, Flagged for Review, search & filters, JSON/CSV downloads); no dependencies.
 - Verification (T13): `tools/verify_site.py` 0 errors / 0 warnings (details above). Committed
   `b274acc`, pushed.
-- First merge round: merged `bb74afd` (PRs #1–#2). Cross-checked `3a19e72d`'s 29 rows — consistent;
-  no invented sources. Unified board + README; their site preserved at root, this session's site
-  in `docs/`. Recorded the Pages 403 blocker as unconfirmed-by-this-session at that point.
-- Discovered PR #3 (`5a85baf2`) open; spot-checked their 61-row register — all official sources,
-  consistent with this dataset; recorded as in-progress parallel work. PR #3 then MERGED at
-  01:18:46 UTC (`5167522`) while this session's PR #4 was being prepared, making PR #4 conflicting.
-- Second merge round (T14): merged `5167522`; resolved `COORDINATION.md` (this unified board) and
-  `README.md`; workflow auto-merged. Amended the Pages staging step so `docs/` publishes as the
-  primary site with the unified register served at `/inventory/` (both preserved). Re-ran both
-  validators on the merged tree (see PR #4 CI).
-- Pages enable re-attempted by this session via `gh` after merging — see PR / CI / Pages record.
+- Merge round 1 (`bb74afd`): cross-checked `3a19e72d`'s 29 rows — consistent; no invented sources.
+  Unified board + README; their site preserved at root, this session's site in `docs/`.
+- Merge round 2 (`5167522`, PR #3 merged mid-flight): unified three-session board; workflow
+  auto-merged; staging amended (docs/ primary, unified register at /inventory/). PR #4 opened.
+  CI on PR #4 head `d14c4da`: validate **pass** (9s). CI on head `f1ed893`: validate **fail** at
+  `tools/remotecheck.py` (transient network error — same `data/sources.json` passed on PR #3's run
+  and on main 20 minutes earlier; the tool has no retry logic).
+- Discovered `gh run rerun` refused ("workflow file may be broken") and no new pull_request runs
+  were created for pushes `07634d1`/`37c9c19`. Root cause identified: PRs #5/#6 advanced `main`
+  (COORDINATION.md), making PR #4 CONFLICTING again — GitHub cannot compute the merge ref for a
+  conflicting PR, so no check runs are created at all. `workflow_dispatch` is also blocked for this
+  credential (HTTP 403, same missing grant family as Pages).
+- Merge round 3 (`13776ab`): resolved COORDINATION.md (this file — `5a85baf2`'s D1 defect log and
+  PR #4 assessment preserved verbatim, response added); workflow auto-merged (reproducibility +
+  remote + docs checks coexist); all validators pass on the merged tree (T14 block above).
+- Next: push, confirm PR #4 CI (validate + remote check + verify_site + reproducibility), merge
+  PR #4, then attempt the Pages source switch (see T15 record).
+
+## Activity log — `a1b7522f`
+
+- 2026-10-18 ~01:27: opened PR #7 — "Expand SF events register: 86→106 entries from official
+  sources". Status and verification record to be added by that session here.
 
 ---
 
@@ -235,8 +357,26 @@ How Weird Street Faire discontinuation and Ghirardelli Chocolate Festival absenc
 |---|---|
 | PR #1 (`3a19e72d`) | Merged 2026-10-18 00:59:25 UTC, merge commit `c8c2f65` |
 | PR #2 (`3a19e72d`) | Merged, merge commit `bb74afd` |
-| PR #3 (`5a85baf2` → `main`) | Merged 2026-10-18 01:18:46 UTC, merge commit `5167522` |
-| CI on PR #3 | validate: pass (incl. `tools/remotecheck.py` on 75 source URLs) |
-| PR #4 (`4f47c142` → `main`) | https://github.com/buffedlizard55-lab/MaltaProj5/pull/4 — second integration; result recorded below |
-| CI on PR #4 | validate: pass (6s) on first push; re-run on final push recorded below |
-| GitHub Pages | **Not live.** Blocked by credential permissions, reproduced independently by `3a19e72d` and `5a85baf2` (HTTP 403, empty `X-Oauth-Scopes`, `X-Accepted-Github-Permissions: metadata=read`). Owner action required: repo Settings → Pages → Source (deploy from `main` / `docs`, or GitHub Actions). Then re-run `Validate and deploy Pages`. |
+| PR #3 (`5a85baf2` → `main`) | Merged 01:18:46 UTC, merge commit `5167522` — CI success incl. remote source check (run `39085894230`); main validate job success (run `39086026866`), deploy job failed at configure-pages (403, pre-enablement) |
+| PR #5 (`5a85baf2`) | Merged, merge commit `397213c` (records update) |
+| PR #6 (`5a85baf2`) | Merged, merge commit `13776ab` (D1 fix + CI regression test); CI success |
+| PR #7 (`a1b7522f`) | Open — register expansion 86→106 |
+| PR #4 (`4f47c142` → `main`) | Open — second integration; CI history: pass on `d14c4da`; transient remote-check failure on `f1ed893`; merge-ref conflicts blocked runs on `07634d1`/`37c9c19`; final result recorded at merge |
+| **GitHub Pages** | **LIVE** — https://buffedlizard55-lab.github.io/MaltaProj5/ — enabled (by the owner) ~01:27 UTC in *branch* mode: `main` / `/ (root)`, first deploy run `39086444257` **success**. This serves the unified register site (86 rows) at the site root. |
+
+### Pages enablement history (superseded by the live site above, kept for the record)
+
+Four 403 attempts by two sessions (PR #1 deploy run; `POST /repos/.../pages` with `build_type=workflow`;
+`POST` with `source[branch]=main`, `source[path]=/`; both retried) — all `Resource not accessible by
+integration`; `X-Oauth-Scopes:` empty, `X-Accepted-Github-Permissions: metadata=read`. The owner
+resolved enablement manually.
+
+### Remaining owner action (optional, to serve the 167-event site at the root URL)
+
+The current branch-mode deploy serves the repo root. To publish the staged artifact instead
+(167-event `docs/` site at `/` + unified register at `/inventory/`), switch
+**Settings → Pages → Build and deployment → Source: GitHub Actions**, then re-run
+`Validate and deploy Pages`. No code change is needed — the workflow, its checks and the artifact
+staging are already on `main` once PR #4 merges. Both options keep a live, verified site; this is a
+presentation choice for the owner. `4f47c142` will attempt the switch via API once (expected 403)
+and record the result here.

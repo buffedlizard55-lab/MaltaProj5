@@ -18,6 +18,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/build.py && python scripts/validate.py
+      - name: Check the data pipeline is reproducible and idempotent
+        run: |
+          python data/build_data.py
+          python tools/integrate.py
+          python tools/integrate.py
+          python scripts/build.py
+          git diff --exit-code -- data/ '*.html'
       - name: Check every official source URL still resolves
         run: python tools/remotecheck.py --timeout 25
       - name: Ensure generated files are current

@@ -80,8 +80,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **done — live**: PR [#18](https://github.com/buffedlizard55-lab/MaltaProj5/pull/18) merged 03:20 UTC (merge commit `9044bf8`); CI `Validate site` green on the PR; Pages build `built` for `9044bf8` | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 | T25 | Resolve Ferry Fest source link returning 404 in PR #18 remote-check report; preserve only official evidence that remains live and flag anything no longer confirmed | **done — PR #17 merged; Pages built** | `99662c40` | `COORDINATION.md`, `data/audit_f1fd3c36.json`, `tools/apply_audit.py`, generated `data/`, `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 | T26 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
-| T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | done — CI passed, merged in PR #22 | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
-| T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | done — PR #22 merged; Pages built and live content confirmed | `64f8b973` | `COORDINATION.md` |
+| T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | in progress — single final venue-context correction | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
+| T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | in progress — rechecking final venue-context correction after prior successful publication | `64f8b973` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1048,3 +1048,15 @@ and byte-identical repeated build also passed after the combined research merge.
   No failing check or broken deployment was merged. The completed publication
   record is being merged as a documentation-only follow-up; event/site outputs
   are unchanged from the successfully deployed PR #22.
+
+### Final contextual correction claim — T27/T28 — `64f8b973`
+
+A final read of the full archived Nihonmachi homepage found the SF Japantown
+reference in the **52nd-edition retrospective**, while the **53rd-edition 2027**
+announcement supplies only August 7–8 dates. That is not enough to carry a venue
+into the future edition under this audit's own rule. Reopening own T27/T28 scope
+for the single decision, authoring batch, regression fixture, generated outputs
+and count documentation, then CI/PR/Pages confirmation. The official link and
+2027 dates will remain; venue will be blank and the candidate review-only.
+No other session's research/tool file will be edited. All earlier deployment
+records remain historical records of what actually shipped at that point.

@@ -45,10 +45,10 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
 
 
-|  |  | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) | *PR #26 merged; Pages built successfully* |
+|  |  | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) | *PR #26 merged and closed; GitHub Pages deployed successfully* |
 
 
-| `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) | *PR #26 merged; Pages built successfully* |
+| `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) | *PR #26 merged and closed; GitHub Pages deployed successfully* |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by

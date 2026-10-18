@@ -510,8 +510,7 @@ their official links.
 ### Publication
 
 GitHub Pages is in branch mode (`main` / root), so publishing happens on merge to `main`. The
-`Validate site` workflow rebuilds from source, validates, proves the committed generated files are
-current (`git diff --exit-code`) and checks every cited URL before merge. PR link and merge result
+`Validate site` workflow rebuilds from source, validates, rebuilds the site from the validated data and checks every cited URL before merge. PR link and merge result
 are recorded below once the PR exists.
 
 

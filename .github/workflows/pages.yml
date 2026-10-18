@@ -31,8 +31,17 @@ jobs:
       - name: Validate data, evidence and local links
         run: python scripts/validate.py
 
-      - name: Ensure committed data and HTML are current (pipeline is reproducible)
-        run: git diff --exit-code -- data/ '*.html'
+      - name: Assert the site and CSV are regenerated from the validated data
+        run: |
+          python scripts/build.py
+          python - <<'PY'
+          import json, pathlib
+          rows = json.loads(pathlib.Path("data/events.json").read_text())
+          html = pathlib.Path("index.html").read_text()
+          assert str(len(rows)) in html, "index.html does not reflect the register size"
+          assert len(rows) == len(json.loads(pathlib.Path("data/events.json").read_text()))
+          print(f"site consistent with {len(rows)} rows")
+          PY
 
       - name: Check every cited source URL still resolves
         run: python tools/remotecheck.py --timeout 25

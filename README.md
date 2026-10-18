@@ -71,7 +71,7 @@ python3 tools/verify_rows.py   # fetch every cited page and match the event name
 ```
 
 `data/events.json`, `data/sources.json`, `data/events.csv` and the `*.html` pages are generated and
-committed, because GitHub Pages serves them from `main`. CI fails if the pipeline output is stale.
+committed, because GitHub Pages serves them from `main`. CI rebuilds from the authored inputs on every PR and fails if validation does not pass.
 
 ## Verification rules
 

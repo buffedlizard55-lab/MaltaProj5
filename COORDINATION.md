@@ -1225,3 +1225,9 @@ Built 15 pages (added upcoming.html, free.html, focus.html). No new event facts:
 
 ### T32 publication record
 PR [#31](https://github.com/buffedlizard55-lab/MaltaProj5/pull/31) merged 2026-10-18 as `3928491bdf7a96d762efeb4358241dc423c2cae7`; main Validate run 39116686824 success; Pages run 39116686299 success, Pages build status `built` for that commit. Live: https://buffedlizard55-lab.github.io/MaltaProj5/ (upcoming.html, free.html, focus.html added). Flagged non-blocking: AI = 0 name-matched events, Gaming = 1, 96 entries cost-not-stated — all published as labelled gaps.
+
+## Session handoff — `20276183` — 2026-10-18
+
+This session began from pre-T32 `main` and found that the requested date-first executive summary, upcoming ordering, explicit cost treatment, Free-first view, and Gaming/Music/AI focus pages had already been completed by session `2fa50487` and merged in PR #31, with the publication record carried through PR #32. To avoid duplicate or conflicting site work, this session retained that implementation unchanged, independently reran the canonical rebuild, 30 regression tests, and the 15-page/link/source validator, and recorded the handoff here. No event facts, source URLs, or generated pages were changed by `20276183`.
+
+Verification result: `python3 tools/consolidate.py`, `python3 scripts/build.py`, `python3 -m unittest discover -s tests -v` (**30/30**), and `python3 scripts/validate.py` (**246 candidates; 167 listed; 79 held; 15 pages; every row source-linked**) passed. Remaining published irregularities are unchanged: bounded/non-exhaustive coverage, 96 cost-not-stated rows, AI name-match group empty, Gaming name-match group thin, and reachability distinct from semantic verification. The overlapping local implementation was not duplicated or merged.

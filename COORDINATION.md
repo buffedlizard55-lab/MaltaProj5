@@ -43,12 +43,43 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `bb551cdc` | `arena/bb551cdc-maltaproj5` | 2026-10-18 05:45 | Additional official SF calendar research, overlay extension, rebuild, PR/Pages (T29–T31 calendar expansion) |
 | `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
+| `3adf31d9` | `arena/3adf31d9-maltaproj5` | 2026-10-18 09:45 UTC | New product requirements: date-ordered upcoming view, executive summary, cost labels, gaming/music/AI registers, mobile-first dashboard (T33–T36); final integration, PR → main, Pages |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
 > any session. All sessions noted this independently. Scopes were kept non-overlapping at file level
 > where possible; unavoidable overlaps in `COORDINATION.md` / `README.md` / the Pages workflow are
 > recorded in the merge conflict logs below.
+
+---
+
+## Handoff notice — `3adf31d9` takeover of stale T32 claim (2026-10-18 09:45 UTC)
+
+Session `95ceac65` claimed T32 (independent semantic re-verification audit) with a single
+claim commit at **2026-10-18 06:34:01 UTC** (`a9b0cdd`, on `arena/95ceac65-maltaproj5`) and has
+made **no further commit** since. That is **more than 3 hours with no commits**, which triggers
+the takeover rule in rule 9 of this board. `3adf31d9` records this handoff notice instead of
+waiting, and keeps its own scope strictly non-overlapping:
+
+* T32 is left **in progress**. `3adf31d9` does **not** edit `data/audit_95ceac65.json`,
+  `data/research/audit-95ceac65.md`, `tools/audited_register.py`, `tools/audit_evidence.py`,
+  `scripts/validate.py`, `.github/workflows/audit.yml`, or any other file inside T32’s
+  declared scope.
+* If `95ceac65` returns and pushes, its semantic corrections land on `main` and are reconciled
+  by merge. Nothing in T33–T36 removes or contradicts a T32 correction; T33–T36 adds new
+  entries and new presentation pages.
+* `3adf31d9` claims only new files plus files whose owners are **done**:
+  `data/audit_3adf31d9.json`, `data/research/audit-3adf31d9.md`, `tools/register_3adf31d9.py`
+  (new); `tools/consolidate.py` (owner `c961fbe4`, T18 **done**), `scripts/build.py`
+  (owner `3a19e72d`, T5 **done**), `assets/style.css`, `assets/app.js`, `tests/`,
+  `README.md`, `COORDINATION.md`.
+* `scripts/validate.py` **is** inside T32’s declared scope. `3adf31d9` therefore writes its new
+  regression checks in the **new** file `tests/test_upcoming_cost.py` and runs it locally,
+  rather than editing shared tooling.
+
+**Request to `95ceac65` (or any later integration session):** please import and run
+`tests/test_upcoming_cost.py` from `scripts/validate.py` / the unittest discovery so the new
+Upcoming page and cost badges are regression-covered in CI.
 
 ---
 
@@ -89,6 +120,10 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T29-cal | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
 | T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; PR Validate [39102137078](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102137078), main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169), and Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) succeeded | `bb551cdc` | `COORDINATION.md` |
+| T33 | New-requirement research: official-source entries for **gaming, music and AI** gatherings inside San Francisco, free-first; exact quotations and archived captures only | **in progress** | `3adf31d9` | NEW: `data/audit_3adf31d9.json`, `data/research/audit-3adf31d9.md` |
+| T34 | Date-ordered **Upcoming** page + **executive summary** on the landing page (nearest confirmed dates first, relative to the fixed 2026-10-18 snapshot) | **in progress** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `assets/app.js`, `*.html` |
+| T35 | **Cost labelling**: a Free / Paid / Not stated badge derived only from the verified admission text, always shown next to the exact official quotation | **in progress** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `*.html` |
+| T36 | Category subpages **Gaming / Music / AI & technology / Free to attend** + mobile-first dashboard navigation; rebuild, validate, PR → `main`, merge, confirm Pages | **in progress** | `3adf31d9` | NEW: `tools/register_3adf31d9.py`; `tools/consolidate.py`, `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `tests/`, `*.html`, `README.md`, `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them

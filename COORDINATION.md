@@ -48,7 +48,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T8 | Remote source-URL checking | done | `5a85baf2` | `tools/remotecheck.py`, `.github/workflows/pages.yml` |
 | T9 | Final integration: merge registers, re-verify combined data, one site | done | `5a85baf2` | `tools/integrate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `README.md` |
 | T10 | Open PR → `main`, merge, confirm Pages deploy | done | `5a85baf2` | `COORDINATION.md` |
-| T11 | Supplemental official-source audit for event schedules missing from the 86-row integrated register | in progress | `171ecc03` | `data/events_171ecc03.json`, `data/sources_171ecc03.json`, `data/review_171ecc03.json` |
+| T11 | Compare a supplemental official-source audit against PR #4’s 167-row register; publish only verified, non-duplicate additions and update requests | in progress | `171ecc03` | `data/events_171ecc03.json`, `data/sources_171ecc03.json`, `data/review_171ecc03.json` |
 | — | **GitHub Pages publication** | **needs review** | `3a19e72d`, `5a85baf2` | `.github/workflows/pages.yml`, `data/review.json` |
 
 ---
@@ -140,14 +140,16 @@ network there is limited to github.com, npm and PyPI. It is wired into
 
 ## Supplemental-source request — `171ecc03`
 
-- The canonical `data/events.json`, build scripts, review page, navigation, and Pages workflow already exist on `main` and are owned by the completed `5a85baf2` integration. This session will not edit those shared outputs.
-- Request to the final-integration owner: review `data/events_171ecc03.json` and its row-level official sources, then merge only non-duplicate verified records into the canonical dataset and site if appropriate. `data/sources_171ecc03.json` records discovery/coverage sources; `data/review_171ecc03.json` records conflicts and omissions.
-- GitHub Pages remains `needs review` per the existing log: prior sessions received HTTP 403 `Resource not accessible by integration` when enabling the Pages site. This session will not edit the Pages workflow owned by the integration session; the permission blocker remains documented for the owner.
+- The canonical `data/events.json`, build scripts, review page, navigation, and Pages workflow already exist on `main` and are owned by the completed `5a85baf2` integration. The open PR #4 from `4f47c142` now proposes a 167-row structured register, with its own final-integration changes. This session will not edit those shared outputs.
+- Request to the current integration session `4f47c142` (PR #4): compare `data/events_171ecc03.json` and its source ledger against the 167-row register; merge only non-duplicate verified records and apply same-event date corrections if appropriate. `data/sources_171ecc03.json` records row-level sources; `data/review_171ecc03.json` records conflicts, omissions, and update requests.
+- The supplement is scoped only to unique event records or updates not already present on PR #4. It is separate from the canonical site data by design until the integration owner reviews it.
+- GitHub Pages remains `needs review` per the existing log: prior sessions received HTTP 403 `Resource not accessible by integration` when enabling the Pages site. This session will not edit the Pages workflow; the permission blocker remains documented for the owner.
 
 ## Activity log — `171ecc03`
 
 - 2026-10-18 00:53 UTC: Read the initial local coordination state and claimed the end-to-end task before research. The local checkout still appeared to be at the initial commit when the claim was pushed.
-- 2026-10-18: Before pushing implementation, `git pull --rebase origin main` fetched the already integrated work from sessions `3a19e72d` and `5a85baf2` (main now at `5167522`). Re-scoped this session to supplemental row-level research to avoid overwriting their shared site, data, or deployment work.
+- 2026-10-18: Before pushing implementation, `git pull --rebase origin main` fetched the already integrated work from sessions `3a19e72d` and `5a85baf2` (main at `5167522`). Re-scoped this session to supplemental row-level research to avoid overwriting their shared site, data, or deployment work.
+- 2026-10-18: Main advanced again to `397213c` when PR #5 recorded the Pages 403 blocker. PR #4 from `4f47c142` remains open with a separate 167-row register and integration; this session will compare against that register and avoid duplicate additions.
 - Supplemental research target: current recurring market/operator pages and newly published 2026–2027 event dates. Every retained supplemental row will carry official source links and evidence notes; known conflicts or missing values will remain blank and be flagged. Detailed findings will be recorded after validation.
 - The local live-preview implementation is not being submitted because main already contains the integrated dashboard; no canonical rows or shared site pages were changed by this session.
 

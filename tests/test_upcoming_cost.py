@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Regressions for the new-requirement presentation layer (session 3adf31d9, T34–T36).
+"""Regressions for the new-requirement presentation layer (sessions 3adf31d9 T34–T36
+and 21f3dd85 T38–T39).
 
 These tests guard the parts a reader relies on:
 
   * the Upcoming page is ordered by approved ISO date, nearest first;
-  * the landing-page executive summary points at the same soonest entries;
+  * the free-first landing page: executive summary and main section carry free
+    upcoming entries only, soonest first; paid rows live on the Paid page;
   * a cost badge is only ever a label over the verified admission text, and a
     blank admission cell is never rendered as "Free";
   * every table row keeps a direct official source link, and no local link breaks.
@@ -94,11 +96,11 @@ class Presentation(unittest.TestCase):
     def pages_named(self):
         return {
             "index.html", "upcoming.html", "weekly.html", "monthly.html", "annual.html", "special.html",
-            "gaming.html", "music.html", "ai.html", "free.html", "focus.html", "markets.html", "museums.html",
+            "gaming.html", "music.html", "ai.html", "free.html", "paid.html", "focus.html", "markets.html", "museums.html",
             "culture.html", "community.html", "analysis.html", "review.html", "sources.html",
         }
 
-    def test_eighteen_pages_with_viewport(self):
+    def test_nineteen_pages_with_viewport(self):
         self.assertEqual(set(self.pages), self.pages_named())
         for name, page in self.pages.items():
             self.assertTrue(page.viewport, name)
@@ -119,12 +121,16 @@ class Presentation(unittest.TestCase):
             if start < SNAPSHOT:
                 self.assertTrue(span["end"] and span["end"] >= SNAPSHOT, rid)
 
-    def test_executive_summary_matches_the_same_order(self):
+    def test_executive_summary_is_free_and_date_ordered(self):
+        """Free-first (21f3dd85, T38): the summary lists the soonest FREE dated entries."""
         page = self.pages["index.html"]
-        dated = [r for r in self.listed if next_date(r)]
-        expected = [r["id"] for r in sorted(dated, key=lambda r: (next_date(r), r["name"].casefold()))]
+        dated_free = [r for r in self.listed if next_date(r) and cost_of(r)[0] == "Free"]
+        expected = [r["id"] for r in sorted(dated_free, key=lambda r: (next_date(r), r["name"].casefold()))]
         links = [href.split("#", 1)[1] for href in page.links if href.startswith("upcoming.html#")]
         self.assertEqual(links[: min(12, len(expected))], expected[:12])
+        by_id = {r["id"]: r for r in self.rows}
+        for rid in links:
+            self.assertEqual(cost_of(by_id[rid])[0], "Free", rid)
 
     def test_no_row_loses_its_official_source(self):
         urls = {s["url"] for s in self.sources.values()}
@@ -150,6 +156,32 @@ class Presentation(unittest.TestCase):
         for rid in expected:
             row = next(r for r in self.listed if r["id"] == rid)
             self.assertTrue(row["price"], rid)
+
+    def test_paid_page_only_holds_priced_entries(self):
+        """Separate Paid section (21f3dd85, T39): priced rows only, never unpriced ones."""
+        page = self.pages["paid.html"]
+        expected = {r["id"] for r in self.listed if cost_of(r)[0] == "Paid"}
+        self.assertEqual(set(page.rows), expected)
+        self.assertTrue(expected)
+        free_ids = {r["id"] for r in self.listed if cost_of(r)[0] == "Free"}
+        self.assertFalse(set(page.rows) & free_ids)
+        for rid in expected:
+            row = next(r for r in self.listed if r["id"] == rid)
+            self.assertTrue(row["price"], rid)
+
+    def test_landing_main_section_is_free_only(self):
+        """The landing tables (T38) carry free dated + free recurring entries, nothing else."""
+        page = self.pages["index.html"]
+        free_ids = {r["id"] for r in self.listed if cost_of(r)[0] == "Free"}
+        dated_ids = {r["id"] for r in self.listed if next_date(r)}
+        recurring_ids = {r["id"] for r in self.listed if r["kind"] in ("Weekly", "Monthly", "Annual")}
+        expected = (free_ids & dated_ids) | (free_ids & (recurring_ids - dated_ids))
+        self.assertEqual(set(page.rows), expected)
+        self.assertTrue(expected)
+        # The whole directory survives elsewhere: Upcoming and Focus carry every listed row.
+        all_listed = {r["id"] for r in self.listed}
+        self.assertEqual(set(self.pages["upcoming.html"].rows), all_listed)
+        self.assertEqual(set(self.pages["focus.html"].rows), all_listed)
 
     def test_topic_pages_match_the_editorial_tags(self):
         for name, topic in (("gaming.html", "Gaming"), ("music.html", "Music"), ("ai.html", "AI & technology")):

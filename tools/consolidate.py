@@ -839,8 +839,14 @@ apply_audit(rows, sources, review)
 from register_3adf31d9 import apply_extension
 apply_extension()
 
+# Additive free-first overlay (session 21f3dd85, T37): free gaming/music/AI
+# entries first, then other free entries, plus one paid gaming entry for the
+# separate Paid section. Same fail-closed rules; never edits a row.
+from register_21f3dd85 import apply_extension as apply_extension_21f3dd85
+apply_extension_21f3dd85()
+
 # Additive free-first gap overlay (session d57e2eeb, T37-T38): free civic venues,
-# garden free hours, free music, games and AI/tech communities. Always runs last,
-# same fail-closed rules; never edits an existing row.
+# garden free hours, free music, games and AI/tech communities. Same fail-closed
+# rules; runs last after the parallel 21f3dd85 overlay; never edits an existing row.
 from register_d57e2eeb import apply_extension as apply_extension_d57e2eeb
 apply_extension_d57e2eeb()

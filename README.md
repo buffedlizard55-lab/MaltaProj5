@@ -10,27 +10,29 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 | Measure | Count |
 |---|---:|
-| Candidates assessed | 287 |
+| Candidates assessed | 295 |
 | Previously assessed candidates (231 initial + 2 companion + 13 official-calendar) | 246 |
 | Session `59f56c24` official-calendar extras | 5 |
 | New topic-gap entries added in audit `3adf31d9` (gaming / music / AI) | 15 |
+| Free-first entries added in audit `21f3dd85` (free gaming / music / AI first) | 8 |
 | New free-first gap entries added in audit `d57e2eeb` (civic / gardens / music / gaming / AI) | 21 |
-| Entries admitted to the city-only directory | 206 |
-| Candidates held off the directory for review | 81 |
-| Weekly / monthly / annual entries | 36 / 10 / 34 |
-| Special, dated or cadence-unconfirmed entries | 126 |
-| Entries with at least one confirmed future date | 71 |
-| Directory rows reading Free / Paid / Not stated | 70 / 19 / 117 |
-| Exact cited official-source URLs / distinct domains | 297 / 162 |
+| Entries admitted to the city-only directory | 212 |
+| Candidates held off the directory for review | 83 |
+| Weekly / monthly / annual entries | 37 / 13 / 35 |
+| Special, dated or cadence-unconfirmed entries | 127 |
+| Entries with at least one confirmed future date | 74 |
+| Directory rows reading Free / Paid / Not stated | 75 / 20 / 117 |
+| Exact cited official-source URLs / distinct domains | 308 / 163 |
 
-The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
+The directory includes 16 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
-- [Dashboard](index.html) · [Upcoming](upcoming.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
-- [Gaming](gaming.html) · [Music](music.html) · [AI & technology](ai.html) · [Free to attend](free.html) · [Focus, one page](focus.html)
+The site is **free-first**: the [dashboard](index.html) executive summary and main section carry **free upcoming events only** (dated entries nearest first, then free recurring patterns), ordered Gaming → Music → AI & technology → everything else. Priced events are collected in the separate [Paid events](paid.html) section; the complete all-cost directory remains on [Focus](focus.html) and [Upcoming](upcoming.html).
+
+- [Dashboard (free-first)](index.html) · [Upcoming](upcoming.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
+- [Gaming](gaming.html) · [Music](music.html) · [AI & technology](ai.html) · [Free to attend](free.html) · [Paid events](paid.html) · [Focus, one page](focus.html)
 - [Markets & food](markets.html) · [Museums & science](museums.html) · [Festivals & culture](culture.html) · [Community & outdoors](community.html)
 - [Analysis](analysis.html) · [Flagged for Review](review.html) · [Sources and row-by-row evidence](sources.html)
-- [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv) · [Research log for audit `3adf31d9`](data/research/audit-3adf31d9.md)
-- [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv)
+- [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv) · [Research log for audit `3adf31d9`](data/research/audit-3adf31d9.md) · [Research log for audit `21f3dd85`](data/research/audit-21f3dd85.md)
 
 ## What a listing means
 
@@ -63,7 +65,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/validate.py
 ```
 
-`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay, the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology entries), and finally the additive fail-closed `tools/register_d57e2eeb.py` free-first gap overlay (civic venues, Golden Gate Park garden free hours, free music, games and SF AI/tech communities, plus one explicitly Paid entry kept distinct). Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
+`consolidate.py` first reconstructs historical candidates from the preserved research inputs, preserves the newer mainline companion audit (including its two added candidates) in an isolated temporary candidate-history tree, then **must** run the fail-closed `tools/audited_register.py` overlay, the additive fail-closed `tools/register_3adf31d9.py` topic-gap overlay (gaming, music and AI/technology entries), the additive fail-closed `tools/register_21f3dd85.py` free-first overlay, and finally the additive fail-closed `tools/register_d57e2eeb.py` free-first gap overlay (civic venues, Golden Gate Park garden free hours, free music, games and SF AI/tech communities, plus one explicitly Paid entry kept distinct). Every factual field starts blank. Only `data/audit_64f8b973.json` decisions can populate it; an unreviewed candidate or missing quotation stops the build. The old `tools/apply_verify.py` applicator is retired and cannot mutate the audited register.
 
 The validator compares the exact projection, checks quotation provenance (including labeled event JSON-LD), recurrence/year guards, blanks, parent cycles, source references, CSV cell values, all page memberships and every local link/fragment. A second rebuild must be byte-identical. Provenance validation is **not** automatic semantic fact-checking.
 
@@ -83,14 +85,14 @@ npm install --prefix .cache/browser --no-audit --no-fund \
 NODE_PATH=.cache/browser/node_modules node tests/browser_smoke.cjs --serve
 ```
 
-Omit `--serve` when a static server already runs on port 8080. This checks 18 pages at desktop/mobile widths, filtering/reset/empty states (including the Cost filter), actual blank cells, cost badges, source/evidence links, upcoming nearest-first ordering, mobile card layout, mobile overflow, no-JavaScript tables, console/asset errors and automated WCAG A/AA findings on the six core page types. Automated accessibility tests are not a complete accessibility certification. Browser binaries, screenshots and package installs stay outside Git.
+Omit `--serve` when a static server already runs on port 8080. This checks 19 pages at desktop/mobile widths, filtering/reset/empty states (including the Cost filter), actual blank cells, cost badges, source/evidence links, the free-first landing tables, upcoming nearest-first ordering, mobile card layout, mobile overflow, no-JavaScript tables, console/asset errors and automated WCAG A/AA findings on seven core page types. Automated accessibility tests are not a complete accessibility certification. Browser binaries, screenshots and package installs stay outside Git.
 
 ## Site conventions
 
-* **Upcoming order.** The Upcoming page groups the 67 dated, published entries into six time
+* **Upcoming order.** The Upcoming page groups the 70 dated, published entries into six time
   buckets — **Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later** — and sorts
   nearest confirmed date first within each. Only approved 2026/2027 dates are displayed; no date is
-  inferred. The canonical nearest-first order for those 67 rows is exported to
+  inferred. The canonical nearest-first order for those 70 rows is exported to
   `data/upcoming_order.json`, so the browser pass can assert it rather than re-derive it. An
   occurrence that has started but not finished is grouped under **Open now** rather than being given
   a misleading “in N days” label.
@@ -123,9 +125,12 @@ Omit `--serve` when a static server already runs on port 8080. This checks 18 pa
 | `data/audit_64f8b973.json` | Finite official evidence captures, selected tool excerpts and explicit field decisions |
 | `data/audit_3adf31d9.json`, `tools/register_3adf31d9.py` | Additive fail-closed topic-gap overlay and its captures (gaming / music / AI) |
 | `data/research/audit-3adf31d9.md` | Research log for that overlay: retrieval methods, approvals and deliberate non-approvals |
+| `data/audit_21f3dd85.json`, `tools/register_21f3dd85.py` | Additive fail-closed free-first overlay and its captures (dated free music, free gaming, free AI; one paid tournament) |
+| `data/research/audit-21f3dd85.md` | Research log for that overlay, including the SFPL all-programs-free mapping and retrieval honesty |
 | `data/audit_d57e2eeb.json`, `tools/register_d57e2eeb.py` | Additive fail-closed free-first gap overlay and its captures (free civic/garden/music/gaming/AI entries, one Paid) |
 | `data/research/audit-d57e2eeb.md` | Research log for that overlay: gap analysis, retrieval methods, irregularities and deliberate exclusions |
 | `data/upcoming_order.json` | Canonical nearest-first order of the dated directory rows, asserted by the browser pass |
+| `data/dashboard_order.json` | The free-first landing page's two main-section orderings (free dated; free recurring), same rationale |
 | `data/events.json` | All audited records, including review-only dispositions; not all are published in the directory |
 | `data/sources.json` | Exact-URL ledger; statuses and contextual decisions are separate |
 | `data/audit_summary.json` | Reproducible counts/blank-field/date summary |

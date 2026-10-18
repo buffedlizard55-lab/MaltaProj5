@@ -46,6 +46,26 @@
   "urls": []
  },
  {
+  "title": "Free-first research pass (session 21f3dd85)",
+  "detail": "8 entries were added from official organizer, venue, library and government pages, free gaming/music/AI first: Noontime Concerts (free weekly classical series with three dated Tuesday concerts), the National Park Service Sea Chantey Sing (free, monthly, dated 5 December 2026), the Mechanics' Institute Chess Socials (free, monthly), gaming tournaments at the San Francisco Public Library's Mix teen space (monthly), and the library's annual Tech Week (free workshops including AI sessions). One paid gaming entry — the Mechanics' Institute 2026 Winter Tuesday Night Marathon chess tournament ($70 members / $100 non-members, 3 November to 15 December 2026) — was collected for the separate Paid section. Every value is quoted from the page read on 18 October 2026; where a page states no time or date, the cell stays blank. The Mechanics' Institute chess-classes page lists Chess Socials dates ('Nov 6, Dec 4') without a year, so no ISO occurrence was approved from that list.",
+  "urls": [
+   "https://noontimeconcerts.org/",
+   "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+   "https://www.milibrary.org/chess/chess-classes/",
+   "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+   "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library"
+  ]
+ },
+ {
+  "title": "SFPL admission judgment, two holds, and evidence for a held chess class",
+  "detail": "For its two new San Francisco Public Library rows this session quotes the library's official events index — 'All programs and events are free and open to the public.' (sfpl.org/events) — as admission evidence, applying that explicit all-programmes statement in context. The seven SFPL gaming rows added by session 3adf31d9 did not cite the index statement, so their admission cells stay blank ('Not stated'); no earlier row was edited, and the visible inconsistency is flagged for a future harmonization decision. Two candidates are held for review: the Internet Archive's Friday public tours (schedule, time, venue and free admission are all confirmed on archive.org, but the page gives the programme no title, and this register requires an approved event name), and Grace Cathedral's Organ Recital Series (official pages conflict — 'Cost: Free' and 'free organ recital' on some recital pages versus a Sunday visitor admission fee unless registered in advance on another, with no price on the fetched series page). Separately, the Mechanics' Institute chess-classes page now states a venue ('Onsite in the Chess Room at Mechanics'') and member pricing for the held 'Introduction to Chess' candidate; that evidence is recorded in data/research/audit-21f3dd85.md for a future corrections pass rather than published as a duplicate row.",
+  "urls": [
+   "https://sfpl.org/events",
+   "https://archive.org/about/contact",
+   "https://gracecathedral.org/series/organ-recital-series/"
+  ]
+ },
+ {
   "title": "Free-first gap research pass (session d57e2eeb)",
   "detail": "21 entries were added from official operator, venue, government and community pages read on 18 October 2026: the Cable Car Museum, Randall Museum, San Francisco Railway Museum, Fort Point NHS, Presidio Officers' Club free exhibitions and Musée Mécanique; the Golden Gate Park gardens' free hours (Japanese Tea Garden M/W/F hour, Conservatory of Flowers free first Tuesdays, Botanical Garden daily early entry and free second Tuesdays); free music beyond the big festivals (weekly Noontime Concerts at Old St. Mary's, Grace Cathedral free Choral Evensong, the annual People in Plazas series); gaming additions (Gamescape's weekly Board Game Night, plus Musée Mécanique); recurring SF AI/tech community channels (AI Tinkerers SF, The AI Collective SF chapter, Noisebridge's Circuit Hacking Mondays and monthly Five Minutes of Fame); the free SF Shakespeare Festival parks season, Circus Bella's free Union Square juggling lessons, and the 2026 Bay Area Science Festival at UCSF Mission Bay. One explicitly paid event — Circus Bella's BRAVURA Big Top — is published with a Paid badge, kept distinct from the free-first entries. Every value is quoted from the archived page text; blank cells stay blank and are labelled 'Not stated'. Six irregularities found on official pages themselves (conflicting season-closing and tour dates at circusbella.org, a stale next-event link and year mix-up on the Noisebridge wiki, a year-less upcoming listing on aicollective.com, two-digit years on gamescapesf.store, and Grace Cathedral's free service vs paid sightseeing) are quoted verbatim and flagged on the rows rather than silently reconciled. Five pages were read through the workspace search tool's verbatim result text rather than a direct fetch (museemecanique.com, streetcar.org/museum, gamescapesf.com, gracecathedral.org/calendar-events, ucsf.edu news); those captures record no HTTP status and are labelled as such.",
   "urls": [

@@ -1465,7 +1465,7 @@
    ],
    "publication": "listed",
    "topic": "Music",
-   "notes": "The official page heads its listing 'Free Live Concert  Every Tuesday' with in-person attendance at Old St. Mary's Cathedral; its own '3 Ways' section prices only recordings (pay-per-view and member on-demand access to the past-concert library), not the live concerts."
+   "notes": "The official page heads its listing 'Free Live Concert  Every Tuesday' with in-person attendance at Old St. Mary's Cathedral; its own '3 Ways' section prices only recordings (pay-per-view and member on-demand access to the past-concert library), not the live concerts. Integration note: session 21f3dd85 independently published f-noontime-concerts for the same series from its own official captures (which additionally quote the about page's 'not ticketed but suggested donations' wording). Both rows are kept with their own sources, following the dual-row precedent recorded for GDC Festival of Gaming 2027 in the mainline integration log; this row adds the verified next-session dates (2026-10-20, 2026-10-27, 2026-11-10)."
   },
   "h-choral-evensong": {
    "reviewer": "d57e2eeb",

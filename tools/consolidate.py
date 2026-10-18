@@ -619,6 +619,42 @@ for rid, why in DROP_ROWS.items():
     })
 rows = [r for r in rows if r["id"] not in DROP_ROWS]
 
+# ------------------------------- merge duplicate rows found during final review
+MERGE_INTO = {
+    "legion-tue": "x-famsf-free-tuesdays",
+    "unplug-dec": "unplug-nov",
+}
+for rid, into in MERGE_INTO.items():
+    src = next((r for r in rows if r["id"] == rid), None)
+    if not src:
+        continue
+    dst = next(r for r in rows if r["id"] == into)
+    for sid in src["sources"]:
+        if sid not in dst["sources"]:
+            dst["sources"].append(sid)
+    dst["flags"].append(
+        f"Duplicate row '{src['name']}' ({rid}) merged into this entry during final review; "
+        f"its dates: {src['schedule']}.")
+    if rid == "unplug-dec":
+        dst["schedule"] = ("Two dates in 2026: Thursday, November 12 and Thursday, December 10. "
+                           "After Dark runs Thursdays 6-10pm, 18+.")
+    rows.remove(src)
+review.append({
+    "title": "Duplicate rows merged during final review",
+    "detail": "Two pairs described the same event: 'Legion of Honor Free Tuesdays' duplicated the "
+              "FAMSF free-first-Tuesday entry (FAMSF confirms free general admission on the first "
+              "Tuesday of every month), and 'After Dark: Unplug and Play' appeared once for "
+              "November 12 and once for December 10, 2026. Merged, with both dates preserved.",
+    "urls": ["https://www.famsf.org/visit/free-reduced-admission",
+             "https://www.exploratorium.edu/visit/calendar/after-dark"],
+})
+# CAAMFest screens in Berkeley and Oakland as well as San Francisco: keep the row
+# (the festival is programmed and anchored in SF) but say so.
+caam = next((r for r in rows if r["id"] == "x-caamfest"), None)
+if caam:
+    caam["flags"].append("Some CAAMFest screenings take place in Berkeley and Oakland; only the "
+                         "San Francisco programme is in scope for this register.")
+
 # ------------------------------------------- merge session a1b7522f's 20 authored rows
 pr7 = load("events_a1b7522f.json")
 pr7_sources = load("sources_a1b7522f.json")
@@ -648,6 +684,29 @@ for r7 in pr7:
             if f not in b["flags"]:
                 b["flags"].append(f)
         continue
+    if r7["id"] == "curran-season":
+        r7["sources"] = [x for x in r7["sources"] if sources[x]["url"] != "https://sfcurran.com/"]
+        atg = add_source(
+            "https://us.atgtickets.com/venues/curran-theater/whats-on/",
+            "Curran Theatre — official ATG box office, What's On",
+            note="Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
+            excerpt="Curran Theatre … 17 shows … Oh, Mary! Through Sun, Nov 1, 2026 … "
+                    "The Golden Girls Live Fri, Dec 4 - Sun, Dec 20, 2026.",
+            manual=True)
+        r7["sources"].insert(0, atg)
+        for field in ("name", "schedule", "venue"):
+            r7["evidence"].setdefault(field, [])
+            if atg not in r7["evidence"][field]:
+                r7["evidence"][field].append(atg)
+        r7["flags"].append("sfcurran.com was unreachable at check time (TLS/connection failure); "
+                           "the official ATG box-office page for the Curran is cited instead.")
+        for field, ids in list(r7["evidence"].items()):
+            r7["evidence"][field] = [i for i in ids if i in r7["sources"]]
+            if r7.get(field) and not r7["evidence"][field]:
+                r7["unverified"].append(field + ": unverified; left blank (source removed during integration).")
+                r7[field] = ""
+        r7["check"] = {"level": "field-level", "by": "a1b7522f + c961fbe4 manual re-read",
+                       "date": "2026-10-18"}
     rows.append(r7)
 review += pr7_review
 

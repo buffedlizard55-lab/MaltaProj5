@@ -5,13 +5,9 @@ name: Row-source verification
 # sandbox has no general outbound network; GitHub's runners do.
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - 'arena/**'
-    paths:
-      - 'data/events.json'
-      - 'data/sources.json'
-      - 'tools/verify_rows.py'
+  schedule:
+    # Monthly check on the default branch; reports are never auto-merged from here.
+    - cron: '17 6 1 * *'
 
 permissions:
   contents: write

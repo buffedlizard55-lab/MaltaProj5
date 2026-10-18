@@ -303,51 +303,6 @@
   ]
  },
  {
-  "id": "legion-tue",
-  "name": "Legion of Honor Free Tuesdays",
-  "category": "Museums & science",
-  "kind": "Monthly",
-  "schedule": "First Tuesday of every month",
-  "time": "",
-  "venue": "Legion of Honor",
-  "price": "Free general admission",
-  "sources": [
-   "famsf",
-   "legion",
-   "legion-location"
-  ],
-  "evidence": {
-   "name": [
-    "famsf",
-    "legion"
-   ],
-   "schedule": [
-    "famsf",
-    "legion"
-   ],
-   "venue": [
-    "famsf",
-    "legion",
-    "legion-location"
-   ],
-   "price": [
-    "famsf",
-    "legion"
-   ]
-  },
-  "notes": "Permanent galleries only; excludes Bouquets to Art and special exhibition charges.",
-  "flags": [],
-  "parent": "",
-  "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
-   "date": "2026-10-18"
-  },
-  "unverified": [
-   "time: unverified; left blank."
-  ]
- },
- {
   "id": "outer",
   "name": "Outer Sunset Farmers Market & Mercantile",
   "category": "Markets & food",
@@ -954,7 +909,7 @@
   "name": "After Dark: Unplug and Play",
   "category": "Museums & science",
   "kind": "Special",
-  "schedule": "November 12, 2026",
+  "schedule": "Two dates in 2026: Thursday, November 12 and Thursday, December 10. After Dark runs Thursdays 6-10pm, 18+.",
   "time": "6\u201310 pm",
   "venue": "Exploratorium, Pier 15",
   "price": "",
@@ -981,7 +936,9 @@
    ]
   },
   "notes": "18+. A dated occurrence of After Dark.",
-  "flags": [],
+  "flags": [
+   "Duplicate row 'After Dark: Unplug and Play' (unplug-dec) merged into this entry during final review; its dates: December 10, 2026."
+  ],
   "parent": "after-dark",
   "check": {
    "level": "field-level",
@@ -1041,49 +998,6 @@
   "category": "Museums & science",
   "kind": "Special",
   "schedule": "December 3, 2026",
-  "time": "6\u201310 pm",
-  "venue": "Exploratorium, Pier 15",
-  "price": "",
-  "sources": [
-   "dark",
-   "exvisit"
-  ],
-  "evidence": {
-   "name": [
-    "dark",
-    "exvisit"
-   ],
-   "schedule": [
-    "dark",
-    "exvisit"
-   ],
-   "time": [
-    "dark",
-    "exvisit"
-   ],
-   "venue": [
-    "dark",
-    "exvisit"
-   ]
-  },
-  "notes": "18+. A dated occurrence of After Dark.",
-  "flags": [],
-  "parent": "after-dark",
-  "check": {
-   "level": "field-level",
-   "by": "3a19e72d / 5a85baf2",
-   "date": "2026-10-18"
-  },
-  "unverified": [
-   "price: unverified; left blank."
-  ]
- },
- {
-  "id": "unplug-dec",
-  "name": "After Dark: Unplug and Play",
-  "category": "Museums & science",
-  "kind": "Special",
-  "schedule": "December 10, 2026",
   "time": "6\u201310 pm",
   "venue": "Exploratorium, Pier 15",
   "price": "",
@@ -4382,7 +4296,9 @@
   "venue": "de Young Museum & Legion of Honor, Golden Gate Park / Lincoln Park",
   "price": "Free general admission",
   "sources": [
-   "famsf"
+   "famsf",
+   "legion",
+   "legion-location"
   ],
   "evidence": {
    "name": [
@@ -4400,7 +4316,8 @@
   },
   "notes": "Free general admission to permanent collections for all visitors on first Tuesdays; free Saturdays for Bay Area residents (9 counties) also available.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Duplicate row 'Legion of Honor Free Tuesdays' (legion-tue) merged into this entry during final review; its dates: First Tuesday of every month.",
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403, 403, 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -4710,7 +4627,7 @@
   },
   "notes": "Nationally recognized comedy festival.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -5643,7 +5560,9 @@
    ]
   },
   "notes": "Nation's largest showcase for new Asian American and Asian films; some screenings outside SF.",
-  "flags": [],
+  "flags": [
+   "Some CAAMFest screenings take place in Berkeley and Oakland; only the San Francisco programme is in scope for this register."
+  ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
   ],
@@ -6030,7 +5949,7 @@
   },
   "notes": "",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -6183,7 +6102,7 @@
   },
   "notes": "",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -6804,7 +6723,7 @@
   },
   "notes": "Oldest continuously operating international antiques show on the West Coast; 60 dealers.",
   "flags": [
-   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 403); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
+   "Automated re-check 2026-10-18: the cited page blocks automated clients (HTTP 202); the row's values rest on the authoring session's manual reading and were not re-confirmed by machine. Manual re-check requested."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."
@@ -9009,25 +8928,27 @@
   "venue": "Curran Theatre, 445 Geary Street (Theater District)",
   "price": "",
   "sources": [
-   "curran-home"
+   "x-us-atgtickets-com-venues-curran-theater-whats-on"
   ],
   "evidence": {
    "name": [
-    "curran-home"
+    "x-us-atgtickets-com-venues-curran-theater-whats-on"
    ],
    "schedule": [
-    "curran-home"
+    "x-us-atgtickets-com-venues-curran-theater-whats-on"
    ],
    "venue": [
-    "curran-home"
+    "x-us-atgtickets-com-venues-curran-theater-whats-on"
    ]
   },
   "notes": "Programme-level entry. The Curran defines the western edge of San Francisco's theater district, two blocks west of Union Square. Individual show listings change frequently.",
-  "flags": [],
+  "flags": [
+   "sfcurran.com was unreachable at check time (TLS/connection failure); the official ATG box-office page for the Curran is cited instead."
+  ],
   "parent": null,
   "check": {
    "level": "field-level",
-   "by": "a1b7522f",
+   "by": "a1b7522f + c961fbe4 manual re-read",
    "date": "2026-10-18"
   },
   "unverified": [

@@ -87,7 +87,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T29 | Independent final checkout audit of the shipped register/site: rerun canonical rebuild, tests and local-link checks; inspect official-source provenance and current Pages content; log confirmed defects/irregularities only | **done** — 30 offline tests, exact evidence projection and local links pass; live Pages and PR #26 checks/build confirmed | `0574b8f6` | `COORDINATION.md` only; no data/site changes |
 | T29-cal | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
-| T31 | Validate, PR → main, merge, confirm Pages | **in progress** | `bb551cdc` | `COORDINATION.md` |
+| T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169) success; Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) success | `bb551cdc` | `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1181,3 +1181,16 @@ A merge was used (no force push); `COORDINATION.md` conflicted where the origina
 session row. Resolution retained both the `t26-3164fba7` mainline record and T29's
 completed audit/results, then added this reconciliation note. No other files or
 session work were discarded.
+
+## Publication record — T29-cal / T30 / T31 — `bb551cdc`
+
+| Item | Result |
+|---|---|
+| PR | [#28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged 2026-10-18 05:55:00 UTC |
+| Merge commit | `f90ae8b2d06069ebbb9ac734700db99f94cda9df` |
+| Main validation | [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169) **success** |
+| Pages | [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) **success** |
+| Live site | https://buffedlizard55-lab.github.io/MaltaProj5/ |
+| Register | 246 candidates / 167 listed / 79 review-only |
+
+Sources: Rec Park EID 9528 and 9947, SF.gov Civic Center Soundtrack, Rec Park Illuminate LIVE news flash, comedyday.org + FAQ. Harvest Festival and Festival of Chariots not added (incomplete official pages). Comedy Day date blank.

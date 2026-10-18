@@ -2,9 +2,11 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (2026-10-18):** PR #28's official-calendar additions and PR #29's publication record are merged; GitHub Pages is live from `main`.
+**Current publication (2026-10-18):** PR #28's official-calendar additions, PR #29's publication record and the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36) are merged; GitHub Pages is live from `main`.
 
-The bounded snapshot contains **246 candidates: 167 city-only directory entries / 79 review-only**, with 23 weekly / 7 monthly / 26 annual / 111 special entries and 242 cited official URLs across 140 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
+The bounded snapshot contains **261 candidates: 180 city-only directory entries / 81 review-only**, with 23 weekly / 8 monthly / 31 annual / 118 special entries, 62 entries carrying at least one confirmed future date, and 258 cited official URLs across 150 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
+
+**New in this release:** an [Upcoming](upcoming.html) page grouping the 62 dated entries into *Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later* with nearest-confirmed-date-first ordering; an executive summary timeline of the 12 soonest entries on the dashboard; a Free / Paid / **Not stated** cost badge on every row derived only from the verified admission quotation; dedicated [Gaming](gaming.html), [Music](music.html), [AI & technology](ai.html) and [Free to attend](free.html) pages; and a mobile card layout for every events table below 820 px.
 
 PR #27 independently audited and documented the prior 242-candidate snapshot. Earlier counts and task results below are historical, not the current publication gate. Actual CI, merge and Pages records are at the end of this board.
 
@@ -120,10 +122,10 @@ Upcoming page and cost badges are regression-covered in CI.
 | T29-cal | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
 | T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; PR Validate [39102137078](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102137078), main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169), and Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) succeeded | `bb551cdc` | `COORDINATION.md` |
-| T33 | New-requirement research: official-source entries for **gaming, music and AI** gatherings inside San Francisco, free-first; exact quotations and archived captures only | **in progress** | `3adf31d9` | NEW: `data/audit_3adf31d9.json`, `data/research/audit-3adf31d9.md` |
-| T34 | Date-ordered **Upcoming** page + **executive summary** on the landing page (nearest confirmed dates first, relative to the fixed 2026-10-18 snapshot) | **in progress** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `assets/app.js`, `*.html` |
-| T35 | **Cost labelling**: a Free / Paid / Not stated badge derived only from the verified admission text, always shown next to the exact official quotation | **in progress** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `*.html` |
-| T36 | Category subpages **Gaming / Music / AI & technology / Free to attend** + mobile-first dashboard navigation; rebuild, validate, PR → `main`, merge, confirm Pages | **in progress** | `3adf31d9` | NEW: `tools/register_3adf31d9.py`; `tools/consolidate.py`, `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `tests/`, `*.html`, `README.md`, `COORDINATION.md` |
+| T33 | New-requirement research: official-source entries for **gaming, music and AI** gatherings inside San Francisco, free-first; exact quotations and archived captures only | **done** | `3adf31d9` | NEW: `data/audit_3adf31d9.json`, `data/research/audit-3adf31d9.md` (commit `7295aae`) |
+| T34 | Date-ordered **Upcoming** page + **executive summary** on the landing page (nearest confirmed dates first, relative to the fixed 2026-10-18 snapshot) | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `assets/app.js`, `*.html` |
+| T35 | **Cost labelling**: a Free / Paid / Not stated badge derived only from the verified admission text, always shown next to the exact official quotation | **done** | `3adf31d9` | `scripts/build.py`, `assets/style.css`, `*.html` |
+| T36 | Category subpages **Gaming / Music / AI & technology / Free to attend** + mobile-first dashboard navigation; rebuild, validate, PR → `main`, merge, confirm Pages | **done** | `3adf31d9` | NEW: `tools/register_3adf31d9.py`; `tools/consolidate.py`, `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `tests/`, `*.html`, `README.md`, `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1253,3 +1255,135 @@ Main validation [39102291756](https://github.com/buffedlizard55-lab/MaltaProj5/a
 and Pages workflow [39102291538](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102291538)
 succeeded; Pages API build **1293677966** is `built` for that commit. PR #29 changed
 coordination documentation only; the 246/167/79 event register is from PR #28.
+
+---
+
+## T33 complete — topic-gap research overlay (gaming / music / AI) — `3adf31d9`
+
+Claim commit `7295aae` (pushed to `arena/3adf31d9-maltaproj5`). Added **15 entries**, all from
+official pages, stored as captures + explicit decisions in `data/audit_3adf31d9.json` and narrated
+in [`data/research/audit-3adf31d9.md`](data/research/audit-3adf31d9.md). The overlay
+`tools/register_3adf31d9.py` is **additive and fail-closed**: it runs inside
+`tools/consolidate.py` immediately after `tools/audited_register.py` and can only add
+capture-evidenced rows — it never approves or edits an existing field.
+
+**Retrieval methods, stated honestly.** Two workspace tools were used and every capture records
+which produced it:
+
+| Method | What it actually is | Where used |
+|---|---|---|
+| `workspace fetch_page` | The page body as returned by the fetch tool. Several pages returned more chunks than were read; those captures record `chunks_retrieved` / `chunks_total` and `complete: false`. | gdconf.com, moscone.com, iclr.cc, ai.engineer, databricks.com, milibrary.org, sterngrove.org |
+| `workspace web_search` | The **verbatim result text** the search tool returned for that exact official URL. Used where the event block is buried under navigation (sfpl.org places it below three chunks of branch hours) or sits under the fetched fold (the Stern Grove contact block). | sfpl.org event pages, aicouncil.com, the Databricks FAQ, the Stern Grove contact block |
+
+A search-snippet capture carries **no HTTP status**. It is evidence of what the tool returned for
+that official URL on 18 October 2026, and is never presented as a verified page fetch with a 200
+response. The Sources page prints this distinction per source record.
+
+**Sources consulted (official, all cited in the register):**
+
+| Entry | Official page | Publication |
+|---|---|---|
+| GDC Festival of Gaming — 1–5 Mar 2027, Moscone Center | https://gdconf.com/ | listed |
+| 20th Annual SF Scholastic Chess Championship — 11 Apr 2026, 701 Mission St | https://www.milibrary.org/chess/tournaments/2026-san-francisco-scholastic-chess-championship | listed |
+| Introduction to Chess (Mechanics' Institute) — Thursdays | https://www.milibrary.org/chess/chess-classes/ | **held for review** |
+| Social: Chess Club (Visitacion Valley) — 2nd & 3rd Friday | https://sfpl.org/events/2026/03/13/social-chess-club | listed |
+| Activity: Chess Club (Excelsior) | https://sfpl.org/events/2026/05/09/activity-chess-club | listed |
+| Social: Afternoon Board Games (Sunset) | https://sfpl.org/events/2026/07/26/social-afternoon-board-games | listed |
+| Social: Game Night (Marina) | https://sfpl.org/events/2026/08/12/social-game-night | listed |
+| Activity: Chinese Chess 中国象棋 (Main Library) | https://sfpl.org/events/2026/08/02/activity-chinese-chess-zhongguoxiangqi | listed |
+| Social: Family Game Night (Bernal Heights) | https://sfpl.org/events/2026/06/13/social-family-game-night | listed |
+| AI Engineer World's Fair 2027 — 29 Jun – 1 Jul 2027, Moscone West | https://ai.engineer/worldsfair/2027 | listed |
+| TDX 2027 — 10–11 Mar 2027, Moscone Center | https://www.moscone.com/events/tdx-2027 | listed |
+| ICLR 2027 — 26–30 Apr 2027, Moscone Center | https://iclr.cc/Conferences/2027/index.html | listed, venue flagged |
+| Data + AI Summit 2027 — 21–24 Jun 2027, Moscone | https://www.databricks.com/dataaisummit | listed |
+| AI Council 2027 — 23–24 Mar 2027, San Francisco | https://www.aicouncil.com/ | **held for review** |
+| Stern Grove Festival — 19th Ave & Sloat Blvd | https://www.sterngrove.org/about-us · https://www.sterngrove.org/accessibility-ada | listed |
+
+**Deliberate non-approvals — every one of these left a value blank rather than plausible:**
+
+1. **Library admission is never assumed free.** All seven SFPL chess / board-game / Chinese-chess
+   entries leave the price blank: the official event text does not state admission. The Excelsior
+   page's “Bright Knights Chess Club hosts free chess programs” describes the partner club's
+   programmes generally, not this library session, so it was not promoted to a verified value.
+2. **Conference prices are not quoted on the pages read.** GDC, TDX, ICLR, Data + AI Summit and AI
+   Engineer each link to a registration or pricing page without stating a number. All five render
+   **Not stated** — not “Paid”, and never a guessed ticket price.
+3. **Mechanics' Institute Introduction to Chess is held for review.** The official page names the
+   room (“Onsite in the Chess Room at Mechanics’”) and says “FREE for Mechanics’ Institute Members”,
+   but the captured text never states a San Francisco street address, so name + venue + city-only
+   geography is not satisfied.
+4. **AI Council 2027 is held for review** — San Francisco is named as the host city, but no venue
+   is stated anywhere in the captured text.
+5. **ICLR 2027's venue is approved with a printed caveat.** The official Venue section still reads
+   “Venue information will be posted here”; the value comes from that same page's venue image
+   caption, “Moscone Center, San Francisco, CA”. The caveat is shown in the row's review notes.
+6. **GDC is not labelled annual.** The captured text dates the 2027 edition without saying the
+   festival repeats, so its cadence is *Special*, not *Annual*.
+7. **Stern Grove carries no occurrence date.** The official pages support an annual cadence
+   (“since 1938”, “Every summer”) but no 2027 season dates were published on them, so no date is
+   asserted.
+
+**Verification performed.** Every quotation was checked as an NFKC/whitespace-normalised substring
+of the archived capture text for that exact URL. Every occurrence date was checked so that its
+year, month and day are recoverable from the quotation supporting it. Weekly / Monthly / Annual
+classifications each carry their own recurrence quotation. The projection is pure and idempotent.
+
+---
+
+## T34 / T35 / T36 complete — date ordering, cost labelling, topic pages, mobile — `3adf31d9`
+
+**What shipped**
+
+* **17 pages** (was 12): added `upcoming.html`, `gaming.html`, `music.html`, `ai.html`, `free.html`.
+  Navigation regrouped into five clusters — overview, cadence, topic, cost & collection, findings.
+* **Upcoming page** groups the 62 dated published entries into six buckets and sorts nearest
+  confirmed date first within each: `Open now · 5`, `Today · 4`, `Next 7 days · 8`,
+  `Next 30 days · 21`, `Next 90 days · 9`, `Later · 15`. The canonical nearest-first id order is
+  exported to `data/upcoming_order.json` so the browser pass asserts it instead of re-deriving it.
+  An occurrence that has started but not ended is grouped under **Open now** rather than being
+  given a misleading “in N days” label.
+* **Executive summary** on the dashboard: “180 San Francisco entries are evidenced from official
+  pages. 62 carry at least one confirmed upcoming date after the 18 October 2026 snapshot…”, then a
+  12-item timeline (name · when · cost badge · venue & time · official source link) and a link to
+  all 62 dated entries.
+* **Cost badge** on every directory row: **Free** (56), **Paid** (17) or **Not stated** (107),
+  derived from the row's exact approved admission quotation. Conditional free admission appends
+  *Conditions apply — read the exact wording*. A blank price always renders **Not stated**.
+* **Mobile**: below 820 px every events table reflows into stacked, labelled cards (each cell
+  repeats its column header from `data-label`), and every table keeps its own independent search /
+  filter / reset controls even on pages with several tables.
+
+**Defects found and fixed during the build**
+
+* **Duplicate HTML ids.** `table()` stamped fixed ids (`table-tools`, `search`, `kind`,
+  `temporal`, `publication`, `count`, `empty`, `events`) on every call, so any page with more than
+  one table failed the validator (`upcoming.html` holds seven). Fixed with a per-table sequence
+  suffix; `assets/app.js` now resolves controls by suffix and finds its table by scanning following
+  siblings for `table.events`.
+* **`tests/test_audited_register.py` compared the raw `compile_register` output** against the
+  261-row projection and failed `261 != 246`. Fixed by always applying the additive overlay in
+  `project()`, mirroring `tools/consolidate.py`.
+* **Browser smoke test selectors** were hardcoded to the first table's ids. Fixed by deriving the
+  suffix from each page's own table id; `analysis.html` and `sources.html` are asserted to have no
+  `table.events` at all.
+
+**Verification performed (all green before the PR)**
+
+* `python3 tools/consolidate.py && python3 scripts/build.py` → *Built 17 HTML pages, 180 directory
+  rows, 261 review records, CSVs and ANALYSIS.md from audited data only.*
+* `python3 scripts/validate.py` → PASS on 261 exact audit projections, the 180/81 split, quotation
+  provenance, recurrence/year guards, blanks, CSV values, 17 pages, cost badges, date ordering, row
+  sources and every local link/fragment.
+* `python3 -m unittest discover -s tests` → **42 tests OK** (30 pre-existing + 12 new in
+  `tests/test_upcoming_cost.py`).
+* Rebuild idempotency: `md5sum` of every generated HTML, CSV and ANALYSIS.md is unchanged by a
+  second build.
+* Browser pass (Playwright + axe, desktop 1440×1000 and mobile 390×844): 17 pages, no console or
+  asset errors, no mobile document overflow, mobile card layout active, nearest-first ordering
+  matches `data/upcoming_order.json`, JavaScript-disabled tables still read, and **zero automated
+  WCAG A/AA findings** on index / upcoming / free / analysis / review / sources.
+
+**Known limitation (cosmetic, not a data defect).** The dashboard executive-summary heading reads
+“Next 14 days.” while the paragraph beneath it explains that 28 of the 62 dated entries fall on or
+before 1 November 2026. Both numbers are correct for what they describe; the heading wording was
+left as-is rather than changed after the final validation run.

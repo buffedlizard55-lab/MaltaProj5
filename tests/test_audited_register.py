@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from audited_register import compile_register, temporal, validate_decision  # noqa: E402
+from register_3adf31d9 import extend as extend_register  # noqa: E402
 from audit_evidence import retain_capture  # noqa: E402
 
 
@@ -25,15 +26,16 @@ class AuditedRegister(unittest.TestCase):
 
     def project(self, audit=None, history=None):
         h = history or self.history
-        return compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit)
+        # The additive 3adf31d9 overlay always runs last, exactly as in consolidate.py.
+        return extend_register(*compile_register(h['events'], h['sources'], h['review_findings'], audit or self.audit))
 
     def test_baseline_retained_and_new_entries_identified(self):
         self.assertEqual(len(self.history['events']), 233)
         self.assertEqual(len(self.audit['candidates']), 231)
         self.assertEqual(len(self.audit['extra_events']), 13)
-        self.assertEqual(len(self.rows), 246)
+        self.assertEqual(len(self.rows), 261)  # 246 audited + 15 from the additive 3adf31d9 overlay
         self.assertTrue(set(self.audit['candidates']) <= set(self.by_id))
-        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 167)
+        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 180)
 
     def test_upstream_additions_and_source_repair_are_preserved(self):
         self.assertIn('f1-alemany-flea-market', self.by_id)

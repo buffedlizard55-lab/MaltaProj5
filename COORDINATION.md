@@ -30,7 +30,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
 | `526a8db6` | `arena/526a8db6-maltaproj5` | 2026-10-18 | Independent final audit of delivered register, build, CI, and live publication (T19) |
 | `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 04:20 UTC | Post-publication data consistency fix and regression validation (T20) |
-| `f1fd3c36` | `arena/f1fd3c36-maltaproj5` | 2026-10-18 03:40 | Post-publication audit: independent line-by-line re-verification of the live 231-row register against official pages, corrections, Flagged page update, PR → main (T19–T21) |
+| `f1fd3c36` | `arena/f1fd3c36-maltaproj5` | 2026-10-18 03:40 | Post-publication audit: independent line-by-line re-verification of the live register against official pages, 28 corrections, 2 rows added, Flagged page update, PR #18 → main, merged (T22–T24) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -67,7 +67,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **in progress** | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
 | T22 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | done — 70 rows re-read: 36 confirmed, 28 corrected, 6 unverified/flagged, 2 rows added (`data/audit_f1fd3c36.json`) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
 | T23 | Pipeline irregularity fixes found during T22 (e.g. rows that carry a value *and* an "unverified; left blank" note) | done — `apply_audit.py` removes value-plus-"unverified" contradictions (3 rows) and re-asserts blank⇔note consistency for every row; validate passes | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
-| T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **in progress** — rebuilt (233 rows, 235 sources, 20 findings), validated; PR → `main` opening (link recorded below when merged) | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
+| T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **done — live**: PR [#18](https://github.com/buffedlizard55-lab/MaltaProj5/pull/18) merged 03:20 UTC (merge commit `9044bf8`); CI `Validate site` green on the PR; Pages build `built` for `9044bf8` | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -735,3 +735,11 @@ PRs #14, #15 and #16 merged while this audit was in progress. Resolution, discar
 | `scripts/build.py` | Auto-merged (main's SF Travel exception wording + this session's audit paragraph). |
 | `ANALYSIS.md`, `README.md` | This branch's versions (they add the audit section) with counts re-synced to the merged output: 233 rows, 235 sources, 140 domains. |
 | `COORDINATION.md` | Both boards and all audit logs preserved. Task-number collision: this session's tasks renumbered **T22–T24** (`526a8db6` T19, `99662c40` T20, `cebeabf0` T21 stand). |
+
+### PR record — `f1fd3c36`
+
+* PR: https://github.com/buffedlizard55-lab/MaltaProj5/pull/18 — **merged** 2026-10-18 03:20 UTC, merge commit `9044bf8`.
+* CI on the PR head (`0b7a787`): `Validate site` run 39092990628 — all steps success (rebuild, validate, regeneration assert, remote link check, name-match report).
+* Pages: latest build `built` for commit `9044bf8` (branch mode, `main` / root); site https://buffedlizard55-lab.github.io/MaltaProj5/ now serves 233 rows.
+* Published state: 233 rows (Weekly 26 · Monthly 12 · Annual 137 · Special 58) · 235 source records / 140 domains · 20 findings · 147 field-level · 78 page-level · 8 flagged.
+* Open follow-ups for any later session (not blocking): Disability History Tour and Super Bowl LX fan events still rest on an SF Travel listing; Lowrider Parade 2026 edition not yet on the organizer site; Castro Night Market individual dates not published; Club Darc dates come from the organizer's AXS series page; the two Symphony PDF rows were not re-read this pass.

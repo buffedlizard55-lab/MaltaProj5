@@ -2582,6 +2582,50 @@
    "g-sfpl-social-chess-club-visitacion-valley"
   ]
  },
+ "n-154a97db611a": {
+  "url": "https://noontimeconcerts.org/",
+  "publisher": "noontimeconcerts.org",
+  "title": "Noontime Concerts | San Francisco's Musical Lunch Break",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "f-noontime-concerts"
+  ]
+ },
+ "n-1682bcb6d772": {
+  "url": "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library",
+  "publisher": "sfpl.org",
+  "title": "Level up with Tech Week at San Francisco Public Library",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": null,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-sfpl-tech-week"
+  ]
+ },
  "n-1872f8a781a7": {
   "url": "https://www.aicouncil.com/",
   "publisher": "aicouncil.com",
@@ -2603,6 +2647,71 @@
    "a-ai-council-2027"
   ]
  },
+ "n-243a6c0ca2f1": {
+  "url": "https://gracecathedral.org/organs/",
+  "publisher": "gracecathedral.org",
+  "title": "Organ Recital Series - Grace Cathedral",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "f-grace-cathedral-organ-recital-series"
+  ]
+ },
+ "n-24444ab049f6": {
+  "url": "https://sfpl.org/teens/the-mix",
+  "publisher": "sfpl.org",
+  "title": "The Mix",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": null,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-sfpl-mix-gaming"
+  ]
+ },
+ "n-25b8afd92b67": {
+  "url": "https://sfpl.org/teens",
+  "publisher": "sfpl.org",
+  "title": "Teens at SFPL",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": null,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-sfpl-mix-gaming"
+  ]
+ },
  "n-2a77a63dd3d3": {
   "url": "https://sfpl.org/events/2026/07/26/social-afternoon-board-games",
   "publisher": "sfpl.org",
@@ -2622,6 +2731,50 @@
   },
   "approved_for_rows": [
    "g-sfpl-afternoon-board-games-sunset"
+  ]
+ },
+ "n-307fc8619aac": {
+  "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+  "publisher": "nps.gov",
+  "title": "Sea Chantey Sing",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "f-sea-chantey-sing"
+  ]
+ },
+ "n-3293a6ae3ff3": {
+  "url": "https://sfpl.org/teens/the-mix/gaming",
+  "publisher": "sfpl.org",
+  "title": "Gaming at The Mix",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": null,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-sfpl-mix-gaming"
   ]
  },
  "n-3471b8df6be3": {
@@ -2670,6 +2823,30 @@
    "a-iclr-2027"
   ]
  },
+ "n-539b3becfc85": {
+  "url": "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+  "publisher": "milibrary.org",
+  "title": "Tournament - Mechanics' Institute",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 2,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-mi-chess-socials",
+   "f-mi-winter-tuesday-night-marathon-2026"
+  ]
+ },
  "n-55e0d564d207": {
   "url": "https://sfpl.org/events/2026/05/09/activity-chess-club",
   "publisher": "sfpl.org",
@@ -2712,6 +2889,29 @@
   },
   "approved_for_rows": [
    "a-ai-engineer-worlds-fair-2027"
+  ]
+ },
+ "n-63caecc772fb": {
+  "url": "https://noontimeconcerts.org/about-noontime-concerts/",
+  "publisher": "noontimeconcerts.org",
+  "title": "about noontime concerts | Noontime Concerts",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 2,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-noontime-concerts"
   ]
  },
  "n-645e763f3886": {
@@ -2779,6 +2979,29 @@
    "g-sfpl-game-night-marina"
   ]
  },
+ "n-7f28d185a98a": {
+  "url": "https://gracecathedral.org/series/organ-recital-series/",
+  "publisher": "gracecathedral.org",
+  "title": "Organ Recital Series - Grace Cathedral",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 2,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-grace-cathedral-organ-recital-series"
+  ]
+ },
  "n-9e46fc64af9f": {
   "url": "https://www.moscone.com/events/tdx-2027",
   "publisher": "moscone.com",
@@ -2800,6 +3023,27 @@
   },
   "approved_for_rows": [
    "a-tdx-2027"
+  ]
+ },
+ "n-b1c41e8296e6": {
+  "url": "https://gracecathedral.org/calendar-events/category/music/list/?posts_per_page=26&tribe-bar-date=2029-12-20&eventDisplay=past",
+  "publisher": "gracecathedral.org",
+  "title": "Past Events from June 8, 2025",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "",
+  "http": null,
+  "tool_excerpt_available": true,
+  "tool_checked_at": "2026-10-18",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace web_search",
+   "chunks_retrieved": [],
+   "chunks_total": null,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-grace-cathedral-organ-recital-series"
   ]
  },
  "n-b344e8fc540b": {
@@ -2848,6 +3092,29 @@
    "g-sf-scholastic-chess-championship"
   ]
  },
+ "n-c51336c8be42": {
+  "url": "https://noontimeconcerts.org/directions-and-location/",
+  "publisher": "noontimeconcerts.org",
+  "title": "directions and location | Noontime Concerts",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 1,
+   "complete": true
+  },
+  "approved_for_rows": [
+   "f-noontime-concerts"
+  ]
+ },
  "n-de712b2325d6": {
   "url": "https://www.sterngrove.org/about-us",
   "publisher": "sterngrove.org",
@@ -2891,7 +3158,31 @@
    "complete": false
   },
   "approved_for_rows": [
-   "g-mi-introduction-to-chess"
+   "g-mi-introduction-to-chess",
+   "f-mi-chess-socials"
+  ]
+ },
+ "n-f128e36240c6": {
+  "url": "https://archive.org/about/contact",
+  "publisher": "archive.org",
+  "title": "Contact",
+  "source_role": "Official cited page; link alone is not a verified fact",
+  "captured_at": "2026-10-18T11:20:00+00:00",
+  "http": null,
+  "tool_excerpt_available": false,
+  "tool_checked_at": "",
+  "latest_attempt": null,
+  "audit_snapshot": "data/audit_21f3dd85.json",
+  "retrieval": {
+   "method": "workspace fetch_page",
+   "chunks_retrieved": [
+    0
+   ],
+   "chunks_total": 2,
+   "complete": false
+  },
+  "approved_for_rows": [
+   "f-internet-archive-tours"
   ]
  },
  "n-f5f7c20bf7b8": {
@@ -3081,7 +3372,10 @@
    "text_truncated": false
   },
   "audit_snapshot": "data/audit_64f8b973.json",
-  "approved_for_rows": []
+  "approved_for_rows": [
+   "f-sfpl-mix-gaming",
+   "f-sfpl-tech-week"
+  ]
  },
  "sfzoo-freeday": {
   "url": "https://www.sfzoo.org/",

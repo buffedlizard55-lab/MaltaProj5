@@ -4,10 +4,11 @@
 
 ## Evidence model
 
-1. Preserved historical inputs are unverified candidates, not authoritative facts. Two additive,
+1. Preserved historical inputs are unverified candidates, not authoritative facts. Three additive,
    fail-closed research overlays now sit on top of the mainline audit: session `59f56c24`'s five
-   official-calendar entries (merged into `data/audit_64f8b973.json`) and session `3adf31d9`'s
-   fifteen topic-gap entries (`data/audit_3adf31d9.json`). Neither can approve or edit a field
+   official-calendar entries (merged into `data/audit_64f8b973.json`), session `3adf31d9`'s
+   fifteen topic-gap entries (`data/audit_3adf31d9.json`) and session `21f3dd85`'s eight
+   free-first entries (`data/audit_21f3dd85.json`). None can approve or edit a field
    produced by the other or by the mainline overlay. The newer mainline `audit_f1fd3c36.json` and its tool are preserved unchanged and run only in an isolated candidate-history tree; their old labels never approve fields. Both upstream-added candidates and the 2026 Sketchfest reference remain available.
 2. `data/audit_64f8b973.json` stores finite official page/PDF text captures, request metadata, separately labeled selected retrieval-tool excerpts, structured event JSON-LD and explicit decisions.
 3. Every approved name, schedule, time, venue, admission condition, recurrence and normalized occurrence has supporting quotations. Geography records explain how the official event/venue is placed inside SF; unrelated footer/marketing city tokens are not acceptable.
@@ -15,7 +16,7 @@
 5. Exact substring checks establish quotation provenance, **not contextual applicability**. Editions, ticket eligibility, date conflicts and geography require recorded research judgment. JSON-LD is identified as structured evidence, not misrepresented as visible page text.
 6. Only approved full ISO dates drive snapshot-relative temporal labels. No date parser invents a year from a URL slug, weekday, copyright, season header or unrelated event. Recurrence never generates future occurrences.
 
-The public ledger contains **264 distinct cited URLs across 150 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
+The public ledger contains **277 distinct cited URLs across 150 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
 
 ## Topic-gap overlay (session `3adf31d9`)
 
@@ -59,6 +60,42 @@ Deliberate non-approvals, each of which left a value blank rather than plausible
 7. **Stern Grove carries no occurrence date.** The official pages support an annual cadence
    (“since 1938”, “Every summer”) but no 2027 season dates were published on them.
 
+## Free-first overlay (session `21f3dd85`)
+
+The topic-gap pass left only one free gaming entry, no dated free gaming or AI entry, and few
+dated free music entries. Session `21f3dd85` added **8** candidates from official pages only,
+stored in `data/audit_21f3dd85.json` and narrated in [the research log](data/research/audit-21f3dd85.md):
+six listed (five free, one paid for the separate Paid section) and two held for review. The
+overlay is additive and fail-closed and runs after `tools/register_3adf31d9.py`.
+
+Retrieval honesty: this session's fetch tool does not report an HTTP status code and families run
+through shims that can inject non-content text, so **no capture in this pass claims an HTTP 200**;
+each stores `http: null` with its retrieval method (`tool_fetch` for page-body reads, `tool_excerpt`
+for verbatim search-tool text tied to the exact official URL), following the honesty rules the
+topic-gap pass set for snippets. Verified HTTP status still comes only from the CI reachability
+check.
+
+Evidence judgments specific to this pass:
+
+1. **SFPL's all-programs sentence is quoted as the admission text for new SFPL rows only.** For its
+   two new library entries, the pass approves the verbatim sentence *"All programs and events are
+   free and open to the public"* from the official SFPL events index (sfpl.org/events) — the
+   organizer's own policy statement governing those programs, shown unedited in the row (see the
+   research log). The topic-gap pass did not have that quote and left its library prices blank;
+   those rows are **unchanged** — additivity forbids copying the value onto them. "Library-held,
+   therefore presumably free" is still never used; only the quoted sentence is.
+2. **Yearless dates stay dateless.** The Mechanics' Institute Chess Socials list ("Nov 6, Dec 4")
+   carries no year, so the row is listed as a monthly pattern with zero ISO occurrences.
+3. **A title is never invented.** The Internet Archive's free Friday tours are evidenced for
+   schedule, time, venue and cost, but archive.org gives the programme no title, so the candidate
+   is held for review under its inherited identifier.
+4. **Conflicting admission terms stay blank.** Grace Cathedral's official pages say both "free
+   organ recital" and that unregistered Sunday visitors pay, so the Organ Recital Series is held
+   for review with price blank; no side of the contradiction is quoted as the answer.
+5. **The held Introduction to Chess row is not duplicated.** The classes page now evidences its
+   venue ("Onsite in the Chess Room at Mechanics'…"), but overlays may not edit earlier rows; the
+   new evidence is logged for a future integration session. Its free status remains members-only.
+
 ## Representative official pages and scope
 
 - Foodwise: https://foodwise.org/markets/ferry-plaza-farmers-market/ and https://foodwise.org/markets/mission-community-market/ — operator schedules/venues; not blanket proof of free admission.
@@ -73,6 +110,10 @@ Deliberate non-approvals, each of which left a value blank rather than plausible
 - Pride: https://sfpride.org/ and https://sfpride.org/events/ — 2027 combined weekend versus 2026 event details are kept distinct.
 - SFMOMA: https://www.sfmoma.org/exhibitions/ and https://www.sfmoma.org/exhibition/rm-x-sfmoma/ — exhibition/dated event blocks, explicit event JSON-LD address, and additional RM surcharge rather than a falsely low total ticket price.
 - YBG Festival: https://ybgfestival.org/ and https://ybgfestival.org/visitor-info/ — current calendar plus explicit SF gardens geography. New Halloween/jazz entries use the 2026 calendar context, not an inferred year.
+- Noontime Concerts: https://noontimeconcerts.org/ and https://noontimeconcerts.org/about-noontime-concerts/ — free weekly Tuesday concerts with dated fall 2026 performances and a not-ticketed/donation admission note.
+- National Park Service: https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD — dated official Sea Chantey Sing event page (free, monthly cadence, Maritime Museum address).
+- Mechanics' Institute: https://www.milibrary.org/chess/chess-classes/ and https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon — free monthly chess socials (yearless dates left dateless) and a priced tournament with exact member/non-member entry fees.
+- SFPL: https://sfpl.org/teens/the-mix/gaming and https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library — monthly gaming tournaments at The Mix and the annual free Tech Week with named AI sessions; admission for the two new library rows quotes the events index's all-programs-free sentence verbatim.
 
 Every other candidate retains its own official links and approved/blank fields in the HTML evidence page and JSON decision ledger.
 

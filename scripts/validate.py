@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from audited_register import FIELDS, compile_register, normal  # noqa: E402
 from register_3adf31d9 import extend as extend_register, topic_of, cost_of, next_date  # noqa: E402
+from register_21f3dd85 import extend as extend_register_21f3dd85  # noqa: E402
 
 TOPIC_PAGES = {'gaming.html': 'Gaming', 'music.html': 'Music', 'ai.html': 'AI & technology'}
 
@@ -100,8 +101,10 @@ def main():
     assert history['warning'].startswith('UNVERIFIED'), 'Historical claims need an explicit warning'
     expected = compile_register(history['events'], history['sources'], history['review_findings'], audit)
     expected = extend_register(*expected)
-    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection plus the additive 3adf31d9 overlay. Rebuild; never run the old matcher applicator.'
+    expected = extend_register_21f3dd85(*expected)
+    assert (rows, sources, review, summary) == expected, 'Canonical data is not the exact fail-closed audit projection plus the additive 3adf31d9 and 21f3dd85 overlays. Rebuild; never run the old matcher applicator.'
     assert {r['id'] for r in rows} >= set(load('audit_3adf31d9.json')['candidates']), 'New-research candidates were dropped'
+    assert {r['id'] for r in rows} >= set(load('audit_21f3dd85.json')['candidates']), 'Free-first candidates were dropped'
     ids = {r['id'] for r in rows}
     assert len(ids) == len(rows)
     assert set(audit['candidates']) <= ids, 'An inherited candidate was silently discarded'
@@ -131,7 +134,7 @@ def main():
         page.feed(path.read_text())
         assert page.lang == 'en' and page.has_title and page.h1 == 1 and page.viewport, path.name
         pages[path.name] = page
-    assert len(pages) == 18, 'Unexpected page set'
+    assert len(pages) == 19, 'Unexpected page set'
     for name, page in pages.items():
         for href in page.links:
             url = urlsplit(href)
@@ -161,13 +164,22 @@ def main():
                 assert cells[0].startswith(normal(row['name']))
             else:
                 assert 'Unverified inherited identifier' in cells[0]
-    assert set(pages['index.html'].event_rows) == {r['id'] for r in listed}
+    # Free-first landing page (T38): its tables carry free entries only — the dated
+    # ones plus the recurring ones whose next date is unconfirmed. The whole
+    # directory stays on focus.html and upcoming.html (asserted below).
+    free_ids = {r['id'] for r in listed if cost_of(r)[0] == 'Free'}
+    dated_ids_set = {r['id'] for r in listed if next_date(r)}
+    recurring_ids = {r['id'] for r in listed if r['kind'] in ('Weekly', 'Monthly', 'Annual')}
+    assert set(pages['index.html'].event_rows) == (free_ids & dated_ids_set) | (free_ids & (recurring_ids - dated_ids_set))
+    assert set(pages['index.html'].event_rows) <= free_ids, 'A non-free row reached the free-first landing page'
     assert set(pages['review.html'].event_rows) == ids
     # Upcoming carries every listed entry: dated first, then recurring, then undated.
     assert set(pages['upcoming.html'].event_rows) == {r['id'] for r in listed}
     for name, topic in TOPIC_PAGES.items():
         assert set(pages[name].event_rows) == {r['id'] for r in listed if topic_of(r) == topic}, name
     assert set(pages['free.html'].event_rows) == {r['id'] for r in listed if cost_of(r)[0] == 'Free'}
+    # Separate Paid section (T39): only rows whose quoted admission text is priced.
+    assert set(pages['paid.html'].event_rows) == {r['id'] for r in listed if cost_of(r)[0] == 'Paid'}
     # Session 59f56c24's combined focus page: the whole directory, Gaming / Music / AI / Other.
     assert set(pages['focus.html'].event_rows) == {r['id'] for r in listed}
     focus_order = {'Gaming': 0, 'Music': 1, 'AI & technology': 2, 'Other': 3}
@@ -180,10 +192,13 @@ def main():
     ordered = [rid for rid in pages['upcoming.html'].event_rows if next_date(next(r for r in rows if r['id'] == rid))]
     dated_ids = [r['id'] for r in sorted((r for r in listed if next_date(r)), key=lambda r: (next_date(r), r['name'].casefold()))]
     assert ordered == dated_ids, 'Upcoming page is not ordered nearest-first by approved date'
-    # Executive summary: the landing page lists the soonest entries before the table.
+    # Executive summary (T38): the landing page lists the soonest FREE dated entries,
+    # nearest first, before every table. Paid and Not-stated rows never appear there.
+    free_dated_ids = [r['id'] for r in sorted((r for r in listed if next_date(r) and cost_of(r)[0] == 'Free'), key=lambda r: (next_date(r), r['name'].casefold()))]
     index_page = pages['index.html']
     summary_links = [href for href in index_page.links if href.startswith('upcoming.html#')]
-    assert summary_links[:min(12, len(dated_ids))] == ['upcoming.html#' + rid for rid in dated_ids[:12]], 'Executive summary is not ordered by date'
+    assert summary_links[:min(12, len(free_dated_ids))] == ['upcoming.html#' + rid for rid in free_dated_ids[:12]], 'Executive summary is not the soonest free entries by date'
+    assert all(cost_of(by_id[href.split('#', 1)[1]])[0] == 'Free' for href in summary_links), 'Executive summary links a non-free row'
     for name, kind in [('weekly.html', 'Weekly'), ('monthly.html', 'Monthly'), ('annual.html', 'Annual'), ('special.html', 'Special')]:
         assert set(pages[name].event_rows) == {r['id'] for r in listed if r['kind'] == kind}
     for name, category in [('markets.html', 'Markets & food'), ('museums.html', 'Museums & science'), ('culture.html', 'Festivals & culture'), ('community.html', 'Community & outdoors')]:
@@ -195,7 +210,7 @@ def main():
         assert '18 October 2026' in text
         assert 'not a real-time' in text or name in {'analysis.html', 'review.html', 'sources.html'}
         assert 'Page-level check' not in text and 'Field-level check' not in text
-    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 18 pages, cost badges, date ordering, row sources and local links/fragments.')
+    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 19 pages, cost badges, free-upcoming dashboard, separate paid section, date ordering, row sources and local links/fragments.')
 
 
 if __name__ == '__main__':

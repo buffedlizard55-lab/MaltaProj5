@@ -44,5 +44,25 @@
   "title": "Topic tags and cost badges are labels, not verified fields",
   "detail": "The Gaming / Music / AI & technology tags are editorial presentation labels derived from the verified event name (or from this session's explicit decision). A tag never changes a fact, a date or a source, and it is not evidence that an event belongs to a genre. The Free / Paid / Not stated badge is computed only from the verified admission text quoted from the official page, and the exact official wording is always shown next to the badge. A blank admission cell is 'Not stated', never 'Free'.",
   "urls": []
+ },
+ {
+  "title": "Free-first research pass (session 21f3dd85)",
+  "detail": "8 entries were added from official organizer, venue, library and government pages, free gaming/music/AI first: Noontime Concerts (free weekly classical series with three dated Tuesday concerts), the National Park Service Sea Chantey Sing (free, monthly, dated 5 December 2026), the Mechanics' Institute Chess Socials (free, monthly), gaming tournaments at the San Francisco Public Library's Mix teen space (monthly), and the library's annual Tech Week (free workshops including AI sessions). One paid gaming entry — the Mechanics' Institute 2026 Winter Tuesday Night Marathon chess tournament ($70 members / $100 non-members, 3 November to 15 December 2026) — was collected for the separate Paid section. Every value is quoted from the page read on 18 October 2026; where a page states no time or date, the cell stays blank. The Mechanics' Institute chess-classes page lists Chess Socials dates ('Nov 6, Dec 4') without a year, so no ISO occurrence was approved from that list.",
+  "urls": [
+   "https://noontimeconcerts.org/",
+   "https://www.nps.gov/planyourvisit/event-details.htm?id=2B52B414-F0EF-9707-2656479F9CAE0CBD",
+   "https://www.milibrary.org/chess/chess-classes/",
+   "https://www.milibrary.org/chess/tournaments/2026-winter-tuesday-night-marathon",
+   "https://sfpl.org/releases/2026/04/24/level-tech-week-san-francisco-public-library"
+  ]
+ },
+ {
+  "title": "SFPL admission judgment, two holds, and evidence for a held chess class",
+  "detail": "For its two new San Francisco Public Library rows this session quotes the library's official events index — 'All programs and events are free and open to the public.' (sfpl.org/events) — as admission evidence, applying that explicit all-programmes statement in context. The seven SFPL gaming rows added by session 3adf31d9 did not cite the index statement, so their admission cells stay blank ('Not stated'); no earlier row was edited, and the visible inconsistency is flagged for a future harmonization decision. Two candidates are held for review: the Internet Archive's Friday public tours (schedule, time, venue and free admission are all confirmed on archive.org, but the page gives the programme no title, and this register requires an approved event name), and Grace Cathedral's Organ Recital Series (official pages conflict — 'Cost: Free' and 'free organ recital' on some recital pages versus a Sunday visitor admission fee unless registered in advance on another, with no price on the fetched series page). Separately, the Mechanics' Institute chess-classes page now states a venue ('Onsite in the Chess Room at Mechanics'') and member pricing for the held 'Introduction to Chess' candidate; that evidence is recorded in data/research/audit-21f3dd85.md for a future corrections pass rather than published as a duplicate row.",
+  "urls": [
+   "https://sfpl.org/events",
+   "https://archive.org/about/contact",
+   "https://gracecathedral.org/series/organ-recital-series/"
+  ]
  }
 ]

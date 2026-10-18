@@ -838,3 +838,9 @@ apply_audit(rows, sources, review)
 # AI/technology entries only. Same fail-closed rules; never edits an existing row.
 from register_3adf31d9 import apply_extension
 apply_extension()
+
+# Additive free-first overlay (session 21f3dd85, T37): free gaming/music/AI
+# entries first, then other free entries, plus one paid gaming entry for the
+# separate Paid section. Same fail-closed rules; chained last, never edits a row.
+from register_21f3dd85 import apply_extension as apply_extension_21f3dd85
+apply_extension_21f3dd85()

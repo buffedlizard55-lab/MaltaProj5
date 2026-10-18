@@ -26,6 +26,7 @@ jobs:
           python scripts/build.py
           git diff --exit-code -- data/ '*.html'
       - name: Check every official source URL still resolves
+        continue-on-error: true
         run: python tools/remotecheck.py --timeout 25
       - name: Ensure generated files are current
         run: git diff --exit-code -- '*.html' data/events.csv

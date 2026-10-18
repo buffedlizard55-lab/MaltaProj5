@@ -1,7 +1,7 @@
 # ANALYSIS.md — findings from the verified San Francisco register
 
 Snapshot **2026-10-18**. Every figure below is computed from `data/events.json`
-(233 rows), `data/sources.json` (234 records), `data/review.json` (20 findings) and
+(233 rows), `data/sources.json` (235 records), `data/review.json` (20 findings) and
 `data/verify_report.json` (a saved machine-fetch snapshot with the coverage gaps documented below). The published version of this
 analysis is `analysis.html`.
 
@@ -19,8 +19,8 @@ analysis is `analysis.html`.
 | — community & outdoors | 61 |
 | — markets & food | 35 |
 | — museums & science | 23 |
-| Official source records | 234 |
-| Distinct source domains | 139 |
+| Official source records | 235 |
+| Distinct source domains | 140 |
 | Rows verified field-level | 147 |
 | Rows verified page-level | 78 |
 | Rows flagged for review | 8 |
@@ -118,7 +118,7 @@ over-represented because their organizers publish machine-readable pages.
 
 ### 4. Source concentration is high, and that is a risk
 
-234 source records sit on 139 domains, but a handful of publishers supply many rows: San Francisco
+235 source records sit on 140 domains, but a handful of publishers supply many rows: San Francisco
 Opera's season press page covers five productions, PIER 39's events page covers two rows, and 12
 rows cite San Francisco Travel (the city's destination-marketing body); after the audit, organizer
 pages were added to 9 of them and only 2 (Disability History Tour, Super Bowl LX fan events) rest

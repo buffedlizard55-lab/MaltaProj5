@@ -364,7 +364,9 @@ write("review.html", "Flagged for Review",
 
 body = '''<section class="prose"><h2>Verification rules</h2><ol>
 <li>Only organizer, venue, museum or municipal pages supply admitted facts. Tourism-board guides and
-third-party calendars were used for discovery only, never as the sole row evidence.</li>
+third-party calendars were used for discovery only. Exception, published rather than hidden: a small number of
+rows could be sourced only to SF Travel (the city's destination-marketing body); those rows are labelled
+<b>flagged</b>, named in the source-concentration finding, and listed on the Flagged for Review page.</li>
 <li>Official pages were read on 18 October 2026 and the supported event names, schedules, times, venues and
 admission restrictions transcribed. Excerpts below are selected transcriptions, not complete archived pages.</li>
 <li>Weekly, monthly and annual classifications require explicit recurrence language. <i>Special</i> is an

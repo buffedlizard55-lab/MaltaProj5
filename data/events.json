@@ -4609,30 +4609,35 @@
   "name": "SF Sketchfest (San Francisco Comedy Festival)",
   "category": "Festivals & culture",
   "kind": "Annual",
-  "schedule": "Annual (January) \u2014 24th SF Sketchfest: January 14\u201331, 2027",
+  "schedule": "Annual (January) \u2014 2026: January 15 \u2013 February 1, 2026 (official 2026 schedule, per audit cebeabf0); 2027: 24th SF Sketchfest January 14\u201331, 2027 (sfsketchfest.com)",
   "time": "",
   "venue": "Various venues, Citywide",
   "price": "Ticketed",
   "sources": [
+   "x-sfsketchfest2026-sched-com",
    "x-www-sfsketchfest-com"
   ],
   "evidence": {
    "name": [
+    "x-sfsketchfest2026-sched-com",
     "x-www-sfsketchfest-com"
    ],
    "schedule": [
     "x-www-sfsketchfest-com"
    ],
    "venue": [
-    "x-www-sfsketchfest-com"
+    "x-www-sfsketchfest-com",
+    "x-sfsketchfest2026-sched-com"
    ],
    "price": [
-    "x-www-sfsketchfest-com"
+    "x-www-sfsketchfest-com",
+    "x-sfsketchfest2026-sched-com"
    ]
   },
   "notes": "Nationally recognized comedy festival.",
   "flags": [
-   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule. Page: https://sfsketchfest.com/. Next edition added; the 2026 edition dates previously recorded are not shown on the current official page."
+   "Date correction (audit cebeabf0, 2026-10-18): the authored register carried 'Jan 16 - Feb 2' \u2014 those are the 2025 edition's dates. The official SF Sketchfest 2026 schedule (sfsketchfest2026.sched.com, linked from sfsketchfest.com) opens Thursday, January 15, 2026, and the 2026 run is January 15\u2013February 1, 2026; the schedule field was corrected to match. sfsketchfest.com itself blocks automated clients (403).",
+   "Manual re-read 2026-10-18 (session f1fd3c36): values changed to match the official page: schedule. Page: https://sfsketchfest.com/. Next edition added from sfsketchfest.com; the 2026 dates corrected by session cebeabf0 from the official Sched calendar are retained."
   ],
   "unverified": [
    "time: unverified \u2014 the cited page states the date but not a separate start/end time; see the date column."

@@ -167,13 +167,10 @@ def main():
                 assert cells[0].startswith(normal(row['name']))
             else:
                 assert 'Unverified inherited identifier' in cells[0]
-    # Free-first landing page (T38): its tables carry free entries only — the dated
-    # ones plus the recurring ones whose next date is unconfirmed. The whole
-    # directory stays on focus.html and upcoming.html (asserted below).
+    # A recurrence pattern alone never qualifies an entry as upcoming.
     free_ids = {r['id'] for r in listed if cost_of(r)[0] == 'Free'}
     dated_ids_set = {r['id'] for r in listed if next_date(r)}
-    recurring_ids = {r['id'] for r in listed if r['kind'] in ('Weekly', 'Monthly', 'Annual')}
-    assert set(pages['index.html'].event_rows) == (free_ids & dated_ids_set) | (free_ids & (recurring_ids - dated_ids_set))
+    assert set(pages['index.html'].event_rows) == free_ids & dated_ids_set
     assert set(pages['index.html'].event_rows) <= free_ids, 'A non-free row reached the free-first landing page'
     assert set(pages['review.html'].event_rows) == ids
     # Upcoming carries every listed entry: dated first, then recurring, then undated.

@@ -256,10 +256,10 @@ paid_rows = sorted((r for r in listed if cost_of(r)[0] == "Paid"), key=lambda r:
 free_next14 = sum(1 for r in free_dated if UPCOMING[r["id"]][2] <= 14)
 until14 = date.fromordinal(SNAPSHOT.toordinal() + 14).strftime("%-d %B %Y")
 summary_intro = (f"Free first: {len(free_dated)} events that are stated free on their official page also carry a "
-                 f"confirmed upcoming date after the {AS_OF} snapshot. They lead this page in date order, nearest "
+                 f"confirmed date on or after the {AS_OF} snapshot (or an event still open then). They lead this page in date order, nearest "
                  f"first. {free_next14} of them fall on or before {until14}. A further {len(free_recurring)} free "
-                 "entries recur weekly, monthly or annually with no confirmed next date and follow in the main "
-                 "section, ordered Gaming, Music, AI & technology, then everything else. Paid events are collected "
+                 "entries have recurring patterns but no confirmed next date; they are kept on the Free to attend "
+                 "and cadence pages, not listed here as upcoming. Paid events are collected "
                  "in a separate section and never mixed into this page.")
 
 
@@ -310,12 +310,10 @@ body += (f'<h2 id="free-upcoming">Free upcoming events — dated, nearest first 
          'approved upcoming date. Rows in the next 14 days are highlighted. The exact free-admission wording — '
          'including any conditions — is shown in the Admission column.</p>'
          + table(free_dated, nexts=UPCOMING))
-body += (f'<h2>Free recurring events — next date unconfirmed · {len(free_recurring)}</h2>'
-         '<p class="topic-note">Free weekly, monthly and annual patterns whose next occurrence no official page '
-         'dates in this snapshot, ordered Gaming, Music, AI &amp; technology, then everything else. A pattern '
-         'never generates a next date here.</p>'
-         + table(free_recurring, nexts=UPCOMING))
-body += (f'<p class="topic-note">This page lists free entries only. The complete city-only directory — '
+body += ('<p class="topic-note">Looking for recurring programmes? Browse the '
+         '<a href="free.html">Free to attend directory</a> or the cadence pages. '
+         'A recurring pattern without a confirmed future date is not an upcoming event.</p>')
+body += (f'<p class="topic-note">This page lists only free entries with confirmed upcoming dates. The complete city-only directory — '
          f'{len(listed)} entries at every cost — is on the <a href="focus.html">Focus page</a> and the '
          '<a href="upcoming.html">Upcoming page</a>; priced events have their own '
          '<a href="paid.html">Paid events section</a>.</p>')
@@ -358,7 +356,7 @@ for filename, category in [("markets.html", "Markets & food"), ("museums.html", 
 
 # ------------------------------------------------------------------- topic pages
 TOPIC_NOTES = {
-    "Gaming": "Chess clubs, board-game sessions and the game-industry festival inside San Francisco. Library and club programmes are free to walk into, but admission is only stated where the official page says so — otherwise the cell is blank and labelled “Not stated”.",
+    "Gaming": "Chess clubs, board-game sessions and the game-industry festival inside San Francisco. Admission is stated only where the official page confirms it; otherwise the cell is blank and labelled “Not stated”. Library or club affiliation alone does not establish free entry.",
     "Music": "Concert series, festivals and free outdoor music inside the city. Cost is taken from the exact admission wording on the official page, so a free festival with a ticket lottery still reads as free.",
     "AI & technology": "Conferences and developer events held in San Francisco. Most are ticketed industry events whose price the official pages did not quote in this snapshot, so their cost reads “Not stated” rather than being guessed.",
 }
@@ -478,6 +476,19 @@ for i, finding in enumerate(findings, 1):
 exclusions = load("exclusions.json")
 body += '<section class="prose"><h2>Out-of-city exclusions</h2><p>Examples include Levi’s Stadium in Santa Clara and the Cow Palace in Daly City. Historical exclusion records remain in <a href="data/exclusions.json">the exclusion log</a>. Regional/mixed-city candidates are held for review rather than admitted wholesale.</p></section>'
 body += '<h2>Candidate review register</h2>' + table(rows, review=True, nexts=UPCOMING)
+body += ('<section class="prose" id="upcoming-eligibility-audit"><h2>Upcoming eligibility audit · 18 October 2026</h2>'
+         '<p><b>Resolved:</b> 40 recurring entries without an approved upcoming date were removed from the landing page, '
+         'not from the directory. For example, the official '
+         '<a href="https://www.sfrecpark.org/calendar.aspx?PREVIEW=YES&amp;EID=9947">Sunday Fun Days listing</a> '
+         'ends its season on September 27, 2026; a weekly pattern cannot establish a later occurrence.</p>'
+         '<p><b>Needs review:</b> the two <a href="https://noontimeconcerts.org/">Noontime Concerts</a> entries '
+         'describe the same programme; they remain source-linked independent research records, not two unique events. '
+         'The <a href="https://gracecathedral.org/series/choral-evensong/">Choral Evensong page</a> '
+         'prints a Sunday 4:55PM–4:55PM time alongside Thursday 5:30 p.m. prose. '
+         'Do not apply the Thursday time to a Sunday occurrence; the existing row leaves time blank.</p>'
+         '<p>Fresh checks in this pass were targeted, not a new semantic audit of all 295 candidates. '
+         'Citywide completeness, live cancellations and future availability remain unverified. '
+         '<a href="data/research/audit-16b88bbd.md">Scope, official quotations and checks →</a></p></section>')
 write("review.html", "Flagged for Review.", "Unverified fields, unresolved conflicts and candidates held off the city-only directory—published openly, with official links for manual checking.", body)
 
 METHOD = '''<section class="prose" id="method"><h2>How evidence becomes a published field</h2><ol>
@@ -559,9 +570,10 @@ def export(filename, items, review=False):
 # The canonical nearest-first ordering, exported so the optional browser QA can
 # assert it instead of re-deriving it.
 (ROOT / 'data' / 'upcoming_order.json').write_text(json.dumps([r["id"] for r in dated], indent=1) + "\n")
-# The free-first landing page's two main-section tables, same rationale.
+# Only explicitly dated free entries appear in the landing table.
+# Keep the recurring key for compatibility, but it must remain empty.
 (ROOT / 'data' / 'dashboard_order.json').write_text(json.dumps(
-    {"dated": [r["id"] for r in free_dated], "recurring": [r["id"] for r in free_recurring]}, indent=1) + "\n")
+    {"dated": [r["id"] for r in free_dated], "recurring": []}, indent=1) + "\n")
 
 export('events.csv', listed)
 export('review.csv', rows, review=True)

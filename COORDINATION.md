@@ -1683,3 +1683,17 @@ absent from the pre-merge register).
   Parks once the 2027 park schedule is posted — all logged in
   [`data/research/audit-d57e2eeb.md`](data/research/audit-d57e2eeb.md) as open research items.
 
+
+## Session 16b88bbd — strict upcoming-only landing audit (2026-10-18)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| T-16b-1 Audit and repair landing-page eligibility; preserve recurring discovery separately; regression and integration | in progress | `16b88bbd` | `scripts/build.py`, `scripts/validate.py`, `tests/test_free_dashboard.py` (new), `README.md`, generated root HTML / `ANALYSIS.md` / `data/dashboard_order.json`, `data/research/audit-16b88bbd.md` (new), `COORDINATION.md` |
+
+Claim: existing integration tasks are completed; no open PRs found at claim time. No active scope is taken over. Historical in-progress log entries are not current claims. Work remains on Arena's fixed `arena/16b88bbd-maltaproj5` branch. Confirmed defect: dashboard main tables currently include 40 undated recurring entries, including expired seasonal programmes, despite the requirement for only free upcoming entries. This task changes presentation eligibility, not previously curated event facts. All 295 existing candidates and their provenance are retained. Official-source spot checks and structural checks will be distinguished; a comprehensive fresh semantic re-verification or exhaustive city coverage will not be claimed.
+
+Scope addition before implementation: existing `tests/test_upcoming_cost.py` and `tests/browser_smoke.cjs` encode the old two-table landing behavior and are included in T-16b-1; no active owner exists. New regression coverage goes in the existing test module rather than a duplicate `tests/test_free_dashboard.py`.
+
+T-16b-1 implementation complete: strict landing eligibility is now `Free ∩ approved upcoming date`, yielding 15 research records (not unique events), excluding 40 undated recurring records. All 295 candidate records preserved, 212 listed / 83 held; no curated facts changed. Removed blanket gaming-page claim that library/club programmes are free. Flagged for Review publishes the seasonal-programme correction and outstanding Noontime overlap / Evensong time discrepancy with official sources. Fresh source quotations and scope: `data/research/audit-16b88bbd.md`.
+
+Validation executed: canonical consolidate/build; **46 unit tests passed**; exact-projection validator passed all 295 records, 19 pages, source links and local links/fragments; real Chromium desktop 1440×1000 / mobile 390×844 smoke passed all 19 pages, filters, no-JS output, overflow and source anchors, zero runtime errors and zero automated axe violations on seven core pages. `git diff --check` passed. Fresh semantic source checks cover the three explicitly logged official pages, not all inherited records. Remote reachability and publication confirmation pending PR CI/Pages.

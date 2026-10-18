@@ -26,7 +26,7 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 The directory includes 16 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
-The site is **free-first**: the [dashboard](index.html) executive summary and main section carry **free upcoming events only** (dated entries nearest first, then free recurring patterns), ordered Gaming → Music → AI & technology → everything else. Priced events are collected in the separate [Paid events](paid.html) section; the complete all-cost directory remains on [Focus](focus.html) and [Upcoming](upcoming.html).
+The site is **free-first**: the [dashboard](index.html) executive summary and main section carry **free upcoming events only** (confirmed dated entries only, nearest first; undated recurring patterns stay on the Free and cadence pages), ordered Gaming → Music → AI & technology → everything else. Priced events are collected in the separate [Paid events](paid.html) section; the complete all-cost directory remains on [Focus](focus.html) and [Upcoming](upcoming.html).
 
 - [Dashboard (free-first)](index.html) · [Upcoming](upcoming.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
 - [Gaming](gaming.html) · [Music](music.html) · [AI & technology](ai.html) · [Free to attend](free.html) · [Paid events](paid.html) · [Focus, one page](focus.html)

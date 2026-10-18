@@ -15,7 +15,7 @@ const base = (process.env.BASE_URL || 'http://127.0.0.1:8080').replace(/\/$/, ''
 const pages = ['index.html', 'upcoming.html', 'free.html', 'paid.html', 'focus.html', 'weekly.html', 'monthly.html', 'annual.html', 'special.html', 'gaming.html', 'music.html', 'ai.html', 'markets.html', 'museums.html', 'culture.html', 'community.html', 'analysis.html', 'review.html', 'sources.html'];
 // The directory table on a page carries class 'events' and a unique id, because the
 // Upcoming page renders several grouped tables. The landing page's first (free,
-// dated) table is always #1; its second table carries the free recurring rows.
+// dated) table is always #1; undated recurring rows stay off the landing page.
 const TABLE = 'table.events';
 const ID = '-1';
 const root = path.resolve(__dirname, '..');
@@ -72,7 +72,7 @@ fs.mkdirSync(output, { recursive: true });
     await page.goto(`${base}/index.html`);
     await page.screenshot({ path: path.join(output, 'index-desktop.png') });
     // Free-first landing page (21f3dd85, T38): table 1 = free dated (nearest first),
-    // table 2 = free recurring. Nothing paid or unpriced may appear in either table.
+    // Undated patterns, paid and unpriced rows must never appear here.
     const dashboard = JSON.parse(fs.readFileSync(path.join(root, 'data/dashboard_order.json'), 'utf8'));
     const dashboardIds = await page.locator(`${TABLE} tbody tr`).evaluateAll(rows => rows.map(row => row.id).filter(id => id));
     assert.deepEqual(dashboardIds, [...dashboard.dated, ...dashboard.recurring], 'Landing tables are not the free-upcoming sets in order');
@@ -81,7 +81,9 @@ fs.mkdirSync(output, { recursive: true });
     assert.equal(await page.locator('#b-sf-pride-celebration').count(), 0);
     assert.equal(await page.locator('#b-nihonmachi-street-fair').count(), 0);
     assert.match(await page.locator('#f-noontime-concerts td').nth(0).textContent(), /Free/, 'cost badge');
-    assert.equal(await page.locator('#f-sfpl-mix-gaming td').nth(2).textContent(), '', 'blank time stays blank');
+    assert.equal(await page.locator('#f-sfpl-mix-gaming').count(), 0, 'undated gaming stays off landing');
+    assert.equal(await page.locator('#audit-sunday-fun-days-2026').count(), 0, 'expired season stays off landing');
+    assert.deepEqual(dashboard.recurring, [], 'recurrence alone cannot establish an upcoming date');
     assert.match(await page.locator('#f-sea-chantey-sing').textContent(), /Future dated/);
     assert.match(await page.locator('#f-sea-chantey-sing').textContent(), /2026-12-05/);
     assert(await page.locator('#table-tools' + ID).isVisible());

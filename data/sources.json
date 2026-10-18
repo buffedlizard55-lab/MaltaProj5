@@ -1584,7 +1584,8 @@
   "checked": "2026-10-18",
   "excerpt": "MLK2026 is here in San Francisco. The NorcalMLK Foundation hosts the premier federal holiday celebration in honor of Dr. Martin Luther King, Jr. in northern California.",
   "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
-  "manual": true
+  "manual": true,
+  "http": 200
  },
  "x-somarts-org-exhibition-sfopenstudios2026": {
   "url": "https://somarts.org/exhibition/sfopenstudios2026/",
@@ -1592,6 +1593,7 @@
   "checked": "2026-10-18",
   "excerpt": "ArtSpan invites you to the 52nd annual production of San Francisco Open Studios. \u2026 nearly half the artists who will be hosting open studio events through October 25, 2026.",
   "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
-  "manual": true
+  "manual": true,
+  "http": 403
  }
 }

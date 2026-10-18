@@ -234,12 +234,61 @@ Session `c961fbe4` (branch `arena/c961fbe4-maltaproj5`) has read this board and 
 
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
-| T16 | Audit both registers row by row; reconcile into one canonical register; verify every source URL live and every row's source actually mentions the event | **in progress** | `c961fbe4` | `data/`, `tools/verify_rows.py`, `tools/consolidate.py`, `.github/workflows/verify.yml` |
-| T17 | One site: landing dashboard + pattern/category subpages + Flagged for Review + Sources & method; retire the duplicate `docs/` site | **in progress** | `c961fbe4` | `*.html`, `assets/`, `scripts/build.py`, `scripts/validate.py`, `docs/` |
+| T16 | Audit both registers row by row; reconcile into one canonical register; verify every source URL live and every row's source actually mentions the event | **done** | `c961fbe4` | `data/`, `tools/verify_rows.py`, `tools/consolidate.py`, `.github/workflows/verify.yml` |
+| T17 | One site: landing dashboard + pattern/category subpages + Flagged for Review + Sources & method; retire the duplicate `docs/` site | **done** | `c961fbe4` | `*.html`, `assets/`, `scripts/build.py`, `scripts/validate.py`, `docs/` |
 | T18 | Final PR → `main`, merge, enable/confirm Pages deploy, record result | **in progress** | `c961fbe4` | `COORDINATION.md`, `README.md`, `.github/workflows/pages.yml` |
 
 Notes: T2–T14 are treated as done and not re-owned; T16 folds their outputs together rather
 than redoing research. Session `4f47c142`'s branch is merged into this integration branch, not
 discarded. Session `5a85baf2`'s PR #6 (pipeline idempotency) is merged as well; its legacy
 `build_data.py -> integrate.py` regression step is superseded by the consolidated pipeline.
+
+
+---
+
+## Integration result — `c961fbe4`, 2026-10-18
+
+### What was merged
+
+| Input | Rows | Outcome |
+|---|---|---|
+| 86-row unified register (`3a19e72d` + `5a85baf2`) | 86 | Base of the canonical register; two duplicate Carnaval rows merged. |
+| 167-row inventory (`4f47c142`, PR #4 branch) | 167 | 36 rows reconciled with base rows by an explicit map; 131 rows added. |
+| **Canonical register** | **214** | Weekly 22 · Monthly 11 · Annual 120 · Special 61 |
+
+The `4f47c142` branch was merged into the integration branch (`a4f368a`); PR #4 itself is
+superseded by the final PR and was closed with a pointer, not force-merged with a failing check.
+
+### Verification performed
+
+```
+python3 tools/consolidate.py    -> 214 rows, 199 sources, 25 findings
+python3 tools/verify_rows.py    -> 214 rows fetched; 151 name matches, 61 not found,
+                                   2 PDFs, 0 no-response, 0 dead URLs, 46 blocked URLs
+python3 tools/apply_verify.py   -> labels + excerpts folded into data/
+python3 scripts/build.py        -> 12 pages, 214 rows, 199 source records
+python3 scripts/validate.py     -> PASS (data, evidence, blanks, parents, 12 pages, local links)
+```
+
+* **Dead links: 0.** The check fails only on 404/410/DNS, so no cited link is dead.
+* **61 rows not name-matched** are overwhelmingly bot-blocked (46 URLs returned 202/403/405/429/5xx)
+  or JavaScript-rendered. They are labelled and listed on `review.html`; they are **not** counted
+  as verified by machine. 35 rows carry an automation "manual re-check requested" note.
+* **Manual fixes made during integration:** Chase Center concerts (3), PIER 39 4th of July and
+  holiday season, Symphony season + opening gala (PDF), Opera season and four productions, Superfine
+  (rebranded The Superfair), Tulip Day (old domain now a blank Plesk page), ArtSpan Open Studios
+  (own page returns its 404 template), MLK celebration (root domain TLS failure in CI).
+* **Removed:** SOMA Nights — the only official site (`soma-nights.com`) returns an SSL error /
+  HTTP 500 and no other official page confirms the 2026 edition. Recorded as a review finding.
+* **Reclassified:** Chinese New Year Parade and Carnaval (Special -> Annual); After Dark:
+  Creepatorium (Annual -> Special, a dated theme of the weekly series). One merchandise-store
+  window removed as a non-event.
+* **Site consolidation:** `docs/` and its generator were retired; one site is published from the
+  repository root. Data files from `4f47c142` remain in `data/`.
+
+### Irregularities carried forward (published, not blocking)
+
+Blank start times (162 rows), blank admission (35), bot-blocked sources (46 URLs), year-ambiguous
+seasonal copy, and the coverage gaps listed on `review.html`. None blocks publication; all are
+labelled with their official links.
 

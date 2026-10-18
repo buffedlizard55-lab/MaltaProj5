@@ -279,8 +279,9 @@ automated client could not read it. Those rows keep their label and appear on th
 <h2>Coverage of the annual calendar</h2>
 <p>Counting the rows that explicitly mention each month (a row may mention several):</p>
 <div class="bars">{''.join(f'<div><span>{m}</span><i style="width:{month_counts[m] * 100 // max(month_counts.values() or [1])}%"></i><b>{month_counts[m]}</b></div>' for m in MONTHS)}</div>
-<p>The register is spring-and-autumn heavy: annual festivals cluster in spring and early autumn, while
-December is dominated by holiday lighting, markets and Nutcracker performances.</p>
+<p>Mentions peak in May–June and September–November, dip in July–August and are lowest in January.
+These are mentions, not unique events: one row can name several months, and the counts include
+recurring schedules as well as annual editions.</p>
 
 <h2>Source concentration</h2>
 <p>{len(sources)} source records across {len(domains)} domains — {gov} government domains, {org} non-profit
@@ -296,8 +297,10 @@ park programmes.</li>
 {sum(1 for r in rows if r.get("unverified"))} have at least one blank tracked field. Where an organizer has not
 published a next date, the date cell is blank rather than extrapolated — a recurring pattern is not a
 confirmed future instance.</li>
-<li><b>Fifteen entries are dated 2026 editions that have already happened</b> (for example Tulip Day in March
-and the Opera Ball gala). They are retained as dated records, not shown as upcoming.</li>
+<li><b>Many entries record 2026 editions that have already taken place</b> (for example Tulip Day in
+March, the Opera Ball gala and the July 4 fireworks). They are retained as dated records and are not
+presented as upcoming; the register has no “upcoming only” filter because that would require
+re-deriving dates the organizers have not published.</li>
 <li><b>There is no citywide denominator.</b> No official source publishes a complete count of San Francisco
 events, so this register cannot claim exhaustive coverage. Known gaps: library programmes, most theatre,
 neighbourhood block parties, sports beyond the Giants, and weekday civic meetings.</li>

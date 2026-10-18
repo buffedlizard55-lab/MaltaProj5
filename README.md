@@ -1,76 +1,94 @@
-# MaltaProj5 — San Francisco Events Inventory
+# MaltaProj5 — San Francisco Events Register
 
-Verified inventories of events happening **within the city of San Francisco only**, produced by
-three parallel research sessions, each row sourced to an official site. Unconfirmed values are left
-blank and flagged — nothing is inferred. Data snapshots taken **18 October 2026**; no continuous
-refresh or automatic factual verification is claimed.
+A verified register of events held **inside the City and County of San Francisco**, organised into
+events that recur (weekly, monthly, annually) and dated special events — with the analysis, the
+source ledger, and the irregularities found while checking them.
 
-## Two sites, two datasets — one repository
+**214 entries · 199 official source records across 130 domains · every row links to the official
+page it was checked against on 18 October 2026.**
 
-| | Primary site (`docs/`) | Unified register (repo root) |
-|---|---|---|
-| URL path | `/` | `/inventory/` in the published copy |
-| Events | **167** (34 weekly/regular · 95 annual · 38 special) + 14 exclusions | **86** unified rows (29 + 61 from two sessions, 4 duplicates reconciled) |
-| Sessions | `4f47c142` | `3a19e72d` + `5a85baf2` |
-| Pages | Dashboard, Weekly & Regular, Annual, Special, Flagged for Review | 11 pages incl. review queue and evidence ledger |
-| Generator | `tools/build_site.py` | `scripts/build.py` |
-| Validator | `tools/verify_site.py` | `scripts/validate.py` + `tools/remotecheck.py` (CI) |
+This register is the merged output of three independent research passes run in parallel
+(sessions `3a19e72d`, `5a85baf2`, `4f47c142`) and reconciled by the integration session
+`c961fbe4`; see `COORDINATION.md` for the board, the merge record and the conflict log.
 
-Intended Pages URL: https://buffedlizard55-lab.github.io/MaltaProj5/
+## The site
 
-> **Publication status:** GitHub Pages enablement is blocked — GitHub returns
-> `Resource not accessible by integration` (HTTP 403; the credential has no Pages grant —
-> `X-Oauth-Scopes` empty, reproduced independently by two sessions; see
-> [deployment attempt](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573)).
-> The owner must enable Pages in repo Settings (Source: GitHub Actions, or deploy from `main` /
-> `docs`), then the `Validate and deploy Pages` workflow publishes this site. Full history in
-> `COORDINATION.md`.
+One static site, built at the repository root and deployed by `.github/workflows/pages.yml`.
 
-## Primary dataset (session `4f47c142`) — `docs/` site
+| Page | Contents |
+|---|---|
+| `index.html` | Dashboard: counts, verification legend, category cards, all entries |
+| `weekly.html` / `monthly.html` / `annual.html` / `special.html` | Entries by recurrence |
+| `markets.html` / `museums.html` / `culture.html` / `community.html` | Entries by category |
+| `analysis.html` | **Analysis & findings** — counts, verification mix, month coverage, source concentration, limits |
+| `review.html` | **Flagged for Review** — findings, entry-level review queue, blank (unverified) fields, coverage gaps |
+| `sources.html` | Method, the official-source ledger with excerpts, row-by-row evidence |
 
-| Path | Purpose |
-|------|---------|
-| `data/events-weekly.json` | Regularly occurring events (weekly/monthly/seasonal) — 34 |
-| `data/events-annual.json` | Annually recurring events, by month — 95 |
-| `data/events-special.json` | Special (one-off/dated) 2026 events — 38 |
-| `data/exclusions.json` | Exclusion log (out-of-city or out-of-scope events, with reasons) — 14 |
-| `data/research/` | Raw research notes |
-| `tools/build_site.py` | Generates the static site in `docs/` from the data files |
-| `tools/verify_site.py` | Verification pass: every row sourced, no broken internal links, domain allowlist |
-| `docs/` | Site (dashboard + category subpages + Flagged for Review) |
+Every table row carries its official source links, a verification label and its review notes.
+**A blank cell means unverified — not "free" and not "not applicable."** No value is inferred:
+where an official page does not state something, the cell is empty and the row lists it under
+"unverified blank fields".
 
-```sh
-python3 tools/build_site.py     # regenerates docs/
-python3 tools/verify_site.py    # exits 1 on any unsourced row / broken link / off-allowlist domain
+### Verification labels
+
+| Label | Meaning |
+|---|---|
+| **Field-level** | A researcher transcribed the row's values from the cited official page; the link was re-checked in integration. |
+| **Page-level** | An independent pass supplied the row; the integration fetch confirmed the page is live and names the event, but individual values were not re-transcribed. |
+| **Flagged** | The row carries an unresolved note, or the automated check could not confirm it (for example, the site blocks automated clients). |
+
+## Repository layout
+
+| Path | Contents |
+|---|---|
+| `data/events.json` | Canonical register (214 rows). Generated — do not hand-edit. |
+| `data/sources.json` | Official-source ledger: URL, publisher, check date, excerpt, method, HTTP status. |
+| `data/review.json` | Findings and coverage notes. |
+| `data/verify_report.json` | Machine verification report: every fetched URL, its HTTP status, whether the event name was found, and the matched snippet. |
+| `data/events_base86.json`, `data/sources_base75.json`, `data/review_base20.json` | Pristine inputs from the 86-row register, used by the consolidation. |
+| `data/events_3a19e72d.json`, `data/events_5a85baf2.json`, `data/events-weekly.json`, `data/events-annual.json`, `data/events-special.json` | The three sessions' authored registers, preserved verbatim. |
+| `data/events.csv` | CSV export, generated by the build. |
+| `tools/consolidate.py` | Explicit merge of the registers into one canonical dataset (reviewed merge map, not fuzzy matching). |
+| `tools/apply_verify.py` | Folds the automated fetch report into the data (excerpts, labels, flags). |
+| `tools/verify_rows.py` | Fetches every cited URL and checks the page names the event; runs in CI. |
+| `tools/remotecheck.py` | Dead-link gate (fails on 404/410/DNS). |
+| `tools/integrate.py` | Historical: the 86-row merge superseded by `consolidate.py`. |
+| `scripts/build.py` | Dependency-free static build (12 pages + CSV). |
+| `scripts/validate.py` | Data, evidence, blank-field and local-link validation. |
+
+## Working on this repository
+
+Read `COORDINATION.md` first — it is the shared task board. Claim a task with your session ID and
+file scope, commit and push the claim before starting, and keep scopes non-overlapping.
+
+```bash
+python3 tools/consolidate.py   # rebuild data/events.json + sources.json + review.json
+python3 tools/apply_verify.py  # fold data/verify_report.json into the data
+python3 scripts/build.py       # build the site + CSV
+python3 scripts/validate.py    # data + local link/fragment checks
+python3 tools/remotecheck.py   # fetch every cited URL; fails on dead links
+python3 tools/verify_rows.py   # fetch every cited page and match the event name
 ```
 
-## Unified register (sessions `3a19e72d` + `5a85baf2`) — root site
+`data/events.json`, `data/sources.json`, `data/events.csv` and the `*.html` pages are generated and
+committed, because GitHub Pages serves them from `main`. CI fails if the pipeline output is stale.
 
-- `data/events.json`: 86-row combined register (canonical schema; `tools/integrate.py` merges
-  `data/events_3a19e72d.json` + `data/events_5a85baf2.json`).
-- `data/sources.json`: 75 official-source records with checked dates and transcribed excerpts.
-- `data/review.json`: research gaps, excluded candidates, conflicts and review findings.
-- `ANALYSIS.md` / `SOURCES.md`: analysis findings and the source ledger in readable form.
-- Eleven static pages: dashboard, recurrence/category views, review queue, evidence ledger.
-- `scripts/build.py` / `scripts/validate.py` / `tools/remotecheck.py`: dependency-free build,
-  validation, and remote source-URL checking (wired into CI).
+## Verification rules
 
-```sh
-python3 scripts/build.py && python3 scripts/validate.py
-```
-
-Generated HTML is committed; tables and navigation work without JavaScript. JS adds search/filter.
-GitHub Actions validates pull requests (both validators + remote source check) and attempts Pages
-deployment. Tests check local links, source references, empty-field flags and generated-file
-freshness — not the truth of source content or external uptime.
-
-## Shared scope rules
-
-- Events must take place **inside San Francisco city limits** (e.g., Cow Palace in Daly City,
-  PayPal Park in San Jose, or Levi's Stadium in Santa Clara are excluded and logged).
-- Professional sports league schedules and trade conventions are excluded as categories; individual
-  special public events at those venues are included.
-- Aggregators and media articles are never the source of record for a value.
-- Sources can change; verify organizer details before attending.
-
-`COORDINATION.md` records the task board, verification logs, merge history and publication status.
+1. **Geography.** Only events inside the City and County of San Francisco. Events at Levi's Stadium,
+   the Cow Palace and other out-of-city venues are excluded and recorded on `review.html`.
+2. **Official sources only.** Organizer sites, venues, museums and City pages (`sf.gov`,
+   `sfrecpark.org`, `sfmta.com`, `sfpl.org`, `sfport.com`) supply admitted facts. Tourism-board
+   guides were used for discovery; where a row could only be sourced to a tourism body, that is
+   visible in its label and notes.
+3. **No inference.** Dates are preserved as published. Next occurrences are never generated from a
+   previous year's pattern, and a recurring pattern is never presented as a confirmed instance.
+4. **Blanks are flagged.** A value not stated on the official page stays blank and is listed as
+   unverified on the row and on the review page.
+5. **Conflicts are published.** Where sources disagree, the disputed value is blanked and both
+   sources are named on `review.html`.
+6. **Coverage is not claimed to be exhaustive.** No citywide denominator exists; gaps are stated
+   on `review.html` and `analysis.html` rather than hidden.
+7. **Automated checks are reported honestly.** The CI fetch confirms that a page is live and names
+   the event. It cannot prove a date or a price, and bot-protected pages are labelled as such
+   rather than counted as verified.

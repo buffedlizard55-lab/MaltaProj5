@@ -43,6 +43,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `bb551cdc` | `arena/bb551cdc-maltaproj5` | 2026-10-18 05:45 | Additional official SF calendar research, overlay extension, rebuild, PR/Pages (T29–T31 calendar expansion) |
 | `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
 | `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
+| `59f56c24` | `arena/59f56c24-maltaproj5` | 2026-10-18 | Official-calendar extras (gaming/AI/Moscone) on top of the T32 dashboard (T33–T35) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -90,6 +91,9 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
 | T31 | Validate, PR → main, merge, confirm Pages | **done** — [PR #28](https://github.com/buffedlizard55-lab/MaltaProj5/pull/28) merged `f90ae8b` 2026-10-18 05:55 UTC; PR Validate [39102137078](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102137078), main Validate [39102196169](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102196169), and Pages [39102195213](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39102195213) succeeded | `bb551cdc` | `COORDINATION.md` |
 | T32 | Mobile-first executive summary, date-sorted Upcoming, clear cost badges, Free-first + Gaming/Music/AI focus pages (derived only from audited verified fields; no new facts) | done | `2fa50487` | `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `assets/app.js`, `tests/browser_smoke.cjs`, `.github/workflows/pages.yml`, generated `*.html`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
+| T33 | Official-source research: dated SF gaming / music / AI extras (exact quotations only); isolated overlay | **in progress** | `59f56c24` | `data/research/audit-59f56c24.md`, `data/audit_59f56c24.json`, `tools/overlay_59f56c24.py` |
+| T34 | Overlay extras into the audited register; rebuild T32 dashboard; update regressions | unclaimed | — | `data/audit_64f8b973.json`, generated `data/` + `*.html`, `tests/test_audited_register.py`, `scripts/build.py` (focus IDs only) |
+| T35 | Validate, PR → main, merge, confirm Pages | unclaimed | — | `COORDINATION.md`, `README.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them

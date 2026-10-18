@@ -19,14 +19,14 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 
 ## Session registry
 
-| Session ID | Branch | Started (UTC) | Last commit (UTC) | Notes |
-|---|---|---|---|---|
-| `arena-5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | see git log | Sole active session. Acting as research **and** final integration session. |
+| Session ID | Branch | Started (UTC) | Notes |
+|---|---|---|---|
+| `arena-5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | Sole active session. Acted as research **and** final integration session. |
 
-> **Branch policy note (important).** The Arena sandbox pins this session to the branch
-> `arena/5a85baf2-maltaproj5`, so the `session-<id>/<task>` branch naming convention cannot be used
-> here. All work for every task below happens on `arena/5a85baf2-maltaproj5`; task scopes are still
-> kept non-overlapping at the file level so the board stays meaningful for other sessions.
+> **Branch policy note.** The Arena sandbox pins this session to the branch
+> `arena/5a85baf2-maltaproj5`, so the `session-<id>/<task>` branch naming convention could not be
+> used. All tasks below were executed on `arena/5a85baf2-maltaproj5`; scopes were still kept
+> non-overlapping at file level so the board stays meaningful for future sessions.
 
 ---
 
@@ -34,16 +34,16 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
-| T1 | Repo review + set up coordination board | in progress | `arena-5a85baf2` | `COORDINATION.md`, `README.md` |
-| T2 | Research & verify **recurring weekly/monthly** events | in progress | `arena-5a85baf2` | `data/recurring.json`, `SOURCES.md` |
-| T3 | Research & verify **recurring annual** events | in progress | `arena-5a85baf2` | `data/annual.json`, `SOURCES.md` |
-| T4 | Research & verify **special / dated** events (2026–2027) | in progress | `arena-5a85baf2` | `data/special.json`, `SOURCES.md` |
-| T5 | Flag unverified / irregular rows | in progress | `arena-5a85baf2` | `data/flagged.json`, `docs/flagged.html` |
-| T6 | Build GitHub Pages site (landing + category subpages) | in progress | `arena-5a85baf2` | `docs/**` |
-| T7 | Analysis + findings write-up | in progress | `arena-5a85baf2` | `docs/analysis.html`, `ANALYSIS.md` |
-| T8 | Link check + build check | in progress | `arena-5a85baf2` | `tools/linkcheck.py`, `tools/validate.py` |
-| T9 | Final integration: re-verify combined data, publish Pages | unclaimed | — | all |
-| T10 | Open PR → `main`, merge, confirm Pages deploy | unclaimed | — | `COORDINATION.md` |
+| T1 | Repo review + set up coordination board | done | `arena-5a85baf2` | `COORDINATION.md`, `README.md` |
+| T2 | Research & verify **recurring weekly/monthly** events | done | `arena-5a85baf2` | `data/build_data.py`, `data/events.json`, `SOURCES.md` |
+| T3 | Research & verify **recurring annual** events | done | `arena-5a85baf2` | `data/build_data.py`, `data/events.json`, `SOURCES.md` |
+| T4 | Research & verify **special / dated** events | done | `arena-5a85baf2` | `data/build_data.py`, `data/events.json`, `SOURCES.md` |
+| T5 | Flag unverified values & irregularities | done | `arena-5a85baf2` | `data/discontinued.json`, `docs/flagged.html` |
+| T6 | Build GitHub Pages site (landing + category subpages) | done | `arena-5a85baf2` | `docs/**`, `tools/build_site.py` |
+| T7 | Analysis + findings write-up | done | `arena-5a85baf2` | `docs/analysis.html`, `ANALYSIS.md` |
+| T8 | Schema validation + link check + CI | done | `arena-5a85baf2` | `tools/validate.py`, `tools/linkcheck.py`, `tools/remotecheck.py`, `.github/workflows/checks.yml` |
+| T9 | Final integration: re-verify combined data, publish Pages | in progress | `arena-5a85baf2` | all |
+| T10 | Open PR → `main`, merge, confirm Pages deploy | in progress | `arena-5a85baf2` | `COORDINATION.md` |
 
 ---
 
@@ -57,22 +57,65 @@ _None._
 
 ### 2026-10-18 — `arena-5a85baf2`
 
-- **T1 done.** Repo review: at commit `20813bf` ("Initial commit") the repository contained exactly
-  one file, `README.md`, whose entire content was `# MaltaProj5`. No data, no site, no prior event
-  list, no `.github/` workflows, no `docs/`. `gh api repos/buffedlizard55-lab/MaltaProj5/pages`
-  returned `404 Not Found` → GitHub Pages was **not** enabled before this session. Nothing to
-  reconcile, no other session claims existed. Board created and pushed.
-- Next: research + verification passes (T2–T5), site build (T6–T8), integration (T9–T10).
+**T1 — repo review.** At commit `20813bf` ("Initial commit") the repository contained exactly one
+file, `README.md`, whose entire content was `# MaltaProj5`. No data, no site, no prior event list,
+no `.github/` workflows, no `docs/`. `gh api repos/buffedlizard55-lab/MaltaProj5/pages` returned
+`404 Not Found`, i.e. GitHub Pages was **not** enabled before this session. No other session claims
+existed. Board created and pushed at `d2b79ab`.
+
+**T2–T4 — research & verification.** 61 event rows authored in `data/build_data.py`, each verified
+against an official page on 2026-10-18: 51 unique official pages across 43 official domains
+(organizer sites plus `sf.gov`, `sfrecpark.org`, `sfmta.com`, `sfpl.org`, `sfport.com`, `mlb.com`,
+`iitc.org`, `blueangels.navy.mil`, `federalregister.gov`). Full register in `SOURCES.md`.
+Distribution: 4 weekly, 3 monthly, 44 annual, 10 special.
+
+**T5 — flagging.** 22 rows carry a confirmed event and cadence but no organizer-published next
+date; their date cells are blank and marked `unverified`. 14 rows carry a genuine irregularity
+(conflicting official sources, stale official pages, rescheduled or tentative dates). 4 items were
+excluded after an official check (How Weird Street Faire — discontinued; Ghirardelli Chocolate
+Festival — no edition on the venue's page since 2018; Great Dickens Christmas Fair — Cow Palace,
+Daly City; Super Bowl LX / FIFA World Cup 2026 / 49ers — Levi's Stadium, Santa Clara). All published
+on `docs/flagged.html`. Nothing in this category blocks the build or the merge.
+
+**T6–T7 — site + analysis.** Static site generated by `tools/build_site.py` into `docs/`
+(18 pages: dashboard, recurring, special, all-events, 11 category pages, analysis, flagged,
+methodology). No build toolchain, so there is nothing that can fail to compile. Findings written up
+in `ANALYSIS.md` and mirrored on `docs/analysis.html`.
+
+**T8 — checks.** Local results on 2026-10-18:
+
+```
+python3 tools/validate.py   -> checked 61 events + 4 excluded items; 32 confirmed dates,
+                               22 unverified, 7 continuous, 14 flagged, 43 official domains; OK
+python3 tools/build_site.py -> built 18 pages
+python3 tools/linkcheck.py  -> 18 pages, 206 internal links (19 unique) all resolve,
+                               303 external links (56 unique), 55 dataset source links rendered; OK
+```
+
+`tools/remotecheck.py` (fetches every source URL) cannot run in the authoring sandbox — outbound
+network is limited to github.com, npm and PyPI. It is wired into `.github/workflows/checks.yml`,
+which has network access; the result of that run is recorded in the PR/merge record below.
+
+**T9–T10 — integration & publish.** In progress: PR from `arena/5a85baf2-maltaproj5` → `main`,
+then merge, then enable GitHub Pages on `main`/root and confirm the deploy. PR number, merge
+result, Pages URL and the CI remote-source-check outcome are recorded below once they exist.
+
+---
+
 ## Deliverables & verification record
 
 | Artifact | Verification performed | Result |
 |---|---|---|
-| `data/*.json` (event rows) | Each row's `source_url` fetched and checked for the event name + cadence/date | see per-row `verified` field |
-| `docs/**` (site) | `tools/linkcheck.py` — internal href integrity, no 404s | _pending_ |
-| `tools/validate.py` | schema: required fields present, `source_url` non-empty, geography = SF | _pending_ |
+| `data/events.json` | `tools/validate.py` — required fields, ISO dates, `recurrence`/`status`/`date_status` enums, unique ids, and rejection of ~120 aggregator domains as sources | pass, 0 errors |
+| Every event row | Manually checked against its `source_url` on 2026-10-18; what each page confirmed is recorded per row in `SOURCES.md` | 61/61 rows sourced |
+| `docs/**` | `tools/linkcheck.py` — internal href integrity + every source link rendered | pass, 0 broken |
+| `docs/**` freshness | CI compares a fresh `build_site.py` output against the committed `docs/` | see PR checks |
+| Official source URLs | `tools/remotecheck.py` in CI (fetched over the network) | see PR checks |
+| Pages deploy | `gh api repos/.../pages` + `gh run list` after merge | see record below |
 
 ## PR / merge record
 
 - PR: _filled in at merge time_
 - Merge: _filled in at merge time_
 - Pages URL: _filled in after deploy_
+- CI remote source check: _filled in after the workflow runs_

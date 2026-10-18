@@ -1,0 +1,40 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate the event dataset schema
+        run: python3 tools/validate.py
+
+      - name: Build the site
+        run: python3 tools/build_site.py
+
+      - name: Check the built site for broken links
+        run: python3 tools/linkcheck.py
+
+      - name: Confirm the committed site matches a fresh build
+        run: |
+          git diff --exit-code docs || {
+            echo "docs/ is stale — run python3 tools/build_site.py and commit"
+            exit 1
+          }
+
+      - name: Check every official source URL still resolves
+        run: python3 tools/remotecheck.py --timeout 25

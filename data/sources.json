@@ -27,9 +27,10 @@
   "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
   "publisher": "Exploratorium",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 405 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 405
+  "excerpt": "After Dark Thursday Nights. Every Thursday Night \u2022 6:00\u201310:00 pm \u2026 Pier 15",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 405,
+  "manual": true
  },
  "exvisit": {
   "url": "https://www.exploratorium.edu/visit",
@@ -43,9 +44,10 @@
   "url": "https://www.famsf.org/visit/free-reduced-admission",
   "publisher": "Fine Arts Museums of San Francisco",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Every Saturday we offer free general admission to all residents of the nine Bay Area counties. This offer applies only to the permanent collection galleries. \u2026 Free Saturdays does not take place during Bouquets to Art.",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "dy": {
   "url": "https://www.famsf.org/visit/de-young",
@@ -115,9 +117,10 @@
   "url": "https://chineseparade.com/faq/",
   "publisher": "Chinese New Year Festival & Parade",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "The San Francisco Chinese New Year Parade, celebrating the Year of the Ram, will be on Saturday, February 20, 2027 and starts at 5:15 PM from 2nd and Market St. It is a free event for all to attend but tickets must be purchased to sit in the bleacher sections. \u2026 ends at Kearny Street & Columbus Ave.",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "carnaval": {
   "url": "https://carnavalsanfrancisco.org/",
@@ -192,17 +195,19 @@
   "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
   "publisher": "Foodwise \u2014 Ferry Plaza Farmers Market",
   "checked": "2026-10-18",
-  "excerpt": "Ferry Plaza Farmers Market at the San Francisco Ferry Building : Foodwise Skip to content Keyword or Phrase Search Search Search Subscribe Volunteer Donate About Mission Impact Diversity, Equity, Inclusion, and Justice H",
-  "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
-  "http": 200
+  "excerpt": "Saturday (8 am \u2013 2 pm) and Tuesday & Thursday (10 am \u2013 2 pm), year round \u2026 at the San Francisco Ferry Building",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 200,
+  "manual": true
  },
  "b-sf-gov-location-alemany-farmers-market": {
   "url": "https://www.sf.gov/location--alemany-farmers-market",
   "publisher": "SF.gov \u2014 Alemany Farmers Market",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 202
+  "excerpt": "Saturday 7:00 am to 2:00 pm \u2026 100 Alemany Blvd \u2026 operated by Foodwise",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 202,
+  "manual": true
  },
  "b-hotcfarmersmarket-org-about": {
   "url": "https://hotcfarmersmarket.org/about",
@@ -232,9 +237,10 @@
   "url": "https://castronightmarket.com/",
   "publisher": "Castro Night Market (official)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "3rd Friday of every month \u2026 October 31, 2026 \u2022 5-10PM \u2022 18th & Castro",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "b-offthegrid-com-markets-fort-mason-center": {
   "url": "https://offthegrid.com/markets/fort-mason-center",
@@ -256,9 +262,10 @@
   "url": "https://castrostreetfair.org/",
   "publisher": "Castro Street Fair (official)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Official Castro Street Fair After Party \u2026 Castro Theatre \u2026 Sunday, October 4. Doors: 5:30 PM. Show: 6:00 PM. All ages. $35.25\u2013$65.25 via Ticketmaster",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "b-folsomstreet-org-faq": {
   "url": "https://www.folsomstreet.org/faq",
@@ -280,17 +287,19 @@
   "url": "https://chineseparade.com/communityfair/",
   "publisher": "Chinese New Year Festival & Parade \u2014 Community Street Fair",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "The 2027 Community Street Fair is scheduled for Sat. & Sun. Feb. 20 & 21 @Grant between California and Broadway.",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "b-chineseparade-com-choysundoe": {
   "url": "https://chineseparade.com/choysundoe/",
   "publisher": "Chinese New Year Festival & Parade \u2014 Choy Sun Doe",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "The 2027 Choy Sun Doe Day is scheduled for Saturday, Feb. 6. Under the auspices of the SF Chinese Chamber of Commerce, Choy Suns will grace Chinatown",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "b-sfitalianheritage-org-events": {
   "url": "https://sfitalianheritage.org/events/",
@@ -392,9 +401,10 @@
   "url": "https://fleetweeksf.org/air-show/",
   "publisher": "San Francisco Fleet Week \u2014 Air Show",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Air Show: Friday, Saturday & Sunday, October 9, 10, 11, 2026 \u2026 12:00 noon \u2013 4:00 PM \u2026 between the Golden Gate Bridge and Alcatraz \u2026 General Admission is free",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "b-baytobreakers-com": {
   "url": "https://www.baytobreakers.com/",
@@ -424,9 +434,10 @@
   "url": "https://hardlystrictlybluegrass.com/info-faq-2026/",
   "publisher": "Hardly Strictly Bluegrass \u2014 Info & FAQ",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Friday, October 2 \u2013 Sunday, October 4, 2026 \u2026 Hellman Hollow, Lindley and Marx Meadows in Golden Gate Park \u2026 FREE \u2026 no tickets \u2026 entrances open at 11am Friday and 9am Saturday and Sunday \u2026 performances end at 7pm each day",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "b-outsidelands-frontgatetickets-com": {
   "url": "https://outsidelands.frontgatetickets.com/",
@@ -456,9 +467,10 @@
   "url": "https://www.litquake.org/litcrawl",
   "publisher": "Litquake \u2014 Lit Crawl SF",
   "checked": "2026-10-18",
-  "excerpt": "Lit Crawl SF | Litquake top of page About Us Staff and Board Our Donors Past Festivals 2026 Festival Festival Schedule Festival Authors Opening Night: Booksellers Ball Book Fair Litquake Out Loud Litquake Curator Residency L",
-  "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
-  "http": 200
+  "excerpt": "OCTOBER 24, 2026 \u2026 one-night literary pub crawl through San Francisco's Mission District that caps off our annual Litquake Festival \u2026 free pop-up literary event",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 200,
+  "manual": true
  },
  "b-sfpl-org-events-special-programs-filipino-american-history-celeb": {
   "url": "https://sfpl.org/events/special-programs/filipino-american-history-celebration",
@@ -505,9 +517,10 @@
   "url": "https://sffilm.org/yr-faq/",
   "publisher": "SFFILM \u2014 FAQs",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "70th San Francisco International Film Festival: April 22 \u2013 May 2, 2027 \u2026 standard general admission ticket is $20",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "b-frameline-org-attend": {
   "url": "https://www.frameline.org/attend",
@@ -849,9 +862,10 @@
   "url": "https://www.sfsketchfest.com/",
   "publisher": "SF Sketchfest (official site, dates per SF Travel January guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "24th SF Sketchfest: January 14\u201331, 2027",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-fogfair-com": {
   "url": "https://www.fogfair.com/",
@@ -889,17 +903,19 @@
   "url": "https://www.sfindie.com/",
   "publisher": "SF IndieFest (official site, dates per SF Travel February guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "29th San Francisco Independent Film Festival (Feb 4-14, 2027)",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-sftravel-com-article-san-francisco-festivals-events-february": {
   "url": "https://www.sftravel.com/article/san-francisco-festivals-events-february",
   "publisher": "SF Travel (official DMO) February guide",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "San Francisco Disability History Tour \u2026 hosted by the Disability Cultural Center. The tour on February 6 meets at 165 Grove Street. Doors open at 10:30 a.m. for check-in; tour departs at 11:00 a.m.",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-sfbeerweek-org": {
   "url": "https://www.sfbeerweek.org/",
@@ -969,9 +985,10 @@
   "url": "https://sanfranciscoartfair.com/",
   "publisher": "San Francisco Art Fair (official site, dates per SF Travel April guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "15th edition: April 15\u201318, 2027, Festival Pavilion, Fort Mason Center \u2026 Thursday opening 6\u20139pm; Friday & Saturday 11am\u20137pm; Sunday 11am\u20136pm \u2026 Fair Pass $65 + fees; single day $35 + fees",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-cookbookweek-com": {
   "url": "https://cookbookweek.com/",
@@ -1073,9 +1090,10 @@
   "url": "https://juneteenth-sf.org/",
   "publisher": "Juneteenth SF (official site, dates per SF Travel June guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Saturday, June 13, 2026, 11am\u20136pm, Fillmore District \u2026 free admission",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-qwocmap-org-festival": {
   "url": "https://qwocmap.org/festival/",
@@ -1105,9 +1123,10 @@
   "url": "https://sffolkfest.org/",
   "publisher": "SF Free Folk Festival (official site, dates per SF Travel July guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "50th San Francisco Free Folk Festival, Saturday, July 11, 2026, 11am\u20136pm, Golden Gate Park Music Concourse and Bandshell \u2026 free",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-frozenfilmfestival-com": {
   "url": "https://www.frozenfilmfestival.com/",
@@ -1137,9 +1156,10 @@
   "url": "https://www.sfjazz.org/onthecorner/articles/summer-2026/",
   "publisher": "SFJAZZ (official site)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Summer Sessions \u2026 July\u2013August 2026 \u2026 Wynton Marsalis Septet July 14\u201315 \u2026 Burnt Sugar July 30\u2013August 1",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-jerryday-org-events-calendar-html": {
   "url": "https://www.jerryday.org/events--calendar.html",
@@ -1218,9 +1238,10 @@
   "url": "https://www.potrerofestival.com/",
   "publisher": "Potrero Hill Festival (official site, dates per SF Travel October guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "51 Years on the Hill! Saturday October 17, 2026 10 a.m. \u2013 5 p.m. \u2026 on 20th Street",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-leapsandcastleclassic-org": {
   "url": "https://www.leapsandcastleclassic.org/",
@@ -1266,9 +1287,10 @@
   "url": "https://www.sftravel.com/article/san-francisco-festivals-events-november",
   "publisher": "SF Travel (official DMO) November guide",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Illuminate SF Festival of Light \u2026 More than 60 permanent and temporary eco-friendly light art installations \u2026 Begins November 27, 2026.",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-visitunionsquaresf-com": {
   "url": "https://www.visitunionsquaresf.com/",
@@ -1338,17 +1360,19 @@
   "url": "https://www.redbull.com/us-en/events/red-bull-showrun-san-fran",
   "publisher": "Red Bull (official site, per SF Travel February guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Red Bull Showrun San Francisco Presented By Ford \u2014 February 21, 2026 \u2014 Marina Blvd, San Francisco \u2026 drive up and down Marina Blvd",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-sfspacewalk-com": {
   "url": "https://sfspacewalk.com/",
   "publisher": "SF Space Walk (official site, dates per SF Travel April guide)",
   "checked": "2026-10-18",
-  "excerpt": "el Grown, Biovortex, Freeborn Selections, Mountaintop Seeds, and many more. Thank you to our excellent sponsors Title Sponsor Tier I - Sponsors Contact david@sfspacewalk.com Tier II Sponsors Contact david@sfspacewalk.com Participants / Supporters Home Events Gift Shop About Contact Copyright \u00a92026 SF Space Walk . All rights reserved. Powered by WordPress & Designed by Bizberg T",
-  "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
-  "http": 200
+  "excerpt": "SF Hash Week 2026 \u2014 San Francisco's 3rd annual week of hash release parties \u2026 Running July 7-13, all across San Francisco and the Bay.",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 200,
+  "manual": true
  },
  "x-www-sftravel-com-article-san-francisco-festivals-events-april": {
   "url": "https://www.sftravel.com/article/san-francisco-festivals-events-april",
@@ -1378,9 +1402,10 @@
   "url": "https://www.sf.gov/event-20260704-fourth-of-july-fireworks-on-golden-gate-bridge",
   "publisher": "SF.gov (City & County of San Francisco)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 202
+  "excerpt": "Saturday, July 4, 2026, 9:30 pm to 9:45 pm \u2026 The free, public fireworks display will begin at approximately 9:30 pm. It is the City's only official fireworks show this year.",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 202,
+  "manual": true
  },
  "x-www-sftravel-com-article-san-francisco-festivals-events-july": {
   "url": "https://www.sftravel.com/article/san-francisco-festivals-events-july",
@@ -1410,17 +1435,19 @@
   "url": "https://www.sanfranciscolowridercouncil.com/",
   "publisher": "SF Lowrider Council (official site, per SF Travel September guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 521 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 521
+  "excerpt": "King of the Streets - Hop and Lowrider Parade \u2014 Saturday, September 20, 2025 \u2026 Lowrider Parade 1:00 \u2013 3:00 PM Mission Street (between Cesar Chavez & 17th Street) \u2026 Lowrider Car Show 2:00 \u2013 8:00 PM Mission Street (between Cesar Chavez & 18th Street)",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 521,
+  "manual": true
  },
  "x-walksf-org-events-peak-2-peak": {
   "url": "https://walksf.org/events/peak-2-peak/",
   "publisher": "Walk SF (official site)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "The 22nd annual Peak2Peak is Saturday, September 19 \u2026 entirely through San Francisco's southeast neighborhoods, from Portola to Visitacion Valley and Bayview to Hunters Point \u2026 starts at Louis Sutter Playground in McLaren Park and ends at Barebottle Brewing in Bernal Heights \u2026 Departure times are from 8:00 AM to 10:30 AM \u2026 Cancellations on or before Saturday, September 5, 2026 will receive a full refund",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-sfhistory-org-epicenter": {
   "url": "https://www.sfhistory.org/epicenter",
@@ -1434,9 +1461,10 @@
   "url": "https://sfcheesefest.com/",
   "publisher": "SF Cheese Fest (official site, per SF Travel October guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "SF Cheese Festival \u2013 October 3, 2026 | 6pm \u2013 9pm! \u2026 Gold Bar Distillery | Saturday, October 3, 2026 \u2026 on Treasure Island \u2026 VIP Experience: $165 per person",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-www-nexus-sfbay-com": {
   "url": "https://www.nexus-sfbay.com/",
@@ -1498,17 +1526,19 @@
   "url": "https://www.famsf.org/press-room/2026-advance-schedule",
   "publisher": "Fine Arts Museums of San Francisco (official site)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
-  "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 403
+  "excerpt": "Treasures of the Pharaohs. de Young | August 1, 2026\u2013January 31, 2027",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 403,
+  "manual": true
  },
  "x-clubdarc-com": {
   "url": "https://clubdarc.com/",
   "publisher": "Club Darc (official site, per SF Travel May guide)",
   "checked": "2026-10-18",
-  "excerpt": "Page fetched on 2026-10-18 (HTTP 200) but the event name was not found in the extracted text; the page may render with JavaScript or list many events. Manual review requested.",
-  "method": "Automated fetch; event name not matched.",
-  "http": 200
+  "excerpt": "Season 2 Individual Events \u2026 Season Pass Presale \u2026 Presale starts Wednesday, September 30 at 12pm",
+  "method": "Re-read manually by session f1fd3c36 on 2026-10-18; the excerpt is transcribed from the page (replaces the automated placeholder).",
+  "http": 200,
+  "manual": true
  },
  "x-sfsketchfest2026-sched-com": {
   "url": "https://sfsketchfest2026.sched.com/",
@@ -1702,5 +1732,189 @@
   "method": "Page re-read manually on 2026-10-18; excerpt transcribed from the live page.",
   "manual": true,
   "http": 200
+ },
+ "f1-famsf-org-press-room-bouquets-to-art-2026": {
+  "url": "https://www.famsf.org/press-room/bouquets-to-art-2026",
+  "publisher": "Fine Arts Museums of San Francisco \u2014 press release, 28 Jan 2026",
+  "checked": "2026-10-18",
+  "excerpt": "Bouquets to Art takes place March 3\u20138 at the de Young and Legion of Honor. \u2026 Regular Bouquets to Art viewing hours and admission are Tuesday\u2013Sunday, March 3\u20138, 9:30 am\u20135:15 pm, at both museums. \u2026 For adults, tickets start at $44",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-castrostreetfair-org-fair": {
+  "url": "https://castrostreetfair.org/fair/",
+  "publisher": "Castro Street Fair \u2014 General Information",
+  "checked": "2026-10-18",
+  "excerpt": "Sunday, October 4, 2026. 11:00 AM to 6:00 PM. Castro & Market Street. Suggested donation: $10 to $20",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sfjazz-org-tickets-season-overview-26-27": {
+  "url": "https://www.sfjazz.org/tickets/season-overview/26-27/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "checked": "2026-10-18",
+  "excerpt": "2026-27 Season: Sep 2026 \u2014 May 2027 | Over 350 Shows",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-abaa-org": {
+  "url": "https://www.abaa.org/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "checked": "2026-10-18",
+  "excerpt": "57th California International Antiquarian Book Fair, Pier 27, San Francisco, February 27 \u2013 March 1, 2026 \u2026 Friday 4\u20138pm, Saturday 11am\u20137pm, Sunday 11am\u20134pm",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-thesuperfair-com": {
+  "url": "https://www.thesuperfair.com/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "checked": "2026-10-18",
+  "excerpt": "Superfair San Francisco: March 19\u201322, 2026 \u2026 2027: March 18\u201321, 2027, Gateway Pavilion (Pier 2), Fort Mason Center \u2026 Thu 4\u201310pm (VIP), Fri 4\u201310pm, Sat 10am\u20138pm, Sun 10am\u20136pm",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sfiaf-org-festival": {
+  "url": "https://www.sfiaf.org/festival",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "checked": "2026-10-18",
+  "excerpt": "San Francisco International Arts Festival: April 29 \u2013 May 9, 2027 \u2026 venues in the Mission District \u2026 2026 tickets: Early Bird $20 / Advance $25 / Door $30",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-qwocmap-org": {
+  "url": "https://qwocmap.org/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "checked": "2026-10-18",
+  "excerpt": "22nd Queer Women of Color Film Festival, June 12\u201314, 2026, Presidio Theatre \u2026 free, registration required \u2026 2027: June 11\u201313, 2027",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-litquake-org-2026-schedule": {
+  "url": "https://www.litquake.org/2026-schedule",
+  "publisher": "Litquake \u2014 2026 Festival Schedule",
+  "checked": "2026-10-18",
+  "excerpt": "The annual Litquake festival will take place October 8-24, 2026.",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sffallshow-org-about": {
+  "url": "https://sffallshow.org/about/",
+  "publisher": "The San Francisco Fall Show \u2014 About (dates, hours, location)",
+  "checked": "2026-10-18",
+  "excerpt": "2026 DATES: Opening Night Gala on October 14, Show Dates October 15 \u2013 18 2026. SHOW HOURS Thursday October 15 through Saturday October 17: 10:30am \u2013 7:00pm; Sunday, October 18: 11:00am \u2013 5:00pm. LOCATION Festival Pavilion, Fort Mason Center",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-axs-com-series-34846-club-darc-season-2-tickets": {
+  "url": "https://www.axs.com/series/34846/club-darc-season-2-tickets",
+  "publisher": "Club Darc Season 2 \u2014 official ticketing series page (AXS/Goldenvoice)",
+  "checked": "2026-10-18",
+  "excerpt": "Season 2 Individual Events \u2026 Season Pass Presale \u2026 Presale starts Wednesday, September 30 at 12pm",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sfzoo-org-visit-the-zoo-calendar-of-events": {
+  "url": "https://www.sfzoo.org/visit-the-zoo/calendar-of-events/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "checked": "2026-10-18",
+  "excerpt": "Sunset Fridays, an after-hours event for the whole family, will run on consecutive Fridays through October 9 from 5 to 7 p.m. (last entry is at 6:30 p.m.) at the Playfield Lawn.",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sfzoo-org-zoolights": {
+  "url": "https://www.sfzoo.org/zoolights/",
+  "publisher": "Official page re-read by session f1fd3c36",
+  "checked": "2026-10-18",
+  "excerpt": "ZooLights \u2026 from November 6, 2026 through January 3, 2027 \u2026 open Wednesdays through Sunday evenings (closed Mondays & Tuesdays) from 5:30 to 9 p.m. \u2026 ZooLights requires a separate evening ticket and includes Dinos Rule! ($30 for adults / $21 for children). Zoo Members receive a $3 discount.",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sfzoo-org-event-boo-at-the-zoo": {
+  "url": "https://www.sfzoo.org/event/boo-at-the-zoo/",
+  "publisher": "San Francisco Zoo & Gardens \u2014 Boo at the Zoo event page",
+  "checked": "2026-10-18",
+  "excerpt": "Date October 31, 2026. Time 10:00 AM \u2013 3:00 PM \u2026 The parade starts at 11 a.m. and the contest starts at 12 p.m. \u2026 Boo at the Zoo activities are free with paid daytime admission or Zoo membership.",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sfpl-org-events-2026-04-11-afternoon-and-night-ideas": {
+  "url": "https://sfpl.org/events/2026/04/11/afternoon-and-night-ideas",
+  "publisher": "San Francisco Public Library \u2014 event page",
+  "checked": "2026-10-18",
+  "excerpt": "Afternoon and Night of Ideas \u2014 Saturday, 4/11/2026 3:00 - 11:45 \u2026 Main Library, Fulton Plaza and the Asian Art Museum \u2026 Register for free tickets",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-thesisters-org-easter": {
+  "url": "https://www.thesisters.org/easter",
+  "publisher": "Sisters of Perpetual Indulgence \u2014 Easter in the Park (organizer)",
+  "checked": "2026-10-18",
+  "excerpt": "Easter in the Park: Love Thy Neighbor \u2014 Where: Mission Dolores Park \u2014 When: Sunday, April 5, 2026 \u2014 Price: Free \u2014 Children's Easter 10:00 AM | Easter Egg Hunt 10:30 AM \u2014 Main Stage Celebration: 12:00 to 4:00 PM \u2014 Contests: Easter Bonnet 1:50 PM, Foxy Mary 2:22 PM, Hunky Jesus 2:55 PM \u2026 The Sisters' Annual Easter Celebration",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-ferrybuildingmarketplace-com-events-ferry-fest": {
+  "url": "https://www.ferrybuildingmarketplace.com/events/ferry-fest/",
+  "publisher": "Ferry Building Marketplace \u2014 Ferry Fest (organizer)",
+  "checked": "2026-10-18",
+  "excerpt": "Noise Pop and the San Francisco Ferry Building present: Ferry Fest 2026 \u2026 Sunday, July 12th from 12:00PM\u20136:00PM \u2026 All ages welcome | Free with RSVP",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sf-gov-news-mayor-lurie-announces-second-season-of-free-movies-in-unio": {
+  "url": "https://www.sf.gov/news-mayor-lurie-announces-second-season-of-free-movies-in-union-square",
+  "publisher": "SF.gov \u2014 Office of the Mayor news release",
+  "checked": "2026-10-18",
+  "excerpt": "second season of \"Cinema on the Square,\" expanding the series to five free movie screenings in Union Square this summer season \u2026 All Saturday night films begin at sunset with pre-show activities \u2026 two hours before sunset. On June 27 \u2026 \"The Birdcage.\" July 25 \u2026 \"The Princess Diaries\" \u2026 \"Pok\u00e9mon Detective Pikachu\" will be shown on August 29.",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sunsetmercantilesf-com-sunsetnightmarket2026": {
+  "url": "https://sunsetmercantilesf.com/sunsetnightmarket2026/",
+  "publisher": "Sunset Mercantile \u2014 Sunset Night Market (organizer)",
+  "checked": "2026-10-18",
+  "excerpt": "Sunset Night Market \u2014 5 pm-10 pm \u2014 Irving Street, from 20th to 25th Avenues \u2026 Market Hours: Friday, December 11th @ 5pm-10pm",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sfmusicweek-org-home": {
+  "url": "https://www.sfmusicweek.org/home",
+  "publisher": "SF Music Week \u2014 official site",
+  "checked": "2026-10-18",
+  "excerpt": "COMING FEB. 23 - MAR 1, 2026 \u2026 DATES Feb 23, 2026 to Mar 1, 2026",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sfiacfoundation-org-san-francisco-pizza-festival": {
+  "url": "https://sfiacfoundation.org/san-francisco-pizza-festival",
+  "publisher": "SF Italian Athletic Club Foundation \u2014 festival page (organizer)",
+  "checked": "2026-10-18",
+  "excerpt": "JOIN US SATURDAY, AUGUST 15, 2026 \u2026 The event covers two blocks of North Beach on Stockton and Filbert Sts. along Washington Square.",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-visitvalenciastreet-com-live": {
+  "url": "https://www.visitvalenciastreet.com/live",
+  "publisher": "Valencia Corridor Merchants Association \u2014 Valencia LIVE! (organizer)",
+  "checked": "2026-10-18",
+  "excerpt": "Valencia LIVE! 2026 \u2014 a FREE, all-ages monthly street party \u2026 on the second Thursday of every month from 5-10 pm, May through October, 2026 \u2014 May 14 and June 11 - Valencia St. between 16th and 19th; July 9 and Aug 13 - Valencia St. between 17th and 20th; Sept 10 and Oct 8 - Valencia St. between 18th and 21st",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-blackcoffeesf-com": {
+  "url": "https://blackcoffeesf.com/",
+  "publisher": "Black Coffee Treasure Island SF \u2014 official event site",
+  "checked": "2026-10-18",
+  "excerpt": "Black Coffee - Treasure Island, GAA Field - 04.11.26 \u2014 Date: April 11 \u2014 Time: 1:00 PM - 9:00 PM \u2014 Ages: 18+ \u2014 Venue: GAA Field \u2014 Address: 13th St & H St, Treasure Island, San Francisco",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
+ },
+ "f1-sf-gov-location-alemany-flea-market": {
+  "url": "https://www.sf.gov/location--alemany-flea-market",
+  "publisher": "SF.gov \u2014 Alemany Flea Market (SF Real Estate Division)",
+  "checked": "2026-10-18",
+  "excerpt": "Alemany Flea Market \u2014 Sunday 7:00 am to 3:00 pm \u2014 100 Alemany Blvd",
+  "method": "Read manually by session f1fd3c36 on 2026-10-18 (fetched as readable text); the excerpt is transcribed from the page.",
+  "manual": true
  }
 }

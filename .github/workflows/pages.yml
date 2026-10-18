@@ -26,6 +26,7 @@ jobs:
         run: |
           python tools/consolidate.py
           python tools/apply_verify.py
+          python tools/apply_audit.py
           python scripts/build.py
 
       - name: Validate data, evidence and local links

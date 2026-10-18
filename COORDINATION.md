@@ -30,6 +30,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
 | `526a8db6` | `arena/526a8db6-maltaproj5` | 2026-10-18 | Independent final audit of delivered register, build, CI, and live publication (T19) |
 | `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 04:20 UTC | Post-publication data consistency fix and regression validation (T20) |
+| `f1fd3c36` | `arena/f1fd3c36-maltaproj5` | 2026-10-18 03:40 | Post-publication audit: independent line-by-line re-verification of the live 231-row register against official pages, corrections, Flagged page update, PR → main (T19–T21) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -64,6 +65,9 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **done** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
 | T20 | Resolve confirmed populated/marked-unverified data conflicts, strengthen consistency checks, document source-snapshot coverage, rebuild and publish | done (PR #16) | `99662c40` | `COORDINATION.md`, `data/events_base86.json`, `tools/consolidate.py`, `tools/apply_verify.py`, `scripts/build.py`, `scripts/validate.py`, generated data/pages, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
 | T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **in progress** | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
+| T22 | Independent line-by-line re-verification audit of the live register: every row's values re-read against its cited official page (priority: the 64 rows the automated pass could not name-match, the 2 PDF rows, the 35 flagged rows, aggregator-sourced rows); corrections recorded with the official link, never inferred | done — 70 rows re-read: 36 confirmed, 28 corrected, 6 unverified/flagged, 2 rows added (`data/audit_f1fd3c36.json`) | `f1fd3c36` | `data/audit_f1fd3c36.json`, `tools/apply_audit.py` |
+| T23 | Pipeline irregularity fixes found during T22 (e.g. rows that carry a value *and* an "unverified; left blank" note) | done — `apply_audit.py` removes value-plus-"unverified" contradictions (3 rows) and re-asserts blank⇔note consistency for every row; validate passes | `f1fd3c36` | `tools/apply_audit.py`, `scripts/validate.py` |
+| T24 | Integration of the audit: rebuild data + site, update Flagged for Review and Analysis, validate, PR → `main`, merge, confirm Pages | **in progress** — rebuilt (233 rows, 235 sources, 20 findings), validated; PR → `main` opening (link recorded below when merged) | `f1fd3c36` | `data/events.json`, `data/sources.json`, `data/review.json`, `*.html`, `.github/workflows/pages.yml`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -669,6 +673,40 @@ published on `review.html` and do not block publication.
 
 ---
 
+## Claim — session `f1fd3c36` (2026-10-18 03:40 UTC) — POST-PUBLICATION AUDIT
+
+Board state at intake: T1–T18 done, PRs #1–#13 merged, no open PRs, no claim younger than 60
+minutes, Pages `built` in branch mode from `main`. No other session is active, so this session
+takes the review role (originally claimed as T19/T20, renumbered T22/T23 after sessions `526a8db6` and `99662c40` used T19/T20 concurrently) and, once those are done, the integration role (T24).
+
+Method: the sandbox's `fetch_page` tool reaches official sites (confirmed against
+foodwise.org at intake), so every row in scope is re-read by a human-readable fetch of its
+cited official page, not by the HTML name matcher. Outcomes are recorded per row in
+`data/audit_f1fd3c36.json` (`confirmed` / `corrected` / `unverified` / `excluded`, with the
+URL, the quoted text, and the date) and applied by `tools/apply_audit.py` after
+`tools/apply_verify.py`. No value is written unless the quoted official text states it.
+
+### Result — session `f1fd3c36` (2026-10-18)
+
+* Audit file: `data/audit_f1fd3c36.json` — 70 entries + 2 `add_rows`; every entry has the official
+  URL and the transcribed quote. Applied by `tools/apply_audit.py` (idempotent; wired into
+  `.github/workflows/pages.yml` after `apply_verify.py`; documented in `README.md`).
+* Outcomes: 36 confirmed · 28 corrected · 6 unverified (flagged) · 2 rows added
+  (Alemany Flea Market — sf.gov; SFFILM Doc Stories — sffilm.org FAQ).
+* Register after audit: **233 rows** (Weekly 26 · Monthly 12 · Annual 137 · Special 58) ·
+  235 source records / 140 domains · 20 findings · labels 147 field-level · 78 page-level · 8 flagged.
+* Irregularities logged on the Flagged page and in `ANALYSIS.md`: Litquake rows disagreed on dates
+  (official: Oct 8–24, 2026); Antiquarian Book Fair alternates SF/LA (2027 in LA); Lowrider Parade
+  site still shows the 2025 edition (2026 date removed); City says the Golden Gate Bridge display is
+  the only authorized July 4 fireworks (PIER 39 row annotated); venues corrected for SFIAF, QWOCFF,
+  Peak2Peak, SF Cheese Fest; renamed to organizer names: Superfair, The San Francisco Fall Show,
+  Easter in the Park, Valencia LIVE! (now Monthly); organizer pages added to 9 aggregator-only rows;
+  regional labels on CAAMFest, SF Jewish Film Festival, Bay Area Dance Week, Super Bowl LX events.
+* Not re-read this pass (left as previously labelled): the two Symphony PDF rows (manual read by
+  `c961fbe4` stands) and rows the automated pass already name-matched that were not in the priority set.
+* Verification: `consolidate → apply_verify → apply_audit → build → validate` passes locally
+  (PASS: 233 rows, 12 pages, every local link/fragment); `apply_audit.py` run twice yields no diff.
+
 ## Merge log — `cebeabf0` merges `origin/main` (`15ada17`, PRs #14/#16) into PR #15, 2026-10-18
 
 PR #16 (session `99662c40`, T20) and PR #14 (session `526a8db6`, T19) merged while PR #15's CI
@@ -683,3 +721,17 @@ was running, making PR #15 conflicting. Resolution, discarding neither side:
 | `ANALYSIS.md`, `README.md`, `SOURCES.md` | `main`'s versions adopted as the base; counts re-synced after regeneration for the one added Sketchfest source (D5). |
 | `COORDINATION.md` | Both task boards and both audit logs preserved. Task-number collision (both sessions claimed "T19") resolved by renumbering `cebeabf0`'s task to **T21**; `526a8db6` keeps T19 and `99662c40` keeps T20, both done via PRs #14/#16. |
 | `tools/consolidate.py`, `scripts/build.py` | Auto-merged; verified after merge that both the D5 Sketchfest correction and `main`'s changes are present, then regenerated + revalidated. |
+
+## Merge log — `f1fd3c36` merges `origin/main` (`e499ff8`, PRs #14/#15/#16) into PR #18, 2026-10-18
+
+PRs #14, #15 and #16 merged while this audit was in progress. Resolution, discarding neither side:
+
+| File(s) | Resolution |
+|---|---|
+| Generated `*.html`, `data/events.json`, `data/events.csv`, `data/review.json`, `data/sources.json` | Took `main`'s version, then regenerated with the merged pipeline (`consolidate → apply_verify → apply_audit → build`), so output reflects all sessions' source changes. |
+| `tools/consolidate.py`, `tools/apply_verify.py`, `scripts/validate.py` | `main`'s versions (auto-merged): the populated-vs-unverified assertion, source-ledger completeness check and `cebeabf0`'s stale-flag pruning are all kept; `apply_audit.py` is compatible with them. |
+| D2 price contradictions | Fixed upstream by `99662c40`/`cebeabf0`; `apply_audit.py` re-asserts the same invariant and found nothing left to fix. |
+| D5 Sketchfest | `cebeabf0`'s corrected 2026 dates (Jan 15 – Feb 1, 2026) kept; this audit appends the 2027 edition (Jan 14–31, 2027) from sfsketchfest.com. |
+| `scripts/build.py` | Auto-merged (main's SF Travel exception wording + this session's audit paragraph). |
+| `ANALYSIS.md`, `README.md` | This branch's versions (they add the audit section) with counts re-synced to the merged output: 233 rows, 235 sources, 140 domains. |
+| `COORDINATION.md` | Both boards and all audit logs preserved. Task-number collision: this session's tasks renumbered **T22–T24** (`526a8db6` T19, `99662c40` T20, `cebeabf0` T21 stand). |

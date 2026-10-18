@@ -38,7 +38,7 @@ weekly = load("events-weekly.json")["events"]  # 34
 annual = load("events-annual.json")["events"]  # 95
 special = load("events-special.json")["events"]  # 38
 sources = load("sources_base75.json")
-review = load("review_base31.json")
+review = load("review_base20.json")
 
 # ---------------------------------------------------------------- explicit merges
 # 167-row id -> canonical base row id.  Reviewed pair by pair.

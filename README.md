@@ -10,14 +10,14 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 | Measure | Count |
 |---|---:|
-| Candidates assessed | 242 |
+| Candidates assessed | 246 |
 | Prior-main candidates retained (231 initial + 2 companion additions) | 233 |
-| New official-calendar entries | 9 |
-| Entries admitted to the city-only directory | 162 |
-| Candidates held off the directory for review | 80 |
-| Weekly / monthly / annual entries | 20 / 7 / 25 |
-| Special, dated or cadence-unconfirmed entries | 110 |
-| Exact cited official-source URLs / distinct domains | 237 / 140 |
+| New official-calendar entries | 13 |
+| Entries admitted to the city-only directory | 167 |
+| Candidates held off the directory for review | 79 |
+| Weekly / monthly / annual entries | 23 / 7 / 26 |
+| Special, dated or cadence-unconfirmed entries | 111 |
+| Exact cited official-source URLs / distinct domains | 242 / 140 |
 
 The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
@@ -42,6 +42,7 @@ Only explicitly approved ISO occurrences determine temporal status, relative to 
 - Conflicting Alemany hours and Secondhand/Muertos street extents remain blank/flagged rather than reconciled by guessing.
 - Regional/mixed-city programmes—including Frameline, NEXUS, SF Art Week, SF Climate Week and the full SF Marathon—are held for SF-specific component/route evidence.
 - The 2027 Pride weekend is confirmed, but its old 2026 venue and free-entry policy are not carried forward. Nihonmachi’s 2027 dates are also confirmed, but its venue is blank: the Japantown sentence is in the prior-edition retrospective.
+- T29 additions: Outdoor Rec Day (28 Feb 2026, Mission Creek Park); Sunday Fun Days (Sundays at Union Square through 27 Sep 2026); Civic Center Soundtrack and Illuminate LIVE weekly series (no ISO kickoff year in the quoted sentences); Comedy Day listed from organizer FAQ without a printed 2026 date.
 
 See [the audit research log](data/research/audit-64f8b973.md) and the official quotations for details. No .org-to-nonprofit or sample-to-citywide inference is made.
 

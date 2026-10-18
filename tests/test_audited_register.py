@@ -30,10 +30,10 @@ class AuditedRegister(unittest.TestCase):
     def test_baseline_retained_and_new_entries_identified(self):
         self.assertEqual(len(self.history['events']), 233)
         self.assertEqual(len(self.audit['candidates']), 231)
-        self.assertEqual(len(self.audit['extra_events']), 9)
-        self.assertEqual(len(self.rows), 242)
+        self.assertEqual(len(self.audit['extra_events']), 13)
+        self.assertEqual(len(self.rows), 246)
         self.assertTrue(set(self.audit['candidates']) <= set(self.by_id))
-        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 162)
+        self.assertEqual(sum(r['publication'] == 'listed' for r in self.rows), 167)
 
     def test_upstream_additions_and_source_repair_are_preserved(self):
         self.assertIn('f1-alemany-flea-market', self.by_id)

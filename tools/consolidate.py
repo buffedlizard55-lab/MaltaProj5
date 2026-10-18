@@ -33,12 +33,12 @@ def load(name):
     return json.loads((ROOT / "data" / name).read_text())
 
 
-base = load("events.json")                     # 86 rows
+base = load("events_base86.json")             # pristine 86-row register
 weekly = load("events-weekly.json")["events"]  # 34
 annual = load("events-annual.json")["events"]  # 95
 special = load("events-special.json")["events"]  # 38
-sources = load("sources.json")
-review = load("review.json")
+sources = load("sources_base75.json")
+review = load("review_base31.json")
 
 # ---------------------------------------------------------------- explicit merges
 # 167-row id -> canonical base row id.  Reviewed pair by pair.
@@ -292,6 +292,9 @@ def slug_source(url):
 
 
 def add_source(url, publisher, note=""):
+    if url.startswith("http://"):
+        note = (note + " Original register cited " + url + "; upgraded to https for this link.").strip()
+        url = "https://" + url[len("http://"):]
     for sid, rec in sources.items():
         if rec["url"] == url:
             return sid
@@ -304,7 +307,7 @@ def add_source(url, publisher, note=""):
         "url": url,
         "publisher": publisher,
         "checked": "2026-10-18",
-        "excerpt": "",
+        "excerpt": "Automated re-check pending (tools/verify_rows.py runs in CI and records the fetched text).",
         "method": note or ("Row source inherited from session 4f47c142; page fetched and "
                            "event-name match checked automatically on 2026-10-18."),
     }

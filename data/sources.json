@@ -863,9 +863,9 @@
   "url": "https://www.sfsketchfest.com/",
   "publisher": "SF Sketchfest (official site, dates per SF Travel January guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
   "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 202
+  "http": 403
  },
  "x-www-fogfair-com": {
   "url": "https://www.fogfair.com/",
@@ -1095,9 +1095,9 @@
   "url": "https://qwocmap.org/festival/",
   "publisher": "QWOCMAP (official site, dates per SF Travel June guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
   "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 202
+  "http": 403
  },
  "x-www-sfbff-org": {
   "url": "https://www.sfbff.org/",
@@ -1119,9 +1119,9 @@
   "url": "https://sffolkfest.org/",
   "publisher": "SF Free Folk Festival (official site, dates per SF Travel July guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
   "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 202
+  "http": 403
  },
  "x-www-frozenfilmfestival-com": {
   "url": "https://www.frozenfilmfestival.com/",
@@ -1224,9 +1224,9 @@
   "url": "https://sffallshow.org/",
   "publisher": "SF Fall Show (official site, dates per SF Travel October guide)",
   "checked": "2026-10-18",
-  "excerpt": "Automated fetch returned HTTP 202 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
+  "excerpt": "Automated fetch returned HTTP 403 on 2026-10-18. The page did not serve readable text to the checker (bot protection or server error); this is not evidence that the page is wrong. Values rest on the authoring session's manual reading.",
   "method": "Automated fetch attempted in CI; blocked by the site.",
-  "http": 202
+  "http": 403
  },
  "x-www-potrerofestival-com": {
   "url": "https://www.potrerofestival.com/",
@@ -1624,8 +1624,9 @@
   "url": "https://sfcurran.com/visit/",
   "publisher": "The Curran San Francisco",
   "checked": "2026-10-18",
-  "excerpt": "Oh, Mary! Through Sun, Nov 1, 2026. The Billy Joel Legacy Thu, Nov 5, 2026. Taylor Mac in Concert Fri, Nov 6, 2026. The Music of Queen Sat, Nov 7, 2026. An Evening with Darren Criss Sat, Nov 14, 2026. World Ballet Company: Swan Lake Fri, Nov 20, 2026. The Golden Girls Live Fri, Dec 4 - Sun, Dec 20, 2026.",
-  "method": "Web page retrieved and transcribed on 2026-10-18"
+  "excerpt": "Automated fetch failed on 2026-10-18 (connection or TLS error). The URL is retained because it was the cited official source.",
+  "method": "Automated fetch attempted in CI; no response.",
+  "http": 0
  },
  "sfm-full": {
   "url": "https://www.thesfmarathon.com/full-marathon/",
@@ -1663,7 +1664,7 @@
   "url": "https://www.sfzoo.org/",
   "publisher": "San Francisco Zoo & Gardens \u2014 SF Resident Free Day",
   "checked": "2026-10-18",
-  "excerpt": "te ticket window on the day of your visit. Buying online is the easiest way to skip the line and get straight to the good stuff. General admission San Francisco residents Adult (12-64) $32 weekdays / $34 weekends & holidays Adult (12-64) $29 weekdays / $31 weekends & holidays Seniors (65+) $25 weekdays / $27 weekends & holidays Seniors (65+) $21 weekdays / $23 weekends & holida",
+  "excerpt": ". Watch penguins get fed at Penguin Island, catch a raptor talk at the Koret Animal Rescue & Conservation Center, or join a keeper for an up-close look at some of our most remarkable residents. Check the daily schedule and plan your time. From the Little Puffer miniature steam train to the historic Dentzel Carousel, rides and attractions add playful moments to a day at the Zoo.",
   "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
   "http": 200
  },
@@ -1679,7 +1680,7 @@
   "url": "https://presidio.gov/about/press/presidio-unveils-vibrant-2026-summer-event-lineup",
   "publisher": "Presidio Trust \u2014 Habitat Stewards",
   "checked": "2026-10-18",
-  "excerpt": "Event Calendar - The Presidio (San Francisco) Skip to Content Home Things To Do Event Calendar Events at the Presidio There's always something happening at the Presidio Featured Events Friday , Oct 09 10:00 AM Litter Pickup on Presidio Tunne",
+  "excerpt": "Presidio Unveils Vibrant 2026 Summer Event Lineup - The Presidio (San Francisco) Skip to Content Home About Press Presidio Unveils Vibrant 2026 Summer Event Lineup Presidio Unveils Vibrant 2026 Summer Event Lineup Free f",
   "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
   "http": 200
  },

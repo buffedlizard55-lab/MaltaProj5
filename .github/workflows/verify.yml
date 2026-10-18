@@ -9,8 +9,6 @@ on:
     branches:
       - 'arena/**'
     paths:
-      - 'data/events.json'
-      - 'data/sources.json'
       - 'tools/verify_rows.py'
 
 permissions:

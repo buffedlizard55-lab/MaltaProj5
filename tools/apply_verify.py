@@ -86,10 +86,9 @@ for row in rows:
         all_blocked = srcs and all(s.get("blocked") or s.get("http") in (0, None) for s in srcs)
         if all_blocked:
             blocked_rows.append(row["name"])
-            note = (f"{AUTO}: the cited page blocks automated clients (HTTP "
-                    f"{', '.join(str(s.get('http')) for s in srcs if s.get('http'))}); "
-                    "the row's values rest on the authoring session's manual reading and were not "
-                    "re-confirmed by machine. Manual re-check requested.")
+            note = (f"{AUTO}: the cited page blocks automated clients (bot protection or server "
+                    "error); the row's values rest on the authoring session's manual reading and "
+                    "were not re-confirmed by machine. Manual re-check requested.")
         else:
             unconfirmed.append(row["name"])
             note = (f"{AUTO}: the cited page did not contain the event name in the fetched text "

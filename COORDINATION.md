@@ -2,11 +2,11 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (2026-10-18):** PR #28's official-calendar additions, PR #29's publication record and the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36) are merged; GitHub Pages is live from `main`.
+**Current publication (2026-10-18):** the `21f3dd85` **free-first release** (T37–T40, PR #39) is merged on top of the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36); GitHub Pages is live from `main` (merge commit `2b077e0`, Pages build confirmed **built** 2026-10-18 11:46 UTC).
 
-The bounded snapshot contains **266 candidates: 185 city-only directory entries / 81 review-only**, with 23 weekly / 8 monthly / 31 annual / 123 special entries, 67 entries carrying at least one confirmed future date, and 264 cited official URLs across 150 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
+The bounded snapshot contains **274 candidates: 191 city-only directory entries / 83 review-only**, with 24 weekly / 11 monthly / 32 annual / 124 special entries, 70 entries carrying at least one confirmed future date, a cost split of **Free 61 / Paid 19 / Not stated 111**, and 277 cited official URLs across 150 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
 
-**New in this release:** an [Upcoming](upcoming.html) page grouping the 67 dated entries into *Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later* with nearest-confirmed-date-first ordering; an executive summary timeline of the 12 soonest entries on the dashboard; a Free / Paid / **Not stated** cost badge on every row derived only from the verified admission quotation; dedicated [Gaming](gaming.html), [Music](music.html), [AI & technology](ai.html) and [Free to attend](free.html) pages; session `59f56c24`'s combined [Focus](focus.html) view with a Cost filter; and a mobile card layout for every events table below 820 px.
+**New in this release (free-first):** the dashboard executive summary and main section now carry **free upcoming events only** — 13 free dated entries nearest first (next 14 days highlighted) plus 28 free recurring patterns ordered Gaming → Music → AI & technology → everything else, with per-topic nearest-free callouts; a separate [Paid events](paid.html) section collecting the 19 priced entries with exact quoted wording ("Not stated" never treated as paid); 8 new overlay entries (Noontime Concerts, Sea Chantey Sing, Mechanics' Institute Chess Socials, Gaming at The Mix, SFPL Tech Week, one paid chess marathon, 2 held for review). The complete all-cost directory remains on [Focus](focus.html) and [Upcoming](upcoming.html). Carried over from T33–T36: the [Upcoming](upcoming.html) grouping (*Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later*, nearest first); the Free / Paid / **Not stated** cost badge derived only from the verified admission quotation; dedicated [Gaming](gaming.html), [Music](music.html), [AI & technology](ai.html) and [Free to attend](free.html) pages; session `59f56c24`'s combined [Focus](focus.html) view with a Cost filter; and a mobile card layout for every events table below 820 px.
 
 **Parallel-session integration.** Session `59f56c24` merged PRs #34–#36 into `main` while `3adf31d9` was building T34–T36. Both sessions had independently created `upcoming.html` and `free.html`, and both had independently added GDC Festival of Gaming. Neither side's work was discarded — see the [integration log](#integration-log--3adf31d9--merges-main-59f56c24-topic-extras-2026-10-18) below.
 
@@ -132,7 +132,7 @@ Upcoming page and cost badges are regression-covered in CI.
 | T37 | Free-first research: additional **free gaming / music / AI** (then other free) entries inside San Francisco from official organizer/venue/library/government pages only; exact quotations + archived captures; new fail-closed overlay chained after `3adf31d9` | **done** (2026-10-18) — 8 candidates, 6 listed / 2 held; register now 274 candidates, 191 listed / 83 review-only, 277 URLs | `21f3dd85` | NEW: `data/audit_21f3dd85.json`, `data/research/audit-21f3dd85.md`, `tools/register_21f3dd85.py`; tail wiring in `tools/consolidate.py`; overlay-chain assertion in `scripts/validate.py` |
 | T38 | **Free-first dashboard**: executive summary focused on free + upcoming (soonest free dated entries near the 2026-10-18 snapshot); dashboard main section = **free upcoming events only**, date-ordered nearest first with next-14-days highlight; full directory remains on Focus / Upcoming | **done** — 13 free dated + 28 free recurring on the landing page; Gaming/Music/AI nearest-free callouts; 45 unit tests + browser smoke green | `21f3dd85` | `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `*.html` |
 | T39 | **Paid events in a separate section**: new `paid.html` listing only Paid-badge entries with the exact quoted price wording; nav + dashboard card; page-count and CI file-list updates | **done** — 19 priced entries on `paid.html` (19-page site); "Not stated" never listed as paid | `21f3dd85` | NEW: `paid.html` (generated); `scripts/build.py`, `scripts/validate.py`, `tests/test_upcoming_cost.py`, `tests/browser_smoke.cjs`, `.github/workflows/pages.yml`, `*.html` |
-| T40 | Final integration: rebuild, re-verify combined data line by line (validate + unit tests + source-link checks), refresh README/SOURCES counts, PR → `main`, merge without waiting, confirm Pages deploy, record PR link + merge result here | **in progress** (2026-10-18) — docs refreshed; PR next | `21f3dd85` | `data/*` (generated), `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md`, `COORDINATION.md` |
+| T40 | Final integration: rebuild, re-verify combined data line by line (validate + unit tests + source-link checks), refresh README/SOURCES counts, PR → `main`, merge without waiting, confirm Pages deploy, record PR link + merge result here | **done** (2026-10-18) — PR #39 merged `2b077e0` 11:45 UTC; CI + post-merge validation green; Pages API **built** for the merge commit; record below | `21f3dd85` | `data/*` (generated), `*.html`, `README.md`, `SOURCES.md`, `ANALYSIS.md`, `COORDINATION.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1590,5 +1590,17 @@ integration session to edit the earlier row); Grace Cathedral recital admission 
 Internet Archive tours title; no dated free gaming/AI instance quotable this pass (SFPL's
 explicitly dated AI/gaming instances are past relative to the snapshot).
 
-**Publication record:** pending merge — PR link, CI result, merge commit and Pages
-confirmation are appended here after they occur.
+**Publication record (completed 2026-10-18):** PR
+[buffedlizard55-lab/MaltaProj5#39](https://github.com/buffedlizard55-lab/MaltaProj5/pull/39).
+PR gate run [39124438308](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39124438308)
+passed all steps (rebuild, 45 unit tests, exact-projection validate, generated-file consistency,
+real-browser desktop/mobile + axe smoke, 277-URL reachability with no 404/410). Merged
+**2026-10-18 11:45:45 UTC** as merge commit `2b077e0c8e3debc94e9633ebcab914217bafa73f`.
+Post-merge validation run
+[39124541558](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39124541558) passed;
+Pages deployment run
+[39124541014](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39124541014) succeeded
+and the Pages API reports the latest build **built** for that exact merge commit at
+2026-10-18 11:46:06 UTC. Live site: https://buffedlizard55-lab.github.io/MaltaProj5/ (sandbox
+cannot fetch github.io directly, so confirmation is via the Pages API/workflow, not assumption).
+T40 is **done**; this record rides a documentation-only follow-up PR.

@@ -2,9 +2,9 @@
 
 Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Current publication (2026-10-18):** PR #28's official-calendar additions and PR #29's publication record are merged; GitHub Pages is live from `main`.
+**Current publication (2026-10-18):** PR #35's official-calendar extras are merged onto the T32 dashboard; GitHub Pages is live from `main`.
 
-The bounded snapshot contains **246 candidates: 167 city-only directory entries / 79 review-only**, with 23 weekly / 7 monthly / 26 annual / 111 special entries and 242 cited official URLs across 140 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
+The bounded snapshot contains **251 candidates: 172 city-only directory entries / 79 review-only**, with 23 weekly / 7 monthly / 26 annual / 116 special entries and 248 cited official URLs across 141 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
 
 PR #27 independently audited and documented the prior 242-candidate snapshot. Earlier counts and task results below are historical, not the current publication gate. Actual CI, merge and Pages records are at the end of this board.
 
@@ -93,7 +93,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T32 | Mobile-first executive summary, date-sorted Upcoming, clear cost badges, Free-first + Gaming/Music/AI focus pages (derived only from audited verified fields; no new facts) | done | `2fa50487` | `scripts/build.py`, `scripts/validate.py`, `assets/style.css`, `assets/app.js`, `tests/browser_smoke.cjs`, `.github/workflows/pages.yml`, generated `*.html`, `README.md`, `ANALYSIS.md`, `COORDINATION.md` |
 | T33 | Official-source research: dated SF gaming / music / AI extras (exact quotations only); isolated overlay | **done** | `59f56c24` | `data/research/audit-59f56c24.md`, `data/audit_59f56c24.json`, `tools/overlay_59f56c24.py` |
 | T34 | Overlay extras into the audited register; rebuild T32 dashboard; update regressions | **done** — 251 candidates / 172 listed / 79 review-only | `59f56c24` | `data/audit_64f8b973.json`, generated `data/` + `*.html`, `tests/test_audited_register.py`, `scripts/build.py` (focus IDs only) |
-| T35 | Validate, PR → main, merge, confirm Pages | **in progress** | `59f56c24` | `COORDINATION.md`, `README.md` |
+| T35 | Validate, PR → main, merge, confirm Pages | **done** — [PR #35](https://github.com/buffedlizard55-lab/MaltaProj5/pull/35) merged `d1aac55` 2026-10-18 10:02 UTC | `59f56c24` | `COORDINATION.md`, `README.md` |
 
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
@@ -1257,3 +1257,15 @@ T32 dashboard (upcoming / free / focus) is kept. This session adds five listed s
 Focus grouping: Family Game Time and GDC join Gaming; Current SF and Ignite join AI from official subtitles (not invented names). Cloudflare stays in Everything else.
 
 Offline: 31 unit tests + `scripts/validate.py` PASS (251 / 172 / 79, 15 pages). Unverified fields remain blank and do not block merge.
+
+### T35 publication record — `59f56c24`
+
+| Item | Result |
+|---|---|
+| PR | [#35](https://github.com/buffedlizard55-lab/MaltaProj5/pull/35) merged 2026-10-18 10:02:19 UTC |
+| Merge commit | `d1aac55ef612fae3adabed946ecb997d7ec89dae` |
+| PR validation | [39117607204](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39117607204) **success** (browser/a11y + 404/410 gate; 40 restricted/unknown URLs, not semantic verification) |
+| Main validation | [39117678329](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39117678329) **success** (41 restricted/unknown URLs) |
+| Pages | [39117677941](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39117677941) **success**; Pages API `built` for `d1aac55` at 2026-10-18 10:03:11 UTC |
+| Live site | https://buffedlizard55-lab.github.io/MaltaProj5/ |
+| Register | 251 candidates / 172 listed / 79 review-only |

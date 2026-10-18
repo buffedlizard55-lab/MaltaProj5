@@ -685,7 +685,7 @@ for r7 in pr7:
                 b["flags"].append(f)
         continue
     if r7["id"] == "curran-season":
-        r7["sources"] = [x for x in r7["sources"] if sources[x]["url"] != "https://sfcurran.com/"]
+        r7["sources"] = [x for x in r7["sources"] if not sources[x]["url"].startswith("https://sfcurran.com")]
         atg = add_source(
             "https://us.atgtickets.com/venues/curran-theater/whats-on/",
             "Curran Theatre — official ATG box office, What's On",

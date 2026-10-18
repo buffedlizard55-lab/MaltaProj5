@@ -8930,20 +8930,16 @@
   "venue": "Curran Theatre, 445 Geary Street (Theater District)",
   "price": "",
   "sources": [
-   "x-us-atgtickets-com-venues-curran-theater-whats-on",
-   "curran-home"
+   "x-us-atgtickets-com-venues-curran-theater-whats-on"
   ],
   "evidence": {
    "name": [
-    "curran-home",
     "x-us-atgtickets-com-venues-curran-theater-whats-on"
    ],
    "schedule": [
-    "curran-home",
     "x-us-atgtickets-com-venues-curran-theater-whats-on"
    ],
    "venue": [
-    "curran-home",
     "x-us-atgtickets-com-venues-curran-theater-whats-on"
    ]
   },

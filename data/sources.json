@@ -1620,14 +1620,6 @@
   "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
   "http": 200
  },
- "curran-home": {
-  "url": "https://sfcurran.com/visit/",
-  "publisher": "The Curran San Francisco",
-  "checked": "2026-10-18",
-  "excerpt": "Automated fetch failed on 2026-10-18 (connection or TLS error). The URL is retained because it was the cited official source.",
-  "method": "Automated fetch attempted in CI; no response.",
-  "http": 0
- },
  "sfm-full": {
   "url": "https://www.thesfmarathon.com/full-marathon/",
   "publisher": "The San Francisco Marathon",

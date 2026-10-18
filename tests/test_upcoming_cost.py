@@ -170,18 +170,26 @@ class Presentation(unittest.TestCase):
             self.assertTrue(row["price"], rid)
 
     def test_landing_main_section_is_free_only(self):
-        """The landing tables (T38) carry free dated + free recurring entries, nothing else."""
+        """The landing table carries only free entries with approved upcoming dates."""
         page = self.pages["index.html"]
         free_ids = {r["id"] for r in self.listed if cost_of(r)[0] == "Free"}
         dated_ids = {r["id"] for r in self.listed if next_date(r)}
-        recurring_ids = {r["id"] for r in self.listed if r["kind"] in ("Weekly", "Monthly", "Annual")}
-        expected = (free_ids & dated_ids) | (free_ids & (recurring_ids - dated_ids))
+        expected = free_ids & dated_ids
         self.assertEqual(set(page.rows), expected)
         self.assertTrue(expected)
         # The whole directory survives elsewhere: Upcoming and Focus carry every listed row.
         all_listed = {r["id"] for r in self.listed}
         self.assertEqual(set(self.pages["upcoming.html"].rows), all_listed)
         self.assertEqual(set(self.pages["focus.html"].rows), all_listed)
+
+    def test_expired_or_undated_patterns_never_reach_landing(self):
+        page = self.pages["index.html"]
+        for rid in ("audit-sunday-fun-days-2026", "f-sfpl-mix-gaming"):
+            self.assertNotIn(rid, page.rows)
+            self.assertIn(rid, self.pages["free.html"].rows)
+        order = json.loads((ROOT / "data/dashboard_order.json").read_text())
+        self.assertEqual(order["recurring"], [])
+        self.assertEqual(order["dated"], list(page.rows))
 
     def test_topic_pages_match_the_editorial_tags(self):
         for name, topic in (("gaming.html", "Gaming"), ("music.html", "Music"), ("ai.html", "AI & technology")):

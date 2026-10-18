@@ -1688,7 +1688,7 @@ absent from the pre-merge register).
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| T-16b-1 Audit and repair landing-page eligibility; preserve recurring discovery separately; regression and integration | in progress | `16b88bbd` | `scripts/build.py`, `scripts/validate.py`, `tests/test_free_dashboard.py` (new), `README.md`, generated root HTML / `ANALYSIS.md` / `data/dashboard_order.json`, `data/research/audit-16b88bbd.md` (new), `COORDINATION.md` |
+| T-16b-1 Audit and repair landing-page eligibility; preserve recurring discovery separately; regression and integration | done | `16b88bbd` | `scripts/build.py`, `scripts/validate.py`, `tests/test_free_dashboard.py` (new), `README.md`, generated root HTML / `ANALYSIS.md` / `data/dashboard_order.json`, `data/research/audit-16b88bbd.md` (new), `COORDINATION.md` |
 
 Claim: existing integration tasks are completed; no open PRs found at claim time. No active scope is taken over. Historical in-progress log entries are not current claims. Work remains on Arena's fixed `arena/16b88bbd-maltaproj5` branch. Confirmed defect: dashboard main tables currently include 40 undated recurring entries, including expired seasonal programmes, despite the requirement for only free upcoming entries. This task changes presentation eligibility, not previously curated event facts. All 295 existing candidates and their provenance are retained. Official-source spot checks and structural checks will be distinguished; a comprehensive fresh semantic re-verification or exhaustive city coverage will not be claimed.
 
@@ -1698,17 +1698,32 @@ T-16b-1 implementation complete: strict landing eligibility is now `Free ∩ app
 
 Validation executed: canonical consolidate/build; **46 unit tests passed**; exact-projection validator passed all 295 records, 19 pages, source links and local links/fragments; real Chromium desktop 1440×1000 / mobile 390×844 smoke passed all 19 pages, filters, no-JS output, overflow and source anchors, zero runtime errors and zero automated axe violations on seven core pages. `git diff --check` passed. Fresh semantic source checks cover the three explicitly logged official pages, not all inherited records. Remote reachability and publication confirmation pending PR CI/Pages.
 
+
+### T-16b-1 publication confirmed
+
+PR [#43](https://github.com/buffedlizard55-lab/MaltaProj5/pull/43) merged without waiting for review at **2026-10-18 16:59:31 UTC**, merge commit `2d3ac6a7aa2af76a198edf206c7380b5ce6a0b0d`. PR validation [39147407179](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39147407179) passed. Post-merge validation [39147504687](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39147504687) passed, including all 308 source URL checks (42 restricted/challenge/server/transport outcomes remain unknown, not verified and not classified as dead). Pages workflow [39147504447](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39147504447) succeeded; Pages API reports **built**, no error, for the exact merge commit. Site: https://buffedlizard55-lab.github.io/MaltaProj5/ . Confirmation is via GitHub deployment/API, not an independent fetch of the public site from this network-restricted shell.
+
+Outstanding semantic issues are published on [Flagged for Review](https://buffedlizard55-lab.github.io/MaltaProj5/review.html#upcoming-eligibility-audit), not blockers. This publication record is a documentation-only follow-up on the same fixed session branch. No merge conflicts occurred. The current strict dashboard supersedes the historical header's claim that undated recurring entries appear in the main landing tables.
+
 ---
 
 ## Session `9d0b6c49` — independent post-publication verification + gap research (claimed 2026-10-18 17:01 UTC)
 
 **Claim basis.** At claim time `main` = `2d3ac6a7` (PR #43 merged 16:59:31 UTC). `gh pr list --state open`
-returned **no open PRs**. `git ls-remote` shows **no `arena/*` branch with commits ahead of `main`**, so no
-session has unmerged in-flight work. Session `16b88bbd`'s T-16b-1 row still reads `in progress`, but its
-implementation is recorded complete and its PR #43 is merged; this session does **not** take over or edit
-that row, and treats `scripts/build.py` / `scripts/validate.py` / `tests/` as shared integration files that
-it will only touch **after** re-checking for new upstream commits. If `16b88bbd` returns with a
-publication-record PR, this session merges `main` back and keeps both sides' text.
+returned **no open PRs**. `git ls-remote` showed **no `arena/*` branch with commits ahead of `main`**, so no
+session had unmerged in-flight work. Session `16b88bbd`'s T-16b-1 row still reads `in progress`; its
+implementation is recorded complete and its PR #43 is merged, so this session did **not** take over or edit
+that row.
+
+**Conflict actually hit, and how it was resolved.** `16b88bbd` did return: it merged documentation-only PR
+[#44](https://github.com/buffedlizard55-lab/MaltaProj5/pull/44) (`9c17534`, "Record PR 43 merge and
+confirmed Pages publication") while this session was mid-task. Both sessions had appended a new section to
+the end of `COORDINATION.md`, so `git merge origin/main` conflicted on that one file only. Resolution was a
+**union**: `16b88bbd`'s publication record is kept verbatim and placed first (earlier timestamp), this
+session's claim follows it, and nothing was discarded. A rebase was started first, aborted, and replaced by
+a merge so that this session's already-pushed branch tip would not need a force-push. `scripts/build.py`,
+`scripts/validate.py` and `tests/` were re-checked against `9c17534` before being touched — PR #44 is
+documentation-only, so no code conflict existed.
 
 Branch note: Arena pins this session to `arena/9d0b6c49-maltaproj5`, so the requested
 `session-9d0b6c49/<task>` naming cannot be used — same deviation every prior session recorded.

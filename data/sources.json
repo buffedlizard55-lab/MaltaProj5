@@ -135,13 +135,6 @@
   "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
   "http": 200
  },
- "bay": {
-  "url": "https://www.baytobreakers.com/",
-  "publisher": "Bay to Breakers",
-  "checked": "2026-10-18",
-  "excerpt": "May 16, 2027. Register for 2027. Historic fun run through the streets of San Francisco. Elsewhere on same page: high-energy happenings before May 18; 2026 sanction graphic and undated May shakeout/ballgame promotions.",
-  "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
- },
  "fleet": {
   "url": "https://fleetweeksf.org/",
   "publisher": "San Francisco Fleet Week Association",
@@ -157,13 +150,6 @@
   "excerpt": "Folsom Street - Community Center and Events 0 Skip to Content EVENTS ROOT OF PRIDE UP YOUR ALLEY FOLSOM STREET FAIR HUNGER MAGNITUDE DEVIANTS BEARRISON TRAVEL APPLY FOR A BOOTH PUBLIC HEALTH/SAFETY FAQ ABOUT ABOUT FOLSOM",
   "method": "Fetched automatically on 2026-10-18; the excerpt is the page text surrounding the event-name match, not a full transcription.",
   "http": 200
- },
- "folsomdetail": {
-  "url": "https://www.folsomstreet.org/folsom-street-fair",
-  "publisher": "Folsom Street",
-  "checked": "2026-10-18",
-  "excerpt": "FOLSOM STREET FAIR. SEPTEMBER 27, 2026 11AM\u20136PM. Page title FOLSOM STREET FAIR 2026.",
-  "method": "Official page read with fetch_page; excerpt transcribed, not a full-page archive."
  },
  "band": {
   "url": "https://sfrecpark.org/1570/Golden-Gate-Bandshell-Concerts",

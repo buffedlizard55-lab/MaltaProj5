@@ -28,6 +28,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `4f47c142` | `arena/4f47c142-maltaproj5` | 2026-10-18 ~00:40 | Full-inventory research (167 events), docs/ site, verification pass, second integration (PR #4) |
 | `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7) |
 | `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
+| `526a8db6` | `arena/526a8db6-maltaproj5` | 2026-10-18 | Independent final audit of delivered register, build, CI, and live publication (T19) |
+| `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 04:20 UTC | Post-publication data consistency fix and regression validation (T20) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -58,8 +60,10 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T15 | GitHub Pages publication | **done — live** | all sessions | `.github/workflows/pages.yml` |
 | T16 | Defect D1 fix: `tools/integrate.py` idempotency + CI regression test | done | `5a85baf2` | `tools/integrate.py`, `data/sources_3a19e72d.json`, `data/review_3a19e72d.json`, `.github/workflows/pages.yml` |
 | T17 | Register expansion 86→106 entries from official sources | **done — content integrated**; PR #7 superseded | `a1b7522f` | `data/events_a1b7522f.json`, `data/sources_a1b7522f.json` |
-| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | done (PR #10 merged; PR #13 record) | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
-| T19 | Independent audit: rebuild + validate from source, re-run remote/dead-link checks, spot-verify flagged rows against official pages, check live Pages site page-by-page, fix defects, PR → `main`, merge, confirm Pages | **in progress** | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
+| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **done — live** (PR #10 merged; PR #13 record) | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
+| T19 | Independent delivery audit: rerun generators/validators, inspect live Pages and GitHub status, repair only confirmed defects | **done** | `526a8db6` | `COORDINATION.md`; other files only if an unclaimed defect is confirmed and logged first |
+| T20 | Resolve confirmed populated/marked-unverified data conflicts, strengthen consistency checks, document source-snapshot coverage, rebuild and publish | done (PR #16) | `99662c40` | `COORDINATION.md`, `data/events_base86.json`, `tools/consolidate.py`, `tools/apply_verify.py`, `scripts/build.py`, `scripts/validate.py`, generated data/pages, `README.md`, `SOURCES.md`, `ANALYSIS.md` |
+| T21 | Independent audit (numbered T19 at claim time; renumbered on merge — see merge log): rebuild + validate, spot-verify flagged rows against official pages, check live Pages site, fix defects D2–D5, PR → `main`, merge, confirm Pages | **in progress** | `cebeabf0` | `COORDINATION.md`; defect fixes only in files implicated by the audit (logged here before editing) |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -71,6 +75,18 @@ files are preserved under `data/`, and the merge map is explicit in `tools/conso
 ---
 
 ## Merge conflict log
+
+**2026-10-18 — `99662c40` rebased the T20 audit claim onto `origin/main` after PR #14 landed.**
+
+PR #14 from session `526a8db6` had already recorded an independent delivery audit as T19 and marked
+T18 complete. The local claim had independently used the same T19 number before fetching that
+update. Resolution preserved PR #14's registry entry and completed T19 unchanged, kept T18 marked
+done, and renumbered this distinct data-consistency remediation as T20. The confirmed data anomaly
+was then logged under T20 before modifying shared generated outputs. No files or findings from the
+other session were discarded. Rebasing onto the updated `main` made the first ordinary push
+non-fast-forward; fetch confirmed the remote branch contained only this session's earlier claim
+commit (`dcbec2c`). The rebased branch preserves that claim and PR #14's mainline commits; its
+update will use a lease against the observed remote SHA so no concurrent branch update is lost.
 
 **2026-10-18 — `5a85baf2` integration merge of `origin/main` (`bb74afd`) into
 `arena/5a85baf2-maltaproj5`.**
@@ -547,7 +563,7 @@ merge and re-validated.
 
 ---
 
-## Audit defects found — `cebeabf0` (T19, 2026-10-18)
+## Audit defects found — `cebeabf0` (T21, claimed as T19, 2026-10-18)
 
 Logged before editing (scope for T19 extended to the files below):
 
@@ -561,7 +577,7 @@ Rebuild reproducibility was confirmed before these fixes: `consolidate.py → ap
 
 ---
 
-## Audit result (T19) — `cebeabf0`, 2026-10-18
+## Audit result (T21) — `cebeabf0`, 2026-10-18
 
 **Scope:** independent audit of the merged 231-row register and live site; no new research register added.
 
@@ -616,3 +632,54 @@ live site                      -> https://buffedlizard55-lab.github.io/MaltaProj
 | PR | _pending_ |
 | Merge | _pending_ |
 | Pages | _pending_ |
+
+---
+
+## Independent delivery audit (T19) — `526a8db6`, 2026-10-18
+
+This session found the requested deliverable already integrated on `main` and independently checked
+the generated outputs rather than duplicating the completed research. No data or site defect was
+found. The stale top-level T18 status was corrected from “in progress” to “done — live.”
+
+### Reproducibility and validation
+
+```
+python3 tools/consolidate.py  -> 231 rows; Weekly 25, Monthly 11, Annual 135, Special 60; 213 sources
+python3 tools/apply_verify.py -> 165 name found, 64 not found, 2 PDFs; 35 bot-blocked rows flagged
+python3 scripts/build.py      -> 12 pages, 231 rows, 213 official-source records
+python3 scripts/validate.py   -> PASS: evidence, blank flags, parents, pages, local links/fragments
+git status --short           -> clean after the complete canonical pipeline
+```
+
+The audit also confirmed through the GitHub API that there were no open pull requests before this
+audit, Pages was public in branch mode from `main` / root with HTTPS enforced, and the latest Pages
+build for `e8828ef` had status `built`. The corresponding validation and Pages Actions runs
+(`39089686728` and `39089686311`) both concluded successfully. Official manual-review links remain
+available row by row on `sources.html`; unresolved bot/JavaScript checks and blank fields remain
+published on `review.html` and do not block publication.
+
+### Irregularities
+
+* The source register is a maintained inventory, not a provably exhaustive census; this limitation
+  is explicitly published in the site methodology.
+* 64 rows were not machine name-matched (including 35 bot-blocked rows), and two PDF sources were
+  not text-checked. These are not represented as machine-verified and remain visible for review.
+* No dead URL, generated-output drift, broken local link, missing row evidence reference, or Pages
+  deployment failure was found during this audit.
+
+---
+
+## Merge log — `cebeabf0` merges `origin/main` (`15ada17`, PRs #14/#16) into PR #15, 2026-10-18
+
+PR #16 (session `99662c40`, T20) and PR #14 (session `526a8db6`, T19) merged while PR #15's CI
+was running, making PR #15 conflicting. Resolution, discarding neither side:
+
+| File(s) | Resolution |
+|---|---|
+| Generated `*.html`, `data/events.csv`, `data/review.json` | Took `main`'s version, then regenerated everything with the merged pipeline so the published output reflects both sessions' source changes. |
+| `data/events_base86.json`, `tools/apply_verify.py` | `main`'s versions kept (auto-merged / not in conflict on this branch). |
+| D2 (same 3 price contradictions) | Both sessions found the same defect independently. `99662c40`'s resolution — blank the price values whose cited page does not state a price, keeping the unverified flag — is the more conservative reading of the no-inference rule and is **adopted**. `cebeabf0`'s complementary guards remain: `consolidate.py` prunes stale flags on populated fields and `validate.py` (as merged, `main`'s equivalent assertion) rejects any populated/marked-unverified conflict. No price value from this branch was restored. |
+| `scripts/validate.py` | `main`'s version adopted: it contains the same populated-vs-unverified assertion plus a source-ledger completeness check. |
+| `ANALYSIS.md`, `README.md`, `SOURCES.md` | `main`'s versions adopted as the base; counts re-synced after regeneration for the one added Sketchfest source (D5). |
+| `COORDINATION.md` | Both task boards and both audit logs preserved. Task-number collision (both sessions claimed "T19") resolved by renumbering `cebeabf0`'s task to **T21**; `526a8db6` keeps T19 and `99662c40` keeps T20, both done via PRs #14/#16. |
+| `tools/consolidate.py`, `scripts/build.py` | Auto-merged; verified after merge that both the D5 Sketchfest correction and `main`'s changes are present, then regenerated + revalidated. |

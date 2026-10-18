@@ -144,6 +144,13 @@ series = sum(1 for r in rows if not r["parent"])
 domains = {sources[s]["url"].split("/")[2] for r in rows for s in r["sources"]}
 levels = Counter((r.get("check") or {}).get("level", "page-level") for r in rows)
 summ = report.get("summary", {})
+report_urls = set(report.get("urls", {}))
+current_source_urls = {source["url"] for source in sources.values()}
+uncovered_source_urls = sorted(current_source_urls - report_urls)
+stale_report_urls = sorted(report_urls - current_source_urls)
+dead_report_urls = {item["url"] for item in report.get("dead", [])}
+dead_current_urls = dead_report_urls & current_source_urls
+dead_stale_urls = dead_report_urls - current_source_urls
 
 stats = ('<section class="stats" aria-label="Inventory statistics">'
          + "".join(f'<article class="{cls}"><span>{label}</span><strong>{value}</strong><small>{note}</small></article>'
@@ -269,12 +276,17 @@ page was fetched and the event name confirmed, but each date and price was not r
 <tr><td>Page-level</td><td>{levels['page-level']}</td><td>Page and event name re-confirmed automatically</td></tr>
 <tr><td>Flagged</td><td>{levels['flagged']}</td><td>An unresolved note; see the Flagged page</td></tr>
 </tbody></table>
-<p>Latest automated pass ({e(report.get('checked_at', 'not yet run'))}): <b>{summ.get('name_found', 0)}</b> rows
+<p>Saved automated snapshot ({e(report.get('checked_at', 'not yet run'))}): <b>{summ.get('name_found', 0)}</b> rows
 had the event name found on a cited page, <b>{summ.get('name_not_found', 0)}</b> did not,
 <b>{summ.get('no_response', 0)}</b> had no response, and <b>{summ.get('pdf_not_checked', 0)}</b> cite a PDF.
-<b>{summ.get('dead_urls', 0)}</b> cited URL(s) were dead and <b>{summ.get('blocked_urls', 0)}</b> were
-bot-blocked or returned a server error. A blocked page is not evidence of a bad event; it means the
-automated client could not read it. Those rows keep their label and appear on the review page.</p>
+It lists <b>{summ.get('dead_urls', 0)}</b> dead/connection-failed URL(s), including <b>{len(dead_stale_urls)}</b>
+no longer cited in the current source ledger; <b>{len(dead_current_urls)}</b> current source URL(s) were
+reported dead. <b>{summ.get('blocked_urls', 0)}</b> URL(s) blocked the automated client or returned a
+server error. <b>{len(uncovered_source_urls)}</b> current source URL(s) are absent from this saved snapshot
+and <b>{len(stale_report_urls)}</b> are historical-only. The row-source snapshot is not a live exhaustive
+check; current source links and exact gaps are listed on <a href="review.html">Flagged for Review</a>.
+A blocked page is not evidence of a bad event, and automated name matching does not confirm dates, times,
+venue or admission.</p>
 
 <h2>Coverage of the annual calendar</h2>
 <p>Counting the rows that explicitly mention each month (a row may mention several):</p>
@@ -385,7 +397,7 @@ write("sources.html", "Sources & method",
       "and what remains unresolved.", body)
 
 f = io.StringIO()
-w = csv.writer(f)
+w = csv.writer(f, lineterminator="\n")
 w.writerow(["id", "name", "category", "kind", "schedule", "time", "venue", "price",
             "source_urls", "checked", "verification", "parent", "review"])
 for r in rows:

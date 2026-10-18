@@ -7,7 +7,7 @@
   "schedule": "Weekly, year-round \u2014 Saturday plus Tuesday and Thursday \u2014 Sat 8am-2pm; Tue & Thu 10am-2pm",
   "time": "Sat 8:00-14:00; Tue & Thu 10:00-14:00",
   "venue": "San Francisco Ferry Building (Embarcadero)",
-  "price": "Free admission",
+  "price": "",
   "sources": [
    "b-foodwise-org-markets-ferry-plaza-farmers-market",
    "ferry"
@@ -24,9 +24,6 @@
     "b-foodwise-org-markets-ferry-plaza-farmers-market"
    ],
    "venue": [
-    "b-foodwise-org-markets-ferry-plaza-farmers-market"
-   ],
-   "price": [
     "b-foodwise-org-markets-ferry-plaza-farmers-market"
    ]
   },
@@ -52,7 +49,9 @@
    "by": "3a19e72d / 5a85baf2",
    "date": "2026-10-18"
   },
-  "unverified": []
+  "unverified": [
+   "price: unverified; left blank."
+  ]
  },
  {
   "id": "nightlife",
@@ -584,7 +583,7 @@
   "schedule": "Annual \u2014 last weekend of June \u2014 2026: June 27-28 at Civic Center Plaza. Official site banner: June 26-27, 2027, 57th annual.",
   "time": "",
   "venue": "Civic Center Plaza (Civic Center)",
-  "price": "Free",
+  "price": "",
   "sources": [
    "b-sfpride-org-events",
    "pride"
@@ -598,9 +597,6 @@
     "b-sfpride-org-events"
    ],
    "venue": [
-    "b-sfpride-org-events"
-   ],
-   "price": [
     "b-sfpride-org-events"
    ]
   },
@@ -616,7 +612,8 @@
    "date": "2026-10-18"
   },
   "unverified": [
-   "time: unverified; left blank."
+   "time: unverified; left blank.",
+   "price: unverified; left blank."
   ]
  },
  {
@@ -2504,7 +2501,7 @@
   "schedule": "Annual \u2014 late July \u2014 50th anniversary: race weekend July 24-25, 2027; full marathon Sunday, July 25, 2027",
   "time": "Full marathon start 5:15am",
   "venue": "Start at the Embarcadero at Market; finish at the Embarcadero at Howard (Embarcadero / Golden Gate Bridge)",
-  "price": "Paid entry",
+  "price": "",
   "sources": [
    "b-thesfmarathon-com-2027-50th-anniversary",
    "x-www-thesfmarathon-com-race-weekend",
@@ -2521,9 +2518,6 @@
     "b-thesfmarathon-com-2027-50th-anniversary"
    ],
    "venue": [
-    "b-thesfmarathon-com-2027-50th-anniversary"
-   ],
-   "price": [
     "b-thesfmarathon-com-2027-50th-anniversary"
    ]
   },
@@ -2548,7 +2542,9 @@
    "by": "3a19e72d / 5a85baf2",
    "date": "2026-10-18"
   },
-  "unverified": []
+  "unverified": [
+   "price: unverified; left blank."
+  ]
  },
  {
   "id": "b-sunday-streets",

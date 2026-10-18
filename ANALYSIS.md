@@ -1,7 +1,7 @@
 # ANALYSIS.md — findings from the verified San Francisco register
 
 Snapshot **2026-10-18**. Every figure below is computed from `data/events.json`
-(231 rows), `data/sources.json` (213 records), `data/review.json` (28 findings) and
+(231 rows), `data/sources.json` (213 records), `data/review.json` (19 findings) and
 `data/verify_report.json` (the machine fetch of every cited URL). The published version of this
 analysis is `analysis.html`.
 
@@ -25,7 +25,7 @@ analysis is `analysis.html`.
 | Rows verified page-level | 79 |
 | Rows flagged for review | 35 |
 | Rows with at least one blank tracked field | 188 |
-| Review findings | 28 |
+| Review findings | 19 |
 | Cited URLs that were dead in the last check | 0 |
 
 ## Verification outcome (2026-10-18 automated pass)

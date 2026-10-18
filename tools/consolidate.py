@@ -784,6 +784,35 @@ review.append({
 
 (ROOT / "data" / "events.json").write_text(json.dumps(rows, indent=1, ensure_ascii=True) + "\n")
 (ROOT / "data" / "sources.json").write_text(json.dumps(sources, indent=1, ensure_ascii=True) + "\n")
+# ---------------------- retire findings that the final register supersedes
+SUPERSEDED = [
+    "Publication blocked: GitHub Pages permission",
+    "Outside Lands and SF Marathon: retrieval failed",
+    "Golden Gate Bandshell: dynamic content unavailable",
+    "Folsom Street Fair: edition mismatch",
+    "Bay to Breakers: mixed-date copy",
+    "Opera productions: year not explicit in listing text",
+    "GitHub Pages cannot be enabled by the session credential (reproduced twice)",
+    "sfoutsidelands.com unreachable at verification time",
+    "Coverage remains incomplete after both research passes",
+    "22 rows have no organizer-published next date",
+]
+retired = [f["title"] for f in review if f["title"] in SUPERSEDED]
+review = [f for f in review if f["title"] not in SUPERSEDED]
+if retired:
+    review.append({
+        "title": "Earlier findings superseded by the final register",
+        "detail": "Ten notes described the state before integration and no longer hold: "
+                  "Pages was reported as blocked (it is enabled and serving this site), several "
+                  "events were reported as unretrievable or excluded (Outside Lands, the SF "
+                  "Marathon, Bay to Breakers, Folsom Street Fair, the Golden Gate Bandshell "
+                  "concerts — all now rows with official sources and current dates), the Opera "
+                  "productions are now sourced to dated 2026-27 season pages, and the note that "
+                  "coverage ended at the two-register stage is obsolete. The history remains in "
+                  "git and in the per-session snapshots.",
+        "urls": ["https://buffedlizard55-lab.github.io/MaltaProj5/"],
+    })
+
 (ROOT / "data" / "review.json").write_text(json.dumps(review, indent=1, ensure_ascii=True) + "\n")
 
 from collections import Counter

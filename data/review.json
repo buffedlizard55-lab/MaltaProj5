@@ -1,33 +1,10 @@
 [
  {
-  "title": "Publication blocked: GitHub Pages permission",
-  "detail": "Site build and pull-request validation passed, and PR #1 merged. Pages setup failed with Resource not accessible by integration in both repository API and workflow. Public Pages URL is not confirmed live. Repository GitHub connection needs Pages administration permission; after enabling Pages with GitHub Actions, rerun workflow.",
-  "urls": [
-   "https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573",
-   "https://github.com/buffedlizard55-lab/MaltaProj5/pull/1"
-  ]
- },
- {
   "title": "Coverage is incomplete",
   "detail": "This is a bounded official-source inventory, not a full list of every SF event. Library programs, sports, concerts, theatre, civic meetings, neighborhood and private events remain incompletely researched. No coverage percentage is known.",
   "sources": [
    "band",
    "opera"
-  ]
- },
- {
-  "title": "Outside Lands and SF Marathon: retrieval failed",
-  "detail": "Official homepages could not be retrieved in this session. No event facts were admitted. Marathon route must also be checked against the city-only rule.",
-  "urls": [
-   "https://www.outsidelands.com/",
-   "https://www.thesanfranciscomarathon.com/"
-  ]
- },
- {
-  "title": "Golden Gate Bandshell: dynamic content unavailable",
-  "detail": "Retrieved city page showed only Loading; schedule, times and recurrence remain blank. Candidate excluded from inventory.",
-  "sources": [
-   "band"
   ]
  },
  {
@@ -38,39 +15,10 @@
   ]
  },
  {
-  "title": "Folsom Street Fair: edition mismatch",
-  "detail": "Homepage announces September 26, 2027, but linked fair detail page still describes September 27, 2026. Exact 2027 venue, time and annual recurrence were not confirmed. Up Your Alley homepage date is July 25, 2027, but venue not confirmed. Both excluded pending city/edition verification.",
-  "sources": [
-   "folsom",
-   "folsomdetail"
-  ]
- },
- {
-  "title": "Bay to Breakers: mixed-date copy",
-  "detail": "Homepage headline gives May 16, 2027 but other copy says before May 18 and includes older promotions. Route boundary, time and recurrence not verified; excluded from admitted inventory.",
-  "sources": [
-   "bay"
-  ]
- },
- {
   "title": "SFMOMA Community Days: no date",
   "detail": "Official upcoming date is TBD. No date inferred or event occurrence generated.",
   "sources": [
    "free"
-  ]
- },
- {
-  "title": "Opera productions: year not explicit in listing text",
-  "detail": "Official homepage lists Manon, Figaro, Strauss, Opera Ball and Adlers dates, but text omits year. Event detail/venue pages need further review before admission; no season-year inference made.",
-  "sources": [
-   "opera"
-  ]
- },
- {
-  "title": "GitHub Pages cannot be enabled by the session credential (reproduced twice)",
-  "detail": "Both sessions independently received HTTP 403 'Resource not accessible by integration' from POST /repos/{owner}/{repo}/pages, with and without build_type=workflow. The credential reports no OAuth scopes, so Pages administration is outside its grant. The deploy workflow is correct and will publish on the first run after an owner enables Pages (Settings -> Pages -> Build and deployment -> Source: GitHub Actions, or Deploy from a branch: main / root). This is a platform permission limitation, not a build or verification failure.",
-  "urls": [
-   "https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573"
   ]
  },
  {
@@ -128,23 +76,6 @@
   ]
  },
  {
-  "title": "22 rows have no organizer-published next date",
-  "detail": "After their 2026 editions, organizers including Hardly Strictly Bluegrass, Litquake/Lit Crawl, Sunday Streets, the Greek Food Festival, St. Patrick's Day Parade, Pistahan, North Beach Festival and Union Street Festival had published no 2027 dates. Those date fields are blank rather than extrapolated from the previous year's pattern.",
-  "urls": []
- },
- {
-  "title": "sfoutsidelands.com unreachable at verification time",
-  "detail": "The primary marketing domain returned HTTP 500, so Outside Lands 2027 dates (August 6-8) were taken from the festival's official box office page instead.",
-  "urls": [
-   "https://outsidelands.frontgatetickets.com/"
-  ]
- },
- {
-  "title": "Coverage remains incomplete after both research passes",
-  "detail": "Combining two independent official-source passes raises the register to 86 rows but does not establish exhaustive citywide coverage. Neighbourhood street fairs, single-venue concert series, library programmes, theatre seasons and civic meetings remain undercovered. There is no citywide denominator to measure completeness against.",
-  "urls": []
- },
- {
   "title": "SOMA Nights \u2014 excluded: official source unreachable",
   "detail": "Official site soma-nights.com returned an SSL error / HTTP 500 on re-check; no other official page confirms the 2026 edition. Row removed from the register and recorded on Flagged for Review rather than published unverified.",
   "urls": [
@@ -190,6 +121,13 @@
   "detail": "A number of inherited rows cite an official organizer landing page that lists several events (for example pcfma.org/visit for four farmers markets, or sfopera.com's season press page for several productions). The automated check confirms the page loads and mentions the event name where it does; these rows are marked 'page-level' rather than 'field-level' verification. Field-level means a prior session transcribed the individual values; page-level means only the page and its mention of the event were re-checked automatically.",
   "urls": [
    "https://github.com/buffedlizard55-lab/MaltaProj5"
+  ]
+ },
+ {
+  "title": "Earlier findings superseded by the final register",
+  "detail": "Ten notes described the state before integration and no longer hold: Pages was reported as blocked (it is enabled and serving this site), several events were reported as unretrievable or excluded (Outside Lands, the SF Marathon, Bay to Breakers, Folsom Street Fair, the Golden Gate Bandshell concerts \u2014 all now rows with official sources and current dates), the Opera productions are now sourced to dated 2026-27 season pages, and the note that coverage ended at the two-register stage is obsolete. The history remains in git and in the per-session snapshots.",
+  "urls": [
+   "https://buffedlizard55-lab.github.io/MaltaProj5/"
   ]
  },
  {

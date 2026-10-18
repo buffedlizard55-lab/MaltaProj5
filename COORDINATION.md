@@ -544,3 +544,17 @@ merge and re-validated.
 * 213 official-source records across 135 domains; 28 review findings; 118 rows carry notes.
 * Automated pass: 165 rows name-confirmed, 64 not name-matched (bots/JS), 2 PDFs, **0 dead URLs**, 46 blocked URLs.
 * Verification labels: 117 field-level · 79 page-level · 35 flagged.
+
+---
+
+## Audit defects found — `cebeabf0` (T19, 2026-10-18)
+
+Logged before editing (scope for T19 extended to the files below):
+
+| # | Defect | Evidence | Fix scope |
+|---|---|---|---|
+| D2 | Stale "unverified; left blank" flags on populated fields (3 rows: Ferry Plaza price, SF Pride Celebration price, SF Marathon price) — the live site simultaneously shows a price and claims it is blank/unverified | `data/events.json` audit: flag text `price: unverified; left blank.` while `price` is non-empty | `tools/consolidate.py` (drop unverified flags for populated fields in the final sync loop), `scripts/validate.py` (assert this can never recur) |
+| D3 | `ANALYSIS.md` stale counts: page-level 79 / flagged 35 / manual-recheck 35 vs. register's actual 78 / 36 / 36 | computed from `data/events.json` | `ANALYSIS.md` |
+| D4 | `sources.html` method rule claims tourism guides were "never as the sole row evidence", but 12 flagged rows are sourced only to SF Travel (the city DMO) | row audit by source domain | `scripts/build.py` (state the flagged exception honestly) |
+
+Rebuild reproducibility was confirmed before these fixes: `consolidate.py → apply_verify.py → build.py → validate.py` PASS with a clean `git status`.

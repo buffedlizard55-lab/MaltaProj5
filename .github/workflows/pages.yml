@@ -18,6 +18,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/build.py && python scripts/validate.py
+      - name: Check every official source URL still resolves
+        run: python tools/remotecheck.py --timeout 25
       - name: Ensure generated files are current
         run: git diff --exit-code -- '*.html' data/events.csv
       - name: Verify docs/ site (every row sourced, links resolve)

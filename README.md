@@ -1,22 +1,30 @@
 # MaltaProj5 — San Francisco Events Inventory
 
-Verified inventories of events happening **within the city of San Francisco only**, from two parallel
-research sessions, each sourced to official sites. Unconfirmed values are left blank and flagged —
-nothing is inferred. Data snapshots taken **18 October 2026**; no continuous refresh or automatic
-factual verification is claimed.
+Verified inventories of events happening **within the city of San Francisco only**, produced by
+three parallel research sessions, each row sourced to an official site. Unconfirmed values are left
+blank and flagged — nothing is inferred. Data snapshots taken **18 October 2026**; no continuous
+refresh or automatic factual verification is claimed.
 
-- **Primary site (docs/):** 167 events — [dashboard](docs/index.html) ·
-  [Flagged for Review](docs/flagged.html)
-- **Secondary site (repo root):** 29-row bounded inventory with evidence ledger —
-  [dashboard](index.html) · [sources & methodology](sources.html)
-- Intended Pages URL: https://buffedlizard55-lab.github.io/MaltaProj5/
+## Two sites, two datasets — one repository
 
-> **Publication status:** GitHub Pages enablement is currently blocked — GitHub returns
-> `Resource not accessible by integration` (HTTP 403) when creating the Pages site, both via the
-> repository credential and the workflow token (see
+| | Primary site (`docs/`) | Unified register (repo root) |
+|---|---|---|
+| URL path | `/` | `/inventory/` in the published copy |
+| Events | **167** (34 weekly/regular · 95 annual · 38 special) + 14 exclusions | **86** unified rows (29 + 61 from two sessions, 4 duplicates reconciled) |
+| Sessions | `4f47c142` | `3a19e72d` + `5a85baf2` |
+| Pages | Dashboard, Weekly & Regular, Annual, Special, Flagged for Review | 11 pages incl. review queue and evidence ledger |
+| Generator | `tools/build_site.py` | `scripts/build.py` |
+| Validator | `tools/verify_site.py` | `scripts/validate.py` + `tools/remotecheck.py` (CI) |
+
+Intended Pages URL: https://buffedlizard55-lab.github.io/MaltaProj5/
+
+> **Publication status:** GitHub Pages enablement is blocked — GitHub returns
+> `Resource not accessible by integration` (HTTP 403; the credential has no Pages grant —
+> `X-Oauth-Scopes` empty, reproduced independently by two sessions; see
 > [deployment attempt](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573)).
-> The owner must enable Pages in repo Settings (or re-authorize the GitHub connection with Pages
-> admin), then the deploy workflow will publish `docs/`. Full history in `COORDINATION.md`.
+> The owner must enable Pages in repo Settings (Source: GitHub Actions, or deploy from `main` /
+> `docs`), then the `Validate and deploy Pages` workflow publishes this site. Full history in
+> `COORDINATION.md`.
 
 ## Primary dataset (session `4f47c142`) — `docs/` site
 
@@ -36,26 +44,25 @@ python3 tools/build_site.py     # regenerates docs/
 python3 tools/verify_site.py    # exits 1 on any unsourced row / broken link / off-allowlist domain
 ```
 
-## Secondary dataset (session `3a19e72d`) — root site
+## Unified register (sessions `3a19e72d` + `5a85baf2`) — root site
 
-- `data/events.json`: event rows, official-source references, evidence map, unknown fields and flags
-  (includes eight Exploratorium After Dark themes linked to their parent series).
-- `data/sources.json`: official URLs, checked date, selected transcribed excerpts.
-- `data/review.json`: research gaps, excluded candidates and conflicts.
-- `data/events.csv`: downloadable inventory, generated from JSON.
+- `data/events.json`: 86-row combined register (canonical schema; `tools/integrate.py` merges
+  `data/events_3a19e72d.json` + `data/events_5a85baf2.json`).
+- `data/sources.json`: 75 official-source records with checked dates and transcribed excerpts.
+- `data/review.json`: research gaps, excluded candidates, conflicts and review findings.
+- `ANALYSIS.md` / `SOURCES.md`: analysis findings and the source ledger in readable form.
 - Eleven static pages: dashboard, recurrence/category views, review queue, evidence ledger.
-- `scripts/build.py` / `scripts/validate.py`: dependency-free Python build and validation.
+- `scripts/build.py` / `scripts/validate.py` / `tools/remotecheck.py`: dependency-free build,
+  validation, and remote source-URL checking (wired into CI).
 
 ```sh
-python scripts/build.py
-python scripts/validate.py
-python -m http.server 8000 --bind 0.0.0.0
+python3 scripts/build.py && python3 scripts/validate.py
 ```
 
 Generated HTML is committed; tables and navigation work without JavaScript. JS adds search/filter.
-GitHub Actions validates pull requests and attempts Pages deployment. Tests check local links,
-source references, empty-field flags and generated-file freshness — not the truth of source content
-or external uptime.
+GitHub Actions validates pull requests (both validators + remote source check) and attempts Pages
+deployment. Tests check local links, source references, empty-field flags and generated-file
+freshness — not the truth of source content or external uptime.
 
 ## Shared scope rules
 
@@ -66,4 +73,4 @@ or external uptime.
 - Aggregators and media articles are never the source of record for a value.
 - Sources can change; verify organizer details before attending.
 
-`COORDINATION.md` records the task board, verification log and publication history.
+`COORDINATION.md` records the task board, verification logs, merge history and publication status.

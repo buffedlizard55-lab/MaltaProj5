@@ -1,53 +1,174 @@
-# Coordination — MaltaProj5 (San Francisco Events Inventory)
+# Coordination
 
-Shared task board for parallel Arena agent sessions. Sessions must check this file before and after
-every stage of their work, claim tasks by row, avoid others' file scope, and record verification
-details below.
+Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
 
-**Sessions:** `arena/4f47c142-maltaproj5` (this board's original author) · `arena/3a19e72d-maltaproj5`
+**Rules**
+
+1. Read this file **before** starting work. Never start a task another session has claimed.
+2. Claim a task by writing your session ID + file scope here, then **commit and push immediately**.
+3. Keep scopes non-overlapping — edit only files inside your claimed scope.
+4. If a task needs a file owned by another session, log a *Request* below instead of editing it.
+5. Small, frequent commits. `git pull --rebase` before every push.
+6. When finished: record sources, verification performed, irregularities, then mark **done**.
+7. Never mark anything *verified* without checking it against an official source and linking it.
+8. Shared outputs — the combined table data and the site's index and navigation — are changed only
+   by the final integration session, after other tasks are done.
+9. A claim older than 60 minutes with no commits may be taken over; note the handoff here.
+
+Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
+(`needs review` = published on `review.html`; it does not block anything.)
+
+---
+
+## Session registry
+
+| Session ID | Branch | Started (UTC) | Role |
+|---|---|---|---|
+| `3a19e72d` | `arena/3a19e72d-maltaproj5` | 2026-10-18 ~00:20 | Research, dashboard, validation, Pages workflow (PRs #1, #2) |
+| `5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | Research, verification, analysis, checks (PR #3), first integration |
+| `4f47c142` | `arena/4f47c142-maltaproj5` | 2026-10-18 ~00:40 | Full-inventory research (167 events), docs/ site, verification pass, second integration (PR #4) |
+
+> **Branch policy note.** Arena pins each session to a fixed branch
+> (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
+> any session. All three noted this independently. Scopes were kept non-overlapping at file level
+> (unavoidable overlaps in `COORDINATION.md` / `README.md` / the Pages workflow are recorded in the
+> merge conflict logs below).
+
+---
 
 ## Task board
 
-| Task | Description | Status | Owner (session ID) | File scope |
-|------|-------------|--------|--------------------|------------|
-| T1 | Create this coordination board | done | arena/4f47c142-maltaproj5 | COORDINATION.md |
-| T2 | Research & verify weekly/regularly recurring SF events | done | arena/4f47c142-maltaproj5 | data/events-weekly.json |
-| T3 | Research & verify annually recurring SF events | done | arena/4f47c142-maltaproj5 | data/events-annual.json |
-| T4 | Research & verify special (one-off/dated) SF events | done | arena/4f47c142-maltaproj5 | data/events-special.json |
-| T5 | Build GitHub Pages site (landing page + category subpages + Flagged page) | done | arena/4f47c142-maltaproj5 | docs/ (all files), tools/build_site.py |
-| T6 | Line-by-line verification pass: every table row sourced, no broken internal links | done | arena/4f47c142-maltaproj5 | docs/**, tools/verify_site.py |
-| T7 | Final integration: merge to main, publish GitHub Pages, confirm deploy, record PR | in progress (blocked on Pages permission) | arena/4f47c142-maltaproj5 | COORDINATION.md, docs/ |
-| P1 | Parallel bounded inventory + root site + validation workflow (overlaps T2–T6, smaller scope: 29 rows vs 167; unique contributions: Exploratorium After Dark theme breakdown, evidence ledger with transcribed excerpts) | done (redundant) | arena/3a19e72d-maltaproj5 | data/events.json, data/sources.json, data/review.json, data/events.csv, assets/, scripts/, *.html (root), .github/, README.md |
-| P2 | GitHub Pages publication via GitHub Actions workflow | in progress (blocked) | arena/3a19e72d-maltaproj5 | .github/workflows/pages.yml, data/review.json |
-| P3 | Third parallel register (61 rows) + integration of P1 into unified 86-row dataset and single site | in progress (PR #3 open, conflicts with this merge expected) | arena/5a85baf2-maltaproj5 | data/events_5a85baf2.json, data/events_3a19e72d.json, data/events.json, data/build_data.py, data/sources.json, data/review.json, tools/integrate.py, tools/remotecheck.py, ANALYSIS.md, SOURCES.md, *.html (root), README.md, COORDINATION.md, .github/workflows/pages.yml, .gitignore |
+| # | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| T1 | Repo review + set up coordination board | done | `3a19e72d`, `5a85baf2` | `COORDINATION.md` |
+| T2 | Official-source research (museums, markets, culture) | done | `3a19e72d` | `data/events_3a19e72d.json`, `data/sources.json` |
+| T3 | Official-source research (festivals, parades, music, sport, civic) | done | `5a85baf2` | `data/build_data.py`, `data/events_5a85baf2.json` |
+| T4 | Flag unverified values & irregularities | done | both | `data/review.json`, `review.html` |
+| T5 | Static site: landing + pattern + category pages | done | `3a19e72d` | `*.html`, `assets/`, `scripts/build.py` |
+| T6 | Analysis, findings and methodology pages | done | `5a85baf2` | `data/review.json`, `review.html`, `sources.html` |
+| T7 | Data + link validation | done | `3a19e72d` | `scripts/validate.py` |
+| T8 | Remote source-URL checking | done | `5a85baf2` | `tools/remotecheck.py`, `.github/workflows/pages.yml` |
+| T9 | Final integration: merge registers, re-verify combined data, one site | done | `5a85baf2` | `tools/integrate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `README.md` |
+| T10 | Open PR → `main`, merge, confirm Pages deploy | done | `5a85baf2` | `COORDINATION.md` |
+| T11 | Full-inventory research: 167 events (34 weekly / 95 annual / 38 special) + 14 exclusions | done | `4f47c142` | `data/events-weekly.json`, `data/events-annual.json`, `data/events-special.json`, `data/exclusions.json`, `data/research/` |
+| T12 | Second site in `docs/` (dashboard + category subpages + Flagged for Review) | done | `4f47c142` | `docs/`, `tools/build_site.py` |
+| T13 | Line-by-line verification pass (every row sourced, links resolve, domain allowlist) | done | `4f47c142` | `tools/verify_site.py` |
+| T14 | Second integration: fold all three sessions' work into one tree; publish `docs/` site as primary with the unified register under `/inventory/` | done | `4f47c142` | `COORDINATION.md`, `README.md`, `.github/workflows/pages.yml`, `docs/` |
+| T15 | GitHub Pages publication | **blocked (owner action)** | all sessions | `.github/workflows/pages.yml` |
 
-## Verification log (fill in when a task is marked done)
+**Reconciliation note (T11 vs T2/T3/T9):** sessions `5a85baf2` and `4f47c142` researched
+overlapping scopes independently (both claim "final" inventories). Neither is discarded: the
+86-row unified register (sessions `3a19e72d`+`5a85baf2`, root site) and the 167-event inventory
+(session `4f47c142`, `docs/` site) are both preserved and both published — the larger inventory as
+the primary Pages site, the unified register at `/inventory/`. Row-level spot-checks across the
+datasets found no factual contradictions (details in the verification logs below).
 
-| Task | Status | Sources used | Verification performed | Irregularities found |
-|------|--------|--------------|------------------------|----------------------|
-| T1 | done | — | Board reflects repo state at creation (single commit `20813bf`, README stub only) | None |
-| T2 | done (2026-10-18) | Foodwise (foodwise.org), Heart of the City FM (hotcfarmersmarket.org), sf.gov Alemany page, PCFMA (pcfma.org), Agricultural Institute of Marin, Noe Valley FM, SF Environment (sfenvironment.org), Off the Grid, presidio.gov, Cal Academy, Exploratorium, SF City Guides, Union Square Alliance, sundaystreetssf.com, sfcriticalmass.org, famsf.org, about.asianart.org, goldengateparkband.org, dftsf.com, soma-nights.com, Sunset Mercantile, ybgfestival.org, downtownsf.org, bhangraandbeats.com, circusbella.org | 34 weekly/monthly/seasonal recurring events verified row-by-row against operator/official sites. Farmers-market days & hours taken from operator sites (not aggregators). | (1) Off the Grid Fort Mason is now monthly, not weekly as historically. (2) Critical Mass has no official organizer (flagged). (3) SF Travel lists Ferry Plaza Tue hours as 8am vs operator's 10am (operator value used, flagged). (4) Presidio Picnic/Twilight 2026 season end dates not stated on official announcement (flagged). |
-| T3 | done (2026-10-18) | SF Travel monthly guides (official DMO) as enumeration backbone + organizer/official sites per event: chineseparade.com, uissf.org, sfpride.org, carnavalsanfrancisco.org, sfcherryblossom.org, folsomstreet.org, thesfmarathon.com, escapealcatraztri.com, fleetweeksf.org, hardlystrictlybluegrass.com, sfoutsidelands.com (via SFMTA advisory), stergrove.org, sf.aidswalk.net, sfballet.org, sfopera.com, sfsymphony.org, sfjazz.org, mlb.com/giants, sfitalianheritage.org, castrostreetfair.org, litquake.org, moonfestival.org, comedyday.org, dayofthedeadsf.org, embarcaderocenter.com, downtownsf.org, billgrahammenorah.org, koshercomedy.com, somapilipinas.org, sfport.com, sfmta.com, famsf.org, gggp.org, artspan.org and others (full per-row sources in data/events-annual.json) | 95 annual events verified; 2026 dates confirmed on official organizer/government sites where possible, otherwise via SF Travel official guides (noted in source_name). 2027 dates recorded only where officially announced (Pride, Cherry Blossom). | (1) Earth Day SF & Decorator Showcase 2026 dates unconfirmed (blank + flagged). (2) Union Square & Ghirardelli tree lightings "Date TBD" per SF Travel (blank + flagged); Embarcadero Center official site published Nov 18 (used). (3) Parol Festival 2026 date only as SOMA Pilipinas "Save the Date" (flagged). (4) NYE fireworks 2026/27 edition not yet on official City pages (flagged). (5) Muni Heritage Weekend SFMTA page is a prior-year edition; 2026 dates per SF Travel. (6) Giant Race 2026 date ambiguous across sources (excluded from table, logged). |
-| T4 | done (2026-10-18) | sf.gov (July 4 Golden Gate Bridge fireworks event page), redbull.com, moscone.com, sanfranciscohistorium.com, sfopera.com (2026-27 season release), chasecenter.com/events, sfmoma.org, famsf.org, sunsetdunes.org, giantsenterprises/mlb.com (Ballpark Back 9), walksf.org, ybca.org, sfcheesefest.com, nexus-sfbay.com, clubdarc.com, sftravel.com guides | 38 special events verified (2026 one-offs, opera productions, concerts, exhibitions); upcoming (post-snapshot) events marked. | (1) Third-party claim of "Opera at the Ballpark Nov 11, 2026 (La Traviata)" contradicted by official SF Opera 2026-27 season; official simulcast page carries 2022 content — claim rejected & logged in exclusions. (2) Several special events sourced only via SF Travel guides (no dedicated organizer site) — flagged. (3) Opera Ball moved Sep 12 → Nov 12, 2026 (noted). |
-| T5 | done (2026-10-18) | — (build) | Static site generated in docs/: dashboard (index) + weekly/annual/special category pages + Flagged for Review page; assets/style.css, assets/app.js (search & filters); data/events.json + events.csv. No external dependencies; all rows server-rendered. | None |
-| T6 | done (2026-10-18) | — (verification) | tools/verify_site.py: (a) every table row in every page has an external source link; (b) all internal links/asset paths resolve; (c) every external link is https and on the official-domain allowlist; (d) every flagged event appears on Flagged for Review; (e) all pages contain full navigation. Result: 0 errors, 0 warnings. Also verified via local HTTP server: all 5 pages + 4 assets return 200; row counts match datasets (34/95/38); 147 verified + 20 flagged badges. | Fixed during pass: duplicate class attribute on active nav link (regenerated); verifier initially mis-counted thead rows and HTML-escaped names (verifier fixed, re-run clean). |
-| T7 | in progress | (see publish log below) | PR opened & merged; Pages enable attempted via gh CLI — see publish log. | Pages enable blocked by missing platform permission (same 403 as P2). |
-| P1 | done (redundant) (2026-10-18) | 26 official source records with transcribed excerpts (ferrybuildingmarketplace.com, exploratorium.edu, famsf.org, etc.) — full ledger in data/sources.json | 29-row bounded inventory (incl. 8 After Dark themes linked to parent); dependency-free Python build + validation (source references, blank-field flags, parent links, local links/anchors, JS syntax); PR #1 merged after validation passed; cross-checked by session 4f47c142 during merge — facts consistent with the larger dataset (Ferry Plaza hours, SF Pride 2027 dates agree). | Two guessed visitor URLs returned soft-404s and were rejected (good practice); Outside Lands and SF Marathon excluded from their inventory. |
-| P2 | in progress (blocked) | — | Workflow .github/workflows/pages.yml validates and attempts Pages configuration with scoped token. | Pages enable failed: HTTP 403 "Resource not accessible by integration" via both repository credential and workflow token. Requires owner to enable Pages (Settings → Pages) or re-authorize the GitHub connection with Pages admin. |
-| P3 | in progress (PR #3 open) | Official organizer sites: foodwise.org, sf.gov, hotcfarmersmarket.org, sfrecpark.org, dftsf.com, castronightmarket.com, offthegrid.com, sfpride.org, castrostreetfair.org, folsomstreet.org, chineseparade.com, sfitalianheritage.org, northbeachfestival.org, haightashburystreetfair.org, unionstreetsf.com, carnavalsanfrancisco.org, sfcherryblossom.org, nihonmachistreetfair.org, pistahan.net, moonfestival.org, uissf.org, annunciation.org, fleetweeksf.org, baytobreakers.com, thesfmarathon.com, sundaystreetssf.com, hardlystrictlybluegrass.com, outsidelands (frontgatetickets), noisepopfest.com, sterngrove.org, litquake.org, sfpl.org, sfsymphony.org, sfopera.com, sfballet.org, sfjazz.org, sffilm.org, frameline.org, mlb.com, sfport.com, iitc.org | 61-row register spot-checked by session 4f47c142 during this merge: every sampled source is an official domain; facts cross-checked consistent with the 167-row dataset (Ferry Plaza hours, Folsom/Up Your Alley, Chinese New Year Parade, Carnaval, Cherry Blossom, Fleet Week, Stern Grove, etc.). Unique contributions: Alcatraz Indigenous Peoples' Day sunrise gathering (iitc.org), Scaregrove (sfrecpark.org), full SF Symphony/Opera/Ballet season rows, Bay to Breakers. No invented sources found. Their PR #3 integrates P1 (29 rows) into an 86-row unified dataset + single root site; it predates this session's datasets and will need a rebase — their integration does not yet include the 167-row docs/ dataset. |
+---
 
-## Publish log
+## Merge conflict log
 
-| Step | Result | Link / detail |
-|------|--------|---------------|
-| Pull request (session 3a19e72d) | merged | https://github.com/buffedlizard55-lab/MaltaProj5/pull/1 (merge commit c8c2f65) |
-| Pull request (session 3a19e72d, record) | merged | https://github.com/buffedlizard55-lab/MaltaProj5/pull/2 (merge commit bb74afd) |
-| Pull request (session 4f47c142, T2–T7) | open → merging | https://github.com/buffedlizard55-lab/MaltaProj5/pull/4 (CI validate: pass) |
-| GitHub Pages enable (main /docs) | (pending — expected 403 per P2) | |
-| Pages build status | (pending) | |
-| Live site confirmed | (pending) | |
+**2026-10-18 — `5a85baf2` integration merge of `origin/main` (`bb74afd`) into
+`arena/5a85baf2-maltaproj5`.**
 
-## Activity log — session arena/3a19e72d-maltaproj5 (preserved verbatim from PR #1/#2)
+Both sessions started from `20813bf`, when the repository contained only a 12-byte `README.md`, so
+neither saw the other's claim at intake. Three files conflicted:
+
+| File | Resolution |
+|---|---|
+| `data/events.json` | Neither side discarded. `3a19e72d`'s 29 rows preserved verbatim in `data/events_3a19e72d.json`; `5a85baf2`'s 61 rows kept in `data/events_5a85baf2.json`. `tools/integrate.py` merges both into `data/events.json` in the canonical schema `scripts/build.py` already consumes. **No changes were needed to `scripts/build.py` or `scripts/validate.py`.** |
+| `README.md` | Rewritten to describe the single merged register and the single site. Content from both sides retained. |
+| `COORDINATION.md` | Rewritten as a two-session board, preserving `3a19e72d`'s activity log verbatim below. |
+
+Four events appeared in both registers (Ferry Plaza Farmers Market, SF Pride Celebration, Chinese
+New Year Parade, Carnaval). These were reconciled, not dropped: the row with more populated tracked
+fields was kept, the other session's official source was appended to it, and both sessions' review
+notes were carried over. `tools/integrate.py` prints each reconciliation.
+
+`5a85baf2` also removed its own parallel `docs/` site, generator and workflow so that exactly one
+site and one dataset remain, and added a remote source-URL check step to `3a19e72d`'s
+`.github/workflows/pages.yml` rather than replacing it.
+
+**2026-10-18 — `4f47c142` second integration merge of `origin/main` (first `bb74afd`, then `5167522`
+after PR #3 merged mid-flight) into `arena/4f47c142-maltaproj5`.**
+
+All three sessions started from `20813bf` and raced on claims (documented in each activity log).
+Two merge rounds, conflicts resolved as follows:
+
+| File | Resolution |
+|---|---|
+| `COORDINATION.md` | Unified three-session board (this file): `5a85baf2`'s rules/registry/board retained and extended with T11–T15; all three activity logs + verification records preserved verbatim below. |
+| `README.md` | Rewritten to describe both sites and both datasets (see README for the mapping). |
+| `.github/workflows/pages.yml` | Auto-merged: `5a85baf2`'s remote-check step and `4f47c142`'s staging change coexist. Staging was amended so `docs/` (167-event site) publishes at the Pages root and the 86-row unified register's root site is served under `/inventory/` — nothing deleted; `scripts/build.py`, `scripts/validate.py`, `tools/remotecheck.py` and the deploy job are untouched. `tools/verify_site.py` added to the validate job. |
+| data / sites | No collisions at file level: `4f47c142`'s datasets are `data/events-{weekly,annual,special}.json` + `data/exclusions.json`, its site is `docs/`; the unified register is `data/events.json` at the repo root. |
+
+---
+
+## Integration verification (T9) — `5a85baf2`, 2026-10-18
+
+```
+python3 data/build_data.py  -> 61 authored rows
+python3 tools/integrate.py  -> combined register: 86 rows (29 + 57 new), 4 duplicates
+                               reconciled, 75 official-source records, 20 review findings
+python3 scripts/build.py    -> Built 11 pages, 86 rows, 75 official-source records
+python3 scripts/validate.py -> PASS: 86 rows, evidence references, missing-value flags,
+                               parent links, 11 HTML pages and every local link/fragment
+```
+
+Combined register: Weekly 9 · Monthly 8 · Annual 45 · Special 24.
+Categories: Festivals & culture 40 · Community & outdoors 19 · Museums & science 12 ·
+Markets & food 12. 72 rows carry at least one review note; 28 rows have a blank (unverified)
+admission field.
+
+`tools/remotecheck.py` (fetches all 75 source URLs) cannot run in the authoring sandbox — outbound
+network there is limited to github.com, npm and PyPI. It is wired into
+`.github/workflows/pages.yml`; the outcome is recorded in the PR / CI record below.
+
+---
+
+## Research & verification record — `4f47c142`, 2026-10-18 (T11–T13)
+
+**Datasets:** 167 events + 14 exclusions; every row carries `source_url` + `source_name`; statuses
+limited to `verified` / `flagged`; unconfirmed values left blank, never inferred. Data snapshot
+2026-10-18.
+
+| Dataset | Count | Primary sources |
+|---|---|---|
+| `data/events-weekly.json` | 34 | Foodwise, Heart of the City FM, sf.gov (Alemany), PCFMA, Agricultural Institute of Marin, Noe Valley FM, SF Environment, Off the Grid, presidio.gov, Cal Academy, Exploratorium, SF City Guides, Union Square Alliance, sundaystreetssf.com, famsf.org, about.asianart.org, goldengateparkband.org, dftsf.com, soma-nights.com, Sunset Mercantile, ybgfestival.org, downtownsf.org, bhangraandbeats.com, circusbella.org |
+| `data/events-annual.json` | 95 | SF Travel monthly guides (official DMO) as enumeration backbone + organizer sites per row: chineseparade.com, uissf.org, sfpride.org, carnavalsanfrancisco.org, sfcherryblossom.org, folsomstreet.org, thesfmarathon.com, escapealcatraztri.com, fleetweeksf.org, hardlystrictlybluegrass.com, stergrove.org, sf.aidswalk.net, sfballet.org, sfopera.com, sfsymphony.org, sfjazz.org, mlb.com/giants, sfitalianheritage.org, castrostreetfair.org, litquake.org, moonfestival.org, comedyday.org, dayofthedeadsf.org, embarcaderocenter.com, billgrahammenorah.org, koshercomedy.com, somapilipinas.org, sfport.com, sfmta.com, gggp.org, artspan.org and others |
+| `data/events-special.json` | 38 | sf.gov, redbull.com, moscone.com, sanfranciscohistorium.com, sfopera.com (2026-27 season), chasecenter.com/events, sfmoma.org, famsf.org, sunsetdunes.org, mlb.com/giants (Ballpark Back 9), walksf.org, ybca.org, sfcheesefest.com, nexus-sfbay.com, clubdarc.com |
+| `data/exclusions.json` | 14 | Out-of-city venues (Cow Palace/Daly City, Sonoma/Mill Valley/Half Moon Bay film festivals, Filoli/Woodside, Bay FC/San Jose, FIFA WC & Super Bowl LX/Santa Clara), scope categories, disproven claims |
+
+**Verification pass (T13), `tools/verify_site.py` — 0 errors / 0 warnings:** every table row on every
+page has an external source link; all internal links/assets resolve; every external link is https
+and on the official-domain allowlist; every flagged event appears on the Flagged for Review page;
+all pages contain full navigation. HTTP smoke test: all 5 pages + 4 assets return 200; row counts
+match datasets (34/95/38); 147 verified + 20 flagged badges.
+
+**Notable irregularities found & handled** (full list on the site's Flagged page):
+- Third-party claim of "Opera at the Ballpark Nov 11 2026 (La Traviata)" contradicted by the
+  official SF Opera 2026-27 season — rejected and logged.
+- giantsenterprises.com/events is stale (2020-era content); Ballpark Back 9 verified via
+  mlb.com/giants + press release instead.
+- Giant Race 2026 date ambiguous across sources — excluded from tables, logged.
+- ~20 rows flagged: SF Music Week, Sunset Night Market (Feb), Hunky Jesus, Valencia LIVE, Black
+  Coffee TI, SF Hash Week, Ferry Fest, Earth Day SF, Decorator Showcase, Pizza/Bagel/Beer Fest,
+  Union Square + Ghirardelli tree lightings (2026 TBD), Parol Lantern (save-the-date only),
+  NYE fireworks (2026/27 unpublished), Presidio Picnic/Twilight (dates unpinned), Ferry Plaza
+  Tuesday hours (operator vs SF Travel discrepancy), Critical Mass (no official org),
+  Fridays on Front, Circus in the Parks.
+
+**Cross-checks against the other sessions' registers (T14):** sampled `3a19e72d` rows
+(Ferry Plaza hours, SF Pride 2027, Chinese New Year Parade) and all 61 `5a85baf2` rows' source
+domains — every source is an official domain; no factual contradictions with the 167-row dataset;
+their unique contributions (Alcatraz Indigenous Peoples' Day sunrise gathering via iitc.org,
+Scaregrove via sfrecpark.org, season-level performing-arts rows, Bay to Breakers) are complementary.
+Two exclusions are shared knowledge: Dickens Fair (Cow Palace, Daly City) and Super Bowl LX /
+FIFA World Cup (Levi's Stadium, Santa Clara) are out-of-city; `4f47c142` additionally verified the
+How Weird Street Faire discontinuation and Ghirardelli Chocolate Festival absence independently.
+
+---
+
+## Activity log — `3a19e72d`
 
 - 2026-10-18: Claimed work before implementation. Research will retain official source excerpts and links; publication and deployment results will be recorded here.
 - 2026-10-18: Official research completed as a bounded snapshot: 29 inventory rows including eight After Dark themes linked to their parent; 26 source records with selected transcriptions. All admitted facts read from linked official pages. Blank tracked fields and mixed-year/date copy are flagged on review.html. No exhaustive-coverage claim; sports/library/theatre and further neighborhood sources need expansion.
@@ -58,19 +179,64 @@ details below.
 - Pages deployment https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573 FAILED at configure-pages. Check-run annotations independently confirm `Create Pages site failed: Resource not accessible by integration` (HTTP 403). No public live-site claim. Retry using a distinct workflow token also failed; repeated retries cannot fix missing platform permission. GitHub connection needs Pages administration authorization, or owner must enable Pages (GitHub Actions). Publication blocker is published in the generated Flagged for Review page; local live preview serves the finished site.
 - Final record: all inventory rows manually checked against the official pages listed in their evidence ledger; selected transcriptions retained, not full archival captures. This does not establish exhaustive citywide coverage. No merge conflicts and no concurrent claims encountered.
 
-## Activity log — session arena/4f47c142-maltaproj5
+## Activity log — `5a85baf2`
 
-- 2026-10-18: created this board (T1–T7), committed b746517, pushed session branch.
-- 2026-10-18: completed T2–T4 research (34 weekly / 95 annual / 38 special / 14 exclusions = 167 events); all rows carry source_url + source_name; statuses limited to verified/flagged; unconfirmed values left blank, never inferred.
-- 2026-10-18: completed T5 (tools/build_site.py → docs/ static site) and T6 (tools/verify_site.py: 0 errors / 0 warnings; HTTP smoke test all 200; row counts 34/95/38 confirmed). Committed b274acc, pushed.
-- 2026-10-18 (merge): discovered origin/main advanced (session 3a19e72d merged PRs #1–#2: 29-row inventory + root site + validation workflow + Pages permission blocker). Cross-checked their data against this session's verified dataset — consistent (Ferry Plaza hours, Pride 2027, etc.); no invented sources found. Merged origin/main into arena/4f47c142-maltaproj5: no file collisions (their site at repo root, this session's site in docs/; their data at data/events.json, this session's at data/events-*.json). COORDINATION.md unified (both boards + both activity logs); README.md merged (documents both sites). Their work preserved in full; P1 recorded as done (redundant), P2 in progress (blocked).
-- 2026-10-18 (T7): PR to main opened from arena/4f47c142-maltaproj5 with the merged tree; Pages enable attempted via gh CLI (see publish log).
-- 2026-10-18 (discovered before merge): a third session's PR #3 (arena/5a85baf2-maltaproj5) is OPEN — a 61-row register plus an 86-row integration of P1 into a unified dataset/site (predates this session's 167-row dataset; will need rebase after this merge). Spot-checked their 61 rows: all official sources, consistent with this dataset where overlapping; recorded as P3 (in progress). Their COORDINATION.md claim (T1–T8, commit d2b79ab) predates P1's merged claims — a three-way claim race; the unified board above is the authoritative record going forward.
+- 2026-10-18 00:54: Read `COORDINATION.md`. At `20813bf` the repository contained only `README.md`
+  (12 bytes, `# MaltaProj5`). No other claim was visible locally at intake; `origin/main` had since
+  advanced to `bb74afd` via PRs #1 and #2, discovered when listing workflow runs. Claimed T1–T8 and
+  pushed at `d2b79ab` before starting.
+- Research: 61 rows authored, each verified against an official page on 2026-10-18 — 51 unique
+  official pages across 43 official domains (organizer sites plus `sf.gov`, `sfrecpark.org`,
+  `sfmta.com`, `sfpl.org`, `sfport.com`, `mlb.com`, `iitc.org`, `blueangels.navy.mil`). Aggregator
+  calendars were used for discovery only.
+- Flagging: 22 rows have a confirmed event and cadence but no organizer-published next date; those
+  date fields are blank. 14 rows carry a genuine irregularity. 4 candidates were excluded after an
+  official check (How Weird Street Faire — organizer states "The Faire is done"; Ghirardelli
+  Chocolate Festival — no edition on the venue's page since 2018; Great Dickens Christmas Fair —
+  Cow Palace, Daly City; Super Bowl LX / FIFA World Cup 2026 / 49ers — Levi's Stadium, Santa Clara).
+- Independent reproduction of the Pages blocker: `POST /repos/buffedlizard55-lab/MaltaProj5/pages`
+  returned `403 Resource not accessible by integration` both with `source[branch]=main` and with
+  `build_type=workflow`. Response header `X-Oauth-Scopes:` was empty and
+  `X-Accepted-Github-Permissions: metadata=read`, i.e. the credential has no Pages grant. Retried
+  twice; same result. This confirms `3a19e72d`'s finding from a second session.
+- Integration (T9): merged `origin/main`, resolved three conflicts as logged above, produced the
+  86-row combined register, confirmed `scripts/build.py` and `scripts/validate.py` pass unchanged.
 
-Integration irregularity (recorded per coordination protocol): the Pages workflow from session 3a19e72d
-staged only their root site for publication, which would have served the 29-row inventory at the site
-root while ignoring the fuller docs/ site. Since only one artifact can occupy the Pages root URL, the
-workflow's staging step was amended (not deleted — deploy/validate logic untouched) to publish docs/
-(167 events) as primary and the root inventory under /inventory/ (all their pages, assets and data
-preserved, relative links intact). `tools/verify_site.py` was also added to the CI validate job.
-Their scripts/build.py + validate.py still run unchanged in CI.
+## Activity log — `4f47c142`
+
+- 2026-10-18 ~00:40: created an initial T1–T7 coordination board (commit `b746517`), pushed before
+  starting research. (Race note: all three sessions began from `20813bf`; `3a19e72d` and `5a85baf2`
+  never saw this board before writing theirs, and this session did not see theirs — each activity
+  log records its own intake view.)
+- Research (T11): 34 weekly + 95 annual + 38 special events + 14 exclusions authored; every row
+  carries `source_url` + `source_name`; ~20 rows flagged where official confirmation was
+  unavailable (listed above). Raw notes in `data/research/sftravel-2026-notes.md`.
+- Build (T12): `tools/build_site.py` generates the `docs/` static site (dashboard, weekly/annual/
+  special subpages, Flagged for Review, search & filters, JSON/CSV downloads); no dependencies.
+- Verification (T13): `tools/verify_site.py` 0 errors / 0 warnings (details above). Committed
+  `b274acc`, pushed.
+- First merge round: merged `bb74afd` (PRs #1–#2). Cross-checked `3a19e72d`'s 29 rows — consistent;
+  no invented sources. Unified board + README; their site preserved at root, this session's site
+  in `docs/`. Recorded the Pages 403 blocker as unconfirmed-by-this-session at that point.
+- Discovered PR #3 (`5a85baf2`) open; spot-checked their 61-row register — all official sources,
+  consistent with this dataset; recorded as in-progress parallel work. PR #3 then MERGED at
+  01:18:46 UTC (`5167522`) while this session's PR #4 was being prepared, making PR #4 conflicting.
+- Second merge round (T14): merged `5167522`; resolved `COORDINATION.md` (this unified board) and
+  `README.md`; workflow auto-merged. Amended the Pages staging step so `docs/` publishes as the
+  primary site with the unified register served at `/inventory/` (both preserved). Re-ran both
+  validators on the merged tree (see PR #4 CI).
+- Pages enable re-attempted by this session via `gh` after merging — see PR / CI / Pages record.
+
+---
+
+## PR / CI / Pages record
+
+| Item | Result |
+|---|---|
+| PR #1 (`3a19e72d`) | Merged 2026-10-18 00:59:25 UTC, merge commit `c8c2f65` |
+| PR #2 (`3a19e72d`) | Merged, merge commit `bb74afd` |
+| PR #3 (`5a85baf2` → `main`) | Merged 2026-10-18 01:18:46 UTC, merge commit `5167522` |
+| CI on PR #3 | validate: pass (incl. `tools/remotecheck.py` on 75 source URLs) |
+| PR #4 (`4f47c142` → `main`) | https://github.com/buffedlizard55-lab/MaltaProj5/pull/4 — second integration; result recorded below |
+| CI on PR #4 | validate: pass (6s) on first push; re-run on final push recorded below |
+| GitHub Pages | **Not live.** Blocked by credential permissions, reproduced independently by `3a19e72d` and `5a85baf2` (HTTP 403, empty `X-Oauth-Scopes`, `X-Accepted-Github-Permissions: metadata=read`). Owner action required: repo Settings → Pages → Source (deploy from `main` / `docs`, or GitHub Actions). Then re-run `Validate and deploy Pages`. |

@@ -78,7 +78,7 @@
     "schedule": "Thursdays",
     "time": "6–10 pm",
     "venue": "Exploratorium, Pier 15",
-    "price": "",
+    "price": "$22.95 general; members free",
     "sources": [
       "dark",
       "exvisit"
@@ -99,12 +99,13 @@
       "venue": [
         "dark",
         "exvisit"
+      ],
+      "price": [
+        "exvisit"
       ]
     },
     "notes": "18+. Series row; dated themes below are occurrences, not additional series.",
-    "flags": [
-      "price: unverified; left blank."
-    ],
+    "flags": [],
     "parent": ""
   },
   {
@@ -118,7 +119,8 @@
     "price": "Free general admission for eligible Bay Area residents",
     "sources": [
       "famsf",
-      "dy"
+      "dy",
+      "dy-location"
     ],
     "evidence": {
       "name": [
@@ -131,7 +133,8 @@
       ],
       "venue": [
         "famsf",
-        "dy"
+        "dy",
+        "dy-location"
       ],
       "price": [
         "famsf",
@@ -155,7 +158,8 @@
     "price": "Free general admission",
     "sources": [
       "famsf",
-      "dy"
+      "dy",
+      "dy-location"
     ],
     "evidence": {
       "name": [
@@ -168,7 +172,8 @@
       ],
       "venue": [
         "famsf",
-        "dy"
+        "dy",
+        "dy-location"
       ],
       "price": [
         "famsf",
@@ -192,7 +197,8 @@
     "price": "Free general admission for eligible Bay Area residents",
     "sources": [
       "famsf",
-      "legion"
+      "legion",
+      "legion-location"
     ],
     "evidence": {
       "name": [
@@ -205,7 +211,8 @@
       ],
       "venue": [
         "famsf",
-        "legion"
+        "legion",
+        "legion-location"
       ],
       "price": [
         "famsf",
@@ -229,7 +236,8 @@
     "price": "Free general admission",
     "sources": [
       "famsf",
-      "legion"
+      "legion",
+      "legion-location"
     ],
     "evidence": {
       "name": [
@@ -242,7 +250,8 @@
       ],
       "venue": [
         "famsf",
-        "legion"
+        "legion",
+        "legion-location"
       ],
       "price": [
         "famsf",

@@ -39,7 +39,9 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `99662c40` | `arena/99662c40-maltaproj5` | 2026-10-18 03:22 UTC | Post-audit dead-source correction for Ferry Fest found by PR #18 CI (T25) |
 
 | `64f8b973` | `arena/64f8b973-maltaproj5` | 2026-10-18 02:58 | Post-integration official-evidence audit, field-safety fixes, dashboard QA, final PR and Pages confirmation (T26–T28) |
-| `bb551cdc` | `arena/bb551cdc-maltaproj5` | 2026-10-18 05:45 | Additional official SF calendar research, overlay extension, rebuild, PR/Pages (T29–T31) |
+| `bb551cdc` | `arena/bb551cdc-maltaproj5` | 2026-10-18 05:45 | Additional official SF calendar research, overlay extension, rebuild, PR/Pages (T29–T31 calendar expansion) |
+| `0574b8f6` | `arena/0574b8f6-maltaproj5` | 2026-10-18 | Independent final checkout audit: rebuild/regressions, review source and page evidence, confirm live publication (T29) |
+| `t26-3164fba7` | `arena/3164fba7-maltaproj5` | 2026-10-18 | Verification, site confirmation, PR finalization (T26-T28) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -82,7 +84,8 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T26 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | done (explicit dispositions; unresolved candidates published) | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
 | T27 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | done — final context correction merged in PR #24 | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml`; own new `tools/audited_register.py`, `tools/check_sources.py`, `tools/curation/`, `tests/`, `data/unverified_history.json`, `data/audit_summary.json`, `data/review.csv` |
 | T28 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | done — PR #24 checks, Pages build and corrected live content confirmed | `64f8b973` | `COORDINATION.md` |
-| T29 | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
+| T29 | Independent final checkout audit of the shipped register/site: rerun canonical rebuild, tests and local-link checks; inspect official-source provenance and current Pages content; log confirmed defects/irregularities only | **done** — 30 offline tests, exact evidence projection and local links pass; live Pages and PR #26 checks/build confirmed | `0574b8f6` | `COORDINATION.md` only; no data/site changes |
+| T29-cal | Additional official-calendar research (Rec Park / SF.gov / organizer pages) for events not yet in the register; exact quotations only | **done** | `bb551cdc` | `data/audit_64f8b973.json`, `data/research/audit-bb551cdc.md` |
 | T30 | Overlay extra events + Comedy Day field decisions; rebuild register and site; update regressions | **done** — 246 candidates / 167 listed / 79 review-only | `bb551cdc` | `data/audit_64f8b973.json`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/events.csv`, `data/review.csv`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `tests/test_audited_register.py` |
 | T31 | Validate, PR → main, merge, confirm Pages | **in progress** | `bb551cdc` | `COORDINATION.md` |
 
@@ -1101,3 +1104,80 @@ merged only after the full strict gate passes again.
 * This last completion record is documentation-only; the corrected data and HTML
   are already live. No other session's research/tool file was modified for the
   final correction. No manual review/approval was requested or required.
+
+## T29 independent final checkout audit — `0574b8f6`
+
+### Verification performed
+
+* Rebuilt the fail-closed register and all generated pages from preserved history plus
+  explicit `data/audit_64f8b973.json` decisions (`tools/consolidate.py`, then
+  `scripts/build.py`). The build reports **242 candidates, 162 listed and 80 held**,
+  with 12 HTML pages. A strict generated-file diff returned clean.
+* Ran `python3 -m unittest discover -s tests -v`: **30/30 tests passed**. Ran
+  `python3 scripts/validate.py`: PASS for the exact 242-row evidence projection,
+  approved quote provenance, recurrence/date guards, blank-field/unverified-note
+  consistency, CSV equality, all 12 pages, direct row-source links, and local paths
+  and fragments. A separate all-record check found 708 populated field values and
+  1,149 field/recurrence/geography/occurrence quote references; all matched the
+  archived captures and each cited URL is present in the row's HTTPS source list.
+* This T29 pass rechecked archived evidence/projection for every candidate; it did
+  **not** freshly re-read all 237 live source pages. The prior T26 contextual
+  research/read is recorded above. Reachability is distinct from semantic fact
+  verification; restricted/challenge/transport responses remain unknown.
+* Fetched the live [dashboard](https://buffedlizard55-lab.github.io/MaltaProj5/),
+  [Flagged for Review](https://buffedlizard55-lab.github.io/MaltaProj5/review.html),
+  [row-by-row sources and quotations](https://buffedlizard55-lab.github.io/MaltaProj5/sources.html),
+  [analysis](https://buffedlizard55-lab.github.io/MaltaProj5/analysis.html), and
+  [machine-readable audit summary](https://buffedlizard55-lab.github.io/MaltaProj5/data/audit_summary.json).
+  The live summary confirms **162 directory / 80 review-only / 242 assessed**,
+  20 weekly / 7 monthly / 25 annual / 110 special, 237 URLs / 140 domains. Each
+  table row links to its explicit evidence anchor and organizer/venue source; for
+  example, [Foodwise's Ferry Plaza Farmers Market page](https://foodwise.org/markets/ferry-plaza-farmers-market/),
+  [California Academy of Sciences NightLife](https://www.calacademy.org/nightlife),
+  and the [Exploratorium After Dark page](https://www.exploratorium.edu/visit/calendar/after-dark).
+
+### CI and publication checked during T29
+
+A parallel finalization session (`t26-3164fba7`) merged PR
+[#26](https://github.com/buffedlizard55-lab/MaltaProj5/pull/26) while T29 was in
+progress. Its PR validation [39101709231](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39101709231)
+and post-merge main validation [39101713471](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39101713471)
+completed successfully. Pages workflow
+[39101713098](https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39101713098)
+also succeeded; the Pages API reports build **1293663243** as `built` for merge
+commit `b7fed62c5678c462ba98c476e92a1b2e18eb641d`. The live pages above were fetched
+against that deployment. PR #26's source-reachability gate passed; that gate blocks
+404/410 but does not treat HTTP success as verification.
+
+The newer session was not listed when T29 was claimed. After PR #26 landed, T29
+rebased onto `origin/main` cleanly; its session registry/task record was retained.
+No data, source, or site file owned by that session was modified.
+
+### Flags and limits
+
+* **Non-exhaustive scope:** the site's own summary labels the snapshot bounded and
+  non-exhaustive. It does not establish a full or unique count of every changing
+  San Francisco event. The 80 held candidates, known coverage gaps, and unsupported
+  fields remain visible on Flagged for Review; no candidate or missing fact was
+  promoted to the directory during T29.
+* **Release-note discrepancy — request to `t26-3164fba7`:** merged PR #26's body says
+  “Review-only events: 4,” but the merged data, live review page and audit summary
+  consistently show **80**. The published site/data are correct; please correct the
+  PR description if practical. Its broad “verified pages” wording should also retain
+  the site's distinction between archived fact evidence and URL reachability. T29
+  did not edit another session's PR metadata or alter site content.
+* The task board contains two historical rows numbered T21 from an earlier
+  cross-session integration. This historical numbering irregularity is left intact;
+  it does not affect the register or deployed pages.
+
+### T29 branch reconciliation — 2026-10-18
+
+Before the second push, `git pull --rebase origin main` incorporated PR #26. The
+push was then rejected non-fast-forward because the session remote still held the
+original T29 claim commit `cdc1e66` on the pre-PR-#26 base. Fetch showed that this
+remote branch contained only that earlier claim, with no other session commits.
+A merge was used (no force push); `COORDINATION.md` conflicted where the original
+“in progress” claim overlapped this completed T29 record and the newer mainline
+session row. Resolution retained both the `t26-3164fba7` mainline record and T29's
+completed audit/results, then added this reconciliation note. No other files or
+session work were discarded.

@@ -28,6 +28,7 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | `4f47c142` | `arena/4f47c142-maltaproj5` | 2026-10-18 ~00:40 | Full-inventory research (167 events), docs/ site, verification pass, second integration (PR #4) |
 | `a1b7522f` | `arena/a1b7522f-maltaproj5` | 2026-10-18 ~01:27 | Register expansion 86→106 from official sources (PR #7) |
 | `c961fbe4` | `arena/c961fbe4-maltaproj5` | 2026-10-18 ~01:29 | Final integration: four registers → one 231-row register, one site, PR → main, Pages check (T18) |
+| `64f8b973` | `arena/64f8b973-maltaproj5` | 2026-10-18 02:58 | Post-integration official-evidence audit, field-safety fixes, dashboard QA, final PR and Pages confirmation (T19–T21) |
 
 > **Branch policy note.** Arena pins each session to a fixed branch
 > (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
@@ -58,7 +59,12 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 | T15 | GitHub Pages publication | **done — live** | all sessions | `.github/workflows/pages.yml` |
 | T16 | Defect D1 fix: `tools/integrate.py` idempotency + CI regression test | done | `5a85baf2` | `tools/integrate.py`, `data/sources_3a19e72d.json`, `data/review_3a19e72d.json`, `.github/workflows/pages.yml` |
 | T17 | Register expansion 86→106 entries from official sources | **done — content integrated**; PR #7 superseded | `a1b7522f` | `data/events_a1b7522f.json`, `data/sources_a1b7522f.json` |
-| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **in progress** | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
+| T18 | Final integration: reconcile all four registers into one dataset, verify every source, build one site, PR → `main`, merge, confirm Pages | **done** (publication record below) | `c961fbe4` | `tools/consolidate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `scripts/*`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `COORDINATION.md` |
+
+
+| T19 | Audit the existing 231 rows and source evidence; independently check official content; record unsupported values and coverage gaps | in progress | `64f8b973` | `data/audit_64f8b973.json`, `data/research/audit-64f8b973.md`, `tools/audit_evidence.py`, `.github/workflows/audit.yml` |
+| T20 | Final integration of audit corrections, honest verification labels, temporal/geographic scope, dashboard and regression tests | in progress | `64f8b973` | `tools/consolidate.py`, `tools/apply_verify.py`, `tools/verify_rows.py`, `tools/remotecheck.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `data/events.csv`, `data/verify_report.json`, `scripts/`, `assets/`, `*.html`, `README.md`, `ANALYSIS.md`, `SOURCES.md`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml` |
+| T21 | Validate integrated site and links, PR → main, merge without waiting, confirm Pages, record outcome | in progress | `64f8b973` | `COORDINATION.md` |
 
 **Reconciliation note (T18):** the four research passes overlapped heavily. `c961fbe4` merged them
 row by row into one 231-row register: 37 duplicated events reconciled (each keeps both official
@@ -543,3 +549,25 @@ merge and re-validated.
 * 213 official-source records across 135 domains; 28 review findings; 118 rows carry notes.
 * Automated pass: 165 rows name-confirmed, 64 not name-matched (bots/JS), 2 PDFs, **0 dead URLs**, 46 blocked URLs.
 * Verification labels: 117 field-level · 79 page-level · 35 flagged.
+
+
+---
+
+## Claim — session `64f8b973` — 2026-10-18 02:58 UTC
+
+Read the complete coordination board and checked `origin/main` and open PRs before starting.
+No PRs are open. The prior T18 publication record explicitly closes that task, so its stale
+main-board status was normalized to done; no live claim is being taken over. All historical
+research inputs and earlier logs will be preserved. This session claims only the new audit and
+post-publication integration T19–T21 scopes above and is the final integration owner for its
+own completed audit. No other session's unfinished research will be overwritten.
+
+Arena fixes this session to `arena/64f8b973-maltaproj5`; no other branch will be created or used.
+The snapshot already contains a 231-row site: this pass will inspect rather than assume its
+verification claims. The authoring sandbox restricts direct outbound networking to GitHub/npm/PyPI;
+any official-site checks run through available retrieval tools or a transparent GitHub Actions
+verification job, never fabricated. Source reachability/name matching alone will not count as
+field verification. Any unconfirmed value must be blank, with the original retained in the audit
+ledger for review. A changing citywide inventory cannot honestly be certified exhaustive.
+
+Claim committed and pushed before implementation. Source/check/PR/deployment results to follow.

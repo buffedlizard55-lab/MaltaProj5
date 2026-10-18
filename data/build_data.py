@@ -207,8 +207,8 @@ ev(id="trans-march",
    neighborhood="Mission District",
    organizer="Trans March",
    cost="Free",
-   source_name="SF Pride — Events (links to transmarch.org)",
-   source_url="https://www.transmarch.org/",
+   source_name="San Francisco Pride — Events (organizer: transmarch.org)",
+   source_url="https://sfpride.org/events/",
    notes="2026 date confirmed via the SF Pride events listing; 2027 date not published on the organizer site.")
 
 ev(id="dyke-march",
@@ -222,8 +222,8 @@ ev(id="dyke-march",
    neighborhood="Mission District",
    organizer="SF Dyke March",
    cost="Free",
-   source_name="SF Dyke March (listed on sfpride.org/events)",
-   source_url="https://www.thedykemarch.org/",
+   source_name="San Francisco Pride — Events (organizer: thedykemarch.org)",
+   source_url="https://sfpride.org/events/",
    notes="2026 date confirmed via the SF Pride events listing; 2027 date not published.")
 
 ev(id="castro-street-fair",
@@ -1047,11 +1047,11 @@ DISCONTINUED = [
     },
 ]
 
+# Session 5a85baf2's authored rows. This file is an INPUT to tools/integrate.py,
+# which merges it with data/events_3a19e72d.json into the canonical data/events.json.
 os.makedirs("data", exist_ok=True)
-with open("data/events.json", "w") as f:
-    json.dump({"generated": VERIFIED_ON, "events": E}, f, indent=2)
-with open("data/discontinued.json", "w") as f:
-    json.dump({"generated": VERIFIED_ON, "items": DISCONTINUED}, f, indent=2)
+with open("data/events_5a85baf2.json", "w") as f:
+    json.dump({"generated": VERIFIED_ON, "events": E, "discontinued": DISCONTINUED}, f, indent=2)
 
 print(f"{len(E)} events, {sum(1 for e in E if e['status']=='flagged')} flagged rows, "
       f"{len(DISCONTINUED)} excluded/discontinued items")

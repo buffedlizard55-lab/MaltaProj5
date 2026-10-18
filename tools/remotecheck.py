@@ -24,12 +24,15 @@ if "--timeout" in sys.argv:
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
+sources = json.load(open(os.path.join(ROOT, "data", "sources.json")))
+events = json.load(open(os.path.join(ROOT, "data", "events.json")))
+used = {}
+for row in events:
+    for sid in row["sources"]:
+        used.setdefault(sid, []).append(row["name"])
 urls = {}
-for f in ("data/events.json", "data/discontinued.json"):
-    doc = json.load(open(os.path.join(ROOT, f)))
-    items = doc["events"] if "events" in doc else doc["items"]
-    for row in items:
-        urls.setdefault(row["source_url"], []).append(row.get("name") or row.get("id"))
+for sid, rec in sources.items():
+    urls.setdefault(rec["url"], []).extend(used.get(sid, [sid]))
 
 print(f"checking {len(urls)} unique official source URLs "
       f"(cited by {sum(len(v) for v in urls.values())} rows)\n")

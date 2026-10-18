@@ -195,8 +195,8 @@
       "neighborhood": "Mission District",
       "organizer": "Trans March",
       "cost": "Free",
-      "source_name": "SF Pride \u2014 Events (links to transmarch.org)",
-      "source_url": "https://www.transmarch.org/",
+      "source_name": "San Francisco Pride \u2014 Events (organizer: transmarch.org)",
+      "source_url": "https://sfpride.org/events/",
       "verified_on": "2026-10-18",
       "status": "verified",
       "notes": "2026 date confirmed via the SF Pride events listing; 2027 date not published on the organizer site."
@@ -215,8 +215,8 @@
       "neighborhood": "Mission District",
       "organizer": "SF Dyke March",
       "cost": "Free",
-      "source_name": "SF Dyke March (listed on sfpride.org/events)",
-      "source_url": "https://www.thedykemarch.org/",
+      "source_name": "San Francisco Pride \u2014 Events (organizer: thedykemarch.org)",
+      "source_url": "https://sfpride.org/events/",
       "verified_on": "2026-10-18",
       "status": "verified",
       "notes": "2026 date confirmed via the SF Pride events listing; 2027 date not published."
@@ -1220,6 +1220,36 @@
       "verified_on": "2026-10-18",
       "status": "verified",
       "notes": "One-off 2026 after-party already held; no 2027 edition announced."
+    }
+  ],
+  "discontinued": [
+    {
+      "name": "How Weird Street Faire",
+      "reason": "Discontinued after its 25th edition in 2024",
+      "detail": "The official site (howweird.org) reads \"2000 \u2014 2024 ... The Faire is done.\" Many third-party calendars still list it as an active annual SF event.",
+      "source_name": "How Weird Street Faire (official)",
+      "source_url": "https://howweird.org/"
+    },
+    {
+      "name": "Ghirardelli Chocolate Festival",
+      "reason": "No current edition published by the venue",
+      "detail": "Ghirardelli Square's official events page does not list a Chocolate Festival for 2026 or 2027; the most recent documented edition is the 23rd in September 2018. Excluded from the tables rather than carried as an active annual event.",
+      "source_name": "Ghirardelli Square \u2014 Upcoming Events",
+      "source_url": "https://www.ghirardellisq.com/upcoming-events"
+    },
+    {
+      "name": "Great Dickens Christmas Fair",
+      "reason": "Not inside the City and County of San Francisco",
+      "detail": "Frequently listed in \"San Francisco\" round-ups, but the fair is held at the Cow Palace in Daly City (San Mateo County). Excluded by the SF-only geography rule.",
+      "source_name": "SF city boundary rule (this project)",
+      "source_url": "https://www.sf.gov/"
+    },
+    {
+      "name": "Super Bowl LX / FIFA World Cup 2026 matches / 49ers games",
+      "reason": "Not inside the City and County of San Francisco",
+      "detail": "Played at Levi's Stadium in Santa Clara. Widely marketed as San Francisco events and therefore a common false positive in SF event lists.",
+      "source_name": "SF city boundary rule (this project)",
+      "source_url": "https://www.sf.gov/"
     }
   ]
 }

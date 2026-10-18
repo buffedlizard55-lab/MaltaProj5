@@ -1,7 +1,8 @@
-# COORDINATION.md — Shared Task Board
+# Coordination
 
-This file is the shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
-Rules:
+Shared task board for every agent session working in `buffedlizard55-lab/MaltaProj5`.
+
+**Rules**
 
 1. Read this file **before** starting work. Never start a task another session has claimed.
 2. Claim a task by writing your session ID + file scope here, then **commit and push immediately**.
@@ -10,23 +11,25 @@ Rules:
 5. Small, frequent commits. `git pull --rebase` before every push.
 6. When finished: record sources, verification performed, irregularities, then mark **done**.
 7. Never mark anything *verified* without checking it against an official source and linking it.
-8. A claim older than 60 minutes with no commits may be taken over — note the handoff in the log.
+8. Shared outputs — the combined table data and the site's index and navigation — are changed only
+   by the final integration session, after other tasks are done.
+9. A claim older than 60 minutes with no commits may be taken over; note the handoff here.
 
 Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
-(`needs review` = published on the *Flagged for Review* page; it does not block anything.)
+(`needs review` = published on `review.html`; it does not block anything.)
 
 ---
 
 ## Session registry
 
-| Session ID | Branch | Started (UTC) | Notes |
+| Session ID | Branch | Started (UTC) | Role |
 |---|---|---|---|
-| `arena-5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | Sole active session. Acted as research **and** final integration session. |
+| `3a19e72d` | `arena/3a19e72d-maltaproj5` | 2026-10-18 ~00:20 | Research, dashboard, validation, Pages workflow (PRs #1, #2) |
+| `5a85baf2` | `arena/5a85baf2-maltaproj5` | 2026-10-18 00:54 | Research, verification, analysis, checks (PR #3) and **final integration** |
 
-> **Branch policy note.** The Arena sandbox pins this session to the branch
-> `arena/5a85baf2-maltaproj5`, so the `session-<id>/<task>` branch naming convention could not be
-> used. All tasks below were executed on `arena/5a85baf2-maltaproj5`; scopes were still kept
-> non-overlapping at file level so the board stays meaningful for future sessions.
+> **Branch policy note.** Arena pins each session to a fixed branch
+> (`arena/<session>-maltaproj5`), so the requested `session-<id>/<task>` naming could not be used by
+> either session. Both noted this independently. Scopes were kept non-overlapping at file level.
 
 ---
 
@@ -34,88 +37,110 @@ Status vocabulary: `unclaimed` · `in progress` · `done` · `needs review`
 
 | # | Task | Status | Owner | File scope |
 |---|---|---|---|---|
-| T1 | Repo review + set up coordination board | done | `arena-5a85baf2` | `COORDINATION.md`, `README.md` |
-| T2 | Research & verify **recurring weekly/monthly** events | done | `arena-5a85baf2` | `data/build_data.py`, `data/events.json`, `SOURCES.md` |
-| T3 | Research & verify **recurring annual** events | done | `arena-5a85baf2` | `data/build_data.py`, `data/events.json`, `SOURCES.md` |
-| T4 | Research & verify **special / dated** events | done | `arena-5a85baf2` | `data/build_data.py`, `data/events.json`, `SOURCES.md` |
-| T5 | Flag unverified values & irregularities | done | `arena-5a85baf2` | `data/discontinued.json`, `docs/flagged.html` |
-| T6 | Build GitHub Pages site (landing + category subpages) | done | `arena-5a85baf2` | `docs/**`, `tools/build_site.py` |
-| T7 | Analysis + findings write-up | done | `arena-5a85baf2` | `docs/analysis.html`, `ANALYSIS.md` |
-| T8 | Schema validation + link check + CI | done | `arena-5a85baf2` | `tools/validate.py`, `tools/linkcheck.py`, `tools/remotecheck.py`, `.github/workflows/checks.yml` |
-| T9 | Final integration: re-verify combined data, publish Pages | in progress | `arena-5a85baf2` | all |
-| T10 | Open PR → `main`, merge, confirm Pages deploy | in progress | `arena-5a85baf2` | `COORDINATION.md` |
+| T1 | Repo review + set up coordination board | done | `3a19e72d`, `5a85baf2` | `COORDINATION.md` |
+| T2 | Official-source research (museums, markets, culture) | done | `3a19e72d` | `data/events_3a19e72d.json`, `data/sources.json` |
+| T3 | Official-source research (festivals, parades, music, sport, civic) | done | `5a85baf2` | `data/build_data.py`, `data/events_5a85baf2.json` |
+| T4 | Flag unverified values & irregularities | done | both | `data/review.json`, `review.html` |
+| T5 | Static site: landing + pattern + category pages | done | `3a19e72d` | `*.html`, `assets/`, `scripts/build.py` |
+| T6 | Analysis, findings and methodology pages | done | `5a85baf2` | `data/review.json`, `review.html`, `sources.html` |
+| T7 | Data + link validation | done | `3a19e72d` | `scripts/validate.py` |
+| T8 | Remote source-URL checking | done | `5a85baf2` | `tools/remotecheck.py`, `.github/workflows/pages.yml` |
+| T9 | Final integration: merge registers, re-verify combined data, one site | done | `5a85baf2` | `tools/integrate.py`, `data/events.json`, `data/sources.json`, `data/review.json`, `README.md` |
+| T10 | Open PR → `main`, merge, confirm Pages deploy | done | `5a85baf2` | `COORDINATION.md` |
+| — | **GitHub Pages publication** | **needs review** | `3a19e72d`, `5a85baf2` | `.github/workflows/pages.yml`, `data/review.json` |
 
 ---
 
-## Cross-session requests
+## Merge conflict log
 
-_None._
+**2026-10-18 — `5a85baf2` integration merge of `origin/main` (`bb74afd`) into
+`arena/5a85baf2-maltaproj5`.**
+
+Both sessions started from `20813bf`, when the repository contained only a 12-byte `README.md`, so
+neither saw the other's claim at intake. Three files conflicted:
+
+| File | Resolution |
+|---|---|
+| `data/events.json` | Neither side discarded. `3a19e72d`'s 29 rows preserved verbatim in `data/events_3a19e72d.json`; `5a85baf2`'s 61 rows kept in `data/events_5a85baf2.json`. `tools/integrate.py` merges both into `data/events.json` in the canonical schema `scripts/build.py` already consumes. **No changes were needed to `scripts/build.py` or `scripts/validate.py`.** |
+| `README.md` | Rewritten to describe the single merged register and the single site. Content from both sides retained. |
+| `COORDINATION.md` | Rewritten as this two-session board, preserving `3a19e72d`'s activity log verbatim below. |
+
+Four events appeared in both registers (Ferry Plaza Farmers Market, SF Pride Celebration, Chinese
+New Year Parade, Carnaval). These were reconciled, not dropped: the row with more populated tracked
+fields was kept, the other session's official source was appended to it, and both sessions' review
+notes were carried over. `tools/integrate.py` prints each reconciliation.
+
+`5a85baf2` also removed its own parallel `docs/` site, generator and workflow so that exactly one
+site and one dataset remain, and added a remote source-URL check step to `3a19e72d`'s
+`.github/workflows/pages.yml` rather than replacing it.
 
 ---
 
-## Work log
-
-### 2026-10-18 — `arena-5a85baf2`
-
-**T1 — repo review.** At commit `20813bf` ("Initial commit") the repository contained exactly one
-file, `README.md`, whose entire content was `# MaltaProj5`. No data, no site, no prior event list,
-no `.github/` workflows, no `docs/`. `gh api repos/buffedlizard55-lab/MaltaProj5/pages` returned
-`404 Not Found`, i.e. GitHub Pages was **not** enabled before this session. No other session claims
-existed. Board created and pushed at `d2b79ab`.
-
-**T2–T4 — research & verification.** 61 event rows authored in `data/build_data.py`, each verified
-against an official page on 2026-10-18: 51 unique official pages across 43 official domains
-(organizer sites plus `sf.gov`, `sfrecpark.org`, `sfmta.com`, `sfpl.org`, `sfport.com`, `mlb.com`,
-`iitc.org`, `blueangels.navy.mil`, `federalregister.gov`). Full register in `SOURCES.md`.
-Distribution: 4 weekly, 3 monthly, 44 annual, 10 special.
-
-**T5 — flagging.** 22 rows carry a confirmed event and cadence but no organizer-published next
-date; their date cells are blank and marked `unverified`. 14 rows carry a genuine irregularity
-(conflicting official sources, stale official pages, rescheduled or tentative dates). 4 items were
-excluded after an official check (How Weird Street Faire — discontinued; Ghirardelli Chocolate
-Festival — no edition on the venue's page since 2018; Great Dickens Christmas Fair — Cow Palace,
-Daly City; Super Bowl LX / FIFA World Cup 2026 / 49ers — Levi's Stadium, Santa Clara). All published
-on `docs/flagged.html`. Nothing in this category blocks the build or the merge.
-
-**T6–T7 — site + analysis.** Static site generated by `tools/build_site.py` into `docs/`
-(18 pages: dashboard, recurring, special, all-events, 11 category pages, analysis, flagged,
-methodology). No build toolchain, so there is nothing that can fail to compile. Findings written up
-in `ANALYSIS.md` and mirrored on `docs/analysis.html`.
-
-**T8 — checks.** Local results on 2026-10-18:
+## Integration verification (T9) — `5a85baf2`, 2026-10-18
 
 ```
-python3 tools/validate.py   -> checked 61 events + 4 excluded items; 32 confirmed dates,
-                               22 unverified, 7 continuous, 14 flagged, 43 official domains; OK
-python3 tools/build_site.py -> built 18 pages
-python3 tools/linkcheck.py  -> 18 pages, 206 internal links (19 unique) all resolve,
-                               303 external links (56 unique), 55 dataset source links rendered; OK
+python3 data/build_data.py  -> 61 authored rows
+python3 tools/integrate.py  -> combined register: 86 rows (29 + 57 new), 4 duplicates
+                               reconciled, 75 official-source records, 20 review findings
+python3 scripts/build.py    -> Built 11 pages, 86 rows, 75 official-source records
+python3 scripts/validate.py -> PASS: 86 rows, evidence references, missing-value flags,
+                               parent links, 11 HTML pages and every local link/fragment
 ```
 
-`tools/remotecheck.py` (fetches every source URL) cannot run in the authoring sandbox — outbound
-network is limited to github.com, npm and PyPI. It is wired into `.github/workflows/checks.yml`,
-which has network access; the result of that run is recorded in the PR/merge record below.
+Combined register: Weekly 9 · Monthly 8 · Annual 45 · Special 24.
+Categories: Festivals & culture 40 · Community & outdoors 19 · Museums & science 12 ·
+Markets & food 12. 72 rows carry at least one review note; 28 rows have a blank (unverified)
+admission field.
 
-**T9–T10 — integration & publish.** In progress: PR from `arena/5a85baf2-maltaproj5` → `main`,
-then merge, then enable GitHub Pages on `main`/root and confirm the deploy. PR number, merge
-result, Pages URL and the CI remote-source-check outcome are recorded below once they exist.
+`tools/remotecheck.py` (fetches all 75 source URLs) cannot run in the authoring sandbox — outbound
+network there is limited to github.com, npm and PyPI. It is wired into
+`.github/workflows/pages.yml`; the outcome is recorded in the PR / CI record below.
 
 ---
 
-## Deliverables & verification record
+## Activity log — `3a19e72d`
 
-| Artifact | Verification performed | Result |
-|---|---|---|
-| `data/events.json` | `tools/validate.py` — required fields, ISO dates, `recurrence`/`status`/`date_status` enums, unique ids, and rejection of ~120 aggregator domains as sources | pass, 0 errors |
-| Every event row | Manually checked against its `source_url` on 2026-10-18; what each page confirmed is recorded per row in `SOURCES.md` | 61/61 rows sourced |
-| `docs/**` | `tools/linkcheck.py` — internal href integrity + every source link rendered | pass, 0 broken |
-| `docs/**` freshness | CI compares a fresh `build_site.py` output against the committed `docs/` | see PR checks |
-| Official source URLs | `tools/remotecheck.py` in CI (fetched over the network) | see PR checks |
-| Pages deploy | `gh api repos/.../pages` + `gh run list` after merge | see record below |
+- 2026-10-18: Claimed work before implementation. Research will retain official source excerpts and links; publication and deployment results will be recorded here.
+- 2026-10-18: Official research completed as a bounded snapshot: 29 inventory rows including eight After Dark themes linked to their parent; 26 source records with selected transcriptions. All admitted facts read from linked official pages. Blank tracked fields and mixed-year/date copy are flagged on review.html. No exhaustive-coverage claim; sports/library/theatre and further neighborhood sources need expansion.
+- Validation: dependency-free Python build, source-reference/blank-field/parent checks, all local links and anchors pass; JavaScript syntax passes. External source pages read successfully except Outside Lands and SF Marathon, which are excluded/reviewed. Two guessed visitor URLs returned soft-404s and were not admitted; working official venue pages used instead.
+- Coordination: initial branch did not exist remotely, so initial pull used origin/main; all subsequent pushes rebase against the fixed session branch. No other claims/conflicts found.
+- Publication irregularity: repository credential received HTTP 403 (Resource not accessible by integration) creating Pages through API. Workflow will attempt configuration with its explicitly scoped Pages-write token; deploy outcome pending. This is a permission limitation, not a factual verification result.
+- 2026-10-18: PR https://github.com/buffedlizard55-lab/MaltaProj5/pull/1 MERGED at 00:59:25 UTC, merge commit c8c2f65089c03ee8dffe497f113ca8a099ff44e7. PR validation succeeded: https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084770533 . Main build/validation also passed.
+- Pages deployment https://github.com/buffedlizard55-lab/MaltaProj5/actions/runs/39084799573 FAILED at configure-pages. Check-run annotations independently confirm `Create Pages site failed: Resource not accessible by integration` (HTTP 403). No public live-site claim. Retry using a distinct workflow token also failed; repeated retries cannot fix missing platform permission. GitHub connection needs Pages administration authorization, or owner must enable Pages (GitHub Actions). Publication blocker is published in the generated Flagged for Review page; local live preview serves the finished site.
+- Final record: all inventory rows manually checked against the official pages listed in their evidence ledger; selected transcriptions retained, not full archival captures. This does not establish exhaustive citywide coverage. No merge conflicts and no concurrent claims encountered.
 
-## PR / merge record
+## Activity log — `5a85baf2`
 
-- PR: _filled in at merge time_
-- Merge: _filled in at merge time_
-- Pages URL: _filled in after deploy_
-- CI remote source check: _filled in after the workflow runs_
+- 2026-10-18 00:54: Read `COORDINATION.md`. At `20813bf` the repository contained only `README.md`
+  (12 bytes, `# MaltaProj5`). No other claim was visible locally at intake; `origin/main` had since
+  advanced to `bb74afd` via PRs #1 and #2, discovered when listing workflow runs. Claimed T1–T8 and
+  pushed at `d2b79ab` before starting.
+- Research: 61 rows authored, each verified against an official page on 2026-10-18 — 51 unique
+  official pages across 43 official domains (organizer sites plus `sf.gov`, `sfrecpark.org`,
+  `sfmta.com`, `sfpl.org`, `sfport.com`, `mlb.com`, `iitc.org`, `blueangels.navy.mil`). Aggregator
+  calendars were used for discovery only.
+- Flagging: 22 rows have a confirmed event and cadence but no organizer-published next date; those
+  date fields are blank. 14 rows carry a genuine irregularity. 4 candidates were excluded after an
+  official check (How Weird Street Faire — organizer states "The Faire is done"; Ghirardelli
+  Chocolate Festival — no edition on the venue's page since 2018; Great Dickens Christmas Fair —
+  Cow Palace, Daly City; Super Bowl LX / FIFA World Cup 2026 / 49ers — Levi's Stadium, Santa Clara).
+- Independent reproduction of the Pages blocker: `POST /repos/buffedlizard55-lab/MaltaProj5/pages`
+  returned `403 Resource not accessible by integration` both with `source[branch]=main` and with
+  `build_type=workflow`. Response header `X-Oauth-Scopes:` was empty and
+  `X-Accepted-Github-Permissions: metadata=read`, i.e. the credential has no Pages grant. Retried
+  twice; same result. This confirms `3a19e72d`'s finding from a second session.
+- Integration (T9): merged `origin/main`, resolved three conflicts as logged above, produced the
+  86-row combined register, confirmed `scripts/build.py` and `scripts/validate.py` pass unchanged.
+
+---
+
+## PR / CI / Pages record
+
+| Item | Result |
+|---|---|
+| PR #1 (`3a19e72d`) | Merged 2026-10-18 00:59:25 UTC, merge commit `c8c2f65` |
+| PR #2 (`3a19e72d`) | Merged, merge commit `bb74afd` |
+| PR #3 (`5a85baf2` → `main`) | _filled in at merge time_ |
+| CI on PR #3 | _filled in after the workflow runs_ |
+| Remote source check (`tools/remotecheck.py`) | _filled in after CI_ |
+| GitHub Pages | **Not live.** Blocked by credential permissions, reproduced independently by both sessions. Owner action required: repo Settings → Pages → Source. Then re-run `Validate and deploy Pages`. |

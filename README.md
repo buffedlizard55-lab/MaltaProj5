@@ -27,7 +27,7 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 The directory includes 16 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
-The site is **free-first**: the [dashboard](index.html) executive summary and main section carry **free upcoming events only** (confirmed dated entries only, nearest first; undated recurring patterns stay on the Free and cadence pages), ordered Gaming → Music → AI & technology → everything else. Priced events are collected in the separate [Paid events](paid.html) section; the complete all-cost directory remains on [Focus](focus.html) and [Upcoming](upcoming.html).
+The site is **free-first**: the [dashboard](index.html) executive summary and main table include only events with an official Free admission quotation and a confirmed upcoming date, nearest first; rows in the next 14 days are highlighted. The summary also gives nearest-free callouts ordered Gaming → Music → AI & technology → everything else. Recurring patterns without an approved upcoming date stay on the Free and cadence pages, not the dashboard's upcoming table. Priced events are collected in the separate [Paid events](paid.html) section; the complete all-cost directory remains on [Focus](focus.html) and [Upcoming](upcoming.html).
 
 - [Dashboard (free-first)](index.html) · [Upcoming](upcoming.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
 - [Gaming](gaming.html) · [Music](music.html) · [AI & technology](ai.html) · [Free to attend](free.html) · [Paid events](paid.html) · [Focus, one page](focus.html)
@@ -91,10 +91,10 @@ Omit `--serve` when a static server already runs on port 8080. This checks 19 pa
 
 ## Site conventions
 
-* **Upcoming order.** The Upcoming page groups the 70 dated, published entries into six time
+* **Upcoming order.** The Upcoming page groups the 74 dated, published entries into six time
   buckets — **Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later** — and sorts
   nearest confirmed date first within each. Only approved 2026/2027 dates are displayed; no date is
-  inferred. The canonical nearest-first order for those 70 rows is exported to
+  inferred. The canonical nearest-first order for those 74 rows is exported to
   `data/upcoming_order.json`, so the browser pass can assert it rather than re-derive it. An
   occurrence that has started but not finished is grouped under **Open now** rather than being given
   a misleading “in N days” label.
@@ -134,7 +134,7 @@ Omit `--serve` when a static server already runs on port 8080. This checks 19 pa
 | `data/audit_d57e2eeb.json`, `tools/register_d57e2eeb.py` | Additive fail-closed free-first gap overlay and its captures (free civic/garden/music/gaming/AI entries, one Paid) |
 | `data/research/audit-d57e2eeb.md` | Research log for that overlay: gap analysis, retrieval methods, irregularities and deliberate exclusions |
 | `data/upcoming_order.json` | Canonical nearest-first order of the dated directory rows, asserted by the browser pass |
-| `data/dashboard_order.json` | The free-first landing page's two main-section orderings (free dated; free recurring), same rationale |
+| `data/dashboard_order.json` | The free-first landing page's confirmed free-upcoming date order; recurring patterns without confirmed dates are excluded from its main table |
 | `data/events.json` | All audited records, including review-only dispositions; not all are published in the directory |
 | `data/sources.json` | Exact-URL ledger; statuses and contextual decisions are separate |
 | `data/audit_summary.json` | Reproducible counts/blank-field/date summary |

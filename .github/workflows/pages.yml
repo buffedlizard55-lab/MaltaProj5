@@ -39,9 +39,9 @@ jobs:
           git diff --exit-code -- \
             data/events.json data/sources.json data/review.json \
             data/unverified_history.json data/audit_summary.json \
-            data/events.csv data/review.csv data/upcoming_order.json ANALYSIS.md \
+            data/events.csv data/review.csv data/upcoming_order.json data/dashboard_order.json ANALYSIS.md \
             index.html upcoming.html focus.html weekly.html monthly.html annual.html special.html \
-            gaming.html music.html ai.html free.html \
+            gaming.html music.html ai.html free.html paid.html \
             markets.html museums.html culture.html community.html \
             analysis.html review.html sources.html
 

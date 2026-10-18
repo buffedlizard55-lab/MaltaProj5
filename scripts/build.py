@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Deterministic, offline static build. Only audited fields are rendered as facts.
 
-Seventeen root pages work under a GitHub Pages subpath, with or without JavaScript:
-a landing dashboard with an executive summary, a date-ordered Upcoming page, the
-cadence pages, the topic pages requested for this project (gaming, music, AI and
-free-to-attend) and the evidence pages. No live-calendar claims, name-matcher
+Nineteen root pages work under a GitHub Pages subpath, with or without JavaScript:
+a free-first landing dashboard (executive summary and main section carry free
+upcoming events only), a date-ordered Upcoming page, the cadence pages, the topic
+pages requested for this project (gaming, music, AI and free-to-attend), a separate
+Paid events section, and the evidence pages. No live-calendar claims, name-matcher
 report, prose date parsing or fact fallback.
 """
 from __future__ import annotations
@@ -36,7 +37,7 @@ SNAPSHOT = date(2026, 10, 18)
 FIELDS = ("name", "schedule", "time", "venue", "price")
 LABELS = {"name": "Event name", "schedule": "Published schedule", "time": "Time", "venue": "Venue / area", "price": "Admission / conditions"}
 NAV = [
-    ("index.html", "Overview"), ("upcoming.html", "Upcoming"), ("free.html", "Free to attend"),
+    ("index.html", "Overview"), ("upcoming.html", "Upcoming"), ("free.html", "Free to attend"), ("paid.html", "Paid events"),
     ("gaming.html", "Gaming"), ("music.html", "Music"), ("ai.html", "AI & technology"), ("focus.html", "Focus, one page"),
     ("weekly.html", "Weekly"), ("monthly.html", "Monthly"), ("annual.html", "Annual"), ("special.html", "Special & dated"),
     ("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors"),
@@ -232,36 +233,93 @@ cat_counts = Counter(r["category"] for r in listed)
 topic_counts = Counter(topic_of(r) for r in listed)
 cost_counts = Counter(cost_of(r)[0] for r in listed)
 free_rows = [r for r in listed if cost_of(r)[0] == "Free"]
+# Free-first ordering (session 21f3dd85, T38): free events for gaming, music and
+# AI first, then everything else; dated entries always nearest first inside that.
+FOCUS_ORDER = {"Gaming": 0, "Music": 1, "AI & technology": 2, "Other": 3}
+free_dated = [r for r in dated if cost_of(r)[0] == "Free"]  # `dated` is already nearest-first
+free_recurring = sorted(
+    (r for r in free_rows if r["id"] not in UPCOMING and r["kind"] in ("Weekly", "Monthly", "Annual")),
+    key=lambda r: (FOCUS_ORDER[topic_of(r)], {"Weekly": 0, "Monthly": 1, "Annual": 2}[r["kind"]], display(r).casefold()))
+free_focus = sorted(free_rows, key=lambda r: (
+    FOCUS_ORDER[topic_of(r)],
+    UPCOMING.get(r["id"], ("", date.max, 10**6, ""))[1],
+    display(r).casefold()))
+paid_rows = sorted((r for r in listed if cost_of(r)[0] == "Paid"), key=lambda r: (
+    r["id"] not in UPCOMING,
+    UPCOMING.get(r["id"], ("", date.max, 10**6, ""))[1],
+    display(r).casefold()))
 
 # ------------------------------------------------------------------- dashboard
-summary_intro = (f"{stats['listed']} San Francisco entries are evidenced from official pages. "
-                 f"{len(dated)} carry at least one confirmed upcoming date after the {AS_OF} snapshot; the rest are documented "
-                 "recurring patterns or entries whose next date no official page confirms. The list below is ordered by the next "
-                 "confirmed date, nearest first.")
+# Free-first dashboard (session 21f3dd85, T38): the executive summary and the main
+# section carry FREE upcoming events only. The full directory (all costs) stays on
+# the Focus and Upcoming pages; paid events sit in their own section (paid.html).
+free_next14 = sum(1 for r in free_dated if UPCOMING[r["id"]][2] <= 14)
+until14 = date.fromordinal(SNAPSHOT.toordinal() + 14).strftime("%-d %B %Y")
+summary_intro = (f"Free first: {len(free_dated)} events that are stated free on their official page also carry a "
+                 f"confirmed upcoming date after the {AS_OF} snapshot. They lead this page in date order, nearest "
+                 f"first. {free_next14} of them fall on or before {until14}. A further {len(free_recurring)} free "
+                 "entries recur weekly, monthly or annually with no confirmed next date and follow in the main "
+                 "section, ordered Gaming, Music, AI & technology, then everything else. Paid events are collected "
+                 "in a separate section and never mixed into this page.")
+
+
+def nearest_free_callout(topic):
+    dated_items = [r for r in free_dated if topic_of(r) == topic]
+    n_free = sum(1 for r in free_rows if topic_of(r) == topic)
+    if dated_items:
+        row = dated_items[0]
+        return (f"<b>{e(topic)}:</b> nearest free dated entry is {e(display(row))} "
+                f"({e(UPCOMING[row['id']][3])}); {n_free} free entries in all")
+    return (f"<b>{e(topic)}:</b> no free entry with a confirmed date yet; "
+            f"{n_free} free entries recur or are undated")
+
+
+focus_callout = ('<p class="topic-note">Focus topics — '
+                 + "; ".join(nearest_free_callout(t) for t in ("Gaming", "Music", "AI & technology"))
+                 + '. <a href="gaming.html">Gaming</a> · <a href="music.html">Music</a> · '
+                   '<a href="ai.html">AI &amp; technology</a></p>')
 body = metrics([
+    ("Free upcoming events", len(free_dated), "Free and dated — nearest first below", False),
+    ("Free to attend", len(free_rows), "Stated free on the official page", False),
     ("City-only directory", stats["listed"], f'{stats["series"]} programme umbrellas included', False),
-    ("With a confirmed upcoming date", len(dated), "Nearest first on the Upcoming page", False),
-    ("Free to attend", cost_counts.get("Free", 0), "Stated free on the official page", False),
+    ("Paid events", len(paid_rows), "Separate section; exact quoted prices", False),
     ("Admission not stated", cost_counts.get("Not stated", 0), "Blank — never assumed free", True),
     ("Held for review", stats["review_only"], "Not included in directory totals", True),
-    ("Official source URLs", stats["source_urls"], f'{stats["domains"]} distinct domains; not organizations', False),
 ]) + notice()
 body += (f'<section class="intro" id="executive-summary"><h2>Executive summary</h2><p>{e(summary_intro)}</p>'
-         f'<p><b>Next 14 days.</b> {sum(1 for r in dated if UPCOMING[r["id"]][2] <= 14)} entries have a confirmed date on or before '
-         f'{(SNAPSHOT.toordinal() + 14) and date.fromordinal(SNAPSHOT.toordinal() + 14).strftime("%-d %B %Y")}. '
+         f'<p><b>Next 14 days.</b> {free_next14} free entries have a confirmed date on or before {e(until14)}. '
          'Highlighted rows are the soonest. Cost is a label over the exact admission wording quoted from the official page; '
-         '“Not stated” means the page says nothing about price, not that entry is free.</p>')
-body += countdown_list(dated, limit=12)
-body += (f'<p><a href="upcoming.html">All {len(dated)} dated entries, nearest first →</a> · '
-         '<a href="free.html">Free to attend →</a> · <a href="review.html">Flagged for Review →</a></p></section>')
+         f'“Not stated” means the page says nothing about price, not that entry is free. Across all costs, {len(dated)} '
+         'entries carry a confirmed upcoming date.</p>')
+body += countdown_list(free_dated, limit=12)
+body += focus_callout
+body += (f'<p><a href="#free-upcoming">All {len(free_dated)} free upcoming events ↓</a> · '
+         f'<a href="free.html">All {len(free_rows)} free entries →</a> · '
+         f'<a href="upcoming.html">All {len(dated)} dated entries, any cost →</a> · '
+         '<a href="paid.html">Paid events (separate section) →</a> · '
+         '<a href="review.html">Flagged for Review →</a></p></section>')
 body += ('<h2>Browse by topic</h2><p class="topic-note">Gaming, music and AI &amp; technology are editorial topic tags derived from '
          'the verified event name. They are labels for navigation, not a verified field.</p>'
          + cards([(f, t, topic_counts.get(t, 0), "Open the topic page") for f, t in TOPIC_PAGES]
-                 + [("free.html", "Free to attend", len(free_rows), "Admission stated free by the official page")]))
+                 + [("free.html", "Free to attend", len(free_rows), "Admission stated free by the official page"),
+                    ("paid.html", "Paid events", len(paid_rows), "Separate section — exact quoted prices")]))
 body += '<h2>Browse by cadence</h2>' + cards([(f, label, kind_counts[k], "Browse source-linked entries") for f, label, k in [("weekly.html", "Weekly", "Weekly"), ("monthly.html", "Monthly", "Monthly"), ("annual.html", "Annual", "Annual"), ("special.html", "Special & dated", "Special")]])
 body += '<h2>Explore by category</h2>' + cards([(f, c, cat_counts.get(c, 0), "Browse the directory") for f, c in [("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors")]])
-body += '<h2>City-only directory</h2>' + table(listed, nexts=UPCOMING)
-write("index.html", "San Francisco, in events.", "Recurring gatherings, cultural traditions and special programmes—organized around official evidence, with uncertainty kept visible.", body)
+body += (f'<h2 id="free-upcoming">Free upcoming events — dated, nearest first · {len(free_dated)}</h2>'
+         '<p class="topic-note">Every entry below is stated free on its official page <b>and</b> carries an explicitly '
+         'approved upcoming date. Rows in the next 14 days are highlighted. The exact free-admission wording — '
+         'including any conditions — is shown in the Admission column.</p>'
+         + table(free_dated, nexts=UPCOMING))
+body += (f'<h2>Free recurring events — next date unconfirmed · {len(free_recurring)}</h2>'
+         '<p class="topic-note">Free weekly, monthly and annual patterns whose next occurrence no official page '
+         'dates in this snapshot, ordered Gaming, Music, AI &amp; technology, then everything else. A pattern '
+         'never generates a next date here.</p>'
+         + table(free_recurring, nexts=UPCOMING))
+body += (f'<p class="topic-note">This page lists free entries only. The complete city-only directory — '
+         f'{len(listed)} entries at every cost — is on the <a href="focus.html">Focus page</a> and the '
+         '<a href="upcoming.html">Upcoming page</a>; priced events have their own '
+         '<a href="paid.html">Paid events section</a>.</p>')
+write("index.html", "San Francisco, in events.", "Free things to do in San Francisco first: dated, source-linked recurring gatherings and special programmes inside the city, organized around official evidence. Paid events sit in their own section; uncertainty stays visible.", body)
 
 # ---------------------------------------------------------------- upcoming page
 upcoming_body = metrics([
@@ -330,7 +388,7 @@ for filename, topic in TOPIC_PAGES:
 # Session 59f56c24's combined "Gaming / Music / AI, then everything else" view.
 # Kept alongside the per-topic subpages: one page that carries the whole ordered
 # directory, so the focus grouping can be read (and checked) in a single table.
-FOCUS_ORDER = {"Gaming": 0, "Music": 1, "AI & technology": 2, "Other": 3}
+# (FOCUS_ORDER is defined once, next to the free-first sets above.)
 focus_counts = Counter(topic_of(r) for r in listed)
 focus_sorted = sorted(listed, key=lambda r: (
     FOCUS_ORDER[topic_of(r)],
@@ -360,17 +418,42 @@ write("focus.html", "Gaming · Music · AI first.",
 
 free_body = notice() + metrics([
     ("Free to attend", len(free_rows), "Admission stated free by the official page", False),
+    ("Free upcoming (dated)", len(free_dated), "Confirmed date after the snapshot", False),
     ("Gaming", sum(1 for r in free_rows if topic_of(r) == "Gaming"), "Free gaming entries", False),
     ("Music", sum(1 for r in free_rows if topic_of(r) == "Music"), "Free music entries", False),
+    ("AI & technology", sum(1 for r in free_rows if topic_of(r) == "AI & technology"), "Free AI & technology entries", False),
     ("Admission not stated", cost_counts.get("Not stated", 0), "Blank — never assumed free", True),
 ])
 free_body += ('<section class="intro"><h2>Free, as the official page states it</h2><p>Every entry below quotes free admission on its own '
               'official page. The exact wording is shown in the Admission column, including conditions such as registration, a ticket '
               'lottery, residency or membership — those conditions are part of the quote and are not edited out. Entries whose official '
               'page says nothing about price are <b>not</b> here; they are labelled “Not stated” everywhere, because a blank cell is '
-              'unverified, never free by default.</p></section>')
-free_body += table(free_rows, nexts=UPCOMING)
+              'unverified, never free by default. Order on this page: <b>Gaming, then Music, then AI &amp; technology, then '
+              'everything else</b>; inside each group, the soonest confirmed date first.</p></section>')
+free_body += table(free_focus, nexts=UPCOMING)
 write("free.html", "Free to attend.", "Entries whose official page states free admission, with the exact wording and any conditions kept visible.", free_body)
+
+# ------------------------------------------------------------------- paid page
+# Separate section (session 21f3dd85, T39): priced events are collected and
+# organized, but kept out of the free-first dashboard and Free page. Only rows
+# whose verified admission text quotes a price appear here; “Not stated” is
+# not paid and never appears on this page.
+paid_body = notice() + metrics([
+    ("Paid events", len(paid_rows), "A price is quoted on the official page", False),
+    ("With a confirmed upcoming date", sum(1 for r in paid_rows if r["id"] in UPCOMING), "Nearest first below", False),
+    ("Gaming", sum(1 for r in paid_rows if topic_of(r) == "Gaming"), "Paid gaming entries", False),
+    ("Free to attend", len(free_rows), "The free-first focus — on the Free page", False),
+    ("Admission not stated", cost_counts.get("Not stated", 0), "Not listed here — unpriced is not paid", True),
+])
+paid_body += ('<section class="intro"><h2>Paid, kept separate on purpose</h2><p>This project focuses on free events: the '
+              '<a href="index.html">landing page</a> and the <a href="free.html">Free page</a> carry free entries only. '
+              'Priced events are still collected and organized — here, in their own section. Every entry below quotes a '
+              'price, ticket or entry fee on its official page, and the exact wording is shown in the Admission column, '
+              'including member pricing, play-up or admin fees where the page states them in its price line. Entries whose '
+              'official page says nothing about price are <b>not</b> here: “Not stated” means unverified, not paid. Dated '
+              'entries come first, nearest date first; the rest follow alphabetically.</p></section>')
+paid_body += table(paid_rows, nexts=UPCOMING)
+write("paid.html", "Paid events.", "The separate paid section: entries whose official page quotes a price, with the exact wording kept beside the label.", paid_body)
 
 
 def plain(headers, values):
@@ -385,7 +468,7 @@ body += '<h2>Cost, as stated by the official page</h2>' + plain(["Cost label", "
 body += '<h2>Dates, without invention</h2>' + plain([f"Temporal status at {AS_OF}", "Directory entries"], sorted(stats["temporal"].items()))
 body += '<h2>Upcoming horizon</h2>' + plain([f"Distance from {AS_OF}", "Directory entries"], [(b, bucket_counts.get(b, 0)) for b in BUCKETS] + [("No approved date", len(listed) - len(dated))])
 body += '<h2>Unconfirmed fields stay blank</h2>' + plain(["Field", "Blank cells in the directory"], [(LABELS[k], stats["blank_fields"][k]) for k in FIELDS])
-body += '<section class="prose"><p>Only explicit approved ISO dates drive date labels. An exhibition with only an opening date has no fabricated closing date. Ongoing admission policies and recurring markets do not automatically receive a dated next occurrence.</p><h2>Biases and limits</h2><ul><li>Official web calendars favor larger, web-visible institutions; small community, faith, nightlife and pop-up gatherings are underrepresented.</li><li>Blocked and JavaScript-only pages reduce readable evidence. Their candidates are not proof of nonexistence and are not silently counted as verified.</li><li>Regional festivals need venue-level separation. A San Francisco brand does not place every performance inside the city.</li><li>Domain counts are not counts of organizers. A .org suffix is not evidence of nonprofit legal status; no such inference is made.</li><li>Snapshot dates are not live ticket availability, cancellations or a guarantee that a source has not changed.</li><li>Topic tags and cost badges are presentation labels. A search-result snippet is evidence of what a tool returned, not a verified page fetch with a status code.</li></ul><h2>Next research priorities</h2><p>Isolate SF-only regional screenings; verify individual sports fixtures, theater/music performances, civic and faith calendars; resolve conflicting hours/street extents; add venues for the two held gaming/AI candidates; revisit unreadable primary pages. Coverage is intentionally described as incomplete.</p><p><a href="review.html">All candidates and open questions →</a> · <a href="data/audit_summary.json">Machine-readable summary</a></p></section>'
+body += '<section class="prose"><p>Only explicit approved ISO dates drive date labels. An exhibition with only an opening date has no fabricated closing date. Ongoing admission policies and recurring markets do not automatically receive a dated next occurrence.</p><h2>Biases and limits</h2><ul><li>Official web calendars favor larger, web-visible institutions; small community, faith, nightlife and pop-up gatherings are underrepresented.</li><li>Blocked and JavaScript-only pages reduce readable evidence. Their candidates are not proof of nonexistence and are not silently counted as verified.</li><li>Regional festivals need venue-level separation. A San Francisco brand does not place every performance inside the city.</li><li>Domain counts are not counts of organizers. A .org suffix is not evidence of nonprofit legal status; no such inference is made.</li><li>Snapshot dates are not live ticket availability, cancellations or a guarantee that a source has not changed.</li><li>Topic tags and cost badges are presentation labels. A search-result snippet is evidence of what a tool returned, not a verified page fetch with a status code.</li></ul><h2>Next research priorities</h2><p>Isolate SF-only regional screenings; verify individual sports fixtures, theater/music performances, civic and faith calendars; resolve conflicting hours/street extents; promote the held Mechanics Institute chess class whose venue is now evidenced (see the free-first research log) and add a venue for the held AI candidate; confirm the current Grace Cathedral recital admission terms from one readable official page; find an official programme title for the Internet Archive tours; revisit unreadable primary pages. Coverage is intentionally described as incomplete.</p><p><a href="review.html">All candidates and open questions →</a> · <a href="data/audit_summary.json">Machine-readable summary</a></p></section>'
 write("analysis.html", "Findings, not false certainty.", "A reproducible view of coverage, missing values, date quality and research limitations—not a statistical portrait of the whole city.", body)
 
 body = metrics([("Held off the directory", stats["review_only"], "Venue / geography / evidence unresolved", True), ("Listed with unconfirmed fields", stats["listed_with_blanks"], "Fields remain blank, never guessed", True), ("Candidates retained", stats["candidates"], "No unresolved candidate silently discarded", False)])
@@ -406,9 +489,9 @@ METHOD = '''<section class="prose" id="method"><h2>How evidence becomes a publis
 <li>Exact-quote checks test provenance, <b>not semantic truth</b>. Context, edition, eligibility and conflicting copy require a research judgment. A URL/status/name match never verifies the rest of a row.</li>
 <li>Only explicitly approved ISO occurrences determine labels relative to the fixed snapshot. URL slugs, weekdays, copyright dates and neighboring events never supply missing years. Recurrence evidence does not generate future dates.</li>
 <li><b>Cost labels</b> are computed only from the verified admission text. “Free”, “Paid” and “Not stated” are labels over that quote; the exact official wording is always shown beside the badge. A blank admission cell is never published as free.</li>
-<li><b>Topic tags</b> (Gaming / Music / AI &amp; technology) are editorial navigation labels derived from the verified event name, or from an explicit decision for the <a href="data/audit_3adf31d9.json">new-requirement research pass</a>. They are not a verified field.</li>
+<li><b>Topic tags</b> (Gaming / Music / AI &amp; technology) are editorial navigation labels derived from the verified event name, or from an explicit decision for the <a href="data/audit_3adf31d9.json">new-requirement research pass</a> and the <a href="data/audit_21f3dd85.json">free-first research pass</a>. They are not a verified field.</li>
 </ol><p>Times are local to San Francisco. Free parking, free activities with paid entry, and virtual tickets do not establish free physical admission. Conditions such as residency, age, surcharges and RSVP remain visible.</p>
-<p>Evidence snapshots: <a href="data/audit_64f8b973.json">archived captures and explicit decisions (JSON)</a> · <a href="data/audit_3adf31d9.json">gaming, music and AI research pass (JSON)</a>. Some captures in the newer pass are the verbatim text the workspace search tool returned for an exact official URL rather than a full page fetch (sfpl.org branch navigation, the Stern Grove contact block); those records carry no HTTP status and say so. Original HTTP status and later attempt metadata remain separate; failed refreshes do not erase prior readable evidence. This is not continuous re-verification.</p>
+<p>Evidence snapshots: <a href="data/audit_64f8b973.json">archived captures and explicit decisions (JSON)</a> · <a href="data/audit_3adf31d9.json">gaming, music and AI research pass (JSON)</a> · <a href="data/audit_21f3dd85.json">free-first research pass (JSON)</a>. Some captures in the newer passes are the verbatim text the workspace search tool returned for an exact official URL rather than a full page fetch (sfpl.org branch navigation, the Stern Grove contact block); those records carry no HTTP status and say so. The free-first pass also records no HTTP status for its fetches, because its fetch tool does not report one. Original HTTP status and later attempt metadata remain separate; failed refreshes do not erase prior readable evidence. This is not continuous re-verification.</p>
 <p><a href="data/events.json">All audited records</a> · <a href="data/sources.json">Source ledger</a> · <a href="data/events.csv">Directory CSV</a> · <a href="data/review.csv">Review CSV</a> · <a href="data/unverified_history.json">UNVERIFIED inherited history</a></p></section>'''
 
 
@@ -476,6 +559,9 @@ def export(filename, items, review=False):
 # The canonical nearest-first ordering, exported so the optional browser QA can
 # assert it instead of re-deriving it.
 (ROOT / 'data' / 'upcoming_order.json').write_text(json.dumps([r["id"] for r in dated], indent=1) + "\n")
+# The free-first landing page's two main-section tables, same rationale.
+(ROOT / 'data' / 'dashboard_order.json').write_text(json.dumps(
+    {"dated": [r["id"] for r in free_dated], "recurring": [r["id"] for r in free_recurring]}, indent=1) + "\n")
 
 export('events.csv', listed)
 export('review.csv', rows, review=True)
@@ -483,7 +569,7 @@ analysis_md = f'''# Analysis — bounded SF event research snapshot
 
 As of {AS_OF}. This is not a complete or live city calendar.
 
-- {stats['candidates']} candidate entries assessed: {stats['inherited_candidates']} inherited and {stats['new_entries']} official-calendar entries plus {stats['new_research_entries']} from the gaming/music/AI research pass.
+- {stats['candidates']} candidate entries assessed: {stats['inherited_candidates']} inherited and {stats['new_entries']} official-calendar entries plus {stats['new_research_entries']} from the gaming/music/AI research pass and {stats['free_first_entries']} from the free-first research pass.
 - {stats['listed']} admitted to the city-only directory; {stats['review_only']} held for review.
 - {stats['series']} listed programme umbrellas overlap child events. These totals are **not unique-event counts**.
 - {stats['source_urls']} exact cited URLs across {stats['domains']} domains. Domains are not organizations or nonprofit status.
@@ -492,6 +578,8 @@ As of {AS_OF}. This is not a complete or live city calendar.
 ## Upcoming, relative to the fixed snapshot
 
 {len(dated)} directory entries carry at least one confirmed upcoming date; {len(listed) - len(dated)} do not.
+Of the dated entries, {len(free_dated)} are stated free on their official page; they lead the free-first
+landing page, while priced entries are grouped in the separate Paid events section.
 
 ''' + '\n'.join(f'- {b}: {bucket_counts.get(b, 0)}' for b in BUCKETS) + f'''
 
@@ -524,4 +612,4 @@ See [Flagged for Review](review.html), [field evidence](sources.html),
 [the summary JSON](data/audit_summary.json) and [unverified history](data/unverified_history.json).
 '''
 (ROOT / 'ANALYSIS.md').write_text(analysis_md)
-print(f'Built 18 HTML pages, {len(listed)} directory rows, {len(rows)} review records, CSVs and ANALYSIS.md from audited data only.')
+print(f'Built 19 HTML pages, {len(listed)} directory rows, {len(rows)} review records, CSVs and ANALYSIS.md from audited data only.')

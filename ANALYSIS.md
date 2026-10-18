@@ -2,7 +2,7 @@
 
 As of 18 October 2026. This is not a complete or live city calendar.
 
-- 274 candidate entries assessed: 233 inherited and 18 official-calendar entries plus 15 from the gaming/music/AI research pass.
+- 274 candidate entries assessed: 233 inherited and 18 official-calendar entries plus 15 from the gaming/music/AI research pass and 8 from the free-first research pass.
 - 191 admitted to the city-only directory; 83 held for review.
 - 16 listed programme umbrellas overlap child events. These totals are **not unique-event counts**.
 - 277 exact cited URLs across 150 domains. Domains are not organizations or nonprofit status.
@@ -11,6 +11,8 @@ As of 18 October 2026. This is not a complete or live city calendar.
 ## Upcoming, relative to the fixed snapshot
 
 70 directory entries carry at least one confirmed upcoming date; 121 do not.
+Of the dated entries, 13 are stated free on their official page; they lead the free-first
+landing page, while priced entries are grouped in the separate Paid events section.
 
 - Open now: 5
 - Today: 5

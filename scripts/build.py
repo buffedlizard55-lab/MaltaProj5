@@ -36,9 +36,9 @@ SNAPSHOT = date(2026, 10, 18)
 FIELDS = ("name", "schedule", "time", "venue", "price")
 LABELS = {"name": "Event name", "schedule": "Published schedule", "time": "Time", "venue": "Venue / area", "price": "Admission / conditions"}
 NAV = [
-    ("index.html", "Overview"), ("upcoming.html", "Upcoming"),
+    ("index.html", "Overview"), ("upcoming.html", "Upcoming"), ("free.html", "Free to attend"),
+    ("gaming.html", "Gaming"), ("music.html", "Music"), ("ai.html", "AI & technology"), ("focus.html", "Focus, one page"),
     ("weekly.html", "Weekly"), ("monthly.html", "Monthly"), ("annual.html", "Annual"), ("special.html", "Special & dated"),
-    ("gaming.html", "Gaming"), ("music.html", "Music"), ("ai.html", "AI & technology"), ("free.html", "Free to attend"),
     ("markets.html", "Markets & food"), ("museums.html", "Museums & science"), ("culture.html", "Festivals & culture"), ("community.html", "Community & outdoors"),
     ("analysis.html", "Analysis & findings"), ("review.html", "Flagged for Review"), ("sources.html", "Sources & evidence"),
 ]
@@ -128,6 +128,7 @@ def table(items, review=False, nexts=None):
 <label for="search-{n}">Search entries<input id="search-{n}" type="search" placeholder="Event, venue, category…" autocomplete="off"></label>
 <label for="kind-{n}">Cadence<select id="kind-{n}"><option value="">All cadences</option>''' + ''.join(f'<option>{k}</option>' for k in ("Weekly", "Monthly", "Annual", "Special", "Unverified")) + f'''</select></label>
 <label for="temporal-{n}">Date status<select id="temporal-{n}"><option value="">All dates</option>''' + ''.join(f'<option>{e(k)}</option>' for k in sorted({r["temporal_status"] for r in items})) + f'''</select></label>
+<label for="cost-{n}">Cost<select id="cost-{n}"><option value="">All costs</option><option value="Free">Free</option><option value="Paid">Paid</option><option value="See source">See source</option><option value="Not stated">Not stated</option></select></label>
 <label for="publication-{n}">Publication<select id="publication-{n}"><option value="">All entries</option><option value="listed">In directory</option><option value="review_only">Held for review</option></select></label>
 <button type="button" id="reset-{n}">Reset</button><span id="count-{n}" role="status" aria-live="polite">''' + f'{len(items)} of {len(items)} entries</span></div>'
     out = [tools, '<p class="table-hint">Blank cells are unverified. Open “Field evidence” for quotations. On narrow screens each entry becomes a labelled card.</p>', f'<div class="table-wrap" tabindex="0" role="region" aria-label="Source-linked event table"><table class="events" id="events-{n}">', f'<caption>{len(items)} {"candidate" if review else "directory"} entries · snapshot {AS_OF} · categories, topics and programme relationships are editorial, not unique-event counts.</caption>', '<thead><tr><th scope="col">Event / programme</th><th scope="col">Cost</th><th scope="col">Published schedule</th><th scope="col">Time</th><th scope="col">Venue / area</th><th scope="col">Admission / conditions</th><th scope="col">Cadence & date status</th><th scope="col">Review notes</th><th scope="col">Official sources</th></tr></thead><tbody>']
@@ -148,7 +149,7 @@ def table(items, review=False, nexts=None):
         upcoming = nexts.get(row["id"])
         soon = ' class="soon"' if upcoming and upcoming[2] <= 14 else ''
         countdown = f'<small class="normalized">{e(upcoming[3])}</small>' if upcoming else ''
-        out.append(f'<tr id="{rid}"{soon} data-kind="{e(row["kind"])}" data-temporal="{e(row["temporal_status"])}" data-publication="{e(row["publication"])}"><th scope="row">{e(display(row))}{candidate}<small>{e(row["category"])} · {e(topic_of(row))} · {e(row["entry_type"])}</small>{parent}{first_links}</th>')
+        out.append(f'<tr id="{rid}"{soon} data-kind="{e(row["kind"])}" data-cost="{e(cost_of(row)[0])}" data-temporal="{e(row["temporal_status"])}" data-publication="{e(row["publication"])}"><th scope="row">{e(display(row))}{candidate}<small>{e(row["category"])} · {e(topic_of(row))} · {e(row["entry_type"])}</small>{parent}{first_links}</th>')
         out.append(f'<td data-label="Cost">{cost_badge(row)}</td>')
         out.append(f'<td data-label="Published schedule">{e(row["schedule"])}{dates}</td>' if row['schedule'] else '<td class="unknown" data-label="Published schedule" aria-label="Published schedule: unverified"></td>')
         out.extend(fact_cell(row, field) for field in ("time", "venue", "price"))
@@ -325,6 +326,38 @@ for filename, topic in TOPIC_PAGES:
         page += '</ul>'
     write(filename, topic + ".", TOPIC_NOTES[topic], page)
 
+# ------------------------------------------------------------------ focus page
+# Session 59f56c24's combined "Gaming / Music / AI, then everything else" view.
+# Kept alongside the per-topic subpages: one page that carries the whole ordered
+# directory, so the focus grouping can be read (and checked) in a single table.
+FOCUS_ORDER = {"Gaming": 0, "Music": 1, "AI & technology": 2, "Other": 3}
+focus_counts = Counter(topic_of(r) for r in listed)
+focus_sorted = sorted(listed, key=lambda r: (
+    FOCUS_ORDER[topic_of(r)],
+    0 if cost_of(r)[0] == "Free" else 1,
+    UPCOMING.get(r["id"], ("", date.max, 10**6, ""))[1],
+    display(r).casefold(),
+))
+focus_body = notice() + metrics([
+    ("Gaming", focus_counts.get("Gaming", 0), "Directory entries in this focus group", False),
+    ("Music", focus_counts.get("Music", 0), "Directory entries in this focus group", False),
+    ("AI & technology", focus_counts.get("AI & technology", 0), "Directory entries in this focus group", False),
+    ("Everything else", focus_counts.get("Other", 0), "All remaining directory entries", False),
+])
+focus_body += ('<section class="intro"><h2>How the focus groups are made</h2><p>Groups come from the audited '
+               'event name — “Pokémon”, “Jazz”, “Opera”, “Chess”, “AI Engineer” — and, for entries added by the '
+               'two research overlays, from an explicit recorded decision. A venue is never used to guess a topic, '
+               'and a concert whose name contains no music word stays in “Everything else”. Order on this page: '
+               '<b>Gaming, then Music, then AI &amp; technology, then everything else</b>; inside each group, '
+               'entries whose official page states free admission come first, then the soonest confirmed date. '
+               'The Focus label on each row and the dedicated <a href="gaming.html">Gaming</a>, '
+               '<a href="music.html">Music</a> and <a href="ai.html">AI &amp; technology</a> pages carry the same '
+               'grouping.</p></section>')
+focus_body += table(focus_sorted, nexts=UPCOMING)
+write("focus.html", "Gaming · Music · AI first.",
+      "The whole city-only directory ordered Gaming, then Music, then AI & technology, then everything else — free and soonest first inside each group.",
+      focus_body)
+
 free_body = notice() + metrics([
     ("Free to attend", len(free_rows), "Admission stated free by the official page", False),
     ("Gaming", sum(1 for r in free_rows if topic_of(r) == "Gaming"), "Free gaming entries", False),
@@ -491,4 +524,4 @@ See [Flagged for Review](review.html), [field evidence](sources.html),
 [the summary JSON](data/audit_summary.json) and [unverified history](data/unverified_history.json).
 '''
 (ROOT / 'ANALYSIS.md').write_text(analysis_md)
-print(f'Built 17 HTML pages, {len(listed)} directory rows, {len(rows)} review records, CSVs and ANALYSIS.md from audited data only.')
+print(f'Built 18 HTML pages, {len(listed)} directory rows, {len(rows)} review records, CSVs and ANALYSIS.md from audited data only.')

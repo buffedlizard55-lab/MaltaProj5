@@ -94,11 +94,11 @@ class Presentation(unittest.TestCase):
     def pages_named(self):
         return {
             "index.html", "upcoming.html", "weekly.html", "monthly.html", "annual.html", "special.html",
-            "gaming.html", "music.html", "ai.html", "free.html", "markets.html", "museums.html",
+            "gaming.html", "music.html", "ai.html", "free.html", "focus.html", "markets.html", "museums.html",
             "culture.html", "community.html", "analysis.html", "review.html", "sources.html",
         }
 
-    def test_seventeen_pages_with_viewport(self):
+    def test_eighteen_pages_with_viewport(self):
         self.assertEqual(set(self.pages), self.pages_named())
         for name, page in self.pages.items():
             self.assertTrue(page.viewport, name)

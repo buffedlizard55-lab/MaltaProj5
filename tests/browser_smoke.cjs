@@ -12,7 +12,7 @@ const chromiumPackage = require('@sparticuz/chromium');
 const binary = chromiumPackage.default || chromiumPackage;
 
 const base = (process.env.BASE_URL || 'http://127.0.0.1:8080').replace(/\/$/, '');
-const pages = ['index.html', 'upcoming.html', 'weekly.html', 'monthly.html', 'annual.html', 'special.html', 'gaming.html', 'music.html', 'ai.html', 'free.html', 'markets.html', 'museums.html', 'culture.html', 'community.html', 'analysis.html', 'review.html', 'sources.html'];
+const pages = ['index.html', 'upcoming.html', 'free.html', 'focus.html', 'weekly.html', 'monthly.html', 'annual.html', 'special.html', 'gaming.html', 'music.html', 'ai.html', 'markets.html', 'museums.html', 'culture.html', 'community.html', 'analysis.html', 'review.html', 'sources.html'];
 // The directory table on a page carries class 'events' and a unique id, because the
 // Upcoming page renders several grouped tables. The landing table is always #1.
 const TABLE = 'table.events';
@@ -53,7 +53,7 @@ fs.mkdirSync(output, { recursive: true });
       const response = await page.goto(`${base}/${filename}`);
       assert.equal(response.status(), 200, filename);
       assert.equal(await page.locator('h1').count(), 1, filename);
-      assert.equal(await page.locator('nav[aria-label="Main navigation"] a').count(), 17);
+      assert.equal(await page.locator('nav[aria-label=\"Main navigation\"] a').count(), 18);
       if (['analysis.html', 'sources.html'].includes(filename)) {
         assert.equal(await page.locator(TABLE).count(), 0, filename);
       } else {
@@ -133,6 +133,20 @@ fs.mkdirSync(output, { recursive: true });
     const dated = JSON.parse(fs.readFileSync(path.join(root, 'data/upcoming_order.json'), 'utf8'));
     assert.deepEqual(upcomingOrder.slice(0, dated.length), dated, 'Upcoming is not nearest-first');
     assert((await page.locator(`${TABLE} tbody tr.soon`).count()) >= 1, 'No soonest-date highlight');
+    // Cost filter (control added by session 59f56c24) on the whole-directory page.
+    await page.goto(`${base}/focus.html`);
+    const focusId = (await page.locator(TABLE).getAttribute('id')).replace('events-', '');
+    assert.equal(await page.locator(`${TABLE} tbody tr`).count(), stats.listed);
+    await page.selectOption('#cost-' + focusId, 'Free');
+    const freeShown = await page.locator(`${TABLE} tbody tr:not([hidden])`).count();
+    assert(freeShown > 0 && freeShown < stats.listed, `Cost filter did not narrow the table: ${freeShown}`);
+    assert(await page.locator(`${TABLE} tbody tr:not([hidden])`).evaluateAll(
+      rows => rows.every(row => row.dataset.cost === 'Free')), 'Cost filter kept a non-free row');
+    await page.selectOption('#cost-' + focusId, 'Paid');
+    assert(await page.locator(`${TABLE} tbody tr:not([hidden])`).evaluateAll(
+      rows => rows.every(row => row.dataset.cost === 'Paid')), 'Cost filter kept a non-paid row');
+    await page.click('#reset-' + focusId);
+    assert.equal(await page.locator(`${TABLE} tbody tr:not([hidden])`).count(), stats.listed);
     // Mobile: each entry becomes a labelled card instead of a horizontally scrolling row.
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${base}/index.html`);

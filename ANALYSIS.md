@@ -2,49 +2,49 @@
 
 As of 18 October 2026. This is not a complete or live city calendar.
 
-- 261 candidate entries assessed: 233 inherited and 13 official-calendar entries plus 15 from the gaming/music/AI research pass.
-- 180 admitted to the city-only directory; 81 held for review.
+- 266 candidate entries assessed: 233 inherited and 18 official-calendar entries plus 15 from the gaming/music/AI research pass.
+- 185 admitted to the city-only directory; 81 held for review.
 - 14 listed programme umbrellas overlap child events. These totals are **not unique-event counts**.
-- 258 exact cited URLs across 146 domains. Domains are not organizations or nonprofit status.
-- Cadence: 23 weekly / 8 monthly / 31 annual / 118 special or cadence-unconfirmed.
+- 264 exact cited URLs across 146 domains. Domains are not organizations or nonprofit status.
+- Cadence: 23 weekly / 8 monthly / 31 annual / 123 special or cadence-unconfirmed.
 
 ## Upcoming, relative to the fixed snapshot
 
-62 directory entries carry at least one confirmed upcoming date; 118 do not.
+67 directory entries carry at least one confirmed upcoming date; 118 do not.
 
 - Open now: 5
-- Today: 4
-- Next 7 days: 8
-- Next 30 days: 21
+- Today: 5
+- Next 7 days: 9
+- Next 30 days: 23
 - Next 90 days: 9
-- Later: 15
+- Later: 16
 
 ## Topic tags (editorial, from the verified name)
 
-- Gaming: 9
+- Gaming: 10
 - Music: 18
-- AI & technology: 4
-- Other: 149
+- AI & technology: 5
+- Other: 152
 
 ## Cost, as stated by the official page
 
 - Free: 56
-- Paid: 17
-- Not stated: 107 (blank admission cell — never assumed free)
+- Paid: 18
+- Not stated: 111 (blank admission cell — never assumed free)
 
 ## Blank factual fields in the directory
 
 - Event name: 0
 - Published schedule: 15
-- Time: 77
+- Time: 81
 - Venue / area: 0
-- Admission / conditions: 107
+- Admission / conditions: 111
 
 ## Temporal labels (fixed snapshot)
 
 - Date/year unconfirmed: 18
-- Future dated: 53
-- On snapshot date: 4
+- Future dated: 57
+- On snapshot date: 5
 - Past dated: 67
 - Recurring pattern; next date unconfirmed: 32
 - Spans snapshot date: 5

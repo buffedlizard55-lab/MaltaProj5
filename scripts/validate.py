@@ -108,6 +108,7 @@ def main():
     assert all(r['sources'] and all(s in sources for s in r['sources']) for r in rows)
     assert len({s['url'] for s in sources.values()}) == len(sources), 'Duplicate source URLs'
     listed = [r for r in rows if r['publication'] == 'listed']
+    by_id = {r['id']: r for r in rows}
     for row in rows:
         for field in FIELDS:
             assert bool(row[field]) == bool(row['field_evidence'].get(field)), (row['id'], field)
@@ -130,7 +131,7 @@ def main():
         page.feed(path.read_text())
         assert page.lang == 'en' and page.has_title and page.h1 == 1 and page.viewport, path.name
         pages[path.name] = page
-    assert len(pages) == 17, 'Unexpected page set'
+    assert len(pages) == 18, 'Unexpected page set'
     for name, page in pages.items():
         for href in page.links:
             url = urlsplit(href)
@@ -167,6 +168,14 @@ def main():
     for name, topic in TOPIC_PAGES.items():
         assert set(pages[name].event_rows) == {r['id'] for r in listed if topic_of(r) == topic}, name
     assert set(pages['free.html'].event_rows) == {r['id'] for r in listed if cost_of(r)[0] == 'Free'}
+    # Session 59f56c24's combined focus page: the whole directory, Gaming / Music / AI / Other.
+    assert set(pages['focus.html'].event_rows) == {r['id'] for r in listed}
+    focus_order = {'Gaming': 0, 'Music': 1, 'AI & technology': 2, 'Other': 3}
+    rank = -1
+    for rid in pages['focus.html'].event_rows:
+        topic = topic_of(by_id[rid])
+        assert focus_order[topic] >= rank, f'focus.html out of group order: {rid}'
+        rank = focus_order[topic]
     # Date ordering: the Upcoming page must be nearest-first across its dated rows.
     ordered = [rid for rid in pages['upcoming.html'].event_rows if next_date(next(r for r in rows if r['id'] == rid))]
     dated_ids = [r['id'] for r in sorted((r for r in listed if next_date(r)), key=lambda r: (next_date(r), r['name'].casefold()))]
@@ -186,7 +195,7 @@ def main():
         assert '18 October 2026' in text
         assert 'not a real-time' in text or name in {'analysis.html', 'review.html', 'sources.html'}
         assert 'Page-level check' not in text and 'Field-level check' not in text
-    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 17 pages, cost badges, date ordering, row sources and local links/fragments.')
+    print(f'PASS: {len(rows)} exact audit projections; {len(listed)} SF directory / {len(rows)-len(listed)} review-only; all quote provenance, recurrence/year guards, blanks, CSV values, 18 pages, cost badges, date ordering, row sources and local links/fragments.')
 
 
 if __name__ == '__main__':

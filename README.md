@@ -10,21 +10,22 @@ A static, source-linked inventory of recurring gatherings and dated programmes *
 
 | Measure | Count |
 |---|---:|
-| Candidates assessed | 261 |
+| Candidates assessed | 266 |
 | Previously assessed candidates (231 initial + 2 companion + 13 official-calendar) | 246 |
+| Session `59f56c24` official-calendar extras | 5 |
 | New topic-gap entries added in audit `3adf31d9` (gaming / music / AI) | 15 |
-| Entries admitted to the city-only directory | 180 |
+| Entries admitted to the city-only directory | 185 |
 | Candidates held off the directory for review | 81 |
 | Weekly / monthly / annual entries | 23 / 8 / 31 |
-| Special, dated or cadence-unconfirmed entries | 118 |
-| Entries with at least one confirmed future date | 62 |
-| Directory rows reading Free / Paid / Not stated | 56 / 17 / 107 |
-| Exact cited official-source URLs / distinct domains | 258 / 150 |
+| Special, dated or cadence-unconfirmed entries | 123 |
+| Entries with at least one confirmed future date | 67 |
+| Directory rows reading Free / Paid / Not stated | 56 / 18 / 111 |
+| Exact cited official-source URLs / distinct domains | 264 / 150 |
 
 The directory includes 14 programme umbrellas and their independently sourced child events. Counts are **entries, not unique city events**. Category and programme relationships are editorial; recurring classifications require their own evidence.
 
 - [Dashboard](index.html) · [Upcoming](upcoming.html) · [Weekly](weekly.html) · [Monthly](monthly.html) · [Annual](annual.html) · [Special & dated](special.html)
-- [Gaming](gaming.html) · [Music](music.html) · [AI & technology](ai.html) · [Free to attend](free.html)
+- [Gaming](gaming.html) · [Music](music.html) · [AI & technology](ai.html) · [Free to attend](free.html) · [Focus, one page](focus.html)
 - [Markets & food](markets.html) · [Museums & science](museums.html) · [Festivals & culture](culture.html) · [Community & outdoors](community.html)
 - [Analysis](analysis.html) · [Flagged for Review](review.html) · [Sources and row-by-row evidence](sources.html)
 - [Directory CSV](data/events.csv) · [All review records CSV](data/review.csv) · [Research log for audit `3adf31d9`](data/research/audit-3adf31d9.md)
@@ -81,17 +82,20 @@ npm install --prefix .cache/browser --no-audit --no-fund \
 NODE_PATH=.cache/browser/node_modules node tests/browser_smoke.cjs --serve
 ```
 
-Omit `--serve` when a static server already runs on port 8080. This checks 17 pages at desktop/mobile widths, filtering/reset/empty states, actual blank cells, cost badges, source/evidence links, upcoming nearest-first ordering, mobile card layout, mobile overflow, no-JavaScript tables, console/asset errors and automated WCAG A/AA findings on the six core page types. Automated accessibility tests are not a complete accessibility certification. Browser binaries, screenshots and package installs stay outside Git.
+Omit `--serve` when a static server already runs on port 8080. This checks 18 pages at desktop/mobile widths, filtering/reset/empty states (including the Cost filter), actual blank cells, cost badges, source/evidence links, upcoming nearest-first ordering, mobile card layout, mobile overflow, no-JavaScript tables, console/asset errors and automated WCAG A/AA findings on the six core page types. Automated accessibility tests are not a complete accessibility certification. Browser binaries, screenshots and package installs stay outside Git.
 
 ## Site conventions
 
-* **Upcoming order.** The Upcoming page groups the 62 dated, published entries into six time
+* **Upcoming order.** The Upcoming page groups the 67 dated, published entries into six time
   buckets — **Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later** — and sorts
   nearest confirmed date first within each. Only approved 2026/2027 dates are displayed; no date is
-  inferred. The canonical nearest-first order for those 62 rows is exported to
+  inferred. The canonical nearest-first order for those 67 rows is exported to
   `data/upcoming_order.json`, so the browser pass can assert it rather than re-derive it. An
   occurrence that has started but not finished is grouped under **Open now** rather than being given
   a misleading “in N days” label.
+* **Focus ordering.** [Focus, one page](focus.html) carries the whole directory ordered
+  **Gaming → Music → AI & technology → everything else**, free and soonest first inside each group.
+  The same grouping drives the three topic subpages and the label on every row.
 * **Cost labelling.** Each row's Cost column shows a short badge (**Free**, **Paid** or
   **Not stated**) derived from that row's exact approved admission quotation — never inferred. The
   full verified wording stays in the Admission column, and a badge whose free admission is
@@ -101,7 +105,13 @@ Omit `--serve` when a static server already runs on port 8080. This checks 17 pa
   repeats its column header from `data-label`), and every table keeps its own independent search,
   filter and reset controls even on pages that hold several tables.
 * **Topics.** Gaming, music and AI/technology have dedicated pages alongside the collections.
-  Gaming and AI/technology were added in session `3adf31d9` from official pages only.
+  Gaming and AI/technology were added in session `3adf31d9` from official pages only, and session
+  `59f56c24` added the combined Focus view plus five official-calendar entries (including a quoted
+  GDC price).
+* **Overlapping coverage is kept, not silently merged.** Where two sessions independently captured
+  the same event from different official pages, both rows are published with their own sources and
+  the overlap is stated in the row's review notes — a value is never inherited from another row's
+  source.
 
 ## Files and evidence
 

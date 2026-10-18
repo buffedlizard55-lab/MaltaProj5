@@ -4,9 +4,11 @@ Shared task board for every agent session working in `buffedlizard55-lab/MaltaPr
 
 **Current publication (2026-10-18):** PR #28's official-calendar additions, PR #29's publication record and the `3adf31d9` topic-gap / date-order / cost-labelling release (T33–T36) are merged; GitHub Pages is live from `main`.
 
-The bounded snapshot contains **261 candidates: 180 city-only directory entries / 81 review-only**, with 23 weekly / 8 monthly / 31 annual / 118 special entries, 62 entries carrying at least one confirmed future date, and 258 cited official URLs across 150 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
+The bounded snapshot contains **266 candidates: 185 city-only directory entries / 81 review-only**, with 23 weekly / 8 monthly / 31 annual / 123 special entries, 67 entries carrying at least one confirmed future date, and 264 cited official URLs across 150 domains. It is not an exhaustive or live city calendar; counts are entries, not unique events.
 
-**New in this release:** an [Upcoming](upcoming.html) page grouping the 62 dated entries into *Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later* with nearest-confirmed-date-first ordering; an executive summary timeline of the 12 soonest entries on the dashboard; a Free / Paid / **Not stated** cost badge on every row derived only from the verified admission quotation; dedicated [Gaming](gaming.html), [Music](music.html), [AI & technology](ai.html) and [Free to attend](free.html) pages; and a mobile card layout for every events table below 820 px.
+**New in this release:** an [Upcoming](upcoming.html) page grouping the 67 dated entries into *Open now · Today · Next 7 days · Next 30 days · Next 90 days · Later* with nearest-confirmed-date-first ordering; an executive summary timeline of the 12 soonest entries on the dashboard; a Free / Paid / **Not stated** cost badge on every row derived only from the verified admission quotation; dedicated [Gaming](gaming.html), [Music](music.html), [AI & technology](ai.html) and [Free to attend](free.html) pages; session `59f56c24`'s combined [Focus](focus.html) view with a Cost filter; and a mobile card layout for every events table below 820 px.
+
+**Parallel-session integration.** Session `59f56c24` merged PRs #34–#36 into `main` while `3adf31d9` was building T34–T36. Both sessions had independently created `upcoming.html` and `free.html`, and both had independently added GDC Festival of Gaming. Neither side's work was discarded — see the [integration log](#integration-log--3adf31d9--merges-main-59f56c24-topic-extras-2026-10-18) below.
 
 PR #27 independently audited and documented the prior 242-candidate snapshot. Earlier counts and task results below are historical, not the current publication gate. Actual CI, merge and Pages records are at the end of this board.
 
@@ -1387,3 +1389,63 @@ classifications each carry their own recurrence quotation. The projection is pur
 “Next 14 days.” while the paragraph beneath it explains that 28 of the 62 dated entries fall on or
 before 1 November 2026. Both numbers are correct for what they describe; the heading wording was
 left as-is rather than changed after the final validation run.
+
+---
+
+## Integration log — `3adf31d9` merges `main` (`59f56c24` topic extras), 2026-10-18
+
+While `3adf31d9` was building T34–T36 on `arena/3adf31d9-maltaproj5`, session **`59f56c24`** merged
+PRs [#34](https://github.com/buffedlizard55-lab/MaltaProj5/pull/34),
+[#35](https://github.com/buffedlizard55-lab/MaltaProj5/pull/35) and
+[#36](https://github.com/buffedlizard55-lab/MaltaProj5/pull/36) into `main` (`de335c7`). PR #37 from
+this branch was therefore reported **CONFLICTING**, and no CI ran on it. `main` was merged back into
+this branch and every conflict was resolved by hand. **Neither session's work was discarded.**
+
+### What the two sessions each added
+
+| | `59f56c24` (on `main`) | `3adf31d9` (this branch) |
+|---|---|---|
+| Data | 5 official-calendar entries merged into the shared `data/audit_64f8b973.json` | 15 topic-gap entries in a separate additive overlay, `tools/register_3adf31d9.py` + `data/audit_3adf31d9.json` |
+| Pages | `upcoming.html`, `free.html`, `focus.html` | `upcoming.html`, `free.html`, `gaming.html`, `music.html`, `ai.html` |
+| Cost | 5-class `cost_class` + a **Cost** filter select | A dedicated Cost column with a Free / Paid / Not stated / See source badge and a *Conditions apply* hint |
+| Ordering | `dated_sort_key` (running now → soonest start) | Six time buckets plus `data/upcoming_order.json` for assertion |
+
+### How each conflict was resolved
+
+| File | Resolution |
+|---|---|
+| `data/audit_64f8b973.json` | **Theirs.** It is the shared mainline audit and now carries their five extras. |
+| `data/audit_3adf31d9.json`, `tools/register_3adf31d9.py` | **Ours.** Additive and non-overlapping; touches no field the mainline overlay owns. |
+| All generated HTML, `data/events.json`, `data/sources.json`, `data/review.json`, `data/audit_summary.json`, `data/*.csv`, `ANALYSIS.md` | Regenerated from the merged code and merged data, never hand-edited. |
+| `scripts/build.py` | **Ours as the base**, plus their contribution re-applied by hand: the `focus.html` page and the **Cost** filter control. The Cost select was retargeted to this build's four label classes so the control and the badge agree. |
+| `scripts/validate.py` | **Ours**, plus their `free.html` / `focus.html` / `upcoming.html` membership assertions, adapted (`free.html` here is a true subset — only rows whose official page states free admission) and extended with a group-order check for `focus.html`. |
+| `tests/test_audited_register.py` | **Ours**, counts updated 261→266 and 180→185, and their `test_session_59f56c24_official_calendar_additions` regression test restored in full. |
+| `tests/browser_smoke.cjs`, `tests/test_upcoming_cost.py` | **Ours**, page set extended 17→18 with `focus.html`; new Cost-filter assertions added. |
+| `assets/app.js` | **Ours** (multi-table wiring), with `cost` added to the control list so their Cost select works on every table. |
+| `assets/style.css` | Ours, nav grouping offsets moved to `nth-child(4/8/12/16)` for the 18-link, five-group nav. |
+| `.github/workflows/pages.yml` | Combined: their `upcoming.html` / `free.html` / `focus.html` plus this branch's `gaming.html` / `music.html` / `ai.html` and `data/upcoming_order.json`. |
+| `README.md`, `SOURCES.md`, `COORDINATION.md` | Both sessions' sections kept; counts recomputed for the merged 266 / 185 / 81 register. |
+
+### Overlapping coverage, deliberately kept
+
+Both sessions independently captured **GDC Festival of Gaming 2027** from different official pages:
+
+* `audit-gdc-festival-2027` (`59f56c24`) — from https://www.moscone.com/events/gdc-festival-gaming-2027, price **“Festival $549”**.
+* `g-gdc-festival-of-gaming` (`3adf31d9`) — from https://gdconf.com/, which dates the edition but quotes no price.
+
+Both rows are published with their own official sources. Neither was deleted, and **the price was
+not copied across rows**: the second row stays *Not stated* because a value is only ever taken from
+the source attached to that row. The overlap is stated in the row's review notes on the site.
+
+`audit-sfpl-family-game-time` (“Social: Family Game Time”, West Portal, 18 Oct 2026) and
+`g-sfpl-family-game-night-bernal` (“Social: Family Game Night”, Bernal Heights, 13 Jun 2026) were
+checked and are **different library sessions** at different branches on different dates — not a
+duplicate.
+
+### Verification after the merge
+
+* `python3 tools/consolidate.py` → *Extension 3adf31d9: +15 entries; 185 listed / 81 review-only; 264 source URLs.*
+* `python3 scripts/build.py` → *Built 18 HTML pages, 185 directory rows, 266 review records…*
+* `python3 scripts/validate.py` → **PASS** (266 projections, 18 pages, cost badges, date ordering, focus group order, row sources, local links/fragments).
+* `python3 -m unittest discover -s tests` → **43 tests OK**.
+* Browser pass → 18 pages, Cost filter narrows correctly, no console errors, no mobile overflow, zero automated WCAG A/AA findings.

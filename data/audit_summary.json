@@ -1,29 +1,29 @@
 {
  "as_of": "2026-10-18",
- "candidates": 261,
+ "candidates": 266,
  "inherited_candidates": 233,
- "new_entries": 13,
- "listed": 180,
+ "new_entries": 18,
+ "listed": 185,
  "review_only": 81,
  "series": 14,
- "source_urls": 258,
+ "source_urls": 264,
  "domains": 146,
  "kinds": {
   "Weekly": 23,
   "Monthly": 8,
   "Annual": 31,
-  "Special": 118
+  "Special": 123
  },
  "categories": {
   "Markets & food": 28,
   "Museums & science": 29,
-  "Community & outdoors": 51,
-  "Festivals & culture": 72
+  "Community & outdoors": 52,
+  "Festivals & culture": 76
  },
  "temporal": {
   "Recurring pattern; next date unconfirmed": 32,
-  "Future dated": 53,
-  "On snapshot date": 4,
+  "Future dated": 57,
+  "On snapshot date": 5,
   "Date/year unconfirmed": 18,
   "Past dated": 67,
   "Tentative schedule": 1,
@@ -32,24 +32,24 @@
  "blank_fields": {
   "name": 0,
   "schedule": 15,
-  "time": 77,
+  "time": 81,
   "venue": 0,
-  "price": 107
+  "price": 111
  },
- "listed_with_blanks": 161,
- "supported_field_values": 778,
+ "listed_with_blanks": 166,
+ "supported_field_values": 795,
  "limitation": "Bounded, non-exhaustive research snapshot; entries mix events and programme umbrellas, not a count of unique city events.",
  "new_research_entries": 15,
  "topics": {
-  "Other": 149,
+  "Other": 152,
   "Music": 18,
-  "Gaming": 9,
-  "AI & technology": 4
+  "Gaming": 10,
+  "AI & technology": 5
  },
  "cost": {
-  "Not stated": 107,
-  "Paid": 17,
+  "Not stated": 111,
+  "Paid": 18,
   "Free": 56
  },
- "upcoming_dated": 62
+ "upcoming_dated": 67
 }

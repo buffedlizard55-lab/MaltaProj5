@@ -4,14 +4,18 @@
 
 ## Evidence model
 
-1. Preserved historical inputs are unverified candidates, not authoritative facts. The newer mainline `audit_f1fd3c36.json` and its tool are preserved unchanged and run only in an isolated candidate-history tree; their old labels never approve fields. Both upstream-added candidates and the 2026 Sketchfest reference remain available.
+1. Preserved historical inputs are unverified candidates, not authoritative facts. Two additive,
+   fail-closed research overlays now sit on top of the mainline audit: session `59f56c24`'s five
+   official-calendar entries (merged into `data/audit_64f8b973.json`) and session `3adf31d9`'s
+   fifteen topic-gap entries (`data/audit_3adf31d9.json`). Neither can approve or edit a field
+   produced by the other or by the mainline overlay. The newer mainline `audit_f1fd3c36.json` and its tool are preserved unchanged and run only in an isolated candidate-history tree; their old labels never approve fields. Both upstream-added candidates and the 2026 Sketchfest reference remain available.
 2. `data/audit_64f8b973.json` stores finite official page/PDF text captures, request metadata, separately labeled selected retrieval-tool excerpts, structured event JSON-LD and explicit decisions.
 3. Every approved name, schedule, time, venue, admission condition, recurrence and normalized occurrence has supporting quotations. Geography records explain how the official event/venue is placed inside SF; unrelated footer/marketing city tokens are not acceptable.
 4. The build starts factual fields blank and copies only approved decisions. Unknown fields stay blank and flagged. Name + venue + confirmed SF geography are required for directory admission; other candidates remain on Flagged for Review.
 5. Exact substring checks establish quotation provenance, **not contextual applicability**. Editions, ticket eligibility, date conflicts and geography require recorded research judgment. JSON-LD is identified as structured evidence, not misrepresented as visible page text.
 6. Only approved full ISO dates drive snapshot-relative temporal labels. No date parser invents a year from a URL slug, weekday, copyright, season header or unrelated event. Recurrence never generates future occurrences.
 
-The public ledger contains **258 distinct cited URLs across 150 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
+The public ledger contains **264 distinct cited URLs across 150 domains**. That is not a count of independent organizations, and a .org suffix does not establish nonprofit status.
 
 ## Topic-gap overlay (session `3adf31d9`)
 

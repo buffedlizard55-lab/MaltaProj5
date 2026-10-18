@@ -14,7 +14,7 @@ function wire(bar) {
     node = node.nextElementSibling;
   }
   if (!table) return;
-  const controls = ['kind', 'temporal', 'publication']
+  const controls = ['kind', 'temporal', 'cost', 'publication']
     .map(name => ({ element: document.getElementById(name + suffix), key: name }))
     .filter(control => control.element);
   const rows = [...table.tBodies[0].rows];

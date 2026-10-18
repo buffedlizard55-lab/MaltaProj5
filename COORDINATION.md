@@ -1683,3 +1683,11 @@ absent from the pre-merge register).
   Parks once the 2027 park schedule is posted — all logged in
   [`data/research/audit-d57e2eeb.md`](data/research/audit-d57e2eeb.md) as open research items.
 
+
+## Session 16b88bbd — strict upcoming-only landing audit (2026-10-18)
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| T-16b-1 Audit and repair landing-page eligibility; preserve recurring discovery separately; regression and integration | in progress | `16b88bbd` | `scripts/build.py`, `scripts/validate.py`, `tests/test_free_dashboard.py` (new), `README.md`, generated root HTML / `ANALYSIS.md` / `data/dashboard_order.json`, `data/research/audit-16b88bbd.md` (new), `COORDINATION.md` |
+
+Claim: existing integration tasks are completed; no open PRs found at claim time. No active scope is taken over. Historical in-progress log entries are not current claims. Work remains on Arena's fixed `arena/16b88bbd-maltaproj5` branch. Confirmed defect: dashboard main tables currently include 40 undated recurring entries, including expired seasonal programmes, despite the requirement for only free upcoming entries. This task changes presentation eligibility, not previously curated event facts. All 295 existing candidates and their provenance are retained. Official-source spot checks and structural checks will be distinguished; a comprehensive fresh semantic re-verification or exhaustive city coverage will not be claimed.
